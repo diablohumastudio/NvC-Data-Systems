@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Level" load_steps=3 format=3 uid="uid://bjnoreuc4dc5w"]
+
+[ext_resource type="Script" uid="uid://sukboetqeqqg" path="res://data/levels/model/level.gd" id="1_iaxe3"]
+[ext_resource type="Resource" uid="uid://bcl7adcqwyewh" path="res://data/ud_levels/data/ud_lv_3.tres" id="2_rwc85"]
+
+[resource]
+script = ExtResource("1_iaxe3")
+id = 3
+level_name = "lv3"
+ud_level = ExtResource("2_rwc85")
+metadata/_custom_type_script = "uid://sukboetqeqqg"
