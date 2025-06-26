@@ -9,7 +9,6 @@ class_name UDLevel extends Resource
 @export var completed_condition: CondLvCompl : set = _set_completed_condition 
 
 func _init() -> void:
-	print("init", self)
 	pass
 
 func _set_unlocked_condition(new_value: Array[CondLvCompl]) -> void:

@@ -26,6 +26,7 @@ func create_user_data(user_credentials: UserCredentials) -> UserData:
 	_user_data = UserData.new()
 	_user_data.user_name = user_credentials.user_name
 	_user_data.progress.ud_levels = _create_ud_levels_from_res_files()
+	_user_data.achievements.ud_achievements = _create_ud_achievements_from_res_files()
 	return _user_data
 
 func _create_ud_levels_from_res_files() -> Array[UDLevel]:
@@ -35,10 +36,17 @@ func _create_ud_levels_from_res_files() -> Array[UDLevel]:
 	dir.list_dir_begin()
 	for file: String in dir.get_files():
 		var ud_level: UDLevel = load(dir.get_current_dir() + "/" + file)
-		print(file, "after load")
 		_ud_levels.append(ud_level.duplicate())
-		print(file, "after duplicate")
-	print_stack()
+	return _ud_levels
+
+func _create_ud_achievements_from_res_files() -> Array[UDAchievement]:
+	var _ud_levels: Array[UDAchievement]
+	var dir := DirAccess.open("res://data/ud_achievements/data/")
+	assert(dir != null, "Could not open folder")
+	dir.list_dir_begin()
+	for file: String in dir.get_files():
+		var ud_level: UDAchievement = load(dir.get_current_dir() + "/" + file)
+		_ud_levels.append(ud_level.duplicate())
 	return _ud_levels
 
 func save_to_disk() -> void:
