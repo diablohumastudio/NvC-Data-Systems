@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 UserDataSystem="*res://global_systems/user_data_system/user_data_system.gd"
 SceneManagerSystem="*res://global_systems/scene_manager_system/scene_manager_system.gd"
+ActionConditionSystem="*res://global_systems/action_condition_system/action_condition_system.gd"
 
 [display]
 
