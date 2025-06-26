@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="LevelProgress" load_steps=3 format=3 uid="uid://ebbsfl7ljosx"]
+
+[ext_resource type="Script" uid="uid://bogjp3dhhsxqm" path="res://data/ud_levels/model/ud_level.gd" id="1_u4cbv"]
+[ext_resource type="Resource" uid="uid://dr8x0p2einy6a" path="res://data/conditions/data/cond_lv_compl_lv_1.tres" id="1_vporv"]
+
+[resource]
+script = ExtResource("1_u4cbv")
+id = "lv_pr_1"
+locked = false
+completed = false
+completed_condition = ExtResource("1_vporv")
+metadata/_custom_type_script = "uid://bogjp3dhhsxqm"

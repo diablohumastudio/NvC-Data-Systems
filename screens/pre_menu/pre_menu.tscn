@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1oj3ekgb440y"]
+
+[ext_resource type="Script" uid="uid://bwnjji8xebws" path="res://screens/pre_menu/pre_menu.gd" id="1_13c05"]
+
+[node name="PreMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_13c05")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 971.0
+offset_top = 478.0
+offset_right = 1068.0
+offset_bottom = 573.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
