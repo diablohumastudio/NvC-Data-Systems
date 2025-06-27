@@ -1,11 +1,14 @@
-[gd_resource type="Resource" script_class="UDAchievement" load_steps=3 format=3 uid="uid://cs2gjel3asxwt"]
+[gd_resource type="Resource" script_class="UDAchievement" load_steps=4 format=3 uid="uid://cs2gjel3asxwt"]
 
 [ext_resource type="Resource" uid="uid://cdw84tffq1sgt" path="res://data/conditions/data/cond_lv_compl_lv_2.tres" id="1_3gm80"]
 [ext_resource type="Script" uid="uid://us6tcodg4fax" path="res://data/ud_achievements/model/ud_achievement.gd" id="1_5y32d"]
+[ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://data/conditions/model/condition.gd" id="1_qwhqf"]
 
 [resource]
 script = ExtResource("1_5y32d")
+id = 0
 is_achieved = false
 porcentage_achieved = 0
-conditions = ExtResource("1_3gm80")
+conditions = Array[ExtResource("1_qwhqf")]([ExtResource("1_3gm80")])
+conditions_traker = {}
 metadata/_custom_type_script = "uid://us6tcodg4fax"

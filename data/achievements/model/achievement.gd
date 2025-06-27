@@ -1,6 +1,6 @@
 class_name Achievement extends Resource
 
-enum IDs {Achiev1, Achiev2, Achiev2p, Achiev3, Achiev4}
+enum IDs {AchievCompLv2, AchievCompLv2and2p}
 
 @export var id: IDs
 @export var achievement_name: String
@@ -10,6 +10,6 @@ enum IDs {Achiev1, Achiev2, Achiev2p, Achiev3, Achiev4}
 
 func _set_ud_achievement(new_value:UDAchievement) -> void:
 	ud_achievement = new_value
-	for saved_ud_achiev in UserDataSystem.current_user_data.achievements.ud_achievements:
+	for saved_ud_achiev in UDS.current_user_data.ud_achievements.ud_achievements:
 		if saved_ud_achiev.id == ud_achievement.id:
 			ud_achievement = saved_ud_achiev

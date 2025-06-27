@@ -1,16 +1,9 @@
 extends Node
 
-var conditions: Array[Condition] = _get_conditions_from_files()
+var conditions: Array[Condition] 
 
-func _get_conditions_from_files() -> Array[Condition]:
-	var conds: Array[Condition]
-	var dir := DirAccess.open("res://data/conditions/data/")
-	assert(dir != null, "Could not open folder")
-	dir.list_dir_begin()
-	for file: String in dir.get_files():
-		var cond: Condition = load(dir.get_current_dir() + "/" + file)
-		conds.append(cond)
-	return conds
+func _ready() -> void:
+	conditions = DataFilesLoader.get_conditions_from_res_files()
 
 func _evaluate_conditions(action: Action):
 	for cond in conditions:
