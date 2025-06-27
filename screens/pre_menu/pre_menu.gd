@@ -1,4 +1,4 @@
 extends Control
 
 func _on_button_pressed() -> void:
-	SceneManagerSystem.change_scene(load("res://screens/menu/menu.tscn"))
+	SMS.change_scene(GC.SCREENS_UIDS.MENU)

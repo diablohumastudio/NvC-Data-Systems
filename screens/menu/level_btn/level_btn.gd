@@ -20,4 +20,4 @@ func _change_color_and_text() -> void:
 		disabled = true
 
 func _on_pressed() -> void:
-	SceneManagerSystem.change_scene(load("res://screens/game/game.tscn"), {"level": level})
+	SMS.change_scene(GC.SCREENS_UIDS.GAME, {"level": level})
