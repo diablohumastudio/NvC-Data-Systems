@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dp353oa1f38v3"]
 
-[ext_resource type="Script" uid="uid://b3jp3vhgbsis6" path="res://screens/menu/achievement_presenter/achievement_presenter.gd" id="1_wv8dm"]
+[ext_resource type="Script" uid="uid://b3jp3vhgbsis6" path="res://screens/achievements_scr/achievement_presenter/achievement_presenter.gd" id="1_wv8dm"]
 
 [node name="AchievementPresenter" type="HBoxContainer"]
 script = ExtResource("1_wv8dm")

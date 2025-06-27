@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbsi2yvced0xh"]
+
+[ext_resource type="Script" uid="uid://c3ovw6d7s6xpd" path="res://screens/achievements_scr/achievements_scr.gd" id="1_6kcgb"]
+[ext_resource type="PackedScene" uid="uid://dp353oa1f38v3" path="res://screens/achievements_scr/achievement_presenter/achievement_presenter.tscn" id="2_n5h0e"]
+[ext_resource type="Resource" uid="uid://81fc7fu8i1e" path="res://data/achievements/data/achiv_compl_lv_2.tres" id="3_4hikm"]
+
+[node name="AchievementsScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6kcgb")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 75
+text = "ACHIEVEMENTS"
+
+[node name="AchievementsList" type="VBoxContainer" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="AchievementPresenter" parent="CenterContainer/VBoxContainer/AchievementsList" instance=ExtResource("2_n5h0e")]
+layout_mode = 2
+achievement = ExtResource("3_4hikm")
+
+[node name="GoBackBtn" type="Button" parent="."]
+layout_mode = 2
+offset_left = 41.0
+offset_top = 947.0
+offset_right = 264.0
+offset_bottom = 1031.0
+theme_override_font_sizes/font_size = 55
+text = "Go Back"
+
+[connection signal="pressed" from="GoBackBtn" to="." method="_on_go_back_btn_pressed"]
