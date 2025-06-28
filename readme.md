@@ -1,7 +1,7 @@
 # Readme
 ## ToDos
 
-* [ ] achievements multiple conditions 
+* [X] achievements multiple conditions 
 * [X] save 
 * [X] level_progress unlock multiple conditions 
 * [X] achievement: no null name 
