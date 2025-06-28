@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://c63ax2yyiebwr"]
+
+[ext_resource type="PackedScene" uid="uid://dcvt7on3ai5p0" path="res://screens/login_register_menu/pop_ups/log_reg_pop_ups/log_reg_pop_ups.tscn" id="1_0by60"]
+[ext_resource type="Script" uid="uid://c5utfdtmqylsq" path="res://screens/login_register_menu/pop_ups/log_reg_pop_ups/login_pop_up/login_pop_up.gd" id="2_l3mwl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ec5i"]
+bg_color = Color(0.101961, 0.215686, 0.101961, 0.941176)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l3mwl"]
+bg_color = Color(0.101961, 0.215686, 0.101961, 0.941176)
+
+[node name="LoginPopUp" instance=ExtResource("1_0by60")]
+script = ExtResource("2_l3mwl")
+
+[node name="BackgorundCloseBtn" parent="." index="0"]
+theme_override_styles/hover = SubResource("StyleBoxFlat_3ec5i")
+theme_override_styles/normal = SubResource("StyleBoxFlat_l3mwl")
+
+[node name="ProcessAceptedLabel" parent="." index="2"]
+text = "USER LOGED IN"
+
+[node name="AceptBtn" parent="." index="3"]
+text = "LOGIN"

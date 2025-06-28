@@ -7,4 +7,4 @@ func _on_goto_achievements_screen_btn_pressed() -> void:
 	SMS.change_scene(GC.SCREENS_UIDS.ACHIEVEMENTS)
 
 func _on_go_back_btn_pressed() -> void:
-	SMS.change_scene(GC.SCREENS_UIDS.PREMENU)
+	SMS.change_scene(GC.SCREENS_UIDS.WELCOME_MENU)

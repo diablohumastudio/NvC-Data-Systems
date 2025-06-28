@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=3 uid="uid://p7k7vox8gi2a"]
+
+[ext_resource type="Script" uid="uid://u17rvcox640m" path="res://screens/login_register_menu/pop_ups/select_user_pop_up/select_user_pop_up.gd" id="1_ih8kl"]
+[ext_resource type="PackedScene" uid="uid://cajyraiq1oebc" path="res://screens/login_register_menu/pop_ups/select_user_pop_up/select_user_btn/select_user_btn.tscn" id="1_ss4j1"]
+
+[node name="SelectUserPopUp" type="Control"]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ih8kl")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.377256, 0.375872, 9.62615e-08, 1)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 651.0
+offset_top = 100.0
+offset_right = 1082.0
+offset_bottom = 196.0
+theme_override_font_sizes/font_size = 70
+text = "SELECT USER"
+
+[node name="UsersContainer" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 596.0
+offset_top = 300.0
+offset_right = 636.0
+offset_bottom = 340.0
+theme_override_constants/separation = 20
+
+[node name="SelectUserBtn" parent="UsersContainer" instance=ExtResource("1_ss4j1")]
+layout_mode = 2
+
+[node name="GoBackBtn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 779.0
+offset_top = 896.0
+offset_right = 1002.0
+offset_bottom = 980.0
+theme_override_font_sizes/font_size = 55
+text = "Go Back"
+
+[node name="CloseBtn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1683.0
+offset_top = 66.0
+offset_right = 1774.0
+offset_bottom = 279.0
+theme_override_font_sizes/font_size = 150
+text = "x"
+
+[connection signal="pressed" from="GoBackBtn" to="." method="_on_go_back_btn_pressed"]
+[connection signal="pressed" from="CloseBtn" to="." method="_on_close_btn_pressed"]
