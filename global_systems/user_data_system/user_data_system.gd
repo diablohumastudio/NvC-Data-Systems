@@ -1,5 +1,7 @@
 extends Node
 
+enum PROPERTIES {USERS_CREDENTIALS, USER_NAME, UD_LEVELS, ACHIEVEMENTS}
+
 const _USERS_CREDENTIALS_FILE_PATH : String = "user://users.tres"
 const _USER_FILE_BASE: String = "user://"
 
@@ -33,3 +35,14 @@ func save_user_data_to_disk() -> void:
 	var result := ResourceSaver.save(current_user_data, _USER_FILE_BASE + current_user_data.user_name + ".tres")
 	assert(result == OK)
 	result = ResourceSaver.save(users_credentials, _USERS_CREDENTIALS_FILE_PATH)
+
+func get_property(property: PROPERTIES):
+	match property:
+		PROPERTIES.USERS_CREDENTIALS:
+			return users_credentials
+		PROPERTIES.USER_NAME:
+			return current_user_data.user.user_name
+		PROPERTIES.UD_LEVELS:
+			return current_user_data.progress.ud_levels
+		PROPERTIES.ACHIEVEMENTS:
+			return current_user_data.achievements.achievements
