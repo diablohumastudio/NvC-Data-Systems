@@ -18,19 +18,21 @@ script = ExtResource("1_j2l08")
 [node name="WelcomeLabel" type="Label" parent="."]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 730.0
-offset_top = 148.0
-offset_right = 930.0
-offset_bottom = 211.0
-theme_override_font_sizes/font_size = 65
-text = "Welcome"
+offset_left = 466.0
+offset_top = 217.0
+offset_right = 1265.0
+offset_bottom = 372.0
+theme_override_font_sizes/font_size = 55
+text = "Bye bye  UserName
+Do you want to chage user by:"
+horizontal_alignment = 1
 
 [node name="GotoPopUpBtns" type="Control" parent="."]
 anchors_preset = 0
-offset_left = 790.0
-offset_top = 523.0
-offset_right = 847.0
-offset_bottom = 563.0
+offset_left = 796.0
+offset_top = 435.0
+offset_right = 853.0
+offset_bottom = 475.0
 
 [node name="GotoLoginBtn" type="Button" parent="GotoPopUpBtns"]
 layout_mode = 0
@@ -68,6 +70,15 @@ offset_bottom = 911.0
 theme_override_font_sizes/font_size = 65
 text = "goto menu"
 
+[node name="GoBackBtn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 810.0
+offset_right = 372.0
+offset_bottom = 991.0
+theme_override_font_sizes/font_size = 50
+text = "GoBAck"
+
 [node name="PopUps" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -92,15 +103,6 @@ layout_mode = 1
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
-
-[node name="GoBackBtn" type="Button" parent="."]
-layout_mode = 0
-offset_left = 85.0
-offset_top = 810.0
-offset_right = 372.0
-offset_bottom = 991.0
-theme_override_font_sizes/font_size = 50
-text = "GoBAck"
 
 [connection signal="pressed" from="GotoPopUpBtns/GotoLoginBtn" to="." method="_on_goto_login_btn_pressed"]
 [connection signal="pressed" from="GotoPopUpBtns/GotoRegisterBtn" to="." method="_on_goto_register_btn_pressed"]

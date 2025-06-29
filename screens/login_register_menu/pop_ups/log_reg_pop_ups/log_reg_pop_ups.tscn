@@ -83,6 +83,7 @@ text = "ACEPT"
 
 [node name="GoBack" type="Button" parent="."]
 unique_name_in_owner = true
+visible = false
 layout_mode = 0
 offset_left = 672.0
 offset_top = 876.0
