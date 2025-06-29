@@ -41,10 +41,29 @@ func create_new_user(user_credentials: UserCredentials, set_to_current: bool = t
 
 	return new_user_data
 
-func set_current_user(user_credentials: UserCredentials) -> void:
-	var new_user_index: int = users_credentials.credentials.find(user_credentials)
+func set_current_user(user_name: String) -> void:
+	save_user_data_to_disk()
+	var current_user_credentials: UserCredentials
+	for user_credential in users_credentials.credentials:
+		if user_credential.user_name == user_name:
+			current_user_credentials = user_credential
+	var new_user_index: int = users_credentials.credentials.find(current_user_credentials)
 	users_credentials.current_user_index = new_user_index
-	current_user_data = load(_USER_FILE_BASE + user_credentials.user_name + ".tres")
+	current_user_data = load(_USER_FILE_BASE + current_user_credentials.user_name + ".tres")
+
+func user_exists(user_name: String)->bool:
+	for user_credential in users_credentials.credentials:
+		if user_credential.user_name == user_name:
+			return true
+	return false
+
+func is_user_password_valid(user_name: String, password: String) -> bool:
+	if user_exists(user_name): push_error("No user with this name")
+	for user_credential in users_credentials.credentials:
+		if user_credential.user_name == user_name:
+			if user_credential.password == password:
+				return true
+	return false
 
 func save_user_data_to_disk() -> void:
 	var result : Error = ResourceSaver.save(users_credentials, _USERS_CREDENTIALS_FILE_PATH)

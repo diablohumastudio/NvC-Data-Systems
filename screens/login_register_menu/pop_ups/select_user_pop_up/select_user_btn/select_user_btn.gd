@@ -11,7 +11,7 @@ func _set_user_credentials(new_value: UserCredentials) -> void:
 
 func _on_toggled(toggled_on: bool) -> void:
 	if toggled_on == true:
-		UDS.set_current_user(user_credentials)
+		UDS.set_current_user(user_credentials.user_name)
 		modulate = Color.AQUAMARINE
 		text = base_text + "    SELECTED"
 	else: 
