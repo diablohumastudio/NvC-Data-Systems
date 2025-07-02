@@ -1,10 +1,6 @@
-[gd_resource type="Resource" script_class="UDLevel" load_steps=6 format=3 uid="uid://bcl7adcqwyewh"]
+[gd_resource type="Resource" script_class="UDLevel" load_steps=2 format=3 uid="uid://bcl7adcqwyewh"]
 
-[ext_resource type="Resource" uid="uid://bxj0kkgo6ys0w" path="res://data/conditions/data/cond_lv_compl_lv_3.tres" id="1_01fha"]
 [ext_resource type="Script" uid="uid://bogjp3dhhsxqm" path="res://data/ud_levels/model/ud_level.gd" id="1_7620c"]
-[ext_resource type="Script" uid="uid://bmc3bhfaqdmro" path="res://data/conditions/model/cond_lv_compl.gd" id="3_lj3uh"]
-[ext_resource type="Resource" uid="uid://cdw84tffq1sgt" path="res://data/conditions/data/cond_lv_compl_lv_2.tres" id="4_lj3uh"]
-[ext_resource type="Resource" uid="uid://bg2v8g3sch4cs" path="res://data/conditions/data/cond_lv_compl_lv_2p.tres" id="5_iplk3"]
 
 [resource]
 script = ExtResource("1_7620c")
@@ -12,7 +8,6 @@ id = 3
 locked = true
 completed = false
 completed_all_canons = false
-unlocked_conditions = Array[ExtResource("3_lj3uh")]([ExtResource("4_lj3uh"), ExtResource("5_iplk3")])
-unl_cond_track = []
-completed_condition = ExtResource("1_01fha")
+unlocker_levels_ids = Array[int]([1, 2])
+unlocker_levels_id_tracker = Dictionary[int, bool]({})
 metadata/_custom_type_script = "uid://bogjp3dhhsxqm"

@@ -1,9 +1,6 @@
-[gd_resource type="Resource" script_class="UDLevel" load_steps=5 format=3 uid="uid://cam6h7kripwsr"]
+[gd_resource type="Resource" script_class="UDLevel" load_steps=2 format=3 uid="uid://cam6h7kripwsr"]
 
-[ext_resource type="Resource" uid="uid://cdw84tffq1sgt" path="res://data/conditions/data/cond_lv_compl_lv_2.tres" id="1_gj4mk"]
 [ext_resource type="Script" uid="uid://bogjp3dhhsxqm" path="res://data/ud_levels/model/ud_level.gd" id="1_p7fjb"]
-[ext_resource type="Resource" uid="uid://dr8x0p2einy6a" path="res://data/conditions/data/cond_lv_compl_lv_1.tres" id="3_ewvcl"]
-[ext_resource type="Script" uid="uid://bmc3bhfaqdmro" path="res://data/conditions/model/cond_lv_compl.gd" id="3_ku511"]
 
 [resource]
 script = ExtResource("1_p7fjb")
@@ -11,7 +8,6 @@ id = 1
 locked = true
 completed = false
 completed_all_canons = false
-unlocked_conditions = Array[ExtResource("3_ku511")]([ExtResource("3_ewvcl")])
-unl_cond_track = []
-completed_condition = ExtResource("1_gj4mk")
+unlocker_levels_ids = Array[int]([0])
+unlocker_levels_id_tracker = Dictionary[int, bool]({})
 metadata/_custom_type_script = "uid://bogjp3dhhsxqm"
