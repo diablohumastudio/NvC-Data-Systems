@@ -8,6 +8,7 @@ id = 2
 locked = true
 completed = false
 completed_all_canons = false
-unlocker_levels_ids = Array[int]([0])
-unlocker_levels_id_tracker = Dictionary[int, bool]({})
+unlocker_levels_ids = Dictionary[int, bool]({
+0: true
+})
 metadata/_custom_type_script = "uid://bogjp3dhhsxqm"

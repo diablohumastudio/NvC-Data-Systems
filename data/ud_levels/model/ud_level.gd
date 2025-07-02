@@ -6,13 +6,8 @@ class_name UDLevel extends Resource
 @export var completed: bool = false
 @export var completed_all_canons: bool = false
 
-@export var unlocker_levels_ids: Array[Level.IDs] = [] : set = _set_unlocker_levels_ids
-@export var unlocker_levels_id_traker: Dictionary[Level.IDs, bool]
+@export var unlocker_levels_ids: Dictionary[Level.IDs, bool] = {}
 
-func _set_unlocker_levels_ids(new_value: Array[Level.IDs]) -> void:
-	unlocker_levels_ids = new_value
-	for unlocker_level_id in unlocker_levels_ids:
-		unlocker_levels_id_traker.set(unlocker_level_id, true)
 #@export var unlocked_conditions: Array[CondLvCompl] : set = _set_unlocked_condition
 #@export var unl_cond_tracke: Array = []
 
