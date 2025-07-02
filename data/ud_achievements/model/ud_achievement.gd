@@ -7,20 +7,19 @@ signal achieved(id: Achievement.IDs)
 @export var is_achieved: bool = false
 @export var porcentage_achieved: int = 0
 
-@export var conditions: Array[Condition]: set = _set_conditions
-@export var conditions_trac: Array = []
+@export var conditions: Dictionary[Condition, bool]: set = _set_conditions
 
-func _set_conditions(new_value: Array[Condition]):
+func _set_conditions(new_value: Dictionary[Condition, bool]):
 	conditions = new_value
 	if !conditions: return
-	for condition in conditions:
-		conditions_trac.append(false)
-		condition.fullfilled.connect(_on_condition_fullfilled)
+	for key in conditions:
+		print(key.id)
+		key.fullfilled.connect(_on_condition_fullfilled)
 
 func _on_condition_fullfilled(condition: Condition):
-	conditions_trac[conditions.find(condition)] = true
-	for cond_tr in conditions_trac:
-		if cond_tr == false:
+	conditions[condition] = true
+	for key in conditions:
+		if conditions[key] == false:
 			return
 	if !is_achieved:
 		is_achieved = true

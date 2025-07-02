@@ -9,6 +9,7 @@ script = ExtResource("2_p0j03")
 id = 3
 is_achieved = false
 porcentage_achieved = 0
-conditions = Array[ExtResource("1_wu4l1")]([ExtResource("2_twhuv")])
-conditions_track = []
+conditions = Dictionary[ExtResource("1_wu4l1"), bool]({
+ExtResource("2_twhuv"): false
+})
 metadata/_custom_type_script = "uid://us6tcodg4fax"
