@@ -89,3 +89,8 @@ func get_property(property: PROPERTIES):
 			return current_user_data.stats.total_enemies_killed
 		PROPERTIES.UD_ACHIEVEMENTS:
 			return current_user_data.ud_achievements
+
+func listen_property(property: PROPERTIES, callback: Callable):
+		match property:
+			PROPERTIES.ENEMIES_KILLED:
+				current_user_data.stats.total_enemies_killed_changed.connect(callback)
