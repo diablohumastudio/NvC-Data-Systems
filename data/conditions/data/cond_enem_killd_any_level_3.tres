@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_3kxa6")
 enemies_to_kill = 3
-id = ""
+id = "cond_enem_killd_any_level_3"
 metadata/_custom_type_script = "uid://dysv7d5s6cm6a"

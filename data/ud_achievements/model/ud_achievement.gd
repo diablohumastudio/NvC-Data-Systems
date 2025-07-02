@@ -4,11 +4,11 @@ signal achieved(id: Achievement.IDs)
 
 @export var id: Achievement.IDs
 
-@export_storage var is_achieved: bool = false
-@export_storage var porcentage_achieved: int = 0
+@export var is_achieved: bool = false
+@export var porcentage_achieved: int = 0
 
 @export var conditions: Array[Condition]: set = _set_conditions
-@export_storage var conditions_trac: Array = []
+@export var conditions_trac: Array = []
 
 func _set_conditions(new_value: Array[Condition]):
 	conditions = new_value
