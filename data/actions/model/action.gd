@@ -1,6 +1,6 @@
 class_name Action extends Resource
 
-enum TYPES {LV_COMPLTD, ENEMY_KILLED}
+enum TYPES {LV_COMPLTD, ENEMY_KILLED, LV_COMPLTD_ALL_CANONS}
 
 var type: TYPES
 var payload: Payload
@@ -23,3 +23,11 @@ class PayEnemKilled extends Payload:
 	
 	func _init(_killed_enemies: Level.IDs) -> void:
 		killed_enemies = _killed_enemies
+
+class PayLvlComplAllCanons extends Payload:
+	var level_id: Level.IDs
+	var canons_alive: int
+
+	func _init(_level_id: Level.IDs, _canons_alive: int) -> void:
+		level_id = _level_id
+		canons_alive = _canons_alive

@@ -14,4 +14,13 @@ theme_override_font_sizes/font_size = 50
 text = "Mi Nombre"
 script = ExtResource("1_ghr6i")
 
+[node name="CanonsLbl" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 306.0
+offset_top = 11.0
+offset_right = 362.0
+offset_bottom = 34.0
+text = "canons"
+
 [connection signal="pressed" from="." to="." method="_on_pressed"]

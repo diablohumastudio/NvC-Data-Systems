@@ -11,13 +11,15 @@ func _change_color_and_text() -> void:
 	self.text = level.level_name
 	if level.ud_level.completed:
 		disabled = false
-		modulate = Color.GREEN
+		self_modulate = Color.GREEN
 	elif level.ud_level.locked == false:
 		disabled = false
-		modulate = Color.AQUA
+		self_modulate = Color.AQUA
 	else:
-		modulate = Color.WHITE
 		disabled = true
+		self_modulate = Color.WHITE
+	if level.ud_level.completed_all_canons:
+		%CanonsLbl.self_modulate = Color.RED
 
 func _on_pressed() -> void:
 	SMS.change_scene(GC.SCREENS_UIDS.GAME, {"level": level})
