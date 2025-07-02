@@ -1,6 +1,6 @@
 extends Node
 
-enum PROPERTIES {USERS_CREDENTIALS, USER_NAME, UD_LEVELS, ACHIEVEMENTS}
+enum PROPERTIES {USERS_CREDENTIALS, USER_NAME, UD_LEVELS, ACHIEVEMENTS, ENEMIES_KILLED}
 
 const _USERS_CREDENTIALS_FILE_PATH : String = "user://users.tres"
 const _USER_FILE_BASE: String = "user://"
@@ -81,3 +81,5 @@ func get_property(property: PROPERTIES):
 			return current_user_data.progress.ud_levels
 		PROPERTIES.ACHIEVEMENTS:
 			return current_user_data.achievements.achievements
+		PROPERTIES.ENEMIES_KILLED:
+			return current_user_data.stats.total_enemies_killed

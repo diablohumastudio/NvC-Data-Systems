@@ -11,3 +11,8 @@ func _on_win_btn_pressed() -> void:
 
 func _on_go_back_btn_pressed() -> void:
 	SMS.change_scene(GC.SCREENS_UIDS.MENU)
+
+func _on_kill_enemy_btn_pressed() -> void:
+	var total_enemies_killed: int = UDS.get_property(UDS.PROPERTIES.ENEMIES_KILLED)
+	total_enemies_killed += 1
+	ACS.set_action(Action.new(Action.TYPES.ENEMY_KILLED, Action.PayEnemKilled.new(total_enemies_killed)))
