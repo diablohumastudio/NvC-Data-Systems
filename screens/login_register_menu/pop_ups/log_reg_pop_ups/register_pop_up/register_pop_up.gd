@@ -1,7 +1,6 @@
 class_name RegisterPopUp extends UserProcessPopUp
 
 func _on_acept_btn_pressed() -> void:
-	var new_user_data: UserData
 	%UserName.check_is_empty()
 	%UserPassword.check_is_empty()
 

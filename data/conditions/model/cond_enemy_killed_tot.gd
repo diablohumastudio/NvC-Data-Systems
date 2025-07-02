@@ -5,6 +5,6 @@ class_name CondEnemKillTot extends Condition
 func _init() -> void:
 	type = Action.TYPES.ENEMY_KILLED
 
-func evaluate(action: Action):
+func evaluate(_action: Action):
 	if UDS.get_property(UDS.PROPERTIES.ENEMIES_KILLED) >= enemies_to_kill:
 		fullfilled.emit(self)
