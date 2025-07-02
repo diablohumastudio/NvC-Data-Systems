@@ -1,9 +1,17 @@
 extends Control
 
 func _ready() -> void:
-	var ud_chivements = UDS.current_user_data.ud_achievements.ud_achievements
-	for ud_chivement in ud_chivements:
-		ud_chivement.achieved.connect(_on_ud_achievement_achieved)
+	conect_ud_achievements()
+	UDS.current_user_changed.connect(_on_UDS_current_user_changed)
+
+func _on_UDS_current_user_changed():
+	conect_ud_achievements()
+
+func conect_ud_achievements():
+	var ud_chivements = UDS.get_property(UDS.PROPERTIES.UD_ACHIEVEMENTS).ud_achievements
+	for ud_chivement in ud_chivements as Array[UDAchievement]:
+		if !ud_chivement.achieved.is_connected(_on_ud_achievement_achieved):
+			ud_chivement.achieved.connect(_on_ud_achievement_achieved)
 
 func _on_ud_achievement_achieved(id: Achievement.IDs):
 	var achievements: Array[Achievement] = DataFilesLoader.get_achievements_from_res_files()

@@ -10,5 +10,5 @@ id = 2
 is_achieved = false
 porcentage_achieved = 0
 conditions = Array[ExtResource("1_m78wk")]([ExtResource("2_vb6h3")])
-conditions_trak = []
+conditions_track = []
 metadata/_custom_type_script = "uid://us6tcodg4fax"

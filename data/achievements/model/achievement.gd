@@ -1,6 +1,6 @@
 class_name Achievement extends Resource
 
-enum IDs {AchievCompLv2, AchievCompLv2and2p, AchievEnemKillTot5}
+enum IDs {AchievCompLv2, AchievCompLv2and2p, AchievEnemKillTot5, AchievEnemKillAnyLev3}
 
 @export var id: IDs
 @export var achievement_name: String

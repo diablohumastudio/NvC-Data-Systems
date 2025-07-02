@@ -28,7 +28,6 @@ static func get_achievements_from_res_files() -> Array[Achievement]:
 	for file: String in dir.get_files():
 		var ud_level: Achievement = load(dir.get_current_dir() + "/" + file)
 		achievements.append(ud_level)
-	print(achievements)
 	return achievements
 
 static func get_conditions_from_res_files() -> Array[Condition]:
@@ -40,3 +39,13 @@ static func get_conditions_from_res_files() -> Array[Condition]:
 		var cond: Condition = load(dir.get_current_dir() + "/" + file)
 		conds.append(cond)
 	return conds
+
+static func get_state_changer_from_res_files() -> Array[StateChanger]:
+	var state_changers: Array[StateChanger]
+	var dir := DirAccess.open("res://data/state_changers/data/")
+	assert(dir != null, "Could not open folder")
+	dir.list_dir_begin()
+	for file: String in dir.get_files():
+		var state_changer: StateChanger = load(dir.get_current_dir() + "/" + file)
+		state_changers.append(state_changer)
+	return state_changers

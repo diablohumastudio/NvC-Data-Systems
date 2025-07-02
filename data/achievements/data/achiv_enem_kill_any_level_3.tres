@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Achievement" load_steps=3 format=3 uid="uid://cmjruid8xhj48"]
+
+[ext_resource type="Script" uid="uid://b14kgvm7qxpo" path="res://data/achievements/model/achievement.gd" id="1_hix4a"]
+[ext_resource type="Resource" uid="uid://dgh4ifb3wkaiv" path="res://data/ud_achievements/data/ud_achiev_enem_any_level_tot_3.tres" id="2_1qqyw"]
+
+[resource]
+script = ExtResource("1_hix4a")
+id = 3
+achievement_name = "killed any level 3"
+description = ""
+reward = 0
+ud_achievement = ExtResource("2_1qqyw")
+metadata/_custom_type_script = "uid://b14kgvm7qxpo"

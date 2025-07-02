@@ -1,6 +1,8 @@
 extends Node
 
-enum PROPERTIES {USERS_CREDENTIALS, USER_NAME, UD_LEVELS, ACHIEVEMENTS, ENEMIES_KILLED}
+signal current_user_changed()
+
+enum PROPERTIES {USERS_CREDENTIALS, USER_NAME, UD_LEVELS, ACHIEVEMENTS, ENEMIES_KILLED, UD_ACHIEVEMENTS}
 
 const _USERS_CREDENTIALS_FILE_PATH : String = "user://users.tres"
 const _USER_FILE_BASE: String = "user://"
@@ -33,6 +35,7 @@ func create_new_user(user_credentials: UserCredentials, set_to_current: bool = t
 		var new_user_index: int = users_credentials.credentials.find(user_credentials)
 		users_credentials.current_user_index = new_user_index
 		current_user_data = new_user_data
+		current_user_changed.emit()
 	
 	var result : Error = ResourceSaver.save(users_credentials, _USERS_CREDENTIALS_FILE_PATH)
 	assert(result == OK)
@@ -50,6 +53,7 @@ func set_current_user(user_name: String) -> void:
 	var new_user_index: int = users_credentials.credentials.find(current_user_credentials)
 	users_credentials.current_user_index = new_user_index
 	current_user_data = load(_USER_FILE_BASE + current_user_credentials.user_name + ".tres")
+	current_user_changed.emit()
 
 func user_exists(user_name: String)->bool:
 	for user_credential in users_credentials.credentials:
@@ -83,3 +87,5 @@ func get_property(property: PROPERTIES):
 			return current_user_data.achievements.achievements
 		PROPERTIES.ENEMIES_KILLED:
 			return current_user_data.stats.total_enemies_killed
+		PROPERTIES.UD_ACHIEVEMENTS:
+			return current_user_data.ud_achievements
