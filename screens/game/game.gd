@@ -2,6 +2,18 @@ class_name Game extends Control
 
 var level: Level : set = _set_level
 var enemies_killed: int = 0
+var canons_alive: int = 5
+
+func _ready() -> void:
+	_update_kill_enemy_label()
+	_update_kill_enemy_tot_label()
+	UDS.listen_property(UDS.PROPERTIES.ENEMIES_KILLED, _update_kill_enemy_tot_label)
+
+func _update_kill_enemy_tot_label():
+	%KillEnemyTotalLbl.text = str(UDS.get_property(UDS.PROPERTIES.ENEMIES_KILLED)) + " enemies Killed in Total"
+
+func _update_kill_enemy_label():
+	%KillEnemyLbl.text = str(enemies_killed) + " enemies Killed in this sesion"
 
 func _set_level(new_value: Level) -> void:
 	level = new_value
@@ -16,3 +28,4 @@ func _on_go_back_btn_pressed() -> void:
 func _on_kill_enemy_btn_pressed() -> void:
 	enemies_killed += 1
 	ACS.set_action(Action.new(Action.TYPES.ENEMY_KILLED, Action.PayEnemKilled.new(enemies_killed)))
+	_update_kill_enemy_label()
