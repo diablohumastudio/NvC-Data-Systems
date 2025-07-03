@@ -7,7 +7,7 @@
 * [X] achievement: no null name 
 * [X] achievement: level eneies killed 
 * [X] progress: no canons level completed
-* [ ] change from conditions to state_changers
+* [X] change from conditions to state_changers
 * [ ] unlock allie
 * [ ] upgrade allie
 * [ ] new action class trigers animatable elements

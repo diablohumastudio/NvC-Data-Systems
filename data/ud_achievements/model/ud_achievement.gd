@@ -12,14 +12,14 @@ signal achieved(id: Achievement.IDs)
 func _set_conditions(new_value: Dictionary[Condition, bool]):
 	conditions = new_value
 	if !conditions: return
-	for key in conditions:
-		print(key.id)
-		key.fullfilled.connect(_on_condition_fullfilled)
+	for condition in conditions:
+		print(condition.id)
+		condition.fullfilled.connect(_on_condition_fullfilled)
 
 func _on_condition_fullfilled(condition: Condition):
 	conditions[condition] = true
-	for key in conditions:
-		if conditions[key] == false:
+	for cond in conditions:
+		if conditions[cond] == false:
 			return
 	if !is_achieved:
 		is_achieved = true

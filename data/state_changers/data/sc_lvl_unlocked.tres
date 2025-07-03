@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="SCLvUnlocked" load_steps=2 format=3 uid="uid://cxqljsmd5ujrs"]
-
-[ext_resource type="Script" uid="uid://se7bvk6q7rgc" path="res://data/state_changers/model/sc_lvl_unlocked.gd" id="1_wlgc7"]
-
-[resource]
-script = ExtResource("1_wlgc7")
-type = 0
-metadata/_custom_type_script = "uid://se7bvk6q7rgc"
