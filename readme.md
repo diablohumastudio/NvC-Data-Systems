@@ -8,6 +8,6 @@
 * [X] achievement: level eneies killed 
 * [X] progress: no canons level completed
 * [X] change from conditions to state_changers
-* [ ] unlock allie
+* [X] unlock allie
 * [ ] upgrade allie
 * [ ] new action class trigers animatable elements
