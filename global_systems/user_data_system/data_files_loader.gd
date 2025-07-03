@@ -20,15 +20,40 @@ static func create_ud_achievements_from_res_files() -> Array[UDAchievement]:
 		_ud_levels.append(ud_level.duplicate())
 	return _ud_levels
 
+static func create_ud_allies_from_res_files() -> Array[UDAlly]:
+	var _ud_allies: Array[UDAlly]
+	var dir := DirAccess.open("res://data/ud_allies/data/")
+	assert(dir != null, "Could not open folder")
+	dir.list_dir_begin()
+	for file: String in dir.get_files():
+		var ud_ally: UDAlly = load(dir.get_current_dir() + "/" + file)
+		_ud_allies.append(ud_ally.duplicate())
+	return _ud_allies
+
 static func get_achievements_from_res_files() -> Array[Achievement]:
 	var achievements: Array[Achievement]
 	var dir := DirAccess.open("res://data/achievements/data/")
 	assert(dir != null, "Could not open folder")
 	dir.list_dir_begin()
 	for file: String in dir.get_files():
-		var ud_level: Achievement = load(dir.get_current_dir() + "/" + file)
-		achievements.append(ud_level)
+		var achievement: Achievement = load(dir.get_current_dir() + "/" + file)
+		achievements.append(achievement)
 	return achievements
+
+static func get_achiev_from_res_file_by_id(id: Achievement.IDs) -> Achievement:
+	var achievement: Achievement = load("res://data/achievements/data/" + Achievement.IDs.keys()[id] + ".tres")
+	assert(achievement != null, "File not found in res://data/achievements/data/" + Achievement.IDs.keys()[id] + ".tres")
+	return achievement
+
+static func get_allies_from_res_files() -> Array[Ally]:
+	var allies: Array[Ally]
+	var dir := DirAccess.open("res://data/allies/data/")
+	assert(dir != null, "Could not open folder")
+	dir.list_dir_begin()
+	for file: String in dir.get_files():
+		var ally: Ally = load(dir.get_current_dir() + "/" + file)
+		allies.append(ally)
+	return allies
 
 static func get_conditions_from_res_files() -> Array[Condition]:
 	var conds: Array[Condition]
