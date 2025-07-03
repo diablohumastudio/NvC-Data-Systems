@@ -2,10 +2,10 @@ class_name UDLevel extends Resource
 
 @export var id: Level.IDs
 
-@export var locked: bool = true
 @export var completed: bool = false
 @export var completed_all_canons: bool = false
 
+@export var locked: bool = true
 @export var unlocked_conditions: Dictionary[Condition, bool] : set = _set_unlocked_condition
 
 func _set_unlocked_condition(new_value: Dictionary[Condition, bool]) -> void:
