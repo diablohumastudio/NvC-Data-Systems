@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Ally" load_steps=4 format=3 uid="uid://bxaddilaeyy62"]
+
+[ext_resource type="Script" uid="uid://ccntxav05c4k" path="res://data/allies/model/ally.gd" id="1_i87kw"]
+[ext_resource type="Texture2D" uid="uid://clqhwebs0bq0b" path="res://data/allies/assets/shoter_ally/assets/enemy_thumbnail_bayonet.png" id="2_xyo8g"]
+[ext_resource type="Resource" uid="uid://imhtlxk5ynnx" path="res://data/ud_allies/data/ud_shoter_ally.tres" id="3_xyo8g"]
+
+[resource]
+script = ExtResource("1_i87kw")
+id = 0
+ally_name = "shotet ally"
+description = ""
+thumbnail = ExtResource("2_xyo8g")
+price = 300
+ud_ally = ExtResource("3_xyo8g")
+metadata/_custom_type_script = "uid://ccntxav05c4k"

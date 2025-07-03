@@ -1,0 +1,22 @@
+class_name AlliesMarket extends Control
+
+var allies: Array[Ally]
+
+func _ready() -> void:
+	allies = DataFilesLoader.get_allies_from_res_files()
+	for child in %MAPContainer.get_children():
+		child.queue_free()
+	for ally in allies:
+		var new_ally_presenter: MarketAllyPresenter = load("res://screens/allies_market/market_ally_presenter/market_ally_presenter.tscn").instantiate()
+		new_ally_presenter.ally = ally
+		%MAPContainer.add_child(new_ally_presenter)
+
+func _on_go_back_btn_pressed() -> void:
+	SMS.change_scene(GC.SCREENS_UIDS.MENU)
+
+func _on_present_unlocked_allies_button_pressed() -> void:
+	var text_to_present: String = ""
+	for ally in allies:
+		if !ally.ud_ally.locked:
+			text_to_present = text_to_present + str(ally.ally_name) + "\n"
+	%PresentUnlockedAlliesLabel.text = text_to_present

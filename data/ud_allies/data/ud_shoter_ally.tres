@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="UDAlly" load_steps=2 format=3 uid="uid://imhtlxk5ynnx"]
+
+[ext_resource type="Script" uid="uid://lucdai2ohj0b" path="res://data/ud_allies/model/ud_ally.gd" id="1_ttwn6"]
+
+[resource]
+script = ExtResource("1_ttwn6")
+id = 0
+locked = true
+level = 1
+metadata/_custom_type_script = "uid://lucdai2ohj0b"

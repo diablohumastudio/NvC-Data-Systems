@@ -30,6 +30,7 @@ func create_new_user(user_credentials: UserCredentials, set_to_current: bool = t
 	new_user_data.user_name = user_credentials.user_name
 	new_user_data.progress.ud_levels = DataFilesLoader.create_ud_levels_from_res_files()
 	new_user_data.ud_achievements.ud_achievements = DataFilesLoader.create_ud_achievements_from_res_files()
+	new_user_data.allies_inventory.ud_allies = DataFilesLoader.create_ud_allies_from_res_files()
 	
 	if set_to_current:
 		var new_user_index: int = users_credentials.credentials.find(user_credentials)

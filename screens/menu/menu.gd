@@ -8,3 +8,6 @@ func _on_goto_achievements_screen_btn_pressed() -> void:
 
 func _on_go_back_btn_pressed() -> void:
 	SMS.change_scene(GC.SCREENS_UIDS.WELCOME_MENU)
+
+func _on_goto_market_btn_pressed() -> void:
+	SMS.change_scene(GC.SCREENS_UIDS.ALLIES_MARKET)

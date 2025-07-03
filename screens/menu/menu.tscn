@@ -18,6 +18,7 @@ grow_vertical = 2
 script = ExtResource("1_pbjm4")
 
 [node name="LevelBtn" parent="." instance=ExtResource("1_j0t7f")]
+self_modulate = Color(0, 1, 1, 1)
 layout_mode = 1
 offset_left = 63.0
 offset_top = 149.0
@@ -104,6 +105,16 @@ offset_bottom = 1026.0
 theme_override_font_sizes/font_size = 35
 text = "Go Back"
 
+[node name="GotoMarketBtn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1427.0
+offset_top = 768.0
+offset_right = 1838.0
+offset_bottom = 851.0
+theme_override_font_sizes/font_size = 35
+text = "Go to Allies Market"
+
 [connection signal="pressed" from="SaveBtn" to="." method="_on_save_btn_pressed"]
 [connection signal="pressed" from="GotoAchievementsScreenBtn" to="." method="_on_goto_achievements_screen_btn_pressed"]
 [connection signal="pressed" from="GoBackBtn" to="." method="_on_go_back_btn_pressed"]
+[connection signal="pressed" from="GotoMarketBtn" to="." method="_on_goto_market_btn_pressed"]
