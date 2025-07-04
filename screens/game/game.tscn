@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c2b4jldseu5vs"]
+[gd_scene load_steps=3 format=3 uid="uid://c2b4jldseu5vs"]
 
 [ext_resource type="Script" uid="uid://bvalrtinik0vd" path="res://screens/game/game.gd" id="1_eyx8b"]
+[ext_resource type="PackedScene" uid="uid://d257caaopmpke" path="res://screens/game/allies_hud/allies_hud.tscn" id="2_khowf"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -11,40 +12,57 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_eyx8b")
 
-[node name="WinBtn" type="Button" parent="."]
-layout_mode = 0
-offset_left = 654.0
-offset_top = 546.0
-offset_right = 764.0
-offset_bottom = 633.0
-theme_override_font_sizes/font_size = 50
-text = "WIN"
-
-[node name="GoBackBtn" type="Button" parent="."]
-layout_mode = 0
-offset_left = 77.0
-offset_top = 917.0
-offset_right = 304.0
-offset_bottom = 1003.0
-theme_override_font_sizes/font_size = 50
-text = "GO BACK"
-
 [node name="LevelNamePresenter" type="Label" parent="."]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 669.0
-offset_top = 135.0
-offset_right = 937.0
-offset_bottom = 316.0
+offset_left = 1386.0
+offset_top = 58.0
+offset_right = 1527.0
+offset_bottom = 127.0
 theme_override_font_sizes/font_size = 50
 text = "LEVEL"
 
+[node name="Allies HUD" parent="." instance=ExtResource("2_khowf")]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 146.0
+offset_right = 1083.0
+offset_bottom = 364.0
+
+[node name="CanonHUD" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 1456.0
+offset_top = 234.0
+offset_right = 1815.0
+offset_bottom = 398.0
+
+[node name="CanonKilledBtn" type="Button" parent="CanonHUD"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 55
+text = "Canon Killed"
+
+[node name="CanonsLeft" type="Label" parent="CanonHUD"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 55
+text = "5 Canons Left"
+
+[node name="WinBtn" type="Button" parent="."]
+modulate = Color(0.517647, 1, 0.227451, 1)
+layout_mode = 0
+offset_left = 1464.0
+offset_top = 528.0
+offset_right = 1802.0
+offset_bottom = 784.0
+theme_override_font_sizes/font_size = 50
+text = "WIN"
+
 [node name="KilledEnemiesHUD" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 395.0
-offset_top = 345.0
-offset_right = 1113.0
-offset_bottom = 429.0
+offset_left = 870.0
+offset_top = 853.0
+offset_right = 1805.0
+offset_bottom = 1009.0
 
 [node name="KillEnemyBtn" type="Button" parent="KilledEnemiesHUD"]
 layout_mode = 2
@@ -66,25 +84,16 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 55
 text = "0 enemies Killed in Total"
 
-[node name="CanonHUD" type="VBoxContainer" parent="."]
+[node name="GoBackBtn" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1432.0
-offset_top = 594.0
-offset_right = 1791.0
-offset_bottom = 758.0
+offset_left = 36.0
+offset_top = 948.0
+offset_right = 263.0
+offset_bottom = 1034.0
+theme_override_font_sizes/font_size = 50
+text = "GO BACK"
 
-[node name="CanonKilledBtn" type="Button" parent="CanonHUD"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 55
-text = "Canon Killed"
-
-[node name="CanonsLeft" type="Label" parent="CanonHUD"]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_font_sizes/font_size = 55
-text = "5 Canons Left"
-
-[connection signal="pressed" from="WinBtn" to="." method="_on_win_btn_pressed"]
-[connection signal="pressed" from="GoBackBtn" to="." method="_on_go_back_btn_pressed"]
-[connection signal="pressed" from="KilledEnemiesHUD/KillEnemyBtn" to="." method="_on_kill_enemy_btn_pressed"]
 [connection signal="pressed" from="CanonHUD/CanonKilledBtn" to="." method="_on_canon_killed_btn_pressed"]
+[connection signal="pressed" from="WinBtn" to="." method="_on_win_btn_pressed"]
+[connection signal="pressed" from="KilledEnemiesHUD/KillEnemyBtn" to="." method="_on_kill_enemy_btn_pressed"]
+[connection signal="pressed" from="GoBackBtn" to="." method="_on_go_back_btn_pressed"]

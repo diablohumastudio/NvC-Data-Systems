@@ -2,7 +2,7 @@ extends Node
 
 signal current_user_changed()
 
-enum PROPERTIES {USERS_CREDENTIALS, USER_NAME, UD_LEVELS, ACHIEVEMENTS, ENEMIES_KILLED, UD_ACHIEVEMENTS}
+enum PROPERTIES {USERS_CREDENTIALS, USER_NAME, UD_LEVELS, ACHIEVEMENTS, ENEMIES_KILLED, UD_ACHIEVEMENTS, ALLIES}
 
 const _USERS_CREDENTIALS_FILE_PATH : String = "user://users.tres"
 const _USER_FILE_BASE: String = "user://"
@@ -90,6 +90,8 @@ func get_property(property: PROPERTIES):
 			return current_user_data.stats.total_enemies_killed
 		PROPERTIES.UD_ACHIEVEMENTS:
 			return current_user_data.ud_achievements
+		PROPERTIES.ALLIES:
+			return current_user_data.allies_inventory.ud_allies
 
 func listen_property(property: PROPERTIES, callback: Callable):
 		match property:

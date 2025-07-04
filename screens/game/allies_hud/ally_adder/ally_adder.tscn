@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://cemqvgdd647jr"]
+
+[ext_resource type="Script" uid="uid://cbhrrjwsvqwhe" path="res://screens/game/allies_hud/ally_adder/ally_adder.gd" id="1_jai8t"]
+[ext_resource type="PackedScene" uid="uid://bov0t27q4siqx" path="res://screens/game/allies_hud/ally_adder/added_ally/added_ally.tscn" id="2_kili1"]
+
+[node name="AllyAdder" type="VBoxContainer"]
+offset_right = 1064.0
+offset_bottom = 213.0
+script = ExtResource("1_jai8t")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="AllyTitle" type="Label" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 45
+text = "Shooter ally"
+horizontal_alignment = 1
+
+[node name="AddAllyContainer" type="CenterContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="AddAllyBtn" type="Button" parent="HBoxContainer/AddAllyContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+text = "ADD  "
+
+[node name="AddAllyBtnLockedBanner" type="ColorRect" parent="HBoxContainer/AddAllyContainer/AddAllyBtn"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.403922, 0.556863, 0.564706)
+
+[node name="Label" type="Label" parent="HBoxContainer/AddAllyContainer/AddAllyBtn/AddAllyBtnLockedBanner"]
+layout_mode = 1
+offset_right = 175.0
+offset_bottom = 63.0
+theme_override_font_sizes/font_size = 25
+text = "LOCKED"
+
+[node name="AlliesContainer" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="AddedAlly" parent="AlliesContainer" instance=ExtResource("2_kili1")]
+layout_mode = 2
+
+[connection signal="pressed" from="HBoxContainer/AddAllyContainer/AddAllyBtn" to="." method="_on_add_ally_btn_pressed"]
