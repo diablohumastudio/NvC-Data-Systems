@@ -10,11 +10,20 @@ signal achieved(id: Achievement.IDs)
 @export var conditions: Dictionary[Condition, bool]: set = _set_conditions
 
 func _set_conditions(new_value: Dictionary[Condition, bool]):
+	# Disconnect old signals to prevent memory leaks
+	if conditions:
+		for condition in conditions:
+			if condition.fullfilled.is_connected(_on_condition_fullfilled):
+				condition.fullfilled.disconnect(_on_condition_fullfilled)
+	
 	conditions = new_value
 	if !conditions: return
+	
+	# Connect new signals
 	for condition in conditions:
 		print(condition.id)
-		condition.fullfilled.connect(_on_condition_fullfilled)
+		if !condition.fullfilled.is_connected(_on_condition_fullfilled):
+			condition.fullfilled.connect(_on_condition_fullfilled)
 
 func _on_condition_fullfilled(condition: Condition):
 	conditions[condition] = true
