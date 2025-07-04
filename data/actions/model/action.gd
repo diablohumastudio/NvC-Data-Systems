@@ -21,7 +21,7 @@ class PayLvCompl extends Payload:
 class PayEnemKilled extends Payload:
 	var killed_enemies: int
 	
-	func _init(_killed_enemies: Level.IDs) -> void:
+	func _init(_killed_enemies: int) -> void:
 		killed_enemies = _killed_enemies
 
 class PayLvlComplAllCanons extends Payload:

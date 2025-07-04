@@ -16,8 +16,8 @@ static func create_ud_achievements_from_res_files() -> Array[UDAchievement]:
 	assert(dir != null, "Could not open folder")
 	dir.list_dir_begin()
 	for file: String in dir.get_files():
-		var ud_level: UDAchievement = load(dir.get_current_dir() + "/" + file)
-		_ud_levels.append(ud_level.duplicate())
+		var ud_achievement: UDAchievement = load(dir.get_current_dir() + "/" + file)
+		_ud_levels.append(ud_achievement.duplicate())
 	return _ud_levels
 
 static func create_ud_allies_from_res_files() -> Array[UDAlly]:

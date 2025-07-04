@@ -63,7 +63,7 @@ func user_exists(user_name: String)->bool:
 	return false
 
 func is_user_password_valid(user_name: String, password: String) -> bool:
-	if user_exists(user_name): push_error("No user with this name")
+	if !user_exists(user_name): push_error("No user with this name")
 	for user_credential in users_credentials.credentials:
 		if user_credential.user_name == user_name:
 			if user_credential.password == password:
