@@ -1,6 +1,8 @@
 @tool
 class_name MarketAllyPresenter extends VBoxContainer
 
+signal ally_details_requested(ally: Ally)
+
 @export var ally: Ally : set = _set_ally
 
 func _set_ally(new_value: Ally) -> void:
@@ -11,10 +13,12 @@ func set_visuals() -> void:
 	if ally.thumbnail:
 		%AllyThumbnail.texture = ally.thumbnail
 	%AllyName.text = ally.ally_name
-	%AllyPrice.text = str(ally.price)
 	if ally.ud_ally.locked == false:
-		%AllyPrice.text = "ALREADY BUYED"
-		%BuyBtn.disabled = true
+		%AllyPrice.text = "OWNED - Level " + str(ally.ud_ally.level)
+		%DetailsBtn.text = "UPGRADE"
+	else:
+		%AllyPrice.text = "Price: " + str(ally.price)
+		%DetailsBtn.text = "BUY"
 
-func _on_buy_btn_pressed() -> void:
-	ACS.set_action(Action.new(Action.TYPES.UNLOCK_ALLY, Action.PayUnlockAlly.new(ally.id)))
+func _on_details_btn_pressed() -> void:
+	ally_details_requested.emit(ally)

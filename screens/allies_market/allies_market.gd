@@ -9,7 +9,11 @@ func _ready() -> void:
 	for ally in allies:
 		var new_ally_presenter: MarketAllyPresenter = load("res://screens/allies_market/market_ally_presenter/market_ally_presenter.tscn").instantiate()
 		new_ally_presenter.ally = ally
+		new_ally_presenter.ally_details_requested.connect(_on_ally_details_requested)
 		%MAPContainer.add_child(new_ally_presenter)
+
+func _on_ally_details_requested(ally: Ally) -> void:
+	%AllyDetailsPopup.show_ally_details(ally)
 
 func _on_go_back_btn_pressed() -> void:
 	SMS.change_scene(GC.SCREENS_UIDS.MENU)

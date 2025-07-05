@@ -29,10 +29,10 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 45
 text = "500"
 
-[node name="BuyBtn" type="Button" parent="."]
+[node name="DetailsBtn" type="Button" parent="."]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 45
-text = "BUY"
+text = "DETAILS"
 
-[connection signal="pressed" from="BuyBtn" to="." method="_on_buy_btn_pressed"]
+[connection signal="pressed" from="DetailsBtn" to="." method="_on_details_btn_pressed"]
