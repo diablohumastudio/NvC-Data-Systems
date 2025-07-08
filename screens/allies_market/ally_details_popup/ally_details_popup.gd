@@ -30,14 +30,22 @@ func _update_buttons() -> void:
 		%UpgradeButton.visible = false
 		%PriceLabel.text = "Price: " + str(ally.price)
 	else:
-		# Ally is unlocked - show upgrade button
+		# Ally is unlocked - check if can upgrade
 		%BuyButton.visible = false
-		%UpgradeButton.visible = true
 		
 		var current_level = ally.ud_ally.level
-		var next_level = current_level + 1
-		%UpgradeButton.text = "Upgrade from lvl " + str(current_level) + " to lvl " + str(next_level)
-		%PriceLabel.text = "Upgrade Price: " + str(ally.upgrade_price)
+		var max_level = ally.max_level
+		
+		if current_level >= max_level:
+			# Already at max level - hide upgrade button
+			%UpgradeButton.visible = false
+			%PriceLabel.text = "Max Level Reached"
+		else:
+			# Can upgrade - show upgrade button
+			%UpgradeButton.visible = true
+			var next_level = current_level + 1
+			%UpgradeButton.text = "Upgrade from lvl " + str(current_level) + " to lvl " + str(next_level)
+			%PriceLabel.text = "Upgrade Price: " + str(ally.upgrade_price)
 
 func _on_buy_button_pressed() -> void:
 	if ally && ally.ud_ally.locked:
@@ -47,7 +55,7 @@ func _on_buy_button_pressed() -> void:
 		_update_buttons()
 
 func _on_upgrade_button_pressed() -> void:
-	if ally && !ally.ud_ally.locked:
+	if ally && !ally.ud_ally.locked && ally.ud_ally.level < ally.max_level:
 		# Trigger upgrade action
 		ACS.set_action(Action.new(Action.TYPES.UPGRADE_ALLY, Action.PayUpgradeAlly.new(ally.id)))
 		# Update visuals after upgrade

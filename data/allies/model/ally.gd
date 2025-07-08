@@ -9,6 +9,7 @@ enum IDs { SHOTING_ALLY, MONEY_PROVIDER }
 @export var thumbnail: Texture2D
 @export var price: int
 @export var upgrade_price: int = 100
+@export var max_level: int = 3
 
 @export var ud_ally: UDAlly : set = _set_ud_ally
 
