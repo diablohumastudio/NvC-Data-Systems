@@ -4,9 +4,13 @@ var level: Level : set = _set_level
 var enemies_killed: int = 0
 var canons_alive: int = GC.TOTAL_NUMBER_OF_CANONS
 
+func _set_level(new_value: Level) -> void:
+	level = new_value
+	%LevelNamePresenter.text = level.level_name
+	
 func _ready() -> void:
-	_update_kill_enemy_label()
 	_update_kill_enemy_tot_label()
+	_update_kill_enemy_label()
 	UDS.listen_property(UDS.PROPERTIES.ENEMIES_KILLED, _update_kill_enemy_tot_label)
 
 func _update_kill_enemy_tot_label():
@@ -14,10 +18,6 @@ func _update_kill_enemy_tot_label():
 
 func _update_kill_enemy_label():
 	%KillEnemyLbl.text = str(enemies_killed) + " enemies Killed in this sesion"
-
-func _set_level(new_value: Level) -> void:
-	level = new_value
-	%LevelNamePresenter.text = level.level_name
 
 func _on_win_btn_pressed() -> void:
 	ACS.set_action(Action.new(Action.TYPES.LV_COMPLTD_ALL_CANONS, Action.PayLvlComplAllCanons.new(level.id, canons_alive)))

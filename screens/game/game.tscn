@@ -24,10 +24,11 @@ text = "LEVEL"
 
 [node name="Allies HUD" parent="." instance=ExtResource("2_khowf")]
 layout_mode = 0
-offset_left = 143.0
-offset_top = 146.0
-offset_right = 1083.0
-offset_bottom = 364.0
+offset_left = 8.0
+offset_top = 2.0
+offset_right = 948.0
+offset_bottom = 220.0
+scale = Vector2(0.8, 0.8)
 
 [node name="CanonHUD" type="VBoxContainer" parent="."]
 layout_mode = 0

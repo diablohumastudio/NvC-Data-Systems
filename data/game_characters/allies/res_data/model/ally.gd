@@ -1,12 +1,13 @@
 class_name Ally extends Resource
 
-enum IDs { SHOTING_ALLY, MONEY_PROVIDER }
+enum IDs { BAYONETE_SOLDIER, CHEST }
 
 @export var id: IDs
 
 @export var ally_name: String
 @export var description: String
 @export var thumbnail: Texture2D
+
 @export var price: int
 @export var upgrade_price: int = 100
 @export var max_level: int = 3

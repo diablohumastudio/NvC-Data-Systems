@@ -1,0 +1,448 @@
+[gd_scene load_steps=38 format=3 uid="uid://cnqqga8hbxxjn"]
+
+[ext_resource type="Script" uid="uid://dxllcn548wf2j" path="res://game_characters_scenes/components/ruble_coin/ruble_coin.gd" id="1_b3trd"]
+[ext_resource type="Texture2D" uid="uid://bnbovx28lo8pq" path="res://game_characters_scenes/assets/oval_patricle.png" id="2_cwneg"]
+[ext_resource type="Texture2D" uid="uid://dyu0e7xfddgv2" path="res://game_characters_scenes/components/ruble_coin/assets/rublo_halo.png" id="2_tdw4k"]
+[ext_resource type="Texture2D" uid="uid://b3v6xh4pladc4" path="res://game_characters_scenes/components/ruble_coin/assets/rublo1.png" id="3_g1fj8"]
+[ext_resource type="Texture2D" uid="uid://dbp22phu78oa5" path="res://game_characters_scenes/components/ruble_coin/assets/rublo2.png" id="4_3bhx1"]
+[ext_resource type="Texture2D" uid="uid://ccf80yklheoqr" path="res://game_characters_scenes/components/ruble_coin/assets/rublo3.png" id="5_us2wb"]
+[ext_resource type="Texture2D" uid="uid://b4dbac8besh03" path="res://game_characters_scenes/components/ruble_coin/assets/rublo4.png" id="6_tb2vw"]
+[ext_resource type="Texture2D" uid="uid://v8s2d628dpry" path="res://game_characters_scenes/components/ruble_coin/assets/rublo5.png" id="7_6g6ia"]
+[ext_resource type="Texture2D" uid="uid://b1cvd00c1xayj" path="res://game_characters_scenes/components/ruble_coin/assets/rublo6.png" id="8_lihry"]
+[ext_resource type="Texture2D" uid="uid://lkmowpnm7mvi" path="res://game_characters_scenes/components/ruble_coin/assets/rublo7.png" id="9_ovq0h"]
+[ext_resource type="Texture2D" uid="uid://ckgce177vn1fx" path="res://game_characters_scenes/components/ruble_coin/assets/rublo8.png" id="10_ybgdu"]
+[ext_resource type="Texture2D" uid="uid://g8ggett655vx" path="res://game_characters_scenes/components/ruble_coin/assets/rublo9.png" id="11_fgqry"]
+[ext_resource type="Texture2D" uid="uid://otahwbnkppwm" path="res://game_characters_scenes/components/ruble_coin/assets/rublo10.png" id="12_rw75e"]
+[ext_resource type="Texture2D" uid="uid://bpfqicv4uwpma" path="res://game_characters_scenes/components/ruble_coin/assets/rublo11.png" id="13_kwlkm"]
+[ext_resource type="Texture2D" uid="uid://bjd6o6v767dfy" path="res://game_characters_scenes/components/ruble_coin/assets/rublo12.png" id="14_bgu6h"]
+[ext_resource type="Texture2D" uid="uid://du40ktcek2f8w" path="res://game_characters_scenes/components/ruble_coin/assets/rublo13.png" id="15_f5cd8"]
+[ext_resource type="Texture2D" uid="uid://cgymb0vciakar" path="res://game_characters_scenes/components/ruble_coin/assets/rublo14.png" id="16_t3404"]
+[ext_resource type="Texture2D" uid="uid://cnpgi0jultent" path="res://game_characters_scenes/components/ruble_coin/assets/rublo15.png" id="17_tpl6c"]
+[ext_resource type="Texture2D" uid="uid://doudpiw7kv51m" path="res://game_characters_scenes/components/ruble_coin/assets/rublo16.png" id="18_rlr7d"]
+[ext_resource type="Texture2D" uid="uid://8044jorfu3f5" path="res://game_characters_scenes/components/ruble_coin/assets/rublo17.png" id="19_sibvr"]
+[ext_resource type="Texture2D" uid="uid://bkvtnoayxaaum" path="res://game_characters_scenes/components/ruble_coin/assets/rublo18.png" id="20_eih5t"]
+[ext_resource type="Texture2D" uid="uid://owh7x3htkfvq" path="res://game_characters_scenes/components/ruble_coin/assets/rublo19.png" id="21_1bqch"]
+[ext_resource type="Texture2D" uid="uid://dx0anknqa0fe5" path="res://game_characters_scenes/components/ruble_coin/assets/rublo20.png" id="22_w2spg"]
+[ext_resource type="Texture2D" uid="uid://q5ifosgjvma5" path="res://game_characters_scenes/assets/gun_light.png" id="23_7lg7u"]
+[ext_resource type="Shader" uid="uid://blan7lrww6sar" path="res://assets/glitch.gdshader" id="25_spcl8"]
+
+[sub_resource type="Curve" id="Curve_rdp2h"]
+_limits = [0.0, 1.2, 0.0, 1.0]
+_data = [Vector2(0, 0.923077), 0.0, 1.0898, 0, 0, Vector2(0.61236, 1.2), 0.0, 0.0, 0, 0, Vector2(1, 0.303297), -5.05562, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_xjh6t"]
+offsets = PackedFloat32Array(0, 0.613333, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.956863, 0.94902, 0.921569, 0.945098, 0.796078, 0.772549, 0.639216, 0.47451)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3u8fa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_g1fj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3bhx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_us2wb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tb2vw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6g6ia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_lihry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ovq0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ybgdu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_fgqry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_rw75e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_kwlkm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_bgu6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_f5cd8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_t3404")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_tpl6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_rlr7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_sibvr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_eih5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_1bqch")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_w2spg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_g1fj8")
+}],
+"loop": true,
+"name": &"coin_flipping",
+"speed": 12.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_35u6d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texture:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Texture:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Texture:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("RubleLight:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 0.678431, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_x1y6i"]
+resource_name = "dissapear"
+length = 2.8
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texture:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.05, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0.603922, 0.615686, 0.929412), Color(1, 1, 1, 1), Color(1, 0.603922, 0.615686, 0.929412), Color(1, 1, 1, 1), Color(1, 0.603922, 0.615686, 0.929412), Color(1, 1, 1, 1), Color(1, 0.603922, 0.615686, 0.929412), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Texture:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.15, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 0.406126, 0.594603),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1), Vector2(1.4, 1.4), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CPUParticles2D:emitting")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_ccfql"]
+resource_name = "pick_up_coin"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texture:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(2, 2, 2, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Texture:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(2.2, 2.2), Vector2(0.1, 0.1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Texture:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -6.28319]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CPUParticles2D:emitting")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("RubleLight:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.4, 0.4), Vector2(1.6, 1.6)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("RubleLight:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 0.678431, 0.792157), Color(1, 1, 0.737255, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_lmr6g"]
+resource_name = "spawn"
+length = 0.6
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texture:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_olv0f"]
+_data = {
+&"RESET": SubResource("Animation_35u6d"),
+&"dissapear": SubResource("Animation_x1y6i"),
+&"pick_up_coin": SubResource("Animation_ccfql"),
+&"spawn": SubResource("Animation_lmr6g")
+}
+
+[sub_resource type="Animation" id="Animation_410k6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texture/Halo:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_qtsj8"]
+resource_name = "halo_rotating_anim"
+length = 8.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texture/Halo:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Texture/Halo:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.309804), Color(1, 1, 1, 0.843137), Color(1, 1, 1, 0.309804), Color(1, 1, 1, 0.843137), Color(1, 1, 1, 0.309804), Color(1, 1, 1, 0.843137), Color(1, 1, 1, 0.309804), Color(1, 1, 1, 0.843137), Color(1, 1, 1, 0.309804)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xctjw"]
+_data = {
+&"RESET": SubResource("Animation_410k6"),
+&"halo_rotating_anim": SubResource("Animation_qtsj8")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pquq5"]
+shader = ExtResource("25_spcl8")
+shader_parameter/shake_power = 0.01
+shader_parameter/shake_rate = 0.2
+shader_parameter/shake_speed = 0.0
+shader_parameter/shake_block_size = 70.0
+shader_parameter/shake_color_rate = 0.01
+
+[node name="RubleCoin" type="TextureButton"]
+custom_minimum_size = Vector2(82, 83)
+offset_left = -41.0
+offset_top = -41.0
+offset_right = 41.0
+offset_bottom = 42.0
+script = ExtResource("1_b3trd")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(45, 45)
+emitting = false
+amount = 30
+texture = ExtResource("2_cwneg")
+lifetime = 0.7
+one_shot = true
+preprocess = 0.3
+explosiveness = 1.0
+randomness = 0.6
+lifetime_randomness = 0.6
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, -100)
+initial_velocity_min = 213.48
+initial_velocity_max = 213.48
+scale_amount_curve = SubResource("Curve_rdp2h")
+color_ramp = SubResource("Gradient_xjh6t")
+
+[node name="RubleLight" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 0.678431, 0)
+position = Vector2(42, 45)
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("23_7lg7u")
+
+[node name="Texture" type="AnimatedSprite2D" parent="."]
+position = Vector2(41, 41)
+sprite_frames = SubResource("SpriteFrames_3u8fa")
+animation = &"coin_flipping"
+autoplay = "coin_flipping"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Texture"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_olv0f")
+}
+autoplay = "spawn"
+
+[node name="Halo" type="Sprite2D" parent="Texture"]
+modulate = Color(1, 1, 1, 0.400941)
+show_behind_parent = true
+scale = Vector2(0.909091, 0.909091)
+texture = ExtResource("2_tdw4k")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Texture/Halo"]
+root_node = NodePath("../../..")
+libraries = {
+&"": SubResource("AnimationLibrary_xctjw")
+}
+autoplay = "halo_rotating_anim"
+
+[node name="GlitchRect" type="ColorRect" parent="Texture"]
+visible = false
+material = SubResource("ShaderMaterial_pquq5")
+offset_left = -48.0
+offset_top = -42.0
+offset_right = 42.0
+offset_bottom = 40.0
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

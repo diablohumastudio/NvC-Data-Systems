@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cemqvgdd647jr"]
+[gd_scene load_steps=2 format=3 uid="uid://cemqvgdd647jr"]
 
 [ext_resource type="Script" uid="uid://cbhrrjwsvqwhe" path="res://screens/game/allies_hud/ally_adder/ally_adder.gd" id="1_jai8t"]
-[ext_resource type="PackedScene" uid="uid://bov0t27q4siqx" path="res://screens/game/allies_hud/ally_adder/added_ally/added_ally.tscn" id="2_kili1"]
 
 [node name="AllyAdder" type="VBoxContainer"]
 offset_right = 1064.0
@@ -47,11 +46,8 @@ offset_bottom = 63.0
 theme_override_font_sizes/font_size = 25
 text = "LOCKED"
 
-[node name="AlliesContainer" type="VBoxContainer" parent="."]
+[node name="AlliesContainer" type="HBoxContainer" parent="."]
 unique_name_in_owner = true
-layout_mode = 2
-
-[node name="AddedAlly" parent="AlliesContainer" instance=ExtResource("2_kili1")]
 layout_mode = 2
 
 [connection signal="pressed" from="HBoxContainer/AddAllyContainer/AddAllyBtn" to="." method="_on_add_ally_btn_pressed"]
