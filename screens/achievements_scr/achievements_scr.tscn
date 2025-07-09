@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c3ovw6d7s6xpd" path="res://screens/achievements_scr/achievements_scr.gd" id="1_6kcgb"]
 [ext_resource type="PackedScene" uid="uid://dp353oa1f38v3" path="res://screens/achievements_scr/achievement_presenter/achievement_presenter.tscn" id="2_n5h0e"]
-[ext_resource type="Resource" uid="uid://81fc7fu8i1e" path="res://data/achievements/data/achiv_compl_lv_2.tres" id="3_4hikm"]
+[ext_resource type="Resource" uid="uid://81fc7fu8i1e" path="res://data/achievements/res_data/data/achiv_compl_lv_2.tres" id="3_4hikm"]
 
 [node name="AchievementsScreen" type="Control"]
 layout_mode = 3

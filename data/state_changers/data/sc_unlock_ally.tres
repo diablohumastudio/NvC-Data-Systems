@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="SCUnlockAlly" load_steps=2 format=3 uid="uid://qllrk7jlwj57"]
-
-[ext_resource type="Script" uid="uid://bvn8mw66t3prb" path="res://data/state_changers/model/sc_unlock_ally.gd" id="1_fo60m"]
-
-[resource]
-script = ExtResource("1_fo60m")
-type = 3
-metadata/_custom_type_script = "uid://bvn8mw66t3prb"

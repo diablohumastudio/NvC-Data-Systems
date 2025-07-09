@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Ally" load_steps=4 format=3 uid="uid://dnxrv0styygjo"]
+
+[ext_resource type="Script" uid="uid://ccntxav05c4k" path="res://data/game_characters/allies/res_data/model/ally.gd" id="1_x8xu7"]
+[ext_resource type="Texture2D" uid="uid://fiodc4axyxnb" path="res://data/game_characters/allies/res_data/assets/money_provider/assets/chest_thumbnail.png" id="2_d0myk"]
+[ext_resource type="Resource" uid="uid://tnci7ph2ia3c" path="res://data/game_characters/allies/user_data/data/ud_money_provider.tres" id="3_8vdq5"]
+
+[resource]
+script = ExtResource("1_x8xu7")
+id = 1
+ally_name = "Money provider"
+description = "sfdsfd"
+thumbnail = ExtResource("2_d0myk")
+price = 250
+ud_ally = ExtResource("3_8vdq5")
+metadata/_custom_type_script = "uid://ccntxav05c4k"

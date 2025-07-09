@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Achievement" load_steps=3 format=3 uid="uid://w0e6uhxsbibe"]
+
+[ext_resource type="Script" uid="uid://b14kgvm7qxpo" path="res://data/achievements/res_data/model/achievement.gd" id="1_funmo"]
+[ext_resource type="Resource" uid="uid://by3wfj43dodxu" path="res://data/achievements/user_data/data/ud_achiev_compl_lv_2_and_2p.tres" id="2_kvydn"]
+
+[resource]
+script = ExtResource("1_funmo")
+id = 1
+achievement_name = "2 and 2p winned"
+description = ""
+reward = 0
+ud_achievement = ExtResource("2_kvydn")
+metadata/_custom_type_script = "uid://b14kgvm7qxpo"

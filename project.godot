@@ -17,9 +17,9 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-UDS="*res://global_systems/user_data_system/user_data_system.gd"
+UDS="*res://global_systems/data_systems/user_data_system/user_data_system.gd"
 SMS="*res://global_systems/scene_manager_system/scene_manager_system.gd"
-ACS="*res://global_systems/action_condition_system/action_condition_system.gd"
+ACS="*res://global_systems/data_systems/action_condition_system/action_condition_system.gd"
 GC="*res://global_systems/global_constants/global_constants.gd"
 AAPscr="*res://screens/achievements_achieved_presenter_singleton/achievements_achieved_presenter.tscn"
 

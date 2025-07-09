@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://c0kpc6v3j1mw4" path="res://screens/menu/level_btn/level_btn.tscn" id="1_j0t7f"]
 [ext_resource type="Script" uid="uid://cajxmreaja4t6" path="res://screens/menu/menu.gd" id="1_pbjm4"]
-[ext_resource type="Resource" uid="uid://kqa382ik0yuh" path="res://data/levels/data/level_1.tres" id="2_6nwqt"]
-[ext_resource type="Resource" uid="uid://dw6o1r6rc3bi7" path="res://data/levels/data/level_2.tres" id="3_pbjm4"]
-[ext_resource type="Resource" uid="uid://c0580eyighege" path="res://data/levels/data/level_2p.tres" id="5_a32w4"]
-[ext_resource type="Resource" uid="uid://bjnoreuc4dc5w" path="res://data/levels/data/level_3.tres" id="6_6veab"]
-[ext_resource type="Resource" uid="uid://b330750kqcout" path="res://data/levels/data/level_4.tres" id="7_pv3j2"]
+[ext_resource type="Resource" uid="uid://kqa382ik0yuh" path="res://data/levels/res_data/data/level_1.tres" id="2_6nwqt"]
+[ext_resource type="Resource" uid="uid://dw6o1r6rc3bi7" path="res://data/levels/res_data/data/level_2.tres" id="3_pbjm4"]
+[ext_resource type="Resource" uid="uid://c0580eyighege" path="res://data/levels/res_data/data/level_2p.tres" id="5_a32w4"]
+[ext_resource type="Resource" uid="uid://bjnoreuc4dc5w" path="res://data/levels/res_data/data/level_3.tres" id="6_6veab"]
+[ext_resource type="Resource" uid="uid://b330750kqcout" path="res://data/levels/res_data/data/level_4.tres" id="7_pv3j2"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
