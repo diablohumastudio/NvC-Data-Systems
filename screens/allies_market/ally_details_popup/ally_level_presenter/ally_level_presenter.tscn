@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://dr58mra5vkhob"]
+
+[ext_resource type="Script" uid="uid://bxmpyou6hvyuo" path="res://screens/allies_market/ally_details_popup/ally_level_presenter/ally_level_presenter.gd" id="1_mqegd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_irr32"]
+bg_color = Color(0.894118, 0.415686, 0.592157, 0.776471)
+
+[node name="AllyLevelPresenter" type="MarginContainer"]
+script = ExtResource("1_mqegd")
+
+[node name="Background" type="Label" parent="."]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_styles/normal = SubResource("StyleBoxFlat_irr32")
+
+[node name="HboxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 150
+
+[node name="AllyLevelName" type="Label" parent="HboxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Ally Level: LevelX"
+
+[node name="AllyLevelPrice" type="Label" parent="HboxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "500"
+
+[node name="AllyLevelIsUnlocked" type="Label" parent="HboxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Locked"
+
+[node name="BuyAllyLevelBtn" type="Button" parent="HboxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 40
+text = "BUY"
+
+[connection signal="pressed" from="HboxContainer/BuyAllyLevelBtn" to="." method="_on_buy_ally_level_btn_pressed"]

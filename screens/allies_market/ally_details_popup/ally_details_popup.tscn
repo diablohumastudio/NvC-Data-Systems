@@ -1,99 +1,64 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlt8q7h5npwt5"]
+[gd_scene load_steps=4 format=3 uid="uid://h1hb81pq8rx8"]
 
-[ext_resource type="Script" uid="uid://tspoh88fcy14" path="res://screens/allies_market/ally_details_popup/ally_details_popup.gd" id="1_popup_script"]
+[ext_resource type="Script" uid="uid://dsd5fytu1qlms" path="res://screens/allies_market/ally_details_popup/ally_details_popup.gd" id="1_popup_script"]
+[ext_resource type="Texture2D" uid="uid://fiodc4axyxnb" path="res://data/game_characters/allies/res_data/assets/chest_thumbnail.png" id="2_au64o"]
+[ext_resource type="PackedScene" uid="uid://dr58mra5vkhob" path="res://screens/allies_market/ally_details_popup/ally_level_presenter/ally_level_presenter.tscn" id="2_htj73"]
 
-[node name="AllyDetailsPopup" type="AcceptDialog"]
-title = "Ally Details"
-initial_position = 1
-size = Vector2i(600, 500)
-script = ExtResource("1_popup_script")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="AllyDetailsPopup" type="Control"]
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 8.0
-offset_top = 8.0
-offset_right = -8.0
-offset_bottom = -49.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_popup_script")
 
-[node name="HeaderContainer" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.145098, 0, 0.764706)
 
-[node name="AllyThumbnail" type="TextureRect" parent="VBoxContainer/HeaderContainer"]
+[node name="AllyThumbnail" type="TextureRect" parent="."]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(120, 120)
-layout_mode = 2
+layout_mode = 0
+offset_left = 484.0
+offset_top = 157.0
+offset_right = 662.0
+offset_bottom = 302.0
+texture = ExtResource("2_au64o")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HeaderContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="AllyName" type="Label" parent="VBoxContainer/HeaderContainer/VBoxContainer"]
+[node name="AllyName" type="Label" parent="."]
 unique_name_in_owner = true
-layout_mode = 2
-theme_override_font_sizes/font_size = 46
-text = "Ally Name"
-horizontal_alignment = 1
+layout_mode = 0
+offset_left = 669.0
+offset_top = 170.0
+offset_right = 1196.0
+offset_bottom = 266.0
+theme_override_font_sizes/font_size = 70
+text = "Mi mejor aliado"
 
-[node name="AllyLevel" type="Label" parent="VBoxContainer/HeaderContainer/VBoxContainer"]
+[node name="AllylevelsPresContainer" type="VBoxContainer" parent="."]
 unique_name_in_owner = true
-layout_mode = 2
-theme_override_font_sizes/font_size = 38
-text = "Level: 1"
-horizontal_alignment = 1
+layout_mode = 0
+offset_left = 289.0
+offset_top = 383.0
+offset_right = 1360.0
+offset_bottom = 446.0
 
-[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
-layout_mode = 2
-
-[node name="DescriptionContainer" type="VBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="DescriptionLabel" type="Label" parent="VBoxContainer/DescriptionContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "Description:"
-
-[node name="AllyDescription" type="Label" parent="VBoxContainer/DescriptionContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 30
-text = "Ally description here..."
-vertical_alignment = 1
-autowrap_mode = 2
-
-[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+[node name="AllyLevelPresenter" parent="AllylevelsPresContainer" instance=ExtResource("2_htj73")]
 layout_mode = 2
 
-[node name="ActionsContainer" type="VBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
+[node name="CloseBtn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1638.0
+offset_top = 50.0
+offset_right = 1851.0
+offset_bottom = 213.0
+theme_override_font_sizes/font_size = 55
+text = "Close"
 
-[node name="PriceContainer" type="HBoxContainer" parent="VBoxContainer/ActionsContainer"]
-layout_mode = 2
-
-[node name="PriceLabel" type="Label" parent="VBoxContainer/ActionsContainer/PriceContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 34
-text = "Price: 500"
-
-[node name="BuyButton" type="Button" parent="VBoxContainer/ActionsContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_font_sizes/font_size = 38
-text = "BUY"
-
-[node name="UpgradeButton" type="Button" parent="VBoxContainer/ActionsContainer"]
-unique_name_in_owner = true
-visible = false
-layout_mode = 2
-theme_override_font_sizes/font_size = 38
-text = "Upgrade from lvl 1 to lvl 2"
-
-[connection signal="pressed" from="VBoxContainer/ActionsContainer/BuyButton" to="." method="_on_buy_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/ActionsContainer/UpgradeButton" to="." method="_on_upgrade_button_pressed"]
+[connection signal="pressed" from="CloseBtn" to="." method="_on_close_btn_pressed"]

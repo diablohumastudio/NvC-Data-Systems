@@ -13,12 +13,6 @@ func set_visuals() -> void:
 	if ally.thumbnail:
 		%AllyThumbnail.texture = ally.thumbnail
 	%AllyName.text = ally.ally_name
-	if ally.ud_ally.locked == false:
-		%AllyPrice.text = "OWNED - Level " + str(ally.ud_ally.level)
-		%DetailsBtn.text = "UPGRADE"
-	else:
-		%AllyPrice.text = "Price: " + str(ally.price)
-		%DetailsBtn.text = "BUY"
 
 func _on_details_btn_pressed() -> void:
 	ally_details_requested.emit(ally)

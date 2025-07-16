@@ -11,7 +11,6 @@ func _ready() -> void:
 	_update_upgrade_button()
 
 func _on_upgrade_btn_pressed() -> void:
-	print("presses")
 	if ally && !ally.ud_ally.locked && new_sc_ally.level < ally.ud_ally.level:
 		new_sc_ally.level += 1
 		_update_upgrade_button()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://iinlpvu7gc2e"]
+[gd_scene load_steps=10 format=3 uid="uid://iinlpvu7gc2e"]
 
 [ext_resource type="PackedScene" uid="uid://c0kpc6v3j1mw4" path="res://screens/menu/level_btn/level_btn.tscn" id="1_j0t7f"]
 [ext_resource type="Script" uid="uid://cajxmreaja4t6" path="res://screens/menu/menu.gd" id="1_pbjm4"]
@@ -7,6 +7,8 @@
 [ext_resource type="Resource" uid="uid://c0580eyighege" path="res://data/levels/res_data/data/level_2p.tres" id="5_a32w4"]
 [ext_resource type="Resource" uid="uid://bjnoreuc4dc5w" path="res://data/levels/res_data/data/level_3.tres" id="6_6veab"]
 [ext_resource type="Resource" uid="uid://b330750kqcout" path="res://data/levels/res_data/data/level_4.tres" id="7_pv3j2"]
+[ext_resource type="Resource" uid="uid://bxydxjqj1kqm8" path="res://data/levels/res_data/data/level_ex.tres" id="8_6veab"]
+[ext_resource type="Resource" uid="uid://fnusyqy3rig8" path="res://data/levels/res_data/data/level_ex_2.tres" id="9_pv3j2"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -70,12 +72,32 @@ level = ExtResource("6_6veab")
 [node name="LevelBtn4" parent="." instance=ExtResource("1_j0t7f")]
 layout_mode = 1
 offset_left = 1180.0
-offset_top = 153.0
+offset_top = 373.0
 offset_right = -440.0
-offset_bottom = -727.0
+offset_bottom = -507.0
 disabled = true
 text = "lv4"
 level = ExtResource("7_pv3j2")
+
+[node name="LevelBtn5" parent="." instance=ExtResource("1_j0t7f")]
+layout_mode = 1
+offset_left = 401.0
+offset_top = 659.0
+offset_right = -1239.0
+offset_bottom = -231.0
+disabled = true
+text = "lvl ex"
+level = ExtResource("8_6veab")
+
+[node name="LevelBtn6" parent="." instance=ExtResource("1_j0t7f")]
+layout_mode = 1
+offset_left = 769.0
+offset_top = 664.0
+offset_right = -851.0
+offset_bottom = -216.0
+disabled = true
+text = "level ex2"
+level = ExtResource("9_pv3j2")
 
 [node name="SaveBtn" type="Button" parent="."]
 layout_mode = 0

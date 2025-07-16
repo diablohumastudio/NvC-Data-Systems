@@ -13,7 +13,8 @@ func _ready() -> void:
 		%MAPContainer.add_child(new_ally_presenter)
 
 func _on_ally_details_requested(ally: Ally) -> void:
-	%AllyDetailsPopup.show_ally_details(ally)
+	%AllyDetailsPopup.ally = ally
+	%AllyDetailsPopup.show()
 
 func _on_go_back_btn_pressed() -> void:
 	SMS.change_scene(GC.SCREENS_UIDS.MENU)

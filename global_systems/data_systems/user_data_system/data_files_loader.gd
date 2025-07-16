@@ -34,7 +34,9 @@ static func create_ud_allies_from_res_files() -> Array[UDAlly]:
 	for file: String in dir.get_files():
 		var ud_ally: UDAlly = load(dir.get_current_dir() + "/" + file)
 		assert(ud_ally != null, "Failed to load ud_ally: " + file)
-		_ud_allies.append(ud_ally.duplicate())
+		var duplic_ud_ally : UDAlly = ud_ally.duplicate()
+		_ud_allies.append(duplic_ud_ally)
+		
 	return _ud_allies
 
 static func get_achievements_from_res_files() -> Array[Achievement]:
@@ -63,6 +65,11 @@ static func get_allies_from_res_files() -> Array[Ally]:
 		assert(ally != null, "Failed to load ally: " + file)
 		allies.append(ally)
 	return allies
+
+static func get_allies_from_res_file_by_id(id: Ally.IDs) -> Ally:
+	var ally: Ally = load(GC.DATA_FOLDERS_PATHS.RES_ALLIES + Ally.IDs.keys()[id] + ".tres")
+	assert(ally != null, GC.DATA_FOLDERS_PATHS.RES_ALLIES + Ally.IDs.keys()[id] + ".tres")
+	return ally
 
 static func get_conditions_from_res_files() -> Array[Condition]:
 	if _conditions_cache.is_empty():
