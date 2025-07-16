@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dwmd00t3h1w4g" path="res://game_characters_scenes/allies/money_providers/chest/chest.tscn" id="1_01uh0"]
 [ext_resource type="Script" uid="uid://ccntxav05c4k" path="res://data/game_characters/allies/res_data/model/ally.gd" id="1_3idmb"]
 [ext_resource type="Texture2D" uid="uid://fiodc4axyxnb" path="res://data/game_characters/allies/res_data/assets/chest_thumbnail.png" id="2_01uh0"]
-[ext_resource type="Resource" uid="uid://tnci7ph2ia3c" path="res://data/game_characters/allies/user_data/data/ud_money_provider.tres" id="3_4lu5i"]
+[ext_resource type="Resource" uid="uid://tnci7ph2ia3c" path="res://data/game_characters/allies/user_data/data/ud_chest.tres" id="3_4lu5i"]
 
 [resource]
 script = ExtResource("1_3idmb")
@@ -12,8 +12,6 @@ ally_name = "Chesst"
 description = "sfdsfd"
 thumbnail = ExtResource("2_01uh0")
 price = 250
-upgrade_price = 100
-max_level = 3
 ud_ally = ExtResource("3_4lu5i")
 scene = ExtResource("1_01uh0")
 metadata/_custom_type_script = "uid://ccntxav05c4k"

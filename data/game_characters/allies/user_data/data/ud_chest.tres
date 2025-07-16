@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="UDAlly" load_steps=6 format=3 uid="uid://tnci7ph2ia3c"]
+
+[ext_resource type="Script" uid="uid://lucdai2ohj0b" path="res://data/game_characters/allies/user_data/model/ud_ally.gd" id="1_f2g1w"]
+[ext_resource type="Script" uid="uid://cp8n43lmapx8l" path="res://data/game_characters/allies/upgrades_data/model/ally_level.gd" id="1_hh26n"]
+[ext_resource type="Resource" uid="uid://dsn7841jog7ve" path="res://data/game_characters/allies/upgrades_data/data/chest/fast_chest_lvl_1.tres" id="2_dpgif"]
+[ext_resource type="Resource" uid="uid://cdw84tffq1sgt" path="res://data/acs_system/conditions/data/cond_lv_compl_lv_2.tres" id="4_dpgif"]
+[ext_resource type="Resource" uid="uid://c1t1j8g68rs8v" path="res://data/game_characters/allies/upgrades_data/data/chest/fast_chest_lvl_2.tres" id="5_qdoqb"]
+
+[resource]
+script = ExtResource("1_f2g1w")
+id = 1
+levels_conditions = Dictionary[ExtResource("1_hh26n"), Dictionary]({
+ExtResource("2_dpgif"): {},
+ExtResource("5_qdoqb"): {
+ExtResource("4_dpgif"): false
+}
+})
+metadata/_custom_type_script = "uid://lucdai2ohj0b"

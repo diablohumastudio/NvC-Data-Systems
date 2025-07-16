@@ -6,7 +6,8 @@ func _init() -> void:
 func change_state(action: Action):
 	var payload: Action.PayUpgradeAlly = action.payload
 	var ally_id = payload.ally_id
+	var upgraded_level = payload.ally_level
 
 	for ud_ally in UDS.current_user_data.allies_inventory.ud_allies:
 		if ud_ally.id == ally_id:
-			ud_ally.level = ud_ally.level + 1
+			ud_ally.unlocked_levels.append(upgraded_level)

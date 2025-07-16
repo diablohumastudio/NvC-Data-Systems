@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="MoneyPrviderLevel" load_steps=2 format=3 uid="uid://c7beaqsr7k178"]
+
+[ext_resource type="Script" uid="uid://bacha5qb1rbr" path="res://data/game_characters/allies/upgrades_data/model/money_provider_level.gd" id="1_def456"]
+
+[resource]
+script = ExtResource("1_def456")
+providing_speed = 140
+coin_value = 100
+level_id = "fast 4"
+price = 140
+initial_HP = 100
+metadata/_custom_type_script = "uid://bacha5qb1rbr"

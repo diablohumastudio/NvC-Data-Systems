@@ -40,6 +40,8 @@ class PayUnlockAlly extends Payload:
 
 class PayUpgradeAlly extends Payload:
 	var ally_id: Ally.IDs
+	var ally_level: AllyLevel
 
-	func _init(_ally_id: Ally.IDs) -> void:
+	func _init(_ally_id: Ally.IDs, _ally_level) -> void:
 		ally_id = _ally_id
+		ally_level = _ally_level
