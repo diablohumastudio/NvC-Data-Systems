@@ -1,0 +1,96 @@
+# Claude Conversation Log - Diablo Huma Studio Game
+
+## 2025-07-10 - Session 1: Resource Creation & Godot Integration
+
+### Key Accomplishments:
+- Created rich_chest_lvl resources (1-3) with higher coin values (110, 120, 130)
+- Established Godot reimport workflow for .tres files
+- Set up automated UID generation using headless Godot command
+
+### Important Decisions:
+- Rich chest levels focus on higher coin_value rather than just speed increases
+- Godot reimport command must be run after creating .tres files to generate proper UIDs
+- Command: `"/Volumes/Fer/RespaldoFER/Documentos/GODOT/Editor/Executables/Godot_v4.4.1-stable_macos.universal.app/Contents/MacOS/Godot" --headless --path "/Users/fernandobarahona/Documents/DiabloHumaStudio/save_user_data" --editor --quit`
+
+### Files Created:
+- `data/game_characters/allies/upgrade_levels/data/chest_levels/rich_chest_lvl_1.tres` (coin_value: 110, price: 120)
+- `data/game_characters/allies/upgrade_levels/data/chest_levels/rich_chest_lvl_2.tres` (coin_value: 120, price: 130)  
+- `data/game_characters/allies/upgrade_levels/data/chest_levels/rich_chest_lvl_3.tres` (coin_value: 130, price: 140)
+
+### System Context:
+- Working on allies system with upgrade levels
+- Resources follow MoneyProviderLevel pattern
+- Market system allows purchasing and upgrading allies
+- Level progression system with branches (as described in CLAUDE.md)
+
+### Next Steps:
+- Continue creating more level resources as needed
+- Implement ally upgrade system in game screens
+- Create level progression visualization in market popup
+
+## 2025-07-13 - Session 2: Allies System Architecture & Godot Engine Discovery
+
+### Key Accomplishments:
+- Created comprehensive ALLY_SYSTE_PROPOSAL_1.md with detailed system architecture
+- Created ALLY_SSTEM_PROPOSAL_2_MI_2IDEAS.md comparing two implementation approaches
+- Discovered critical Godot engine behavior regarding variable initialization and @export
+- **Currently implementing Option 1 (Full Condition System) with modifications**
+
+### Critical Technical Discovery: Godot Two-Pass Initialization
+**Problem:** Variables with setters were being populated correctly by setter, but then reset to empty values
+**Root Cause:** Godot uses two-pass initialization during object creation:
+1. **Pass 1:** Variable declaration
+2. **Pass 2:** Variable initialization (triggers for @export variables even without inline values)
+
+**Solutions Found:**
+- Remove @export annotation from derived/calculated variables (prevents second-pass initialization)
+- Change declaration order (ensure setter-modified variables come before other @export variables)
+- Note: @export_storage incorrectly triggers blank initialization for primitive types (potential Godot bug)
+
+### Current Implementation Status (Option 1 - Condition System):
+
+#### Structural Changes Made:
+- **Moved upgrade_levels to upgrades_data/** (renamed folder structure)
+- **AllyLevel enhanced** with `locked: bool` and `buyed: bool` properties
+- **AllyLevelTree class** created for organizing levels arrays
+- **UDAlly modified** to use Dictionary[AllyLevel, Dictionary] for conditions system
+- **Fixed initialization issue** by removing @export from unlcked_levels_ids
+
+#### Files Structure:
+```
+data/game_characters/allies/
+├── upgrades_data/model/
+│   ├── ally_level.gd (enhanced with locked/buyed)
+│   ├── ally_upgrade_tree.gd (new - AllyLevelTree)
+│   ├── money_provider_level.gd
+│   └── shooter_ally_level.gd
+├── upgrades_data/data/
+│   ├── chest/ (9 level files)
+│   └── shooter_ally/ (3 level files)
+├── user_data/model/
+│   └── ud_ally.gd (condition system with levels_conditions Dictionary)
+└── user_data/data/
+    └── ud_chest.tres (using levels_conditions system)
+```
+
+#### Current Implementation Features:
+- **Condition-based unlocking**: Levels can have complex unlock conditions
+- **Market popup integration**: AllyDetailsPopup displays levels with unlock status
+- **AllyLevelPresenter**: UI component for individual level display
+- **Level progression tracking**: unlcked_levels_ids populated from conditions
+
+#### Debug Process & Solution:
+- Investigated data_files_loader.gd create_ud_allies_from_res_files() function
+- Examined .tres file contents to understand serialization behavior
+- Tested @export vs @export_storage vs declaration order solutions
+- **Solution**: Removed @export from unlcked_levels_ids (primitive types still save without @export)
+
+### Architecture Decision: 
+**Implementing hybrid of Option 1** - using condition system for complex unlocks but with simplified level tree structure (AllyLevelTree instead of complex branching system)
+
+### Next Steps:
+- Complete level presenter UI implementation
+- Add buy/unlock functionality to market system
+- Implement in-game ally placement and upgrade system
+- Create money reward system integration
+- Test condition fulfillment and progression flows
