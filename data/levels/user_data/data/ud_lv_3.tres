@@ -11,7 +11,7 @@ id = 3
 completed = false
 completed_all_canons = false
 locked = true
-unlocked_conditions = Dictionary[ExtResource("2_16b0h"), bool]({
+unlocked_conditionis = Dictionary[ExtResource("2_16b0h"), bool]({
 ExtResource("4_lj3uh"): false,
 ExtResource("5_iplk3"): false
 })

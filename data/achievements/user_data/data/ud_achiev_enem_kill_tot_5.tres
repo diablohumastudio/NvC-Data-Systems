@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("2_25vsy")
-id = 2
+id = 3
 is_achieved = false
 porcentage_achieved = 0
 conditions = Dictionary[ExtResource("1_m78wk"), bool]({

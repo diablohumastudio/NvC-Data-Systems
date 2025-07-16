@@ -6,11 +6,11 @@
 
 [resource]
 script = ExtResource("1_o8ku2")
-id = 4
+id = 6
 completed = false
 completed_all_canons = false
 locked = true
-unlocked_conditions = Dictionary[ExtResource("2_qtce7"), bool]({
+unlocked_conditionis = Dictionary[ExtResource("2_qtce7"), bool]({
 ExtResource("4_osdn1"): false
 })
 metadata/_custom_type_script = "uid://bogjp3dhhsxqm"

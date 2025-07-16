@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="UDLevel" load_steps=5 format=3 uid="uid://ut7xu7mb71ga"]
+
+[ext_resource type="Script" uid="uid://bogjp3dhhsxqm" path="res://data/levels/user_data/model/ud_level.gd" id="1_t2jh2"]
+[ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://data/acs_system/conditions/model/condition.gd" id="2_dv73c"]
+[ext_resource type="Resource" uid="uid://dr8x0p2einy6a" path="res://data/acs_system/conditions/data/cond_lv_compl_lv_1.tres" id="3_bimfr"]
+[ext_resource type="Resource" uid="uid://c2fdve1l4yaob" path="res://data/acs_system/conditions/data/cond_enem_killd_tot_5.tres" id="5_2ygdb"]
+
+[resource]
+script = ExtResource("1_t2jh2")
+id = 4
+completed = false
+completed_all_canons = false
+locked = true
+unlocked_conditionis = Dictionary[ExtResource("2_dv73c"), bool]({
+ExtResource("3_bimfr"): false,
+ExtResource("5_2ygdb"): false
+})
+metadata/_custom_type_script = "uid://bogjp3dhhsxqm"

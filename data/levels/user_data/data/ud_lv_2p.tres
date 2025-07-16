@@ -10,7 +10,7 @@ id = 2
 completed = false
 completed_all_canons = false
 locked = true
-unlocked_conditions = Dictionary[ExtResource("2_w0uoj"), bool]({
+unlocked_conditionis = Dictionary[ExtResource("2_w0uoj"), bool]({
 ExtResource("4_0t7c1"): false
 })
 metadata/_custom_type_script = "uid://bogjp3dhhsxqm"

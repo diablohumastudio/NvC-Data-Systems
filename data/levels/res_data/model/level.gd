@@ -1,6 +1,6 @@
 class_name Level extends Resource
 
-enum IDs {Level1, Level2, Level2p, Level3, Level4}
+enum IDs {Level1, Level2, Level2p, Level3, LevelEx, LevelEx2, Level4}
 
 @export var id: IDs
 @export var level_name: String

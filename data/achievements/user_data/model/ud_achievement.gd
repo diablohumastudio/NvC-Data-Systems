@@ -21,7 +21,6 @@ func _set_conditions(new_value: Dictionary[Condition, bool]):
 	
 	# Connect new signals
 	for condition in conditions:
-		print(condition.id)
 		if !condition.fullfilled.is_connected(_on_condition_fullfilled):
 			condition.fullfilled.connect(_on_condition_fullfilled)
 
