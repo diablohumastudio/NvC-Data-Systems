@@ -7,24 +7,24 @@ enum PROPERTIES {USERS_CREDENTIALS, USER_NAME, UD_LEVELS, ACHIEVEMENTS, ENEMIES_
 const _USERS_CREDENTIALS_FILE_PATH : String = "user://users.tres"
 const _USER_FILE_BASE: String = "user://"
 
-var users_credentials: UsersCredentials
+var all_users_credentials: AllUsersCredentials
 var current_user_data: UserData 
 
-func _ready() -> void:
+func _init() -> void:
 	initialize_users_data()
 
 func initialize_users_data():
 	if ResourceLoader.exists(_USERS_CREDENTIALS_FILE_PATH):
-		users_credentials = load(_USERS_CREDENTIALS_FILE_PATH)
-		var current_usr_cred: UserCredentials = users_credentials.credentials[users_credentials.current_user_index]
-		current_user_data = load(_USER_FILE_BASE + current_usr_cred.user_name + ".tres")
+		all_users_credentials = load(_USERS_CREDENTIALS_FILE_PATH)
+		var current_user_cred: UserCredentials = all_users_credentials.credentials[all_users_credentials.current_user_index]
+		current_user_data = load(_USER_FILE_BASE + current_user_cred.user_name + ".tres")
 	else:
-		users_credentials = UsersCredentials.new()
+		all_users_credentials = AllUsersCredentials.new()
 		var new_user_credentials: UserCredentials = UserCredentials.new()
 		create_new_user(new_user_credentials)
 
 func create_new_user(user_credentials: UserCredentials, set_to_current: bool = true) -> UserData:
-	users_credentials.credentials.append(user_credentials)
+	all_users_credentials.credentials.append(user_credentials)
 
 	var new_user_data: UserData = UserData.new()
 	new_user_data.user_name = user_credentials.user_name
@@ -32,54 +32,59 @@ func create_new_user(user_credentials: UserCredentials, set_to_current: bool = t
 	new_user_data.ud_achievements.ud_achievements = DataFilesLoader.create_ud_achievements_from_res_files()
 	new_user_data.allies_inventory.ud_allies = DataFilesLoader.create_ud_allies_from_res_files()
 	
+	save_user_data_to_disk(new_user_data)
 	if set_to_current:
-		var new_user_index: int = users_credentials.credentials.find(user_credentials)
-		users_credentials.current_user_index = new_user_index
-		current_user_data = new_user_data
-		current_user_changed.emit()
-	
-	var result : Error = ResourceSaver.save(users_credentials, _USERS_CREDENTIALS_FILE_PATH)
-	assert(result == OK)
-	result = ResourceSaver.save(new_user_data, _USER_FILE_BASE + new_user_data.user_name + ".tres")
-	assert(result == OK)
+		set_current_user(new_user_data.user_name)
 
 	return new_user_data
 
 func set_current_user(user_name: String) -> void:
-	save_user_data_to_disk()
-	var current_user_credentials: UserCredentials
-	for user_credential in users_credentials.credentials:
-		if user_credential.user_name == user_name:
-			current_user_credentials = user_credential
-	var new_user_index: int = users_credentials.credentials.find(current_user_credentials)
-	users_credentials.current_user_index = new_user_index
-	current_user_data = load(_USER_FILE_BASE + current_user_credentials.user_name + ".tres")
+	if current_user_data:
+		save_user_data_to_disk()
+	set_all_users_cred_by_name(user_name)
+	current_user_data = get_user_data_by_name(user_name)
 	current_user_changed.emit()
+	save_user_data_to_disk()
+
+func set_all_users_cred_by_name(user_name: String):
+	var new_user_index: int
+	for user_credential in all_users_credentials.credentials:
+		if user_credential.user_name == user_name:
+			new_user_index = all_users_credentials.credentials.find(user_credential)
+	all_users_credentials.current_user_index = new_user_index
+
+func get_user_data_by_name(user_name: String) -> UserData:
+	var user_data: UserData
+	for user_credential in all_users_credentials.credentials:
+		if user_credential.user_name == user_name:
+			user_data = load(_USER_FILE_BASE + user_credential.user_name + ".tres")
+			return user_data
+	return null
 
 func user_exists(user_name: String)->bool:
-	for user_credential in users_credentials.credentials:
+	for user_credential in all_users_credentials.credentials:
 		if user_credential.user_name == user_name:
 			return true
 	return false
 
 func is_user_password_valid(user_name: String, password: String) -> bool:
 	if !user_exists(user_name): push_error("No user with this name")
-	for user_credential in users_credentials.credentials:
+	for user_credential in all_users_credentials.credentials:
 		if user_credential.user_name == user_name:
 			if user_credential.password == password:
 				return true
 	return false
 
-func save_user_data_to_disk() -> void:
-	var result : Error = ResourceSaver.save(users_credentials, _USERS_CREDENTIALS_FILE_PATH)
+func save_user_data_to_disk(user_data: UserData = current_user_data) -> void:
+	var result : Error = ResourceSaver.save(all_users_credentials, _USERS_CREDENTIALS_FILE_PATH)
 	assert(result == OK)
-	result = ResourceSaver.save(current_user_data, _USER_FILE_BASE + current_user_data.user_name + ".tres")
+	result = ResourceSaver.save(user_data, _USER_FILE_BASE + user_data.user_name + ".tres")
 	assert(result == OK)
 
 func get_property(property: PROPERTIES):
 	match property:
 		PROPERTIES.USERS_CREDENTIALS:
-			return users_credentials
+			return all_users_credentials
 		PROPERTIES.USER_NAME:
 			return current_user_data.user_name
 		PROPERTIES.UD_LEVELS:

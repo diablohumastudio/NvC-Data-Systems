@@ -3,7 +3,7 @@ class_name SelectUserPopUp extends Control
 var new_button_group: ButtonGroup = ButtonGroup.new()
 
 func _ready() -> void:
-	var users_credentials: UsersCredentials = UDS.get_property(UDS.PROPERTIES.USERS_CREDENTIALS)
+	var users_credentials: AllUsersCredentials = UDS.get_property(UDS.PROPERTIES.USERS_CREDENTIALS)
 	for child in %UsersContainer.get_children():
 		child.queue_free()
 	for ii in users_credentials.credentials.size():
