@@ -3,7 +3,7 @@ extends Node
 var conditions: Array[Condition] 
 var state_changers: Array[StateChanger]
 
-func _ready() -> void:
+func _init() -> void:
 	conditions = DataFilesLoader.get_conditions_from_res_files()
 	state_changers = DataFilesLoader.get_state_changer_from_res_files()
 
