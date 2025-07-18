@@ -6,6 +6,7 @@
 script = ExtResource("1_xgg18")
 providing_speed = 100
 coin_value = 100
+ally_id = 1
 level_id = "chest test"
 price = 100
 initial_HP = 100
