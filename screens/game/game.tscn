@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c2b4jldseu5vs"]
+[gd_scene load_steps=3 format=3 uid="uid://c2b4jldseu5vs"]
 
 [ext_resource type="Script" uid="uid://bvalrtinik0vd" path="res://screens/game/game.gd" id="1_eyx8b"]
+[ext_resource type="PackedScene" uid="uid://d257caaopmpke" path="res://screens/game/allies_hud/allies_hud.tscn" id="2_khowf"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -20,6 +21,10 @@ offset_right = 1527.0
 offset_bottom = 127.0
 theme_override_font_sizes/font_size = 50
 text = "LEVEL"
+
+[node name="Allies HUD" parent="." instance=ExtResource("2_khowf")]
+layout_mode = 0
+offset_bottom = 75.0
 
 [node name="CanonHUD" type="VBoxContainer" parent="."]
 layout_mode = 0

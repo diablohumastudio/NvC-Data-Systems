@@ -10,7 +10,7 @@
 script = ExtResource("1_f2g1w")
 id = 1
 unlocked_levels = Array[String]([])
-buyed_levels = Array[String]([])
+buyed_levels = Array[String](["chest base"])
 levels_conditions = Dictionary[ExtResource("1_hh26n"), Dictionary]({
 ExtResource("2_dpgif"): {
 ExtResource("4_dpgif"): false

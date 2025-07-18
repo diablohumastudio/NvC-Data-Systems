@@ -1,8 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://h1hb81pq8rx8"]
+[gd_scene load_steps=6 format=3 uid="uid://h1hb81pq8rx8"]
 
 [ext_resource type="Script" uid="uid://dsd5fytu1qlms" path="res://screens/allies_market/ally_details_popup/ally_details_popup.gd" id="1_popup_script"]
 [ext_resource type="Texture2D" uid="uid://fiodc4axyxnb" path="res://data/game_characters/allies/res_data/assets/chest_thumbnail.png" id="2_au64o"]
 [ext_resource type="PackedScene" uid="uid://dr58mra5vkhob" path="res://screens/allies_market/ally_details_popup/ally_level_presenter/ally_level_presenter.tscn" id="2_htj73"]
+[ext_resource type="Script" uid="uid://bxmpyou6hvyuo" path="res://screens/allies_market/ally_details_popup/ally_level_presenter/ally_level_presenter.gd" id="3_hvj7i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u7kiq"]
+bg_color = Color(0.727247, 0.243735, 0.440544, 0.776471)
 
 [node name="AllyDetailsPopup" type="Control"]
 layout_mode = 3
@@ -41,15 +45,67 @@ offset_bottom = 266.0
 theme_override_font_sizes/font_size = 70
 text = "Mi mejor aliado"
 
-[node name="AllylevelsPresContainer" type="VBoxContainer" parent="."]
-unique_name_in_owner = true
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 289.0
-offset_top = 383.0
-offset_right = 1360.0
-offset_bottom = 446.0
+offset_left = 282.0
+offset_top = 414.0
+offset_right = 1458.0
+offset_bottom = 477.0
 
-[node name="AllyLevelPresenter" parent="AllylevelsPresContainer" instance=ExtResource("2_htj73")]
+[node name="TitleRow" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+script = ExtResource("3_hvj7i")
+
+[node name="Background" type="Label" parent="VBoxContainer/TitleRow"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_styles/normal = SubResource("StyleBoxFlat_u7kiq")
+
+[node name="HboxContainer" type="HBoxContainer" parent="VBoxContainer/TitleRow"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="AllyLevelName" type="Label" parent="VBoxContainer/TitleRow/HboxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Ally Level Name"
+
+[node name="AllyLevelPrice" type="Label" parent="VBoxContainer/TitleRow/HboxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Price"
+
+[node name="AllyLevelIsUnlocked" type="Label" parent="VBoxContainer/TitleRow/HboxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Is Locked "
+
+[node name="AllyLevelIsBuyed" type="Label" parent="VBoxContainer/TitleRow/HboxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Is Buyed"
+
+[node name="BuyAllyLevelBtn" type="Button" parent="VBoxContainer/TitleRow/HboxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 40
+disabled = true
+
+[node name="AllylevelsPresContainer" type="VBoxContainer" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="AllyLevelPresenter" parent="VBoxContainer/AllylevelsPresContainer" instance=ExtResource("2_htj73")]
 layout_mode = 2
 
 [node name="CloseBtn" type="Button" parent="."]
@@ -61,4 +117,5 @@ offset_bottom = 213.0
 theme_override_font_sizes/font_size = 55
 text = "Close"
 
+[connection signal="pressed" from="VBoxContainer/TitleRow/HboxContainer/BuyAllyLevelBtn" to="VBoxContainer/TitleRow" method="_on_buy_ally_level_btn_pressed"]
 [connection signal="pressed" from="CloseBtn" to="." method="_on_close_btn_pressed"]

@@ -17,8 +17,10 @@ func _update_visuals():
 	%AllyLevelName.text = ally_level.level_id
 	%AllyLevelPrice.text = str(ally_level.price)
 	%AllyLevelIsUnlocked.text = str(is_level_unlocked)
+	%AllyLevelIsUnlocked.modulate = Color("00caa4") if is_level_unlocked else Color("971029")
 	%BuyAllyLevelBtn.disabled = !is_level_unlocked
 	%AllyLevelIsBuyed.text = str(is_level_buyed)
+	%AllyLevelIsBuyed.modulate = Color("00caa4") if is_level_buyed else Color("971029")
 
 func _on_buy_ally_level_btn_pressed() -> void:
 	ACS.set_action(Action.new(Action.TYPES.BUYED_ALLY_LEVEL, Action.PayBuyedAllyLevel.new(ally_level.level_id, ally_level.ally_id)))

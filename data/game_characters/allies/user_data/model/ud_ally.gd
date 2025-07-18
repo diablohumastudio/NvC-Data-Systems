@@ -2,8 +2,8 @@ class_name UDAlly extends Resource
 
 @export var id : Ally.IDs
 
-@export_storage var unlocked_levels: Array[String]
-@export_storage var buyed_levels: Array[String]
+@export var unlocked_levels: Array[String]
+@export var buyed_levels: Array[String]
 @export var levels_conditions: Dictionary[AllyLevel, Dictionary]: set = _set_levels
 @export var base_level: AllyLevel : set = _set_base_level
 
