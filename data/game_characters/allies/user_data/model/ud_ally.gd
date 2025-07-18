@@ -5,6 +5,14 @@ class_name UDAlly extends Resource
 @export_storage var unlocked_levels: Array[String]
 @export_storage var buyed_levels: Array[String]
 @export var levels_conditions: Dictionary[AllyLevel, Dictionary]: set = _set_levels
+@export var base_level: AllyLevel : set = _set_base_level
+
+func _set_base_level(new_value: AllyLevel):
+	base_level = new_value
+	if !levels_conditions.has(base_level):
+		levels_conditions[base_level] = {}
+	if !unlocked_levels.has(base_level.level_id):
+		unlocked_levels.append(base_level.level_id)
 
 func _set_levels(new_value: Dictionary[AllyLevel, Dictionary]):
 	if levels_conditions:

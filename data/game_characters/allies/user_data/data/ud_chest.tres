@@ -12,9 +12,9 @@ id = 1
 unlocked_levels = Array[String]([])
 buyed_levels = Array[String]([])
 levels_conditions = Dictionary[ExtResource("1_hh26n"), Dictionary]({
-ExtResource("2_mo8ns"): {},
 ExtResource("2_dpgif"): {
 ExtResource("4_dpgif"): false
 }
 })
+base_level = ExtResource("2_mo8ns")
 metadata/_custom_type_script = "uid://lucdai2ohj0b"

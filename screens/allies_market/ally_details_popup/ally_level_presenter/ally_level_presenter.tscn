@@ -15,10 +15,11 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_irr32")
 
 [node name="HboxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
-theme_override_constants/separation = 150
+theme_override_constants/separation = 50
 
 [node name="AllyLevelName" type="Label" parent="HboxContainer"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Ally Level: LevelX"
