@@ -1,6 +1,6 @@
 class_name Action extends Resource
 
-enum TYPES {LV_COMPLTD, ENEMY_KILLED, LV_COMPLTD_ALL_CANONS, UNLOCK_ALLY, UPGRADE_ALLY}
+enum TYPES {LV_COMPLTD, ENEMY_KILLED, LV_COMPLTD_ALL_CANONS, BUYED_ALLY_LEVEL}
 
 var type: TYPES
 var payload: Payload
@@ -32,16 +32,10 @@ class PayLvlComplAllCanons extends Payload:
 		level_id = _level_id
 		canons_alive = _canons_alive
 
-class PayUnlockAlly extends Payload:
+class PayBuyedAllyLevel extends Payload:
+	var ally_level_id: String
 	var ally_id: Ally.IDs
-
-	func _init(_ally_id: Ally.IDs) -> void:
+	
+	func _init(_ally_level_id: String, _ally_id: Ally.IDs) -> void:
+		ally_level_id = _ally_level_id
 		ally_id = _ally_id
-
-class PayUpgradeAlly extends Payload:
-	var ally_id: Ally.IDs
-	var ally_level: AllyLevel
-
-	func _init(_ally_id: Ally.IDs, _ally_level) -> void:
-		ally_id = _ally_id
-		ally_level = _ally_level

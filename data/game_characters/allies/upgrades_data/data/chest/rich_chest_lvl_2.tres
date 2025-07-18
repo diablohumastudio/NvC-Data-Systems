@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MoneyPrviderLevel" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="MoneyPrviderLevel" load_steps=2 format=3 uid="uid://b7h5iov1w00xi"]
 
 [ext_resource type="Script" uid="uid://bacha5qb1rbr" path="res://data/game_characters/allies/upgrades_data/model/money_provider_level.gd" id="1_def456"]
 
@@ -6,6 +6,7 @@
 script = ExtResource("1_def456")
 providing_speed = 100
 coin_value = 120
+ally_id = 1
 level_id = "rich_chest_lvl_2"
 price = 130
 initial_HP = 100

@@ -6,6 +6,7 @@
 script = ExtResource("1_vvt1q")
 providing_speed = 110
 coin_value = 100
+ally_id = 1
 level_id = "fast 1"
 price = 110
 initial_HP = 100

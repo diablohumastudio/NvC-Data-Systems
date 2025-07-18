@@ -13,6 +13,6 @@ ExtResource("2_gui07"): {
 ExtResource("3_ddrpd"): false
 }
 })
-unlcked_levels_ids = Array[String]([])
-buyed_levels_ids = Array[String]([])
+unlocked_levels = Array[String]([])
+buyed_levels = Array[String]([])
 metadata/_custom_type_script = "uid://lucdai2ohj0b"
