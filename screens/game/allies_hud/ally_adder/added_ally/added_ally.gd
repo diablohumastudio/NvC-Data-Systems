@@ -9,7 +9,7 @@ func _ready() -> void:
 func instatiate_sc_ally() -> void:
 	sc_ally = ally.scene.instantiate()
 	sc_ally.ally = ally
-	sc_ally.level = ally.ud_ally.base_level.level_id
+	sc_ally.level = ally.ud_ally.base_level
 	sc_ally.position = Vector2(250, 270)
 	add_child(sc_ally)
 	var new_color_rect: ColorRect = ColorRect.new()

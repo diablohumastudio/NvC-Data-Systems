@@ -1,7 +1,11 @@
 class_name ScAlly extends GameCharacter
 
-var level: String
+var level: AllyLevel: set = _set_level
 var ally: Ally
+var hp: int
+
+func _set_level(new_value: AllyLevel):
+	level = new_value
 
 func _ready() -> void:
 	%AllyUpgradeMenu.ally = ally
@@ -9,11 +13,11 @@ func _ready() -> void:
 	set_name_and_level()
 
 func on_ally_upgrade_menu_level_changed(_level: AllyLevel):
-	level = _level.level_id
+	level = _level
 	set_name_and_level()
 
 func set_name_and_level():
-	%AllyNameAndLevelLabel.text = "Ally of type:\n" + ally.ally_name + "\n is in Level " + str(level)
+	%AllyNameAndLevelLabel.text = "Ally of type:\n" + ally.ally_name + "\n is in Level " + str(level.level_id)
 
 func _on_show_upgrade_popup_btn_pressed() -> void:
 	%AllyUpgradeMenu.visible = true
