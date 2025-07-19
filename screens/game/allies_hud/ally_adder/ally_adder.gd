@@ -9,7 +9,7 @@ func _ready() -> void:
 func set_visuals():
 	var base_level_id: String = ally.ud_ally.base_level.level_id
 	var is_ally_unlocked: bool = ally.ud_ally.is_level_buyed(base_level_id)
-	print(base_level_id, is_ally_unlocked)
+
 	%AllyTitle.text = ally.ally_name 
 	%AddAllyBtn.disabled = true if !is_ally_unlocked else false
 	%AddAllyBtnLockedBanner.visible = true if !is_ally_unlocked else false

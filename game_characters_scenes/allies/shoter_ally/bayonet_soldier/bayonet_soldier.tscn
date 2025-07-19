@@ -1,35 +1,36 @@
-[gd_scene load_steps=44 format=3 uid="uid://cls10jllpda83"]
+[gd_scene load_steps=45 format=3 uid="uid://oyoty7ffa6gl"]
 
-[ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/assets/circle_shadow.png" id="1_htuxv"]
+[ext_resource type="PackedScene" uid="uid://qni5prd46omg" path="res://game_characters_scenes/allies/sc_ally.tscn" id="1_0wx6o"]
 [ext_resource type="Script" uid="uid://dnhmh113e864x" path="res://game_characters_scenes/allies/shoter_ally/bayonet_soldier/bayonet_soldier.gd" id="1_m4sxj"]
-[ext_resource type="Texture2D" uid="uid://dla3tqrgg7j8w" path="res://game_characters_scenes/assets/legup2.png" id="2_82qqj"]
-[ext_resource type="Texture2D" uid="uid://de36q80eh20e1" path="res://game_characters_scenes/assets/leg4.png" id="3_ctfig"]
-[ext_resource type="Texture2D" uid="uid://dye7bcrha1j02" path="res://game_characters_scenes/assets/leg1.png" id="4_kulel"]
-[ext_resource type="Texture2D" uid="uid://bh2jew5fbuk8g" path="res://game_characters_scenes/assets/leg3.png" id="5_yueyy"]
-[ext_resource type="Texture2D" uid="uid://bs5clwf6lc771" path="res://game_characters_scenes/allies/shoter_ally/bayonet_soldier/assets/bodylines.png" id="6_t6tvu"]
-[ext_resource type="Texture2D" uid="uid://jykv0pknwas2" path="res://game_characters_scenes/assets/arm1.png" id="7_vfq6r"]
-[ext_resource type="Texture2D" uid="uid://bxrif5r5s3obv" path="res://game_characters_scenes/assets/arm4.png" id="8_g0b5y"]
-[ext_resource type="Texture2D" uid="uid://c73v5xy4v6gea" path="res://game_characters_scenes/assets/hurt_shape.png" id="9_v0flp"]
-[ext_resource type="Texture2D" uid="uid://b7v5he2rytl2s" path="res://game_characters_scenes/allies/shoter_ally/bayonet_soldier/assets/head_dead.png" id="10_3odf3"]
-[ext_resource type="Texture2D" uid="uid://bo2271rejnrtb" path="res://game_characters_scenes/allies/shoter_ally/bayonet_soldier/assets/head.png" id="11_3aqfp"]
-[ext_resource type="Texture2D" uid="uid://by0ecbpx2elav" path="res://game_characters_scenes/assets/bayoneta.png" id="13_gd2m6"]
-[ext_resource type="Texture2D" uid="uid://bynycpikxobh" path="res://game_characters_scenes/assets/hand.png" id="13_unpbu"]
-[ext_resource type="Texture2D" uid="uid://u15uitrmprpp" path="res://game_characters_scenes/assets/left_elbow.png" id="16_c37r2"]
-[ext_resource type="Texture2D" uid="uid://b61w8ijwniui4" path="res://game_characters_scenes/assets/arm2.png" id="16_wossa"]
-[ext_resource type="Texture2D" uid="uid://b1dpvkn8g86e5" path="res://game_characters_scenes/assets/bayonet_ammo.png" id="19_d6fis"]
-[ext_resource type="Texture2D" uid="uid://jdulueb7gowt" path="res://game_characters_scenes/assets/dust_particle.png" id="21_peg6s"]
-[ext_resource type="Texture2D" uid="uid://5xg73u1xoy12" path="res://game_characters_scenes/assets/circle_particle.png" id="22_huodq"]
-[ext_resource type="Texture2D" uid="uid://d3m2ymkclsdx7" path="res://game_characters_scenes/assets/hurt_light.png" id="23_prkcj"]
-[ext_resource type="Animation" uid="uid://dgc18yq1283ud" path="res://game_characters_scenes/assets/animations/allies/_death_stabbed_bayonet.res" id="26_imtld"]
-[ext_resource type="Animation" uid="uid://dv5ddckjm14c1" path="res://game_characters_scenes/assets/animations/allies/_receive_damage_genera_2l.res" id="26_yo6kw"]
-[ext_resource type="Texture2D" uid="uid://q5ifosgjvma5" path="res://game_characters_scenes/assets/gun_light.png" id="30_oyr0b"]
-[ext_resource type="PackedScene" uid="uid://d2torbk0fy8a5" path="res://game_characters_scenes/assets/blood_particles.tscn" id="32_wtfle"]
+[ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/assets/circle_shadow.png" id="2_5ltgp"]
+[ext_resource type="Texture2D" uid="uid://d3m2ymkclsdx7" path="res://game_characters_scenes/assets/hurt_light.png" id="3_sr3fg"]
+[ext_resource type="Texture2D" uid="uid://c73v5xy4v6gea" path="res://game_characters_scenes/assets/hurt_shape.png" id="4_st7co"]
+[ext_resource type="Texture2D" uid="uid://dla3tqrgg7j8w" path="res://game_characters_scenes/assets/legup2.png" id="5_3xdkk"]
+[ext_resource type="Texture2D" uid="uid://de36q80eh20e1" path="res://game_characters_scenes/assets/leg4.png" id="6_i6fdn"]
+[ext_resource type="Texture2D" uid="uid://dye7bcrha1j02" path="res://game_characters_scenes/assets/leg1.png" id="7_lhhum"]
+[ext_resource type="Texture2D" uid="uid://bh2jew5fbuk8g" path="res://game_characters_scenes/assets/leg3.png" id="8_6xa0k"]
+[ext_resource type="Texture2D" uid="uid://bs5clwf6lc771" path="res://game_characters_scenes/allies/shoter_ally/bayonet_soldier/assets/bodylines.png" id="9_bodi6"]
+[ext_resource type="Texture2D" uid="uid://jykv0pknwas2" path="res://game_characters_scenes/assets/arm1.png" id="10_t7udl"]
+[ext_resource type="Texture2D" uid="uid://bxrif5r5s3obv" path="res://game_characters_scenes/assets/arm4.png" id="11_s561s"]
+[ext_resource type="Texture2D" uid="uid://bynycpikxobh" path="res://game_characters_scenes/assets/hand.png" id="12_e5w8r"]
+[ext_resource type="Texture2D" uid="uid://b7v5he2rytl2s" path="res://game_characters_scenes/allies/shoter_ally/bayonet_soldier/assets/head_dead.png" id="13_2ludy"]
+[ext_resource type="Texture2D" uid="uid://bo2271rejnrtb" path="res://game_characters_scenes/allies/shoter_ally/bayonet_soldier/assets/head.png" id="14_2ub8n"]
+[ext_resource type="Texture2D" uid="uid://b61w8ijwniui4" path="res://game_characters_scenes/assets/arm2.png" id="15_3cmfr"]
+[ext_resource type="Texture2D" uid="uid://by0ecbpx2elav" path="res://game_characters_scenes/assets/bayoneta.png" id="16_hx5my"]
+[ext_resource type="Texture2D" uid="uid://5xg73u1xoy12" path="res://game_characters_scenes/assets/circle_particle.png" id="17_v5q65"]
+[ext_resource type="Texture2D" uid="uid://b1dpvkn8g86e5" path="res://game_characters_scenes/assets/bayonet_ammo.png" id="18_hbifd"]
+[ext_resource type="Texture2D" uid="uid://u15uitrmprpp" path="res://game_characters_scenes/assets/left_elbow.png" id="19_e2p80"]
+[ext_resource type="Texture2D" uid="uid://jdulueb7gowt" path="res://game_characters_scenes/assets/dust_particle.png" id="20_kav4e"]
+[ext_resource type="Animation" uid="uid://dgc18yq1283ud" path="res://game_characters_scenes/assets/animations/allies/_death_stabbed_bayonet.res" id="21_w3wfd"]
+[ext_resource type="Animation" uid="uid://dv5ddckjm14c1" path="res://game_characters_scenes/assets/animations/allies/_receive_damage_genera_2l.res" id="22_26nmq"]
+[ext_resource type="Texture2D" uid="uid://q5ifosgjvma5" path="res://game_characters_scenes/assets/gun_light.png" id="23_iqhdq"]
+[ext_resource type="PackedScene" uid="uid://d2torbk0fy8a5" path="res://game_characters_scenes/assets/blood_particles.tscn" id="24_ohgtb"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_p5b3t"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_qarns"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("10_3odf3")
+"texture": ExtResource("13_2ludy")
 }],
 "loop": true,
 "name": &"dead",
@@ -37,27 +38,27 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("11_3aqfp")
+"texture": ExtResource("14_2ub8n")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
-[sub_resource type="Curve" id="Curve_g77kc"]
+[sub_resource type="Curve" id="Curve_svp4w"]
 _limits = [0.0, 0.8, 0.0, 1.0]
 _data = [Vector2(0, 0.446975), 0.0, 0.0, 0, 0, Vector2(0.503333, 0.629182), 0.0, 0.0, 0, 0, Vector2(1, 0.401424), 0.0, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_7c2x6"]
+[sub_resource type="Gradient" id="Gradient_lw55j"]
 offsets = PackedFloat32Array(0, 0.25, 1)
 colors = PackedColorArray(0, 0, 0, 1, 0.967284, 0.896213, 0.79581, 1, 1, 1, 1, 1)
 
-[sub_resource type="Curve" id="Curve_1vc3g"]
+[sub_resource type="Curve" id="Curve_rei55"]
 _data = [Vector2(0, 0.147368), 0.0, 0.0, 0, 0, Vector2(0.368132, 0.694737), 0.0, 0.0, 0, 0, Vector2(0.983517, 0.115789), 0.0, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_imogj"]
+[sub_resource type="Gradient" id="Gradient_soqbd"]
 offsets = PackedFloat32Array(0, 0.245033, 1)
 colors = PackedColorArray(0.351563, 0.351563, 0.351563, 1, 1, 1, 1, 1, 1, 1, 1, 0)
 
@@ -1203,7 +1204,7 @@ tracks/15/keys = {
 _data = {
 &"RESET": SubResource("Animation_u4glg"),
 &"_death": SubResource("Animation_2f24l"),
-&"_death_stabbed": ExtResource("26_imtld"),
+&"_death_stabbed": ExtResource("21_w3wfd"),
 &"_idle": SubResource("Animation_hmhyg"),
 &"_reload": SubResource("Animation_y3lcw"),
 &"_shoot": SubResource("Animation_t4axm"),
@@ -1218,158 +1219,165 @@ length = 0.001
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1vqix"]
 _data = {
 &"RESET": SubResource("Animation_ic8ck"),
-&"_receive_damage_general": ExtResource("26_yo6kw")
+&"_receive_damage_general": ExtResource("22_26nmq")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nkb2f"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hj8i1"]
 size = Vector2(83, 191)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tkxuh"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hemt8"]
 size = Vector2(95.5, 69)
 
-[sub_resource type="Curve" id="Curve_k45x1"]
+[sub_resource type="Curve" id="Curve_fgw1i"]
 _limits = [0.0, 0.1, 0.0, 1.0]
 _data = [Vector2(0, 0.0175824), 0.0, 0.0, 0, 0, Vector2(0.505155, 0.1), 0.0163989, 0.0163989, 0, 0, Vector2(1, 0.00549448), -0.368232, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_dcikf"]
+[sub_resource type="Gradient" id="Gradient_kpjug"]
 offsets = PackedFloat32Array(0, 0.0783133, 0.379518, 0.572289, 0.76506, 1)
 colors = PackedColorArray(0.874968, 0.604514, 0.563407, 0, 1, 1, 1, 1, 0.851918, 0.618979, 0.924945, 1, 0.954472, 0.794962, 0.466424, 1, 0.73367, 0.921388, 0.913637, 1, 1, 1, 1, 0)
 
-[node name="BayonetSoldier" type="CharacterBody2D"]
-collision_layer = 0
-collision_mask = 0
+[node name="BayonetSoldier" instance=ExtResource("1_0wx6o")]
 script = ExtResource("1_m4sxj")
 
-[node name="AllyNameAndLevelLabel" type="Label" parent="."]
-unique_name_in_owner = true
-offset_left = -179.0
-offset_top = -383.0
-offset_right = 101.0
-offset_bottom = -334.0
-theme_override_font_sizes/font_size = 35
-text = "AllyName level 1"
+[node name="AllyNameAndLevelLabel" parent="." index="0"]
+offset_left = -51.0
+offset_top = -302.0
+offset_right = 54.0
+offset_bottom = -279.0
 
-[node name="Shadow" type="Sprite2D" parent="."]
+[node name="AllyUpgradeMenu" parent="." index="1"]
+offset_left = 110.0
+offset_top = -330.0
+offset_right = 110.6
+offset_bottom = -329.52
+
+[node name="ShowUpgradePopupBtn" parent="." index="2"]
+offset_left = -86.0
+offset_top = -264.0
+offset_right = 123.0
+offset_bottom = 86.0
+
+[node name="Shadow" type="Sprite2D" parent="." index="3"]
 position = Vector2(-2, 44.798)
 scale = Vector2(1.23684, 1)
-texture = ExtResource("1_htuxv")
+texture = ExtResource("2_5ltgp")
 
-[node name="HurtLight" type="Sprite2D" parent="."]
+[node name="HurtLight" type="Sprite2D" parent="." index="4"]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(7.5, -303)
 scale = Vector2(0.1, 1)
-texture = ExtResource("23_prkcj")
+texture = ExtResource("3_sr3fg")
 
-[node name="HurtShape" type="Sprite2D" parent="."]
+[node name="HurtShape" type="Sprite2D" parent="." index="5"]
 modulate = Color(1, 0.607843, 0.541176, 0)
 position = Vector2(-10, -101)
 scale = Vector2(1.2, 1.2)
-texture = ExtResource("9_v0flp")
+texture = ExtResource("4_st7co")
 offset = Vector2(18, 0)
 
-[node name="Textures" type="Node2D" parent="."]
+[node name="Textures" type="Node2D" parent="." index="6"]
 position = Vector2(0, -114)
 
-[node name="RightLeg" type="Sprite2D" parent="Textures"]
+[node name="RightLeg" type="Sprite2D" parent="Textures" index="0"]
 position = Vector2(15, 51)
 rotation = 0.191986
-texture = ExtResource("2_82qqj")
+texture = ExtResource("5_3xdkk")
 offset = Vector2(12, 22)
 
-[node name="RightFoot" type="Sprite2D" parent="Textures/RightLeg"]
+[node name="RightFoot" type="Sprite2D" parent="Textures/RightLeg" index="0"]
 position = Vector2(17.676, 36.3821)
 rotation = 0.0523599
-texture = ExtResource("3_ctfig")
+texture = ExtResource("6_i6fdn")
 offset = Vector2(22, 31)
 
-[node name="LeftLeg" type="Sprite2D" parent="Textures"]
+[node name="LeftLeg" type="Sprite2D" parent="Textures" index="1"]
 position = Vector2(-15, 50)
 rotation = -0.0349066
-texture = ExtResource("4_kulel")
+texture = ExtResource("7_lhhum")
 offset = Vector2(16, 19)
 
-[node name="LeftFoot" type="Sprite2D" parent="Textures/LeftLeg"]
+[node name="LeftFoot" type="Sprite2D" parent="Textures/LeftLeg" index="0"]
 position = Vector2(-15.0692, 43.9639)
-texture = ExtResource("5_yueyy")
+texture = ExtResource("8_6xa0k")
 offset = Vector2(12.919, 34.556)
 
-[node name="Body" type="Sprite2D" parent="Textures"]
-position = Vector2(0, 39.2857)
+[node name="Body" type="Sprite2D" parent="Textures" index="2"]
+position = Vector2(0, 41)
 rotation = 0.0523599
-texture = ExtResource("6_t6tvu")
+texture = ExtResource("9_bodi6")
 offset = Vector2(0, -39)
 
-[node name="RightArm" type="Sprite2D" parent="Textures/Body"]
+[node name="RightArm" type="Sprite2D" parent="Textures/Body" index="0"]
 position = Vector2(32, -72)
-texture = ExtResource("7_vfq6r")
+texture = ExtResource("10_t7udl")
 offset = Vector2(-36, 17)
 
-[node name="RightElbow" type="Sprite2D" parent="Textures/Body/RightArm"]
+[node name="RightElbow" type="Sprite2D" parent="Textures/Body/RightArm" index="0"]
 position = Vector2(30, 27)
-texture = ExtResource("8_g0b5y")
+texture = ExtResource("11_s561s")
 offset = Vector2(24, 0)
 
-[node name="Hand" type="Sprite2D" parent="Textures/Body/RightArm/RightElbow"]
+[node name="Hand" type="Sprite2D" parent="Textures/Body/RightArm/RightElbow" index="0"]
 position = Vector2(53, -6)
-texture = ExtResource("13_unpbu")
+texture = ExtResource("12_e5w8r")
 offset = Vector2(11, -1)
 
-[node name="Head" type="AnimatedSprite2D" parent="Textures/Body"]
+[node name="Head" type="AnimatedSprite2D" parent="Textures/Body" index="1"]
 position = Vector2(4, -105)
-sprite_frames = SubResource("SpriteFrames_p5b3t")
+sprite_frames = SubResource("SpriteFrames_qarns")
 autoplay = "default"
 offset = Vector2(0, -30)
 
-[node name="LeftArm" type="Sprite2D" parent="Textures/Body"]
+[node name="LeftArm" type="Sprite2D" parent="Textures/Body" index="2"]
 position = Vector2(-37, -76)
-texture = ExtResource("16_wossa")
+texture = ExtResource("15_3cmfr")
 offset = Vector2(94, -23)
 
-[node name="Bayonet" type="Sprite2D" parent="Textures/Body/LeftArm"]
-position = Vector2(30.7024, 19.6363)
-texture = ExtResource("13_gd2m6")
+[node name="Bayonet" type="Sprite2D" parent="Textures/Body/LeftArm" index="0"]
+position = Vector2(27.9306, 38.7131)
+texture = ExtResource("16_hx5my")
 offset = Vector2(79, -1)
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="Textures/Body/LeftArm/Bayonet"]
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Textures/Body/LeftArm/Bayonet" index="0"]
 position = Vector2(199.121, -9.38937)
 rotation = 0.0872667
 emitting = false
 amount = 9
-texture = ExtResource("22_huodq")
+texture = ExtResource("17_v5q65")
 lifetime = 0.1
 one_shot = true
 lifetime_randomness = 0.32
 local_coords = true
 initial_velocity_min = 616.76
 initial_velocity_max = 616.76
-scale_amount_curve = SubResource("Curve_g77kc")
-color_ramp = SubResource("Gradient_7c2x6")
+scale_amount_curve = SubResource("Curve_svp4w")
+color_ramp = SubResource("Gradient_lw55j")
 
-[node name="Ammo" type="Sprite2D" parent="Textures/Body/LeftArm"]
+[node name="Ammo" type="Sprite2D" parent="Textures/Body/LeftArm" index="1"]
 visible = false
 position = Vector2(47.335, 22.336)
-texture = ExtResource("19_d6fis")
+texture = ExtResource("18_hbifd")
 
-[node name="LeftElbow" type="Sprite2D" parent="Textures/Body/LeftArm"]
+[node name="LeftElbow" type="Sprite2D" parent="Textures/Body/LeftArm" index="2"]
 position = Vector2(-33, 38)
-texture = ExtResource("16_c37r2")
+texture = ExtResource("19_e2p80")
 offset = Vector2(33, -1)
 
-[node name="HurtLight" type="PointLight2D" parent="Textures"]
+[node name="HurtLight" type="PointLight2D" parent="Textures" index="3"]
 visible = false
 position = Vector2(28, -9.01297)
 rotation = -0.0410275
 color = Color(1, 0.207843, 0.184314, 1)
 energy = 0.0
-texture = ExtResource("23_prkcj")
+texture = ExtResource("3_sr3fg")
 texture_scale = 1.2
 
-[node name="DustParticles" type="CPUParticles2D" parent="."]
+[node name="DustParticles" type="CPUParticles2D" parent="." index="7"]
 position = Vector2(10, 75)
 emitting = false
 amount = 30
-texture = ExtResource("21_peg6s")
+texture = ExtResource("20_kav4e")
 lifetime = 0.8
 one_shot = true
 speed_scale = 1.2
@@ -1383,48 +1391,48 @@ initial_velocity_min = 433.73
 initial_velocity_max = 433.73
 angular_velocity_min = 277.59
 angular_velocity_max = 277.59
-scale_amount_curve = SubResource("Curve_1vc3g")
-color_ramp = SubResource("Gradient_imogj")
+scale_amount_curve = SubResource("Curve_rei55")
+color_ramp = SubResource("Gradient_soqbd")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="8"]
 libraries = {
 &"": SubResource("AnimationLibrary_anao4")
 }
 autoplay = "_idle"
 
-[node name="ReceiveDamage" type="AnimationPlayer" parent="."]
+[node name="ReceiveDamage" type="AnimationPlayer" parent="." index="9"]
 libraries = {
 &"": SubResource("AnimationLibrary_1vqix")
 }
 
-[node name="BodyCollShape" type="CollisionShape2D" parent="."]
+[node name="BodyCollShape" type="CollisionShape2D" parent="." index="10"]
 position = Vector2(-29.5, -153.5)
-shape = SubResource("RectangleShape2D_nkb2f")
+shape = SubResource("RectangleShape2D_hj8i1")
 
-[node name="PhysicalContactCollShape" type="CollisionShape2D" parent="."]
+[node name="PhysicalContactCollShape" type="CollisionShape2D" parent="." index="11"]
 position = Vector2(124.25, -26.5)
-shape = SubResource("RectangleShape2D_tkxuh")
+shape = SubResource("RectangleShape2D_hemt8")
 
-[node name="ShootingRange" type="RayCast2D" parent="."]
+[node name="ShootingRange" type="RayCast2D" parent="." index="12"]
 position = Vector2(0, -120)
 target_position = Vector2(1530, 0)
 collision_mask = 0
 
-[node name="ShootingTimer" type="Timer" parent="."]
+[node name="ShootingTimer" type="Timer" parent="." index="13"]
 one_shot = true
 autostart = true
 
-[node name="SpawnLight" type="Sprite2D" parent="."]
+[node name="SpawnLight" type="Sprite2D" parent="." index="14"]
 visible = false
 modulate = Color(0.564706, 0.901961, 0.54902, 0)
 position = Vector2(0, 54)
 scale = Vector2(2, 2)
-texture = ExtResource("30_oyr0b")
+texture = ExtResource("23_iqhdq")
 
-[node name="BloodParticles" parent="." instance=ExtResource("32_wtfle")]
+[node name="BloodParticles" parent="." index="15" instance=ExtResource("24_ohgtb")]
 position = Vector2(17, -125)
 
-[node name="SpawnParticles" type="CPUParticles2D" parent="."]
+[node name="SpawnParticles" type="CPUParticles2D" parent="." index="16"]
 position = Vector2(4, 71)
 emitting = false
 amount = 20
@@ -1442,5 +1450,5 @@ angular_velocity_min = 269.16
 angular_velocity_max = 269.16
 linear_accel_min = 31.78
 linear_accel_max = 31.78
-scale_amount_curve = SubResource("Curve_k45x1")
-color_ramp = SubResource("Gradient_dcikf")
+scale_amount_curve = SubResource("Curve_fgw1i")
+color_ramp = SubResource("Gradient_kpjug")
