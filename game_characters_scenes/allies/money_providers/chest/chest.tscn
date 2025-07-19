@@ -577,7 +577,6 @@ offsets = PackedFloat32Array(0, 0.0783133, 0.379518, 0.572289, 0.76506, 1)
 colors = PackedColorArray(0.874968, 0.604514, 0.563407, 0, 1, 1, 1, 1, 0.851918, 0.618979, 0.924945, 1, 0.954472, 0.794962, 0.466424, 1, 0.73367, 0.921388, 0.913637, 1, 1, 1, 1, 0)
 
 [node name="Matrioshka" instance=ExtResource("1_lk7uq")]
-position = Vector2(356, 340)
 script = ExtResource("2_hjs8c")
 coin_value = 50
 minimum_value = 2
@@ -588,6 +587,12 @@ offset_left = -60.0
 offset_top = -201.0
 offset_right = 45.0
 offset_bottom = -178.0
+
+[node name="AllyUpgradeMenu" parent="." index="1"]
+offset_left = 161.0
+offset_top = -291.0
+offset_right = 161.6
+offset_bottom = -290.52
 
 [node name="ShowUpgradePopupBtn" parent="." index="2"]
 offset_left = -110.0
@@ -606,12 +611,10 @@ position = Vector2(0, 39)
 [node name="Down" type="AnimatedSprite2D" parent="Textures" index="0"]
 position = Vector2(-1, -28)
 sprite_frames = SubResource("SpriteFrames_g3cl2")
-animation = &"charge"
 offset = Vector2(-1, -23)
 
 [node name="Top" type="AnimatedSprite2D" parent="Textures/Down" index="0"]
-position = Vector2(-112, -117.12)
-rotation = -0.0295364
+position = Vector2(-84, -72)
 sprite_frames = SubResource("SpriteFrames_p5rye")
 autoplay = "default"
 offset = Vector2(83, 4)
