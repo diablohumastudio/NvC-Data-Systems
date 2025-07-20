@@ -11,7 +11,7 @@ metadata/_custom_type_script = "uid://c514vn6daipgc"
 unique_name_in_owner = true
 offset_right = 40.0
 offset_bottom = 23.0
-theme_override_font_sizes/font_size = 35
+theme_override_font_sizes/font_size = 25
 text = "NAME Level 1"
 
 [node name="AllyUpgradeMenu" parent="." instance=ExtResource("2_24vgy")]

@@ -3,4 +3,10 @@
 /android/
 .DS_Store
 .vscode/
+
 .vscode/settings.json
+
+
+#Ignore vscode AI rules
+.github\copilot-instructions.md
+.github/copilot-instructions.md

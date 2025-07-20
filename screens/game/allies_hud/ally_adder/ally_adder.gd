@@ -15,6 +15,17 @@ func set_visuals():
 	%AddAllyBtnLockedBanner.visible = true if !is_ally_unlocked else false
 
 func _on_add_ally_btn_pressed() -> void:
-	var new_added_ally: AddedAlly = load("res://screens/game/allies_hud/ally_adder/added_ally/added_ally.tscn").instantiate()
-	new_added_ally.ally = ally
-	%AlliesContainer.add_child(new_added_ally)
+	instatiate_sc_ally()
+
+func instatiate_sc_ally() -> void:
+	var sc_ally: ScAlly
+	sc_ally = ally.scene.instantiate()
+	sc_ally.ally = ally
+	sc_ally.level = ally.ud_ally.base_level
+	sc_ally.position = Vector2(200, 270)
+	%AlliesContainer.add_child(sc_ally)
+	var new_color_rect: ColorRect = ColorRect.new()
+	new_color_rect.modulate = Color.TRANSPARENT
+	new_color_rect.custom_minimum_size = Vector2(450, 450)
+	%AlliesContainer.add_child(new_color_rect)
+	%AlliesContainer.move_child(new_color_rect,0)
