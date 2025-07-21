@@ -15,6 +15,7 @@
 ## Key Systems
 - **Allies System**: Core gameplay feature for collecting/upgrading allies
 - **User Data**: Save system with user_data, user_allies_inventory
+- **Action Condition System**: System that manage changing app state. Actually used to change all objects inside a user_data object. Described in @C:\Users\Usuario\Documents\FER\diablohumastudio\save_user_data\global_systems\data_systems\action_condition_system\CLAUDE.md
 - **Market System**: Shop interface for purchasing allies
 - **State Management**: Action payloads for unlock/upgrade operations
 
