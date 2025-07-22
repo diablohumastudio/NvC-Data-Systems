@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ddpyolov5fok0"]
 
-[ext_resource type="Script" uid="uid://b8igl15wijdiu" path="res://test_scene.gd" id="1_uhqqe"]
+[ext_resource type="Script" uid="uid://b8igl15wijdiu" path="res://tests/test_scenes/test_scene.gd" id="1_uhqqe"]
 [ext_resource type="Resource" uid="uid://tnci7ph2ia3c" path="res://data/game_characters/allies/user_data/data/ud_chest.tres" id="2_ia1lp"]
 
 [node name="TestScene" type="Control"]
