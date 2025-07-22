@@ -9,4 +9,5 @@ var type: Action.TYPES
 
 @warning_ignore("unused_parameter")
 func evaluate(action: Action):
+	printerr("Condition.evaluate() must be overridden in subclasses")
 	pass

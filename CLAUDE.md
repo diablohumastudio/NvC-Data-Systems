@@ -66,4 +66,48 @@
 7. Another problem is that the property conditions: Array[Condition] is an array, so it wont get saved. So is neede to do again the same as in ud_levels. creating an typed dictionary conditions: Dictionary[Condition, bool].   
 #### Second opt with my sist
 1. If we don't use array of conditions and instead use state_changers, we can have ther property levels:Array[AllyLevel] and the property ud_ally: UDAlly in Ally class. And we can have ud_ally saved and in it the properties levels_unlocked and levels_buyed of type Array[AllyLevel.IDs] (we have to first create the enum IDs in AllyLevel), so we dont have to save all the ally_levels (those will only be saved in res folder and be compare in market and in game with unlocke_ally_levels for enabling button). 
-2. The problem here are the requisites of ally_level, they should be an AllyLevelId. So it wont be as powerfull (versatile) as condition system (that we can unocked ally_level not only by buying the previous ally_level but maybe soldiers_killed or number of achivements unlocked or consecutive days played or anything i can think). Maybe you can tell me if this is true. 
+2. The problem here are the requisites of ally_level, they should be an AllyLevelId. So it wont be as powerfull (versatile) as condition system (that we can unocked ally_level not only by buying the previous ally_level but maybe soldiers_killed or number of achivements unlocked or consecutive days played or anything i can think). Maybe you can tell me if this is true.
+
+## Testing System
+- **GUT**: Godot Unit Testing plugin installed and configured
+- **Test Location**: `/tests/unit/` directory for unit tests
+- **Test Files Created**:
+  - `test_condition.gd` - Tests base Condition class
+  - `test_action.gd` - Tests Action class and payloads
+  - `test_ud_ally.gd` - Tests UDAlly user data class
+  - `test_ally_level.gd` - Tests AllyLevel upgrade data class
+  - `test_cond_lv_compl.gd` - Tests level completion condition
+
+## Project Enums Reference
+**CRITICAL**: Always use these exact enum values in code and tests. Never assume or invent enum values.
+
+### Level.IDs (from `data/levels/res_data/model/level.gd`)
+```gdscript
+enum IDs {Level1, Level2, Level2p, Level3, LevelEx, LevelEx2, Level4}
+```
+
+### Ally.IDs (from `data/game_characters/allies/res_data/model/ally.gd`)
+```gdscript
+enum IDs { BAYONETE_SOLDIER, CHEST }
+```
+
+### Action.TYPES (from `data/acs_system/actions/model/action.gd`)
+```gdscript
+enum TYPES {LV_COMPLTD, ENEMY_KILLED, LV_COMPLTD_ALL_CANONS, BUYED_ALLY_LEVEL}
+```
+
+### Achievement.IDs (from `data/achievements/res_data/model/achievement.gd`)
+```gdscript
+enum IDs {achiv_compl_lv_2, achiv_compl_lv_2_and_2p, achiv_enem_kill_any_level_3, achiv_enem_kill_tot_5}
+```
+
+### UserDataSystem.PROPERTIES (from `global_systems/data_systems/user_data_system/user_data_system.gd`)
+```gdscript
+enum PROPERTIES {USERS_CREDENTIALS, USER_NAME, UD_LEVELS, ACHIEVEMENTS, ENEMIES_KILLED, UD_ACHIEVEMENTS, ALLIES}
+```
+
+## Testing Best Practices
+- **Always verify enum values** by reading the actual class files before writing tests
+- **Use Grep to search** for enum definitions when in doubt
+- **Check existing .tres files** to see what values are actually used in practice
+- **Never assume naming patterns** - always check the source code 
