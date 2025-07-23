@@ -10,6 +10,8 @@ func _set_ally(new_value: Ally):
 
 func _set_level_buttons():
 	for level in ally.ud_ally.levels_conditions:
+		if !ally.ud_ally.unlocked_levels.has(level.level_id): continue
+
 		var new_upgrade_to_level_btn: Button = Button.new()
 		new_upgrade_to_level_btn.text = "Upgrade to level: " + level.level_id
 		new_upgrade_to_level_btn.set("theme_override_font_sizes/font_size", 35)
