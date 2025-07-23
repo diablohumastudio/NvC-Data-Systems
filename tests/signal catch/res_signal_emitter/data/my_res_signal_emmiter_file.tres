@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="ResSignalEmitter" load_steps=2 format=3 uid="uid://dd78nhpyfdds3"]
+
+[ext_resource type="Script" uid="uid://br3nohn6q03xt" path="res://tests/signal catch/res_signal_emitter/model/re_signal_emitter.gd" id="1_1bwtv"]
+
+[resource]
+script = ExtResource("1_1bwtv")
+metadata/_custom_type_script = "uid://br3nohn6q03xt"

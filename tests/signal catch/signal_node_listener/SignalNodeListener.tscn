@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://p8g80tadl031"]
+
+[ext_resource type="Script" uid="uid://bctekqe77p88g" path="res://tests/signal catch/signal_node_listener/signal_node_listener.gd" id="1_casuo"]
+
+[node name="SignalNodeListener" type="Label"]
+text = "Esta es la prueba. Cambia a verde cuando recibe senal"
+script = ExtResource("1_casuo")

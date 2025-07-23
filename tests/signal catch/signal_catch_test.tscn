@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmsgd4ufqjpm0"]
+
+[ext_resource type="Script" uid="uid://tsqrlia8vf0f" path="res://tests/signal catch/signal_catch_test.gd" id="1_mck40"]
+[ext_resource type="PackedScene" uid="uid://p8g80tadl031" path="res://tests/signal catch/signal_node_listener/SignalNodeListener.tscn" id="2_5ln7d"]
+
+[node name="SignalCatchTest" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mck40")
+
+[node name="EmitSignalFromResBtn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 830.0
+offset_top = 529.0
+offset_right = 926.0
+offset_bottom = 592.0
+theme_override_font_sizes/font_size = 40
+text = "emit"
+
+[node name="SignalNodeListener" parent="." instance=ExtResource("2_5ln7d")]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 244.0
+offset_right = 1217.0
+offset_bottom = 299.0
+theme_override_font_sizes/font_size = 40
+
+[node name="SignalNodeListener2" parent="." instance=ExtResource("2_5ln7d")]
+layout_mode = 0
+offset_left = 769.0
+offset_top = 361.0
+offset_right = 1815.0
+offset_bottom = 416.0
+theme_override_font_sizes/font_size = 40
+
+[connection signal="pressed" from="EmitSignalFromResBtn" to="." method="_on_emit_signal_from_res_btn_pressed"]
