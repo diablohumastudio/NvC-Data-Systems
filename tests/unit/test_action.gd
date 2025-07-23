@@ -13,7 +13,7 @@ func test_action_creation_with_basic_payload():
 	# Test creating an action with basic payload
 	var payload = Action.Payload.new()
 	var action = Action.new(Action.TYPES.LV_COMPLTD, payload)
-	
+
 	assert_not_null(action, "Action should be created successfully")
 	assert_eq(action.type, Action.TYPES.LV_COMPLTD, "Action type should be set correctly")
 	assert_not_null(action.payload, "Action payload should not be null")
@@ -56,7 +56,7 @@ func test_pay_lvl_compl_all_canons_payload():
 	
 	assert_not_null(payload, "PayLvlComplAllCanons payload should be created")
 	assert_true(payload is Action.Payload, "Should inherit from Payload")
-	assert_eq(payload.level_id, Level.IDs.Level2p, "Level ID should be set correctly")
+	assert_eq(payload.level_id, Level.IDs.Level2, "Level ID should be set correctly")
 	assert_eq(payload.canons_alive, canons_alive, "Canons alive should be set correctly")
 
 func test_pay_buyed_ally_level_payload():
