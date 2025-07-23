@@ -1,9 +1,5 @@
 class_name DataFilesLoader extends Node
 
-# Cache for frequently used small resources
-static var _conditions_cache: Array[Condition]
-static var _state_changers_cache: Array[StateChanger]
-
 static func create_ud_levels_from_res_files() -> Array[UDLevel]:
 	var _ud_levels: Array[UDLevel]
 	var dir := DirAccess.open(GC.DATA_FOLDERS_PATHS.UD_LEVELS)
@@ -71,12 +67,7 @@ static func get_allies_from_res_file_by_id(id: Ally.IDs) -> Ally:
 	assert(ally != null, GC.DATA_FOLDERS_PATHS.RES_ALLIES + file_name + ".tres")
 	return ally
 
-static func get_conditions_from_res_files() -> Array[Condition]:
-	if _conditions_cache.is_empty():
-		_conditions_cache = _load_conditions_from_disk()
-	return _conditions_cache
-
-static func _load_conditions_from_disk() -> Array[Condition]:
+static func load_conditions_from_disk() -> Array[Condition]:
 	var conds: Array[Condition]
 	var dir := DirAccess.open(GC.DATA_FOLDERS_PATHS.CONDITIONS)
 	assert(dir != null, "Could not open folder")
@@ -87,12 +78,7 @@ static func _load_conditions_from_disk() -> Array[Condition]:
 		conds.append(cond)
 	return conds
 
-static func get_state_changer_from_res_files() -> Array[StateChanger]:
-	if _state_changers_cache.is_empty():
-		_state_changers_cache = _load_state_changers_from_disk()
-	return _state_changers_cache
-
-static func _load_state_changers_from_disk() -> Array[StateChanger]:
+static func load_state_changers_from_disk() -> Array[StateChanger]:
 	var state_changers: Array[StateChanger]
 	var dir := DirAccess.open(GC.DATA_FOLDERS_PATHS.STATE_CHANGERS)
 	assert(dir != null, "Could not open folder")
