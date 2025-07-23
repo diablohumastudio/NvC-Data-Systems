@@ -37,8 +37,8 @@ func _on_condition_fullfilled(condition: Condition, level: AllyLevel):
 	for _condition in conditions:
 		if conditions[_condition] == false:
 			return
+	if unlocked_levels.has(level.level_id): return
 	unlocked_levels.append(level.level_id)
-	print(unlocked_levels)
 
 func is_level_unlocked(level_id: String) -> bool:
 	return unlocked_levels.has(level_id)
