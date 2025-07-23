@@ -1,6 +1,6 @@
 class_name Action extends Resource
 
-enum TYPES {LV_COMPLTD, ENEMY_KILLED, LV_COMPLTD_ALL_CANONS, BUYED_ALLY_LEVEL}
+enum TYPES {LV_COMPLTD, ENEMY_KILLED, LV_COMPLTD_ALL_CANONS, BUYED_ALLY_LEVEL, TEST}
 
 var type: TYPES
 var payload: Payload
