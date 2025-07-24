@@ -11,8 +11,6 @@ id = 3
 completed = false
 completed_all_canons = false
 locked = true
-unlocked_conditionis = Dictionary[ExtResource("2_16b0h"), bool]({
-ExtResource("4_lj3uh"): false,
-ExtResource("5_iplk3"): false
-})
+conditions = Array[ExtResource("2_16b0h")]([ExtResource("4_lj3uh"), ExtResource("5_iplk3")])
+fullfilled_conditions_ids = Array[String]([])
 metadata/_custom_type_script = "uid://bogjp3dhhsxqm"

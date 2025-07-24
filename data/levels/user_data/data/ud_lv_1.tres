@@ -9,5 +9,6 @@ id = 0
 completed = false
 completed_all_canons = false
 locked = false
-unlocked_conditionis = Dictionary[ExtResource("2_r6cyj"), bool]({})
+conditions = Array[ExtResource("2_r6cyj")]([])
+fullfilled_conditions_ids = Array[String]([])
 metadata/_custom_type_script = "uid://bogjp3dhhsxqm"
