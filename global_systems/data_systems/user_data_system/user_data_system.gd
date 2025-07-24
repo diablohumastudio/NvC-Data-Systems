@@ -18,6 +18,7 @@ func initialize_users_data():
 		all_users_credentials = load(_USERS_CREDENTIALS_FILE_PATH)
 		var current_user_cred: UserCredentials = all_users_credentials.credentials[all_users_credentials.current_user_index]
 		current_user_data = load(_USER_FILE_BASE + current_user_cred.user_name + ".tres")
+		ACS.current_user_name = current_user_cred.user_name
 	else:
 		all_users_credentials = AllUsersCredentials.new()
 		var new_user_credentials: UserCredentials = UserCredentials.new()
@@ -43,6 +44,7 @@ func set_current_user(user_name: String) -> void:
 		save_user_data_to_disk()
 	set_all_users_cred_by_name(user_name)
 	current_user_data = get_user_data_by_name(user_name)
+	ACS.current_user_name = user_name
 	current_user_changed.emit()
 	save_user_data_to_disk()
 

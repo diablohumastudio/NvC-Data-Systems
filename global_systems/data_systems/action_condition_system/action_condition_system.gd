@@ -1,17 +1,58 @@
 extends Node
 
-static var conditions: Array[Condition] = get_conditions_from_res_files()
-static var state_changers: Array[StateChanger] = get_state_changer_from_res_files()
+static var current_user_name: String : set = _set_current_user_name
+static var conditions: Array[Condition]
+static var state_changers: Array[StateChanger] = _initialize_state_changers()
 
-static func get_conditions_from_res_files() -> Array[Condition]:
-	if conditions.is_empty():
-		conditions = DataFilesLoader.load_conditions_from_disk()
-	return conditions
+static func _set_current_user_name(user_name: String):
+	current_user_name = user_name
+	conditions = _initialize_conditions()
 
-static func get_state_changer_from_res_files() -> Array[StateChanger]:
-	if state_changers.is_empty():
-		state_changers = DataFilesLoader.load_state_changers_from_disk()
-	return state_changers
+static func _initialize_conditions() -> Array[Condition]:
+	var user_conditions_path = "user://" + current_user_name + "_conditions/"
+	var user_dir := DirAccess.open(user_conditions_path)
+	if user_dir != null and user_dir.get_files().size() > 0:
+		return _load_conditions_from_user()
+	else:
+		var _conditions : Array[Condition] = _load_conditions_from_disk()
+		return _conditions
+
+static func _initialize_state_changers() -> Array[StateChanger]:
+	return _load_state_changers_from_disk()
+
+static func _load_conditions_from_disk() -> Array[Condition]:
+	var conds: Array[Condition]
+	var dir := DirAccess.open(GC.DATA_FOLDERS_PATHS.CONDITIONS)
+	assert(dir != null, "Could not open folder")
+	dir.list_dir_begin()
+	for file: String in dir.get_files():
+		var cond: Condition = load(dir.get_current_dir() + "/" + file)
+		assert(cond != null, "Failed to load condition: " + file)
+		conds.append(cond)
+	return conds
+
+static func _load_conditions_from_user() -> Array[Condition]:
+	var conds: Array[Condition]
+	var user_conditions_path = "user://" + current_user_name + "_conditions/"
+	var dir := DirAccess.open(user_conditions_path)
+	assert(dir != null, "Could not open user conditions folder: " + user_conditions_path)
+	dir.list_dir_begin()
+	for file: String in dir.get_files():
+		var cond: Condition = load(dir.get_current_dir() + "/" + file)
+		if cond != null:
+			conds.append(cond)
+	return conds
+
+static func _load_state_changers_from_disk() -> Array[StateChanger]:
+	var state_changers_array: Array[StateChanger]
+	var dir := DirAccess.open(GC.DATA_FOLDERS_PATHS.STATE_CHANGERS)
+	assert(dir != null, "Could not open folder")
+	dir.list_dir_begin()
+	for file: String in dir.get_files():
+		var state_changer: StateChanger = load(dir.get_current_dir() + "/" + file)
+		assert(state_changer != null, "Failed to load state_changer: " + file)
+		state_changers_array.append(state_changer)
+	return state_changers_array
 
 func set_action(action: Action):
 	_call_state_changers(action)
@@ -26,3 +67,18 @@ func _evaluate_conditions(action: Action):
 	for cond in conditions:
 		if cond.type == action.type:
 			cond.evaluate(action)
+
+	_save_conditions_to_user()
+
+static func _save_conditions_to_user():
+	if current_user_name.is_empty():
+		return
+	var user_conditions_path = "user://" + current_user_name + "_conditions/"
+	# Create directory if it doesn't exist
+	if not DirAccess.dir_exists_absolute(user_conditions_path):
+		DirAccess.open("user://").make_dir_recursive(current_user_name + "_conditions")
+	# Save each condition as individual .tres file
+	for condition in conditions as Array[Condition]:
+		var file_name = condition.id + ".tres"
+		var result = ResourceSaver.save(condition, user_conditions_path + file_name)
+		assert(result == OK, "Failed to save condition: " + file_name)
