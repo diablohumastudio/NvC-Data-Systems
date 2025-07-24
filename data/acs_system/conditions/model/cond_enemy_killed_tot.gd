@@ -7,4 +7,5 @@ func _init() -> void:
 
 func evaluate(_action: Action):
 	if UDS.get_property(UDS.PROPERTIES.ENEMIES_KILLED) >= enemies_to_kill:
+		is_fullfilled = true
 		fullfilled.emit(self)
