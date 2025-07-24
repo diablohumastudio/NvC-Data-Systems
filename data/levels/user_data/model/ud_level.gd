@@ -6,27 +6,31 @@ class_name UDLevel extends Resource
 @export var completed_all_canons: bool = false
 
 @export var locked: bool = true
-@export var unlocked_conditionis: Dictionary[Condition, bool] : set = _set_unlocked_condition
 
-func _set_unlocked_condition(new_value: Dictionary[Condition, bool]) -> void:
-	# Disconnect old signals to prevent memory leaks
-	if unlocked_conditionis:
-		for unlocked_condition in unlocked_conditionis:
-			if unlocked_condition.fullfilled.is_connected(_on_unlocked_condition_fullfilled):
-				unlocked_condition.fullfilled.disconnect(_on_unlocked_condition_fullfilled)
-	
-	unlocked_conditionis = new_value
-	if !unlocked_conditionis: return
-	
-	# Connect new signals
-	for unlocked_condition in unlocked_conditionis:
-		if !unlocked_condition.fullfilled.is_connected(_on_unlocked_condition_fullfilled):
-			unlocked_condition.fullfilled.connect(_on_unlocked_condition_fullfilled)
+@export var conditions: Array[Condition]: set = _set_conditions
+@export var fullfilled_conditions_ids: Array[String]
 
-func _on_unlocked_condition_fullfilled(condition : Condition) -> void:
-	unlocked_conditionis[condition] = true
-	for unlocked_condition in unlocked_conditionis:
-		if unlocked_conditionis[unlocked_condition] == false:
+func _set_conditions(new_value: Array[Condition]):
+	if conditions:
+		for condition in conditions as Array[Condition]:
+			if condition.fullfilled.is_connected(_on_condition_fullfilled):
+				condition.fullfilled.disconnect(_on_condition_fullfilled)
+	
+	conditions = new_value
+	if !conditions: return
+	
+	for condition in conditions as Array[Condition]:
+		if !condition.fullfilled.is_connected(_on_condition_fullfilled):
+			condition.fullfilled.connect(_on_condition_fullfilled)
+
+func _on_condition_fullfilled(condition: Condition):
+	if !fullfilled_conditions_ids.has(condition.id):
+		fullfilled_conditions_ids.append(condition.id)
+	_check_is_unlocked()
+
+func _check_is_unlocked():
+	for _condition in conditions:
+		if !fullfilled_conditions_ids.has(_condition.id):
 			return
 	if locked:
-		self.locked = false
+		locked = false
