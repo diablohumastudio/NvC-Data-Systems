@@ -8,4 +8,5 @@ func _init() -> void:
 func evaluate(action: Action):
 	var payload: Action.PayBuyedAllyLevel = action.payload
 	if ally_level_id == payload.ally_level_id:
+		is_fullfilled = true
 		fullfilled.emit(self)

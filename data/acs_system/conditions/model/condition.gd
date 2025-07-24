@@ -6,6 +6,7 @@ signal fullfilled(cond: Condition)
 @export var id: String
 
 var type: Action.TYPES
+var is_fullfilled: bool = false
 
 @warning_ignore("unused_parameter")
 func evaluate(action: Action):

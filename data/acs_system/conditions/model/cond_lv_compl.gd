@@ -17,4 +17,5 @@ func evaluate(action: Action):
 	
 	var payload: Action.PayLvCompl = action.payload
 	if level_id == payload.level_id:
+		is_fullfilled = true
 		fullfilled.emit(self)
