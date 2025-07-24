@@ -1,26 +1,36 @@
 extends Node
 
-static var current_user_name: String : set = _set_current_user_name
-static var conditions: Array[Condition]
-static var state_changers: Array[StateChanger] = _initialize_state_changers()
+@export var uses_default_user: bool = true
+@export var current_user_name: String = "DefltUser": set = _set_current_user_name
+var conditions: Array[Condition]
+var state_changers: Array[StateChanger] = _initialize_state_changers()
 
-static func _set_current_user_name(user_name: String):
+func _init() -> void:
+	if uses_default_user:
+		conditions = _initialize_conditions()
+		_save_conditions_to_user()
+
+func _set_current_user_name(user_name: String):
+	assert(!user_name.is_empty(), "ACS Singleton should have a name. Parameter pass is empty. Malfunction espected")
 	current_user_name = user_name
 	conditions = _initialize_conditions()
+	_save_conditions_to_user()
 
-static func _initialize_conditions() -> Array[Condition]:
+func _initialize_conditions() -> Array[Condition]:
+	var _conditions: Array[Condition]
 	var user_conditions_path = "user://" + current_user_name + "_conditions/"
 	var user_dir := DirAccess.open(user_conditions_path)
 	if user_dir != null and user_dir.get_files().size() > 0:
-		return _load_conditions_from_user()
+		_conditions = _load_conditions_from_user()
 	else:
-		var _conditions : Array[Condition] = _load_conditions_from_disk()
-		return _conditions
+		_conditions  = _load_conditions_from_disk()
+		
+	return _conditions
 
-static func _initialize_state_changers() -> Array[StateChanger]:
+func _initialize_state_changers() -> Array[StateChanger]:
 	return _load_state_changers_from_disk()
 
-static func _load_conditions_from_disk() -> Array[Condition]:
+func _load_conditions_from_disk() -> Array[Condition]:
 	var conds: Array[Condition]
 	var dir := DirAccess.open(GC.DATA_FOLDERS_PATHS.CONDITIONS)
 	assert(dir != null, "Could not open folder")
@@ -31,7 +41,7 @@ static func _load_conditions_from_disk() -> Array[Condition]:
 		conds.append(cond)
 	return conds
 
-static func _load_conditions_from_user() -> Array[Condition]:
+func _load_conditions_from_user() -> Array[Condition]:
 	var conds: Array[Condition]
 	var user_conditions_path = "user://" + current_user_name + "_conditions/"
 	var dir := DirAccess.open(user_conditions_path)
@@ -43,7 +53,7 @@ static func _load_conditions_from_user() -> Array[Condition]:
 			conds.append(cond)
 	return conds
 
-static func _load_state_changers_from_disk() -> Array[StateChanger]:
+func _load_state_changers_from_disk() -> Array[StateChanger]:
 	var state_changers_array: Array[StateChanger]
 	var dir := DirAccess.open(GC.DATA_FOLDERS_PATHS.STATE_CHANGERS)
 	assert(dir != null, "Could not open folder")
@@ -70,9 +80,7 @@ func _evaluate_conditions(action: Action):
 
 	_save_conditions_to_user()
 
-static func _save_conditions_to_user():
-	if current_user_name.is_empty():
-		return
+func _save_conditions_to_user():
 	var user_conditions_path = "user://" + current_user_name + "_conditions/"
 	# Create directory if it doesn't exist
 	if not DirAccess.dir_exists_absolute(user_conditions_path):
