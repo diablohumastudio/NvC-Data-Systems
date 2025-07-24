@@ -66,25 +66,3 @@ static func get_allies_from_res_file_by_id(id: Ally.IDs) -> Ally:
 	var ally: Ally = load(GC.DATA_FOLDERS_PATHS.RES_ALLIES + file_name + ".tres")
 	assert(ally != null, GC.DATA_FOLDERS_PATHS.RES_ALLIES + file_name + ".tres")
 	return ally
-
-static func load_conditions_from_disk() -> Array[Condition]:
-	var conds: Array[Condition]
-	var dir := DirAccess.open(GC.DATA_FOLDERS_PATHS.CONDITIONS)
-	assert(dir != null, "Could not open folder")
-	dir.list_dir_begin()
-	for file: String in dir.get_files():
-		var cond: Condition = load(dir.get_current_dir() + "/" + file)
-		assert(cond != null, "Failed to load condition: " + file)
-		conds.append(cond)
-	return conds
-
-static func load_state_changers_from_disk() -> Array[StateChanger]:
-	var state_changers: Array[StateChanger]
-	var dir := DirAccess.open(GC.DATA_FOLDERS_PATHS.STATE_CHANGERS)
-	assert(dir != null, "Could not open folder")
-	dir.list_dir_begin()
-	for file: String in dir.get_files():
-		var state_changer: StateChanger = load(dir.get_current_dir() + "/" + file)
-		assert(state_changer != null, "Failed to load state_changer: " + file)
-		state_changers.append(state_changer)
-	return state_changers
