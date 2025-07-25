@@ -30,7 +30,7 @@ func create_new_user(user_credentials: UserCredentials, set_to_current: bool = t
 	var new_user_data: UserData = UserData.new()
 	new_user_data.user_name = user_credentials.user_name
 	new_user_data.progress.ud_levels = _create_new_ud_levels()
-	new_user_data.ud_achievements.ud_achievements = DataFilesLoader.create_ud_achievements_from_res_files()
+	new_user_data.ud_achievements.ud_achievements = _create_new_ud_achievements()
 	new_user_data.allies_inventory.ud_allies = DataFilesLoader.create_ud_allies_from_res_files()
 	
 	save_user_data_to_disk(new_user_data)
@@ -51,6 +51,19 @@ func _create_new_ud_levels() -> Array[UDLevel]:
 		ud_levels.append(new_ud_level)
 
 	return ud_levels
+
+func _create_new_ud_achievements() -> Array[UDAchievement]:
+	var ud_achivements: Array[UDAchievement] = []
+	var achievements: Array[Achievement] = DataFilesLoader.get_achievements_from_res_files()
+	
+	for achievement in achievements:
+		var new_ud_achievement: UDAchievement = UDAchievement.new()
+		new_ud_achievement.id = achievement.id
+		#otros
+		new_ud_achievement.conditions = achievement.conditions
+		ud_achivements.append(new_ud_achievement)
+
+	return ud_achivements
 	
 func set_current_user(user_name: String) -> void:
 	if current_user_data:
