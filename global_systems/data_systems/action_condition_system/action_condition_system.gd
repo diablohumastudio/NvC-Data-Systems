@@ -1,16 +1,26 @@
 extends Node
 
-@export var uses_default_user: bool = true
-@export var current_user_name: String = "DefltUser": set = _set_current_user_name
+enum USES_DEFAULT_USER_FLAGS {UNSET, TRUE, FALSE}
+
+@export var uses_default_user: bool = false : set = _set_uses_default_user
+var current_user_name: String = "DefltUser": set = _set_current_user_name
 var conditions: Array[Condition]
 var state_changers: Array[StateChanger] = _initialize_state_changers()
 
-func _init() -> void:
-	if uses_default_user:
+func get_condition_by_id(id: String) -> Condition:
+	for condition in conditions as Array[Condition]:
+		if condition.id == id:
+			return condition
+	return null
+
+func _set_uses_default_user(new_value: bool):
+	uses_default_user = new_value
+	if uses_default_user == true:
 		conditions = _initialize_conditions()
 		_save_conditions_to_user()
 
 func _set_current_user_name(user_name: String):
+	if uses_default_user == true: return
 	assert(!user_name.is_empty(), "ACS Singleton should have a name. Parameter pass is empty. Malfunction espected")
 	current_user_name = user_name
 	conditions = _initialize_conditions()

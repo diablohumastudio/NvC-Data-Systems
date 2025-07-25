@@ -1,4 +1,3 @@
-@tool
 class_name LevelBtn extends Button
 
 @export var level: Level : set = _set_level
