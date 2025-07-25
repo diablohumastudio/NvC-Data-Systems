@@ -27,7 +27,7 @@ func _set_conditions(new_value: Array[Condition]):
 		if !condition.fullfilled.is_connected(_on_condition_fullfilled):
 			condition.fullfilled.connect(_on_condition_fullfilled)
 
-func _on_condition_fullfilled(condition: Condition):
+func _on_condition_fullfilled(_condition: Condition):
 	_check_is_achieved()
 
 func _check_is_achieved():
