@@ -10,12 +10,9 @@ enum IDs { BAYONETE_SOLDIER, CHEST }
 
 @export var price: int
 
-@export var ud_ally: UDAlly : set = _set_ud_ally
+@export var levels: Array[AllyLevel]
 
 @export var scene: PackedScene
 
-func _set_ud_ally(new_value:UDAlly) -> void:
-	ud_ally = new_value
-	for saved_ud_ally in UDS.current_user_data.allies_inventory.ud_allies:
-		if saved_ud_ally.id == ud_ally.id:
-			ud_ally = saved_ud_ally
+func get_saved_ud_ally() -> UDAlly:
+	return UDS.get_ud_ally_by_id(id)

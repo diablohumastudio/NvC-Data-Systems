@@ -31,13 +31,30 @@ func create_new_user(user_credentials: UserCredentials, set_to_current: bool = t
 	new_user_data.user_name = user_credentials.user_name
 	new_user_data.progress.ud_levels = _create_new_ud_levels()
 	new_user_data.ud_achievements.ud_achievements = _create_new_ud_achievements()
-	new_user_data.allies_inventory.ud_allies = DataFilesLoader.create_ud_allies_from_res_files()
+	new_user_data.allies_inventory.ud_allies = _create_new_ud_allies()
 	
 	save_user_data_to_disk(new_user_data)
 	if set_to_current:
 		set_current_user(new_user_data.user_name)
 
 	return new_user_data
+
+func _create_new_ud_allies() -> Array[UDAlly]:
+	var ud_allies: Array[UDAlly] = []
+	var allies: Array[Ally] = DataFilesLoader.get_allies_from_res_files()
+	
+	for ally in allies: 
+		print(ally)
+		var new_ud_ally: UDAlly = UDAlly.new()
+		new_ud_ally.id = ally.id
+		for level in ally.levels as Array[AllyLevel]:
+			var new_ud_ally_level: UDAllyLevel = UDAllyLevel.new()
+			new_ud_ally_level.id = level.level_id
+			new_ud_ally_level.conditions = level.conditions
+			if level.unlockd_by_default: new_ud_ally_level.unlocked = true
+			new_ud_ally.ud_levels.append(new_ud_ally_level)
+		ud_allies.append(new_ud_ally)
+	return ud_allies
 
 func _create_new_ud_levels() -> Array[UDLevel]:
 	var ud_levels: Array[UDLevel] = []
@@ -136,6 +153,19 @@ func get_ud_achievement_by_id(id: Achievement.IDs) -> UDAchievement:
 	for ud_achivement in current_user_data.ud_achievements.ud_achievements as Array[UDAchievement]:
 		if ud_achivement.id == id:
 			return ud_achivement
+	return null
+
+func get_ud_ally_by_id(id: Ally.IDs):
+	for ud_ally in current_user_data.allies_inventory.ud_allies as Array[UDAlly]:
+		if ud_ally.id == id:
+			return ud_ally
+	return null
+
+func get_ud_ally_level_by_id_in_ally(id: String, ally_id: Ally.IDs) -> UDAllyLevel:
+	var ud_ally: UDAlly = get_ud_ally_by_id(ally_id)
+	for ud_ally_level in ud_ally.levels as Array[UDAllyLevel]:
+		if ud_ally_level.level_id == id:
+			return ud_ally_level
 	return null
 
 func listen_property(property: PROPERTIES, callback: Callable):
