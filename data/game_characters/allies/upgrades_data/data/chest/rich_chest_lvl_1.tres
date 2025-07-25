@@ -1,12 +1,16 @@
-[gd_resource type="Resource" script_class="MoneyPrviderLevel" load_steps=2 format=3 uid="uid://dilrj4gue60m"]
+[gd_resource type="Resource" script_class="MoneyPrviderLevel" load_steps=4 format=3 uid="uid://dilrj4gue60m"]
 
+[ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://data/acs_system/conditions/model/condition.gd" id="1_2nh8c"]
 [ext_resource type="Script" uid="uid://bacha5qb1rbr" path="res://data/game_characters/allies/upgrades_data/model/money_provider_level.gd" id="1_abc123"]
+[ext_resource type="Resource" uid="uid://6ex285c86auh" path="res://data/acs_system/conditions/data/cond_ally_lvl_buyed_chest_base.tres" id="2_tliut"]
 
 [resource]
 script = ExtResource("1_abc123")
 providing_speed = 100
 coin_value = 110
-ally_id = 1
 level_id = "rich_chest_lvl_1"
+ally_id = 1
+unlockd_by_default = false
 price = 120
+conditions = Array[ExtResource("1_2nh8c")]([ExtResource("2_tliut")])
 initial_HP = 100
