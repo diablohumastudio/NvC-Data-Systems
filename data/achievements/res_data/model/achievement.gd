@@ -8,9 +8,7 @@ enum IDs {achiv_compl_lv_2, achiv_compl_lv_2_and_2p, achiv_enem_kill_any_level_3
 @export var description: String
 @export var reward: int
 
-@export var ud_achievement: UDAchievement : set = _set_ud_achievement
+@export var conditions: Array[Condition]
 
-func _set_ud_achievement(new_value:UDAchievement) -> void:
-	ud_achievement = new_value
-	
-	ud_achievement = UDS.get_ud_achievement_by_id(id)
+func get_saved_ud_achievement() -> UDAchievement:
+	return UDS.get_ud_achievement_by_id(id)

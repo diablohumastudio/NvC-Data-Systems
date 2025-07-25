@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="Achievement" load_steps=3 format=3 uid="uid://cmjruid8xhj48"]
+[gd_resource type="Resource" script_class="Achievement" load_steps=4 format=3 uid="uid://cmjruid8xhj48"]
 
 [ext_resource type="Script" uid="uid://b14kgvm7qxpo" path="res://data/achievements/res_data/model/achievement.gd" id="1_hix4a"]
-[ext_resource type="Resource" uid="uid://dgh4ifb3wkaiv" path="res://data/achievements/user_data/data/ud_achiev_enem_any_level_tot_3.tres" id="2_1qqyw"]
+[ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://data/acs_system/conditions/model/condition.gd" id="1_q2nfg"]
+[ext_resource type="Resource" uid="uid://c58oatgjjittc" path="res://data/acs_system/conditions/data/cond_enem_killd_any_level_3.tres" id="2_mcsli"]
 
 [resource]
 script = ExtResource("1_hix4a")
@@ -9,5 +10,5 @@ id = 2
 achievement_name = "killed any level 3"
 description = ""
 reward = 0
-ud_achievement = ExtResource("2_1qqyw")
+conditions = Array[ExtResource("1_q2nfg")]([ExtResource("2_mcsli")])
 metadata/_custom_type_script = "uid://b14kgvm7qxpo"

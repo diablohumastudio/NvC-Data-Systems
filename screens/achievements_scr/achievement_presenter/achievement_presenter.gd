@@ -5,6 +5,6 @@ class_name AchievementPresenter extends HBoxContainer
 func _set_achievement(new_value: Achievement):
 	achievement = new_value
 	%AchievName.text = achievement.achievement_name
-	%AchievFullfilled.text = str(achievement.ud_achievement.is_achieved)
-	if achievement.ud_achievement.is_achieved:
+	%AchievFullfilled.text = str(achievement.get_saved_ud_achievement().is_achieved)
+	if achievement.get_saved_ud_achievement().is_achieved:
 		%AchievFullfilled.modulate = Color.GREEN

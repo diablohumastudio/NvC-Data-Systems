@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="Achievement" load_steps=3 format=3 uid="uid://6nv0ljx2r1xy"]
+[gd_resource type="Resource" script_class="Achievement" load_steps=4 format=3 uid="uid://6nv0ljx2r1xy"]
 
 [ext_resource type="Script" uid="uid://b14kgvm7qxpo" path="res://data/achievements/res_data/model/achievement.gd" id="1_dkm8r"]
-[ext_resource type="Resource" uid="uid://c5cbcsm2vqo86" path="res://data/achievements/user_data/data/ud_achiev_enem_kill_tot_5.tres" id="2_dmjen"]
+[ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://data/acs_system/conditions/model/condition.gd" id="1_wk8ja"]
+[ext_resource type="Resource" uid="uid://c2fdve1l4yaob" path="res://data/acs_system/conditions/data/cond_enem_killd_tot_5.tres" id="2_8vwbp"]
 
 [resource]
 script = ExtResource("1_dkm8r")
@@ -9,5 +10,5 @@ id = 3
 achievement_name = "sdfsdfsf  555"
 description = ""
 reward = 0
-ud_achievement = ExtResource("2_dmjen")
+conditions = Array[ExtResource("1_wk8ja")]([ExtResource("2_8vwbp")])
 metadata/_custom_type_script = "uid://b14kgvm7qxpo"
