@@ -113,6 +113,12 @@ func get_property(property: PROPERTIES):
 		PROPERTIES.ALLIES:
 			return current_user_data.allies_inventory.ud_allies
 
+func get_ud_level_by_id(id: Level.IDs) -> UDLevel:
+	for ud_level in current_user_data.progress.ud_levels as Array[UDLevel]:
+		if ud_level.id == id:
+			return ud_level
+	return null
+
 func listen_property(property: PROPERTIES, callback: Callable):
 		match property:
 			PROPERTIES.ENEMIES_KILLED:
