@@ -34,6 +34,17 @@ static func create_ud_allies_from_res_files() -> Array[UDAlly]:
 		_ud_allies.append(duplic_ud_ally)
 	return _ud_allies
 
+static func get_levels_from_res_files() -> Array[Level]:
+	var levels: Array[Level]
+	var dir := DirAccess.open(GC.DATA_FOLDERS_PATHS.RES_LEVELS)
+	assert(dir != null, "Could not open folder")
+	dir.list_dir_begin()
+	for file: String in dir.get_files():
+		var level: Level = load(dir.get_current_dir() + "/" + file)
+		assert(level != null, "Failed to load achievement: " + file)
+		levels.append(level)
+	return levels
+
 static func get_achievements_from_res_files() -> Array[Achievement]:
 	var achievements: Array[Achievement]
 	var dir := DirAccess.open(GC.DATA_FOLDERS_PATHS.RES_ACHIEVEMENTS)

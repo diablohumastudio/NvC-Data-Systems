@@ -1,11 +1,14 @@
-[gd_resource type="Resource" script_class="Level" load_steps=3 format=3 uid="uid://fnusyqy3rig8"]
+[gd_resource type="Resource" script_class="Level" load_steps=5 format=3 uid="uid://fnusyqy3rig8"]
 
 [ext_resource type="Script" uid="uid://sukboetqeqqg" path="res://data/levels/res_data/model/level.gd" id="1_b2qdb"]
+[ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://data/acs_system/conditions/model/condition.gd" id="1_y6qtq"]
+[ext_resource type="Resource" uid="uid://c0botmc4r3e7t" path="res://data/acs_system/conditions/data/cond_lv_compl_lv_3_ex.tres" id="2_dxxok"]
 [ext_resource type="Resource" uid="uid://h74tkrwf7gq5" path="res://data/levels/user_data/data/ud_lv_ex_2.tres" id="2_kh0dk"]
 
 [resource]
 script = ExtResource("1_b2qdb")
 id = 5
 level_name = "level ex2"
+conditions = Array[ExtResource("1_y6qtq")]([ExtResource("2_dxxok")])
 ud_level = ExtResource("2_kh0dk")
 metadata/_custom_type_script = "uid://sukboetqeqqg"
