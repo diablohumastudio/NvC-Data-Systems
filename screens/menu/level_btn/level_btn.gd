@@ -9,16 +9,16 @@ func _set_level(new_value: Level):
 
 func _change_color_and_text() -> void:
 	self.text = level.level_name
-	if level.ud_level.completed:
+	if level.get_ud_level().completed:
 		disabled = false
 		self_modulate = Color.GREEN
-	elif level.ud_level.locked == false:
+	elif level.get_ud_level().locked == false:
 		disabled = false
 		self_modulate = Color.AQUA
 	else:
 		disabled = true
 		self_modulate = Color.WHITE
-	if level.ud_level.completed_all_canons:
+	if level.get_ud_level().completed_all_canons:
 		%CanonsLbl.self_modulate = Color.RED
 
 func _on_pressed() -> void:
