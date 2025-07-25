@@ -119,6 +119,12 @@ func get_ud_level_by_id(id: Level.IDs) -> UDLevel:
 			return ud_level
 	return null
 
+func get_ud_achievement_by_id(id: Achievement.IDs) -> UDAchievement:
+	for ud_achivement in current_user_data.ud_achievements.ud_achievements as Array[UDAchievement]:
+		if ud_achivement.id == id:
+			return ud_achivement
+	return null
+
 func listen_property(property: PROPERTIES, callback: Callable):
 		match property:
 			PROPERTIES.ENEMIES_KILLED:
