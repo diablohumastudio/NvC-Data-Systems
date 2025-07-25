@@ -12,6 +12,5 @@ enum IDs {achiv_compl_lv_2, achiv_compl_lv_2_and_2p, achiv_enem_kill_any_level_3
 
 func _set_ud_achievement(new_value:UDAchievement) -> void:
 	ud_achievement = new_value
-	for saved_ud_achiev in UDS.current_user_data.ud_achievements.ud_achievements:
-		if saved_ud_achiev.id == ud_achievement.id:
-			ud_achievement = saved_ud_achiev
+	
+	ud_achievement = UDS.get_ud_achievement_by_id(id)
