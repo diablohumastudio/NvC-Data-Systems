@@ -52,6 +52,7 @@ func _create_new_ud_allies() -> Array[UDAlly]:
 			new_ud_ally_level.id = level.level_id
 			new_ud_ally_level.conditions = level.conditions
 			if level.unlockd_by_default: new_ud_ally_level.unlocked = true
+			if level.buyed_by_default: new_ud_ally_level.buyed = true
 			new_ud_ally.ud_levels.append(new_ud_ally_level)
 		ud_allies.append(new_ud_ally)
 	return ud_allies
@@ -163,8 +164,8 @@ func get_ud_ally_by_id(id: Ally.IDs):
 
 func get_ud_ally_level_by_id_in_ally(id: String, ally_id: Ally.IDs) -> UDAllyLevel:
 	var ud_ally: UDAlly = get_ud_ally_by_id(ally_id)
-	for ud_ally_level in ud_ally.levels as Array[UDAllyLevel]:
-		if ud_ally_level.level_id == id:
+	for ud_ally_level in ud_ally.ud_levels as Array[UDAllyLevel]:
+		if ud_ally_level.id == id:
 			return ud_ally_level
 	return null
 

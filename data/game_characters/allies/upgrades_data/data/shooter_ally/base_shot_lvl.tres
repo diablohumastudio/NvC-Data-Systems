@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="ShooterAllyLevel" load_steps=3 format=3 uid="uid://c4a462bjqt7xm"]
 
-[ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://data/acs_system/conditions/model/condition.gd" id="1_0gldm"]
-[ext_resource type="Script" uid="uid://bxsxos5gjpl6h" path="res://data/game_characters/allies/upgrades_data/model/shooter_ally_level.gd" id="1_6ngpo"]
+[ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://data/acs_system/conditions/model/condition.gd" id="1_qogia"]
+[ext_resource type="Script" uid="uid://bxsxos5gjpl6h" path="res://data/game_characters/allies/upgrades_data/model/shooter_ally_level.gd" id="2_n24a0"]
 
 [resource]
-script = ExtResource("1_6ngpo")
+script = ExtResource("2_n24a0")
 shooting_range = 100
 shooting_speed = 100
 shooting_power = 100
@@ -12,6 +12,6 @@ level_id = "base shot"
 ally_id = 0
 unlockd_by_default = true
 price = 100
-conditions = Array[ExtResource("1_0gldm")]([])
+conditions = Array[ExtResource("1_qogia")]([])
 initial_HP = 100
 metadata/_custom_type_script = "uid://bxsxos5gjpl6h"

@@ -7,8 +7,8 @@ func _ready() -> void:
 	if ally: set_visuals()
 	
 func set_visuals():
-	var base_level_id: String = ally.ud_ally.base_level.level_id
-	var is_ally_unlocked: bool = ally.ud_ally.is_level_buyed(base_level_id)
+	var ud_ally: UDAlly = ally.get_saved_ud_ally()
+	var is_ally_unlocked: bool = ally.base_level.get_saved_ud_ally_level().buyed
 
 	%AllyTitle.text = ally.ally_name 
 	%AddAllyBtn.disabled = true if !is_ally_unlocked else false
@@ -21,7 +21,7 @@ func instatiate_sc_ally() -> void:
 	var sc_ally: ScAlly
 	sc_ally = ally.scene.instantiate()
 	sc_ally.ally = ally
-	sc_ally.level = ally.ud_ally.base_level
+	sc_ally.level = ally.base_level
 	sc_ally.position = Vector2(200, 270)
 	%AlliesContainer.add_child(sc_ally)
 	var new_color_rect: ColorRect = ColorRect.new()
