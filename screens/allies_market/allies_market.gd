@@ -21,6 +21,7 @@ func _on_go_back_btn_pressed() -> void:
 func _on_present_unlocked_allies_button_pressed() -> void:
 	var text_to_present: String = ""
 	for ally in allies:
-		for ally_level in ally.ud_ally.unlocked_levels:
-			text_to_present = text_to_present + str(ally.ally_name) + "is_unloked" + "\n"
+		if !ally.get_saved_ud_ally(): continue
+		for ud_ally_level in ally.get_saved_ud_ally().ud_levels:
+			text_to_present = text_to_present + str(ud_ally_level.id) + (" is_unloked" if ud_ally_level.unlocked else " is locked") + "\n"
 	%PresentUnlockedAlliesLabel.text = text_to_present

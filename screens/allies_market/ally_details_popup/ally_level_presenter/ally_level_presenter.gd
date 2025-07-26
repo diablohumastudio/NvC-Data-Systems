@@ -3,16 +3,15 @@ class_name AllyLevelPresenter extends MarginContainer
 signal level_buyed
 
 var ally_level: AllyLevel
-var ally: Ally
 
 func _ready() -> void:
 	if ally_level:
-		ally = DataFilesLoader.get_allies_from_res_file_by_id(ally_level.ally_id)
 		_update_visuals()
 
 func _update_visuals():
-	var is_level_unlocked: bool = ally.ud_ally.is_level_unlocked(ally_level.level_id)
-	var is_level_buyed: bool = ally.ud_ally.is_level_buyed(ally_level.level_id)
+	var ud_ally_level: UDAllyLevel = ally_level.get_saved_ud_ally_level()
+	var is_level_unlocked: bool = ud_ally_level.unlocked
+	var is_level_buyed: bool = ud_ally_level.buyed
 	
 	%AllyLevelName.text = ally_level.level_id
 	%AllyLevelPrice.text = str(ally_level.price)

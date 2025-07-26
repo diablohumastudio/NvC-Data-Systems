@@ -29,5 +29,5 @@ func _check_is_unlocked():
 	for condition in conditions:
 		if !condition.is_fullfilled:
 			return
-	if unlocked:
+	if !unlocked:
 		unlocked = true

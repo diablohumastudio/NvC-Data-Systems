@@ -9,8 +9,8 @@ func _set_ally(new_value: Ally):
 	_set_level_buttons()
 
 func _set_level_buttons():
-	for level in ally.ud_ally.levels_conditions:
-		if !ally.ud_ally.unlocked_levels.has(level.level_id): continue
+	for level in ally.levels:
+		if !level.get_saved_ud_ally_level().unlocked: continue
 
 		var new_upgrade_to_level_btn: Button = Button.new()
 		new_upgrade_to_level_btn.text = "Upgrade to level: " + level.level_id

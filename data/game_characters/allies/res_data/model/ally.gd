@@ -11,6 +11,7 @@ enum IDs { BAYONETE_SOLDIER, CHEST }
 @export var price: int
 
 @export var levels: Array[AllyLevel]
+@export var base_level: AllyLevel
 
 @export var scene: PackedScene
 
