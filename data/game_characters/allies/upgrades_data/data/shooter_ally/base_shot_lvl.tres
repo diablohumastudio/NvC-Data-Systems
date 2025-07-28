@@ -11,6 +11,7 @@ shooting_power = 100
 level_id = "base shot"
 ally_id = 0
 unlockd_by_default = true
+buyed_by_default = false
 price = 100
 conditions = Array[ExtResource("1_qogia")]([])
 initial_HP = 100
