@@ -18,7 +18,6 @@ func initialize_users_data():
 		all_users_credentials = load(_USERS_CREDENTIALS_FILE_PATH)
 		var current_user_cred: UserCredentials = all_users_credentials.credentials[all_users_credentials.current_user_index]
 		current_user_data = load(_USER_FILE_BASE + current_user_cred.user_name + ".tres")
-		ACS.current_user_name = current_user_cred.user_name
 	else:
 		all_users_credentials = AllUsersCredentials.new()
 		var new_user_credentials: UserCredentials = UserCredentials.new()
@@ -44,12 +43,12 @@ func _create_new_ud_allies() -> Array[UDAlly]:
 	var allies: Array[Ally] = DataFilesLoader.get_allies_from_res_files()
 	
 	for ally in allies: 
-		print(ally)
 		var new_ud_ally: UDAlly = UDAlly.new()
 		new_ud_ally.id = ally.id
 		for level in ally.levels as Array[AllyLevel]:
 			var new_ud_ally_level: UDAllyLevel = UDAllyLevel.new()
 			new_ud_ally_level.id = level.level_id
+			new_ud_ally_level.ally_id = level.ally_id
 			new_ud_ally_level.conditions = level.conditions
 			if level.unlockd_by_default: new_ud_ally_level.unlocked = true
 			if level.buyed_by_default: new_ud_ally_level.buyed = true
@@ -88,7 +87,6 @@ func set_current_user(user_name: String) -> void:
 		save_user_data_to_disk()
 	set_all_users_cred_by_name(user_name)
 	current_user_data = get_user_data_by_name(user_name)
-	ACS.current_user_name = user_name
 	current_user_changed.emit()
 	save_user_data_to_disk()
 
