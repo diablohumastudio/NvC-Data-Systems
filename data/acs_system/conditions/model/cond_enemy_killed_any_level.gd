@@ -9,5 +9,4 @@ func evaluate(action: Action):
 	var payload : Action.PayEnemKilled = action.payload
 	var killed_enemied: int = payload.killed_enemies
 	if killed_enemied >= enemies_to_kill:
-		is_fullfilled = true
 		fullfilled.emit(self)
