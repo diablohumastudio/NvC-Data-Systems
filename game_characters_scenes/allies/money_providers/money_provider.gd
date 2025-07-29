@@ -9,7 +9,6 @@ class_name MoneyProvider extends ScAlly
 @onready var _animation_player = $AnimationPlayer
 
 func _ready():
-	super()
 	_start_coin_dropping_process()
 
 func _start_coin_dropping_process():

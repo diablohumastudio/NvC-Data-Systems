@@ -9,7 +9,7 @@ func _set_ally(new_value: Ally):
 
 func _set_visuals() -> void:
 	%AllyName.text = ally.ally_name
-	%AllyThumbnail.texture = ally.thumbnail
+	%AllyThumbnail.texture = ally.base_level.ally_selector_thumbnail
 	display_levels()
 
 func display_levels() -> void:

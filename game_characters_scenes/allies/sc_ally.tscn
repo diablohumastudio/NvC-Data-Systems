@@ -1,32 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://qni5prd46omg"]
+[gd_scene load_steps=2 format=3 uid="uid://cm7j6ucxdy4na"]
 
-[ext_resource type="Script" uid="uid://d4cmrwovv57sg" path="res://game_characters_scenes/allies/sc_ally.gd" id="1_btjlv"]
-[ext_resource type="PackedScene" uid="uid://c0gkj1gflhpbp" path="res://game_characters_scenes/allies/upgrade_popup/upgrade_popup.tscn" id="2_24vgy"]
+[ext_resource type="Script" uid="uid://dbcsemdveveol" path="res://game_characters_scenes/allies/sc_ally.gd" id="1_btjlv"]
 
 [node name="ScAlly" type="CharacterBody2D"]
 script = ExtResource("1_btjlv")
-metadata/_custom_type_script = "uid://c514vn6daipgc"
-
-[node name="AllyNameAndLevelLabel" type="Label" parent="."]
-unique_name_in_owner = true
-offset_right = 40.0
-offset_bottom = 23.0
-theme_override_font_sizes/font_size = 25
-text = "NAME Level 1"
-
-[node name="AllyUpgradeMenu" parent="." instance=ExtResource("2_24vgy")]
-unique_name_in_owner = true
-visible = false
-offset_left = 211.0
-offset_top = 4.0
-offset_right = 211.6
-offset_bottom = 4.47998
-
-[node name="ShowUpgradePopupBtn" type="Button" parent="."]
-modulate = Color(1, 1, 1, 0)
-offset_left = 45.0
-offset_top = 38.0
-offset_right = 153.0
-offset_bottom = 234.0
-
-[connection signal="pressed" from="ShowUpgradePopupBtn" to="." method="_on_show_upgrade_popup_btn_pressed"]

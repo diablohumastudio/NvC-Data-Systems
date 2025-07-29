@@ -1,9 +1,7 @@
-[gd_resource type="Resource" script_class="Ally" load_steps=6 format=3 uid="uid://bxaddilaeyy62"]
+[gd_resource type="Resource" script_class="Ally" load_steps=4 format=3 uid="uid://bxaddilaeyy62"]
 
 [ext_resource type="Script" uid="uid://ccntxav05c4k" path="res://data/game_characters/allies/res_data/model/ally.gd" id="1_i87kw"]
 [ext_resource type="Resource" uid="uid://c4a462bjqt7xm" path="res://data/game_characters/allies/upgrades_data/data/shooter_ally/base_shot_lvl.tres" id="1_m5mv6"]
-[ext_resource type="PackedScene" uid="uid://oyoty7ffa6gl" path="res://game_characters_scenes/allies/shoter_ally/bayonet_soldier/bayonet_soldier.tscn" id="1_xbp7i"]
-[ext_resource type="Texture2D" uid="uid://clqhwebs0bq0b" path="res://data/game_characters/allies/res_data/assets/enemy_thumbnail_bayonet.png" id="2_xyo8g"]
 [ext_resource type="Script" uid="uid://cp8n43lmapx8l" path="res://data/game_characters/allies/upgrades_data/model/ally_level.gd" id="2_y5ttf"]
 
 [resource]
@@ -11,9 +9,7 @@ script = ExtResource("1_i87kw")
 id = 0
 ally_name = "Bayon"
 description = ""
-thumbnail = ExtResource("2_xyo8g")
 price = 300
 levels = Array[ExtResource("2_y5ttf")]([ExtResource("1_m5mv6")])
 base_level = ExtResource("1_m5mv6")
-scene = ExtResource("1_xbp7i")
 metadata/_custom_type_script = "uid://ccntxav05c4k"
