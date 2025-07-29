@@ -29,7 +29,6 @@ func _ready() -> void:
 
 func _on_allies_selector_ally_selected(ally: Ally):
 	selected_ally = ally
-	print(ally)
 
 func _update_kill_enemy_tot_label():
 	%KillEnemyTotalLbl.text = str(UDS.get_property(UDS.PROPERTIES.ENEMIES_KILLED)) + " enemies Killed in Total"
