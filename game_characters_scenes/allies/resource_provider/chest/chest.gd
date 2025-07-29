@@ -1,1 +1,1 @@
-class_name Chest2 extends ResourceProvider
+class_name Chest extends ResourceProvider

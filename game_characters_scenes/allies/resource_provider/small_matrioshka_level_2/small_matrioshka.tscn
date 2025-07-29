@@ -587,7 +587,6 @@ position = Vector2(0, 49)
 
 [node name="Down" type="Sprite2D" parent="Textures"]
 position = Vector2(-1, -28)
-scale = Vector2(1, 1.01833)
 texture = ExtResource("8_o0wg1")
 offset = Vector2(-3, -22)
 region_enabled = true

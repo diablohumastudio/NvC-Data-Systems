@@ -1,1 +1,1 @@
-class_name ChestBase extends Chest2
+class_name ChestBase extends Chest
