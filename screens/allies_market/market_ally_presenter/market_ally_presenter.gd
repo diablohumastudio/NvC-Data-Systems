@@ -10,8 +10,8 @@ func _set_ally(new_value: Ally) -> void:
 	set_visuals()
 
 func set_visuals() -> void:
-	if ally.thumbnail:
-		%AllyThumbnail.texture = ally.thumbnail
+	if ally.base_level.ally_selector_thumbnail:
+		%AllyThumbnail.texture = ally.base_level.ally_selector_thumbnail
 	%AllyName.text = ally.ally_name
 
 func _on_details_btn_pressed() -> void:

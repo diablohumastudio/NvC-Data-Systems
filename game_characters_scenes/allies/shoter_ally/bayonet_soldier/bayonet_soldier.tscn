@@ -1,6 +1,5 @@
-[gd_scene load_steps=45 format=3 uid="uid://oyoty7ffa6gl"]
+[gd_scene load_steps=44 format=3 uid="uid://oyoty7ffa6gl"]
 
-[ext_resource type="PackedScene" uid="uid://qni5prd46omg" path="res://game_characters_scenes/allies/sc_ally.tscn" id="1_0wx6o"]
 [ext_resource type="Script" uid="uid://dnhmh113e864x" path="res://game_characters_scenes/allies/shoter_ally/bayonet_soldier/bayonet_soldier.gd" id="1_m4sxj"]
 [ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/assets/circle_shadow.png" id="2_5ltgp"]
 [ext_resource type="Texture2D" uid="uid://d3m2ymkclsdx7" path="res://game_characters_scenes/assets/hurt_light.png" id="3_sr3fg"]
@@ -1237,109 +1236,92 @@ point_count = 3
 offsets = PackedFloat32Array(0, 0.0783133, 0.379518, 0.572289, 0.76506, 1)
 colors = PackedColorArray(0.874968, 0.604514, 0.563407, 0, 1, 1, 1, 1, 0.851918, 0.618979, 0.924945, 1, 0.954472, 0.794962, 0.466424, 1, 0.73367, 0.921388, 0.913637, 1, 1, 1, 1, 0)
 
-[node name="BayonetSoldier" instance=ExtResource("1_0wx6o")]
+[node name="BayonetSoldier" type="CharacterBody2D"]
 script = ExtResource("1_m4sxj")
+metadata/_custom_type_script = "uid://c514vn6daipgc"
 
-[node name="AllyNameAndLevelLabel" parent="." index="0"]
-offset_left = -51.0
-offset_top = -302.0
-offset_right = 54.0
-offset_bottom = -279.0
-
-[node name="AllyUpgradeMenu" parent="." index="1"]
-offset_left = 110.0
-offset_top = -330.0
-offset_right = 110.6
-offset_bottom = -329.52
-
-[node name="ShowUpgradePopupBtn" parent="." index="2"]
-offset_left = -86.0
-offset_top = -264.0
-offset_right = 123.0
-offset_bottom = 86.0
-
-[node name="Shadow" type="Sprite2D" parent="." index="3"]
+[node name="Shadow" type="Sprite2D" parent="."]
 position = Vector2(-2, 44.798)
 scale = Vector2(1.23684, 1)
 texture = ExtResource("2_5ltgp")
 
-[node name="HurtLight" type="Sprite2D" parent="." index="4"]
+[node name="HurtLight" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(7.5, -303)
 scale = Vector2(0.1, 1)
 texture = ExtResource("3_sr3fg")
 
-[node name="HurtShape" type="Sprite2D" parent="." index="5"]
+[node name="HurtShape" type="Sprite2D" parent="."]
 modulate = Color(1, 0.607843, 0.541176, 0)
 position = Vector2(-10, -101)
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("4_st7co")
 offset = Vector2(18, 0)
 
-[node name="Textures" type="Node2D" parent="." index="6"]
+[node name="Textures" type="Node2D" parent="."]
 position = Vector2(0, -114)
 
-[node name="RightLeg" type="Sprite2D" parent="Textures" index="0"]
+[node name="RightLeg" type="Sprite2D" parent="Textures"]
 position = Vector2(15, 51)
 rotation = 0.191986
 texture = ExtResource("5_3xdkk")
 offset = Vector2(12, 22)
 
-[node name="RightFoot" type="Sprite2D" parent="Textures/RightLeg" index="0"]
+[node name="RightFoot" type="Sprite2D" parent="Textures/RightLeg"]
 position = Vector2(17.676, 36.3821)
 rotation = 0.0523599
 texture = ExtResource("6_i6fdn")
 offset = Vector2(22, 31)
 
-[node name="LeftLeg" type="Sprite2D" parent="Textures" index="1"]
+[node name="LeftLeg" type="Sprite2D" parent="Textures"]
 position = Vector2(-15, 50)
 rotation = -0.0349066
 texture = ExtResource("7_lhhum")
 offset = Vector2(16, 19)
 
-[node name="LeftFoot" type="Sprite2D" parent="Textures/LeftLeg" index="0"]
+[node name="LeftFoot" type="Sprite2D" parent="Textures/LeftLeg"]
 position = Vector2(-15.0692, 43.9639)
 texture = ExtResource("8_6xa0k")
 offset = Vector2(12.919, 34.556)
 
-[node name="Body" type="Sprite2D" parent="Textures" index="2"]
+[node name="Body" type="Sprite2D" parent="Textures"]
 position = Vector2(0, 41)
 rotation = 0.0523599
 texture = ExtResource("9_bodi6")
 offset = Vector2(0, -39)
 
-[node name="RightArm" type="Sprite2D" parent="Textures/Body" index="0"]
+[node name="RightArm" type="Sprite2D" parent="Textures/Body"]
 position = Vector2(32, -72)
 texture = ExtResource("10_t7udl")
 offset = Vector2(-36, 17)
 
-[node name="RightElbow" type="Sprite2D" parent="Textures/Body/RightArm" index="0"]
+[node name="RightElbow" type="Sprite2D" parent="Textures/Body/RightArm"]
 position = Vector2(30, 27)
 texture = ExtResource("11_s561s")
 offset = Vector2(24, 0)
 
-[node name="Hand" type="Sprite2D" parent="Textures/Body/RightArm/RightElbow" index="0"]
+[node name="Hand" type="Sprite2D" parent="Textures/Body/RightArm/RightElbow"]
 position = Vector2(53, -6)
 texture = ExtResource("12_e5w8r")
 offset = Vector2(11, -1)
 
-[node name="Head" type="AnimatedSprite2D" parent="Textures/Body" index="1"]
+[node name="Head" type="AnimatedSprite2D" parent="Textures/Body"]
 position = Vector2(4, -105)
 sprite_frames = SubResource("SpriteFrames_qarns")
 autoplay = "default"
 offset = Vector2(0, -30)
 
-[node name="LeftArm" type="Sprite2D" parent="Textures/Body" index="2"]
+[node name="LeftArm" type="Sprite2D" parent="Textures/Body"]
 position = Vector2(-37, -76)
 texture = ExtResource("15_3cmfr")
 offset = Vector2(94, -23)
 
-[node name="Bayonet" type="Sprite2D" parent="Textures/Body/LeftArm" index="0"]
+[node name="Bayonet" type="Sprite2D" parent="Textures/Body/LeftArm"]
 position = Vector2(27.9306, 38.7131)
 texture = ExtResource("16_hx5my")
 offset = Vector2(79, -1)
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="Textures/Body/LeftArm/Bayonet" index="0"]
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Textures/Body/LeftArm/Bayonet"]
 position = Vector2(199.121, -9.38937)
 rotation = 0.0872667
 emitting = false
@@ -1354,17 +1336,17 @@ initial_velocity_max = 616.76
 scale_amount_curve = SubResource("Curve_svp4w")
 color_ramp = SubResource("Gradient_lw55j")
 
-[node name="Ammo" type="Sprite2D" parent="Textures/Body/LeftArm" index="1"]
+[node name="Ammo" type="Sprite2D" parent="Textures/Body/LeftArm"]
 visible = false
 position = Vector2(47.335, 22.336)
 texture = ExtResource("18_hbifd")
 
-[node name="LeftElbow" type="Sprite2D" parent="Textures/Body/LeftArm" index="2"]
+[node name="LeftElbow" type="Sprite2D" parent="Textures/Body/LeftArm"]
 position = Vector2(-33, 38)
 texture = ExtResource("19_e2p80")
 offset = Vector2(33, -1)
 
-[node name="HurtLight" type="PointLight2D" parent="Textures" index="3"]
+[node name="HurtLight" type="PointLight2D" parent="Textures"]
 visible = false
 position = Vector2(28, -9.01297)
 rotation = -0.0410275
@@ -1373,7 +1355,7 @@ energy = 0.0
 texture = ExtResource("3_sr3fg")
 texture_scale = 1.2
 
-[node name="DustParticles" type="CPUParticles2D" parent="." index="7"]
+[node name="DustParticles" type="CPUParticles2D" parent="."]
 position = Vector2(10, 75)
 emitting = false
 amount = 30
@@ -1394,45 +1376,45 @@ angular_velocity_max = 277.59
 scale_amount_curve = SubResource("Curve_rei55")
 color_ramp = SubResource("Gradient_soqbd")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="8"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_anao4")
 }
 autoplay = "_idle"
 
-[node name="ReceiveDamage" type="AnimationPlayer" parent="." index="9"]
+[node name="ReceiveDamage" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_1vqix")
 }
 
-[node name="BodyCollShape" type="CollisionShape2D" parent="." index="10"]
+[node name="BodyCollShape" type="CollisionShape2D" parent="."]
 position = Vector2(-29.5, -153.5)
 shape = SubResource("RectangleShape2D_hj8i1")
 
-[node name="PhysicalContactCollShape" type="CollisionShape2D" parent="." index="11"]
+[node name="PhysicalContactCollShape" type="CollisionShape2D" parent="."]
 position = Vector2(124.25, -26.5)
 shape = SubResource("RectangleShape2D_hemt8")
 
-[node name="ShootingRange" type="RayCast2D" parent="." index="12"]
+[node name="ShootingRange" type="RayCast2D" parent="."]
 position = Vector2(0, -120)
 target_position = Vector2(1530, 0)
 collision_mask = 0
 
-[node name="ShootingTimer" type="Timer" parent="." index="13"]
+[node name="ShootingTimer" type="Timer" parent="."]
 one_shot = true
 autostart = true
 
-[node name="SpawnLight" type="Sprite2D" parent="." index="14"]
+[node name="SpawnLight" type="Sprite2D" parent="."]
 visible = false
 modulate = Color(0.564706, 0.901961, 0.54902, 0)
 position = Vector2(0, 54)
 scale = Vector2(2, 2)
 texture = ExtResource("23_iqhdq")
 
-[node name="BloodParticles" parent="." index="15" instance=ExtResource("24_ohgtb")]
+[node name="BloodParticles" parent="." instance=ExtResource("24_ohgtb")]
 position = Vector2(17, -125)
 
-[node name="SpawnParticles" type="CPUParticles2D" parent="." index="16"]
+[node name="SpawnParticles" type="CPUParticles2D" parent="."]
 position = Vector2(4, 71)
 emitting = false
 amount = 20
@@ -1452,3 +1434,12 @@ linear_accel_min = 31.78
 linear_accel_max = 31.78
 scale_amount_curve = SubResource("Curve_fgw1i")
 color_ramp = SubResource("Gradient_kpjug")
+
+[node name="ShowUpgradePopupBtn" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = -86.0
+offset_top = -264.0
+offset_right = 123.0
+offset_bottom = 86.0
+
+[connection signal="pressed" from="ShowUpgradePopupBtn" to="." method="_on_show_upgrade_popup_btn_pressed"]

@@ -5,7 +5,11 @@ class_name AllyLevel extends GameCharacterLevel
 
 @export var unlockd_by_default: bool = false
 @export var buyed_by_default: bool = false
+
 @export var price: int
+@export var ally_selector_thumbnail: Texture2D
+
+@export var scene: PackedScene
 
 @export var conditions: Array[Condition]
 
