@@ -561,6 +561,8 @@ colors = PackedColorArray(0.874968, 0.604514, 0.563407, 0, 1, 1, 1, 1, 0.851918,
 [node name="SmallMatrioshka" type="CharacterBody2D"]
 script = ExtResource("1_x5in0")
 coin_value = 15
+minimum_value = 1
+maximum_value = 2
 
 [node name="Shadow" type="Sprite2D" parent="."]
 position = Vector2(-2, 29)
