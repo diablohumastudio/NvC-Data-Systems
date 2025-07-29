@@ -13,6 +13,9 @@ var is_falling : bool
 
 func _set_timer_wait_time(new_value:float):
 	timer_wait_time = new_value
+	pass
+	
+func _ready() -> void:
 	timer.wait_time = timer_wait_time
 	timer.start()
 
