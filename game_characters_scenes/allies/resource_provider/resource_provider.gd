@@ -9,7 +9,7 @@ func _ready() -> void:
 	state_machine = %ResourceProviderStateMachine
 
 # This function here so it can be called by StateAnimationPlayer call_method track interface
-func _spawn_coin():
+func _spawn_coin_call_from_animation():
 	state_machine.giving_coin_state._spawn_coin()
 
 func receive_damage():
