@@ -110,4 +110,21 @@ enum PROPERTIES {USERS_CREDENTIALS, USER_NAME, UD_LEVELS, ACHIEVEMENTS, ENEMIES_
 - **Always verify enum values** by reading the actual class files before writing tests
 - **Use Grep to search** for enum definitions when in doubt
 - **Check existing .tres files** to see what values are actually used in practice
-- **Never assume naming patterns** - always check the source code 
+- **Never assume naming patterns** - always check the source code
+
+## GDScript Syntax Rules
+- **Node References**: `%UniqueNodeName` and `$ChildNode` work only on `self`
+- **NEVER use**: `other_object.%UniqueNodeName` or `other_object.$ChildNode` 
+- **Instead use**: `other_object.get_node("%UniqueNodeName")` or `other_object.get_node("$ChildNode")`
+- **Example Error**: `resource_provider.%StateAnimationPlayer.play("_idle")` ❌
+- **Correct Usage**: `resource_provider.get_node("%StateAnimationPlayer").play("_idle")` ✅
+
+## Resource Provider State Machine Implementation
+- **Location**: `game_characters_scenes/allies/resource_provider/states/`
+- **Pattern**: State Pattern with RefCounted base class
+- **States**: IDLE, SPAWN, GIVING_COIN, DEAD
+- **Damage Handling**: External to main state flow using `can_receive_damage()` check
+- **Key Classes**:
+  - `ResourceProviderState` - Base state class (RefCounted)
+  - `ResourceProviderStateMachine` - State controller (Node)
+  - Individual state classes for each behavior 
