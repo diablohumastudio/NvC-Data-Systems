@@ -7,7 +7,6 @@ class_name ResourceProvider extends ScAlly
 
 func _ready() -> void:
 	state_machine = %ResourceProviderStateMachine
-	print(state_machine)
 
 func _spawn_coin():
 	state_machine._spawn_coin()
