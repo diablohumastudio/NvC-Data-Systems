@@ -10,7 +10,7 @@ func _ready() -> void:
 
 # This function here so it can be called by StateAnimationPlayer call_method track interface
 func _spawn_coin():
-	state_machine.spawn_state._spawn_coin()
+	state_machine.giving_coin_state._spawn_coin()
 
 func receive_damage():
 	state_machine.handle_damage()
