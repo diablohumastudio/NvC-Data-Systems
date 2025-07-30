@@ -579,6 +579,7 @@ resource_value = 25
 seconds_per_coin = 4.0
 
 [node name="ResourceProviderStateMachine" type="Node" parent="."]
+unique_name_in_owner = true
 script = ExtResource("2_3dcpm")
 metadata/_custom_type_script = "uid://bpfbritys5raj"
 
