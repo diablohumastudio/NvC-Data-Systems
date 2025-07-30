@@ -30,14 +30,10 @@ func transition_to(new_state: ResourceProviderState):
 	#if current_state:
 		#current_state.update(delta)
 
-func handle_animation_finished(animation_name: String):
-	if current_state:
-		current_state.handle_animation_finished(animation_name)
-
 func handle_damage():
 	if current_state and current_state.can_receive_damage():
-		if resource_provider.has_node("%ReceiveDamage"):
-			resource_provider.get_node("%ReceiveDamage").play("_receive_damage_general")
+		if resource_provider.has_node("%ReceiveDamageAnimationPlayer"):
+			resource_provider.get_node("%ReceiveDamageAnimationPlayer").play("_receive_damage_general")
 
 func handle_death():
 	transition_to(dead_state)
