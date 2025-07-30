@@ -621,7 +621,6 @@ unique_name_in_owner = true
 libraries = {
 &"": SubResource("AnimationLibrary_k03oj")
 }
-autoplay = "_idle"
 
 [node name="ReceiveDamage" type="AnimationPlayer" parent="."]
 libraries = {

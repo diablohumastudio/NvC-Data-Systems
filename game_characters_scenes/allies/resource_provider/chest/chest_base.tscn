@@ -151,12 +151,6 @@ colors = PackedColorArray(0.874968, 0.604514, 0.563407, 0, 1, 1, 1, 1, 0.851918,
 resource_value = 50
 seconds_per_coin = 3.0
 
-[node name="StateAnimationPlayer" parent="." index="1"]
-libraries = {
-&"": ExtResource("2_1rfhi")
-}
-autoplay = "_giving_coin"
-
 [node name="Shadow" type="Sprite2D" parent="." index="2"]
 position = Vector2(-2, 22)
 scale = Vector2(1.23684, 1)
@@ -256,3 +250,8 @@ linear_accel_min = 31.78
 linear_accel_max = 31.78
 scale_amount_curve = SubResource("Curve_msemh")
 color_ramp = SubResource("Gradient_2ssfk")
+
+[node name="StateAnimationPlayer" parent="." index="10"]
+libraries = {
+&"": ExtResource("2_1rfhi")
+}
