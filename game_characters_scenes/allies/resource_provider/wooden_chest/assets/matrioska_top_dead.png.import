@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4bjx3ppg7n1b"
-path="res://.godot/imported/wooden_chest_selected_control_focused.png-709a2a4e1a281d4589ea7cf378d902d4.ctex"
+uid="uid://bmk4clgngclvp"
+path="res://.godot/imported/matrioska_top_dead.png-7b4c7e1b7b220076a427c080691d0ca0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game_characters_scenes/allies/resource_provider/small_matrioshka_level_2/ally_card_assets/wooden_chest_selected_control_focused.png"
-dest_files=["res://.godot/imported/wooden_chest_selected_control_focused.png-709a2a4e1a281d4589ea7cf378d902d4.ctex"]
+source_file="res://game_characters_scenes/allies/resource_provider/wooden_chest/assets/matrioska_top_dead.png"
+dest_files=["res://.godot/imported/matrioska_top_dead.png-7b4c7e1b7b220076a427c080691d0ca0.ctex"]
 
 [params]
 

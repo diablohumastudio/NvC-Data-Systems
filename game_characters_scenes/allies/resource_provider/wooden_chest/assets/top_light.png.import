@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yt8qgc6afwva"
-path="res://.godot/imported/small_bottom.png-253a655c35997df56da20034e26bbbb7.ctex"
+uid="uid://dmko6fel4hoaq"
+path="res://.godot/imported/top_light.png-e3e7aa415dea943b980cb01762afd25b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game_characters_scenes/allies/resource_provider/small_matrioshka_level_2/assets/small_bottom.png"
-dest_files=["res://.godot/imported/small_bottom.png-253a655c35997df56da20034e26bbbb7.ctex"]
+source_file="res://game_characters_scenes/allies/resource_provider/wooden_chest/assets/top_light.png"
+dest_files=["res://.godot/imported/top_light.png-e3e7aa415dea943b980cb01762afd25b.ctex"]
 
 [params]
 

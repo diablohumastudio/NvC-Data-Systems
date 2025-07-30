@@ -1,12 +1,12 @@
 [gd_scene load_steps=24 format=3 uid="uid://co3biarax0yt4"]
 
-[ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/assets/circle_shadow.png" id="1_h2rfk"]
-[ext_resource type="Script" uid="uid://bmo7fhcewalo2" path="res://game_characters_scenes/allies/resource_provider/small_matrioshka_level_2/small_matrioshka.gd" id="1_x5in0"]
-[ext_resource type="Script" uid="uid://bpfbritys5raj" path="res://game_characters_scenes/allies/resource_provider/states/resource_provider_state_machine.gd" id="2_3dcpm"]
-[ext_resource type="Texture2D" uid="uid://blnwb63jln06g" path="res://game_characters_scenes/allies/resource_provider/small_matrioshka_level_2/assets/level_2.png" id="8_o0wg1"]
-[ext_resource type="Texture2D" uid="uid://5xg73u1xoy12" path="res://game_characters_scenes/assets/circle_particle.png" id="12_lenyl"]
-[ext_resource type="Texture2D" uid="uid://jdulueb7gowt" path="res://game_characters_scenes/assets/dust_particle.png" id="17_asqfv"]
-[ext_resource type="Texture2D" uid="uid://q5ifosgjvma5" path="res://game_characters_scenes/assets/gun_light.png" id="20_kyjuw"]
+[ext_resource type="Script" uid="uid://bmo7fhcewalo2" path="res://game_characters_scenes/allies/resource_provider/wooden_chest/wooden_chest.gd" id="1_ah1ba"]
+[ext_resource type="Script" uid="uid://bpfbritys5raj" path="res://game_characters_scenes/allies/resource_provider/states/resource_provider_state_machine.gd" id="2_p5bas"]
+[ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/assets/circle_shadow.png" id="3_pspge"]
+[ext_resource type="Texture2D" uid="uid://blnwb63jln06g" path="res://game_characters_scenes/allies/resource_provider/wooden_chest/assets/level_2.png" id="4_fq48q"]
+[ext_resource type="Texture2D" uid="uid://5xg73u1xoy12" path="res://game_characters_scenes/assets/circle_particle.png" id="5_b4i84"]
+[ext_resource type="Texture2D" uid="uid://jdulueb7gowt" path="res://game_characters_scenes/assets/dust_particle.png" id="6_hl5cj"]
+[ext_resource type="Texture2D" uid="uid://q5ifosgjvma5" path="res://game_characters_scenes/assets/gun_light.png" id="7_uu5hv"]
 
 [sub_resource type="Curve" id="Curve_m2yvq"]
 _limits = [0.0, 0.3, 0.0, 1.0]
@@ -573,21 +573,21 @@ point_count = 3
 offsets = PackedFloat32Array(0, 0.0783133, 0.379518, 0.572289, 0.76506, 1)
 colors = PackedColorArray(0.874968, 0.604514, 0.563407, 0, 1, 1, 1, 1, 0.851918, 0.618979, 0.924945, 1, 0.954472, 0.794962, 0.466424, 1, 0.73367, 0.921388, 0.913637, 1, 1, 1, 1, 0)
 
-[node name="SmallMatrioshka" type="CharacterBody2D"]
-script = ExtResource("1_x5in0")
+[node name="WoodenChest" type="CharacterBody2D"]
+script = ExtResource("1_ah1ba")
 resource_value = 25
 seconds_per_coin = 4.0
 
 [node name="ResourceProviderStateMachine" type="Node" parent="."]
 unique_name_in_owner = true
-script = ExtResource("2_3dcpm")
+script = ExtResource("2_p5bas")
 metadata/_custom_type_script = "uid://bpfbritys5raj"
 
 [node name="Shadow" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(-2, 29)
 scale = Vector2(1e-05, 1e-05)
-texture = ExtResource("1_h2rfk")
+texture = ExtResource("3_pspge")
 
 [node name="Textures" type="Node2D" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -596,14 +596,14 @@ position = Vector2(0, -178)
 [node name="Down" type="Sprite2D" parent="Textures"]
 position = Vector2(-1, -28)
 scale = Vector2(1, 1.01756)
-texture = ExtResource("8_o0wg1")
+texture = ExtResource("4_fq48q")
 offset = Vector2(-3, -22)
 region_enabled = true
 region_rect = Rect2(4.22964, 34.0001, 168.704, 147.491)
 
 [node name="Top" type="Sprite2D" parent="Textures/Down"]
 position = Vector2(-82, -77.6513)
-texture = ExtResource("8_o0wg1")
+texture = ExtResource("4_fq48q")
 offset = Vector2(65, -9.75052)
 region_enabled = true
 region_rect = Rect2(187.145, 2.94247, 193.427, 165.271)
@@ -611,7 +611,7 @@ region_rect = Rect2(187.145, 2.94247, 193.427, 165.271)
 [node name="CPUParticles2D" type="CPUParticles2D" parent="Textures/Down"]
 position = Vector2(-5, -33.3601)
 amount = 40
-texture = ExtResource("12_lenyl")
+texture = ExtResource("5_b4i84")
 emission_shape = 3
 emission_rect_extents = Vector2(40, 1)
 direction = Vector2(0, -1)
@@ -652,7 +652,7 @@ libraries = {
 position = Vector2(10, 75)
 emitting = false
 amount = 20
-texture = ExtResource("17_asqfv")
+texture = ExtResource("6_hl5cj")
 lifetime = 0.8
 one_shot = true
 speed_scale = 1.2
@@ -674,7 +674,7 @@ visible = false
 position = Vector2(0, 27.25)
 color = Color(0.392157, 0.627451, 0.4, 1)
 energy = 0.0
-texture = ExtResource("20_kyjuw")
+texture = ExtResource("7_uu5hv")
 texture_scale = 0.5
 
 [node name="SpawnParticles" type="CPUParticles2D" parent="."]
@@ -697,5 +697,3 @@ linear_accel_min = 31.78
 linear_accel_max = 31.78
 scale_amount_curve = SubResource("Curve_ia0ev")
 color_ramp = SubResource("Gradient_e7pea")
-
-[connection signal="timeout" from="CoinDropTimer" to="." method="_on_timer_timeout"]

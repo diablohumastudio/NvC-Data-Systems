@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ds5et50q0rqta"
-path="res://.godot/imported/matrioska_blink_2.png-e010f8d3d4412b06608711061c25388e.ctex"
+uid="uid://baa6ksp1dtmsu"
+path="res://.godot/imported/small_matrioshka.png-29f472260bcb776f9dfd910bbd0d8b03.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game_characters_scenes/allies/resource_provider/small_matrioshka_level_2/assets/matrioska_blink_2.png"
-dest_files=["res://.godot/imported/matrioska_blink_2.png-e010f8d3d4412b06608711061c25388e.ctex"]
+source_file="res://game_characters_scenes/allies/resource_provider/wooden_chest/ally_card_assets/small_matrioshka.png"
+dest_files=["res://.godot/imported/small_matrioshka.png-29f472260bcb776f9dfd910bbd0d8b03.ctex"]
 
 [params]
 

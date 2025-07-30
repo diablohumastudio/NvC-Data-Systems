@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmko6fel4hoaq"
-path="res://.godot/imported/top_light.png-058be9b12e8b85eeb79aae688cd13740.ctex"
+uid="uid://otfy6kdsgjvf"
+path="res://.godot/imported/matrioska_light_top.png-e300b1679bce5cd35265b21b062ca4fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game_characters_scenes/allies/resource_provider/small_matrioshka_level_2/assets/top_light.png"
-dest_files=["res://.godot/imported/top_light.png-058be9b12e8b85eeb79aae688cd13740.ctex"]
+source_file="res://game_characters_scenes/allies/resource_provider/wooden_chest/assets/matrioska_light_top.png"
+dest_files=["res://.godot/imported/matrioska_light_top.png-e300b1679bce5cd35265b21b062ca4fe.ctex"]
 
 [params]
 

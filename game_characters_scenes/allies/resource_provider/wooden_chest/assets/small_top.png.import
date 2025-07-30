@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmk4clgngclvp"
-path="res://.godot/imported/matrioska_top_dead.png-4a63ed0902eee02f5a2921799f5637cf.ctex"
+uid="uid://dn237o7345anu"
+path="res://.godot/imported/small_top.png-8bb2932f50c8f92b9fa0da7b1f782c73.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game_characters_scenes/allies/resource_provider/small_matrioshka_level_2/assets/matrioska_top_dead.png"
-dest_files=["res://.godot/imported/matrioska_top_dead.png-4a63ed0902eee02f5a2921799f5637cf.ctex"]
+source_file="res://game_characters_scenes/allies/resource_provider/wooden_chest/assets/small_top.png"
+dest_files=["res://.godot/imported/small_top.png-8bb2932f50c8f92b9fa0da7b1f782c73.ctex"]
 
 [params]
 
