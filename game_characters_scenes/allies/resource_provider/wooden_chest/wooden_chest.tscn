@@ -309,7 +309,7 @@ tracks/7/keys = {
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
-"method": &"_spawn_coin"
+"method": &"_spawn_coin_call_from_animation"
 }]
 }
 

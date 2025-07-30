@@ -31,30 +31,32 @@ func transition_to(new_state: ResourceProviderState):
 		#current_state.update(delta)
 
 func handle_damage():
-	if current_state and current_state.can_receive_damage():
-		if resource_provider.has_node("%ReceiveDamageAnimationPlayer"):
-			resource_provider.get_node("%ReceiveDamageAnimationPlayer").play("_receive_damage_general")
+	if current_state:
+		current_state.handle_damage()
 
 func handle_death():
-	transition_to(dead_state)
-
-func is_busy() -> bool:
-	return current_state == giving_coin_state or current_state == spawn_state or current_state == dead_state
+	if current_state:
+		current_state.handle_death()
 
 #endregion
+
+
+
+
 
 #region BaseState Inner Class
 class ResourceProviderState extends RefCounted:
 	var name: String
 	var resource_provider: ResourceProvider
 	var state_machine: ResourceProviderStateMachine
+	var state_animation_player: AnimationPlayer 
 
 	func _init(provider: ResourceProvider, machine: ResourceProviderStateMachine):
 		resource_provider = provider
 		state_machine = machine
+		state_animation_player = resource_provider.get_node("%StateAnimationPlayer")
 
 	func enter():
-		print(name)
 		pass
 
 	func exit():  
@@ -63,40 +65,55 @@ class ResourceProviderState extends RefCounted:
 	func update(_delta: float):
 		pass
 
-	func handle_coin_timer_timeout():
-		pass
+	func handle_death():
+		state_machine.transition_to(state_machine.dead_state)
 
-	func handle_animation_finished(_animation_name: String):
-		pass
+	func handle_damage():
+		if can_receive_damage():
+			if resource_provider.has_node("%ReceiveDamageAnimationPlayer"):
+				resource_provider.get_node("%ReceiveDamageAnimationPlayer").play("_receive_damage_general")
 
 	func can_receive_damage() -> bool:
 		return true
 
+
+
+
+
+
 class IdleState extends ResourceProviderState:
+	var coin_drop_timer: Timer
+	
 	func _init(provider: ResourceProvider, machine: ResourceProviderStateMachine):
 		super(provider, machine)
 		name = "IdleState"
+		coin_drop_timer = resource_provider.get_node("%CoinDropTimer")
+
 	func enter():
 		super()
-		resource_provider.get_node("%CoinDropTimer").timeout.connect(handle_coin_timer_timeout)
-		resource_provider.get_node("%StateAnimationPlayer").play("_idle")
+		coin_drop_timer.timeout.connect(_on_coin_drop_timer_timeout)
+		state_animation_player.play("_idle")
 		# Start timer with new wait time
-		resource_provider.get_node("%CoinDropTimer").wait_time = _get_coin_drop_wait_time()
-		resource_provider.get_node("%CoinDropTimer").start()
+		coin_drop_timer.wait_time = _get_coin_drop_wait_time()
+		coin_drop_timer.start()
 
 	func exit():
 		# Stop timer when leaving idle state
-		resource_provider.get_node("%CoinDropTimer").timeout.disconnect(handle_coin_timer_timeout)
-		resource_provider.get_node("%CoinDropTimer").stop()
+		coin_drop_timer.timeout.disconnect(_on_coin_drop_timer_timeout)
+		coin_drop_timer.stop()
 
-	func handle_coin_timer_timeout():
+	func _on_coin_drop_timer_timeout():
 		state_machine.transition_to(state_machine.giving_coin_state)
-	
+
 	func _get_coin_drop_wait_time() -> float:
 		var random_number_generator := RandomNumberGenerator.new()
 		var random_int : float = float (random_number_generator.randi_range(-5, 5)) / 10
 		var wait_time: float = resource_provider.seconds_per_coin + random_int
 		return wait_time
+
+
+
+
 
 #endregion
 
@@ -107,13 +124,13 @@ class DeadState extends ResourceProviderState:
 		name = "DeadState"
 	func enter():
 		super()
-		(resource_provider.get_node("%StateAnimationPlayer") as AnimationPlayer).animation_finished.connect(handle_animation_finished)
+		state_animation_player.animation_finished.connect(_on_state_animation_player_animation_finished)
 		if resource_provider.get_node("%StateAnimationPlayer").has_animation("_death"):
 			resource_provider.get_node("%StateAnimationPlayer").play("_death")
 		else:
 			resource_provider.queue_free()
 
-	func handle_animation_finished(animation_name: String):
+	func _on_state_animation_player_animation_finished(animation_name: String):
 		if animation_name == "_death":
 			resource_provider.queue_free()
 
@@ -121,7 +138,7 @@ class DeadState extends ResourceProviderState:
 		return false
 	
 	func exit():
-		(resource_provider.get_node("%StateAnimationPlayer") as AnimationPlayer).animation_finished.disconnect(handle_animation_finished)
+		state_animation_player.animation_finished.disconnect(_on_state_animation_player_animation_finished)
 #endregion
 
 #region GivingCoinState Inner CLass
@@ -131,13 +148,13 @@ class SpawnState extends ResourceProviderState:
 		name = "SpawnState"
 	func enter():
 		super()
-		(resource_provider.get_node("%StateAnimationPlayer") as AnimationPlayer).animation_finished.connect(handle_animation_finished)
+		state_animation_player.animation_finished.connect(_on_state_animation_player_animation_finished)
 		if resource_provider.get_node("%StateAnimationPlayer").has_animation("spawn"):
 			resource_provider.get_node("%StateAnimationPlayer").play("spawn")
 		else:
 			state_machine.transition_to(state_machine.idle_state)
 
-	func handle_animation_finished(animation_name: String):
+	func _on_state_animation_player_animation_finished(animation_name: String):
 		if animation_name == "spawn":
 			state_machine.transition_to(state_machine.idle_state)
 
@@ -145,7 +162,7 @@ class SpawnState extends ResourceProviderState:
 		return false
 
 	func exit():
-		(resource_provider.get_node("%StateAnimationPlayer") as AnimationPlayer).animation_finished.disconnect(handle_animation_finished)
+		state_animation_player.animation_finished.disconnect(_on_state_animation_player_animation_finished)
 #endregion
 
 #region GivingCoinState Inner CLass
@@ -158,15 +175,15 @@ class GivingCoinState extends ResourceProviderState:
 		name = "GivingCoinState"
 	func enter():
 		super()
-		(resource_provider.get_node("%StateAnimationPlayer") as AnimationPlayer).animation_changed.connect(handle_animation_changed)
+		state_animation_player.animation_changed.connect(_on_state_animation_player_animation_changed)
 		resource_provider.get_node("%StateAnimationPlayer").play("_giving_coin")
 		resource_provider.get_node("%StateAnimationPlayer").queue("_idle")
 
-	func handle_animation_changed(old_animation_name: String, _new_animation_name: String):
+	func _on_state_animation_player_animation_changed(old_animation_name: String, _new_animation_name: String):
 		if old_animation_name == "_giving_coin":
 			state_machine.transition_to(state_machine.idle_state)
 
-	func _spawn_coin():
+	func spawn_coin():
 		var spawned_coin : RubleCoin
 		spawned_coin = coin_pksc.instantiate() as RubleCoin
 		spawned_coin.timer_wait_time = 2.0 if resource_provider.seconds_per_coin > 4 else 1.0
@@ -174,5 +191,5 @@ class GivingCoinState extends ResourceProviderState:
 		resource_provider.add_child(spawned_coin)
 	
 	func exit():
-		(resource_provider.get_node("%StateAnimationPlayer") as AnimationPlayer).animation_changed.disconnect(handle_animation_changed)
+		state_animation_player.animation_changed.disconnect(_on_state_animation_player_animation_changed)
 #endregion
