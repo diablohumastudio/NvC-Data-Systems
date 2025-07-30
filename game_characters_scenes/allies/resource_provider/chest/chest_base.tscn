@@ -67,6 +67,29 @@ point_count = 3
 offsets = PackedFloat32Array(0, 0.204013, 0.712375, 1)
 colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 0.94902, 0.980392, 0.87451, 1, 0.853713, 0.289824, 3.17663e-05, 0)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wtsvu"]
+size = Vector2(47, 213)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6pwvn"]
+size = Vector2(30, 65)
+
+[sub_resource type="Curve" id="Curve_rvmm0"]
+_data = [Vector2(0, 0.147368), 0.0, 0.0, 0, 0, Vector2(0.368132, 0.694737), 0.0, 0.0, 0, 0, Vector2(0.983517, 0.115789), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_6ir51"]
+offsets = PackedFloat32Array(0, 0.245033, 1)
+colors = PackedColorArray(0.351563, 0.351563, 0.351563, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="Curve" id="Curve_msemh"]
+_limits = [0.0, 0.1, 0.0, 1.0]
+_data = [Vector2(0, 0.0175824), 0.0, 0.0, 0, 0, Vector2(0.505155, 0.1), 0.0163989, 0.0163989, 0, 0, Vector2(1, 0.00549448), -0.368232, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_2ssfk"]
+offsets = PackedFloat32Array(0, 0.0783133, 0.379518, 0.572289, 0.76506, 1)
+colors = PackedColorArray(0.874968, 0.604514, 0.563407, 0, 1, 1, 1, 1, 0.851918, 0.618979, 0.924945, 1, 0.954472, 0.794962, 0.466424, 1, 0.73367, 0.921388, 0.913637, 1, 1, 1, 1, 0)
+
 [sub_resource type="Animation" id="Animation_v0qi3"]
 resource_name = "_receive_damage_general"
 length = 0.7
@@ -119,33 +142,10 @@ tracks/3/keys = {
 "values": [0.0, -0.0872665, 0.0]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_fcsnw"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sv8jr"]
 _data = {
 &"_receive_damage_general": SubResource("Animation_v0qi3")
 }
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wtsvu"]
-size = Vector2(47, 213)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6pwvn"]
-size = Vector2(30, 65)
-
-[sub_resource type="Curve" id="Curve_rvmm0"]
-_data = [Vector2(0, 0.147368), 0.0, 0.0, 0, 0, Vector2(0.368132, 0.694737), 0.0, 0.0, 0, 0, Vector2(0.983517, 0.115789), 0.0, 0.0, 0, 0]
-point_count = 3
-
-[sub_resource type="Gradient" id="Gradient_6ir51"]
-offsets = PackedFloat32Array(0, 0.245033, 1)
-colors = PackedColorArray(0.351563, 0.351563, 0.351563, 1, 1, 1, 1, 1, 1, 1, 1, 0)
-
-[sub_resource type="Curve" id="Curve_msemh"]
-_limits = [0.0, 0.1, 0.0, 1.0]
-_data = [Vector2(0, 0.0175824), 0.0, 0.0, 0, 0, Vector2(0.505155, 0.1), 0.0163989, 0.0163989, 0, 0, Vector2(1, 0.00549448), -0.368232, 0.0, 0, 0]
-point_count = 3
-
-[sub_resource type="Gradient" id="Gradient_2ssfk"]
-offsets = PackedFloat32Array(0, 0.0783133, 0.379518, 0.572289, 0.76506, 1)
-colors = PackedColorArray(0.874968, 0.604514, 0.563407, 0, 1, 1, 1, 1, 0.851918, 0.618979, 0.924945, 1, 0.954472, 0.794962, 0.466424, 1, 0.73367, 0.921388, 0.913637, 1, 1, 1, 1, 0)
 
 [node name="ChestBase" instance=ExtResource("1_1f4m3")]
 resource_value = 50
@@ -186,22 +186,17 @@ linear_accel_max = -80.52
 scale_amount_curve = SubResource("Curve_q5asp")
 color_ramp = SubResource("Gradient_j7xbj")
 
-[node name="ReceiveDamage" type="AnimationPlayer" parent="." index="4"]
-libraries = {
-&"": SubResource("AnimationLibrary_fcsnw")
-}
-
-[node name="BodyCollShape" type="CollisionShape2D" parent="." index="5"]
+[node name="BodyCollShape" type="CollisionShape2D" parent="." index="4"]
 visible = false
 position = Vector2(-34, -71.5)
 shape = SubResource("RectangleShape2D_wtsvu")
 
-[node name="PhysicalContactCollShape" type="CollisionShape2D" parent="." index="6"]
+[node name="PhysicalContactCollShape" type="CollisionShape2D" parent="." index="5"]
 visible = false
 position = Vector2(59, -32.5)
 shape = SubResource("RectangleShape2D_6pwvn")
 
-[node name="DustParticles" type="CPUParticles2D" parent="." index="7"]
+[node name="DustParticles" type="CPUParticles2D" parent="." index="6"]
 position = Vector2(5, 45)
 emitting = false
 amount = 20
@@ -222,7 +217,7 @@ angular_velocity_max = 277.59
 scale_amount_curve = SubResource("Curve_rvmm0")
 color_ramp = SubResource("Gradient_6ir51")
 
-[node name="SpawnLight" type="PointLight2D" parent="." index="8"]
+[node name="SpawnLight" type="PointLight2D" parent="." index="7"]
 visible = false
 position = Vector2(0, 27.25)
 color = Color(0.392157, 0.627451, 0.4, 1)
@@ -230,7 +225,7 @@ energy = 0.0
 texture = ExtResource("10_6ir51")
 texture_scale = 1.3
 
-[node name="SpawnParticles" type="CPUParticles2D" parent="." index="9"]
+[node name="SpawnParticles" type="CPUParticles2D" parent="." index="8"]
 position = Vector2(4, 44.25)
 emitting = false
 amount = 20
@@ -251,7 +246,12 @@ linear_accel_max = 31.78
 scale_amount_curve = SubResource("Curve_msemh")
 color_ramp = SubResource("Gradient_2ssfk")
 
-[node name="StateAnimationPlayer" parent="." index="10"]
+[node name="StateAnimationPlayer" parent="." index="9"]
 libraries = {
 &"": ExtResource("2_1rfhi")
+}
+
+[node name="ReceiveDamageAnimationPlayer" parent="." index="10"]
+libraries = {
+&"": SubResource("AnimationLibrary_sv8jr")
 }

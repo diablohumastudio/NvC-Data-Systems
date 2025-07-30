@@ -32,3 +32,5 @@ unique_name_in_owner = true
 libraries = {
 &"": SubResource("AnimationLibrary_p861y")
 }
+
+[node name="ReceiveDamageAnimationPlayer" type="AnimationPlayer" parent="."]
