@@ -14,7 +14,7 @@ offset_bottom = 23.0
 theme_override_font_sizes/font_size = 25
 text = "NAME Level 1"
 
-[node name="AllyUpgradeMenu" parent="." instance=ExtResource("2_oovb7")]
+[node name="AllyUpgradePopUp" parent="." instance=ExtResource("2_oovb7")]
 unique_name_in_owner = true
 visible = false
 offset_left = 211.0

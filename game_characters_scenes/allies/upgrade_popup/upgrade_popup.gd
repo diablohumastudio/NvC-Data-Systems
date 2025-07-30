@@ -1,4 +1,4 @@
-class_name AllyUpgradeMenu extends Control
+class_name AllyUpgradePopup extends Control
 
 signal level_changed(level)
 
