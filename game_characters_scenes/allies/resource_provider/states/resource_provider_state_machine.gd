@@ -64,13 +64,13 @@ class ResourceProviderState extends RefCounted:
 	func exit():  
 		pass
 
-	func update(delta: float):
+	func update(_delta: float):
 		pass
 
 	func handle_coin_timer_timeout():
 		pass
 
-	func handle_animation_finished(animation_name: String):
+	func handle_animation_finished(_animation_name: String):
 		pass
 
 	func can_receive_damage() -> bool:
@@ -166,14 +166,14 @@ class GivingCoinState extends ResourceProviderState:
 		resource_provider.get_node("%StateAnimationPlayer").play("_giving_coin")
 		resource_provider.get_node("%StateAnimationPlayer").queue("_idle")
 
-	func handle_animation_changed(old_animation_name: String, new_animation_name: String):
+	func handle_animation_changed(old_animation_name: String, _new_animation_name: String):
 		if old_animation_name == "_giving_coin":
 			state_machine.transition_to(state_machine.idle_state)
 
 	func _spawn_coin():
 		var spawned_coin : RubleCoin
 		spawned_coin = coin_pksc.instantiate() as RubleCoin
-		spawned_coin.timer_wait_time = 2.0 if resource_provider.seconds_per_coin > 4 else 1
+		spawned_coin.timer_wait_time = 2.0 if resource_provider.seconds_per_coin > 4 else 1.0
 		spawned_coin.position = Vector2(-41, -135)
 		resource_provider.add_child(spawned_coin)
 	
