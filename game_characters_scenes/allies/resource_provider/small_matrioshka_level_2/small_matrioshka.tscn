@@ -1,7 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://co3biarax0yt4"]
+[gd_scene load_steps=24 format=3 uid="uid://co3biarax0yt4"]
 
 [ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/assets/circle_shadow.png" id="1_h2rfk"]
 [ext_resource type="Script" uid="uid://bmo7fhcewalo2" path="res://game_characters_scenes/allies/resource_provider/small_matrioshka_level_2/small_matrioshka.gd" id="1_x5in0"]
+[ext_resource type="Script" uid="uid://bpfbritys5raj" path="res://game_characters_scenes/allies/resource_provider/states/resource_provider_state_machine.gd" id="2_3dcpm"]
 [ext_resource type="Texture2D" uid="uid://blnwb63jln06g" path="res://game_characters_scenes/allies/resource_provider/small_matrioshka_level_2/assets/level_2.png" id="8_o0wg1"]
 [ext_resource type="Texture2D" uid="uid://5xg73u1xoy12" path="res://game_characters_scenes/assets/circle_particle.png" id="12_lenyl"]
 [ext_resource type="Texture2D" uid="uid://jdulueb7gowt" path="res://game_characters_scenes/assets/dust_particle.png" id="17_asqfv"]
@@ -297,6 +298,20 @@ tracks/6/keys = {
 "update": 1,
 "values": [Rect2(4.22964, 34.0001, 168.704, 147.491), Rect2(4.22964, 34.0001, 168.704, 147.491), Rect2(4.23, 203, 168.704, 147.491), Rect2(4.23, 203, 168.704, 147.491), Rect2(4.22964, 34.0001, 168.704, 147.491)]
 }
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1.01),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_spawn_coin"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_dv1e4"]
 resource_name = "_idle"
@@ -563,6 +578,10 @@ script = ExtResource("1_x5in0")
 resource_value = 25
 seconds_per_coin = 4.0
 
+[node name="ResourceProviderStateMachine" type="Node" parent="."]
+script = ExtResource("2_3dcpm")
+metadata/_custom_type_script = "uid://bpfbritys5raj"
+
 [node name="Shadow" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(-2, 29)
@@ -575,6 +594,7 @@ position = Vector2(0, -178)
 
 [node name="Down" type="Sprite2D" parent="Textures"]
 position = Vector2(-1, -28)
+scale = Vector2(1, 1.01756)
 texture = ExtResource("8_o0wg1")
 offset = Vector2(-3, -22)
 region_enabled = true
