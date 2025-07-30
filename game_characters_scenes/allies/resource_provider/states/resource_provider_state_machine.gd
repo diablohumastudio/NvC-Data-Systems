@@ -166,8 +166,8 @@ class GivingCoinState extends ResourceProviderState:
 		resource_provider.get_node("%StateAnimationPlayer").play("_giving_coin")
 		resource_provider.get_node("%StateAnimationPlayer").queue("_idle")
 
-	func handle_animation_changed(animation_name: String):
-		if animation_name == "_giving_coin":
+	func handle_animation_changed(old_animation_name: String, new_animation_name: String):
+		if old_animation_name == "_giving_coin":
 			state_machine.transition_to(state_machine.idle_state)
 
 	func _spawn_coin():
