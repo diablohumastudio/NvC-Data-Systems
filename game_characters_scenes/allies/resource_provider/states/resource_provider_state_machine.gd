@@ -45,8 +45,6 @@ func handle_death():
 func is_busy() -> bool:
 	return current_state == giving_coin_state or current_state == spawn_state or current_state == dead_state
 
-func _spawn_coin():
-	giving_coin_state._spawn_coin()
 #endregion
 
 #region BaseState Inner Class

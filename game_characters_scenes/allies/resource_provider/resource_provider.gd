@@ -8,8 +8,9 @@ class_name ResourceProvider extends ScAlly
 func _ready() -> void:
 	state_machine = %ResourceProviderStateMachine
 
+# This function here so it can be called by StateAnimationPlayer call_method track interface
 func _spawn_coin():
-	state_machine._spawn_coin()
+	state_machine.spawn_state._spawn_coin()
 
 func receive_damage():
 	state_machine.handle_damage()
