@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://baijsiid6f4b8"
-path="res://.godot/imported/bayonet_soldier_control_selected.png-8b24e060bdde04db865952b5eac94376.ctex"
+uid="uid://d2jivyjd3foiu"
+path="res://.godot/imported/bayoneta05.png-46c6d3eb6f4b15b2087eeb5524118fd0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game_characters_scenes/allies/shoter_ally/bayonet_soldier/ally_card_assets/bayonet_soldier_control_selected.png"
-dest_files=["res://.godot/imported/bayonet_soldier_control_selected.png-8b24e060bdde04db865952b5eac94376.ctex"]
+source_file="res://game_characters_scenes/allies/shooter_ally/bayonet_soldier/assets/bayonet_charge/bayoneta05.png"
+dest_files=["res://.godot/imported/bayoneta05.png-46c6d3eb6f4b15b2087eeb5524118fd0.ctex"]
 
 [params]
 

@@ -149,8 +149,8 @@ class SpawnState extends ResourceProviderState:
 	func enter():
 		super()
 		state_animation_player.animation_finished.connect(_on_state_animation_player_animation_finished)
-		if resource_provider.get_node("%StateAnimationPlayer").has_animation("spawn"):
-			resource_provider.get_node("%StateAnimationPlayer").play("spawn")
+		if state_animation_player.has_animation("spawn"):
+			state_animation_player.play("spawn")
 		else:
 			state_machine.transition_to(state_machine.idle_state)
 

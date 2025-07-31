@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7v5he2rytl2s"
-path="res://.godot/imported/head_dead.png-03b844da689348b909aadfd79e089be2.ctex"
+path="res://.godot/imported/head_dead.png-9a2a278d48a16dd0e4242806a58a7831.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game_characters_scenes/allies/shoter_ally/bayonet_soldier/assets/head_dead.png"
-dest_files=["res://.godot/imported/head_dead.png-03b844da689348b909aadfd79e089be2.ctex"]
+source_file="res://game_characters_scenes/allies/shooter_ally/bayonet_soldier/assets/head_dead.png"
+dest_files=["res://.godot/imported/head_dead.png-9a2a278d48a16dd0e4242806a58a7831.ctex"]
 
 [params]
 

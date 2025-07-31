@@ -12,8 +12,8 @@ func _set_level(new_value: AllyLevel):
 		set_text_and_scene()
 
 func _ready() -> void:
-	%AllyUpgradeMenu.ally = ally
-	%AllyUpgradeMenu.level_changed.connect(on_ally_upgrade_menu_level_changed)
+	%AllyUpgradePopUp.ally = ally
+	%AllyUpgradePopUp.level_changed.connect(on_ally_upgrade_menu_level_changed)
 	set_text_and_scene()
 
 func on_ally_upgrade_menu_level_changed(_level: AllyLevel):
@@ -30,4 +30,4 @@ func _change_scally_name():
 	scene_ally.name = "ScAlly"
 
 func _on_show_upgrade_popup_btn_pressed() -> void:
-	%AllyUpgradeMenu.visible = true
+	%AllyUpgradePopUp.visible = true

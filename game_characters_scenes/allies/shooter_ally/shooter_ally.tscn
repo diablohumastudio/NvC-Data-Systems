@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://8mxhxcnl5388"]
+
+[ext_resource type="Script" uid="uid://bo46m616rt5oe" path="res://game_characters_scenes/allies/shooter_ally/shooter_ally.gd" id="1_c5ujj"]
+
+[sub_resource type="Animation" id="Animation_c5ujj"]
+resource_name = "spawn"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3kr13"]
+_data = {
+&"spawn": SubResource("Animation_c5ujj")
+}
+
+[node name="ShooterAlly" type="CharacterBody2D"]
+script = ExtResource("1_c5ujj")
+
+[node name="ShootingTimer" type="Timer" parent="."]
+
+[node name="StateAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_3kr13")
+}

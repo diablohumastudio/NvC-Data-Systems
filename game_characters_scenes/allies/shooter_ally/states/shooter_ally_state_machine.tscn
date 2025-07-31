@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkx4ousaw36du"]
+
+[ext_resource type="Script" uid="uid://cnmg21hx1n8x3" path="res://game_characters_scenes/allies/shooter_ally/states/shooter_ally_state_machine.gd" id="1_f7for"]
+
+[node name="ShooterAllyStateMachine" type="Node"]
+script = ExtResource("1_f7for")
