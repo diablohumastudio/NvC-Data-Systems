@@ -31,10 +31,10 @@ func _on_allies_selector_ally_selected(ally: Ally):
 	selected_ally = ally
 
 func _update_kill_enemy_tot_label():
-	%KillEnemyTotalLbl.text = str(UDS.get_property(UDS.PROPERTIES.ENEMIES_KILLED)) + " enemies Killed in Total"
+	%KillEnemyTotalLbl.text = str(UDS.get_property(UDS.PROPERTIES.ENEMIES_KILLED)) + " Enms Klld in Totl"
 
 func _update_kill_enemy_label():
-	%KillEnemyLbl.text = str(enemies_killed) + " enemies Killed in this sesion"
+	%KillEnemyLbl.text = str(enemies_killed) + " Enms Klld in lvl"
 
 func _on_win_btn_pressed() -> void:
 	ACS.set_action(Action.new(Action.TYPES.LV_COMPLTD_ALL_CANONS, Action.PayLvlComplAllCanons.new(level.id, canons_alive)))

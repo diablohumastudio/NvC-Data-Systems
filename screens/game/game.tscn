@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c2b4jldseu5vs"]
+[gd_scene load_steps=4 format=3 uid="uid://c2b4jldseu5vs"]
 
 [ext_resource type="Script" uid="uid://bvalrtinik0vd" path="res://screens/game/game.gd" id="1_eyx8b"]
 [ext_resource type="PackedScene" uid="uid://b4nna6eulgfw" path="res://screens/game/allies_selector/allies_selector.tscn" id="2_khowf"]
+[ext_resource type="PackedScene" uid="uid://cch6b4h5wk2jy" path="res://screens/game/terrain_grid/terrain_grid.tscn" id="3_yflor"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -30,12 +31,22 @@ offset_top = 31.0
 offset_right = 156.0
 offset_bottom = 198.0
 
+[node name="TerrainGrid" parent="." instance=ExtResource("3_yflor")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 201.0
+offset_top = 248.0
+offset_right = 1445.0
+offset_bottom = 764.0
+columms = 12
+rows = 5
+
 [node name="CanonHUD" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 1456.0
-offset_top = 234.0
-offset_right = 1815.0
-offset_bottom = 398.0
+offset_left = 1525.0
+offset_top = 231.0
+offset_right = 1884.0
+offset_bottom = 395.0
 
 [node name="CanonKilledBtn" type="Button" parent="CanonHUD"]
 layout_mode = 2
@@ -51,19 +62,20 @@ text = "5 Canons Left"
 [node name="WinBtn" type="Button" parent="."]
 modulate = Color(0.517647, 1, 0.227451, 1)
 layout_mode = 0
-offset_left = 1464.0
-offset_top = 528.0
-offset_right = 1802.0
-offset_bottom = 784.0
+offset_left = 1533.0
+offset_top = 525.0
+offset_right = 1871.0
+offset_bottom = 781.0
 theme_override_font_sizes/font_size = 50
 text = "WIN"
 
 [node name="KilledEnemiesHUD" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 870.0
-offset_top = 853.0
-offset_right = 1805.0
-offset_bottom = 1009.0
+offset_left = 1340.0
+offset_top = 916.0
+offset_right = 2083.0
+offset_bottom = 1072.0
+scale = Vector2(0.75, 0.75)
 
 [node name="KillEnemyBtn" type="Button" parent="KilledEnemiesHUD"]
 layout_mode = 2
@@ -77,13 +89,13 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 55
-text = "0 enemies Killed in Level"
+text = "0 Enms Klld Levl"
 
 [node name="KillEnemyTotalLbl" type="Label" parent="KilledEnemiesHUD/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 55
-text = "0 enemies Killed in Total"
+text = "0 Enms Klld Total"
 
 [node name="GoBackBtn" type="Button" parent="."]
 layout_mode = 0
