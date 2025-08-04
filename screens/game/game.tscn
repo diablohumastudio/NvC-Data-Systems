@@ -16,10 +16,10 @@ script = ExtResource("1_eyx8b")
 [node name="LevelNamePresenter" type="Label" parent="."]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 1386.0
-offset_top = 58.0
-offset_right = 1527.0
-offset_bottom = 127.0
+offset_left = 325.0
+offset_top = 36.0
+offset_right = 466.0
+offset_bottom = 105.0
 theme_override_font_sizes/font_size = 50
 text = "LEVEL"
 
@@ -34,19 +34,21 @@ offset_bottom = 198.0
 [node name="TerrainGrid" parent="." instance=ExtResource("3_yflor")]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 201.0
-offset_top = 248.0
-offset_right = 1445.0
-offset_bottom = 764.0
-columms = 12
+offset_left = 261.0
+offset_top = 140.0
+offset_right = 1868.0
+offset_bottom = 1031.0
+columms = 9
 rows = 5
+cell_width_px = 175
+cell_heigth_px = 175
 
 [node name="CanonHUD" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 1525.0
-offset_top = 231.0
-offset_right = 1884.0
-offset_bottom = 395.0
+offset_left = 692.0
+offset_top = -2.0
+offset_right = 1051.0
+offset_bottom = 162.0
 
 [node name="CanonKilledBtn" type="Button" parent="CanonHUD"]
 layout_mode = 2
@@ -62,19 +64,19 @@ text = "5 Canons Left"
 [node name="WinBtn" type="Button" parent="."]
 modulate = Color(0.517647, 1, 0.227451, 1)
 layout_mode = 0
-offset_left = 1533.0
-offset_top = 525.0
-offset_right = 1871.0
-offset_bottom = 781.0
+offset_left = 1126.0
+offset_top = 6.0
+offset_right = 1298.0
+offset_bottom = 133.0
 theme_override_font_sizes/font_size = 50
 text = "WIN"
 
 [node name="KilledEnemiesHUD" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 1340.0
-offset_top = 916.0
-offset_right = 2083.0
-offset_bottom = 1072.0
+offset_left = 1332.0
+offset_top = 17.0
+offset_right = 2075.0
+offset_bottom = 173.0
 scale = Vector2(0.75, 0.75)
 
 [node name="KillEnemyBtn" type="Button" parent="KilledEnemiesHUD"]
@@ -99,12 +101,12 @@ text = "0 Enms Klld Total"
 
 [node name="GoBackBtn" type="Button" parent="."]
 layout_mode = 0
-offset_left = 36.0
-offset_top = 948.0
-offset_right = 263.0
-offset_bottom = 1034.0
+offset_left = 17.0
+offset_top = 983.0
+offset_right = 155.0
+offset_bottom = 1069.0
 theme_override_font_sizes/font_size = 50
-text = "GO BACK"
+text = "BACK"
 
 [connection signal="pressed" from="CanonHUD/CanonKilledBtn" to="." method="_on_canon_killed_btn_pressed"]
 [connection signal="pressed" from="WinBtn" to="." method="_on_win_btn_pressed"]

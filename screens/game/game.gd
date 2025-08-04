@@ -3,23 +3,10 @@ class_name Game extends Control
 var level: Level : set = _set_level
 var enemies_killed: int = 0
 var canons_alive: int = GC.TOTAL_NUMBER_OF_CANONS
-var selected_ally: Ally
 
 func _set_level(new_value: Level) -> void:
 	level = new_value
 	%LevelNamePresenter.text = level.level_name
-
-func _input(event: InputEvent) -> void:
-	if !selected_ally or !(event is InputEventMouseButton) or event.is_pressed(): return
-	var new_ally_scene_container: ScAllyContainer = load("res://game_characters_scenes/allies/sc_ally_container.tscn").instantiate()
-	var mouse_click_position: Vector2
-	if event is InputEventMouseButton:
-		mouse_click_position = event.position
-	new_ally_scene_container.position = mouse_click_position
-	new_ally_scene_container.ally = selected_ally
-	new_ally_scene_container.level = selected_ally.base_level
-	add_child(new_ally_scene_container)
-	selected_ally = null
 
 func _ready() -> void:
 	_update_kill_enemy_tot_label()
@@ -28,7 +15,7 @@ func _ready() -> void:
 	(%AlliesSelector as AlliesSelector).ally_selected.connect(_on_allies_selector_ally_selected)
 
 func _on_allies_selector_ally_selected(ally: Ally):
-	selected_ally = ally
+	%TerrainGrid.ally_to_place = ally
 
 func _update_kill_enemy_tot_label():
 	%KillEnemyTotalLbl.text = str(UDS.get_property(UDS.PROPERTIES.ENEMIES_KILLED)) + " Enms Klld in Totl"
