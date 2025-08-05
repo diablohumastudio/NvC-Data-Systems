@@ -37,7 +37,6 @@ func _set_cell_heigth_px(new_value: int):
 		_set_cells()
 
 func _set_cells():
-	var cells_number = rows * columms
 	%CellsContainer.columns = columms
 	for child in %CellsContainer.get_children():
 		child.free()
@@ -45,7 +44,7 @@ func _set_cells():
 	for row in rows:
 		for column in columms:
 			var new_cell: Cell = CELL_PKSC.instantiate()
-			new_cell.name = "Cell_" + str(row) + "_" + str(column)
+			new_cell.name = "Cell_" + str(column) + "_" + str(row)
 			new_cell.custom_minimum_size = Vector2(cell_width_px, cell_heigth_px)
 			new_cell.size =  Vector2(cell_width_px, cell_heigth_px)
 			%CellsContainer.add_child(new_cell)
