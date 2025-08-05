@@ -1435,12 +1435,3 @@ linear_accel_min = 31.78
 linear_accel_max = 31.78
 scale_amount_curve = SubResource("Curve_fgw1i")
 color_ramp = SubResource("Gradient_kpjug")
-
-[node name="ShowUpgradePopupBtn" type="Button" parent="."]
-modulate = Color(1, 1, 1, 0)
-offset_left = -86.0
-offset_top = -264.0
-offset_right = 123.0
-offset_bottom = 86.0
-
-[connection signal="pressed" from="ShowUpgradePopupBtn" to="." method="_on_show_upgrade_popup_btn_pressed"]
