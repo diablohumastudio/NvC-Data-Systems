@@ -19,8 +19,8 @@ func set_removing_state(state: bool = true):
 
 func _set_ally_to_place(new_value: Ally):
 	ally_to_place = new_value
-	for cell in %CellsContainer.get_children():
-		cell.ally = ally_to_place
+	for cell in %CellsContainer.get_children() as Array[Cell]:
+		cell.ally_to_place = ally_to_place
 
 func _set_columns(new_value: int):
 	columms = new_value
@@ -59,6 +59,7 @@ func _set_cells():
 			%CellsContainer.add_child(new_cell)
 
 func _on_cell_ally_placed(ally: Ally):
+	ally_to_place = null
 	ally_placed.emit(ally)
 
 func _ready() -> void:

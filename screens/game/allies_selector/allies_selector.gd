@@ -23,7 +23,6 @@ func _populate_cards():
 		%CardsContainer.add_child(new_ally_selector_card)
 	
 func _on_ally_selector_button_group_changed(ally_sel_card_btn: TextureButton):
-	print("sdsdf")
 	var selected_ally: Ally = _get_ally_from_card_button(ally_sel_card_btn)
 	if ally_sel_card_btn.button_pressed: 
 		ally_selected.emit(selected_ally)

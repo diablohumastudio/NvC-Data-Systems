@@ -18,7 +18,7 @@ func on_remove_ally_btn_pressed():
 	%TerrainGrid.set_removing_state( %RemoveAllyButton.button_pressed)
 
 func _on_terrain_grid_ally_placed(ally: Ally):
-	(%AlliesSelector as AlliesSelector).time_block_card(ally)
+	%AlliesSelector.time_block_card(ally)
 
 func _on_allies_selector_ally_selected(ally: Ally):
 	%TerrainGrid.ally_to_place = ally
