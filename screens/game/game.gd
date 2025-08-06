@@ -13,6 +13,10 @@ func _ready() -> void:
 	_update_kill_enemy_label()
 	UDS.listen_property(UDS.PROPERTIES.ENEMIES_KILLED, _update_kill_enemy_tot_label)
 	(%AlliesSelector as AlliesSelector).ally_selected.connect(_on_allies_selector_ally_selected)
+	(%TerrainGrid as TerrainGrid).ally_placed.connect(_on_terrain_grid_ally_placed)
+
+func _on_terrain_grid_ally_placed(ally: Ally):
+	(%AlliesSelector as AlliesSelector).time_block_card(ally)
 
 func _on_allies_selector_ally_selected(ally: Ally):
 	%TerrainGrid.ally_to_place = ally

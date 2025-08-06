@@ -4,6 +4,7 @@
 
 [node name="Cell" type="Button"]
 custom_minimum_size = Vector2(192, 180)
+toggle_mode = true
 script = ExtResource("1_xlwsx")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]
