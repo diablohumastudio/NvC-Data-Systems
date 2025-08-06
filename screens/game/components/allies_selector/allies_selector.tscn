@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b4nna6eulgfw"]
 
-[ext_resource type="Script" uid="uid://cl6pvehct0nsm" path="res://screens/game/allies_selector/allies_selector.gd" id="1_5rr1e"]
-[ext_resource type="PackedScene" uid="uid://d3ht2nmc2bh8o" path="res://screens/game/allies_selector/ally_selector_card/ally_selector_card.tscn" id="1_t1adg"]
+[ext_resource type="Script" uid="uid://cl6pvehct0nsm" path="res://screens/game/components/allies_selector/allies_selector.gd" id="1_5rr1e"]
+[ext_resource type="PackedScene" uid="uid://d3ht2nmc2bh8o" path="res://screens/game/components/allies_selector/ally_selector_card/ally_selector_card.tscn" id="1_t1adg"]
 
 [node name="AlliesSelector" type="MarginContainer"]
 script = ExtResource("1_5rr1e")

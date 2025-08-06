@@ -9,7 +9,7 @@ signal ally_placed(ally: Ally)
 @export var cell_width_px: int : set = _set_cell_width_px
 @export var cell_heigth_px: int : set = _set_cell_heigth_px
 
-const CELL_PKSC: PackedScene = preload("res://screens/game/terrain_grid/cell/cell.tscn")
+const CELL_PKSC: PackedScene = preload("uid://bubd7o2pf31bi")
 
 var ally_to_place: Ally : set = _set_ally_to_place
 

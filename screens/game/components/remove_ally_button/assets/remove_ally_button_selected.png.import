@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cihc0il0aq8pj"
-path="res://.godot/imported/remove_ally_button_selected.png-87fafe2be5dc2553c4f40a3bf05458cd.ctex"
+path="res://.godot/imported/remove_ally_button_selected.png-067ce5a90fd4bfbedd4b9668b339659b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://screens/game/remove_ally_button/assets/remove_ally_button_selected.png"
-dest_files=["res://.godot/imported/remove_ally_button_selected.png-87fafe2be5dc2553c4f40a3bf05458cd.ctex"]
+source_file="res://screens/game/components/remove_ally_button/assets/remove_ally_button_selected.png"
+dest_files=["res://.godot/imported/remove_ally_button_selected.png-067ce5a90fd4bfbedd4b9668b339659b.ctex"]
 
 [params]
 
