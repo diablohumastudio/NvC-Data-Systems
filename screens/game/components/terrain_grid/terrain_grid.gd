@@ -59,7 +59,6 @@ func _set_cells():
 			%CellsContainer.add_child(new_cell)
 
 func _on_cell_ally_placed(ally: Ally):
-	ally_to_place = null
 	ally_placed.emit(ally)
 
 func _ready() -> void:

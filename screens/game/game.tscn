@@ -1,12 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://c2b4jldseu5vs"]
+[gd_scene load_steps=11 format=3 uid="uid://c2b4jldseu5vs"]
 
 [ext_resource type="Script" uid="uid://bvalrtinik0vd" path="res://screens/game/game.gd" id="1_eyx8b"]
 [ext_resource type="PackedScene" uid="uid://b4nna6eulgfw" path="res://screens/game/components/allies_selector/allies_selector.tscn" id="2_khowf"]
-[ext_resource type="Script" uid="uid://dm31rctijhiw4" path="res://screens/game/components/game_stats/game_stats.gd" id="2_npd5f"]
+[ext_resource type="Script" uid="uid://c5hv2k33llgdg" path="res://global_systems/data_systems/game_state_system/game_state_init_node.gd" id="2_uain1"]
+[ext_resource type="PackedScene" uid="uid://bepu7cd0ik6av" path="res://screens/game/components/level_name_presenter/level_name_presenter.tscn" id="3_kc255"]
 [ext_resource type="PackedScene" uid="uid://cch6b4h5wk2jy" path="res://screens/game/components/terrain_grid/terrain_grid.tscn" id="3_yflor"]
 [ext_resource type="PackedScene" uid="uid://dm2l1uxm8jud0" path="res://screens/game/debug_components/dbug_killed_enemies_hud/dbug_killed_enemies_hud.tscn" id="5_2v4l3"]
 [ext_resource type="PackedScene" uid="uid://xydq20wuc0hp" path="res://screens/game/components/remove_ally_button/remove_ally_button.tscn" id="5_g1ktd"]
 [ext_resource type="PackedScene" uid="uid://bk5r5vrhhaf2x" path="res://screens/game/debug_components/dbug_canons_killed_hud/dbug_canon_hud.tscn" id="5_uain1"]
+[ext_resource type="PackedScene" uid="uid://cafe6vrkyihc5" path="res://screens/game/debug_components/dbug_win_btn/dbug_win_btn.tscn" id="6_cpxdg"]
+[ext_resource type="PackedScene" uid="uid://3p1rfa3f7you" path="res://screens/game/components/game_won_pop_up/game_won_pop_up.tscn" id="9_18b3j"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -17,20 +20,17 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_eyx8b")
 
-[node name="GameStats" type="Node" parent="."]
-unique_name_in_owner = true
-script = ExtResource("2_npd5f")
-metadata/_custom_type_script = "uid://dm31rctijhiw4"
+[node name="GameStateInitializer" type="Node" parent="."]
+script = ExtResource("2_uain1")
+metadata/_custom_type_script = "uid://c5hv2k33llgdg"
 
-[node name="LevelNamePresenter" type="Label" parent="."]
+[node name="LevelNamePresenter" parent="." instance=ExtResource("3_kc255")]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 1074.0
-offset_top = 32.0
-offset_right = 1173.0
-offset_bottom = 81.0
-theme_override_font_sizes/font_size = 35
-text = "LEVEL"
+offset_left = 1048.0
+offset_top = 41.0
+offset_right = 1147.0
+offset_bottom = 90.0
 
 [node name="AlliesSelector" parent="." instance=ExtResource("2_khowf")]
 unique_name_in_owner = true
@@ -57,15 +57,13 @@ offset_top = 11.0
 offset_right = 1410.0
 offset_bottom = 121.0
 
-[node name="WinBtn" type="Button" parent="."]
-modulate = Color(0.517647, 1, 0.227451, 1)
+[node name="DbugWinBtn" parent="." instance=ExtResource("6_cpxdg")]
+unique_name_in_owner = true
 layout_mode = 0
-offset_left = 1416.0
-offset_top = 30.0
-offset_right = 1526.0
-offset_bottom = 107.0
-theme_override_font_sizes/font_size = 50
-text = "WIN"
+offset_left = 1428.0
+offset_top = 28.0
+offset_right = 1538.0
+offset_bottom = 105.0
 
 [node name="DbugKilledEnemiesHUD" parent="." instance=ExtResource("5_2v4l3")]
 layout_mode = 0
@@ -91,5 +89,12 @@ offset_top = 21.0
 offset_right = 380.0
 offset_bottom = 152.0
 
-[connection signal="pressed" from="WinBtn" to="." method="_on_win_btn_pressed"]
+[node name="GameWonPopUp" parent="." instance=ExtResource("9_18b3j")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 452.0
+offset_top = 286.0
+offset_right = 1497.0
+offset_bottom = 872.0
+
 [connection signal="pressed" from="GoBackBtn" to="." method="_on_go_back_btn_pressed"]
