@@ -70,10 +70,16 @@ theme_override_font_sizes/font_size = 25
 text = "500"
 
 [node name="TimeBlockedTexture" type="ColorRect" parent="AllySelCardBtn"]
-visible = false
-layout_mode = 0
-offset_right = 131.0
-offset_bottom = 129.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 127.0
+offset_right = -1.0
+offset_bottom = 127.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.184314, 0, 0, 0.533333)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

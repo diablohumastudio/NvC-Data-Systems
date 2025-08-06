@@ -13,6 +13,10 @@ const CELL_PKSC: PackedScene = preload("res://screens/game/terrain_grid/cell/cel
 
 var ally_to_place: Ally : set = _set_ally_to_place
 
+func set_removing_state(state: bool = true):
+	for cell in %CellsContainer.get_children() as Array[Cell]:
+		cell.is_on_removing_state = state
+
 func _set_ally_to_place(new_value: Ally):
 	ally_to_place = new_value
 	for cell in %CellsContainer.get_children():

@@ -23,6 +23,7 @@ offset_right = 211.6
 offset_bottom = 4.47998
 
 [node name="ShowUpgradePopupBtn" type="Button" parent="."]
+visible = false
 modulate = Color(1, 1, 1, 0.211765)
 custom_minimum_size = Vector2(100, 200)
 offset_left = 3.0

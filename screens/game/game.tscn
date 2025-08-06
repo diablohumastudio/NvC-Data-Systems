@@ -114,6 +114,7 @@ theme_override_font_sizes/font_size = 50
 text = "BACK"
 
 [node name="RemoveAllyButton" parent="." instance=ExtResource("5_g1ktd")]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 255.0
 offset_top = 21.0
