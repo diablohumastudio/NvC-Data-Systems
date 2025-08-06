@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bvalrtinik0vd" path="res://screens/game/game.gd" id="1_eyx8b"]
 [ext_resource type="PackedScene" uid="uid://b4nna6eulgfw" path="res://screens/game/allies_selector/allies_selector.tscn" id="2_khowf"]
+[ext_resource type="Script" uid="uid://dm31rctijhiw4" path="res://screens/game/game_stats/game_stats.gd" id="2_npd5f"]
 [ext_resource type="PackedScene" uid="uid://cch6b4h5wk2jy" path="res://screens/game/terrain_grid/terrain_grid.tscn" id="3_yflor"]
 
 [node name="Game" type="Control"]
@@ -12,6 +13,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_eyx8b")
+
+[node name="GameStats" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_npd5f")
+metadata/_custom_type_script = "uid://dm31rctijhiw4"
 
 [node name="LevelNamePresenter" type="Label" parent="."]
 unique_name_in_owner = true
