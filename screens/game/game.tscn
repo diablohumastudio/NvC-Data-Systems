@@ -1,9 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://c2b4jldseu5vs"]
+[gd_scene load_steps=6 format=3 uid="uid://c2b4jldseu5vs"]
 
 [ext_resource type="Script" uid="uid://bvalrtinik0vd" path="res://screens/game/game.gd" id="1_eyx8b"]
 [ext_resource type="PackedScene" uid="uid://b4nna6eulgfw" path="res://screens/game/allies_selector/allies_selector.tscn" id="2_khowf"]
 [ext_resource type="Script" uid="uid://dm31rctijhiw4" path="res://screens/game/game_stats/game_stats.gd" id="2_npd5f"]
 [ext_resource type="PackedScene" uid="uid://cch6b4h5wk2jy" path="res://screens/game/terrain_grid/terrain_grid.tscn" id="3_yflor"]
+[ext_resource type="PackedScene" uid="uid://xydq20wuc0hp" path="res://screens/game/remove_ally_button/remove_ally_button.tscn" id="5_g1ktd"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -22,10 +23,10 @@ metadata/_custom_type_script = "uid://dm31rctijhiw4"
 [node name="LevelNamePresenter" type="Label" parent="."]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 325.0
-offset_top = 36.0
-offset_right = 466.0
-offset_bottom = 105.0
+offset_left = 532.0
+offset_top = 8.0
+offset_right = 673.0
+offset_bottom = 77.0
 theme_override_font_sizes/font_size = 50
 text = "LEVEL"
 
@@ -40,10 +41,10 @@ offset_bottom = 198.0
 [node name="TerrainGrid" parent="." instance=ExtResource("3_yflor")]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 261.0
-offset_top = 140.0
-offset_right = 1868.0
-offset_bottom = 1031.0
+offset_left = 212.0
+offset_top = 164.0
+offset_right = 1819.0
+offset_bottom = 1055.0
 cell_width_px = 175
 cell_heigth_px = 175
 
@@ -111,6 +112,13 @@ offset_right = 155.0
 offset_bottom = 1069.0
 theme_override_font_sizes/font_size = 50
 text = "BACK"
+
+[node name="RemoveAllyButton" parent="." instance=ExtResource("5_g1ktd")]
+layout_mode = 0
+offset_left = 255.0
+offset_top = 21.0
+offset_right = 380.0
+offset_bottom = 152.0
 
 [connection signal="pressed" from="CanonHUD/CanonKilledBtn" to="." method="_on_canon_killed_btn_pressed"]
 [connection signal="pressed" from="WinBtn" to="." method="_on_win_btn_pressed"]
