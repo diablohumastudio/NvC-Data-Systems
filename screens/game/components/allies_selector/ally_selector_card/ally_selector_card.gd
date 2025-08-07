@@ -30,7 +30,7 @@ func _on_animation_player_animation_finished(animation_name: String):
 # pressed signal callback always run after all button_group pertinent buttons call toggled signal callback
 func _on_ally_sel_card_btn_pressed() -> void: 
 	if %AllySelCardBtn.button_pressed == true: GSS.ally_to_place = ally
-	else: GSS.ally_to_place = null
+	else: GSS.set("ally_to_place", null)
 
 func _on_ally_sel_card_btn_toggled(toggled_on: bool) -> void:
 	if toggled_on: modulate = Color.GREEN

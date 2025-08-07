@@ -9,10 +9,6 @@ class_name TerrainGrid extends CenterContainer
 
 const CELL_PKSC: PackedScene = preload("uid://bubd7o2pf31bi")
 
-func set_removing_state(state: bool = true):
-	for cell in %CellsContainer.get_children() as Array[Cell]:
-		cell.is_on_removing_state = state
-
 func _set_columns(new_value: int):
 	columms = new_value
 	if Engine.is_editor_hint() and is_inside_tree():

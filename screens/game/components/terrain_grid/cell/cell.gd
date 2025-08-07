@@ -3,13 +3,12 @@ class_name Cell extends Button
 var placed_ally: Ally
 const SC_ALLY_CONTAINER_PKSC: PackedScene = preload("uid://bhw8iapb537a1")
 
-var is_on_removing_state: bool = false
-
 func _on_pressed() -> void:
-	if is_on_removing_state:
+	if GSS.removing_ally_state:
 		if get_child_count() > 0:
 			get_child(0).queue_free()
 			placed_ally = null
+			GSS.set("removing_ally_state", false)
 	else:
 		if get_child_count() == 0:
 			_add_ally()
