@@ -1,21 +1,15 @@
 extends Node
 
-var game_state: GameState 
+signal _ally_just_placed(ally)
 
-func _get(property_name: StringName):
-	return game_state.get(property_name)
+var canons_alive: int
+var enemies_killed: int
+var ally_to_place: Ally
 
-func _set(property_name: StringName, value: Variant):
-	game_state.set(property_name, value)
-	return true
+func _ready() -> void:
+	reset_values()
 
-func initialize():
-	game_state = GameState.new()
-
-func reset():
-	property_list_changed
-	game_state = null 
-
-class GameState extends Resource:
-	var canons_alive: int = GC.TOTAL_NUMBER_OF_CANONS
-	var enemies_killed: int = 0
+func reset_values():
+	canons_alive = GC.TOTAL_NUMBER_OF_CANONS
+	enemies_killed = 0
+	ally_to_place = null
