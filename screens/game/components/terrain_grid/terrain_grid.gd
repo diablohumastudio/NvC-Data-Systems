@@ -1,8 +1,6 @@
 @tool
 class_name TerrainGrid extends CenterContainer
 
-signal ally_placed(ally: Ally)
-
 @export var columms: int : set = _set_columns
 @export var rows: int : set = _set_rows
 
@@ -11,16 +9,9 @@ signal ally_placed(ally: Ally)
 
 const CELL_PKSC: PackedScene = preload("uid://bubd7o2pf31bi")
 
-var ally_to_place: Ally : set = _set_ally_to_place
-
 func set_removing_state(state: bool = true):
 	for cell in %CellsContainer.get_children() as Array[Cell]:
 		cell.is_on_removing_state = state
-
-func _set_ally_to_place(new_value: Ally):
-	ally_to_place = new_value
-	for cell in %CellsContainer.get_children() as Array[Cell]:
-		cell.ally_to_place = ally_to_place
 
 func _set_columns(new_value: int):
 	columms = new_value
@@ -53,13 +44,7 @@ func _set_cells():
 			new_cell.name = "Cell_" + str(column) + "_" + str(row)
 			new_cell.custom_minimum_size = Vector2(cell_width_px, cell_heigth_px)
 			new_cell.size =  Vector2(cell_width_px, cell_heigth_px)
-			if !Engine.is_editor_hint():
-				if !new_cell.ally_placed.is_connected(_on_cell_ally_placed):
-					new_cell.ally_placed.connect(_on_cell_ally_placed)
 			%CellsContainer.add_child(new_cell)
-
-func _on_cell_ally_placed(ally: Ally):
-	ally_placed.emit(ally)
 
 func _ready() -> void:
 	if !is_inside_tree(): return

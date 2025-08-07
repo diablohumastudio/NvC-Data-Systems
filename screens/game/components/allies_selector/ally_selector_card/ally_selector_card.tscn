@@ -88,4 +88,5 @@ libraries = {
 &"": SubResource("AnimationLibrary_qw3xv")
 }
 
+[connection signal="pressed" from="AllySelCardBtn" to="." method="_on_ally_sel_card_btn_pressed"]
 [connection signal="toggled" from="AllySelCardBtn" to="." method="_on_ally_sel_card_btn_toggled"]
