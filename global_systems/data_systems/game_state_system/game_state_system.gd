@@ -1,6 +1,7 @@
 extends Node
 
 signal _ally_just_placed(ally)
+signal _game_just_won
 
 var canons_alive: int
 var enemies_killed: int
