@@ -8,7 +8,7 @@ func _on_pressed() -> void:
 		if get_child_count() > 0:
 			get_child(0).queue_free()
 			placed_ally = null
-			GSS.set("removing_ally_state", false)
+			GSS.removing_ally_state = false
 	else:
 		if get_child_count() == 0:
 			_add_ally()
