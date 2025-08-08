@@ -3,6 +3,7 @@ class_name LevelBtn extends Button
 @export var level: Level : set = _set_level
 
 func _set_level(new_value: Level):
+	if !new_value: return
 	level = new_value
 	_change_color_and_text()
 
@@ -21,4 +22,6 @@ func _change_color_and_text() -> void:
 		%CanonsLbl.self_modulate = Color.RED
 
 func _on_pressed() -> void:
-	SMS.change_scene(GC.SCREENS_UIDS.GAME, {"level": level})
+	GSS.level = level
+	GSS.reset_values()
+	SMS.change_scene(GC.SCREENS_UIDS.GAME)
