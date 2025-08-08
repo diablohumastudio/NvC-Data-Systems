@@ -22,18 +22,17 @@ offset_top = 4.0
 offset_right = 211.6
 offset_bottom = 4.47998
 
-[node name="ShowUpgradePopupBtn" type="Button" parent="."]
-visible = false
+[node name="SelectAllyBtn" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0.211765)
-custom_minimum_size = Vector2(100, 200)
+custom_minimum_size = Vector2(192, 180)
 offset_left = 3.0
 offset_top = 1.0
-offset_right = 165.0
-offset_bottom = 234.0
+offset_right = 195.0
+offset_bottom = 181.0
 theme_override_font_sizes/font_size = 45
 text = "button"
 
 [node name="ScAlly" parent="." instance=ExtResource("3_oovb7")]
 unique_name_in_owner = true
 
-[connection signal="pressed" from="ShowUpgradePopupBtn" to="." method="_on_show_upgrade_popup_btn_pressed"]
+[connection signal="button_up" from="SelectAllyBtn" to="." method="_on_select_ally_btn_button_up"]

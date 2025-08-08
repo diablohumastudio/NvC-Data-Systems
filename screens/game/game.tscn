@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c2b4jldseu5vs"]
+[gd_scene load_steps=10 format=3 uid="uid://c2b4jldseu5vs"]
 
 [ext_resource type="Script" uid="uid://bvalrtinik0vd" path="res://screens/game/game.gd" id="1_eyx8b"]
 [ext_resource type="PackedScene" uid="uid://b4nna6eulgfw" path="res://screens/game/components/allies_selector/allies_selector.tscn" id="2_khowf"]
@@ -18,10 +18,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_eyx8b")
-
-[node name="GameStateInitializer" type="Node" parent="."]
-script = ExtResource("2_uain1")
-metadata/_custom_type_script = "uid://c5hv2k33llgdg"
 
 [node name="LevelNamePresenter" parent="." instance=ExtResource("3_kc255")]
 unique_name_in_owner = true
