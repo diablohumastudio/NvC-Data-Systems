@@ -5,6 +5,7 @@ signal _game_just_won
 
 signal _removing_ally_state_changed(state: bool)
 
+var level: Level
 var canons_alive: int
 var enemies_killed: int
 var ally_to_place: Ally
