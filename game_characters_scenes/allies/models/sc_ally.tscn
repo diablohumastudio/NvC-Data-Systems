@@ -1,6 +1,39 @@
-[gd_scene load_steps=2 format=3 uid="uid://cm7j6ucxdy4na"]
+[gd_scene load_steps=3 format=3 uid="uid://cm7j6ucxdy4na"]
 
 [ext_resource type="Script" uid="uid://dbcsemdveveol" path="res://game_characters_scenes/allies/models/sc_ally.gd" id="1_btjlv"]
+[ext_resource type="PackedScene" uid="uid://c0gkj1gflhpbp" path="res://game_characters_scenes/allies/models/upgrade_popup/upgrade_popup.tscn" id="2_g1flm"]
 
 [node name="ScAlly" type="CharacterBody2D"]
 script = ExtResource("1_btjlv")
+
+[node name="AllyHUD" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AllyNameAndLevelLabel" type="Label" parent="AllyHUD"]
+unique_name_in_owner = true
+offset_right = 163.0
+offset_bottom = 35.0
+theme_override_font_sizes/font_size = 25
+text = "NAME Level 1"
+
+[node name="AllyUpgradeMenu" parent="AllyHUD" instance=ExtResource("2_g1flm")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+offset_left = 211.0
+offset_top = 4.0
+offset_right = 211.6
+offset_bottom = 4.47998
+
+[node name="SelectAllyBtn" type="TextureButton" parent="AllyHUD"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.211765)
+custom_minimum_size = Vector2(192, 180)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 195.0
+offset_bottom = 181.0

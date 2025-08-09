@@ -1,7 +1,8 @@
-[gd_scene load_steps=29 format=3 uid="uid://vab6yicbwijn"]
+[gd_scene load_steps=30 format=3 uid="uid://vab6yicbwijn"]
 
 [ext_resource type="PackedScene" uid="uid://o5ujsaqb3w58" path="res://game_characters_scenes/allies/data/resource_provider/models/resource_provider.tscn" id="1_ixete"]
 [ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/assets/circle_shadow.png" id="2_04huq"]
+[ext_resource type="PackedScene" uid="uid://c0gkj1gflhpbp" path="res://game_characters_scenes/allies/models/upgrade_popup/upgrade_popup.tscn" id="2_ixete"]
 [ext_resource type="Texture2D" uid="uid://b4fjl8d71lb8j" path="res://game_characters_scenes/allies/data/resource_provider/data/chest/data/iron_chest/assets/base_light.png" id="3_cpt3o"]
 [ext_resource type="Texture2D" uid="uid://qmbpe25wm0nx" path="res://game_characters_scenes/allies/data/resource_provider/data/chest/data/iron_chest/assets/base.png" id="4_k6k1e"]
 [ext_resource type="Texture2D" uid="uid://jio37lntveew" path="res://game_characters_scenes/allies/data/resource_provider/data/chest/data/iron_chest/assets/top_light.png" id="5_l8i4b"]
@@ -594,12 +595,45 @@ position = Vector2(96, 115)
 resource_value = 50
 seconds_per_coin = 3.0
 
-[node name="Shadow" type="Sprite2D" parent="." index="2"]
+[node name="AllyHUD" type="Control" parent="." index="0"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AllyNameAndLevelLabel" type="Label" parent="AllyHUD" index="0"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 163.0
+offset_bottom = 35.0
+theme_override_font_sizes/font_size = 25
+text = "NAME Level 1"
+
+[node name="AllyUpgradeMenu" parent="AllyHUD" index="1" instance=ExtResource("2_ixete")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+offset_left = 211.0
+offset_top = 4.0
+offset_right = 211.6
+offset_bottom = 4.47998
+
+[node name="SelectAllyBtn" type="TextureButton" parent="AllyHUD" index="2"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.211765)
+custom_minimum_size = Vector2(192, 180)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 195.0
+offset_bottom = 181.0
+
+[node name="Shadow" type="Sprite2D" parent="." index="3"]
 position = Vector2(-2, 22)
 scale = Vector2(1.23684, 1)
 texture = ExtResource("2_04huq")
 
-[node name="Textures" type="Node2D" parent="." index="3"]
+[node name="Textures" type="Node2D" parent="." index="4"]
 position = Vector2(0, 39)
 
 [node name="Down" type="AnimatedSprite2D" parent="Textures" index="0"]
@@ -629,22 +663,22 @@ linear_accel_max = -80.52
 scale_amount_curve = SubResource("Curve_q5asp")
 color_ramp = SubResource("Gradient_j7xbj")
 
-[node name="ReceiveDamage" type="AnimationPlayer" parent="." index="4"]
+[node name="ReceiveDamage" type="AnimationPlayer" parent="." index="5"]
 libraries = {
 &"": SubResource("AnimationLibrary_fcsnw")
 }
 
-[node name="BodyCollShape" type="CollisionShape2D" parent="." index="5"]
+[node name="BodyCollShape" type="CollisionShape2D" parent="." index="6"]
 visible = false
 position = Vector2(-34, -71.5)
 shape = SubResource("RectangleShape2D_wtsvu")
 
-[node name="PhysicalContactCollShape" type="CollisionShape2D" parent="." index="6"]
+[node name="PhysicalContactCollShape" type="CollisionShape2D" parent="." index="7"]
 visible = false
 position = Vector2(59, -32.5)
 shape = SubResource("RectangleShape2D_6pwvn")
 
-[node name="DustParticles" type="CPUParticles2D" parent="." index="7"]
+[node name="DustParticles" type="CPUParticles2D" parent="." index="8"]
 position = Vector2(5, 45)
 emitting = false
 amount = 20
@@ -665,7 +699,7 @@ angular_velocity_max = 277.59
 scale_amount_curve = SubResource("Curve_rvmm0")
 color_ramp = SubResource("Gradient_6ir51")
 
-[node name="SpawnLight" type="PointLight2D" parent="." index="8"]
+[node name="SpawnLight" type="PointLight2D" parent="." index="9"]
 visible = false
 position = Vector2(0, 27.25)
 color = Color(0.392157, 0.627451, 0.4, 1)
@@ -673,7 +707,7 @@ energy = 0.0
 texture = ExtResource("10_7dqq0")
 texture_scale = 1.3
 
-[node name="SpawnParticles" type="CPUParticles2D" parent="." index="9"]
+[node name="SpawnParticles" type="CPUParticles2D" parent="." index="10"]
 position = Vector2(4, 44.25)
 emitting = false
 amount = 20
@@ -694,7 +728,7 @@ linear_accel_max = 31.78
 scale_amount_curve = SubResource("Curve_msemh")
 color_ramp = SubResource("Gradient_2ssfk")
 
-[node name="StateAnimationPlayer" parent="." index="10"]
+[node name="StateAnimationPlayer" parent="." index="11"]
 libraries = {
 &"": SubResource("AnimationLibrary_huxl0")
 }

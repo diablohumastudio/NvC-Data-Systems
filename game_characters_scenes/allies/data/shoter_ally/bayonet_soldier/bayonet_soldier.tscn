@@ -1,7 +1,8 @@
-[gd_scene load_steps=44 format=3 uid="uid://oyoty7ffa6gl"]
+[gd_scene load_steps=45 format=3 uid="uid://oyoty7ffa6gl"]
 
 [ext_resource type="Script" uid="uid://dnhmh113e864x" path="res://game_characters_scenes/allies/data/shoter_ally/bayonet_soldier/bayonet_soldier.gd" id="1_m4sxj"]
 [ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/assets/circle_shadow.png" id="2_5ltgp"]
+[ext_resource type="PackedScene" uid="uid://c0gkj1gflhpbp" path="res://game_characters_scenes/allies/models/upgrade_popup/upgrade_popup.tscn" id="2_piurg"]
 [ext_resource type="Texture2D" uid="uid://d3m2ymkclsdx7" path="res://game_characters_scenes/assets/hurt_light.png" id="3_sr3fg"]
 [ext_resource type="Texture2D" uid="uid://c73v5xy4v6gea" path="res://game_characters_scenes/assets/hurt_shape.png" id="4_st7co"]
 [ext_resource type="Texture2D" uid="uid://dla3tqrgg7j8w" path="res://game_characters_scenes/assets/legup2.png" id="5_3xdkk"]
@@ -1240,6 +1241,38 @@ colors = PackedColorArray(0.874968, 0.604514, 0.563407, 0, 1, 1, 1, 1, 0.851918,
 position = Vector2(85, 44)
 script = ExtResource("1_m4sxj")
 metadata/_custom_type_script = "uid://c514vn6daipgc"
+
+[node name="AllyHUD" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AllyNameAndLevelLabel" type="Label" parent="AllyHUD"]
+unique_name_in_owner = true
+offset_right = 163.0
+offset_bottom = 35.0
+theme_override_font_sizes/font_size = 25
+text = "NAME Level 1"
+
+[node name="AllyUpgradeMenu" parent="AllyHUD" instance=ExtResource("2_piurg")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+offset_left = 211.0
+offset_top = 4.0
+offset_right = 211.6
+offset_bottom = 4.47998
+
+[node name="SelectAllyBtn" type="TextureButton" parent="AllyHUD"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.211765)
+custom_minimum_size = Vector2(192, 180)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 195.0
+offset_bottom = 181.0
 
 [node name="Shadow" type="Sprite2D" parent="."]
 position = Vector2(-2, 44.798)

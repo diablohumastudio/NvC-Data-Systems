@@ -1,26 +1,24 @@
 class_name ScAllyContainer extends Node2D
 
-var level: AllyLevel: set = _set_level
 var ally: Ally
-var hp: int
+var level: AllyLevel: set = _set_level
 
 func _set_level(new_value: AllyLevel):
-	level = new_value
-	if is_inside_tree():
-		set_text_and_scene()
+	level = new_value 
+	%ScAlly.free()
+	var new_sc_ally: ScAlly = level.scene.instantiate()
+	new_sc_ally.name = "ScAlly"
+	add_child(new_sc_ally)
 
 func _ready() -> void:
-	%AllyUpgradeMenu.level_changed.connect(on_ally_upgrade_menu_level_changed)
-	set_text_and_scene()
+	($ScAlly/AllyHUD/AllyUpgradeMenu as AllyUpgradeMenu).level_changed.connect(on_ally_upgrade_menu_level_changed)
+	($ScAlly/AllyHUD/SelectAllyBtn as TextureButton).pressed.connect(on_select_ally_btn_pressed)
 
 func on_ally_upgrade_menu_level_changed(_level: AllyLevel):
 	level = _level
 
-func set_text_and_scene():
-	%AllyNameAndLevelLabel.text = "Type: " + ally.ally_name + "\n Level " + str(level.level_id)
-
-func _on_select_ally_btn_button_up() -> void:
+func on_select_ally_btn_pressed():
 	if GSS.removing_ally_state: 
 		self.queue_free()
 		GSS.removing_ally_state = false
-	else: %AllyUpgradeMenu.visible = true
+	else: $ScAlly/AllyHUD/AllyUpgradeMenu.visible = true
