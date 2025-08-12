@@ -2,6 +2,8 @@ class_name ScAllyContainer extends Node2D
 
 var ally: Ally
 var level: AllyLevel: set = _set_level
+var group_name: String
+var levels: Array[AllyLevel]
 
 func _set_level(new_value: AllyLevel):
 	level = new_value 
@@ -9,6 +11,9 @@ func _set_level(new_value: AllyLevel):
 	fix_ally_upgrade_menu_position(new_sc_ally)
 	($ScAlly/AllyHUD/AllyUpgradeMenu as AllyUpgradeMenu).level_changed.connect(on_ally_upgrade_menu_level_changed)
 	($ScAlly/AllyHUD/SelectAllyBtn as TextureButton).pressed.connect(on_select_ally_btn_pressed)
+	($ScAlly/AllyHUD/Button as Button).pressed.connect(_on_test_btn_1_pressed)
+	($ScAlly/AllyHUD/Button2 as Button).pressed.connect(_on_test_btn_2_pressed)
+	($ScAlly/AllyHUD/Button3 as Button).pressed.connect(_on_test_btn_3_pressed)
 
 func change_ally_scene(new_sc_ally: ScAlly) -> ScAlly:
 	$ScAlly.name = "OldScAlly"
@@ -27,6 +32,16 @@ func fix_ally_upgrade_menu_position(sc_ally: ScAlly):
 	
 	
 
+func _on_test_btn_1_pressed():
+	var example_level: AllyLevel = load("res://data/game_characters/allies/upgrades_data/data/chest/base_chest_lvl.tres")
+	levels.append(example_level)
+
+func _on_test_btn_2_pressed():
+	levels = []
+
+func _on_test_btn_3_pressed():
+	get_tree().call_group(group_name, "_on_ally_btn_pressed", levels)
+	
 func on_ally_upgrade_menu_level_changed(_level: AllyLevel):
 	level = _level
 

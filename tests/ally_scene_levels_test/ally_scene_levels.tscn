@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://y1q76ungs7s3"]
+
+[ext_resource type="PackedScene" uid="uid://bhw8iapb537a1" path="res://game_characters_scenes/allies/models/sc_ally_container/sc_ally_container.tscn" id="1_qltst"]
+
+[node name="AllySceneLevels" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScAllyContainer" parent="." instance=ExtResource("1_qltst")]
