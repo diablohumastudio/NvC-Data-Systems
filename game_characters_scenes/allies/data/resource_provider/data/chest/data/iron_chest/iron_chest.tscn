@@ -1,6 +1,6 @@
 [gd_scene load_steps=30 format=3 uid="uid://vab6yicbwijn"]
 
-[ext_resource type="PackedScene" uid="uid://o5ujsaqb3w58" path="res://game_characters_scenes/allies/data/resource_provider/models/resource_provider.tscn" id="1_ixete"]
+[ext_resource type="PackedScene" uid="uid://o5ujsaqb3w58" path="res://game_characters_scenes/allies/data/resource_provider/models/sc_ally_resource_provider/sc_ally_resource_provider.tscn" id="1_ixete"]
 [ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/assets/circle_shadow.png" id="2_04huq"]
 [ext_resource type="PackedScene" uid="uid://c0gkj1gflhpbp" path="res://game_characters_scenes/allies/models/upgrade_popup/upgrade_popup.tscn" id="2_ixete"]
 [ext_resource type="Texture2D" uid="uid://b4fjl8d71lb8j" path="res://game_characters_scenes/allies/data/resource_provider/data/chest/data/iron_chest/assets/base_light.png" id="3_cpt3o"]

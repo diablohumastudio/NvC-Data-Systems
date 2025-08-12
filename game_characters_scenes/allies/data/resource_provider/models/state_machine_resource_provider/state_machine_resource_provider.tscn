@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b13jwl31dwmnx"]
+
+[ext_resource type="Script" uid="uid://bpfbritys5raj" path="res://game_characters_scenes/allies/data/resource_provider/models/state_machine_resource_provider/state_machine_resource_provider.gd" id="1_klr6e"]
+
+[node name="ResourceProviderStateMachine" type="Node"]
+script = ExtResource("1_klr6e")

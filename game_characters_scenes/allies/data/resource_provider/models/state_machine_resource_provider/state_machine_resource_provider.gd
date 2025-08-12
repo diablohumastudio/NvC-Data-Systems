@@ -58,7 +58,6 @@ class ResourceProviderState extends RefCounted:
 		state_machine = machine
 
 	func enter():
-		print(name)
 		pass
 
 	func exit():  
