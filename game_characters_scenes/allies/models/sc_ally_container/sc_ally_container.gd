@@ -7,20 +7,21 @@ var levels: Array[AllyLevel]
 
 func _set_level(new_value: AllyLevel):
 	level = new_value 
-	var new_sc_ally = change_ally_scene(level.scene.instantiate())
+	var new_sc_ally = level.scene.instantiate()
+	await $ScAlly.change_ally_scene(new_sc_ally)
+	group_name = str(new_sc_ally)
 	fix_ally_upgrade_menu_position(new_sc_ally)
+	await get_tree().process_frame
 	($ScAlly/AllyHUD/AllyUpgradeMenu as AllyUpgradeMenu).level_changed.connect(on_ally_upgrade_menu_level_changed)
 	($ScAlly/AllyHUD/SelectAllyBtn as TextureButton).pressed.connect(on_select_ally_btn_pressed)
-	($ScAlly/AllyHUD/Button as Button).pressed.connect(_on_test_btn_1_pressed)
-	($ScAlly/AllyHUD/Button2 as Button).pressed.connect(_on_test_btn_2_pressed)
-	($ScAlly/AllyHUD/Button3 as Button).pressed.connect(_on_test_btn_3_pressed)
+	if has_node("$ScAlly/AllyHUD/Button") and has_node("$ScAlly/AllyHUD/Button2") and has_node("$ScAlly/AllyHUD/Button3"):
+		($ScAlly/AllyHUD/Button as Button).pressed.connect(_on_test_btn_1_pressed)
+		($ScAlly/AllyHUD/Button2 as Button).pressed.connect(_on_test_btn_2_pressed)
+		($ScAlly/AllyHUD/Button3 as Button).pressed.connect(_on_test_btn_3_pressed)
 
-func change_ally_scene(new_sc_ally: ScAlly) -> ScAlly:
-	$ScAlly.name = "OldScAlly"
-	$OldScAlly.queue_free()
-	new_sc_ally.name = "ScAlly"
-	add_child(new_sc_ally)
-	return new_sc_ally
+func change_ally_scene(new_sc_ally: ScAlly):
+	await $ScAlly.change_ally_scene(new_sc_ally)
+
 
 func fix_ally_upgrade_menu_position(sc_ally: ScAlly):
 	var ally_upgrade_meny: AllyUpgradeMenu = sc_ally.get_node("%AllyUpgradeMenu")
