@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="InnerResWithInit" load_steps=2 format=3 uid="uid://dj4p30yhrxyvf"]
+
+[ext_resource type="Script" uid="uid://dl5lercwkq2ss" path="res://tests/add_child_test/inner_res_with_init.gd" id="1_5rtd1"]
+
+[resource]
+script = ExtResource("1_5rtd1")
+metadata/_custom_type_script = "uid://dl5lercwkq2ss"
