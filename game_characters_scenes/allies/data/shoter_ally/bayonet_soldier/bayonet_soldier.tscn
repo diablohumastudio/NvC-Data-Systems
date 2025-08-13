@@ -1280,27 +1280,6 @@ offset_bottom = 66.0
 texture_normal = ExtResource("3_lyapl")
 texture_click_mask = ExtResource("4_1jdjf")
 
-[node name="Button" type="Button" parent="AllyHUD"]
-layout_mode = 0
-offset_left = 143.0
-offset_top = -270.0
-offset_right = 273.0
-offset_bottom = -189.0
-
-[node name="Button2" type="Button" parent="AllyHUD"]
-layout_mode = 0
-offset_left = 205.0
-offset_top = -186.0
-offset_right = 309.0
-offset_bottom = -128.0
-
-[node name="Button3" type="Button" parent="AllyHUD"]
-layout_mode = 0
-offset_left = 225.0
-offset_top = -118.0
-offset_right = 303.0
-offset_bottom = -57.0
-
 [node name="Shadow" type="Sprite2D" parent="."]
 position = Vector2(-2, 44.798)
 scale = Vector2(1.23684, 1)
@@ -1333,10 +1312,6 @@ position = Vector2(17.676, 36.3821)
 rotation = 0.0523599
 texture = ExtResource("6_i6fdn")
 offset = Vector2(22, 31)
-script = ExtResource("10_sk1ob")
-levels_modifiers_textures = Dictionary[ExtResource("11_l06q8"), Texture2D]({
-ExtResource("12_5s6xb"): ExtResource("13_cj7tw")
-})
 
 [node name="LeftLeg" type="Sprite2D" parent="Textures"]
 position = Vector2(-15, 50)
