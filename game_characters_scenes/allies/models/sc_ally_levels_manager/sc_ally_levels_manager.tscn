@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dy547ebgdkeiw"]
+
+[ext_resource type="Script" uid="uid://s6367cdweknh" path="res://game_characters_scenes/allies/models/sc_ally_levels_manager/sc_ally_levels_manager.gd" id="1_c5xv0"]
+
+[node name="ScAllyLevelsManager" type="Node"]
+script = ExtResource("1_c5xv0")
