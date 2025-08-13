@@ -21,7 +21,7 @@ func _validate_children():
 			push_error("Cell MUST NOT contain children of diferent class than ScALly")
 
 func _add_ally():
-	var new_ally_scene_container: ScAllyContainer = SC_ALLY_CONTAINER_PKSC.instantiate()
+	var new_ally_scene_container: ScAlly = SC_ALLY_PKSC.instantiate()
+	add_child(new_ally_scene_container)
 	new_ally_scene_container.ally = GSS.ally_to_place
 	new_ally_scene_container.level = GSS.ally_to_place.base_level
-	add_child(new_ally_scene_container)
