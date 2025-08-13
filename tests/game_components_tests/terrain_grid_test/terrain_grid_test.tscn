@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkw6opjkyqyh3"]
+
+[ext_resource type="Script" uid="uid://n7gwx5w87na" path="res://tests/game_components_tests/terrain_grid_test/terrain_grid_test.gd" id="1_w3jjf"]
+[ext_resource type="PackedScene" uid="uid://cch6b4h5wk2jy" path="res://screens/game/components/terrain_grid/terrain_grid.tscn" id="2_4q2ja"]
+
+[node name="TerrainGridTest" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w3jjf")
+
+[node name="TerrainGrid" parent="." instance=ExtResource("2_4q2ja")]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 128.0
+offset_bottom = 167.0
+cell_width_px = 175
+cell_heigth_px = 175
