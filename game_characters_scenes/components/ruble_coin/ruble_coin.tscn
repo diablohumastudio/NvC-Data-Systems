@@ -24,7 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://owh7x3htkfvq" path="res://game_characters_scenes/components/ruble_coin/assets/rublo19.png" id="21_1bqch"]
 [ext_resource type="Texture2D" uid="uid://dx0anknqa0fe5" path="res://game_characters_scenes/components/ruble_coin/assets/rublo20.png" id="22_w2spg"]
 [ext_resource type="Texture2D" uid="uid://q5ifosgjvma5" path="res://game_characters_scenes/assets/gun_light.png" id="23_7lg7u"]
-[ext_resource type="Shader" uid="uid://blan7lrww6sar" path="res://assets/glitch.gdshader" id="25_spcl8"]
+[ext_resource type="Shader" uid="uid://blan7lrww6sar" path="res://assets/shaders/glitch.gdshader" id="25_spcl8"]
 
 [sub_resource type="Curve" id="Curve_rdp2h"]
 _limits = [0.0, 1.2, 0.0, 1.0]
