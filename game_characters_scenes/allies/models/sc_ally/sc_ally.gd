@@ -1,22 +1,39 @@
 class_name ScAlly extends CharacterBody2D
 
 var ally: Ally
-var level: AllyLevel: set = _set_level
-var group_name: String
-var levels: Array[AllyLevel] = []
+var in_game_buyed_levels: Array[AllyLevel] = []
 
-func _set_level(new_value: AllyLevel):
-	level = new_value 
-	var new_ally_scene : ScAlly = level.scene.instantiate()
-	disconnect_hud(self)
-	await change_ally_scene(new_ally_scene)
-	connect_hud(new_ally_scene)
-	fix_ally_upgrade_menu_position(new_ally_scene)
-	new_ally_scene.set_ally(ally)
+func _buy_level(level:AllyLevel):
+	in_game_buyed_levels.append(level)
+	change_ally_scene_by_level(level)
+	modify_dependant_nodes()
+
+func modify_dependant_nodes():
+	var group_name = str(self)
+	get_tree().call_group(group_name,"set_levels")
+
+func _ready() -> void:
+	print("from scally ready" ,ally)
+	print_stack()
+	_buy_level(ally.base_level)
 
 func set_ally(_ally: Ally):
 	ally = _ally
 	%AllyUpgradeMenu.ally = ally
+
+func change_ally_scene_by_level(level: AllyLevel):
+	var new_ally_scene : ScAlly = level.scene.instantiate()
+	disconnect_hud(self)
+
+	self.name = "OldScAlly"
+	new_ally_scene.name = "ScAlly"
+	await _play_exit_animation()
+	get_parent().add_child(new_ally_scene)
+	self.queue_free()
+
+	connect_hud(new_ally_scene)
+	fix_ally_upgrade_menu_position(new_ally_scene)
+	new_ally_scene.set_ally(ally)
 
 func connect_hud(sc_ally: ScAlly):
 	sc_ally.get_node("%AllyUpgradeMenu").level_changed.connect(sc_ally.on_ally_upgrade_menu_level_changed)
@@ -35,22 +52,13 @@ func on_select_ally_btn_pressed():
 	else: %AllyUpgradeMenu.visible = true
 
 func on_ally_upgrade_menu_level_changed(_level: AllyLevel):
-	level = _level
+	_buy_level(_level)
 
 func fix_ally_upgrade_menu_position(sc_ally: ScAlly):
 	var ally_HUD: Node = sc_ally.get_node("AllyHUD")
 	var previous_pos = ally_HUD.global_position
 	ally_HUD.top_level = true
 	ally_HUD.global_position = previous_pos
-
-func change_ally_scene(new_sc_ally: ScAlly):
-	self.name = "OldScAlly"
-	new_sc_ally.name = "ScAlly"
-	await _play_exit_animation()
-	get_parent().add_child(new_sc_ally)
-	
-	self.queue_free()
-	return
 
 func _play_exit_animation():
 	var has_animation_player: bool = has_node("StateAnimationPlayer") 

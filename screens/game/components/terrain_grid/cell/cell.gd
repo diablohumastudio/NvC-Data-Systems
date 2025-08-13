@@ -1,11 +1,9 @@
 class_name Cell extends Button
 
-const SC_ALLY_CONTAINER_PKSC: PackedScene = preload("uid://bhw8iapb537a1")
 const SC_ALLY_PKSC: PackedScene = preload("uid://cm7j6ucxdy4na")
 
 func _on_pressed() -> void:
 	_validate_children()
-	print( !GSS.removing_ally_state , !is_ocupied() , GSS.ally_to_place)
 	if !GSS.removing_ally_state and !is_ocupied() and GSS.ally_to_place:
 		_add_ally()
 		GSS._ally_just_placed.emit(GSS.ally_to_place)
@@ -22,6 +20,5 @@ func _validate_children():
 
 func _add_ally():
 	var new_ally_scene_container: ScAlly = SC_ALLY_PKSC.instantiate()
-	add_child(new_ally_scene_container)
 	new_ally_scene_container.ally = GSS.ally_to_place
-	new_ally_scene_container.level = GSS.ally_to_place.base_level
+	add_child(new_ally_scene_container)
