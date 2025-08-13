@@ -2,13 +2,13 @@ class_name AllyUpgradeMenu extends Control
 
 signal level_changed(level)
 
-var ally: Ally: set = _set_ally 
+var ally: Ally
 
-func _set_ally(new_value: Ally):
-	ally = new_value
+func _ready() -> void:
 	_set_level_buttons()
 
 func _set_level_buttons():
+	if !ally: return
 	for level in ally.levels:
 		if !level.get_saved_ud_ally_level().unlocked: continue
 
