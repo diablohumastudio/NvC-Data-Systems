@@ -666,6 +666,7 @@ text = "NAME Level 1"
 
 [node name="AllyUpgradeMenu" parent="AllyHUD" index="1" instance=ExtResource("2_ixete")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 offset_left = 128.0
 offset_top = -264.0

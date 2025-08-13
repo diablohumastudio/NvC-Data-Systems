@@ -1,9 +1,8 @@
-[gd_scene load_steps=47 format=3 uid="uid://oyoty7ffa6gl"]
+[gd_scene load_steps=46 format=3 uid="uid://oyoty7ffa6gl"]
 
 [ext_resource type="Script" uid="uid://dnhmh113e864x" path="res://game_characters_scenes/allies/data/shoter_ally/bayonet_soldier/bayonet_soldier.gd" id="1_m4sxj"]
 [ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/assets/circle_shadow.png" id="2_5ltgp"]
 [ext_resource type="PackedScene" uid="uid://c0gkj1gflhpbp" path="res://game_characters_scenes/allies/models/upgrade_popup/upgrade_popup.tscn" id="2_piurg"]
-[ext_resource type="Texture2D" uid="uid://c5nxjxecw45ep" path="res://game_characters_scenes/allies/data/shoter_ally/bayonet_soldier/assets/bayonet_soldier_mask_2_img.png" id="3_lyapl"]
 [ext_resource type="Texture2D" uid="uid://d3m2ymkclsdx7" path="res://game_characters_scenes/assets/hurt_light.png" id="3_sr3fg"]
 [ext_resource type="BitMap" uid="uid://d26hrp30jxy61" path="res://game_characters_scenes/allies/data/shoter_ally/bayonet_soldier/assets/bayonet_soldier_mask_2.png" id="4_1jdjf"]
 [ext_resource type="Texture2D" uid="uid://c73v5xy4v6gea" path="res://game_characters_scenes/assets/hurt_shape.png" id="4_st7co"]
@@ -1277,7 +1276,6 @@ offset_left = -83.0
 offset_top = -257.0
 offset_right = 225.0
 offset_bottom = 66.0
-texture_normal = ExtResource("3_lyapl")
 texture_click_mask = ExtResource("4_1jdjf")
 
 [node name="Shadow" type="Sprite2D" parent="."]
