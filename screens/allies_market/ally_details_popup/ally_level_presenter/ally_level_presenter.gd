@@ -14,7 +14,7 @@ func _update_visuals():
 	var is_level_buyed: bool = ud_ally_level.buyed
 	
 	%AllyLevelName.text = ally_level.level_id
-	%AllyLevelPrice.text = str(ally_level.price)
+	%AllyLevelPrice.text = str(ally_level.market_price)
 	%AllyLevelIsUnlocked.text = str(is_level_unlocked)
 	%AllyLevelIsUnlocked.modulate = Color("00caa4") if is_level_unlocked else Color("971029")
 	%BuyAllyLevelBtn.disabled = !is_level_unlocked

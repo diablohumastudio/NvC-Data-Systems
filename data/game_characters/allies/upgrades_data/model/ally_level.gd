@@ -1,5 +1,7 @@
 class_name AllyLevel extends GameCharacterLevel
 
+signal in_game_just_unlocked
+
 @export_category("ID")
 @export var level_id: String
 @export var ally_id: Ally.IDs
@@ -45,3 +47,4 @@ func _check_is_unlocked():
 			return
 	if !in_game_unlocked:
 		in_game_unlocked = true
+		in_game_just_unlocked.emit()

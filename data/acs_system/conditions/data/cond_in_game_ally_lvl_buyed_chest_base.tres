@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_8lgmh")
-ally_level_id = ""
-id = ""
+ally_level_id = "chest base"
+id = "cond_ally_lvl_buyed_chest_base"
 metadata/_custom_type_script = "uid://dv4wr1isydoy7"

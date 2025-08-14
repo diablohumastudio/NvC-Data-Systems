@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://mwls1togvm3o"]
+
+[ext_resource type="Script" uid="uid://r3x6h3jbsmn7" path="res://game_characters_scenes/allies/models/upgrade_popup/upgrade_to_level_btn/upgrade_to_level_btn.gd" id="1_m7o0e"]
+
+[node name="UpgradeToLevelBtn" type="Button"]
+script = ExtResource("1_m7o0e")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

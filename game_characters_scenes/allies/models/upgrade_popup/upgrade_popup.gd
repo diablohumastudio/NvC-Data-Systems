@@ -2,7 +2,9 @@ class_name AllyUpgradeMenu extends Control
 
 signal level_changed(level)
 
-var ally: Ally
+const UPGRADE_TO_LEVEL_BTN_PKSC: PackedScene = preload("uid://mwls1togvm3o")
+
+var ally: Ally 
 
 func _ready() -> void:
 	_set_level_buttons()
@@ -10,13 +12,6 @@ func _ready() -> void:
 func _set_level_buttons():
 	if !ally: return
 	for level in ally.levels:
-		if !level.get_saved_ud_ally_level().unlocked: continue
-
-		var new_upgrade_to_level_btn: Button = Button.new()
-		new_upgrade_to_level_btn.text = "Upgrade to level: " + level.level_id
-		new_upgrade_to_level_btn.set("theme_override_font_sizes/font_size", 35)
-		new_upgrade_to_level_btn.pressed.connect(_on_upgrade_to_level_btn_presse.bind(level))
+		var new_upgrade_to_level_btn: UpgradeToLevelButton = UPGRADE_TO_LEVEL_BTN_PKSC.instantiate()
+		new_upgrade_to_level_btn.level = level
 		%UpgradeToLevelBtnsContainer.add_child(new_upgrade_to_level_btn)
-
-func _on_upgrade_to_level_btn_presse(level: AllyLevel):
-	level_changed.emit(level)
