@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CondInGameAllyLevelBuyed" load_steps=2 format=3 uid="uid://slf5dq0o0pe6"]
+
+[ext_resource type="Script" uid="uid://dv4wr1isydoy7" path="res://data/acs_system/conditions/model/cond_in_game_ally_level_buyed.gd" id="1_hu2kp"]
+
+[resource]
+script = ExtResource("1_hu2kp")
+ally_level_id = ""
+id = ""
+metadata/_custom_type_script = "uid://dv4wr1isydoy7"
