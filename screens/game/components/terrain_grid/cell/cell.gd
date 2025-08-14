@@ -1,6 +1,6 @@
 class_name Cell extends Button
 
-const SC_ALLY_PKSC: PackedScene = preload("uid://cm7j6ucxdy4na")
+const SC_ALLY_CONTAINER_PATH: PackedScene = preload("uid://b1xs0qcyd7lb4")
 
 func _on_pressed() -> void:
 	_validate_children()
@@ -19,7 +19,6 @@ func _validate_children():
 			push_error("Cell MUST NOT contain children of diferent class than ScALly")
 
 func _add_ally():
-	var new_ally_scene: ScAlly = SC_ALLY_PKSC.instantiate()
+	var new_ally_scene: ScAllyContainer = SC_ALLY_CONTAINER_PATH.instantiate()
 	new_ally_scene.ally = GSS.ally_to_place
 	add_child(new_ally_scene)
-	new_ally_scene.initializate_at_base_level()

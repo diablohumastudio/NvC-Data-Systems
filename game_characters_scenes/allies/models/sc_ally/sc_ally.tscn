@@ -1,13 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://cm7j6ucxdy4na"]
+[gd_scene load_steps=3 format=3 uid="uid://cm7j6ucxdy4na"]
 
 [ext_resource type="Script" uid="uid://dbcsemdveveol" path="res://game_characters_scenes/allies/models/sc_ally/sc_ally.gd" id="1_btjlv"]
-[ext_resource type="PackedScene" uid="uid://dy547ebgdkeiw" path="res://game_characters_scenes/allies/models/sc_ally_levels_manager/sc_ally_levels_manager.tscn" id="2_7btcl"]
 [ext_resource type="PackedScene" uid="uid://c0gkj1gflhpbp" path="res://game_characters_scenes/allies/models/upgrade_popup/upgrade_popup.tscn" id="2_g1flm"]
 
 [node name="ScAlly" type="CharacterBody2D"]
 script = ExtResource("1_btjlv")
-
-[node name="ScAllyLevelsManager" parent="." instance=ExtResource("2_7btcl")]
 
 [node name="AllyHUD" type="Control" parent="."]
 layout_mode = 3
