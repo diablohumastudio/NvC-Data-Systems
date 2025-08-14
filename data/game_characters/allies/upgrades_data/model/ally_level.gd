@@ -11,7 +11,7 @@ class_name AllyLevel extends GameCharacterLevel
 
 @export var scene: PackedScene
 
-@export var conditions: Array[Condition]
+@export var unlock_conditions: Array[Condition]
 
 func get_saved_ud_ally_level() -> UDAllyLevel:
 	return UDS.get_ud_ally_level_by_id_in_ally(level_id, ally_id)
