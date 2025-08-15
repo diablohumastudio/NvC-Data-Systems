@@ -18,6 +18,7 @@ signal in_game_just_unlocked
 @export var in_game_price: int
 @export var in_game_unlock_conditions: Array[Condition] = []: set = _set_in_game_unlock_conditions
 var in_game_unlocked: bool = false
+var in_game_buyed: bool = false
 var in_game_fullfilled_conditions : Array[Condition] = []
 
 func get_saved_ud_ally_level() -> UDAllyLevel:
