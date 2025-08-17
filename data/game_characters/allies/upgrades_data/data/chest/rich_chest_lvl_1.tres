@@ -17,5 +17,5 @@ unlock_conditions = Array[ExtResource("1_2nh8c")]([ExtResource("2_tliut")])
 market_price = 0
 scene = ExtResource("3_d6yw0")
 in_game_price = 0
-in_game_unlocked_conditions = Array[ExtResource("1_2nh8c")]([])
+in_game_unlock_conditions = Array[ExtResource("1_2nh8c")]([])
 initial_HP = 100

@@ -27,3 +27,12 @@ offset_left = 1129.0
 offset_top = 383.0
 offset_right = 1129.6
 offset_bottom = 383.48
+
+[node name="PrintLevels" type="Button" parent="."]
+layout_mode = 0
+offset_left = 756.0
+offset_top = 750.0
+offset_right = 1028.0
+offset_bottom = 899.0
+
+[connection signal="pressed" from="PrintLevels" to="." method="_on_print_levels_pressed"]
