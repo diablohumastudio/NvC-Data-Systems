@@ -13,5 +13,5 @@ func _update_kill_enemy_label():
 
 func _on_kill_enemy_btn_pressed() -> void:
 	GSS.enemies_killed += 1
-	ACS.set_action(Action.new(Action.TYPES.ENEMY_KILLED, Action.PayEnemKilled.new(GSS.enemies_killed)))
+	ACS.set_action(Action.new(Action.TYPES.ENEMY_KILLED, PayEnemKilled.new(GSS.enemies_killed)))
 	_update_kill_enemy_label()

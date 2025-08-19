@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="Level" load_steps=4 format=3 uid="uid://fnusyqy3rig8"]
 
 [ext_resource type="Script" uid="uid://sukboetqeqqg" path="res://data/levels/res_data/model/level.gd" id="1_b2qdb"]
-[ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://data/acs_system/conditions/model/condition.gd" id="1_y6qtq"]
-[ext_resource type="Resource" uid="uid://c0botmc4r3e7t" path="res://data/acs_system/conditions/data/cond_lv_compl_lv_3_ex.tres" id="2_dxxok"]
+[ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://global_systems/data_systems/action_condition_system/condition.gd" id="1_y6qtq"]
+[ext_resource type="Resource" uid="uid://c0botmc4r3e7t" path="res://global_systems/data_systems/action_condition_system/conditions/data/cond_lv_compl_lv_3_ex.tres" id="2_dxxok"]
 
 [resource]
 script = ExtResource("1_b2qdb")

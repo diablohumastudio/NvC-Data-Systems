@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="CondAllyLevelBuyed" load_steps=2 format=3 uid="uid://6ex285c86auh"]
-
-[ext_resource type="Script" uid="uid://gnfstv4puuoh" path="res://data/acs_system/conditions/model/cond_ally_level_buyed.gd" id="1_v0kfj"]
-
-[resource]
-script = ExtResource("1_v0kfj")
-ally_level_id = "chest base"
-id = "cond_ally_lvl_buyed_chest_base"
-metadata/_custom_type_script = "uid://gnfstv4puuoh"

@@ -27,4 +27,4 @@ func _on_print_internal_bool_btn_pressed() -> void:
 			printt(level.level_id, condition.id, conditions[condition])
 
 func _on_emit_action_btn_pressed() -> void:
-	ACS.set_action(Action.new(Action.TYPES.LV_COMPLTD, Action.PayLvCompl.new(Level.IDs.Level2)))
+	ACS.set_action(Action.new(Action.TYPES.LV_COMPLTD, PayLvCompl.new(Level.IDs.Level2)))

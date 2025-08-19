@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CondInGameAllyLevelBuyed" load_steps=2 format=3 uid="uid://bgkix3yawnv2c"]
+
+[ext_resource type="Script" uid="uid://dv4wr1isydoy7" path="res://global_systems/data_systems/action_condition_system/conditions/models/cond_in_game_ally_level_buyed.gd" id="1_8lgmh"]
+
+[resource]
+script = ExtResource("1_8lgmh")
+ally_level_id = "chest base"
+id = "cond_ally_lvl_buyed_chest_base"
+metadata/_custom_type_script = "uid://dv4wr1isydoy7"

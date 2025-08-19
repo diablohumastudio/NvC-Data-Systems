@@ -19,6 +19,6 @@ func _undate_colors():
 		modulate = Color.BLUE
 
 func _on_pressed() -> void:
-	ACS.set_action(Action.new(Action.TYPES.IN_GAME_BUYED_ALLY_LEVEL, Action.PayInGameBuyedAllyLevel.new(level.level_id)))
+	ACS.set_action(Action.new(Action.TYPES.IN_GAME_BUYED_ALLY_LEVEL, PayInGameBuyedAllyLevel.new(level.level_id, level.ally_id)))
 	level.in_game_buyed = true
 	upgraded_to_level.emit(level)

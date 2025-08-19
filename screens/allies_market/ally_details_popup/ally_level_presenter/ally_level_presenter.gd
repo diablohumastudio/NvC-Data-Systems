@@ -22,7 +22,7 @@ func _update_visuals():
 	%AllyLevelIsBuyed.modulate = Color("00caa4") if is_level_buyed else Color("971029")
 
 func _on_buy_ally_level_btn_pressed() -> void:
-	ACS.set_action(Action.new(Action.TYPES.BUYED_ALLY_LEVEL, Action.PayBuyedAllyLevel.new(ally_level.level_id, ally_level.ally_id)))
+	ACS.set_action(Action.new(Action.TYPES.BUYED_ALLY_LEVEL, PayBuyedAllyLevel.new(ally_level.level_id, ally_level.ally_id)))
 	update_all_level_presenters_visuals()
 
 func update_all_level_presenters_visuals():

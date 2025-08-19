@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="CondEnemKillTot" load_steps=2 format=3 uid="uid://c2fdve1l4yaob"]
-
-[ext_resource type="Script" uid="uid://n5ar0lpo6tmf" path="res://data/acs_system/conditions/model/cond_enemy_killed_tot.gd" id="1_tkp6v"]
-
-[resource]
-script = ExtResource("1_tkp6v")
-enemies_to_kill = 5
-id = "cond_enem_killd_tot_5"
-metadata/_custom_type_script = "uid://n5ar0lpo6tmf"

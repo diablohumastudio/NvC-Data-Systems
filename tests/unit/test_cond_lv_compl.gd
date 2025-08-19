@@ -13,11 +13,11 @@ func before_each():
 	condition.id = "test_cond_lv_1"
 	
 	# Correct action that should trigger the condition
-	var payload_correct = Action.PayLvCompl.new(Level.IDs.Level1)
+	var payload_correct = PayLvCompl.new(Level.IDs.Level1)
 	action_correct = Action.new(Action.TYPES.LV_COMPLTD, payload_correct)
 	
 	# Wrong action that should not trigger the condition
-	var payload_wrong = Action.PayLvCompl.new(Level.IDs.Level2)
+	var payload_wrong = PayLvCompl.new(Level.IDs.Level2)
 	action_wrong = Action.new(Action.TYPES.LV_COMPLTD, payload_wrong)
 
 func after_each():
@@ -86,7 +86,7 @@ func test_condition_does_not_emit_signal_on_wrong_level():
 func test_evaluate_with_matching_level_id():
 	# Test evaluation logic with matching level ID
 	condition.level_id = Level.IDs.Level2
-	var payload = Action.PayLvCompl.new(Level.IDs.Level2)
+	var payload = PayLvCompl.new(Level.IDs.Level2)
 	var action = Action.new(Action.TYPES.LV_COMPLTD, payload)
 	
 	var signal_received = [false]
@@ -100,7 +100,7 @@ func test_evaluate_with_matching_level_id():
 func test_evaluate_with_non_matching_level_id():
 	# Test evaluation logic with non-matching level ID
 	condition.level_id = Level.IDs.Level1
-	var payload = Action.PayLvCompl.new(Level.IDs.Level3)
+	var payload = PayLvCompl.new(Level.IDs.Level3)
 	var action = Action.new(Action.TYPES.LV_COMPLTD, payload)
 	
 	var signal_received = [false]
@@ -114,7 +114,7 @@ func test_evaluate_with_non_matching_level_id():
 # Edge Cases
 func test_evaluate_with_wrong_action_type():
 	# Test evaluation with wrong action type (should not crash)
-	var payload = Action.PayEnemKilled.new(5)
+	var payload = PayEnemKilled.new(5)
 	var wrong_type_action = Action.new(Action.TYPES.ENEMY_KILLED, payload)
 	
 	# This should not crash even though payload is wrong type
@@ -134,7 +134,7 @@ func test_full_condition_workflow():
 	)
 	
 	# Test with correct level
-	var payload = Action.PayLvCompl.new(Level.IDs.LevelEx)
+	var payload = PayLvCompl.new(Level.IDs.LevelEx)
 	var action = Action.new(Action.TYPES.LV_COMPLTD, payload)
 	
 	cond.evaluate(action)
