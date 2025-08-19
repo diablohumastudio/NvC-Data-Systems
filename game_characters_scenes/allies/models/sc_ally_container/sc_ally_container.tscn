@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b1xs0qcyd7lb4"]
 
-[ext_resource type="Script" uid="uid://bmui48xy1o1pq" path="res://game_characters_scenes/allies/models/sc_ally/sc_ally_container.gd" id="1_8pkuy"]
+[ext_resource type="Script" uid="uid://bmui48xy1o1pq" path="res://game_characters_scenes/allies/models/sc_ally_container/sc_ally_container.gd" id="1_8pkuy"]
 
 [node name="ScAllyContainer" type="Control"]
 layout_mode = 3
