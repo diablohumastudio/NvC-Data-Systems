@@ -64,7 +64,6 @@ func _create_new_ud_levels() -> Array[UDLevel]:
 		var new_ud_level: UDLevel = UDLevel.new()
 		new_ud_level.id = level.id
 		if level.unlockd_by_default: new_ud_level.locked = false
-		var new_conditions_array: Array[Condition]
 		new_ud_level.conditions = level.conditions
 		ud_levels.append(new_ud_level)
 

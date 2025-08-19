@@ -17,7 +17,8 @@ func _set_conditions(new_value: Array[Condition]):
 			if condition.fullfilled.is_connected(_on_condition_fullfilled):
 				condition.fullfilled.disconnect(_on_condition_fullfilled)
 	
-	conditions = new_value
+	for condition in new_value:
+		conditions.append(ACS.get_condition_by_id(condition.id))
 	if !conditions: return
 
 	for condition in conditions:
