@@ -16,7 +16,7 @@ signal in_game_just_unlocked
 @export var ally_selector_thumbnail: Texture2D
 @export var scene: PackedScene
 @export var in_game_price: int
-@export var in_game_unlock_conditions: Array[Condition] = []: set = _set_in_game_unlock_conditions
+@export var in_game_unlock_conditions: Array[Condition] 
 var in_game_unlocked: bool = false
 var in_game_buyed: bool = false
 var in_game_fullfilled_conditions : Array[String] = []
@@ -24,15 +24,20 @@ var in_game_fullfilled_conditions : Array[String] = []
 func get_saved_ud_ally_level() -> UDAllyLevel:
 	return UDS.get_ud_ally_level_by_id_in_ally(level_id, ally_id)
 
-func _set_in_game_unlock_conditions(new_value: Array[Condition]):
+func set_in_game_unlock_conditions_by_acs_instance(acs: ActionConditionSystem):
 	#disconect from previous setted value
 	if in_game_unlock_conditions:
 		for condition in in_game_unlock_conditions as Array[Condition]:
 			if condition.fullfilled.is_connected(_on_condition_fullfilled):
 				condition.fullfilled.disconnect(_on_condition_fullfilled)
 	
-	in_game_unlock_conditions = new_value
-	
+	var new_conditions_array: Array[Condition]
+
+	for condition in in_game_unlock_conditions:
+		var new_condition: Condition = acs.get_condition_by_id(condition.id)
+		new_conditions_array.append(new_condition)
+	in_game_unlock_conditions = new_conditions_array
+
 	if !in_game_unlock_conditions: return
 
 	for condition in in_game_unlock_conditions as Array[Condition]:
