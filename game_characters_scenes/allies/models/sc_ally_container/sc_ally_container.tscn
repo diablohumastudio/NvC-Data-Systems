@@ -1,12 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://b1xs0qcyd7lb4"]
+[gd_scene load_steps=3 format=3 uid="uid://b1xs0qcyd7lb4"]
 
 [ext_resource type="Script" uid="uid://bmui48xy1o1pq" path="res://game_characters_scenes/allies/models/sc_ally_container/sc_ally_container.gd" id="1_8pkuy"]
+[ext_resource type="PackedScene" uid="uid://c0gkj1gflhpbp" path="res://game_characters_scenes/allies/models/upgrade_popup/upgrade_popup.tscn" id="2_tjgay"]
 
 [node name="ScAllyContainer" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
 script = ExtResource("1_8pkuy")
+
+[node name="HUD" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 169.0
+offset_top = -166.0
+offset_right = 209.0
+offset_bottom = -126.0
+
+[node name="AllyUpgradePopUp" parent="HUD" instance=ExtResource("2_tjgay")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
