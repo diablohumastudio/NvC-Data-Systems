@@ -3,9 +3,11 @@ class_name ScAllyContainer extends Control
 var ally: Ally
 var current_ally_scene: ScAlly
 var acs: ActionConditionSystem
+var in_game_buyed_levels: Array[AllyLevel]
 
 func _ready() -> void:
 	acs = ActionConditionSystem.new("res://global_systems/data_systems/action_condition_system/conditions/data/in_game/", "res://global_systems/data_systems/action_condition_system/state_changers/data/in_game/")
+	in_game_buyed_levels.append(ally.base_level)
 	change_sc_ally(ally.base_level.scene.instantiate())
 	%AllyUpgradePopUp.ally = ally
 	%AllyUpgradePopUp.acs = acs
@@ -14,30 +16,23 @@ func _ready() -> void:
 func change_sc_ally(new_ally_scene: ScAlly):
 	if has_node("ScAlly"):
 		current_ally_scene.name = "OldScAlly"
-		disconnect_sc_ally_hud(current_ally_scene)
 		current_ally_scene.queue_free()
 	new_ally_scene.name = "ScAlly"
-	connect_sc_ally_hud(new_ally_scene)
+	new_ally_scene.pressed.connect(on_select_ally_btn_pressed)
 	add_child(new_ally_scene)
-	fix_hud_position_and_z(new_ally_scene)
+	fix_hud_position_and_z()
 	current_ally_scene = new_ally_scene
 
-func fix_hud_position_and_z(ally_scene: ScAlly):
-	var HUD = get_node("HUD")
-	var hud_position : Vector2 = HUD.global_position
-	HUD.top_level = true
-	HUD.global_position = hud_position
-
-func disconnect_sc_ally_hud(ally_scene: ScAlly):
-	if (ally_scene.get_node("AllyHUD/SelectAllyBtn") as TextureButton).pressed.is_connected(on_select_ally_btn_pressed):
-		(ally_scene.get_node("AllyHUD/SelectAllyBtn") as TextureButton).pressed.disconnect(on_select_ally_btn_pressed)
-
-func connect_sc_ally_hud(ally_scene: ScAlly):
-	(ally_scene.get_node("AllyHUD/SelectAllyBtn") as TextureButton).pressed.connect(on_select_ally_btn_pressed)
+func fix_hud_position_and_z():
+	var popup_position : Vector2 = %AllyUpgradePopUp.global_position
+	%AllyUpgradePopUp.top_level = true
+	%AllyUpgradePopUp.global_position = popup_position
 
 func on_ally_upgrade_menu_level_changed(level: AllyLevel):
-	print("upgrade menu level changed", level.level_id)
-	#change_sc_ally(level.scene.instantiate())
+	if level.scene:
+		change_sc_ally(level.scene.instantiate())
+	in_game_buyed_levels.append(level)
+	get_tree().call_group(str(current_ally_scene), "set_levels", in_game_buyed_levels)
 
 func on_select_ally_btn_pressed():
 	if GSS.removing_ally_state:

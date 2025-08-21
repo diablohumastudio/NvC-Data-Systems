@@ -15,10 +15,10 @@ func is_ocupied() -> bool:
 func _validate_children():
 	if get_child_count() > 1:
 		push_error("Cell MUST NOT have more than one children")
-	elif get_child_count() == 1 and !get_child(0) is ScAlly:
-			push_error("Cell MUST NOT contain children of diferent class than ScALly")
+	elif get_child_count() == 1 and !get_child(0) is ScAllyContainer:
+			push_error("Cell MUST NOT contain children of diferent class than ScAllyContainer")
 
 func _add_ally():
-	var new_ally_scene: ScAllyContainer = SC_ALLY_CONTAINER_PATH.instantiate()
-	new_ally_scene.ally = GSS.ally_to_place
-	add_child(new_ally_scene)
+	var new_ally_scene_container: ScAllyContainer = SC_ALLY_CONTAINER_PATH.instantiate()
+	new_ally_scene_container.ally = GSS.ally_to_place
+	add_child(new_ally_scene_container)

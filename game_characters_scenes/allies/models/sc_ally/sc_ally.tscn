@@ -5,25 +5,10 @@
 [node name="ScAlly" type="CharacterBody2D"]
 script = ExtResource("1_btjlv")
 
-[node name="AllyHUD" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="AllyNameAndLevelLabel" type="Label" parent="AllyHUD"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_right = 163.0
-offset_bottom = 35.0
-theme_override_font_sizes/font_size = 25
-text = "NAME Level 1"
-
-[node name="SelectAllyBtn" type="TextureButton" parent="AllyHUD"]
+[node name="SelectAllyBtn" type="TextureButton" parent="."]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.211765)
 custom_minimum_size = Vector2(192, 180)
-layout_mode = 0
 offset_left = 3.0
 offset_top = 1.0
 offset_right = 195.0

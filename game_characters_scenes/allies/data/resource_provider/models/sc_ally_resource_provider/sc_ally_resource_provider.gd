@@ -6,6 +6,7 @@ class_name ResourceProvider extends ScAlly
 @onready var state_machine: ResourceProviderStateMachine
 
 func _ready() -> void:
+	super()
 	state_machine = %ResourceProviderStateMachine
 
 # This function here so it can be called by StateAnimationPlayer call_method track interface

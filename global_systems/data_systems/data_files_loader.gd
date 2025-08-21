@@ -1,39 +1,5 @@
 class_name DataFilesLoader extends Node
 
-static func create_ud_levels_from_res_files() -> Array[UDLevel]:
-	var _ud_levels: Array[UDLevel]
-	var dir := DirAccess.open(GC.DATA_FOLDERS_PATHS.UD_LEVELS)
-	assert(dir != null, "Could not open folder")
-	dir.list_dir_begin()
-	for file: String in dir.get_files():
-		var ud_level: UDLevel = load(dir.get_current_dir() + "/" + file)
-		assert(ud_level != null, "Failed to load ud_level: " + file)
-		_ud_levels.append(ud_level.duplicate())
-	return _ud_levels
-
-static func create_ud_achievements_from_res_files() -> Array[UDAchievement]:
-	var _ud_levels: Array[UDAchievement]
-	var dir := DirAccess.open(GC.DATA_FOLDERS_PATHS.UD_ACHIEVEMENTS)
-	assert(dir != null, "Could not open folder")
-	dir.list_dir_begin()
-	for file: String in dir.get_files():
-		var ud_achievement: UDAchievement = load(dir.get_current_dir() + "/" + file)
-		assert(ud_achievement != null, "Failed to load ud_achievement: " + file)
-		_ud_levels.append(ud_achievement.duplicate())
-	return _ud_levels
-
-static func create_ud_allies_from_res_files() -> Array[UDAlly]:
-	var _ud_allies: Array[UDAlly]
-	var dir := DirAccess.open(GC.DATA_FOLDERS_PATHS.UD_ALLIES)
-	assert(dir != null, "Could not open folder")
-	dir.list_dir_begin()
-	for file: String in dir.get_files():
-		var ud_ally: UDAlly = load(dir.get_current_dir() + "/" + file)
-		assert(ud_ally != null, "Failed to load ud_ally: " + file)
-		var duplic_ud_ally : UDAlly = ud_ally.duplicate()
-		_ud_allies.append(duplic_ud_ally)
-	return _ud_allies
-
 static func get_levels_from_res_files() -> Array[Level]:
 	var levels: Array[Level]
 	var dir := DirAccess.open(GC.DATA_FOLDERS_PATHS.RES_LEVELS)
