@@ -24,5 +24,4 @@ func _set_level_buttons():
 		%UpgradeToLevelBtnsContainer.add_child(new_upgrade_to_level_btn)
 
 func _on_upgrade_to_level_button_upgraded_to_level(level: AllyLevel):
-	for upgrade_to_lvl_btn in %UpgradeToLevelBtnsContainer.get_children() as Array[UpgradeToLevelButton]:
-		upgrade_to_lvl_btn._undate_state_visuals()
+	level_changed.emit(level)

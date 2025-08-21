@@ -7,5 +7,5 @@ func _init() -> void:
 
 func evaluate(action: Action):
 	var payload: PayInGameBuyedAllyLevel = action.payload
-	if ally_level_id == payload.ally_level_id:
+	if ally_level_id == payload.level.level_id:
 		fullfilled.emit(self)

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="SCInGameBuyedAllyLevel" load_steps=2 format=3 uid="uid://v26b3mf4drhw"]
+
+[ext_resource type="Script" uid="uid://cvvnbxnqyprsv" path="res://global_systems/data_systems/action_condition_system/state_changers/models/sc_in_game_buyed_ally_level.gd" id="1_32mfs"]
+
+[resource]
+script = ExtResource("1_32mfs")
+type = 5
+metadata/_custom_type_script = "uid://cvvnbxnqyprsv"

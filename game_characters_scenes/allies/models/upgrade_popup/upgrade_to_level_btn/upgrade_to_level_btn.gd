@@ -15,18 +15,23 @@ func _set_level(new_value: AllyLevel):
 func _ready():
 	text = "Upgrade to level: " + level.level_id
 	set("theme_override_font_sizes/font_size", 35)
-	_undate_state_visuals()
+	_update_state_visuals()
+	level.in_game_just_unlocked.connect(_update_state_visuals)
+	level.in_game_just_buyed.connect(_update_state_visuals)
 
-func _undate_state_visuals():
-	if level.in_game_unlocked == false and !level.unlockd_by_default:
-		disabled = true
-	if level.in_game_unlocked == true and level.get_saved_ud_ally_level().unlocked:
+func _update_state_visuals():
+	var buyed: bool = level.get_saved_ud_ally_level().buyed
+	printt("------",level.buyed_by_default,level.in_game_unlocked, buyed, level.level_id)
+	if (level.in_game_unlocked and buyed) or (level.unlockd_by_default and buyed):
 		disabled = false
 		modulate = Color.GREEN
+	else:
+		disabled = true
+		modulate = Color.WHITE
 	if level.in_game_buyed == true: 
-		modulate = Color.BLUE
+		disabled = true
+		modulate = Color.DIM_GRAY
 
 func _on_pressed() -> void:
-	acs.set_action(Action.new(Action.TYPES.IN_GAME_BUYED_ALLY_LEVEL, PayInGameBuyedAllyLevel.new(level.level_id, level.ally_id)))
-	level.in_game_buyed = true
+	acs.set_action(Action.new(Action.TYPES.IN_GAME_BUYED_ALLY_LEVEL, PayInGameBuyedAllyLevel.new(level)))
 	upgraded_to_level.emit(level)

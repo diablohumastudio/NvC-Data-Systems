@@ -13,6 +13,6 @@ id = 1
 ally_name = "Chesst"
 description = "sfdsfd"
 price = 250
-levels = Array[ExtResource("2_rf7lw")]([ExtResource("1_n82i4"), ExtResource("3_b6l72"), ExtResource("4_q6p1n"), ExtResource("5_mw216")])
+levels = Array[ExtResource("2_rf7lw")]([ExtResource("3_b6l72"), ExtResource("4_q6p1n"), ExtResource("5_mw216")])
 base_level = ExtResource("1_n82i4")
 metadata/_custom_type_script = "uid://ccntxav05c4k"

@@ -5,18 +5,9 @@ var current_ally_scene: ScAlly
 var acs: ActionConditionSystem
 
 func _ready() -> void:
-	acs = ActionConditionSystem.new("res://global_systems/data_systems/action_condition_system/conditions/data/in_game/")
-	for condition in acs.conditions as Array[Condition]:
-		condition.fullfilled.connect(_on_condition_fullfilled)
+	acs = ActionConditionSystem.new("res://global_systems/data_systems/action_condition_system/conditions/data/in_game/", "res://global_systems/data_systems/action_condition_system/state_changers/data/in_game/")
 	change_sc_ally(ally.base_level.scene.instantiate())
 	(current_ally_scene.get_node("AllyHUD/AllyUpgradeMenu") as AllyUpgradeMenu).acs = acs
-
-func _on_condition_fullfilled(condition: Condition):
-	if condition.type == Action.TYPES.IN_GAME_BUYED_ALLY_LEVEL:
-		_on_cond_in_game_buyed_ally_level_fullfilled(condition)
-
-func _on_cond_in_game_buyed_ally_level_fullfilled(condition: Condition):
-	print(condition.id)
 
 func change_sc_ally(new_ally_scene: ScAlly):
 	if has_node("ScAlly"):
@@ -47,8 +38,8 @@ func connect_sc_ally_hud(ally_scene: ScAlly):
 	(ally_scene.get_node("AllyHUD/SelectAllyBtn") as TextureButton).pressed.connect(on_select_ally_btn_pressed)
 
 func on_ally_upgrade_menu_level_changed(level: AllyLevel):
-	print("upgrade menu level changed")
-	change_sc_ally(level.scene.instantiate())
+	print("upgrade menu level changed", level.level_id)
+	#change_sc_ally(level.scene.instantiate())
 
 func on_select_ally_btn_pressed():
 	if GSS.removing_ally_state:
