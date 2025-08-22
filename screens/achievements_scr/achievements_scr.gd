@@ -1,7 +1,7 @@
 class_name AchievementsScr extends Control
 
 func _ready() -> void:
-	var achievements: Array[Achievement]
+	var achievements: Array[AchievementData]
 	achievements = DataFilesLoader.get_achievements_from_res_files()
 	for child in %AchievementsList.get_children():
 		child.queue_free()

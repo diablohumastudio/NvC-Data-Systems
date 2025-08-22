@@ -1,6 +1,6 @@
 class_name CondLvCompl extends Condition
 
-@export var level_id: Level.IDs
+@export var level_id: LevelData.IDs
 
 func _init() -> void:
 	type = Action.TYPES.LV_COMPLTD

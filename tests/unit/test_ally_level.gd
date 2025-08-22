@@ -76,7 +76,7 @@ func test_ally_level_full_setup():
 	ally_level.initial_HP = 75
 	
 	assert_eq(ally_level.ally_id, Ally.IDs.BAYONETE_SOLDIER, "Ally ID should be set correctly")
-	assert_eq(ally_level.level_id, "fast_shot_lvl_1", "Level ID should be set correctly")
+	assert_eq(ally_level.level_id, "fast_shot_lvl_1", "LevelData ID should be set correctly")
 	assert_eq(ally_level.price, 150, "Price should be set correctly")
 	assert_eq(ally_level.initial_HP, 75, "Initial HP should be set correctly")
 

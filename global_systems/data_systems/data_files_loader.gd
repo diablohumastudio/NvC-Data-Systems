@@ -1,30 +1,30 @@
 class_name DataFilesLoader extends Node
 
-static func get_levels_from_res_files() -> Array[Level]:
-	var levels: Array[Level]
+static func get_levels_from_res_files() -> Array[LevelData]:
+	var levels: Array[LevelData]
 	var dir := DirAccess.open(GC.DATA_FOLDERS_PATHS.RES_LEVELS)
 	assert(dir != null, "Could not open folder")
 	dir.list_dir_begin()
 	for file: String in dir.get_files():
-		var level: Level = load(dir.get_current_dir() + "/" + file)
+		var level: LevelData = load(dir.get_current_dir() + "/" + file)
 		assert(level != null, "Failed to load achievement: " + file)
 		levels.append(level)
 	return levels
 
-static func get_achievements_from_res_files() -> Array[Achievement]:
-	var achievements: Array[Achievement]
+static func get_achievements_from_res_files() -> Array[AchievementData]:
+	var achievements: Array[AchievementData]
 	var dir := DirAccess.open(GC.DATA_FOLDERS_PATHS.RES_ACHIEVEMENTS)
 	assert(dir != null, "Could not open folder")
 	dir.list_dir_begin()
 	for file: String in dir.get_files():
-		var achievement: Achievement = load(dir.get_current_dir() + "/" + file)
+		var achievement: AchievementData = load(dir.get_current_dir() + "/" + file)
 		assert(achievement != null, "Failed to load achievement: " + file)
 		achievements.append(achievement)
 	return achievements
 
-static func get_achiev_from_res_file_by_id(id: Achievement.IDs) -> Achievement:
-	var achievement: Achievement = load(GC.DATA_FOLDERS_PATHS.RES_ACHIEVEMENTS + Achievement.IDs.keys()[id] + ".tres")
-	assert(achievement != null, GC.DATA_FOLDERS_PATHS.RES_ACHIEVEMENTS + Achievement.IDs.keys()[id] + ".tres")
+static func get_achiev_from_res_file_by_id(id: AchievementData.IDs) -> AchievementData:
+	var achievement: AchievementData = load(GC.DATA_FOLDERS_PATHS.RES_ACHIEVEMENTS + AchievementData.IDs.keys()[id] + ".tres")
+	assert(achievement != null, GC.DATA_FOLDERS_PATHS.RES_ACHIEVEMENTS + AchievementData.IDs.keys()[id] + ".tres")
 	return achievement
 
 static func get_allies_from_res_files() -> Array[Ally]:

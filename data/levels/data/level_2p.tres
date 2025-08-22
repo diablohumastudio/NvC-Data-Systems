@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Level" load_steps=4 format=3 uid="uid://c0580eyighege"]
 
-[ext_resource type="Script" uid="uid://sukboetqeqqg" path="res://data/levels/model/level.gd" id="1_kjcik"]
+[ext_resource type="Script" uid="uid://sukboetqeqqg" path="res://data/levels/model/level_data.gd" id="1_kjcik"]
 [ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://global_systems/data_systems/action_condition_system/condition.gd" id="1_ws8g7"]
 [ext_resource type="Resource" uid="uid://dr8x0p2einy6a" path="res://global_systems/data_systems/action_condition_system/conditions/data/cond_lv_compl_lv_1.tres" id="2_f3cug"]
 

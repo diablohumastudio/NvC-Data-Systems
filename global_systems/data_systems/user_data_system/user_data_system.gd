@@ -58,7 +58,7 @@ func _create_new_ud_allies() -> Array[UDAlly]:
 
 func _create_new_ud_levels() -> Array[UDLevel]:
 	var ud_levels: Array[UDLevel] = []
-	var levels : Array[Level]  = DataFilesLoader.get_levels_from_res_files()
+	var levels : Array[LevelData]  = DataFilesLoader.get_levels_from_res_files()
 
 	for level in levels:
 		var new_ud_level: UDLevel = UDLevel.new()
@@ -71,7 +71,7 @@ func _create_new_ud_levels() -> Array[UDLevel]:
 
 func _create_new_ud_achievements() -> Array[UDAchievement]:
 	var ud_achivements: Array[UDAchievement] = []
-	var achievements: Array[Achievement] = DataFilesLoader.get_achievements_from_res_files()
+	var achievements: Array[AchievementData] = DataFilesLoader.get_achievements_from_res_files()
 	
 	for achievement in achievements:
 		var new_ud_achievement: UDAchievement = UDAchievement.new()
@@ -142,13 +142,13 @@ func get_property(property: PROPERTIES):
 		PROPERTIES.ALLIES:
 			return current_user_data.allies_inventory.ud_allies
 
-func get_ud_level_by_id(id: Level.IDs) -> UDLevel:
+func get_ud_level_by_id(id: LevelData.IDs) -> UDLevel:
 	for ud_level in current_user_data.progress.ud_levels as Array[UDLevel]:
 		if ud_level.id == id:
 			return ud_level
 	return null
 
-func get_ud_achievement_by_id(id: Achievement.IDs) -> UDAchievement:
+func get_ud_achievement_by_id(id: AchievementData.IDs) -> UDAchievement:
 	for ud_achivement in current_user_data.ud_achievements.ud_achievements as Array[UDAchievement]:
 		if ud_achivement.id == id:
 			return ud_achivement

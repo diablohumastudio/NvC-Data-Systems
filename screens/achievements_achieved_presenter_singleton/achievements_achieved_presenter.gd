@@ -15,7 +15,7 @@ func conect_ud_achievements():
 		if !ud_chivement.achieved.is_connected(_on_ud_achievement_achieved):
 			ud_chivement.achieved.connect(_on_ud_achievement_achieved)
 
-func _on_ud_achievement_achieved(id: Achievement.IDs):
+func _on_ud_achievement_achieved(id: AchievementData.IDs):
 	var achievement = DataFilesLoader.get_achiev_from_res_file_by_id(id)
 	var new_achivement_achieved_presenter: AchievementAchievedPresenter
 	new_achivement_achieved_presenter = achivement_achieved_presenter_pksc.instantiate()

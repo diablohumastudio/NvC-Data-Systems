@@ -42,7 +42,7 @@ func test_ud_ally_has_levels_conditions_dictionary():
 	assert_not_null(ud_ally.levels_conditions, "Levels conditions should not be null")
 	assert_true(ud_ally.levels_conditions is Dictionary, "Levels conditions should be a Dictionary")
 
-# Base Level Tests
+# Base LevelData Tests
 func test_set_base_level():
 	# Test setting base level
 	var ud_ally = UDAlly.new()
@@ -52,7 +52,7 @@ func test_set_base_level():
 	assert_true(ud_ally.levels_conditions.has(ally_level_mock), "Base level should be added to conditions")
 	assert_true(ud_ally.unlocked_levels.has("test_level_1"), "Base level should be unlocked")
 
-# Level Status Tests
+# LevelData Status Tests
 func test_is_level_unlocked_true():
 	# Test checking if a level is unlocked when it is
 	var ud_ally = UDAlly.new()

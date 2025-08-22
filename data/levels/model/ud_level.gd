@@ -1,6 +1,6 @@
 class_name UDLevel extends Resource
 
-@export_storage var id: Level.IDs
+@export_storage var id: LevelData.IDs
 
 @export_storage var completed: bool = false
 @export_storage var completed_all_canons: bool = false

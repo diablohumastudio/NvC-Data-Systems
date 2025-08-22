@@ -34,11 +34,11 @@ func test_basic_payload():
 
 func test_pay_lv_compl_payload():
 	# Test PayLvCompl payload
-	var payload = PayLvCompl.new(Level.IDs.Level1)
+	var payload = PayLvCompl.new(LevelData.IDs.Level1)
 	
 	assert_not_null(payload, "PayLvCompl payload should be created")
 	assert_true(payload is ActionPayload, "Should inherit from Payload")
-	assert_eq(payload.level_id, Level.IDs.Level1, "Level ID should be set correctly")
+	assert_eq(payload.level_id, LevelData.IDs.Level1, "LevelData ID should be set correctly")
 
 func test_pay_enem_killed_payload():
 	# Test PayEnemKilled payload
@@ -52,11 +52,11 @@ func test_pay_enem_killed_payload():
 func test_pay_lvl_compl_all_canons_payload():
 	# Test PayLvlComplAllCanons payload
 	var canons_alive = 3
-	var payload = PayLvlComplAllCanons.new(Level.IDs.Level2, canons_alive)
+	var payload = PayLvlComplAllCanons.new(LevelData.IDs.Level2, canons_alive)
 	
 	assert_not_null(payload, "PayLvlComplAllCanons payload should be created")
 	assert_true(payload is ActionPayload, "Should inherit from Payload")
-	assert_eq(payload.level_id, Level.IDs.Level2, "Level ID should be set correctly")
+	assert_eq(payload.level_id, LevelData.IDs.Level2, "LevelData ID should be set correctly")
 	assert_eq(payload.canons_alive, canons_alive, "Canons alive should be set correctly")
 
 func test_pay_buyed_ally_level_payload():
@@ -72,12 +72,12 @@ func test_pay_buyed_ally_level_payload():
 # Integration Tests
 func test_action_with_level_completion_payload():
 	# Test full action with level completion
-	var payload = PayLvCompl.new(Level.IDs.Level2)
+	var payload = PayLvCompl.new(LevelData.IDs.Level2)
 	var action = Action.new(Action.TYPES.LV_COMPLTD, payload)
 	
 	assert_eq(action.type, Action.TYPES.LV_COMPLTD, "Action type should match")
 	assert_true(action.payload is PayLvCompl, "Payload should be correct type")
-	assert_eq(action.payload.level_id, Level.IDs.Level2, "Payload should contain correct level ID")
+	assert_eq(action.payload.level_id, LevelData.IDs.Level2, "Payload should contain correct level ID")
 
 func test_action_with_enemy_killed_payload():
 	# Test full action with enemy killed

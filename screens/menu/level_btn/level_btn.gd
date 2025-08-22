@@ -1,8 +1,8 @@
 class_name LevelBtn extends Button
 
-@export var level: Level : set = _set_level
+@export var level: LevelData : set = _set_level
 
-func _set_level(new_value: Level):
+func _set_level(new_value: LevelData):
 	if !new_value: return
 	level = new_value
 	_change_color_and_text()

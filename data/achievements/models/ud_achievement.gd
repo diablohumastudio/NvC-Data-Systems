@@ -1,8 +1,8 @@
 class_name UDAchievement extends Resource
 
-signal achieved(id: Achievement.IDs)
+signal achieved(id: AchievementData.IDs)
 
-@export_storage var id: Achievement.IDs
+@export_storage var id: AchievementData.IDs
 
 @export_storage var is_achieved: bool = false
 @export_storage var porcentage_achieved: int = 0

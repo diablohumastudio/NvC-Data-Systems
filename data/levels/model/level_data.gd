@@ -1,4 +1,4 @@
-class_name Level extends Resource
+class_name LevelData extends Resource
 
 enum IDs {Level1, Level2, Level2p, Level3, LevelEx, LevelEx2, Level4}
 

@@ -1,4 +1,4 @@
-class_name Achievement extends Resource
+class_name AchievementData extends Resource
 
 enum IDs {achiv_compl_lv_2, achiv_compl_lv_2_and_2p, achiv_enem_kill_any_level_3, achiv_enem_kill_tot_5}
 
