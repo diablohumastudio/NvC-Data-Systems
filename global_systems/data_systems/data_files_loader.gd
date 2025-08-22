@@ -37,9 +37,7 @@ static func get_allies_from_res_files() -> Array[AllyData]:
 		dir.change_dir(GC.DATA_FOLDERS_PATHS.RES_ALLIES +ally_type_folder)
 		for ally_folder : String in dir.get_directories():
 			if ally_folder == "models": continue
-			print(GC.DATA_FOLDERS_PATHS.RES_ALLIES + ally_type_folder + "/" +ally_folder)
 			dir.change_dir(GC.DATA_FOLDERS_PATHS.RES_ALLIES + ally_type_folder + "/" + ally_folder)
-			print(dir.get_current_dir())
 			for file: String in dir.get_files():
 				var ally: AllyData = load(dir.get_current_dir() + "/" + file)
 				assert(ally != null, "Failed to load ally: " + file)
