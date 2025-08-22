@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3slpuof5vh2f"]
+
+[ext_resource type="Script" uid="uid://brl6inr0qv0j5" path="res://tests/nodes_and_res_ids_test/nodes_and_res_ids_test.gd" id="1_drx2o"]
+[ext_resource type="PackedScene" uid="uid://c01xnlkp5040e" path="res://tests/nodes_and_res_ids_test/node_with_id/node_with_id.tscn" id="2_2ibmc"]
+[ext_resource type="Resource" uid="uid://b71rt7yp27eaq" path="res://tests/nodes_and_res_ids_test/res_with_id/res_with_id_2.tres" id="2_p24ly"]
+
+[node name="NodesAndResIdsTest" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_drx2o")
+my_exported_external_res_with_id = ExtResource("2_p24ly")
+
+[node name="NodeWithId" parent="." instance=ExtResource("2_2ibmc")]
+layout_mode = 1

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="ResWithId" load_steps=2 format=3 uid="uid://dg7p685v4hbhv"]
+
+[ext_resource type="Script" uid="uid://c1m3btvmsfpl" path="res://tests/nodes_and_res_ids_test/res_with_id/res_with_id.gd" id="1_oo8vn"]
+
+[resource]
+script = ExtResource("1_oo8vn")
+metadata/_custom_type_script = "uid://c1m3btvmsfpl"
