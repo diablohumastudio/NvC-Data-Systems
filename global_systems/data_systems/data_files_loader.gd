@@ -32,12 +32,18 @@ static func get_allies_from_res_files() -> Array[AllyData]:
 	var dir := DirAccess.open(GC.DATA_FOLDERS_PATHS.RES_ALLIES)
 	assert(dir != null, "Could not open folder")
 	dir.list_dir_begin()
-	for folder : String in dir.get_directories():
-		dir.change_dir(GC.DATA_FOLDERS_PATHS.RES_ALLIES + "/" +folder)
-		for file: String in dir.get_files():
-			var ally: AllyData = load(dir.get_current_dir() + "/" + file)
-			assert(ally != null, "Failed to load ally: " + file)
-			allies.append(ally)
+	for ally_type_folder : String in dir.get_directories():
+		if ally_type_folder == "models": continue
+		dir.change_dir(GC.DATA_FOLDERS_PATHS.RES_ALLIES +ally_type_folder)
+		for ally_folder : String in dir.get_directories():
+			if ally_folder == "models": continue
+			print(GC.DATA_FOLDERS_PATHS.RES_ALLIES + ally_type_folder + "/" +ally_folder)
+			dir.change_dir(GC.DATA_FOLDERS_PATHS.RES_ALLIES + ally_type_folder + "/" + ally_folder)
+			print(dir.get_current_dir())
+			for file: String in dir.get_files():
+				var ally: AllyData = load(dir.get_current_dir() + "/" + file)
+				assert(ally != null, "Failed to load ally: " + file)
+				allies.append(ally)
 	return allies
 
 static func get_allies_from_res_file_by_id(id: AllyData.IDs) -> AllyData:

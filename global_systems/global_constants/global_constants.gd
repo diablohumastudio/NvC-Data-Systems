@@ -13,7 +13,7 @@ const SCREENS_UIDS: Dictionary = {
 
 const DATA_FOLDERS_PATHS: Dictionary = {
 	"RES_LEVELS":"res://data/levels/data/",
-	"RES_ALLIES":"res://data/game_characters/allies/data/",
+	"RES_ALLIES":"res://data/game_characters/allies/",
 	"RES_ACHIEVEMENTS":"res://data/achievements/data/",
 	"CONDITIONS":"res://data/acs_system/conditions/data/",
 	"STATE_CHANGERS":"res://data/acs_system/state_changers/data/",

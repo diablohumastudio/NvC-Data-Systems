@@ -46,5 +46,8 @@ folder_colors={
 "res://data/game_characters/allies/shooter_ally/models/": "gray",
 "res://data/game_characters/models/": "gray",
 "res://data/levels/model/": "gray",
+"res://game_characters_scenes/allies/models/": "gray",
+"res://game_characters_scenes/allies/resource_provider/models/": "gray",
+"res://game_characters_scenes/allies/shoter_ally/models/": "gray",
 "res://global_systems/data_systems/action_condition_system/conditions/models/": "gray"
 }

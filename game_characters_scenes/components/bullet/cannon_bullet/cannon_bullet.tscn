@@ -1,17 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://oq6aen6b7qdb"]
+[gd_scene load_steps=7 format=3 uid="uid://oq6aen6b7qdb"]
 
-[ext_resource type="Script" uid="uid://bxlbyr4vptoxr" path="res://game_objects/components/bullet/cannon_bullet/cannon_bullet.gd" id="1_jclg3"]
-[ext_resource type="Texture2D" uid="uid://dlajyoj7k3trp" path="res://game_objects/components/bullet/cannon_bullet/assets/cannon bullet.png" id="2_jv3o6"]
-[ext_resource type="Texture2D" uid="uid://bnbovx28lo8pq" path="res://game_objects/soldier_shared_assets/oval_patricle.png" id="3_gli1q"]
+[ext_resource type="Script" uid="uid://blqbfae8uamvt" path="res://game_characters_scenes/components/bullet/bullet.gd" id="1_i2yc7"]
+[ext_resource type="Texture2D" uid="uid://dlajyoj7k3trp" path="res://game_characters_scenes/components/bullet/cannon_bullet/assets/cannon bullet.png" id="2_jv3o6"]
+[ext_resource type="Texture2D" uid="uid://bnbovx28lo8pq" path="res://game_characters_scenes/shared_assets/oval_patricle.png" id="3_gli1q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qkhyt"]
 size = Vector2(44, 20)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fypw4"]
-size = Vector2(44, 20)
-
 [sub_resource type="Curve" id="Curve_2l0g2"]
-min_value = 0.2
+_limits = [0.2, 1.0, 0.0, 1.0]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.2), 0.0, 0.0, 0, 0]
 point_count = 2
 
@@ -22,29 +19,22 @@ colors = PackedColorArray(1, 1, 1, 1, 0.905218, 0.000444487, 0.000245178, 0.2941
 [node name="CannonBullet" type="CharacterBody2D"]
 collision_layer = 0
 collision_mask = 0
-script = ExtResource("1_jclg3")
+script = ExtResource("1_i2yc7")
 
 [node name="BulletSprite" type="Sprite2D" parent="."]
 texture = ExtResource("2_jv3o6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(2, 0)
 shape = SubResource("RectangleShape2D_qkhyt")
-
-[node name="BulletBlast" type="Area2D" parent="."]
-collision_layer = 0
-collision_mask = 0
-
-[node name="BlastCollShape" type="CollisionShape2D" parent="BulletBlast"]
-position = Vector2(2, 0)
-shape = SubResource("RectangleShape2D_fypw4")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 show_behind_parent = true
 position = Vector2(-26, 1)
 amount = 40
-lifetime = 0.5
 texture = ExtResource("3_gli1q")
+lifetime = 0.5
 emission_shape = 3
 emission_rect_extents = Vector2(1, 7)
 direction = Vector2(-1, 0)
