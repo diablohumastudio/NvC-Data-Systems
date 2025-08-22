@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Level" load_steps=3 format=3 uid="uid://kqa382ik0yuh"]
 
 [ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://global_systems/data_systems/action_condition_system/condition.gd" id="1_3eae7"]
-[ext_resource type="Script" uid="uid://sukboetqeqqg" path="res://data/levels/res_data/model/level.gd" id="1_ycrby"]
+[ext_resource type="Script" uid="uid://sukboetqeqqg" path="res://data/levels/model/level.gd" id="1_ycrby"]
 
 [resource]
 script = ExtResource("1_ycrby")
