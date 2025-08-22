@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clqhwebs0bq0b"
-path="res://.godot/imported/enemy_thumbnail_bayonet.png-8806eca81ed60695484f5e18345f7752.ctex"
+uid="uid://fiodc4axyxnb"
+path="res://.godot/imported/chest_thumbnail.png-76da913c1fe6a1d6d1ec3adf2e2b8ca3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/game_characters/allies/res_data/assets/enemy_thumbnail_bayonet.png"
-dest_files=["res://.godot/imported/enemy_thumbnail_bayonet.png-8806eca81ed60695484f5e18345f7752.ctex"]
+source_file="res://data/game_characters/allies/data/chest/assets/chest_thumbnail.png"
+dest_files=["res://.godot/imported/chest_thumbnail.png-76da913c1fe6a1d6d1ec3adf2e2b8ca3.ctex"]
 
 [params]
 

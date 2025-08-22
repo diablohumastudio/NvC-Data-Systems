@@ -32,10 +32,12 @@ static func get_allies_from_res_files() -> Array[Ally]:
 	var dir := DirAccess.open(GC.DATA_FOLDERS_PATHS.RES_ALLIES)
 	assert(dir != null, "Could not open folder")
 	dir.list_dir_begin()
-	for file: String in dir.get_files():
-		var ally: Ally = load(dir.get_current_dir() + "/" + file)
-		assert(ally != null, "Failed to load ally: " + file)
-		allies.append(ally)
+	for folder : String in dir.get_directories():
+		dir.change_dir(GC.DATA_FOLDERS_PATHS.RES_ALLIES + "/" +folder)
+		for file: String in dir.get_files():
+			var ally: Ally = load(dir.get_current_dir() + "/" + file)
+			assert(ally != null, "Failed to load ally: " + file)
+			allies.append(ally)
 	return allies
 
 static func get_allies_from_res_file_by_id(id: Ally.IDs) -> Ally:
