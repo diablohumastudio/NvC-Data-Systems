@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Achievement" load_steps=4 format=3 uid="uid://6nv0ljx2r1xy"]
 
-[ext_resource type="Script" uid="uid://b14kgvm7qxpo" path="res://data/achievements/res_data/model/achievement.gd" id="1_dkm8r"]
+[ext_resource type="Script" uid="uid://b14kgvm7qxpo" path="res://data/achievements/models/achievement.gd" id="1_dkm8r"]
 [ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://global_systems/data_systems/action_condition_system/condition.gd" id="1_wk8ja"]
 [ext_resource type="Resource" uid="uid://c2fdve1l4yaob" path="res://global_systems/data_systems/action_condition_system/conditions/data/cond_enem_killd_tot_5.tres" id="2_8vwbp"]
 
