@@ -1,4 +1,4 @@
-class_name ScAlly extends CharacterBody2D
+class_name AllyScene extends CharacterBody2D
 
 signal pressed
 

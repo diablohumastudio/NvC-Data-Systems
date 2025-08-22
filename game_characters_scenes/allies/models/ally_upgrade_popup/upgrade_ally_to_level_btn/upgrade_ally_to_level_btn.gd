@@ -21,7 +21,6 @@ func _ready():
 
 func _update_state_visuals():
 	var buyed: bool = level.get_saved_ud_ally_level().buyed
-	printt("------",level.buyed_by_default,level.in_game_unlocked, buyed, level.level_id)
 	if (level.in_game_unlocked and buyed) or (level.unlockd_by_default and buyed):
 		disabled = false
 		modulate = Color.GREEN

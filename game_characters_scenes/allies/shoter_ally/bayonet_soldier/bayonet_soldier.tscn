@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://de36q80eh20e1" path="res://game_characters_scenes/shared_assets/leg4.png" id="6_i6fdn"]
 [ext_resource type="Texture2D" uid="uid://dye7bcrha1j02" path="res://game_characters_scenes/shared_assets/leg1.png" id="7_lhhum"]
 [ext_resource type="Texture2D" uid="uid://bh2jew5fbuk8g" path="res://game_characters_scenes/shared_assets/leg3.png" id="8_6xa0k"]
-[ext_resource type="Script" uid="uid://c3skicx1p4687" path="res://game_characters_scenes/allies/models/sc_ally/ally_level_dependants_nodes/ally_level_dependent_sprite2D.gd" id="9_1jdjf"]
+[ext_resource type="Script" uid="uid://c3skicx1p4687" path="res://game_characters_scenes/allies/models/ally_scene/ally_level_dependants_nodes/ally_level_dependent_sprite2D.gd" id="9_1jdjf"]
 [ext_resource type="Texture2D" uid="uid://bs5clwf6lc771" path="res://game_characters_scenes/allies/shoter_ally/bayonet_soldier/assets/bodylines.png" id="9_bodi6"]
 [ext_resource type="Texture2D" uid="uid://jykv0pknwas2" path="res://game_characters_scenes/shared_assets/arm1.png" id="10_t7udl"]
 [ext_resource type="Texture2D" uid="uid://bxrif5r5s3obv" path="res://game_characters_scenes/shared_assets/arm4.png" id="11_s561s"]

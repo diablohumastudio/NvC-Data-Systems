@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cm7j6ucxdy4na"]
 
-[ext_resource type="Script" uid="uid://dbcsemdveveol" path="res://game_characters_scenes/allies/models/sc_ally/sc_ally.gd" id="1_btjlv"]
+[ext_resource type="Script" uid="uid://dbcsemdveveol" path="res://game_characters_scenes/allies/models/ally_scene/ally_scene.gd" id="1_btjlv"]
 
 [node name="ScAlly" type="CharacterBody2D"]
 script = ExtResource("1_btjlv")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c3o6c87s6etdm"]
 
 [ext_resource type="Script" uid="uid://blpw01h8tj8ym" path="res://tests/in_game_unlocking_allies_test/in_game_unlocking_allies_test.gd" id="1_6q12c"]
-[ext_resource type="PackedScene" uid="uid://c0gkj1gflhpbp" path="res://game_characters_scenes/allies/models/upgrade_popup/upgrade_popup.tscn" id="2_juy5p"]
+[ext_resource type="PackedScene" uid="uid://c0gkj1gflhpbp" path="res://game_characters_scenes/allies/models/ally_upgrade_popup/ally_upgrade_popup.tscn" id="2_juy5p"]
 
 [node name="InGameUnlockingAlliesTest" type="Control"]
 layout_mode = 3

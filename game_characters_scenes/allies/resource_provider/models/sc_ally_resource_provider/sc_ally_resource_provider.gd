@@ -1,4 +1,4 @@
-class_name ResourceProvider extends ScAlly
+class_name ResourceProvider extends AllyScene
 
 @export var resource_value: int
 @export var seconds_per_coin: float

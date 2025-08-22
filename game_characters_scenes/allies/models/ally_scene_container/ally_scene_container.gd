@@ -1,7 +1,7 @@
-class_name ScAllyContainer extends Control
+class_name AllySceneContainer extends Control
 
 var ally: AllyData
-var current_ally_scene: ScAlly
+var current_ally_scene: AllyScene
 var acs: ActionConditionSystem
 var in_game_buyed_levels: Array[AllyLevelData]
 
@@ -13,11 +13,11 @@ func _ready() -> void:
 	%AllyUpgradePopUp.acs = acs
 	%AllyUpgradePopUp.level_changed.connect(on_ally_upgrade_menu_level_changed)
 
-func change_sc_ally(new_ally_scene: ScAlly):
-	if has_node("ScAlly"):
+func change_sc_ally(new_ally_scene: AllyScene):
+	if has_node("AllyScene"):
 		current_ally_scene.name = "OldScAlly"
 		current_ally_scene.queue_free()
-	new_ally_scene.name = "ScAlly"
+	new_ally_scene.name = "AllyScene"
 	new_ally_scene.pressed.connect(on_select_ally_btn_pressed)
 	add_child(new_ally_scene)
 	fix_hud_position_and_z()

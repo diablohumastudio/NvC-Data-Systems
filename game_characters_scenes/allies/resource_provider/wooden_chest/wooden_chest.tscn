@@ -1,7 +1,7 @@
 [gd_scene load_steps=25 format=3 uid="uid://co3biarax0yt4"]
 
 [ext_resource type="Script" uid="uid://bmo7fhcewalo2" path="res://game_characters_scenes/allies/resource_provider/wooden_chest/wooden_chest.gd" id="1_ah1ba"]
-[ext_resource type="PackedScene" uid="uid://c0gkj1gflhpbp" path="res://game_characters_scenes/allies/models/upgrade_popup/upgrade_popup.tscn" id="2_epg0r"]
+[ext_resource type="PackedScene" uid="uid://c0gkj1gflhpbp" path="res://game_characters_scenes/allies/models/ally_upgrade_popup/ally_upgrade_popup.tscn" id="2_epg0r"]
 [ext_resource type="Script" uid="uid://bpfbritys5raj" path="res://game_characters_scenes/allies/resource_provider/models/state_machine_resource_provider/state_machine_resource_provider.gd" id="2_p5bas"]
 [ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/shared_assets/circle_shadow.png" id="3_pspge"]
 [ext_resource type="Texture2D" uid="uid://blnwb63jln06g" path="res://game_characters_scenes/allies/resource_provider/wooden_chest/assets/level_2.png" id="4_fq48q"]

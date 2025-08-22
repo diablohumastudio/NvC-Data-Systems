@@ -1,1 +1,1 @@
-class_name ShooterAlly extends ScAlly
+class_name ShooterAlly extends AllyScene

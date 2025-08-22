@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b1xs0qcyd7lb4"]
 
-[ext_resource type="Script" uid="uid://bmui48xy1o1pq" path="res://game_characters_scenes/allies/models/sc_ally_container/sc_ally_container.gd" id="1_8pkuy"]
-[ext_resource type="PackedScene" uid="uid://c0gkj1gflhpbp" path="res://game_characters_scenes/allies/models/upgrade_popup/upgrade_popup.tscn" id="2_tjgay"]
+[ext_resource type="Script" uid="uid://bmui48xy1o1pq" path="res://game_characters_scenes/allies/models/ally_scene_container/ally_scene_container.gd" id="1_8pkuy"]
+[ext_resource type="PackedScene" uid="uid://c0gkj1gflhpbp" path="res://game_characters_scenes/allies/models/ally_upgrade_popup/ally_upgrade_popup.tscn" id="2_tjgay"]
 
 [node name="ScAllyContainer" type="Control"]
 layout_mode = 3

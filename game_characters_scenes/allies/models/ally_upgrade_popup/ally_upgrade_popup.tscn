@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c0gkj1gflhpbp"]
 
-[ext_resource type="Script" uid="uid://b70011isdddhr" path="res://game_characters_scenes/allies/models/upgrade_popup/upgrade_popup.gd" id="1_2ks2f"]
+[ext_resource type="Script" uid="uid://b70011isdddhr" path="res://game_characters_scenes/allies/models/ally_upgrade_popup/ally_upgrade_popup.gd" id="1_2ks2f"]
 
 [node name="AllyUpgradePopUp" type="Control"]
 layout_mode = 3

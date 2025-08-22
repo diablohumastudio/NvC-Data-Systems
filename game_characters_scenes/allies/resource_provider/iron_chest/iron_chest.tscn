@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://5xg73u1xoy12" path="res://game_characters_scenes/shared_assets/circle_particle.png" id="8_jupqk"]
 [ext_resource type="Texture2D" uid="uid://jdulueb7gowt" path="res://game_characters_scenes/shared_assets/dust_particle.png" id="9_v2tol"]
 [ext_resource type="Texture2D" uid="uid://q5ifosgjvma5" path="res://game_characters_scenes/shared_assets/gun_light.png" id="10_7dqq0"]
-[ext_resource type="Script" uid="uid://qclj8gae0u4y" path="res://game_characters_scenes/allies/models/sc_ally/ally_level_dependants_nodes/ally_level_dependent_animatedsprite2D.gd" id="11_cpt3o"]
+[ext_resource type="Script" uid="uid://qclj8gae0u4y" path="res://game_characters_scenes/allies/models/ally_scene/ally_level_dependants_nodes/ally_level_dependent_animatedsprite2D.gd" id="11_cpt3o"]
 [ext_resource type="SpriteFrames" uid="uid://h1vou3feoeuh" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/iron_chest_sprite_frames_fast_2.tres" id="12_k6k1e"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gg43k"]
