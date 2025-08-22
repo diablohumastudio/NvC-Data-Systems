@@ -1,4 +1,4 @@
-class_name AllyLevel extends GameCharacterLevel
+class_name AllyLevel extends GameCharacterLevelData
 
 signal in_game_just_unlocked
 signal in_game_just_buyed

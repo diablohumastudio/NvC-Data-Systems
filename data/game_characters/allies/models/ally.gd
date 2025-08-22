@@ -1,4 +1,4 @@
-class_name Ally extends Resource
+class_name Ally extends GameCharacterData
 
 enum IDs { BAYONETE_SOLDIER, CHEST }
 
