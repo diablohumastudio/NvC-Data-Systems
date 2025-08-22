@@ -1,8 +1,8 @@
 class_name AchievementPresenter extends HBoxContainer
 
-@export var achievement: Achievement: set = _set_achievement
+@export var achievement: AchievementData: set = _set_achievement
 
-func _set_achievement(new_value: Achievement):
+func _set_achievement(new_value: AchievementData):
 	achievement = new_value
 	var porcentage_achived: int =  0
 	var total_conditions: int = achievement.conditions.size()

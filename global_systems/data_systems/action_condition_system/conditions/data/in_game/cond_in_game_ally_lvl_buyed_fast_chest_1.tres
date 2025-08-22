@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CondInGameAllyLevelBuyed" load_steps=2 format=3 uid="uid://slf5dq0o0pe6"]
+
+[ext_resource type="Script" uid="uid://dv4wr1isydoy7" path="res://global_systems/data_systems/action_condition_system/conditions/models/cond_in_game_ally_level_buyed.gd" id="1_5yl15"]
+
+[resource]
+script = ExtResource("1_5yl15")
+ally_level_id = "fast 1"
+id = "cond_ally_lvl_buyed_fast_chest_1"
+metadata/_custom_type_script = "uid://dv4wr1isydoy7"

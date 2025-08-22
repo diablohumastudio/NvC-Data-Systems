@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://h1hb81pq8rx8"]
 
 [ext_resource type="Script" uid="uid://dsd5fytu1qlms" path="res://screens/allies_market/ally_details_popup/ally_details_popup.gd" id="1_popup_script"]
-[ext_resource type="Texture2D" uid="uid://fiodc4axyxnb" path="res://data/game_characters/allies/res_data/assets/chest_thumbnail.png" id="2_au64o"]
+[ext_resource type="Texture2D" uid="uid://fiodc4axyxnb" path="res://data/game_characters/allies/resource_providers/chest/assets/chest_market__thumbnail.png" id="2_au64o"]
 [ext_resource type="PackedScene" uid="uid://dr58mra5vkhob" path="res://screens/allies_market/ally_details_popup/ally_level_presenter/ally_level_presenter.tscn" id="2_htj73"]
 [ext_resource type="Script" uid="uid://bxmpyou6hvyuo" path="res://screens/allies_market/ally_details_popup/ally_level_presenter/ally_level_presenter.gd" id="3_hvj7i"]
 

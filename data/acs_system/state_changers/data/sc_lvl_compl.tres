@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="SCLvCompl" load_steps=2 format=3 uid="uid://dufyfq4mt814k"]
-
-[ext_resource type="Script" uid="uid://bwssqo1vxe5yl" path="res://data/acs_system/state_changers/model/sc_lvl_compl.gd" id="1_pa3wd"]
-
-[resource]
-script = ExtResource("1_pa3wd")
-type = 0
-metadata/_custom_type_script = "uid://bwssqo1vxe5yl"

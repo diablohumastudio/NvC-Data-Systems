@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=3 format=3 uid="uid://kqa382ik0yuh"]
+
+[ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://global_systems/data_systems/action_condition_system/condition.gd" id="1_3eae7"]
+[ext_resource type="Script" uid="uid://sukboetqeqqg" path="res://data/levels/model/level_data.gd" id="1_ycrby"]
+
+[resource]
+script = ExtResource("1_ycrby")
+id = 0
+level_name = "LV1"
+conditions = Array[ExtResource("1_3eae7")]([])
+unlockd_by_default = true
+metadata/_custom_type_script = "uid://sukboetqeqqg"

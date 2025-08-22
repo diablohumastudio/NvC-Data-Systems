@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3o6c87s6etdm"]
+
+[ext_resource type="Script" uid="uid://blpw01h8tj8ym" path="res://tests/in_game_unlocking_allies_test/in_game_unlocking_allies_test.gd" id="1_6q12c"]
+[ext_resource type="PackedScene" uid="uid://c0gkj1gflhpbp" path="res://game_characters_scenes/allies/models/upgrade_popup/upgrade_popup.tscn" id="2_juy5p"]
+
+[node name="InGameUnlockingAlliesTest" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6q12c")
+
+[node name="AllyUpgradePopUp" parent="." instance=ExtResource("2_juy5p")]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 405.0
+offset_top = 383.0
+offset_right = 405.6
+offset_bottom = 383.48
+
+[node name="AllyUpgradePopUp2" parent="." instance=ExtResource("2_juy5p")]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 1129.0
+offset_top = 383.0
+offset_right = 1129.6
+offset_bottom = 383.48
+
+[node name="PrintLevels" type="Button" parent="."]
+layout_mode = 0
+offset_left = 756.0
+offset_top = 750.0
+offset_right = 1028.0
+offset_bottom = 899.0
+
+[connection signal="pressed" from="PrintLevels" to="." method="_on_print_levels_pressed"]

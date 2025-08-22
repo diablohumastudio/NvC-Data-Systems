@@ -1,6 +1,6 @@
 extends GutTest
 
-# Test for the CondLvCompl (Level Completion Condition) class
+# Test for the CondLvCompl (LevelData Completion Condition) class
 
 var condition: CondLvCompl
 var action_correct: Action
@@ -9,15 +9,15 @@ var action_wrong: Action
 func before_each():
 	# Setup condition and actions for testing
 	condition = CondLvCompl.new()
-	condition.level_id = Level.IDs.Level1
+	condition.level_id = LevelData.IDs.Level1
 	condition.id = "test_cond_lv_1"
 	
 	# Correct action that should trigger the condition
-	var payload_correct = Action.PayLvCompl.new(Level.IDs.Level1)
+	var payload_correct = PayLvCompl.new(LevelData.IDs.Level1)
 	action_correct = Action.new(Action.TYPES.LV_COMPLTD, payload_correct)
 	
 	# Wrong action that should not trigger the condition
-	var payload_wrong = Action.PayLvCompl.new(Level.IDs.Level2)
+	var payload_wrong = PayLvCompl.new(LevelData.IDs.Level2)
 	action_wrong = Action.new(Action.TYPES.LV_COMPLTD, payload_wrong)
 
 func after_each():
@@ -45,8 +45,8 @@ func test_cond_lv_compl_sets_type_automatically():
 func test_cond_lv_compl_has_level_id_property():
 	# Test the level_id property
 	var cond = CondLvCompl.new()
-	cond.level_id = Level.IDs.Level3
-	assert_eq(cond.level_id, Level.IDs.Level3, "CondLvCompl level_id should be settable and gettable")
+	cond.level_id = LevelData.IDs.Level3
+	assert_eq(cond.level_id, LevelData.IDs.Level3, "CondLvCompl level_id should be settable and gettable")
 
 # Signal Tests
 func test_condition_emits_fullfilled_signal_on_correct_level():
@@ -85,8 +85,8 @@ func test_condition_does_not_emit_signal_on_wrong_level():
 # Evaluation Logic Tests
 func test_evaluate_with_matching_level_id():
 	# Test evaluation logic with matching level ID
-	condition.level_id = Level.IDs.Level2
-	var payload = Action.PayLvCompl.new(Level.IDs.Level2)
+	condition.level_id = LevelData.IDs.Level2
+	var payload = PayLvCompl.new(LevelData.IDs.Level2)
 	var action = Action.new(Action.TYPES.LV_COMPLTD, payload)
 	
 	var signal_received = [false]
@@ -99,8 +99,8 @@ func test_evaluate_with_matching_level_id():
 
 func test_evaluate_with_non_matching_level_id():
 	# Test evaluation logic with non-matching level ID
-	condition.level_id = Level.IDs.Level1
-	var payload = Action.PayLvCompl.new(Level.IDs.Level3)
+	condition.level_id = LevelData.IDs.Level1
+	var payload = PayLvCompl.new(LevelData.IDs.Level3)
 	var action = Action.new(Action.TYPES.LV_COMPLTD, payload)
 	
 	var signal_received = [false]
@@ -114,7 +114,7 @@ func test_evaluate_with_non_matching_level_id():
 # Edge Cases
 func test_evaluate_with_wrong_action_type():
 	# Test evaluation with wrong action type (should not crash)
-	var payload = Action.PayEnemKilled.new(5)
+	var payload = PayEnemKilled.new(5)
 	var wrong_type_action = Action.new(Action.TYPES.ENEMY_KILLED, payload)
 	
 	# This should not crash even though payload is wrong type
@@ -125,7 +125,7 @@ func test_evaluate_with_wrong_action_type():
 func test_full_condition_workflow():
 	# Test the complete workflow of condition creation and evaluation
 	var cond = CondLvCompl.new()
-	cond.level_id = Level.IDs.LevelEx
+	cond.level_id = LevelData.IDs.LevelEx
 	cond.id = "complete_extra_level"
 	
 	var signal_data = []
@@ -134,7 +134,7 @@ func test_full_condition_workflow():
 	)
 	
 	# Test with correct level
-	var payload = Action.PayLvCompl.new(Level.IDs.LevelEx)
+	var payload = PayLvCompl.new(LevelData.IDs.LevelEx)
 	var action = Action.new(Action.TYPES.LV_COMPLTD, payload)
 	
 	cond.evaluate(action)
@@ -142,4 +142,4 @@ func test_full_condition_workflow():
 	
 	assert_eq(signal_data.size(), 1, "Should have received one signal")
 	assert_eq(signal_data[0], cond, "Signal should contain the condition instance")
-	assert_eq(signal_data[0].level_id, Level.IDs.LevelEx, "Condition should have correct level_id")
+	assert_eq(signal_data[0].level_id, LevelData.IDs.LevelEx, "Condition should have correct level_id")

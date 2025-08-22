@@ -1,29 +1,31 @@
-[gd_scene load_steps=44 format=3 uid="uid://oyoty7ffa6gl"]
+[gd_scene load_steps=46 format=3 uid="uid://oyoty7ffa6gl"]
 
 [ext_resource type="Script" uid="uid://dnhmh113e864x" path="res://game_characters_scenes/allies/shoter_ally/bayonet_soldier/bayonet_soldier.gd" id="1_m4sxj"]
-[ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/assets/circle_shadow.png" id="2_5ltgp"]
-[ext_resource type="Texture2D" uid="uid://d3m2ymkclsdx7" path="res://game_characters_scenes/assets/hurt_light.png" id="3_sr3fg"]
-[ext_resource type="Texture2D" uid="uid://c73v5xy4v6gea" path="res://game_characters_scenes/assets/hurt_shape.png" id="4_st7co"]
-[ext_resource type="Texture2D" uid="uid://dla3tqrgg7j8w" path="res://game_characters_scenes/assets/legup2.png" id="5_3xdkk"]
-[ext_resource type="Texture2D" uid="uid://de36q80eh20e1" path="res://game_characters_scenes/assets/leg4.png" id="6_i6fdn"]
-[ext_resource type="Texture2D" uid="uid://dye7bcrha1j02" path="res://game_characters_scenes/assets/leg1.png" id="7_lhhum"]
-[ext_resource type="Texture2D" uid="uid://bh2jew5fbuk8g" path="res://game_characters_scenes/assets/leg3.png" id="8_6xa0k"]
+[ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/shared_assets/circle_shadow.png" id="2_5ltgp"]
+[ext_resource type="BitMap" uid="uid://v025154o03fy" path="res://game_characters_scenes/allies/shoter_ally/bayonet_soldier/assets/bayonet_soldier_button_mask_bit.png" id="2_lyapl"]
+[ext_resource type="Texture2D" uid="uid://d3m2ymkclsdx7" path="res://game_characters_scenes/shared_assets/hurt_light.png" id="3_sr3fg"]
+[ext_resource type="Texture2D" uid="uid://c73v5xy4v6gea" path="res://game_characters_scenes/shared_assets/hurt_shape.png" id="4_st7co"]
+[ext_resource type="Texture2D" uid="uid://dla3tqrgg7j8w" path="res://game_characters_scenes/shared_assets/legup2.png" id="5_3xdkk"]
+[ext_resource type="Texture2D" uid="uid://de36q80eh20e1" path="res://game_characters_scenes/shared_assets/leg4.png" id="6_i6fdn"]
+[ext_resource type="Texture2D" uid="uid://dye7bcrha1j02" path="res://game_characters_scenes/shared_assets/leg1.png" id="7_lhhum"]
+[ext_resource type="Texture2D" uid="uid://bh2jew5fbuk8g" path="res://game_characters_scenes/shared_assets/leg3.png" id="8_6xa0k"]
+[ext_resource type="Script" uid="uid://c3skicx1p4687" path="res://game_characters_scenes/allies/models/sc_ally/ally_level_dependants_nodes/ally_level_dependent_sprite2D.gd" id="9_1jdjf"]
 [ext_resource type="Texture2D" uid="uid://bs5clwf6lc771" path="res://game_characters_scenes/allies/shoter_ally/bayonet_soldier/assets/bodylines.png" id="9_bodi6"]
-[ext_resource type="Texture2D" uid="uid://jykv0pknwas2" path="res://game_characters_scenes/assets/arm1.png" id="10_t7udl"]
-[ext_resource type="Texture2D" uid="uid://bxrif5r5s3obv" path="res://game_characters_scenes/assets/arm4.png" id="11_s561s"]
-[ext_resource type="Texture2D" uid="uid://bynycpikxobh" path="res://game_characters_scenes/assets/hand.png" id="12_e5w8r"]
+[ext_resource type="Texture2D" uid="uid://jykv0pknwas2" path="res://game_characters_scenes/shared_assets/arm1.png" id="10_t7udl"]
+[ext_resource type="Texture2D" uid="uid://bxrif5r5s3obv" path="res://game_characters_scenes/shared_assets/arm4.png" id="11_s561s"]
+[ext_resource type="Texture2D" uid="uid://bynycpikxobh" path="res://game_characters_scenes/shared_assets/hand.png" id="12_e5w8r"]
 [ext_resource type="Texture2D" uid="uid://b7v5he2rytl2s" path="res://game_characters_scenes/allies/shoter_ally/bayonet_soldier/assets/head_dead.png" id="13_2ludy"]
 [ext_resource type="Texture2D" uid="uid://bo2271rejnrtb" path="res://game_characters_scenes/allies/shoter_ally/bayonet_soldier/assets/head.png" id="14_2ub8n"]
-[ext_resource type="Texture2D" uid="uid://b61w8ijwniui4" path="res://game_characters_scenes/assets/arm2.png" id="15_3cmfr"]
-[ext_resource type="Texture2D" uid="uid://by0ecbpx2elav" path="res://game_characters_scenes/assets/bayoneta.png" id="16_hx5my"]
-[ext_resource type="Texture2D" uid="uid://5xg73u1xoy12" path="res://game_characters_scenes/assets/circle_particle.png" id="17_v5q65"]
-[ext_resource type="Texture2D" uid="uid://b1dpvkn8g86e5" path="res://game_characters_scenes/assets/bayonet_ammo.png" id="18_hbifd"]
-[ext_resource type="Texture2D" uid="uid://u15uitrmprpp" path="res://game_characters_scenes/assets/left_elbow.png" id="19_e2p80"]
-[ext_resource type="Texture2D" uid="uid://jdulueb7gowt" path="res://game_characters_scenes/assets/dust_particle.png" id="20_kav4e"]
-[ext_resource type="Animation" uid="uid://dgc18yq1283ud" path="res://game_characters_scenes/assets/animations/allies/_death_stabbed_bayonet.res" id="21_w3wfd"]
-[ext_resource type="Animation" uid="uid://dv5ddckjm14c1" path="res://game_characters_scenes/assets/animations/allies/_receive_damage_genera_2l.res" id="22_26nmq"]
-[ext_resource type="Texture2D" uid="uid://q5ifosgjvma5" path="res://game_characters_scenes/assets/gun_light.png" id="23_iqhdq"]
-[ext_resource type="PackedScene" uid="uid://d2torbk0fy8a5" path="res://game_characters_scenes/assets/blood_particles.tscn" id="24_ohgtb"]
+[ext_resource type="Texture2D" uid="uid://b61w8ijwniui4" path="res://game_characters_scenes/shared_assets/arm2.png" id="15_3cmfr"]
+[ext_resource type="Texture2D" uid="uid://by0ecbpx2elav" path="res://game_characters_scenes/shared_assets/bayoneta.png" id="16_hx5my"]
+[ext_resource type="Texture2D" uid="uid://5xg73u1xoy12" path="res://game_characters_scenes/shared_assets/circle_particle.png" id="17_v5q65"]
+[ext_resource type="Texture2D" uid="uid://b1dpvkn8g86e5" path="res://game_characters_scenes/shared_assets/bayonet_ammo.png" id="18_hbifd"]
+[ext_resource type="Texture2D" uid="uid://u15uitrmprpp" path="res://game_characters_scenes/shared_assets/left_elbow.png" id="19_e2p80"]
+[ext_resource type="Texture2D" uid="uid://jdulueb7gowt" path="res://game_characters_scenes/shared_assets/dust_particle.png" id="20_kav4e"]
+[ext_resource type="Animation" uid="uid://dgc18yq1283ud" path="res://game_characters_scenes/shared_assets/animations/allies/_death_stabbed_bayonet.res" id="21_w3wfd"]
+[ext_resource type="Animation" uid="uid://dv5ddckjm14c1" path="res://game_characters_scenes/shared_assets/animations/allies/_receive_damage_genera_2l.res" id="22_26nmq"]
+[ext_resource type="Texture2D" uid="uid://q5ifosgjvma5" path="res://game_characters_scenes/shared_assets/gun_light.png" id="23_iqhdq"]
+[ext_resource type="PackedScene" uid="uid://d2torbk0fy8a5" path="res://game_characters_scenes/shared_assets/blood_particles.tscn" id="24_ohgtb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qarns"]
 animations = [{
@@ -1237,8 +1239,17 @@ offsets = PackedFloat32Array(0, 0.0783133, 0.379518, 0.572289, 0.76506, 1)
 colors = PackedColorArray(0.874968, 0.604514, 0.563407, 0, 1, 1, 1, 1, 0.851918, 0.618979, 0.924945, 1, 0.954472, 0.794962, 0.466424, 1, 0.73367, 0.921388, 0.913637, 1, 1, 1, 1, 0)
 
 [node name="BayonetSoldier" type="CharacterBody2D"]
+position = Vector2(85, 44)
 script = ExtResource("1_m4sxj")
 metadata/_custom_type_script = "uid://c514vn6daipgc"
+
+[node name="SelectAllyBtn" type="TextureButton" parent="."]
+unique_name_in_owner = true
+offset_left = -80.0
+offset_top = -261.0
+offset_right = 228.0
+offset_bottom = 60.0
+texture_click_mask = ExtResource("2_lyapl")
 
 [node name="Shadow" type="Sprite2D" parent="."]
 position = Vector2(-2, 44.798)
@@ -1272,6 +1283,11 @@ position = Vector2(17.676, 36.3821)
 rotation = 0.0523599
 texture = ExtResource("6_i6fdn")
 offset = Vector2(22, 31)
+script = ExtResource("9_1jdjf")
+levels_modifiers_textures = Dictionary[String, Texture2D]({
+"": null
+})
+metadata/_custom_type_script = "uid://c3skicx1p4687"
 
 [node name="LeftLeg" type="Sprite2D" parent="Textures"]
 position = Vector2(-15, 50)
@@ -1317,7 +1333,7 @@ texture = ExtResource("15_3cmfr")
 offset = Vector2(94, -23)
 
 [node name="Bayonet" type="Sprite2D" parent="Textures/Body/LeftArm"]
-position = Vector2(27.9306, 38.7131)
+position = Vector2(30.7024, 19.6363)
 texture = ExtResource("16_hx5my")
 offset = Vector2(79, -1)
 
@@ -1434,12 +1450,3 @@ linear_accel_min = 31.78
 linear_accel_max = 31.78
 scale_amount_curve = SubResource("Curve_fgw1i")
 color_ramp = SubResource("Gradient_kpjug")
-
-[node name="ShowUpgradePopupBtn" type="Button" parent="."]
-modulate = Color(1, 1, 1, 0)
-offset_left = -86.0
-offset_top = -264.0
-offset_right = 123.0
-offset_bottom = 86.0
-
-[connection signal="pressed" from="ShowUpgradePopupBtn" to="." method="_on_show_upgrade_popup_btn_pressed"]

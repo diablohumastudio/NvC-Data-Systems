@@ -2,7 +2,7 @@ class_name AllyLevelPresenter extends MarginContainer
 
 signal level_buyed
 
-var ally_level: AllyLevel
+var ally_level: AllyLevelData
 
 func _ready() -> void:
 	if ally_level:
@@ -14,7 +14,7 @@ func _update_visuals():
 	var is_level_buyed: bool = ud_ally_level.buyed
 	
 	%AllyLevelName.text = ally_level.level_id
-	%AllyLevelPrice.text = str(ally_level.price)
+	%AllyLevelPrice.text = str(ally_level.market_price)
 	%AllyLevelIsUnlocked.text = str(is_level_unlocked)
 	%AllyLevelIsUnlocked.modulate = Color("00caa4") if is_level_unlocked else Color("971029")
 	%BuyAllyLevelBtn.disabled = !is_level_unlocked
@@ -22,7 +22,7 @@ func _update_visuals():
 	%AllyLevelIsBuyed.modulate = Color("00caa4") if is_level_buyed else Color("971029")
 
 func _on_buy_ally_level_btn_pressed() -> void:
-	ACS.set_action(Action.new(Action.TYPES.BUYED_ALLY_LEVEL, Action.PayBuyedAllyLevel.new(ally_level.level_id, ally_level.ally_id)))
+	ACS.set_action(Action.new(Action.TYPES.BUYED_ALLY_LEVEL, PayBuyedAllyLevel.new(ally_level.level_id, ally_level.ally_id)))
 	update_all_level_presenters_visuals()
 
 func update_all_level_presenters_visuals():

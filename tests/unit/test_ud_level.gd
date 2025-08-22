@@ -17,6 +17,6 @@ func test_complete_condition_on_ud_level():
 	new_condition.type = Action.TYPES.TEST
 	#new_condition.fullfilled.emit(new_condition)
 	ACS.conditions.append(new_condition)
-	ACS.set_action(Action.new(Action.TYPES.TEST, Action.Payload.new()))
+	ACS.set_action(Action.new(Action.TYPES.TEST, ActionPayload.new()))
 	assert_eq(new_ud_level.unlocked_conditionis, {new_condition: true})
 	assert_eq(new_ud_level.locked, false, "Condition doesn't activate ud_level")

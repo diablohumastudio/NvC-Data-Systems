@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CondLvCompl" load_steps=2 format=3 uid="uid://c0botmc4r3e7t"]
+
+[ext_resource type="Script" uid="uid://bmc3bhfaqdmro" path="res://global_systems/data_systems/action_condition_system/conditions/models/cond_lv_compl.gd" id="1_5ivqi"]
+
+[resource]
+script = ExtResource("1_5ivqi")
+level_id = 4
+id = "cond_lv_compl_lv_3_ex"
+metadata/_custom_type_script = "uid://bmc3bhfaqdmro"

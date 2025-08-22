@@ -11,17 +11,18 @@ config_version=5
 [application]
 
 config/name="NvC Data Systems"
-run/main_scene="uid://ci3s8wtjbl3eh"
+run/main_scene="uid://iusscgq60rcy"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-ACS="*res://global_systems/data_systems/action_condition_system/action_condition_system.tscn"
+ACS="*res://global_systems/data_systems/action_condition_system/action_condition_system.gd"
 UDS="*res://global_systems/data_systems/user_data_system/user_data_system.gd"
 SMS="*res://global_systems/scene_manager_system/scene_manager_system.gd"
 GC="*res://global_systems/global_constants/global_constants.gd"
 AAPscr="*res://screens/achievements_achieved_presenter_singleton/achievements_achieved_presenter.tscn"
+GSS="*res://global_systems/data_systems/game_state_system/game_state_system.gd"
 
 [display]
 
@@ -35,3 +36,18 @@ window/stretch/mode="canvas_items"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/gut/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://data/achievements/models/": "gray",
+"res://data/game_characters/allies/models/": "gray",
+"res://data/game_characters/allies/resource_providers/models/": "gray",
+"res://data/game_characters/allies/shooter_ally/models/": "gray",
+"res://data/game_characters/models/": "gray",
+"res://data/levels/model/": "gray",
+"res://game_characters_scenes/allies/models/": "gray",
+"res://game_characters_scenes/allies/resource_provider/models/": "gray",
+"res://game_characters_scenes/allies/shoter_ally/models/": "gray",
+"res://global_systems/data_systems/action_condition_system/conditions/models/": "gray"
+}

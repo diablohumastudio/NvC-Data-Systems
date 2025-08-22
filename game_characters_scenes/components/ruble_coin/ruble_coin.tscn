@@ -1,7 +1,7 @@
 [gd_scene load_steps=38 format=3 uid="uid://cnqqga8hbxxjn"]
 
 [ext_resource type="Script" uid="uid://dxllcn548wf2j" path="res://game_characters_scenes/components/ruble_coin/ruble_coin.gd" id="1_b3trd"]
-[ext_resource type="Texture2D" uid="uid://bnbovx28lo8pq" path="res://game_characters_scenes/assets/oval_patricle.png" id="2_cwneg"]
+[ext_resource type="Texture2D" uid="uid://bnbovx28lo8pq" path="res://game_characters_scenes/shared_assets/oval_patricle.png" id="2_cwneg"]
 [ext_resource type="Texture2D" uid="uid://dyu0e7xfddgv2" path="res://game_characters_scenes/components/ruble_coin/assets/rublo_halo.png" id="2_tdw4k"]
 [ext_resource type="Texture2D" uid="uid://b3v6xh4pladc4" path="res://game_characters_scenes/components/ruble_coin/assets/rublo1.png" id="3_g1fj8"]
 [ext_resource type="Texture2D" uid="uid://dbp22phu78oa5" path="res://game_characters_scenes/components/ruble_coin/assets/rublo2.png" id="4_3bhx1"]
@@ -23,8 +23,8 @@
 [ext_resource type="Texture2D" uid="uid://bkvtnoayxaaum" path="res://game_characters_scenes/components/ruble_coin/assets/rublo18.png" id="20_eih5t"]
 [ext_resource type="Texture2D" uid="uid://owh7x3htkfvq" path="res://game_characters_scenes/components/ruble_coin/assets/rublo19.png" id="21_1bqch"]
 [ext_resource type="Texture2D" uid="uid://dx0anknqa0fe5" path="res://game_characters_scenes/components/ruble_coin/assets/rublo20.png" id="22_w2spg"]
-[ext_resource type="Texture2D" uid="uid://q5ifosgjvma5" path="res://game_characters_scenes/assets/gun_light.png" id="23_7lg7u"]
-[ext_resource type="Shader" uid="uid://blan7lrww6sar" path="res://assets/glitch.gdshader" id="25_spcl8"]
+[ext_resource type="Texture2D" uid="uid://q5ifosgjvma5" path="res://game_characters_scenes/shared_assets/gun_light.png" id="23_7lg7u"]
+[ext_resource type="Shader" uid="uid://blan7lrww6sar" path="res://global_assets/shaders/glitch.gdshader" id="25_spcl8"]
 
 [sub_resource type="Curve" id="Curve_rdp2h"]
 _limits = [0.0, 1.2, 0.0, 1.0]

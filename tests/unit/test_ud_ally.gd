@@ -2,11 +2,11 @@ extends GutTest
 
 # Test for the UDAlly class
 
-var ally_level_mock: AllyLevel
+var ally_level_mock: AllyLevelData
 
 func before_each():
-	# Create a mock AllyLevel for testing
-	ally_level_mock = AllyLevel.new()
+	# Create a mock AllyLevelData for testing
+	ally_level_mock = AllyLevelData.new()
 	ally_level_mock.level_id = "test_level_1"
 
 func after_each():
@@ -21,8 +21,8 @@ func test_ud_ally_creation():
 func test_ud_ally_id_property():
 	# Test the id property
 	var ud_ally = UDAlly.new()
-	ud_ally.id = Ally.IDs.CHEST
-	assert_eq(ud_ally.id, Ally.IDs.CHEST, "UDAlly id should be settable and gettable")
+	ud_ally.id = AllyData.IDs.CHEST
+	assert_eq(ud_ally.id, AllyData.IDs.CHEST, "UDAlly id should be settable and gettable")
 
 func test_ud_ally_has_unlocked_levels_array():
 	# Test that unlocked_levels is initialized as array
@@ -42,7 +42,7 @@ func test_ud_ally_has_levels_conditions_dictionary():
 	assert_not_null(ud_ally.levels_conditions, "Levels conditions should not be null")
 	assert_true(ud_ally.levels_conditions is Dictionary, "Levels conditions should be a Dictionary")
 
-# Base Level Tests
+# Base LevelData Tests
 func test_set_base_level():
 	# Test setting base level
 	var ud_ally = UDAlly.new()
@@ -52,7 +52,7 @@ func test_set_base_level():
 	assert_true(ud_ally.levels_conditions.has(ally_level_mock), "Base level should be added to conditions")
 	assert_true(ud_ally.unlocked_levels.has("test_level_1"), "Base level should be unlocked")
 
-# Level Status Tests
+# LevelData Status Tests
 func test_is_level_unlocked_true():
 	# Test checking if a level is unlocked when it is
 	var ud_ally = UDAlly.new()

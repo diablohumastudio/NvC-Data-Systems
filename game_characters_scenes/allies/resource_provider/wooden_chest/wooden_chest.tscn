@@ -1,12 +1,13 @@
-[gd_scene load_steps=24 format=3 uid="uid://co3biarax0yt4"]
+[gd_scene load_steps=25 format=3 uid="uid://co3biarax0yt4"]
 
 [ext_resource type="Script" uid="uid://bmo7fhcewalo2" path="res://game_characters_scenes/allies/resource_provider/wooden_chest/wooden_chest.gd" id="1_ah1ba"]
-[ext_resource type="Script" uid="uid://bpfbritys5raj" path="res://game_characters_scenes/allies/resource_provider/states/resource_provider_state_machine.gd" id="2_p5bas"]
-[ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/assets/circle_shadow.png" id="3_pspge"]
+[ext_resource type="PackedScene" uid="uid://c0gkj1gflhpbp" path="res://game_characters_scenes/allies/models/upgrade_popup/upgrade_popup.tscn" id="2_epg0r"]
+[ext_resource type="Script" uid="uid://bpfbritys5raj" path="res://game_characters_scenes/allies/resource_provider/models/state_machine_resource_provider/state_machine_resource_provider.gd" id="2_p5bas"]
+[ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/shared_assets/circle_shadow.png" id="3_pspge"]
 [ext_resource type="Texture2D" uid="uid://blnwb63jln06g" path="res://game_characters_scenes/allies/resource_provider/wooden_chest/assets/level_2.png" id="4_fq48q"]
-[ext_resource type="Texture2D" uid="uid://5xg73u1xoy12" path="res://game_characters_scenes/assets/circle_particle.png" id="5_b4i84"]
-[ext_resource type="Texture2D" uid="uid://jdulueb7gowt" path="res://game_characters_scenes/assets/dust_particle.png" id="6_hl5cj"]
-[ext_resource type="Texture2D" uid="uid://q5ifosgjvma5" path="res://game_characters_scenes/assets/gun_light.png" id="7_uu5hv"]
+[ext_resource type="Texture2D" uid="uid://5xg73u1xoy12" path="res://game_characters_scenes/shared_assets/circle_particle.png" id="5_b4i84"]
+[ext_resource type="Texture2D" uid="uid://jdulueb7gowt" path="res://game_characters_scenes/shared_assets/dust_particle.png" id="6_hl5cj"]
+[ext_resource type="Texture2D" uid="uid://q5ifosgjvma5" path="res://game_characters_scenes/shared_assets/gun_light.png" id="7_uu5hv"]
 
 [sub_resource type="Curve" id="Curve_m2yvq"]
 _limits = [0.0, 0.3, 0.0, 1.0]
@@ -84,6 +85,78 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Shadow:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Shadow:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.23684, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("SpawnLight:energy")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("SpawnLight:texture_scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.3]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Textures:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 49)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Textures:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_mcjt5"]
@@ -574,9 +647,43 @@ offsets = PackedFloat32Array(0, 0.0783133, 0.379518, 0.572289, 0.76506, 1)
 colors = PackedColorArray(0.874968, 0.604514, 0.563407, 0, 1, 1, 1, 1, 0.851918, 0.618979, 0.924945, 1, 0.954472, 0.794962, 0.466424, 1, 0.73367, 0.921388, 0.913637, 1, 1, 1, 1, 0)
 
 [node name="WoodenChest" type="CharacterBody2D"]
+position = Vector2(102, 106)
 script = ExtResource("1_ah1ba")
 resource_value = 25
 seconds_per_coin = 4.0
+
+[node name="AllyHUD" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AllyNameAndLevelLabel" type="Label" parent="AllyHUD"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 163.0
+offset_bottom = 35.0
+theme_override_font_sizes/font_size = 25
+text = "NAME Level 1"
+
+[node name="AllyUpgradeMenu" parent="AllyHUD" instance=ExtResource("2_epg0r")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+offset_left = 211.0
+offset_top = 4.0
+offset_right = 211.6
+offset_bottom = 4.47998
+
+[node name="SelectAllyBtn" type="TextureButton" parent="AllyHUD"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.211765)
+custom_minimum_size = Vector2(192, 180)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 195.0
+offset_bottom = 181.0
 
 [node name="ResourceProviderStateMachine" type="Node" parent="."]
 unique_name_in_owner = true
@@ -584,14 +691,13 @@ script = ExtResource("2_p5bas")
 metadata/_custom_type_script = "uid://bpfbritys5raj"
 
 [node name="Shadow" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0)
 position = Vector2(-2, 29)
-scale = Vector2(1e-05, 1e-05)
+scale = Vector2(1.23684, 1)
 texture = ExtResource("3_pspge")
 
 [node name="Textures" type="Node2D" parent="."]
-modulate = Color(1, 1, 1, 0)
-position = Vector2(0, -178)
+position = Vector2(0, 49)
+scale = Vector2(1, 1.00071)
 
 [node name="Down" type="Sprite2D" parent="Textures"]
 position = Vector2(-1, -28)
@@ -642,6 +748,7 @@ unique_name_in_owner = true
 libraries = {
 &"": SubResource("AnimationLibrary_k03oj")
 }
+autoplay = "spawn"
 
 [node name="ReceiveDamage" type="AnimationPlayer" parent="."]
 libraries = {
@@ -675,7 +782,7 @@ position = Vector2(0, 27.25)
 color = Color(0.392157, 0.627451, 0.4, 1)
 energy = 0.0
 texture = ExtResource("7_uu5hv")
-texture_scale = 0.5
+texture_scale = 1.3
 
 [node name="SpawnParticles" type="CPUParticles2D" parent="."]
 position = Vector2(4, 44.25)

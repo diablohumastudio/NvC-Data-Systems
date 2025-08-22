@@ -1,1 +1,0 @@
-class_name ScAlly extends CharacterBody2D

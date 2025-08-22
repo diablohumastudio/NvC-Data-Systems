@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="SCBuyedAllyLevel" load_steps=2 format=3 uid="uid://uibhlltyfvp4"]
-
-[ext_resource type="Script" uid="uid://xy36bvqrb4x3" path="res://data/acs_system/state_changers/model/sc_buyed_ally_level.gd" id="1_s8djb"]
-
-[resource]
-script = ExtResource("1_s8djb")
-type = 3
-metadata/_custom_type_script = "uid://xy36bvqrb4x3"

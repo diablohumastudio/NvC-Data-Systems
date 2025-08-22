@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AllyLevelData" load_steps=3 format=3 uid="uid://k0d72akckehe"]
+
+[ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://global_systems/data_systems/action_condition_system/condition.gd" id="1_bcvns"]
+[ext_resource type="Script" uid="uid://cp8n43lmapx8l" path="res://data/game_characters/allies/models/ally_level_data.gd" id="2_u7rvx"]
+
+[resource]
+script = ExtResource("2_u7rvx")
+level_id = ""
+ally_id = 0
+unlockd_by_default = false
+buyed_by_default = false
+unlock_conditions = Array[ExtResource("1_bcvns")]([])
+market_price = 0
+in_game_price = 0
+in_game_unlock_conditions = Array[ExtResource("1_bcvns")]([])
+metadata/_custom_type_script = "uid://cp8n43lmapx8l"

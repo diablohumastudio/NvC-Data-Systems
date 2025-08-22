@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dix0lfhiq5jy6"]
+
+[ext_resource type="Script" uid="uid://d28xsqmn8ru8i" path="res://tests/_set_get_test/_set_get_test.gd" id="1_omr46"]
+[ext_resource type="Script" uid="uid://bs7008mwxdtoj" path="res://tests/_set_get_test/label.gd" id="2_cle65"]
+
+[node name="SetGetTest" type="Node2D"]
+script = ExtResource("1_omr46")
+
+[node name="TestBtn" type="Button" parent="."]
+offset_right = 659.0
+offset_bottom = 306.0
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("2_cle65")
+
+[connection signal="pressed" from="TestBtn" to="." method="_on_test_btn_pressed"]

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5rfnytfd8iwv"]
+
+[ext_resource type="Script" uid="uid://q14yuessfwa4" path="res://tests/nodes_in_array_test/inner_node/inner_node.gd" id="1_tgbcg"]
+[ext_resource type="Texture2D" uid="uid://dglhyp43egvd6" path="res://icon.svg" id="1_tmuy3"]
+
+[node name="InnerNode" type="HBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_tgbcg")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_tmuy3")
+
+[node name="RemoveButton" type="Button" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "REMOVE INNER NODE"
+
+[connection signal="pressed" from="RemoveButton" to="." method="_on_remove_button_pressed"]

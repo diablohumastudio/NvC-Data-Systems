@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bubd7o2pf31bi"]
+
+[ext_resource type="Script" uid="uid://b4mdbw0pthlqr" path="res://screens/game/components/terrain_grid/cell/cell.gd" id="1_xlwsx"]
+
+[node name="Cell" type="Button"]
+custom_minimum_size = Vector2(192, 180)
+script = ExtResource("1_xlwsx")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

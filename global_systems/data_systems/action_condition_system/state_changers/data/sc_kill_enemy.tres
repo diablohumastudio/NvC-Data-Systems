@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="SCKilledEnemy" load_steps=2 format=3 uid="uid://ba15y5ab1dyx8"]
+
+[ext_resource type="Script" uid="uid://ddpo822vjto34" path="res://global_systems/data_systems/action_condition_system/state_changers/models/sc_killed_enemy.gd" id="1_y2hwk"]
+
+[resource]
+script = ExtResource("1_y2hwk")
+type = 1
+metadata/_custom_type_script = "uid://dpfioiaj22gmf"

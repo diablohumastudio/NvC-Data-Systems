@@ -40,7 +40,7 @@ func test_condition_has_evaluate_method():
 func test_condition_evaluate_accepts_action():
 	# Test that evaluate method can be called with an action parameter
 	var condition = Condition.new()
-	var action = Action.new(Action.TYPES.LV_COMPLTD, Action.Payload.new())
+	var action = Action.new(Action.TYPES.LV_COMPLTD, ActionPayload.new())
 	
 	# This should not crash (base implementation does nothing)
 	condition.evaluate(action)
