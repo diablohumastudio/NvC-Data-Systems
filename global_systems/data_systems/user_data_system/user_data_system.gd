@@ -40,12 +40,12 @@ func create_new_user(user_credentials: UserCredentials, set_to_current: bool = t
 
 func _create_new_ud_allies() -> Array[UDAlly]:
 	var ud_allies: Array[UDAlly] = []
-	var allies: Array[Ally] = DataFilesLoader.get_allies_from_res_files()
+	var allies: Array[AllyData] = DataFilesLoader.get_allies_from_res_files()
 	
 	for ally in allies: 
 		var new_ud_ally: UDAlly = UDAlly.new()
 		new_ud_ally.id = ally.id
-		for level in ally.levels as Array[AllyLevel]:
+		for level in ally.levels as Array[AllyLevelData]:
 			var new_ud_ally_level: UDAllyLevel = UDAllyLevel.new()
 			new_ud_ally_level.id = level.level_id
 			new_ud_ally_level.ally_id = level.ally_id
@@ -154,13 +154,13 @@ func get_ud_achievement_by_id(id: AchievementData.IDs) -> UDAchievement:
 			return ud_achivement
 	return null
 
-func get_ud_ally_by_id(id: Ally.IDs):
+func get_ud_ally_by_id(id: AllyData.IDs):
 	for ud_ally in current_user_data.allies_inventory.ud_allies as Array[UDAlly]:
 		if ud_ally.id == id:
 			return ud_ally
 	return null
 
-func get_ud_ally_level_by_id_in_ally(id: String, ally_id: Ally.IDs) -> UDAllyLevel:
+func get_ud_ally_level_by_id_in_ally(id: String, ally_id: AllyData.IDs) -> UDAllyLevel:
 	var ud_ally: UDAlly = get_ud_ally_by_id(ally_id)
 	for ud_ally_level in ud_ally.ud_levels as Array[UDAllyLevel]:
 		if ud_ally_level.id == id:

@@ -1,8 +1,8 @@
 class_name AllyDetailsPopup extends Control
 
-var ally: Ally : set = _set_ally
+var ally: AllyData : set = _set_ally
 
-func _set_ally(new_value: Ally):
+func _set_ally(new_value: AllyData):
 	ally = new_value
 	if ally:
 		_set_visuals()

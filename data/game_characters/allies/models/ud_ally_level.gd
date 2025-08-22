@@ -1,7 +1,7 @@
 class_name UDAllyLevel extends Resource
 
 @export_storage var id: String
-@export_storage var ally_id: Ally.IDs
+@export_storage var ally_id: AllyData.IDs
 
 @export_storage var unlocked: bool = false
 @export_storage var buyed: bool = false

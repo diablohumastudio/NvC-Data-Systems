@@ -1,6 +1,6 @@
 class_name AlliesMarket extends Control
 
-var allies: Array[Ally] = DataFilesLoader.get_allies_from_res_files()
+var allies: Array[AllyData] = DataFilesLoader.get_allies_from_res_files()
 
 func _ready() -> void:
 	for child in %MAPContainer.get_children():
@@ -11,7 +11,7 @@ func _ready() -> void:
 		new_ally_presenter.ally_details_requested.connect(_on_ally_details_requested)
 		%MAPContainer.add_child(new_ally_presenter)
 
-func _on_ally_details_requested(ally: Ally) -> void:
+func _on_ally_details_requested(ally: AllyData) -> void:
 	%AllyDetailsPopup.ally = ally
 	%AllyDetailsPopup.show()
 

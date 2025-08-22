@@ -1,15 +1,15 @@
 class_name UpgradeToLevelButton extends Button
 
-signal upgraded_to_level(level: AllyLevel)
+signal upgraded_to_level(level: AllyLevelData)
 
-var level: AllyLevel: set = _set_level
+var level: AllyLevelData: set = _set_level
 var acs: ActionConditionSystem: set = _set_acs
 
 func _set_acs(new_value):
 	acs = new_value
 	level.set_in_game_unlock_conditions_by_acs_instance(acs)
 
-func _set_level(new_value: AllyLevel):
+func _set_level(new_value: AllyLevelData):
 	level = new_value.duplicate()
 
 func _ready():

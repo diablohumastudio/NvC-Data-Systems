@@ -1,9 +1,9 @@
 class_name ScAllyContainer extends Control
 
-var ally: Ally
+var ally: AllyData
 var current_ally_scene: ScAlly
 var acs: ActionConditionSystem
-var in_game_buyed_levels: Array[AllyLevel]
+var in_game_buyed_levels: Array[AllyLevelData]
 
 func _ready() -> void:
 	acs = ActionConditionSystem.new("res://global_systems/data_systems/action_condition_system/conditions/data/in_game/", "res://global_systems/data_systems/action_condition_system/state_changers/data/in_game/")
@@ -28,7 +28,7 @@ func fix_hud_position_and_z():
 	%AllyUpgradePopUp.top_level = true
 	%AllyUpgradePopUp.global_position = popup_position
 
-func on_ally_upgrade_menu_level_changed(level: AllyLevel):
+func on_ally_upgrade_menu_level_changed(level: AllyLevelData):
 	if level.scene:
 		change_sc_ally(level.scene.instantiate())
 	in_game_buyed_levels.append(level)

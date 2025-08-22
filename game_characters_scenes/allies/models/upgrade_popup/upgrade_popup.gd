@@ -4,10 +4,10 @@ signal level_changed(level)
 
 const UPGRADE_TO_LEVEL_BTN_PKSC: PackedScene = preload("uid://mwls1togvm3o")
 
-var ally: Ally : set= _set_ally
+var ally: AllyData : set= _set_ally
 var acs: ActionConditionSystem : set = _set_acs
 
-func _set_ally(new_value: Ally):
+func _set_ally(new_value: AllyData):
 	ally = new_value
 	_set_level_buttons()
 
@@ -24,5 +24,5 @@ func _set_level_buttons():
 		new_upgrade_to_level_btn.upgraded_to_level.connect(_on_upgrade_to_level_button_upgraded_to_level)
 		%UpgradeToLevelBtnsContainer.add_child(new_upgrade_to_level_btn)
 
-func _on_upgrade_to_level_button_upgraded_to_level(level: AllyLevel):
+func _on_upgrade_to_level_button_upgraded_to_level(level: AllyLevelData):
 	level_changed.emit(level)

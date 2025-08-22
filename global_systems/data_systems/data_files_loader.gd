@@ -27,21 +27,21 @@ static func get_achiev_from_res_file_by_id(id: AchievementData.IDs) -> Achieveme
 	assert(achievement != null, GC.DATA_FOLDERS_PATHS.RES_ACHIEVEMENTS + AchievementData.IDs.keys()[id] + ".tres")
 	return achievement
 
-static func get_allies_from_res_files() -> Array[Ally]:
-	var allies: Array[Ally]
+static func get_allies_from_res_files() -> Array[AllyData]:
+	var allies: Array[AllyData]
 	var dir := DirAccess.open(GC.DATA_FOLDERS_PATHS.RES_ALLIES)
 	assert(dir != null, "Could not open folder")
 	dir.list_dir_begin()
 	for folder : String in dir.get_directories():
 		dir.change_dir(GC.DATA_FOLDERS_PATHS.RES_ALLIES + "/" +folder)
 		for file: String in dir.get_files():
-			var ally: Ally = load(dir.get_current_dir() + "/" + file)
+			var ally: AllyData = load(dir.get_current_dir() + "/" + file)
 			assert(ally != null, "Failed to load ally: " + file)
 			allies.append(ally)
 	return allies
 
-static func get_allies_from_res_file_by_id(id: Ally.IDs) -> Ally:
-	var file_name:String = (Ally.IDs.keys()[id] as String).to_lower()
-	var ally: Ally = load(GC.DATA_FOLDERS_PATHS.RES_ALLIES + file_name + ".tres")
+static func get_allies_from_res_file_by_id(id: AllyData.IDs) -> AllyData:
+	var file_name:String = (AllyData.IDs.keys()[id] as String).to_lower()
+	var ally: AllyData = load(GC.DATA_FOLDERS_PATHS.RES_ALLIES + file_name + ".tres")
 	assert(ally != null, GC.DATA_FOLDERS_PATHS.RES_ALLIES + file_name + ".tres")
 	return ally

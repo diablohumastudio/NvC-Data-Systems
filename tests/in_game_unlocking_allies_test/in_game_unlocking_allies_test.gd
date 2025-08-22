@@ -1,8 +1,8 @@
 extends Control
 
 func _ready() -> void:
-	var ally: Ally = load("uid://dnxrv0styygjo")
-	for level in ally.levels as Array[AllyLevel]:
+	var ally: AllyData = load("uid://dnxrv0styygjo")
+	for level in ally.levels as Array[AllyLevelData]:
 		printt("from ready in test",level, level.level_id, level.in_game_unlock_conditions)
 	%AllyUpgradePopUp.ally = ally
 	%AllyUpgradePopUp._set_level_buttons()

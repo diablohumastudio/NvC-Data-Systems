@@ -5,5 +5,5 @@ func _init() -> void:
 
 func change_state(action: Action):
 	var payload: PayInGameBuyedAllyLevel = action.payload
-	var level: AllyLevel = payload.level
+	var level: AllyLevelData = payload.level
 	level.in_game_buyed = true

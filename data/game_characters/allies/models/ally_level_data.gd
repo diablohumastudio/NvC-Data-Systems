@@ -1,11 +1,11 @@
-class_name AllyLevel extends GameCharacterLevelData
+class_name AllyLevelData extends GameCharacterLevelData
 
 signal in_game_just_unlocked
 signal in_game_just_buyed
 
 @export_category("ID")
 @export var level_id: String
-@export var ally_id: Ally.IDs
+@export var ally_id: AllyData.IDs
 
 @export_category("Market Config")
 @export var unlockd_by_default: bool = false

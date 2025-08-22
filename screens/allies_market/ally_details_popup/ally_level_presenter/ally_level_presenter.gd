@@ -2,7 +2,7 @@ class_name AllyLevelPresenter extends MarginContainer
 
 signal level_buyed
 
-var ally_level: AllyLevel
+var ally_level: AllyLevelData
 
 func _ready() -> void:
 	if ally_level:

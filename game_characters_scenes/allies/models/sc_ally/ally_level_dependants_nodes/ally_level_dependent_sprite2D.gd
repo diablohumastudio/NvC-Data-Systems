@@ -1,13 +1,13 @@
 class_name ALDSprite2D extends Sprite2D
 
 @export var levels_modifiers_textures: Dictionary[String, Texture2D]
-var buyed_levels: Array[AllyLevel]
+var buyed_levels: Array[AllyLevelData]
 
 func _ready() -> void:
 	#this kind of node is dependant on an sc_ally and will work inside of it directly (no instance scene in the middle)
 	add_to_group(str(owner))
 
-func set_levels(_levels: Array[AllyLevel]):
+func set_levels(_levels: Array[AllyLevelData]):
 	buyed_levels = _levels
 	update_visuals()
 

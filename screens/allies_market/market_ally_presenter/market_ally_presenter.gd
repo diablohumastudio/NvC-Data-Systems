@@ -1,11 +1,11 @@
 @tool
 class_name MarketAllyPresenter extends VBoxContainer
 
-signal ally_details_requested(ally: Ally)
+signal ally_details_requested(ally: AllyData)
 
-@export var ally: Ally : set = _set_ally
+@export var ally: AllyData : set = _set_ally
 
-func _set_ally(new_value: Ally) -> void:
+func _set_ally(new_value: AllyData) -> void:
 	ally = new_value
 	set_visuals()
 

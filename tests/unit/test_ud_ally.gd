@@ -2,11 +2,11 @@ extends GutTest
 
 # Test for the UDAlly class
 
-var ally_level_mock: AllyLevel
+var ally_level_mock: AllyLevelData
 
 func before_each():
-	# Create a mock AllyLevel for testing
-	ally_level_mock = AllyLevel.new()
+	# Create a mock AllyLevelData for testing
+	ally_level_mock = AllyLevelData.new()
 	ally_level_mock.level_id = "test_level_1"
 
 func after_each():
@@ -21,8 +21,8 @@ func test_ud_ally_creation():
 func test_ud_ally_id_property():
 	# Test the id property
 	var ud_ally = UDAlly.new()
-	ud_ally.id = Ally.IDs.CHEST
-	assert_eq(ud_ally.id, Ally.IDs.CHEST, "UDAlly id should be settable and gettable")
+	ud_ally.id = AllyData.IDs.CHEST
+	assert_eq(ud_ally.id, AllyData.IDs.CHEST, "UDAlly id should be settable and gettable")
 
 func test_ud_ally_has_unlocked_levels_array():
 	# Test that unlocked_levels is initialized as array

@@ -1,6 +1,6 @@
 class_name AllySelectorCard extends VBoxContainer
 
-@export var ally: Ally
+@export var ally: AllyData
 
 func _ready() -> void:
 	if !ally: 
@@ -11,7 +11,7 @@ func _ready() -> void:
 	GSS._ally_just_placed.connect(_on_GSS__ally_just_placed)
 
 #region TimeBlocking for when ally has just been placed
-func _on_GSS__ally_just_placed(_ally:Ally):
+func _on_GSS__ally_just_placed(_ally:AllyData):
 	if ally == _ally: _start_time_blocking()
 	
 func _start_time_blocking():

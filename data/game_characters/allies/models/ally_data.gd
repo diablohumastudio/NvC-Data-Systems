@@ -1,4 +1,4 @@
-class_name Ally extends GameCharacterData
+class_name AllyData extends GameCharacterData
 
 enum IDs { BAYONETE_SOLDIER, CHEST }
 
@@ -9,8 +9,8 @@ enum IDs { BAYONETE_SOLDIER, CHEST }
 
 @export var price: int
 
-@export var levels: Array[AllyLevel]
-@export var base_level: AllyLevel
+@export var levels: Array[AllyLevelData]
+@export var base_level: AllyLevelData
 
 func get_saved_ud_ally() -> UDAlly:
 	return UDS.get_ud_ally_by_id(id)
