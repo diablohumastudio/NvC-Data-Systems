@@ -7,8 +7,6 @@ enum IDs { BAYONETE_SOLDIER, CHEST }
 @export var ally_name: String
 @export var description: String
 
-@export var price: int
-
 @export var levels: Array[AllyLevelData]
 @export var base_level: AllyLevelData
 

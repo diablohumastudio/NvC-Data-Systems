@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cm6ttotc04vt3" path="res://screens/allies_market/allies_market.gd" id="1_fgbw5"]
 [ext_resource type="PackedScene" uid="uid://cn2bbomafg8ko" path="res://screens/allies_market/market_ally_presenter/market_ally_presenter.tscn" id="1_tbd4s"]
-[ext_resource type="Resource" uid="uid://dnxrv0styygjo" path="res://data/game_characters/allies/data/chest/chest.tres" id="2_c2b2q"]
+[ext_resource type="Resource" uid="uid://dnxrv0styygjo" path="res://data/game_characters/allies/resource_providers/chest/chest.tres" id="2_c2b2q"]
 [ext_resource type="PackedScene" uid="uid://h1hb81pq8rx8" path="res://screens/allies_market/ally_details_popup/ally_details_popup.tscn" id="3_popup"]
 
 [node name="AlliesMarket" type="Control"]

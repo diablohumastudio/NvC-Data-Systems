@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cl6pvehct0nsm" path="res://screens/game/components/allies_selector/allies_selector.gd" id="1_5rr1e"]
 [ext_resource type="PackedScene" uid="uid://d3ht2nmc2bh8o" path="res://screens/game/components/allies_selector/ally_selector_card/ally_selector_card.tscn" id="1_t1adg"]
-[ext_resource type="Resource" uid="uid://bxaddilaeyy62" path="res://data/game_characters/allies/data/bayonete_soldier_levels/bayonete_soldier.tres" id="3_5vpka"]
+[ext_resource type="Resource" uid="uid://bxaddilaeyy62" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/bayonete_soldier.tres" id="3_5vpka"]
 
 [node name="AlliesSelector" type="MarginContainer"]
 script = ExtResource("1_5rr1e")

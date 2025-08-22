@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Ally" load_steps=4 format=3 uid="uid://bxaddilaeyy62"]
 
 [ext_resource type="Script" uid="uid://ccntxav05c4k" path="res://data/game_characters/allies/models/ally_data.gd" id="1_i87kw"]
-[ext_resource type="Resource" uid="uid://c4a462bjqt7xm" path="res://data/game_characters/allies/data/bayonete_soldier_levels/levels/base_shot_lvl.tres" id="1_m5mv6"]
+[ext_resource type="Resource" uid="uid://c4a462bjqt7xm" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/base_shot_lvl.tres" id="1_m5mv6"]
 [ext_resource type="Script" uid="uid://cp8n43lmapx8l" path="res://data/game_characters/allies/models/ally_level_data.gd" id="2_y5ttf"]
 
 [resource]

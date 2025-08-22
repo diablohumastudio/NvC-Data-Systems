@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://clqhwebs0bq0b"
-path="res://.godot/imported/bayonete_soldier_thumbnail.png-8dc43fa3c3a115ff695fd04e5209f2d7.ctex"
+path="res://.godot/imported/bayonete_soldier_thumbnail.png-1d3893f9e2a5f154e6393bec5f8b722a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/game_characters/allies/data/bayonete_soldier_levels/assets/bayonete_soldier_thumbnail.png"
-dest_files=["res://.godot/imported/bayonete_soldier_thumbnail.png-8dc43fa3c3a115ff695fd04e5209f2d7.ctex"]
+source_file="res://data/game_characters/allies/shooter_ally/bayonete_soldier/assets/bayonete_soldier_thumbnail.png"
+dest_files=["res://.godot/imported/bayonete_soldier_thumbnail.png-1d3893f9e2a5f154e6393bec5f8b722a.ctex"]
 
 [params]
 

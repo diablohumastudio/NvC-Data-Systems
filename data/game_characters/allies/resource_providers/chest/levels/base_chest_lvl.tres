@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c3crxjcbn6df3" path="res://game_characters_scenes/allies/data/resource_provider/data/chest/data/iron_chest/ally_card_assets/chest.png" id="1_c8in0"]
 [ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://global_systems/data_systems/action_condition_system/condition.gd" id="1_o6li0"]
-[ext_resource type="Script" uid="uid://bacha5qb1rbr" path="res://data/game_characters/allies/models/resource_provider/money_provider_level.gd" id="2_c8in0"]
+[ext_resource type="Script" uid="uid://bacha5qb1rbr" path="res://data/game_characters/allies/resource_providers/models/money_provider_level.gd" id="2_c8in0"]
 [ext_resource type="PackedScene" uid="uid://vab6yicbwijn" path="res://game_characters_scenes/allies/data/resource_provider/data/chest/data/iron_chest/iron_chest.tscn" id="3_uasyb"]
 
 [resource]

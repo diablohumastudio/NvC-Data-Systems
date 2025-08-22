@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://fiodc4axyxnb"
-path="res://.godot/imported/chest_thumbnail.png-76da913c1fe6a1d6d1ec3adf2e2b8ca3.ctex"
+path="res://.godot/imported/chest_thumbnail.png-cefce4d6d95149e2b28a9115f18fb014.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/game_characters/allies/data/chest/assets/chest_thumbnail.png"
-dest_files=["res://.godot/imported/chest_thumbnail.png-76da913c1fe6a1d6d1ec3adf2e2b8ca3.ctex"]
+source_file="res://data/game_characters/allies/resource_providers/chest/assets/chest_thumbnail.png"
+dest_files=["res://.godot/imported/chest_thumbnail.png-cefce4d6d95149e2b28a9115f18fb014.ctex"]
 
 [params]
 
