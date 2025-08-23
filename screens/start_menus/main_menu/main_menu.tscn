@@ -1878,9 +1878,7 @@ offset_bottom = 40.0
 [node name="GoToSettingsMenuButton" parent="HUD" instance=ExtResource("43_jom10")]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 0.0
 offset_top = 478.0
-offset_right = 630.0
 offset_bottom = 1078.0
 scale = Vector2(1, 1)
 focus_neighbor_left = NodePath("../GoToWorldsMapMenuButton")
@@ -1967,7 +1965,9 @@ libraries = {
 autoplay = "start"
 
 [node name="SLSBank" type="Node" parent="."]
+unique_name_in_owner = true
 script = ExtResource("52_uw2wa")
+scenes_paths = Array[String](["uid://87lecky2hhq6"])
 metadata/_custom_type_script = "uid://cc5cx846obsu8"
 
 [connection signal="focus_entered" from="BackgroundAnimation/AboutMenuItems/PopupSelector/PopupSelectorButtons/DisclaimerPopupBtn" to="BackgroundAnimation/AboutMenuItems/PopupSelector/PopupSelectorButtons/DisclaimerPopupBtn" method="_on_focus_entered"]

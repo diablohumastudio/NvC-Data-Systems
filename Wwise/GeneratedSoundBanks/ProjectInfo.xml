@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo>
+	<Project Name="NazisVsCommiesGameAudio" GUID="{EECD329F-B811-43E8-AD73-C243FEC3BB76}" Generator="2024.1.2.8726"/>
+	<CacheRoot>../../../../WwiseProj/NazisVsCommiesGameAudio/.cache</CacheRoot>
+	<Platforms>
+		<Platform Name="Android" GUID="{6DFADF91-34DF-45ED-8477-39AB494A4892}" BasePlatform="Android" BasePlatformGUID="{A2D401DE-B8B6-4FEB-8142-137C34D507CA}" Path="Android"/>
+		<Platform Name="Linux" GUID="{AC13ADC0-E920-4E98-8990-99A1AE57A15B}" BasePlatform="Linux" BasePlatformGUID="{BD0BDF13-3125-454F-8BFD-319537169F81}" Path="Linux"/>
+		<Platform Name="Mac" GUID="{4340DE5A-A341-47F4-B93A-C7137FDAC1D3}" BasePlatform="Mac" BasePlatformGUID="{9C6217D5-DD11-4795-87C1-6CE02853C540}" Path="Mac"/>
+		<Platform Name="Windows" GUID="{599BDE3A-5FCE-4B45-84D7-C04869E01390}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="Windows"/>
+	</Platforms>
+	<Languages>
+		<Language Name="English(US)" Id="684519430" GUID="{B7EEC577-8D7A-4721-86BA-68066D06FA1B}" Default="true" UseAsStandIn="true"/>
+	</Languages>
+	<FileHash>{FBB29F52-CC95-6862-ED56-B9AA524E245D}</FileHash>
+</ProjectInfo>

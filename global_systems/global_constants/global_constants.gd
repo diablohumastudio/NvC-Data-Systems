@@ -5,6 +5,7 @@ const TOTAL_NUMBER_OF_CANONS: int = 5
 const SCREENS_UIDS: Dictionary = {
 	"LOADING_SCREEN": "uid://b4n41kmtybwqn",
 	"MAIN_MENU": "uid://cflg2ypu25js2",
+	"SETTINGS_MENU": "uid://87lecky2hhq6",
 	"MENU": "uid://iinlpvu7gc2e",
 	"GAME": "uid://c2b4jldseu5vs",
 	"ACHIEVEMENTS": "uid://bbsi2yvced0xh",

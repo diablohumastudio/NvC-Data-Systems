@@ -10,9 +10,9 @@ var _are_all_resources_loaded := false
 
 #conect wwise and start loaders loading process
 func _ready():
-	_is_initial_music_segment_played = true
-	#AudioSystem.post_event(AK.EVENTS.SET_MUSIC_SC_LOADING_SCREEN)
-	#AudioSystem.music_sync_exit.connect(_on_wwise_audio_system_music_sync_exit,CONNECT_ONE_SHOT,)
+	#_is_initial_music_segment_played = true
+	AudioSystem.post_event(AK.EVENTS.SET_MUSIC_SC_LOADING_SCREEN)
+	AudioSystem.music_sync_exit.connect(_on_wwise_audio_system_music_sync_exit,CONNECT_ONE_SHOT,)
 	_activate_animated_loaders()
 
 #when every loader finished loading try to go to main_menu

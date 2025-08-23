@@ -8,3 +8,5 @@ func change_scene(scene_path: PackedScene, arguments: Dictionary = {}) -> void:
 	
 	for key in arguments:
 		new_scene[key] = arguments[key]
+	
+	if new_scene.has_method("_initial_setup"): new_scene._initial_setup()

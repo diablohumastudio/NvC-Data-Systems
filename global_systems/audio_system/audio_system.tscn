@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cectg4xycyge0"]
+
+[ext_resource type="Script" uid="uid://dr8jue0y0edpk" path="res://global_systems/audio_system/audio_system.gd" id="1_jqsy2"]
+[ext_resource type="WwiseBank" uid="uid://bo8ctxlmehp0h" path="res://Wwise/resources/SoundBank/{924EE0CA-CDD3-4324-AC79-0CEBA35C0A35}.tres" id="2_l5qas"]
+
+[node name="WwiseAudio" type="Node2D"]
+script = ExtResource("1_jqsy2")
+
+[node name="AkListener2D" type="AkListener2D" parent="."]
+
+[node name="AkBank" type="AkBank" parent="."]
+bank = ExtResource("2_l5qas")
+load_on = 1

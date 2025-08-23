@@ -1,0 +1,29 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	2434766612	music_state_group			\Default Work Unit\music_state_group	
+
+State	ID	Name	State Group			Notes
+	48567530	state_stalingrad_summer_game_intense	music_state_group			
+	207979799	state_game_won_popup	music_state_group			
+	748895195	None	music_state_group			
+	914203221	state_stalingrad_summer_game	music_state_group			
+	1290309944	state_level_intro	music_state_group			
+	2315826626	state_stalingrad_winter_game_intense	music_state_group			
+	2676250102	state_settings_menu	music_state_group			
+	3724058175	state_worlds_map_menu	music_state_group			
+	3759295949	state_stalingrad_winter_game	music_state_group			
+	3892925004	state_loading_screen	music_state_group			
+	4144676454	state_main_menu	music_state_group			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1006694123	music_volume			\Default Work Unit\music_volume	
+	1564184899	sfx_volume			\Default Work Unit\sfx_volume	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	1502772432	SFX Bus			\Default Work Unit\Master Audio Bus\SFX Bus	
+	3127962312	Music Bus			\Default Work Unit\Master Audio Bus\Music Bus	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Audio Devices	ID	Name	Type				Notes
+	2317455096	No_Output	No Output			
+	3859886410	System	System			
+

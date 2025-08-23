@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="NvC Data Systems"
-run/main_scene="uid://dw2aqgkww2ttq"
+run/main_scene="uid://cflg2ypu25js2"
 config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/bg_color=Color(0.0980392, 0.0666667, 0.0666667, 1)
 boot_splash/image="uid://mhtg4423uwra"
@@ -26,6 +26,8 @@ GC="*res://global_systems/global_constants/global_constants.gd"
 AAPscr="*res://screens/achievements_achieved_presenter_singleton/achievements_achieved_presenter.tscn"
 GSS="*res://global_systems/data_systems/game_state_system/game_state_system.gd"
 SLS="*res://global_systems/scene_loading_system/system/scene_loading_system.gd"
+WwiseRuntimeManager="*res://addons/Wwise/runtime/wwise_runtime_manager.gd"
+AudioSystem="*res://global_systems/audio_system/audio_system.tscn"
 
 [display]
 
@@ -54,3 +56,12 @@ folder_colors={
 "res://game_characters_scenes/allies/shoter_ally/models/": "gray",
 "res://global_systems/data_systems/action_condition_system/conditions/models/": "gray"
 }
+
+[wwise]
+
+common_user_settings/root_output_path="res://Wwise/GeneratedSoundBanks"
+project_settings/use_soundbank_names=false
+project_settings/windows_platform_info="res://Wwise/resources/Windows.tres"
+project_settings/mac_platform_info="res://Wwise/resources/Mac.tres"
+project_settings/linux_platform_info="res://Wwise/resources/Linux.tres"
+project_settings/android_platform_info="res://Wwise/resources/Android.tres"
