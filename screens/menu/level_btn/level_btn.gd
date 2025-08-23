@@ -24,4 +24,4 @@ func _change_color_and_text() -> void:
 func _on_pressed() -> void:
 	GSS.level = level
 	GSS.reset_values()
-	SMS.change_scene(GC.SCREENS_UIDS.GAME)
+	SMS.change_scene(load(GC.SCREENS_UIDS.GAME))

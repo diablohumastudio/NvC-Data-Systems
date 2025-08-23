@@ -16,7 +16,7 @@ func _on_ally_details_requested(ally: AllyData) -> void:
 	%AllyDetailsPopup.show()
 
 func _on_go_back_btn_pressed() -> void:
-	SMS.change_scene(GC.SCREENS_UIDS.MENU)
+	SMS.change_scene(load(GC.SCREENS_UIDS.MENU))
 
 func _on_present_unlocked_allies_button_pressed() -> void:
 	var text_to_present: String = ""

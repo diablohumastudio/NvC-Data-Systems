@@ -1,12 +1,15 @@
 extends Node
 
-func change_scene(scene_path: PackedScene, arguments: Dictionary = {}) -> void:
-	get_tree().change_scene_to_packed(scene_path)
-	await get_tree().tree_changed
-	
-	var new_scene: Node = get_tree().current_scene
+func change_scene(scene: PackedScene, arguments: Dictionary = {}) -> void:
+	var current_scene: Node = get_tree().current_scene
+	print(current_scene)
+	var new_scene: Node = scene.instantiate()
 	
 	for key in arguments:
-		new_scene[key] = arguments[key]
+		if key in new_scene:
+			new_scene[key] = arguments[key]
+	if new_scene.has_method("_sms_initialize"): new_scene._sms_initialize()
 	
-	if new_scene.has_method("_initial_setup"): new_scene._initial_setup()
+	get_tree().root.add_child(new_scene)
+	get_tree().current_scene = new_scene
+	current_scene.queue_free()

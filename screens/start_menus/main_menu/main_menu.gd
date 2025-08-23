@@ -8,7 +8,7 @@ var _entering_from_worlds_map_menu: bool = false
 func _ready():
 	AudioSystem.post_event(AK.EVENTS.SET_MUSIC_SC_MAIN_MENU)
 
-func _initial_setup():
+func _sms_initialize():
 	if _entering_from_games_menu:
 		%MenusTransitionAnimationPlayer.play_backwards("goto_about_menu")
 		%InitialAnimationPlayer.play("start_from_games_menu")
