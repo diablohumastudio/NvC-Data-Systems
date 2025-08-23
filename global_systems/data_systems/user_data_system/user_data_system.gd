@@ -2,7 +2,16 @@ extends Node
 
 signal current_user_changed()
 
-enum PROPERTIES {USERS_CREDENTIALS, USER_NAME, UD_LEVELS, ACHIEVEMENTS, ENEMIES_KILLED, UD_ACHIEVEMENTS, ALLIES}
+enum PROPERTIES {
+	USERS_CREDENTIALS, 
+	USER_NAME, 
+	UD_LEVELS, 
+	ACHIEVEMENTS, 
+	ENEMIES_KILLED, 
+	UD_ACHIEVEMENTS, 
+	ALLIES,
+	MUSIC_VOLUME,
+	SFX_VOLUME}
 
 const _USERS_CREDENTIALS_FILE_PATH : String = "user://users.tres"
 const _USER_FILE_BASE: String = "user://"
@@ -141,6 +150,10 @@ func get_property(property: PROPERTIES):
 			return current_user_data.ud_achievements
 		PROPERTIES.ALLIES:
 			return current_user_data.allies_inventory.ud_allies
+		PROPERTIES.MUSIC_VOLUME:
+			return current_user_data.settings.music_volume
+		PROPERTIES.SFX_VOLUME:
+			return current_user_data.settings.sfx_volume
 
 func get_ud_level_by_id(id: LevelData.IDs) -> UDLevel:
 	for ud_level in current_user_data.progress.ud_levels as Array[UDLevel]:
