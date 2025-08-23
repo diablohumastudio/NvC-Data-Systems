@@ -1,0 +1,186 @@
+[gd_scene load_steps=14 format=3 uid="uid://yaecy5i836q2"]
+
+[ext_resource type="Material" uid="uid://chvplxvtkpoo" path="res://screens/start_menus/about_menu/submenu_selector/submenu_btn/submenu_btn_shader_material.tres" id="1_kqg8d"]
+[ext_resource type="ButtonGroup" uid="uid://dc2tyleotietr" path="res://screens/start_menus/about_menu/submenu_selector/submenu_btn/submenu_btn_group.tres" id="2_gljlh"]
+[ext_resource type="Texture2D" uid="uid://d1wn8vi27ynjp" path="res://screens/start_menus/about_menu/submenu_selector/assets/disclaimer_button.png" id="3_uxb0x"]
+[ext_resource type="Texture2D" uid="uid://3iqmp0g4w0na" path="res://screens/start_menus/about_menu/submenu_selector/assets/disclaimer_button_selected.png" id="4_pi04v"]
+[ext_resource type="Script" uid="uid://dkenpycg4hxj0" path="res://screens/start_menus/about_menu/submenu_selector/submenu_btn/submenu_btn.gd" id="5_hp5ip"]
+[ext_resource type="Texture2D" uid="uid://bhnummcditq3x" path="res://screens/start_menus/about_menu/submenu_selector/assets/world_icon_particle.png" id="6_75h8m"]
+[ext_resource type="Texture2D" uid="uid://cdc5d5po5b5sa" path="res://screens/start_menus/about_menu/submenu_selector/assets/button_holder.png" id="7_pi04v"]
+
+[sub_resource type="Curve" id="Curve_ejpau"]
+_limits = [0.0, 2.0, 0.0, 1.0]
+_data = [Vector2(0, 0.299066), 0.0, 3.57452, 0, 0, Vector2(0.186047, 1.67023), 0.0, 0.0, 0, 0, Vector2(1, 0.505263), -1.6859, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_4a4oi"]
+offsets = PackedFloat32Array(0, 0.205298, 0.649007, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.92549, 0.94902, 0.45098, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="Animation" id="Animation_gop4x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/brightness")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/saturation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_1k13p"]
+resource_name = "_bw_to_color"
+length = 0.3
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CPUParticles2D:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/saturation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 2.0, 1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:material:shader_parameter/brightness")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.7, 1.5, 1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.9, 0.9), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_5ygfh"]
+resource_name = "_color_to_bw"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/saturation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/brightness")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.7]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i5cwv"]
+_data = {
+&"RESET": SubResource("Animation_gop4x"),
+&"_bw_to_color": SubResource("Animation_1k13p"),
+&"_color_to_bw": SubResource("Animation_5ygfh")
+}
+
+[node name="SubmenuBtn" type="TextureButton"]
+material = ExtResource("1_kqg8d")
+anchors_preset = -1
+anchor_right = 0.143
+anchor_bottom = 0.255
+offset_left = 76.0
+offset_right = 76.44
+offset_bottom = -0.400024
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(185, 258)
+toggle_mode = true
+button_group = ExtResource("2_gljlh")
+texture_normal = ExtResource("3_uxb0x")
+texture_focused = ExtResource("4_pi04v")
+script = ExtResource("5_hp5ip")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(137, 296)
+scale = Vector2(1, 1.04348)
+emitting = false
+amount = 40
+texture = ExtResource("6_75h8m")
+lifetime = 0.7
+one_shot = true
+preprocess = 0.3
+speed_scale = 1.5
+explosiveness = 0.5
+emission_shape = 3
+emission_rect_extents = Vector2(150, 1)
+direction = Vector2(0, -1)
+spread = 65.46
+gravity = Vector2(0, -400)
+initial_velocity_min = 132.22
+initial_velocity_max = 132.22
+scale_amount_curve = SubResource("Curve_ejpau")
+color_ramp = SubResource("Gradient_4a4oi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_i5cwv")
+}
+
+[node name="BtnHolderTexture" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -76.0
+offset_right = 275.0
+offset_bottom = 285.0
+texture = ExtResource("7_pi04v")
+
+[connection signal="toggled" from="." to="." method="_on_toggled"]

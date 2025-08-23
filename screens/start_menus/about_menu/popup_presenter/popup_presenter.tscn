@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://ohx2441ipvbn"]
+
+[ext_resource type="Script" uid="uid://bgkvo5ukoyg6e" path="res://screens/start_menus/about_menu/popup_presenter/popup_presenter.gd" id="1_bsaq0"]
+[ext_resource type="PackedScene" uid="uid://dl8jl1cc866s3" path="res://screens/start_menus/about_menu/submenus/disclaimer/popup/disclaimer.tscn" id="2_041qb"]
+
+[node name="PopupPresenter" type="Node2D"]
+script = ExtResource("1_bsaq0")
+
+[node name="PopupScene1" parent="." instance=ExtResource("2_041qb")]
+
+[editable path="PopupScene1"]

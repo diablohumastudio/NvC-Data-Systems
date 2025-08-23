@@ -1,0 +1,117 @@
+[gd_scene load_steps=11 format=3 uid="uid://b4n41kmtybwqn"]
+
+[ext_resource type="Script" uid="uid://dewveiekukrdj" path="res://screens/initial_screens/loading_screen/loading_screen.gd" id="1_ti8cj"]
+[ext_resource type="PackedScene" uid="uid://ch80xmnv4dmtb" path="res://screens/initial_screens/loading_screen/animated_loader/animated_loader.tscn" id="2_6kal7"]
+[ext_resource type="Texture2D" uid="uid://bb304m1ks1s5b" path="res://screens/initial_screens/loading_screen/assets/loading_screen_logo.png" id="3_4uaeq"]
+[ext_resource type="FontFile" uid="uid://ns85otisc51h" path="res://global_assets/fonts/Boldstone-Regular.ttf" id="4_30k2f"]
+[ext_resource type="PackedScene" uid="uid://cw5i53clevpnv" path="res://screens/initial_screens/loading_screen/animated_background/animated_background.tscn" id="5_wh8xf"]
+[ext_resource type="Shader" uid="uid://dfnf5rlm54k7g" path="res://global_assets/shaders/distort.gdshader" id="7_lps3n"]
+[ext_resource type="PackedScene" uid="uid://yaecy5i836q2" path="res://screens/start_menus/about_menu/submenu_selector/submenu_btn/submenu_btn.tscn" id="8_l13hd"]
+[ext_resource type="PackedScene" uid="uid://kaumcd515jsx" path="res://screens/initial_screens/loading_screen/animated_loader/animated_loader_nazi.tscn" id="9_xr7nt"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jj6fj"]
+shader = ExtResource("7_lps3n")
+shader_parameter/frequency = 4.0
+shader_parameter/amplitude = 2.0
+shader_parameter/ripple_rate = 5.0
+shader_parameter/wave_amplitude = 0.05
+shader_parameter/wave_frequency = 4.0
+
+[sub_resource type="GDScript" id="GDScript_mfww8"]
+script/source = "extends ColorRect
+
+func _ready():
+	material.set(\"shader_parameter/frequency\",4)
+	material.set(\"shader_parameter/amplitude\",2)
+	material.set(\"shader_parameter/ripple_rate\",5)
+	material.set(\"shader_parameter/wave_amplitude\",.05)
+	material.set(\"shader_parameter/wave_frequency\",4)"
+
+[node name="LoadingScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ti8cj")
+
+[node name="AnimatedBackground" parent="." instance=ExtResource("5_wh8xf")]
+layout_mode = 0
+
+[node name="NvZLogo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 48.0
+offset_right = 460.0
+offset_bottom = 236.0
+texture = ExtResource("3_4uaeq")
+
+[node name="LoadingLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 830.0
+offset_top = 827.0
+offset_right = 1095.0
+offset_bottom = 883.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.662745)
+theme_override_fonts/font = ExtResource("4_30k2f")
+theme_override_font_sizes/font_size = 70
+text = "Loading"
+horizontal_alignment = 1
+
+[node name="AnimatedLoadersContainer" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 636.0
+offset_top = 979.0
+offset_right = 1335.0
+offset_bottom = 982.0
+
+[node name="AnimatedLoader1" parent="AnimatedLoadersContainer" instance=ExtResource("2_6kal7")]
+scene_to_load_path = "uid://cflg2ypu25js2"
+
+[node name="ColorTexture" parent="AnimatedLoadersContainer/AnimatedLoader1/LoadingIcon" index="1"]
+modulate = Color(1, 1, 1, 0)
+
+[node name="LoadingRing" parent="AnimatedLoadersContainer/AnimatedLoader1/LoadingIcon" index="2"]
+visible = true
+
+[node name="AnimatedLoader2" parent="AnimatedLoadersContainer" instance=ExtResource("2_6kal7")]
+position = Vector2(215, 0)
+
+[node name="AnimatedLoader3" parent="AnimatedLoadersContainer" instance=ExtResource("9_xr7nt")]
+position = Vector2(430, 0)
+
+[node name="AnimatedLoader4" parent="AnimatedLoadersContainer" instance=ExtResource("9_xr7nt")]
+position = Vector2(645, 0)
+
+[node name="ShadersLoaders" type="Node" parent="."]
+
+[node name="load_distort_shader" type="ColorRect" parent="ShadersLoaders"]
+process_mode = 3
+top_level = true
+material = SubResource("ShaderMaterial_jj6fj")
+anchors_preset = -1
+anchor_left = -0.018
+anchor_top = 0.995
+anchor_right = 0.002
+anchor_bottom = 1.027
+offset_left = -0.439999
+offset_top = 0.399902
+offset_right = -30.84
+offset_bottom = -27.16
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4.90262, 4.90262)
+script = SubResource("GDScript_mfww8")
+
+[node name="WorldButton" parent="ShadersLoaders" instance=ExtResource("8_l13hd")]
+offset_left = -422.0
+offset_top = 3.0
+offset_right = -422.32
+offset_bottom = 3.51999
+
+[editable path="AnimatedLoadersContainer/AnimatedLoader1"]
+[editable path="AnimatedLoadersContainer/AnimatedLoader2"]
+[editable path="AnimatedLoadersContainer/AnimatedLoader3"]
+[editable path="AnimatedLoadersContainer/AnimatedLoader4"]

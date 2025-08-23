@@ -1,0 +1,529 @@
+[gd_scene load_steps=35 format=3 uid="uid://d3fq3n8sfelgm"]
+
+[ext_resource type="Texture2D" uid="uid://khpi3jcehtf2" path="res://screens/levels_menu/worlds_map_menu/assets/europe_map_city_selector_bg.png" id="1_2v811"]
+[ext_resource type="Script" uid="uid://dt43ungtjkkc3" path="res://screens/levels_menu/worlds_map_menu/worlds_map_menu.gd" id="1_slbr7"]
+[ext_resource type="Texture2D" uid="uid://b7bwy0703oesq" path="res://screens/levels_menu/worlds_map_menu/assets/middle_light.png" id="2_g4drc"]
+[ext_resource type="Texture2D" path="res://screens/level_menus/stalingrad_summer_level_menu/assets/level_selector_bg.png" id="2_om0l1"]
+[ext_resource type="Texture2D" path="res://screens/level_menus/stalingrad_summer_level_menu/assets/base_icon.png" id="3_gitpk"]
+[ext_resource type="Texture2D" uid="uid://vl6ns0gjiwai" path="res://screens/levels_menu/worlds_map_menu/assets/lamp.png" id="4_lnn2l"]
+[ext_resource type="Texture2D" path="res://screens/level_menus/stalingrad_winter_level_menu/assets/level_selector_bg.png" id="4_qb3xo"]
+[ext_resource type="Texture2D" path="res://screens/level_menus/stalingrad_summer_level_menu/assets/compass.png" id="5_rhm4k"]
+[ext_resource type="Texture2D" uid="uid://d3yrhhhctp5hh" path="res://screens/levels_menu/worlds_map_menu/assets/soldiers.png" id="5_sjp4j"]
+[ext_resource type="Texture2D" uid="uid://bmh4mslp6fg8e" path="res://screens/levels_menu/worlds_map_menu/assets/europe_worlds_path.png" id="9_i16gw"]
+[ext_resource type="Texture2D" uid="uid://c5s6jqndov4p4" path="res://screens/levels_menu/worlds_map_menu/assets/berlin_icon_bw.png" id="10_vldtx"]
+[ext_resource type="Texture2D" uid="uid://c868xn1xwlfq5" path="res://screens/levels_menu/worlds_map_menu/assets/budapest_icon_bw.png" id="11_5vt5q"]
+[ext_resource type="Texture2D" uid="uid://v88wr20krdem" path="res://screens/levels_menu/worlds_map_menu/assets/world_maps_menu_borders.png" id="11_i16gw"]
+[ext_resource type="Texture2D" uid="uid://bl16tjubyllmd" path="res://screens/levels_menu/worlds_map_menu/assets/berlin_icon_selected.png" id="11_nqn7u"]
+[ext_resource type="Texture2D" uid="uid://dy5tlctbsbkcg" path="res://global_assets/go_back_button.png" id="12_4ojfu"]
+[ext_resource type="Texture2D" uid="uid://c67xmobgwgbgx" path="res://screens/levels_menu/worlds_map_menu/assets/leningrad_icon_bw.png" id="12_dk6q6"]
+[ext_resource type="Texture2D" uid="uid://dri4w41crgxhd" path="res://screens/levels_menu/worlds_map_menu/assets/budapest_icon_selected.png" id="13_1qtec"]
+[ext_resource type="Texture2D" uid="uid://xollcxmkscnt" path="res://global_assets/go_back_button_selected.png" id="13_1r6fw"]
+[ext_resource type="Texture2D" uid="uid://botwbg8vq8yy" path="res://screens/levels_menu/worlds_map_menu/assets/stalingrad_summer_icon_bw.png" id="13_4584y"]
+[ext_resource type="Texture2D" uid="uid://ckbecvugh5tq" path="res://screens/levels_menu/worlds_map_menu/assets/stalingrad_winter_icon_bw.png" id="14_7spyp"]
+[ext_resource type="Texture2D" uid="uid://cftoupkadnl3o" path="res://screens/levels_menu/worlds_map_menu/assets/moscow_icon_bw.png" id="15_5vt5q"]
+[ext_resource type="Texture2D" uid="uid://dubq02f6ppvw6" path="res://screens/levels_menu/worlds_map_menu/assets/leningrad_icon_selected.png" id="15_faq7g"]
+[ext_resource type="Texture2D" uid="uid://1d0xtcwrx36p" path="res://screens/levels_menu/worlds_map_menu/assets/stalingrad_summer_icon_selected.png" id="17_24im2"]
+[ext_resource type="Texture2D" uid="uid://ngh4knlljikl" path="res://screens/levels_menu/worlds_map_menu/assets/stalingrad_winter_icon_selected.png" id="19_c5eq5"]
+[ext_resource type="Texture2D" uid="uid://dkffwkd5sqagu" path="res://screens/levels_menu/worlds_map_menu/assets/moscow_icon_selected.png" id="21_kj31i"]
+[ext_resource type="Script" uid="uid://cc5cx846obsu8" path="res://global_systems/scene_loading_system/sls_scenes_bank/sls_scenes_bank.gd" id="26_nqn7u"]
+
+[sub_resource type="Animation" id="Animation_twkhu"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_x64uo"]
+resource_name = "lamp_loop"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MiddleLight:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.433333, 0.533333, 0.666667, 1, 1.1, 1.2, 1.3, 1.6, 1.9, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.74902), Color(1, 1, 1, 1), Color(1, 1, 1, 0.572549), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.572549), Color(1, 1, 1, 1), Color(1, 1, 1, 0.572549), Color(1, 1, 1, 1), Color(1, 1, 1, 0.572549), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_i16gw"]
+resource_name = "start"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MiddleLight:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(2, 2, 2, 0.749), Color(1, 1, 1, 0.368627)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MiddleLight:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.5, 1.5), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/path = NodePath("CanvasLayer/BlackBorders:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ui3rv"]
+_data = {
+&"RESET": SubResource("Animation_twkhu"),
+&"lamp_loop": SubResource("Animation_x64uo"),
+&"start": SubResource("Animation_i16gw")
+}
+
+[sub_resource type="Animation" id="Animation_d8ym2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(960, 540)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../MiddleLight:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.74902)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../MiddleLight:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../CanvasLayer/BlackBorders:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../CanvasLayer/GoBackButton:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_6c3tj"]
+resource_name = "goto_stalingrad_summer_level_map_menu"
+length = 1.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(5.46416, 1),
+"update": 0,
+"values": [Vector2(0.95, 0.95), Vector2(8.3, 8.3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../StalingradSummerLevelMenuElements:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.75, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Camera2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(960, 540), Vector2(1422, 657)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../CanvasLayer/BlackBorders:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(3.73213, 7.46426),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.5)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../WorldButtons:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(0.392292, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../WorldButtons:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(986, 786), Vector2(986, 690)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../CanvasLayer/GoBackButton:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_blj4l"]
+resource_name = "goto_stalingrad_winter_level_map_menu"
+length = 1.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(5.46416, 1),
+"update": 0,
+"values": [Vector2(0.95, 0.95), Vector2(8.3, 8.3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../StalingradWinterLevelsMenuElements:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.75, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../WorldButtons:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(0.392292, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../WorldButtons:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(986, 786), Vector2(986, 690)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Camera2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(960, 540), Vector2(1420, 654)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../CanvasLayer/BlackBorders:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(3.73213, 7.46426),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.5)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../CanvasLayer/GoBackButton:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m0eth"]
+_data = {
+&"RESET": SubResource("Animation_d8ym2"),
+&"goto_stalingrad_summer_level_map_menu": SubResource("Animation_6c3tj"),
+&"goto_stalingrad_winter_level_map_menu": SubResource("Animation_blj4l")
+}
+
+[node name="WorldsMapMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_slbr7")
+
+[node name="EuropeMapCitySelectorBg" type="Sprite2D" parent="."]
+position = Vector2(986, 786)
+texture = ExtResource("1_2v811")
+
+[node name="StalingradWinterLevelsMenuElements" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1297.0
+offset_top = 609.0
+offset_right = 1297.0
+offset_bottom = 609.0
+scale = Vector2(0.12, 0.12)
+mouse_filter = 2
+
+[node name="LevelSelectorBg" type="Sprite2D" parent="StalingradWinterLevelsMenuElements"]
+position = Vector2(1192.5, 595)
+texture = ExtResource("4_qb3xo")
+
+[node name="GotoStalingradWinterCampButton" type="TextureButton" parent="StalingradWinterLevelsMenuElements"]
+layout_mode = 0
+offset_left = 1571.0
+offset_top = 433.0
+offset_right = 1805.0
+offset_bottom = 603.0
+pivot_offset = Vector2(117, 85)
+texture_normal = ExtResource("3_gitpk")
+
+[node name="Compass" type="Sprite2D" parent="StalingradWinterLevelsMenuElements"]
+position = Vector2(240, 46)
+texture = ExtResource("5_rhm4k")
+
+[node name="StalingradSummerLevelMenuElements" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1299.0
+offset_top = 611.0
+offset_right = 1299.0
+offset_bottom = 611.0
+scale = Vector2(0.12, 0.12)
+mouse_filter = 2
+
+[node name="LevelSelectorBg" type="Sprite2D" parent="StalingradSummerLevelMenuElements"]
+position = Vector2(1192.5, 595)
+texture = ExtResource("2_om0l1")
+
+[node name="GotoStalingradSummerCampButton" type="TextureButton" parent="StalingradSummerLevelMenuElements"]
+layout_mode = 0
+offset_left = 1571.0
+offset_top = 433.0
+offset_right = 1805.0
+offset_bottom = 603.0
+pivot_offset = Vector2(117, 85)
+texture_normal = ExtResource("3_gitpk")
+
+[node name="Compass" type="Sprite2D" parent="StalingradSummerLevelMenuElements"]
+position = Vector2(240, 46)
+texture = ExtResource("5_rhm4k")
+
+[node name="MiddleLight" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.74902)
+position = Vector2(190, 150)
+texture = ExtResource("2_g4drc")
+offset = Vector2(668, 547)
+
+[node name="WorldButtons" type="Node2D" parent="."]
+position = Vector2(986, 786)
+
+[node name="Path" type="Sprite2D" parent="WorldButtons"]
+texture = ExtResource("9_i16gw")
+
+[node name="BerlinButton" type="TextureButton" parent="WorldButtons"]
+offset_left = -751.0
+offset_top = -289.0
+offset_right = -528.0
+offset_bottom = -34.0
+texture_normal = ExtResource("10_vldtx")
+texture_hover = ExtResource("11_nqn7u")
+texture_focused = ExtResource("11_nqn7u")
+
+[node name="BudapestButton" type="TextureButton" parent="WorldButtons"]
+offset_left = -523.0
+offset_top = -58.0
+offset_right = -300.0
+offset_bottom = 197.0
+texture_normal = ExtResource("11_5vt5q")
+texture_hover = ExtResource("13_1qtec")
+texture_focused = ExtResource("13_1qtec")
+
+[node name="LeningradButton" type="TextureButton" parent="WorldButtons"]
+offset_left = -341.0
+offset_top = -644.0
+offset_right = -118.0
+offset_bottom = -389.0
+texture_normal = ExtResource("12_dk6q6")
+texture_hover = ExtResource("15_faq7g")
+texture_focused = ExtResource("15_faq7g")
+
+[node name="StalingradSummerButton" type="TextureButton" parent="WorldButtons"]
+offset_left = 316.0
+offset_top = -367.0
+offset_right = 539.0
+offset_bottom = -112.0
+texture_normal = ExtResource("13_4584y")
+texture_hover = ExtResource("17_24im2")
+texture_focused = ExtResource("17_24im2")
+
+[node name="StalingradWinterButton" type="TextureButton" parent="WorldButtons"]
+offset_left = 317.0
+offset_top = -134.0
+offset_right = 540.0
+offset_bottom = 121.0
+texture_normal = ExtResource("14_7spyp")
+texture_hover = ExtResource("19_c5eq5")
+texture_focused = ExtResource("19_c5eq5")
+
+[node name="MoscowButton" type="TextureButton" parent="WorldButtons"]
+offset_left = -54.0
+offset_top = -722.0
+offset_right = 169.0
+offset_bottom = -467.0
+texture_normal = ExtResource("15_5vt5q")
+texture_hover = ExtResource("21_kj31i")
+texture_focused = ExtResource("21_kj31i")
+
+[node name="Lamp" type="Sprite2D" parent="."]
+position = Vector2(989.4, 789.4)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("4_lnn2l")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BlackBorders" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(959.5, 540.5)
+scale = Vector2(1.05365, 1.05278)
+texture = ExtResource("11_i16gw")
+
+[node name="GoBackButton" type="TextureButton" parent="CanvasLayer"]
+offset_left = 21.0
+offset_top = 896.0
+offset_right = 171.0
+offset_bottom = 1012.0
+scale = Vector2(1.1, 1.1)
+texture_normal = ExtResource("12_4ojfu")
+texture_pressed = ExtResource("13_1r6fw")
+texture_hover = ExtResource("13_1r6fw")
+
+[node name="Soldiers" type="Sprite2D" parent="."]
+position = Vector2(986, 786)
+scale = Vector2(2.8, 2.8)
+texture = ExtResource("5_sjp4j")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(960, 540)
+zoom = Vector2(0.95, 0.95)
+process_callback = 0
+
+[node name="AnimationPlayerLamp" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ui3rv")
+}
+autoplay = "start"
+
+[node name="AnimationPlayerTransition" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+root_node = NodePath("../AnimationPlayerLamp")
+libraries = {
+&"": SubResource("AnimationLibrary_m0eth")
+}
+
+[node name="SLSBank" type="Node" parent="."]
+script = ExtResource("26_nqn7u")
+scenes_paths = Array[String](["res://screens/start_menus/main_menu/main_menu.tscn", "res://screens/level_menus/stalingrad_summer_level_menu/stalingrad_summer_levels_menu.tscn", "res://screens/level_menus/stalingrad_winter_level_menu/stalingrad_winter_levels_menu.tscn"])
+metadata/_custom_type_script = "uid://cc5cx846obsu8"
+
+[connection signal="pressed" from="WorldButtons/StalingradSummerButton" to="." method="_on_stalingrad_summer_button_pressed"]
+[connection signal="pressed" from="WorldButtons/StalingradWinterButton" to="." method="_on_stalingrad_winter_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/GoBackButton" to="." method="_on_go_back_button_pressed"]

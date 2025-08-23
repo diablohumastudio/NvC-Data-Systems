@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://touq8b40dlj2"]
+
+[ext_resource type="Script" uid="uid://df7c8t4up623m" path="res://screens/start_menus/about_menu/background_presenter/background_presenter.gd" id="1_qssdx"]
+[ext_resource type="PackedScene" uid="uid://ci2txb162q4g2" path="res://screens/start_menus/about_menu/submenus/disclaimer/background/stalingrad_summer_bg.tscn" id="1_tvuhu"]
+
+[node name="BackgroundPresenter" type="Node2D"]
+script = ExtResource("1_qssdx")
+
+[node name="BackgroundScene" parent="." instance=ExtResource("1_tvuhu")]

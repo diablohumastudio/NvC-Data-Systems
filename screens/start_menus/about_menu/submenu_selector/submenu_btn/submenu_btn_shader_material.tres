@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://chvplxvtkpoo"]
+
+[ext_resource type="Shader" uid="uid://besc5dmtdgtma" path="res://screens/start_menus/about_menu/submenu_selector/submenu_btn/submenu_btn_shader.gdshader" id="1_u178e"]
+
+[resource]
+shader = ExtResource("1_u178e")
+shader_parameter/hue = 0.0
+shader_parameter/saturation = 0.0
+shader_parameter/brightness = 0.7

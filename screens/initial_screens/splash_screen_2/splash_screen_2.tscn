@@ -1,0 +1,481 @@
+[gd_scene load_steps=13 format=3 uid="uid://dw2aqgkww2ttq"]
+
+[ext_resource type="Script" uid="uid://co7axgaqfujma" path="res://screens/initial_screens/splash_screen_2/splash_screen_2.gd" id="1_22brg"]
+[ext_resource type="Texture2D" uid="uid://dwgpunpdjdnuk" path="res://screens/initial_screens/splash_screen_2/assets/diablo_huma_logo_vector.png" id="2_o6s5q"]
+[ext_resource type="Shader" uid="uid://blan7lrww6sar" path="res://global_assets/shaders/glitch.gdshader" id="3_06gx4"]
+[ext_resource type="FontFile" uid="uid://ns85otisc51h" path="res://global_assets/fonts/Boldstone-Regular.ttf" id="4_bptm6"]
+[ext_resource type="Texture2D" uid="uid://brxv4ffg4pwuk" path="res://screens/initial_screens/splash_screen_2/assets/powered_by_godot.png" id="5_6mq02"]
+[ext_resource type="Texture2D" uid="uid://bdrjmltx6ysac" path="res://global_objects/black_borders/assets/side_borders_loading_screen.png" id="6_7wwq5"]
+[ext_resource type="Texture2D" uid="uid://8h1i342qec42" path="res://screens/initial_screens/splash_screen_2/assets/wwise.png" id="6_xc06a"]
+[ext_resource type="Script" uid="uid://cc5cx846obsu8" path="res://global_systems/scene_loading_system/sls_scenes_bank/sls_scenes_bank.gd" id="8_52jp0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_flegy"]
+shader = ExtResource("3_06gx4")
+shader_parameter/shake_power = 0.03
+shader_parameter/shake_rate = 1.0
+shader_parameter/shake_speed = 6.0
+shader_parameter/shake_block_size = 20.0
+shader_parameter/shake_color_rate = 0.01
+
+[sub_resource type="Animation" id="Animation_b1hbx"]
+length = 0.001
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DiabloHumaLogoVector:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(958.845, 290.012)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DiabloHumaLogoVector:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.63, 0.63)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DiabloHumaLogoVector/GlitchRect:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PoweredBy/PoweredByIcons:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(3.86375),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PresentsLabel:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(3.24901),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PresentsLabel:visible_ratio")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Background:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.835957, 0.835957, 0.835957, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Background:color")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.0980392, 0.0666667, 0.0666667, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("PresentsLabel:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("PoweredBy/PoweredByLabel:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.827451)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("PoweredBy/PoweredByLabel:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(822, 508)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("PoweredBy/PoweredByIcons/GodotIcon:scale")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.14, 0.14)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("SideBorders:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.823529)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("PoweredBy/PoweredByIcons/WwiseIcon:scale")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.54, 0.54)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("PoweredBy/PoweredByIcons/WwiseIcon:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_vrobk"]
+resource_name = "appear"
+length = 4.6
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DiabloHumaLogoVector:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.9, 1.35, 1.6),
+"transitions": PackedFloat32Array(1, 2.07053, 1),
+"update": 0,
+"values": [Vector2(958.845, 496.688), Vector2(958.845, 281.217), Vector2(958.845, 290.012)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DiabloHumaLogoVector:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.25, 0.65, 4.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.84, 1.5), Vector2(0.84, 1.5), Vector2(0.8, 0.8), Vector2(0.58, 0.58), Vector2(0.63, 0.63)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DiabloHumaLogoVector/GlitchRect:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.65),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PoweredBy/PoweredByIcons:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2.85, 3.15),
+"transitions": PackedFloat32Array(1, 3.86375),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PresentsLabel:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(3.5, 4.25),
+"transitions": PackedFloat32Array(1, 3.24901),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PresentsLabel:visible_ratio")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(3.45, 4.25),
+"transitions": PackedFloat32Array(1, 3.24901),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Background:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(3.6, 4.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.835957, 0.835957, 0.835957, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Background:color")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1.35),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.156863, 0.0901961, 0.072549, 1), Color(0.0980392, 0.0666667, 0.0666667, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("PresentsLabel:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(3.5, 4.25),
+"transitions": PackedFloat32Array(0.203063, 1),
+"update": 0,
+"values": [Vector2(1.667, 5), Vector2(1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("PoweredBy/PoweredByLabel:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(2.15, 2.85, 3.15, 3.45, 3.7, 3.95, 4.2, 4.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.827451), Color(1, 1, 1, 1), Color(1, 1, 1, 0.827451), Color(1, 1, 1, 1), Color(1, 1, 1, 0.827451)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("PoweredBy/PoweredByLabel:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(2.15, 2.85),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(822, 539.5), Vector2(822, 508)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("PoweredBy/PoweredByIcons/GodotIcon:scale")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(2.8, 2.95, 4.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.1, 0.1), Vector2(0.17, 0.17), Vector2(0.14, 0.14)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("SideBorders:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(1.3, 2.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.823529)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("PoweredBy/PoweredByIcons/WwiseIcon:scale")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(3.05, 3.2, 4.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.3, 0.3), Vector2(0.62, 0.62), Vector2(0.54, 0.54)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("PoweredBy/PoweredByIcons/WwiseIcon:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(3.05, 3.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_24mje"]
+_data = {
+&"RESET": SubResource("Animation_b1hbx"),
+&"appear": SubResource("Animation_vrobk")
+}
+
+[node name="SplashScreen2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_22brg")
+
+[node name="Background" type="ColorRect" parent="."]
+modulate = Color(0.835957, 0.835957, 0.835957, 1)
+layout_mode = 2
+offset_left = -1.0
+offset_right = 1919.0
+offset_bottom = 1080.0
+size_flags_horizontal = 0
+color = Color(0.0980392, 0.0666667, 0.0666667, 1)
+
+[node name="DiabloHumaLogoVector" type="Sprite2D" parent="."]
+position = Vector2(958.845, 290.012)
+scale = Vector2(0.63, 0.63)
+texture = ExtResource("2_o6s5q")
+
+[node name="GlitchRect" type="ColorRect" parent="DiabloHumaLogoVector"]
+visible = false
+material = SubResource("ShaderMaterial_flegy")
+offset_left = -730.219
+offset_top = -227.017
+offset_right = 967.781
+offset_bottom = 424.983
+
+[node name="PoweredBy" type="Node2D" parent="."]
+
+[node name="PoweredByLabel" type="Label" parent="PoweredBy"]
+modulate = Color(1, 1, 1, 0.827451)
+offset_left = 822.0
+offset_top = 508.0
+offset_right = 1177.0
+offset_bottom = 567.0
+theme_override_colors/font_color = Color(0.878431, 0.803922, 0.772549, 1)
+theme_override_fonts/font = ExtResource("4_bptm6")
+theme_override_font_sizes/font_size = 60
+text = "Powered by:"
+
+[node name="PoweredByIcons" type="Node2D" parent="PoweredBy"]
+position = Vector2(0, 5.36584)
+
+[node name="GodotIcon" type="Sprite2D" parent="PoweredBy/PoweredByIcons"]
+position = Vector2(823.36, 722.634)
+scale = Vector2(0.14, 0.14)
+texture = ExtResource("5_6mq02")
+
+[node name="WwiseIcon" type="Sprite2D" parent="PoweredBy/PoweredByIcons"]
+position = Vector2(1110, 731.634)
+scale = Vector2(0.54, 0.54)
+texture = ExtResource("6_xc06a")
+
+[node name="PresentsLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 812.0
+offset_top = 897.0
+offset_right = 1160.0
+offset_bottom = 1001.0
+pivot_offset = Vector2(251, 51)
+theme_override_colors/font_color = Color(0.88, 0.80256, 0.7744, 1)
+theme_override_fonts/font = ExtResource("4_bptm6")
+theme_override_font_sizes/font_size = 80
+text = "Presents:"
+
+[node name="SideBorders" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.823529)
+position = Vector2(960, 540)
+texture = ExtResource("6_7wwq5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_24mje")
+}
+autoplay = "appear"
+
+[node name="SLSBank" type="Node" parent="."]
+script = ExtResource("8_52jp0")
+scenes_paths = Array[String](["uid://b4n41kmtybwqn"])
+metadata/_custom_type_script = "uid://cc5cx846obsu8"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="all_scenes_loaded" from="SLSBank" to="." method="_on_sls_bank_all_scenes_loaded"]

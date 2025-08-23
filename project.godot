@@ -11,8 +11,10 @@ config_version=5
 [application]
 
 config/name="NvC Data Systems"
-run/main_scene="uid://iusscgq60rcy"
+run/main_scene="uid://dw2aqgkww2ttq"
 config/features=PackedStringArray("4.4", "Forward Plus")
+boot_splash/bg_color=Color(0.0980392, 0.0666667, 0.0666667, 1)
+boot_splash/image="uid://mhtg4423uwra"
 config/icon="res://icon.svg"
 
 [autoload]
@@ -23,6 +25,7 @@ SMS="*res://global_systems/scene_manager_system/scene_manager_system.gd"
 GC="*res://global_systems/global_constants/global_constants.gd"
 AAPscr="*res://screens/achievements_achieved_presenter_singleton/achievements_achieved_presenter.tscn"
 GSS="*res://global_systems/data_systems/game_state_system/game_state_system.gd"
+SLS="*res://global_systems/scene_loading_system/system/scene_loading_system.gd"
 
 [display]
 

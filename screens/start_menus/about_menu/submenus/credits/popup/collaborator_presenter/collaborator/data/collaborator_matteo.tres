@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Collaborator" load_steps=2 format=3 uid="uid://by0aoiyehx3om"]
+
+[ext_resource type="Script" uid="uid://qgat47ylboxu" path="res://screens/start_menus/about_menu/submenus/credits/popup/collaborator_presenter/collaborator/model/collaborator.gd" id="1_dvwjv"]
+
+[resource]
+script = ExtResource("1_dvwjv")
+colaborator_name = "MATTEO CUEVA"
+role = "ARTIST"
+description = "LOREM IPSUM DOLOR SIT AMET,CONSECTETUR ADIPISCING ELIT, SED DOEIUSMOD TEMPOR INCIDIDUNT UTLABORE ET DOLORE MAGNA ALIQUA"
+facebook_user_name = ""
+instagram_user_name = ""
+steam_user_name = "@Matteo"
+x_user_name = ""
+metadata/_custom_type_script = "uid://qgat47ylboxu"

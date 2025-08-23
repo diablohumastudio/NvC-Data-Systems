@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=3 uid="uid://d543jno4noka"]
+
+[ext_resource type="Texture2D" uid="uid://blaf6yqk37rn" path="res://screens/start_menus/main_menu/go_to_games_menu_button/assets/start_normal.png" id="1_fnpnl"]
+[ext_resource type="Texture2D" uid="uid://ckpyy1tdouq04" path="res://screens/start_menus/main_menu/go_to_games_menu_button/assets/start_hover.png" id="2_prh4n"]
+[ext_resource type="Script" uid="uid://1mg87rcjvcyh" path="res://screens/start_menus/main_menu/go_to_games_menu_button/go_to_games_menu_button.gd" id="3_prh4n"]
+
+[sub_resource type="Animation" id="Animation_xq6og"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_nij1k"]
+resource_name = "start_pressed"
+length = 0.4
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.0523599, 0.0698132, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(3, 2, 2, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2g1s1"]
+_data = {
+&"RESET": SubResource("Animation_xq6og"),
+&"start_pressed": SubResource("Animation_nij1k")
+}
+
+[node name="GoToGamesMenuButton" type="TextureButton"]
+offset_left = 384.0
+offset_top = 477.5
+offset_right = 993.0
+offset_bottom = 1139.5
+scale = Vector2(0.9, 0.9)
+pivot_offset = Vector2(382, 621)
+focus_neighbor_right = NodePath("../GoToSettingsMenuButton")
+texture_normal = ExtResource("1_fnpnl")
+texture_focused = ExtResource("2_prh4n")
+script = ExtResource("3_prh4n")
+
+[node name="StartPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_2g1s1")
+}
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
