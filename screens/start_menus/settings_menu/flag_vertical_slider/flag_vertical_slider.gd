@@ -11,20 +11,20 @@ enum types { music, sfx }
 
 func _ready():
 	%AnimationPlayer.play("appear")
-	#if type == types.music: value = UserDataManager.user_data.user_settings.music_volume_value
-	#if type == types.sfx: value = UserDataManager.user_data.user_settings.sfx_volume_value
+	if type == types.music: value = UDS.get_property(UDS.PROPERTIES.MUSIC_VOLUME)
+	if type == types.sfx: value = UDS.get_property(UDS.PROPERTIES.SFX_VOLUME)
 #
-#func _value_changed(new_value: float):
-	#_toogle_disable_textures(new_value == 0)
-#
-	#if type == types.music: 
-		#UserDataManager.user_data.user_settings.music_volume_value = value
-		#AudioSystem.music_volume = new_value
-	#if type == types.sfx: 
-		#UserDataManager.user_data.user_settings.sfx_volume_value = value 
-		#AudioSystem.sfx_volume = new_value
-#
-	#UserDataManager.save_user_data_to_disk()
+func _value_changed(new_value: float):
+	_toogle_disable_textures(new_value == 0)
+
+	if type == types.music: 
+		UDS.current_user_data.settings.music_volume = value
+		AudioSystem.music_volume = new_value
+	if type == types.sfx: 
+		UDS.current_user_data.settings.sfx_volume = value 
+		AudioSystem.sfx_volume = new_value
+
+	UDS.save_user_data_to_disk()
 
 func _toogle_disable_textures(is_disabled: bool) -> void:
 	if is_disabled:
