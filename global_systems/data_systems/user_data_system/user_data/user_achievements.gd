@@ -1,3 +1,3 @@
 class_name UserAchievements extends Resource
 
-@export var ud_achievements: Array[UDAchievement] 
+@export_storage var ud_achievements: Array[UDAchievement] 
