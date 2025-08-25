@@ -1,0 +1,1125 @@
+[gd_scene load_steps=46 format=3 uid="uid://bnl38rkw31r66"]
+
+[ext_resource type="Script" uid="uid://clhlf16br12ye" path="res://screens/levels_menu/stalingrad_summer_level_menu/stalingrad_summer_levels_menu.gd" id="1_wuwyd"]
+[ext_resource type="Texture2D" uid="uid://c30st7u56etvb" path="res://screens/levels_menu/stalingrad_summer_level_menu/assets/level_selector_bg.png" id="2_e1seu"]
+[ext_resource type="Texture2D" uid="uid://dv6qsdcr1w2g1" path="res://screens/levels_menu/stalingrad_summer_level_menu/assets/stalingrad_label.png" id="4_v8a2b"]
+[ext_resource type="Texture2D" uid="uid://c3id080x517aw" path="res://screens/levels_menu/stalingrad_summer_level_menu/assets/compass.png" id="5_0c37s"]
+[ext_resource type="Texture2D" uid="uid://ksq8w6bk8tpj" path="res://screens/levels_menu/stalingrad_summer_camp/assets/base_bg.png" id="6_b4fe2"]
+[ext_resource type="Texture2D" uid="uid://dow3wjhmq5rvc" path="res://screens/levels_menu/stalingrad_summer_camp/assets/black_borders.png" id="6_tu45k"]
+[ext_resource type="Texture2D" uid="uid://bs87sdawwfub4" path="res://screens/levels_menu/stalingrad_summer_camp/assets/resources_ui.png" id="7_3amio"]
+[ext_resource type="Texture2D" uid="uid://cbgwqwx1wd313" path="res://screens/levels_menu/stalingrad_summer_camp/assets/barriers_factory.png" id="8_uieth"]
+[ext_resource type="Texture2D" uid="uid://byjdct5ikv3pm" path="res://screens/levels_menu/stalingrad_summer_camp/assets/explosives_factory.png" id="9_tu45k"]
+[ext_resource type="Texture2D" uid="uid://dy5tlctbsbkcg" path="res://global_assets/go_back_button.png" id="10_mfed6"]
+[ext_resource type="Texture2D" uid="uid://bnpfefy1svqrb" path="res://screens/levels_menu/stalingrad_summer_camp/assets/barracks.png" id="10_rrt26"]
+[ext_resource type="Texture2D" uid="uid://d38b5h1gf7p63" path="res://screens/levels_menu/stalingrad_summer_camp/assets/resource_generator_factory.png" id="10_u1iub"]
+[ext_resource type="Texture2D" uid="uid://xollcxmkscnt" path="res://global_assets/go_back_button_selected.png" id="11_dsxqw"]
+[ext_resource type="Texture2D" uid="uid://dn7t8jqlhmohj" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0000.png" id="11_mus46"]
+[ext_resource type="PackedScene" uid="uid://3qp3q74ukss3" path="res://screens/levels_menu/stalingrad_summer_level_menu/goto_level_button/goto_level_button.tscn" id="12_a6n0u"]
+[ext_resource type="Texture2D" uid="uid://mc3p0syregwk" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0001.png" id="12_j1ous"]
+[ext_resource type="Texture2D" uid="uid://cvqganhkwx8q7" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0002.png" id="13_apmvp"]
+[ext_resource type="Texture2D" uid="uid://bv3s8c214ggih" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0003.png" id="14_t4ynx"]
+[ext_resource type="Texture2D" uid="uid://dajp5qpmcs65i" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0004.png" id="15_00jki"]
+[ext_resource type="Texture2D" uid="uid://d3issrwm4ww7a" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0005.png" id="16_q8408"]
+[ext_resource type="Texture2D" uid="uid://cgb3nar0poup0" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0006.png" id="17_t7q8m"]
+[ext_resource type="Texture2D" uid="uid://njqh1q48q8jq" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0007.png" id="18_1ugte"]
+[ext_resource type="Texture2D" uid="uid://c1qrsk44dwj1o" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0008.png" id="19_i4o48"]
+[ext_resource type="Texture2D" uid="uid://bw6s2k7yetp1o" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0009.png" id="20_5rs0c"]
+[ext_resource type="Texture2D" uid="uid://b0uhogd4ei3oc" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0010.png" id="21_hc0cl"]
+[ext_resource type="Texture2D" uid="uid://dwy45c57glcc" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0011.png" id="22_ke8bf"]
+[ext_resource type="Texture2D" uid="uid://du128opdbe5hx" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0012.png" id="23_5scne"]
+[ext_resource type="Texture2D" uid="uid://yot1pqj0q04s" path="res://screens/levels_menu/stalingrad_summer_level_menu/assets/black_borders.png" id="23_fgca6"]
+[ext_resource type="Texture2D" uid="uid://doyuxsr4yunw8" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0013.png" id="24_6iy70"]
+[ext_resource type="Texture2D" uid="uid://k6juqlsdii2d" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0014.png" id="25_ugrf3"]
+[ext_resource type="Texture2D" uid="uid://bvffydt2cqybo" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0015.png" id="26_13118"]
+[ext_resource type="Texture2D" uid="uid://bhfj5wh2tie1i" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0016.png" id="27_gs7n1"]
+[ext_resource type="Script" uid="uid://cc5cx846obsu8" path="res://global_systems/scene_loading_system/sls_scenes_bank/sls_scenes_bank.gd" id="27_tu45k"]
+[ext_resource type="Texture2D" uid="uid://cr2xqkxthi6d7" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0017.png" id="28_61d74"]
+[ext_resource type="Texture2D" uid="uid://bacpqr8s2bf1p" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0018.png" id="29_wjcym"]
+[ext_resource type="Texture2D" uid="uid://cewoxn6t03ges" path="res://screens/levels_menu/stalingrad_summer_camp/assets/top_trees.png" id="30_mus46"]
+[ext_resource type="Texture2D" uid="uid://br53du61bbj6t" path="res://screens/levels_menu/stalingrad_summer_level_menu/assets/base_button.png" id="42_j1ous"]
+[ext_resource type="Texture2D" uid="uid://do6ujev7116a" path="res://screens/levels_menu/stalingrad_summer_level_menu/assets/base_button_selected.png" id="43_apmvp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ymk4g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_mus46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_j1ous")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_apmvp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_t4ynx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_00jki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_q8408")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_t7q8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_1ugte")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_i4o48")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_5rs0c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_hc0cl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ke8bf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_5scne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_6iy70")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ugrf3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_13118")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_gs7n1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_61d74")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_wjcym")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="Animation" id="Animation_hpduo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StalingradLabel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1200, 418)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StalingradLabel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1020, 377)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/BlackBorders:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("StalingradSummerCampElements/BlackBorders:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_2oy73"]
+resource_name = "goto_stalingrad_summer_camp"
+length = 1.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StalingradSummerCampElements:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.75, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(1020, 377), Vector2(1689, 461)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera2D:zoom")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(5.46, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(5, 5)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera2D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.35, 1),
+"transitions": PackedFloat32Array(3.03, 1),
+"update": 0,
+"values": [0.0, -0.523599]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Compass:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.15, 1),
+"transitions": PackedFloat32Array(1.41, 1),
+"update": 0,
+"values": [0.0, -0.523599]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("GotoStalingradSummerCampButton:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.15, 1),
+"transitions": PackedFloat32Array(1.41, 1),
+"update": 0,
+"values": [0.0, -0.523599]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("GotoStalingradSummerCampButton:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.15, 1),
+"transitions": PackedFloat32Array(2.54, 0.287),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(2.1, 2.1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("GotoStalingradSummerCampButton:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.6, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/BlackBorders:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.5)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("StalingradSummerCampElements/BlackBorders:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.75, 1.2),
+"transitions": PackedFloat32Array(1.62451, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("CanvasLayer/GoBackButton:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tqbhx"]
+_data = {
+&"RESET": SubResource("Animation_hpduo"),
+&"goto_stalingrad_summer_camp": SubResource("Animation_2oy73")
+}
+
+[sub_resource type="Animation" id="Animation_u8chp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/GoBackButton:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GotoLevelButtons/GotoLevelButton1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-962.5, -205)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GotoLevelButtons/GotoLevelButton2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-772.5, -311)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GotoLevelButtons/GotoLevelButton3:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-596.5, -218)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GotoLevelButtons/GotoLevelButton7:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-237.5, -319)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("GotoLevelButtons/GotoLevelButton8:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-110.5, -446)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("GotoLevelButtons/GotoLevelButton9:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(17.5, -282)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("GotoLevelButtons/GotoLevelButton10:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(132.5, -136)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("GotoLevelButtons/GotoLevelButton4:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-729.5, 96)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("GotoLevelButtons/GotoLevelButton5:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-539.5, -6)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("GotoLevelButtons/GotoLevelButton6:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-371.5, -174)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("GotoLevelButtons/GotoLevelButton1:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("GotoLevelButtons/GotoLevelButton2:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("GotoLevelButtons/GotoLevelButton4:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("GotoLevelButtons/GotoLevelButton5:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("GotoLevelButtons/GotoLevelButton3:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("GotoLevelButtons/GotoLevelButton6:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("GotoLevelButtons/GotoLevelButton7:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("GotoLevelButtons/GotoLevelButton8:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("GotoLevelButtons/GotoLevelButton9:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("GotoLevelButtons/GotoLevelButton10:modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("CanvasLayer/BlackBorders:modulate")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("CanvasLayer/GoBackButton:position")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(64, 899)]
+}
+
+[sub_resource type="Animation" id="Animation_a6n0u"]
+resource_name = "start"
+length = 0.4
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StalingradLabel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 0.406126),
+"update": 0,
+"values": [Vector2(1195, 283), Vector2(1200, 418)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StalingradLabel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 0.406126),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/GoBackButton:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.166667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GotoLevelButtons/GotoLevelButton1:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.13),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-965.5, -336), Vector2(-962.5, -205)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GotoLevelButtons/GotoLevelButton2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.155),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-775.5, -442), Vector2(-772.5, -311)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("GotoLevelButtons/GotoLevelButton3:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.17),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-599.5, -349), Vector2(-596.5, -218)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("GotoLevelButtons/GotoLevelButton7:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.195),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-240.5, -450), Vector2(-237.5, -319)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("GotoLevelButtons/GotoLevelButton8:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.215),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-113.5, -577), Vector2(-110.5, -446)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("GotoLevelButtons/GotoLevelButton9:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.235),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(14.5, -413), Vector2(17.5, -282)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("GotoLevelButtons/GotoLevelButton10:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.26),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(129.5, -267), Vector2(132.5, -136)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("GotoLevelButtons/GotoLevelButton4:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.28),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-729.5, 141), Vector2(-729.5, 96)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("GotoLevelButtons/GotoLevelButton5:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.29),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-539.5, 39), Vector2(-539.5, -6)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("GotoLevelButtons/GotoLevelButton6:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.32),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-371.5, -129), Vector2(-371.5, -174)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("GotoLevelButtons/GotoLevelButton1:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.13),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("GotoLevelButtons/GotoLevelButton2:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.155),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("GotoLevelButtons/GotoLevelButton4:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 0.28),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("GotoLevelButtons/GotoLevelButton5:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 0.29),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("GotoLevelButtons/GotoLevelButton3:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 0.17),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("GotoLevelButtons/GotoLevelButton6:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 0.32),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("GotoLevelButtons/GotoLevelButton7:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 0.195),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("GotoLevelButtons/GotoLevelButton8:modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0, 0.215),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("GotoLevelButtons/GotoLevelButton9:modulate")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0, 0.235),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("GotoLevelButtons/GotoLevelButton10:modulate")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0, 0.26),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("CanvasLayer/BlackBorders:modulate")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5), Color(1, 1, 1, 1)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("CanvasLayer/GoBackButton:position")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(64, 949), Vector2(64, 899)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xi533"]
+_data = {
+&"RESET": SubResource("Animation_u8chp"),
+&"start": SubResource("Animation_a6n0u")
+}
+
+[node name="StalingradSummerLevelsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -60.0
+offset_top = 163.0
+offset_right = -60.0
+offset_bottom = 163.0
+mouse_filter = 2
+script = ExtResource("1_wuwyd")
+
+[node name="LevelSelectorBg" type="Sprite2D" parent="."]
+position = Vector2(1192.5, 595)
+texture = ExtResource("2_e1seu")
+
+[node name="StalingradSummerCampElements" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(1468.73, 463.47)
+rotation = -0.523599
+scale = Vector2(0.2, 0.2)
+
+[node name="BaseBg" type="Sprite2D" parent="StalingradSummerCampElements"]
+position = Vector2(960, 540)
+texture = ExtResource("6_b4fe2")
+
+[node name="BlackBorders" type="Sprite2D" parent="StalingradSummerCampElements"]
+position = Vector2(960, 540)
+texture = ExtResource("6_tu45k")
+
+[node name="ResourcesUi" type="Sprite2D" parent="StalingradSummerCampElements"]
+position = Vector2(960, 540)
+texture = ExtResource("7_3amio")
+
+[node name="BarriersFactory" type="TextureButton" parent="StalingradSummerCampElements"]
+offset_left = 1145.0
+offset_top = 295.0
+offset_right = 1627.0
+offset_bottom = 626.0
+texture_normal = ExtResource("8_uieth")
+
+[node name="ExplosivesFactory" type="TextureButton" parent="StalingradSummerCampElements"]
+offset_left = 327.0
+offset_top = 291.0
+offset_right = 886.0
+offset_bottom = 679.0
+texture_normal = ExtResource("9_tu45k")
+
+[node name="ResourceGeneratorFactory" type="TextureButton" parent="StalingradSummerCampElements"]
+offset_left = 873.0
+offset_top = 470.0
+offset_right = 1252.0
+offset_bottom = 818.0
+texture_normal = ExtResource("10_u1iub")
+
+[node name="Barracks" type="TextureButton" parent="StalingradSummerCampElements"]
+offset_left = 282.0
+offset_top = 597.0
+offset_right = 949.0
+offset_bottom = 1016.0
+texture_normal = ExtResource("10_rrt26")
+
+[node name="Flag" type="AnimatedSprite2D" parent="StalingradSummerCampElements/Barracks"]
+position = Vector2(331, 79)
+sprite_frames = SubResource("SpriteFrames_ymk4g")
+autoplay = "default"
+
+[node name="TopTrees" type="Sprite2D" parent="StalingradSummerCampElements"]
+position = Vector2(960, 540)
+texture = ExtResource("30_mus46")
+
+[node name="StalingradLabel" type="Sprite2D" parent="."]
+position = Vector2(1200, 418)
+texture = ExtResource("4_v8a2b")
+
+[node name="Compass" type="Sprite2D" parent="."]
+position = Vector2(240, 46)
+texture = ExtResource("5_0c37s")
+
+[node name="GotoLevelButtons" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1192.5
+offset_top = 595.0
+offset_right = 1232.5
+offset_bottom = 635.0
+
+[node name="GotoLevelButton1" parent="GotoLevelButtons" instance=ExtResource("12_a6n0u")]
+layout_mode = 0
+offset_left = -962.5
+offset_top = -205.0
+offset_right = -766.5
+offset_bottom = -76.0
+level = null
+
+[node name="GotoLevelButton2" parent="GotoLevelButtons" instance=ExtResource("12_a6n0u")]
+layout_mode = 0
+offset_left = -772.5
+offset_top = -311.0
+offset_right = -576.5
+offset_bottom = -182.0
+level = null
+
+[node name="GotoLevelButton3" parent="GotoLevelButtons" instance=ExtResource("12_a6n0u")]
+layout_mode = 0
+offset_left = -596.5
+offset_top = -218.0
+offset_right = -400.5
+offset_bottom = -89.0
+level = null
+
+[node name="GotoLevelButton4" parent="GotoLevelButtons" instance=ExtResource("12_a6n0u")]
+layout_mode = 0
+offset_left = -729.5
+offset_top = 96.0
+offset_right = -533.5
+offset_bottom = 225.0
+disabled = true
+level = null
+
+[node name="GotoLevelButton5" parent="GotoLevelButtons" instance=ExtResource("12_a6n0u")]
+layout_mode = 0
+offset_left = -539.5
+offset_top = -6.0
+offset_right = -343.5
+offset_bottom = 123.0
+disabled = true
+level = null
+
+[node name="GotoLevelButton6" parent="GotoLevelButtons" instance=ExtResource("12_a6n0u")]
+layout_mode = 0
+offset_left = -371.5
+offset_top = -174.0
+offset_right = -175.5
+offset_bottom = -45.0
+disabled = true
+level = null
+
+[node name="GotoLevelButton7" parent="GotoLevelButtons" instance=ExtResource("12_a6n0u")]
+layout_mode = 0
+offset_left = -237.5
+offset_top = -319.0
+offset_right = -41.5
+offset_bottom = -190.0
+level = null
+
+[node name="GotoLevelButton8" parent="GotoLevelButtons" instance=ExtResource("12_a6n0u")]
+layout_mode = 0
+offset_left = -110.5
+offset_top = -446.0
+offset_right = 85.5
+offset_bottom = -317.0
+disabled = true
+level = null
+
+[node name="GotoLevelButton9" parent="GotoLevelButtons" instance=ExtResource("12_a6n0u")]
+layout_mode = 0
+offset_left = 17.5
+offset_top = -282.0
+offset_right = 213.5
+offset_bottom = -153.0
+disabled = true
+level = null
+
+[node name="GotoLevelButton10" parent="GotoLevelButtons" instance=ExtResource("12_a6n0u")]
+layout_mode = 0
+offset_left = 132.5
+offset_top = -136.0
+offset_right = 328.5
+offset_bottom = -7.0
+disabled = true
+level = null
+
+[node name="GotoStalingradSummerCampButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1577.0
+offset_top = 407.0
+offset_right = 1842.0
+offset_bottom = 577.0
+pivot_offset = Vector2(117, 85)
+texture_normal = ExtResource("42_j1ous")
+texture_pressed = ExtResource("43_apmvp")
+texture_hover = ExtResource("43_apmvp")
+texture_focused = ExtResource("43_apmvp")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BlackBorders" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(960, 540)
+texture = ExtResource("23_fgca6")
+
+[node name="GoBackButton" type="TextureButton" parent="CanvasLayer"]
+offset_left = 64.0
+offset_top = 899.0
+offset_right = 240.0
+offset_bottom = 1020.0
+texture_normal = ExtResource("10_mfed6")
+texture_pressed = ExtResource("11_dsxqw")
+texture_hover = ExtResource("11_dsxqw")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1020, 377)
+ignore_rotation = false
+
+[node name="GotoCampAnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_tqbhx")
+}
+
+[node name="InitialAnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_xi533")
+}
+autoplay = "start"
+
+[node name="SLSBank" type="Node" parent="."]
+script = ExtResource("27_tu45k")
+scenes_paths = Array[String](["res://screens/levels_menu/worlds_map_menu/worlds_map_menu.tscn", "res://screens/levels_menu/stalingrad_summer_camp/stalingrad_summer_camp.tscn"])
+metadata/_custom_type_script = "uid://cc5cx846obsu8"
+
+[connection signal="pressed" from="GotoStalingradSummerCampButton" to="." method="_on_goto_stalingrad_summer_camp_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/GoBackButton" to="." method="_on_go_back_button_pressed"]

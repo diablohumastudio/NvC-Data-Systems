@@ -1,0 +1,451 @@
+[gd_scene load_steps=21 format=3 uid="uid://gci4nehonton"]
+
+[ext_resource type="Script" uid="uid://0hvwqvlkjma6" path="res://screens/levels_menu/stalingrad_winter_level_menu/stalingrad_winter_levels_menu.gd" id="1_0hs21"]
+[ext_resource type="Texture2D" uid="uid://csih73wdqbb8g" path="res://screens/levels_menu/stalingrad_winter_level_menu/assets/level_selector_bg.png" id="2_0hs21"]
+[ext_resource type="Texture2D" uid="uid://b3ydlnmj2vsyv" path="res://screens/levels_menu/stalingrad_summer_level_menu/assets/base_icon.png" id="3_tddqp"]
+[ext_resource type="Texture2D" uid="uid://ksq8w6bk8tpj" path="res://screens/levels_menu/stalingrad_summer_camp/assets/base_bg.png" id="5_f67pt"]
+[ext_resource type="Texture2D" uid="uid://bs87sdawwfub4" path="res://screens/levels_menu/stalingrad_summer_camp/assets/resources_ui.png" id="6_taww5"]
+[ext_resource type="Texture2D" uid="uid://bo1o8gtqbas7j" path="res://screens/levels_menu/stalingrad_summer_camp/assets/popup.png" id="7_eoxsu"]
+[ext_resource type="Texture2D" uid="uid://dv6qsdcr1w2g1" path="res://screens/levels_menu/stalingrad_summer_level_menu/assets/stalingrad_label.png" id="8_wf31a"]
+[ext_resource type="Texture2D" uid="uid://c3id080x517aw" path="res://screens/levels_menu/stalingrad_summer_level_menu/assets/compass.png" id="9_s38vx"]
+[ext_resource type="Texture2D" uid="uid://dy5tlctbsbkcg" path="res://global_assets/go_back_button.png" id="10_1q4gu"]
+[ext_resource type="Texture2D" uid="uid://xollcxmkscnt" path="res://global_assets/go_back_button_selected.png" id="11_i71b3"]
+[ext_resource type="PackedScene" uid="uid://3qp3q74ukss3" path="res://screens/levels_menu/stalingrad_summer_level_menu/goto_level_button/goto_level_button.tscn" id="12_obvwi"]
+[ext_resource type="Texture2D" uid="uid://0xwkpxvw86iu" path="res://screens/levels_menu/stalingrad_summer_level_menu/goto_level_button/assets/level_button_locked.png" id="15_66hpt"]
+[ext_resource type="Texture2D" uid="uid://dbitvqocp3xd8" path="res://screens/levels_menu/stalingrad_winter_level_menu/assets/black_borders.png" id="21_gqh12"]
+[ext_resource type="Script" uid="uid://cc5cx846obsu8" path="res://global_systems/scene_loading_system/sls_scenes_bank/sls_scenes_bank.gd" id="23_gqh12"]
+
+[sub_resource type="Animation" id="Animation_hpduo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StalingradLabel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1200, 418)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StalingradLabel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1020, 377)]
+}
+
+[sub_resource type="Animation" id="Animation_2oy73"]
+resource_name = "goto_stalingrad_summer_camp"
+length = 1.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StalingradSummerCampElements:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.75, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(1020, 377), Vector2(1689, 461)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera2D:zoom")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(5.46, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(5, 5)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera2D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.35, 1),
+"transitions": PackedFloat32Array(3.03, 1),
+"update": 0,
+"values": [0.0, -0.523599]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Compass:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.15, 1),
+"transitions": PackedFloat32Array(1.41, 1),
+"update": 0,
+"values": [0.0, -0.523599]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("GotoStalingradWinterCampButton:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.15, 1),
+"transitions": PackedFloat32Array(1.41, 1),
+"update": 0,
+"values": [0.0, -0.523599]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("GotoStalingradWinterCampButton:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.15, 1),
+"transitions": PackedFloat32Array(2.54, 0.287),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(2.1, 2.1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("GotoStalingradWinterCampButton:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.6, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 0.498039)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tqbhx"]
+_data = {
+&"RESET": SubResource("Animation_hpduo"),
+&"goto_stalingrad_summer_camp": SubResource("Animation_2oy73")
+}
+
+[sub_resource type="Animation" id="Animation_u8chp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GoBackButton:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(167, 705)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GoBackButton:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_a6n0u"]
+resource_name = "start"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StalingradLabel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1195, 283), Vector2(1200, 418)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StalingradLabel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 0.101531),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GoBackButton:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.466667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(167, 805), Vector2(167, 705)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GoBackButton:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.466667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BlackBorders:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xi533"]
+_data = {
+&"RESET": SubResource("Animation_u8chp"),
+&"start": SubResource("Animation_a6n0u")
+}
+
+[node name="StalingradWinterLevelsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 2
+script = ExtResource("1_0hs21")
+
+[node name="LevelSelectorBg" type="Sprite2D" parent="."]
+position = Vector2(1192.5, 595)
+texture = ExtResource("2_0hs21")
+
+[node name="GotoStalingradWinterCampButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1571.0
+offset_top = 433.0
+offset_right = 1805.0
+offset_bottom = 603.0
+pivot_offset = Vector2(117, 85)
+texture_normal = ExtResource("3_tddqp")
+
+[node name="StalingradSummerCampElements" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(1468.73, 463.47)
+rotation = -0.523599
+scale = Vector2(0.2, 0.2)
+
+[node name="BaseBg" type="Sprite2D" parent="StalingradSummerCampElements"]
+position = Vector2(960, 540)
+texture = ExtResource("5_f67pt")
+
+[node name="ResourcesUi" type="Sprite2D" parent="StalingradSummerCampElements"]
+position = Vector2(960, 540)
+texture = ExtResource("6_taww5")
+
+[node name="Popup" type="Sprite2D" parent="StalingradSummerCampElements"]
+modulate = Color(0, 0, 0, 0)
+position = Vector2(961, 539)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("7_eoxsu")
+
+[node name="StalingradLabel" type="Sprite2D" parent="."]
+position = Vector2(1200, 418)
+texture = ExtResource("8_wf31a")
+
+[node name="Compass" type="Sprite2D" parent="."]
+position = Vector2(240, 46)
+texture = ExtResource("9_s38vx")
+
+[node name="GotoCampAnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_tqbhx")
+}
+
+[node name="InitialAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_xi533")
+}
+autoplay = "start"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1020, 377)
+ignore_rotation = false
+
+[node name="GotoLevelButtons" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1192.5
+offset_top = 595.0
+offset_right = 1232.5
+offset_bottom = 635.0
+
+[node name="GotoLevelButton1" parent="GotoLevelButtons" instance=ExtResource("12_obvwi")]
+layout_mode = 0
+offset_left = -962.5
+offset_top = -205.0
+offset_right = -738.5
+offset_bottom = 81.0
+level = null
+
+[node name="GotoLevelButton2" parent="GotoLevelButtons" instance=ExtResource("12_obvwi")]
+layout_mode = 0
+offset_left = -772.5
+offset_top = -311.0
+offset_right = -548.5
+offset_bottom = -25.0
+level = null
+
+[node name="GotoLevelButton3" parent="GotoLevelButtons" instance=ExtResource("12_obvwi")]
+layout_mode = 0
+offset_left = -596.5
+offset_top = -218.0
+offset_right = -400.5
+offset_bottom = -89.0
+level = null
+
+[node name="GotoLevelButton4" parent="GotoLevelButtons" instance=ExtResource("12_obvwi")]
+layout_mode = 0
+offset_left = -729.5
+offset_top = 96.0
+offset_right = -505.5
+offset_bottom = 382.0
+mouse_filter = 2
+disabled = true
+texture_normal = ExtResource("15_66hpt")
+level = null
+
+[node name="GotoLevelButton5" parent="GotoLevelButtons" instance=ExtResource("12_obvwi")]
+layout_mode = 0
+offset_left = -539.5
+offset_top = -6.0
+offset_right = -315.5
+offset_bottom = 280.0
+mouse_filter = 2
+disabled = true
+texture_normal = ExtResource("15_66hpt")
+level = null
+
+[node name="GotoLevelButton6" parent="GotoLevelButtons" instance=ExtResource("12_obvwi")]
+layout_mode = 0
+offset_left = -371.5
+offset_top = -174.0
+offset_right = -147.5
+offset_bottom = 112.0
+mouse_filter = 2
+disabled = true
+texture_normal = ExtResource("15_66hpt")
+level = null
+
+[node name="GotoLevelButton7" parent="GotoLevelButtons" instance=ExtResource("12_obvwi")]
+layout_mode = 0
+offset_left = -237.5
+offset_top = -319.0
+offset_right = -13.5
+offset_bottom = -33.0
+level = null
+
+[node name="GotoLevelButton8" parent="GotoLevelButtons" instance=ExtResource("12_obvwi")]
+layout_mode = 0
+offset_left = -110.5
+offset_top = -446.0
+offset_right = 113.5
+offset_bottom = -160.0
+mouse_filter = 2
+disabled = true
+texture_normal = ExtResource("15_66hpt")
+level = null
+
+[node name="GotoLevelButton9" parent="GotoLevelButtons" instance=ExtResource("12_obvwi")]
+layout_mode = 0
+offset_left = 17.5
+offset_top = -282.0
+offset_right = 241.5
+offset_bottom = 4.0
+mouse_filter = 2
+disabled = true
+texture_normal = ExtResource("15_66hpt")
+level = null
+
+[node name="GotoLevelButton10" parent="GotoLevelButtons" instance=ExtResource("12_obvwi")]
+layout_mode = 0
+offset_left = 132.5
+offset_top = -136.0
+offset_right = 356.5
+offset_bottom = 150.0
+mouse_filter = 2
+texture_normal = ExtResource("15_66hpt")
+level = null
+
+[node name="BlackBorders" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(1020, 377)
+texture = ExtResource("21_gqh12")
+
+[node name="GoBackButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 167.0
+offset_top = 705.0
+offset_right = 343.0
+offset_bottom = 826.0
+texture_normal = ExtResource("10_1q4gu")
+texture_pressed = ExtResource("11_i71b3")
+texture_hover = ExtResource("11_i71b3")
+
+[node name="SLSBank" type="Node" parent="."]
+script = ExtResource("23_gqh12")
+scenes_paths = Array[String](["res://screens/levels_menu/worlds_map_menu/worlds_map_menu.tscn"])
+metadata/_custom_type_script = "uid://cc5cx846obsu8"
+
+[connection signal="pressed" from="GotoStalingradWinterCampButton" to="." method="_on_goto_stalingrad_summer_camp_button_pressed"]
+[connection signal="pressed" from="GoBackButton" to="." method="_on_go_back_button_pressed"]
