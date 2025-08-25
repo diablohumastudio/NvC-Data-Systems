@@ -6,6 +6,13 @@ const SCREENS_UIDS: Dictionary = {
 	"LOADING_SCREEN": "uid://b4n41kmtybwqn",
 	"MAIN_MENU": "uid://cflg2ypu25js2",
 	"SETTINGS_MENU": "uid://87lecky2hhq6",
+	"ABOUT_MENU": "uid://bo1jforvfhnbv",
+	"WORLDS_MAP_MENU": "uid://d3fq3n8sfelgm",
+	"STALINGRAD_SUMMER_LEVELS_MENU":"uid://bnl38rkw31r66",
+	"STALINGRAD_SUMMER_CAMP":"uid://ctww27adn5p47",
+	"STALINGRAD_WINTER_LEVELS_MENU":"uid://gci4nehonton",
+	
+	
 	"MENU": "uid://iinlpvu7gc2e",
 	"GAME": "uid://c2b4jldseu5vs",
 	"ACHIEVEMENTS": "uid://bbsi2yvced0xh",
