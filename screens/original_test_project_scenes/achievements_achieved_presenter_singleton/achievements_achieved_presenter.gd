@@ -1,6 +1,6 @@
 extends Control
 
-var achivement_achieved_presenter_pksc: PackedScene = load("res://screens/achievements_achieved_presenter_singleton/achievement_achieved_presenter/achievement_achieved_presenter.tscn")
+var achivement_achieved_presenter_pksc: PackedScene = load("uid://b501vcdgwsreo")
 
 func _ready() -> void:
 	conect_ud_achievements()

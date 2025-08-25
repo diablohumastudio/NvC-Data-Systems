@@ -24,4 +24,4 @@ func _on_close_btn_pressed() -> void:
 	hide()
 
 func _on_acept_btn_pressed() -> void:
-	SMS.change_scene(GC.SCREENS_UIDS.WELCOME_MENU)
+	SMS.change_scene(load(GC.SCREENS_UIDS.WELCOME_MENU))

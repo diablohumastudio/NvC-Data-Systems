@@ -54,7 +54,7 @@ func _is_path_valid(scene_path: String) -> bool:
 
 ## Returns the requested scene from the _scenes Array. If not previously loaded, throw error and returns null. 
 func get_scene(scene_path: String) -> PackedScene:
-	print(_scenes)
+
 	var scene_uid = str(ResourceLoader.get_resource_uid(scene_path))
 	if _scenes.has(scene_uid):
 		return _scenes[scene_uid]

@@ -12,4 +12,4 @@ func _on_acept_btn_pressed() -> void:
 		UDS.create_new_user(new_credentials)
 
 func _on_go_back_pressed() -> void:
-	SMS.change_scene(GC.SCREENS_UIDS.WELCOME_MENU)
+	SMS.change_scene(load(GC.SCREENS_UIDS.WELCOME_MENU))
