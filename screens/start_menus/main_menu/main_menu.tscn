@@ -815,7 +815,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("HUD/GoToWorldsMapMenuButton:position")
+tracks/3/path = NodePath("GotoButtons/GoToWorldsMapMenuButton:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -827,7 +827,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("HUD/GoToSettingsMenuButton:position")
+tracks/4/path = NodePath("GotoButtons/GoToSettingsMenuButton:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -936,7 +936,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("HUD/GoToWorldsMapMenuButton:position")
+tracks/1/path = NodePath("GotoButtons/GoToWorldsMapMenuButton:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -948,7 +948,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("HUD/GoToSettingsMenuButton:position")
+tracks/2/path = NodePath("GotoButtons/GoToSettingsMenuButton:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -1044,7 +1044,7 @@ tracks/9/keys = {
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("HUD/GoToWorldsMapMenuButton:scale")
+tracks/10/path = NodePath("GotoButtons/GoToWorldsMapMenuButton:scale")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
@@ -1056,7 +1056,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("HUD/GoToSettingsMenuButton:scale")
+tracks/11/path = NodePath("GotoButtons/GoToSettingsMenuButton:scale")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -1127,7 +1127,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("HUD/GoToSettingsMenuButton:position")
+tracks/1/path = NodePath("GotoButtons/GoToSettingsMenuButton:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -1139,7 +1139,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("HUD/GoToWorldsMapMenuButton:position")
+tracks/2/path = NodePath("GotoButtons/GoToWorldsMapMenuButton:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -1151,7 +1151,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("HUD/GoToAboutMenuButton:position")
+tracks/3/path = NodePath("GotoButtons/GoToAboutMenuButton:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -1168,7 +1168,7 @@ step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("HUD/GoToWorldsMapMenuButton:position")
+tracks/0/path = NodePath("GotoButtons/GoToWorldsMapMenuButton:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -1180,7 +1180,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("HUD/GoToSettingsMenuButton:position")
+tracks/1/path = NodePath("GotoButtons/GoToSettingsMenuButton:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -1192,7 +1192,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("HUD/GoToMarketButton:position")
+tracks/2/path = NodePath("GotoButtons/GoToMarketButton:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -1204,7 +1204,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("HUD/UserStatsContainer:position")
+tracks/3/path = NodePath("UserStatsContainer:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -1216,7 +1216,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("HUD/GoToWorldsMapMenuButton:scale")
+tracks/4/path = NodePath("GotoButtons/GoToWorldsMapMenuButton:scale")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -1228,7 +1228,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("HUD/GoToSettingsMenuButton:scale")
+tracks/5/path = NodePath("GotoButtons/GoToSettingsMenuButton:scale")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -1264,7 +1264,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("HUD/GoToAboutMenuButton:position")
+tracks/8/path = NodePath("GotoButtons/GoToAboutMenuButton:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -1280,7 +1280,7 @@ length = 0.8
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("HUD/GoToWorldsMapMenuButton:position")
+tracks/0/path = NodePath("GotoButtons/GoToWorldsMapMenuButton:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -1292,7 +1292,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("HUD/GoToSettingsMenuButton:position")
+tracks/1/path = NodePath("GotoButtons/GoToSettingsMenuButton:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -1304,7 +1304,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("HUD/GoToMarketButton:position")
+tracks/2/path = NodePath("GotoButtons/GoToMarketButton:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -1316,7 +1316,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("HUD/UserStatsContainer:position")
+tracks/3/path = NodePath("UserStatsContainer:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -1328,7 +1328,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("HUD/GoToWorldsMapMenuButton:scale")
+tracks/4/path = NodePath("GotoButtons/GoToWorldsMapMenuButton:scale")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -1340,7 +1340,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("HUD/GoToSettingsMenuButton:scale")
+tracks/5/path = NodePath("GotoButtons/GoToSettingsMenuButton:scale")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -1376,7 +1376,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("HUD/GoToAboutMenuButton:position")
+tracks/8/path = NodePath("GotoButtons/GoToAboutMenuButton:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -1870,20 +1870,39 @@ position = Vector2(959.5, 540.5)
 scale = Vector2(1.057, 1.056)
 texture = ExtResource("53_53gr8")
 
-[node name="HUD" type="Control" parent="."]
+[node name="UserStatsContainer" parent="." instance=ExtResource("9_3k1xs")]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 1706.0
+offset_top = 53.0
+offset_right = 1706.0
+offset_bottom = 53.0
+focus_mode = 0
+
+[node name="SingleGoldCoin" parent="UserStatsContainer/UserStats/UserBalanceContainer" index="1"]
+texture = null
+
+[node name="UsernameContainer" parent="UserStatsContainer/UserStats" index="2"]
+focus_neighbor_left = NodePath("../../../GotoButtons/GoToSettingsMenuButton")
+
+[node name="UserNameLabel" parent="UserStatsContainer/UserStats/UsernameContainer" index="0"]
+offset_right = 292.0
+
+[node name="GotoButtons" type="Control" parent="."]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="GoToSettingsMenuButton" parent="HUD" instance=ExtResource("43_jom10")]
+[node name="GoToSettingsMenuButton" parent="GotoButtons" instance=ExtResource("43_jom10")]
 unique_name_in_owner = true
 layout_mode = 0
 offset_top = 478.0
 offset_bottom = 1078.0
 scale = Vector2(1, 1)
 focus_neighbor_left = NodePath("../GoToWorldsMapMenuButton")
+focus_neighbor_right = NodePath("../../UserStatsContainer/UserStats/UsernameContainer")
 
-[node name="GoToWorldsMapMenuButton" parent="HUD" instance=ExtResource("44_kfmfx")]
+[node name="GoToWorldsMapMenuButton" parent="GotoButtons" instance=ExtResource("44_kfmfx")]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 366.0
@@ -1892,7 +1911,7 @@ offset_right = 975.0
 offset_bottom = 1080.0
 scale = Vector2(1, 1)
 
-[node name="GoToMarketButton" type="TextureButton" parent="HUD"]
+[node name="GoToMarketButton" type="TextureButton" parent="GotoButtons"]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 38.0
@@ -1906,7 +1925,7 @@ toggle_mode = true
 button_group = SubResource("ButtonGroup_62xm3")
 texture_normal = ExtResource("7_d0cx1")
 
-[node name="GoToAboutMenuButton" type="TextureButton" parent="HUD"]
+[node name="GoToAboutMenuButton" type="TextureButton" parent="GotoButtons"]
 layout_mode = 0
 offset_left = 1612.0
 offset_top = 898.0
@@ -1916,24 +1935,6 @@ texture_normal = ExtResource("53_ou335")
 texture_pressed = ExtResource("50_53gr8")
 texture_hover = ExtResource("50_53gr8")
 texture_focused = ExtResource("50_53gr8")
-
-[node name="UserStatsContainer" parent="HUD" instance=ExtResource("9_3k1xs")]
-unique_name_in_owner = true
-layout_mode = 1
-offset_left = 1706.0
-offset_top = 53.0
-offset_right = 1706.0
-offset_bottom = 53.0
-focus_mode = 0
-
-[node name="SingleGoldCoin" parent="HUD/UserStatsContainer/UserStats/UserBalanceContainer" index="1"]
-texture = null
-
-[node name="UsernameContainer" parent="HUD/UserStatsContainer/UserStats" index="2"]
-focus_neighbor_left = NodePath("../../../GoToSettingsMenuButton")
-
-[node name="UserNameLabel" parent="HUD/UserStatsContainer/UserStats/UsernameContainer" index="0"]
-offset_right = 292.0
 
 [node name="ExitPopup" parent="." instance=ExtResource("10_gotav")]
 unique_name_in_owner = true
@@ -1967,7 +1968,7 @@ autoplay = "start"
 [node name="SLSBank" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("52_uw2wa")
-scenes_paths = Array[String](["uid://87lecky2hhq6"])
+scenes_paths = Array[String](["uid://87lecky2hhq6", "uid://bo1jforvfhnbv", "uid://d3fq3n8sfelgm"])
 metadata/_custom_type_script = "uid://cc5cx846obsu8"
 
 [connection signal="focus_entered" from="BackgroundAnimation/AboutMenuItems/PopupSelector/PopupSelectorButtons/DisclaimerPopupBtn" to="BackgroundAnimation/AboutMenuItems/PopupSelector/PopupSelectorButtons/DisclaimerPopupBtn" method="_on_focus_entered"]
@@ -1975,10 +1976,10 @@ metadata/_custom_type_script = "uid://cc5cx846obsu8"
 [connection signal="focus_entered" from="BackgroundAnimation/AboutMenuItems/PopupSelector/PopupSelectorButtons/DisclaimerPopupBtn2" to="BackgroundAnimation/AboutMenuItems/PopupSelector/PopupSelectorButtons/DisclaimerPopupBtn2" method="_on_focus_entered"]
 [connection signal="focus_exited" from="BackgroundAnimation/AboutMenuItems/PopupSelector/PopupSelectorButtons/DisclaimerPopupBtn2" to="BackgroundAnimation/AboutMenuItems/PopupSelector/PopupSelectorButtons/DisclaimerPopupBtn2" method="_on_focus_exited"]
 [connection signal="pressed" from="BackgroundAnimation/AboutMenuItems/GoBackButton" to="BackgroundAnimation/AboutMenuItems" method="_on_go_back_button_pressed"]
-[connection signal="pressed" from="HUD/GoToSettingsMenuButton" to="." method="_on_go_to_settings_menu_button_pressed"]
-[connection signal="pressed" from="HUD/GoToWorldsMapMenuButton" to="." method="_on_go_to_worlds_map_menu_button_pressed"]
-[connection signal="pressed" from="HUD/GoToMarketButton" to="." method="_on_go_to_market_button_pressed"]
-[connection signal="pressed" from="HUD/GoToAboutMenuButton" to="." method="_on_go_to_about_menu_button_pressed"]
+[connection signal="pressed" from="GotoButtons/GoToSettingsMenuButton" to="." method="_on_go_to_settings_menu_button_pressed"]
+[connection signal="pressed" from="GotoButtons/GoToWorldsMapMenuButton" to="." method="_on_go_to_worlds_map_menu_button_pressed"]
+[connection signal="pressed" from="GotoButtons/GoToMarketButton" to="." method="_on_go_to_market_button_pressed"]
+[connection signal="pressed" from="GotoButtons/GoToAboutMenuButton" to="." method="_on_go_to_about_menu_button_pressed"]
 [connection signal="hidden" from="ExitPopup" to="." method="_on_exit_popup_hidden"]
 
-[editable path="HUD/UserStatsContainer"]
+[editable path="UserStatsContainer"]

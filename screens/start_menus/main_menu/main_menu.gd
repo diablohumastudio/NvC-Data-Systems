@@ -1,7 +1,7 @@
 ## Main menu class that handles navigation to other menus and exit functionality
 class_name MainMenu extends Control
 
-var _entering_from_games_menu: bool = false
+var _entering_from_about_menu: bool = false
 var _entering_from_settings_menu: bool = false
 var _entering_from_worlds_map_menu: bool = false
 
@@ -9,7 +9,7 @@ func _ready():
 	AudioSystem.post_event(AK.EVENTS.SET_MUSIC_SC_MAIN_MENU)
 
 func _sms_initialize():
-	if _entering_from_games_menu:
+	if _entering_from_about_menu:
 		%MenusTransitionAnimationPlayer.play_backwards("goto_about_menu")
 		%InitialAnimationPlayer.play("start_from_games_menu")
 	if _entering_from_settings_menu:
@@ -38,13 +38,13 @@ func _on_go_to_worlds_map_menu_button_pressed() -> void:
 func _on_go_to_about_menu_button_pressed() -> void:
 	await get_tree().create_timer(0.2).timeout #0.2 is half of start_player "start_pressed" animation conected in button script
 	AudioSystem.post_event(AK.EVENTS.SET_MUSIC_SC_WORLDS_MAP_MENU)
-	var games_menu: PackedScene = SLS.get_scene(GC.SCREENS_UIDS.GAMES_MENU)
+	var games_menu: PackedScene = SLS.get_scene(GC.SCREENS_UIDS.ABOUT_MENU)
 	%MenusTransitionAnimationPlayer.callv("play", ["goto_about_menu"])
 	await %MenusTransitionAnimationPlayer.animation_finished
 	SMS.change_scene(games_menu)
 
 func _on_go_to_market_button_pressed():
-	#AudioSystem.post_event(AK.EVENTS.PLAY_BUTTON_MENU_CLICK2)
+	AudioSystem.post_event(AK.EVENTS.PLAY_BUTTON_MENU_CLICK2)
 	pass
 
 func handle_mobile_go_back():

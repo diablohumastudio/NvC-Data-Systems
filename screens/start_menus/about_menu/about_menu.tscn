@@ -70,7 +70,6 @@ offset_top = 937.0
 offset_right = 185.0
 offset_bottom = 1053.0
 pivot_offset = Vector2(75.5556, 56.6666)
-mouse_filter = 2
 texture_normal = ExtResource("4_crga3")
 texture_pressed = ExtResource("5_c5shs")
 texture_hover = ExtResource("5_c5shs")

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://uncgen6shqoo" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_and_achievements_popup.gd" id="1_cx52j"]
 [ext_resource type="Texture2D" uid="uid://d04tkxanl6yk6" path="res://screens/start_menus/main_menu/account_and_achievements_popup/assets/background.png" id="1_hpbon"]
-[ext_resource type="Shader" uid="uid://37wrpuhhj5ru" path="res://global_assets/shaders/perspective_shader.gdshader" id="2_efii4"]
+[ext_resource type="Shader" uid="uid://boa325ynfrjd4" path="res://global_assets/shaders/perspective_shader.gdshader" id="2_efii4"]
 [ext_resource type="Texture2D" uid="uid://bib8b2hfp7eq1" path="res://screens/start_menus/main_menu/account_and_achievements_popup/assets/achievements_button.png" id="3_d6oqd"]
 [ext_resource type="PackedScene" uid="uid://bqjh1bot43qap" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/account_menu.tscn" id="3_kllku"]
 [ext_resource type="PackedScene" uid="uid://dts0s5jhqb7pk" path="res://screens/start_menus/main_menu/account_and_achievements_popup/achievements_menu/achievements_menu.tscn" id="4_efii4"]
@@ -12,8 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://b6pbkkdjk1f37" path="res://screens/start_menus/main_menu/account_and_achievements_popup/assets/account_button_hover.png" id="6_ffm7q"]
 [ext_resource type="Texture2D" uid="uid://dm32oaiyvgg23" path="res://screens/start_menus/main_menu/account_and_achievements_popup/assets/achievements_button_pressed.png" id="8_gsicq"]
 [ext_resource type="Texture2D" uid="uid://djps5bmv1lggd" path="res://screens/start_menus/main_menu/account_and_achievements_popup/assets/achievements_button_hover.png" id="9_4pnot"]
-[ext_resource type="Texture2D" uid="uid://dsx4ykwqjx1x0" path="res://screens/level_menus/stalingrad_summer_camp/popups/barracks_popup/assets/x_button.png" id="30_xfnua"]
-[ext_resource type="Texture2D" uid="uid://th5h8fc336js" path="res://screens/level_menus/stalingrad_summer_camp/popups/barracks_popup/assets/x_button_selected.png" id="31_kxbyf"]
+[ext_resource type="Texture2D" uid="uid://dsx4ykwqjx1x0" path="res://screens/original_test_project_scenes/allies_market/barracks_popup/assets/x_button.png" id="30_xfnua"]
+[ext_resource type="Texture2D" uid="uid://th5h8fc336js" path="res://screens/original_test_project_scenes/allies_market/barracks_popup/assets/x_button_selected.png" id="31_kxbyf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r2ocr"]
 shader = ExtResource("2_efii4")
