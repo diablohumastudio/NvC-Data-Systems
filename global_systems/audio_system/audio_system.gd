@@ -1,7 +1,7 @@
 extends Node2D
 ## Node that manages Wwise audio integration for music and sound effects
 
-#var _user_settings : UserSettings = UserDataManager.user_data.user_settings
+var _user_settings : UserSettings = UDS.current_user_data.settings
 var music_volume: float: set = _set_music_volume
 var sfx_volume: float: set = _set_sfx_volume
 @warning_ignore("unused_signal") #signal emited in inherited class objects
@@ -16,8 +16,8 @@ func _set_sfx_volume(new_volume:float):
 	Wwise.set_rtpc_value_id(AK.GAME_PARAMETERS.SFX_VOLUME, sfx_volume, null)
 
 func _ready():
-	music_volume = 0.5#_user_settings.music_volume_value
-	sfx_volume = 0.5#_user_settings.sfx_volume_value
+	music_volume = _user_settings.music_volume
+	sfx_volume = _user_settings.sfx_volume
 	initialize_music_system()
 
 func initialize_music_system() -> void:
