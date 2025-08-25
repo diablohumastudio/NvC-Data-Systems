@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1q1dc6ig3yxq"]
+
+[ext_resource type="PackedScene" uid="uid://dcvt7on3ai5p0" path="res://screens/original_test_project_scenes/login_register_menu/pop_ups/log_reg_pop_ups/log_reg_pop_ups.tscn" id="1_qkhk2"]
+[ext_resource type="Script" uid="uid://bwqqu0oypey4e" path="res://screens/original_test_project_scenes/login_register_menu/pop_ups/log_reg_pop_ups/register_pop_up/register_pop_up.gd" id="2_ri5u0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1gmtf"]
+bg_color = Color(0.105882, 0.0745098, 0.286275, 0.941176)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ri5u0"]
+bg_color = Color(0.105882, 0.0745098, 0.286275, 0.941176)
+
+[node name="RegisterPopUp" instance=ExtResource("1_qkhk2")]
+script = ExtResource("2_ri5u0")
+
+[node name="BackgorundCloseBtn" parent="." index="0"]
+theme_override_styles/hover = SubResource("StyleBoxFlat_1gmtf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ri5u0")
+
+[node name="ProcessAceptedLabel" parent="." index="2"]
+text = "USER REGISTERED"
+
+[node name="AceptBtn" parent="." index="3"]
+text = "REGISTER"

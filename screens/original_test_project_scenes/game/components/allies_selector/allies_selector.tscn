@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4nna6eulgfw"]
+
+[ext_resource type="Script" uid="uid://cl6pvehct0nsm" path="res://screens/original_test_project_scenes/game/components/allies_selector/allies_selector.gd" id="1_5rr1e"]
+[ext_resource type="PackedScene" uid="uid://d3ht2nmc2bh8o" path="res://screens/original_test_project_scenes/game/components/allies_selector/ally_selector_card/ally_selector_card.tscn" id="1_t1adg"]
+[ext_resource type="Resource" uid="uid://bxaddilaeyy62" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/bayonete_soldier.tres" id="3_5vpka"]
+
+[node name="AlliesSelector" type="MarginContainer"]
+script = ExtResource("1_5rr1e")
+
+[node name="CardsContainer" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="AllySelectorCard" parent="CardsContainer" instance=ExtResource("1_t1adg")]
+layout_mode = 2
+ally = ExtResource("3_5vpka")

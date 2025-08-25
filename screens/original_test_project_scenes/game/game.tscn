@@ -1,0 +1,95 @@
+[gd_scene load_steps=10 format=3 uid="uid://c2b4jldseu5vs"]
+
+[ext_resource type="Script" uid="uid://bvalrtinik0vd" path="res://screens/original_test_project_scenes/game/game.gd" id="1_eyx8b"]
+[ext_resource type="PackedScene" uid="uid://b4nna6eulgfw" path="res://screens/original_test_project_scenes/game/components/allies_selector/allies_selector.tscn" id="2_khowf"]
+[ext_resource type="PackedScene" uid="uid://bepu7cd0ik6av" path="res://screens/original_test_project_scenes/game/components/level_name_presenter/level_name_presenter.tscn" id="3_kc255"]
+[ext_resource type="PackedScene" uid="uid://cch6b4h5wk2jy" path="res://screens/original_test_project_scenes/game/components/terrain_grid/terrain_grid.tscn" id="3_yflor"]
+[ext_resource type="PackedScene" uid="uid://dm2l1uxm8jud0" path="res://screens/original_test_project_scenes/game/debug_components/dbug_killed_enemies_hud/dbug_killed_enemies_hud.tscn" id="5_2v4l3"]
+[ext_resource type="PackedScene" uid="uid://xydq20wuc0hp" path="res://screens/original_test_project_scenes/game/components/remove_ally_button/remove_ally_button.tscn" id="5_g1ktd"]
+[ext_resource type="PackedScene" uid="uid://bk5r5vrhhaf2x" path="res://screens/original_test_project_scenes/game/debug_components/dbug_canons_killed_hud/dbug_canon_hud.tscn" id="5_uain1"]
+[ext_resource type="PackedScene" uid="uid://cafe6vrkyihc5" path="res://screens/original_test_project_scenes/game/debug_components/dbug_win_btn/dbug_win_btn.tscn" id="6_cpxdg"]
+[ext_resource type="PackedScene" uid="uid://3p1rfa3f7you" path="res://screens/original_test_project_scenes/game/components/game_won_pop_up/game_won_pop_up.tscn" id="9_18b3j"]
+
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eyx8b")
+
+[node name="LevelNamePresenter" parent="." instance=ExtResource("3_kc255")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1048.0
+offset_top = 41.0
+offset_right = 1147.0
+offset_bottom = 90.0
+
+[node name="AlliesSelector" parent="." instance=ExtResource("2_khowf")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 28.0
+offset_top = 31.0
+offset_right = 156.0
+offset_bottom = 198.0
+
+[node name="TerrainGrid" parent="." instance=ExtResource("3_yflor")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 212.0
+offset_top = 164.0
+offset_right = 1819.0
+offset_bottom = 1055.0
+cell_width_px = 175
+cell_heigth_px = 175
+
+[node name="DbugCanonHUD" parent="." instance=ExtResource("5_uain1")]
+layout_mode = 0
+offset_left = 1181.0
+offset_top = 11.0
+offset_right = 1410.0
+offset_bottom = 121.0
+
+[node name="DbugWinBtn" parent="." instance=ExtResource("6_cpxdg")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1428.0
+offset_top = 28.0
+offset_right = 1538.0
+offset_bottom = 105.0
+
+[node name="DbugKilledEnemiesHUD" parent="." instance=ExtResource("5_2v4l3")]
+layout_mode = 0
+offset_left = 1542.0
+offset_top = 15.0
+offset_right = 2017.0
+offset_bottom = 171.0
+
+[node name="GoBackBtn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 983.0
+offset_right = 155.0
+offset_bottom = 1069.0
+theme_override_font_sizes/font_size = 50
+text = "BACK"
+
+[node name="RemoveAllyButton" parent="." instance=ExtResource("5_g1ktd")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 255.0
+offset_top = 21.0
+offset_right = 380.0
+offset_bottom = 152.0
+
+[node name="GameWonPopUp" parent="." instance=ExtResource("9_18b3j")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 452.0
+offset_top = 286.0
+offset_right = 1497.0
+offset_bottom = 872.0
+
+[connection signal="pressed" from="GoBackBtn" to="." method="_on_go_back_btn_pressed"]

@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://dm2l1uxm8jud0"]
+
+[ext_resource type="Script" uid="uid://dwsyy4mav0vb2" path="res://screens/original_test_project_scenes/game/debug_components/dbug_killed_enemies_hud/dbug_killed_enemies_hud.gd" id="1_nbe8t"]
+
+[node name="DbugKilledEnemiesHUD" type="HBoxContainer"]
+offset_left = 1543.0
+offset_top = 14.0
+offset_right = 2018.0
+offset_bottom = 170.0
+scale = Vector2(0.75, 0.75)
+script = ExtResource("1_nbe8t")
+
+[node name="KillEnemyBtn" type="Button" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Kill Enemy"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="KillEnemyLbl" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "0 Enms Klld Levl"
+
+[node name="KillEnemyTotalLbl" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "0 Enms Klld Total"
+
+[connection signal="pressed" from="KillEnemyBtn" to="." method="_on_kill_enemy_btn_pressed"]

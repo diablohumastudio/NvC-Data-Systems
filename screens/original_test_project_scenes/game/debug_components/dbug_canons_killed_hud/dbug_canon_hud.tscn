@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://bk5r5vrhhaf2x"]
+
+[ext_resource type="Script" uid="uid://d2wnmtq30fo2x" path="res://screens/original_test_project_scenes/game/debug_components/dbug_canons_killed_hud/dbug_canon_hud.gd" id="1_dhegc"]
+
+[node name="DbugCanonHUD" type="VBoxContainer"]
+offset_left = 1168.0
+offset_top = 12.0
+offset_right = 1397.0
+offset_bottom = 122.0
+script = ExtResource("1_dhegc")
+
+[node name="CanonKilledBtn" type="Button" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Canon Killed"
+
+[node name="CanonsLeft" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "5 Canons Left"
+
+[connection signal="pressed" from="CanonKilledBtn" to="." method="_on_canon_killed_btn_pressed"]

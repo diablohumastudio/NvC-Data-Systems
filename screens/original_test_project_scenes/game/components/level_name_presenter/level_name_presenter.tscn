@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bepu7cd0ik6av"]
+
+[ext_resource type="Script" uid="uid://c0x6f7a1yjhbl" path="res://screens/original_test_project_scenes/game/components/level_name_presenter/level_name_presenter.gd" id="1_nq1ko"]
+
+[node name="LevelNamePresenter" type="Label"]
+offset_left = 1074.0
+offset_top = 32.0
+offset_right = 1173.0
+offset_bottom = 81.0
+theme_override_font_sizes/font_size = 35
+text = "LEVEL"
+script = ExtResource("1_nq1ko")
