@@ -88,7 +88,7 @@ texture = ExtResource("7_7r87m")
 
 [node name="SLSBank" type="Node" parent="."]
 script = ExtResource("8_t5rgc")
-scenes_paths = Array[String](["uid://cflg2ypu25js2"])
+scenes_paths = Array[String](["res://screens/start_menus/main_menu/main_menu.tscn", "res://screens/start_menus/settings_menu/settings_menu.tscn", "res://screens/levels_menu/worlds_map_menu/worlds_map_menu.tscn"])
 metadata/_custom_type_script = "uid://cc5cx846obsu8"
 
 [connection signal="pressed" from="GoBackButton" to="." method="_on_go_back_button_pressed"]

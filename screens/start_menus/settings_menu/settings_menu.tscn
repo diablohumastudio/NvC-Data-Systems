@@ -118,7 +118,7 @@ libraries = {
 [node name="SLSBank" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("13_ov7mf")
-scenes_paths = Array[String](["res://screens/start_menus/main_menu/main_menu.tscn"])
+scenes_paths = Array[String](["res://screens/start_menus/main_menu/main_menu.tscn", "res://screens/start_menus/about_menu/about_menu.tscn", "res://screens/levels_menu/worlds_map_menu/worlds_map_menu.tscn"])
 metadata/_custom_type_script = "uid://cc5cx846obsu8"
 
 [connection signal="pressed" from="GoBackButton" to="." method="_on_go_back_button_pressed"]

@@ -45,10 +45,10 @@ func add_scene(scene_path: String) -> PackedScene:
 
 func _is_path_valid(scene_path: String) -> bool:
 	if scene_path == "":
-		push_error("resource_path argument must not be empty")
+		push_warning("resource_path argument must not be empty")
 		return false
 	if not ResourceLoader.exists(scene_path):
-		push_error("There is not file in ", scene_path, " path.")
+		push_warning("There is not file in ", scene_path, " path.")
 		return false
 	return true
 
