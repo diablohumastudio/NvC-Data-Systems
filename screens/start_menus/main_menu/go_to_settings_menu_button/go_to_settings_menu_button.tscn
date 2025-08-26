@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=3 uid="uid://bw61voyxm3wti"]
+
+[ext_resource type="Texture2D" uid="uid://civ6krpqfugoc" path="res://screens/start_menus/main_menu/go_to_settings_menu_button/assets/settings_normal.png" id="1_tibgk"]
+[ext_resource type="Texture2D" uid="uid://co1cipww5iin4" path="res://screens/start_menus/main_menu/go_to_settings_menu_button/assets/settings_hover.png" id="2_36hkg"]
+[ext_resource type="Script" uid="uid://bkn4fp0ixyj6y" path="res://screens/start_menus/main_menu/go_to_settings_menu_button/go_to_settings_menu_button.gd" id="3_36hkg"]
+
+[sub_resource type="Animation" id="Animation_w7of8"]
+resource_name = "settings_pressed"
+length = 0.4
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../GoToSettingsMenuButton:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.0523599, 0.0698132, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(3, 2, 2, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n85lq"]
+_data = {
+&"settings_pressed": SubResource("Animation_w7of8")
+}
+
+[node name="GoToSettingsMenuButton" type="TextureButton"]
+offset_left = 800.0
+offset_top = 584.0
+offset_right = 1430.0
+offset_bottom = 1184.0
+scale = Vector2(0.9, 0.9)
+pivot_offset = Vector2(248, 586)
+focus_neighbor_left = NodePath("../GoToGamesMenuButton")
+focus_neighbor_right = NodePath("../UserStatsContainer/UserStats/UsernameContainer")
+toggle_mode = true
+texture_normal = ExtResource("1_tibgk")
+texture_focused = ExtResource("2_36hkg")
+script = ExtResource("3_36hkg")
+
+[node name="SettingsPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_n85lq")
+}
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://bw02j1qfrxpj2"]
+
+[ext_resource type="Script" uid="uid://drnqexsbbtfx3" path="res://screens/start_menus/about_menu/submenus/credits/popup/collaborator_presenters_container/collaborator_presenters_container.gd" id="1_86l8h"]
+[ext_resource type="PackedScene" uid="uid://bsqnw2ullfe4c" path="res://screens/start_menus/about_menu/submenus/credits/popup/collaborator_presenter/collaborator_presenter.tscn" id="2_jqcyw"]
+
+[node name="CollaboratorPresentersContainer" type="GridContainer"]
+custom_minimum_size = Vector2(0, 700)
+theme_override_constants/h_separation = 575
+theme_override_constants/v_separation = 300
+columns = 2
+script = ExtResource("1_86l8h")
+
+[node name="CollaboratorPresenter" parent="." instance=ExtResource("2_jqcyw")]
+layout_mode = 2
+
+[node name="CollaboratorPresenter2" parent="." instance=ExtResource("2_jqcyw")]
+layout_mode = 2
+
+[node name="CollaboratorPresenter3" parent="." instance=ExtResource("2_jqcyw")]
+layout_mode = 2
+
+[node name="CollaboratorPresenter4" parent="." instance=ExtResource("2_jqcyw")]
+layout_mode = 2

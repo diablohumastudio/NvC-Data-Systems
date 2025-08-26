@@ -1,0 +1,472 @@
+[gd_scene load_steps=21 format=3 uid="uid://bem1470lq7oa4"]
+
+[ext_resource type="Script" uid="uid://uncgen6shqoo" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_and_achievements_popup.gd" id="1_cx52j"]
+[ext_resource type="Texture2D" uid="uid://d04tkxanl6yk6" path="res://screens/start_menus/main_menu/account_and_achievements_popup/assets/background.png" id="1_hpbon"]
+[ext_resource type="Shader" uid="uid://boa325ynfrjd4" path="res://global_assets/shaders/perspective_shader.gdshader" id="2_efii4"]
+[ext_resource type="Texture2D" uid="uid://bib8b2hfp7eq1" path="res://screens/start_menus/main_menu/account_and_achievements_popup/assets/achievements_button.png" id="3_d6oqd"]
+[ext_resource type="PackedScene" uid="uid://bqjh1bot43qap" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/account_menu.tscn" id="3_kllku"]
+[ext_resource type="PackedScene" uid="uid://dts0s5jhqb7pk" path="res://screens/start_menus/main_menu/account_and_achievements_popup/achievements_menu/achievements_menu.tscn" id="4_efii4"]
+[ext_resource type="Texture2D" uid="uid://vj4ja7274w30" path="res://screens/start_menus/main_menu/account_and_achievements_popup/assets/account_button.png" id="4_roww6"]
+[ext_resource type="Texture2D" uid="uid://cxlbha1wss3b2" path="res://screens/start_menus/main_menu/account_and_achievements_popup/assets/account_button_pressed.png" id="5_ftrhk"]
+[ext_resource type="Texture2D" uid="uid://ci6fb07b4unqd" path="res://screens/start_menus/main_menu/account_and_achievements_popup/assets/borders.png" id="5_l8cks"]
+[ext_resource type="Texture2D" uid="uid://b6pbkkdjk1f37" path="res://screens/start_menus/main_menu/account_and_achievements_popup/assets/account_button_hover.png" id="6_ffm7q"]
+[ext_resource type="Texture2D" uid="uid://dm32oaiyvgg23" path="res://screens/start_menus/main_menu/account_and_achievements_popup/assets/achievements_button_pressed.png" id="8_gsicq"]
+[ext_resource type="Texture2D" uid="uid://djps5bmv1lggd" path="res://screens/start_menus/main_menu/account_and_achievements_popup/assets/achievements_button_hover.png" id="9_4pnot"]
+[ext_resource type="Texture2D" uid="uid://dsx4ykwqjx1x0" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/x_button.png" id="30_xfnua"]
+[ext_resource type="Texture2D" uid="uid://th5h8fc336js" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/x_button_selected.png" id="31_kxbyf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r2ocr"]
+shader = ExtResource("2_efii4")
+shader_parameter/fov = 90.0
+shader_parameter/cull_back = true
+shader_parameter/y_rot = 0.0
+shader_parameter/x_rot = 0.0
+shader_parameter/inset = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_efii4"]
+shader = ExtResource("2_efii4")
+shader_parameter/fov = 90.0
+shader_parameter/cull_back = true
+shader_parameter/y_rot = 0.0
+shader_parameter/x_rot = 0.0
+shader_parameter/inset = 0.0
+
+[sub_resource type="Animation" id="Animation_efii4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Borders:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MenuContainer:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AccountButton:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AchievementsButton:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("XButton:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BlackBG:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.498039)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Background:material:shader_parameter/x_rot")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Borders:material:shader_parameter/x_rot")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_kllku"]
+resource_name = "appear"
+length = 0.5
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 0.435275, 1),
+"update": 0,
+"values": [Vector2(0.5, 0.5), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Borders:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 0.435, 1),
+"update": 0,
+"values": [Vector2(0.5, 0.5), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MenuContainer:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1, 0.4),
+"transitions": PackedFloat32Array(1, 0.482968),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AccountButton:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.25, 0.5),
+"transitions": PackedFloat32Array(1, 0.68302),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AchievementsButton:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.3, 0.5),
+"transitions": PackedFloat32Array(1, 0.683),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("XButton:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.25, 0.5),
+"transitions": PackedFloat32Array(1, 0.683),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BlackBG:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.35),
+"transitions": PackedFloat32Array(1, 0.707107),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.498039)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Background:material:shader_parameter/x_rot")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.25, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-30.0, 10.0, 1.4808, -1.99999, 0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Borders:material:shader_parameter/x_rot")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.25, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-30.0, 10.0, 1.4808, -1.99999, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_r2ocr"]
+resource_name = "dissapear"
+length = 0.3
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 0.812252),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.4, 0.4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Borders:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 0.812),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.4, 0.4)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MenuContainer:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 0.482),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AccountButton:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 0.683),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AchievementsButton:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 0.683),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("XButton:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BlackBG:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.498039), Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Background:material:shader_parameter/x_rot")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 0.812),
+"update": 0,
+"values": [0.0, -30.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Borders:material:shader_parameter/x_rot")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 0.812),
+"update": 0,
+"values": [0.0, -30.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_efii4"]
+_data = {
+&"RESET": SubResource("Animation_efii4"),
+&"appear": SubResource("Animation_kllku"),
+&"dissapear": SubResource("Animation_r2ocr")
+}
+
+[node name="AccountAndAchievementsPopup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cx52j")
+
+[node name="BlackBG" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0.498039)
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.12, 0.0516, 0.0516, 1)
+
+[node name="BlackBGBtn" type="TextureButton" parent="BlackBG"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Background" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_r2ocr")
+position = Vector2(963, 46)
+texture = ExtResource("1_hpbon")
+offset = Vector2(2, 504)
+
+[node name="MenuContainer" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AccountMenu" parent="MenuContainer" instance=ExtResource("3_kllku")]
+layout_mode = 1
+
+[node name="AchievementsMenu" parent="MenuContainer" instance=ExtResource("4_efii4")]
+visible = false
+layout_mode = 1
+
+[node name="Borders" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_efii4")
+position = Vector2(964, 48)
+texture = ExtResource("5_l8cks")
+offset = Vector2(21, 488)
+
+[node name="AccountButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 137.5
+offset_right = 960.0
+offset_bottom = 242.5
+action_mode = 0
+texture_normal = ExtResource("4_roww6")
+texture_pressed = ExtResource("5_ftrhk")
+texture_hover = ExtResource("6_ffm7q")
+texture_focused = ExtResource("5_ftrhk")
+
+[node name="AchievementsButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 960.0
+offset_top = 136.0
+offset_right = 1588.0
+offset_bottom = 242.0
+action_mode = 0
+texture_normal = ExtResource("3_d6oqd")
+texture_pressed = ExtResource("8_gsicq")
+texture_hover = ExtResource("9_4pnot")
+texture_focused = ExtResource("8_gsicq")
+
+[node name="XButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1546.0
+offset_top = 87.0
+offset_right = 1643.0
+offset_bottom = 183.0
+action_mode = 0
+texture_normal = ExtResource("30_xfnua")
+texture_pressed = ExtResource("31_kxbyf")
+texture_hover = ExtResource("31_kxbyf")
+texture_focused = ExtResource("31_kxbyf")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_efii4")
+}
+
+[connection signal="pressed" from="BlackBG/BlackBGBtn" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="AccountButton" to="." method="_on_account_button_pressed"]
+[connection signal="pressed" from="AchievementsButton" to="." method="_on_achievements_button_pressed"]
+[connection signal="pressed" from="XButton" to="." method="_on_close_button_pressed"]

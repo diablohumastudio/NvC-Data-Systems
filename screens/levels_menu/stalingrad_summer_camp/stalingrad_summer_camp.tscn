@@ -1,0 +1,375 @@
+[gd_scene load_steps=48 format=3 uid="uid://ctww27adn5p47"]
+
+[ext_resource type="Script" uid="uid://yfic84p21c46" path="res://screens/levels_menu/stalingrad_summer_camp/stalingrad_summer_camp.gd" id="1_rthgh"]
+[ext_resource type="Texture2D" uid="uid://ksq8w6bk8tpj" path="res://screens/levels_menu/stalingrad_summer_camp/assets/base_bg.png" id="1_t7s7p"]
+[ext_resource type="Texture2D" uid="uid://bs87sdawwfub4" path="res://screens/levels_menu/stalingrad_summer_camp/assets/resources_ui.png" id="3_2djdf"]
+[ext_resource type="Texture2D" uid="uid://dy5tlctbsbkcg" path="res://global_assets/go_back_button.png" id="5_sux0p"]
+[ext_resource type="Texture2D" uid="uid://bnpfefy1svqrb" path="res://screens/levels_menu/stalingrad_summer_camp/assets/barracks.png" id="6_3ky6c"]
+[ext_resource type="Texture2D" uid="uid://xollcxmkscnt" path="res://global_assets/go_back_button_selected.png" id="6_wqfrk"]
+[ext_resource type="Texture2D" uid="uid://dn7t8jqlhmohj" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0000.png" id="7_lhgy6"]
+[ext_resource type="Texture2D" uid="uid://dow3wjhmq5rvc" path="res://screens/levels_menu/stalingrad_summer_camp/assets/black_borders.png" id="7_ujumv"]
+[ext_resource type="Texture2D" uid="uid://cbgwqwx1wd313" path="res://screens/levels_menu/stalingrad_summer_camp/assets/barriers_factory.png" id="7_yqd11"]
+[ext_resource type="Texture2D" uid="uid://mc3p0syregwk" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0001.png" id="8_esw8b"]
+[ext_resource type="Texture2D" uid="uid://byjdct5ikv3pm" path="res://screens/levels_menu/stalingrad_summer_camp/assets/explosives_factory.png" id="8_ujumv"]
+[ext_resource type="Texture2D" uid="uid://d38b5h1gf7p63" path="res://screens/levels_menu/stalingrad_summer_camp/assets/resource_generator_factory.png" id="9_4afd1"]
+[ext_resource type="Texture2D" uid="uid://cvqganhkwx8q7" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0002.png" id="9_fgkxi"]
+[ext_resource type="Texture2D" uid="uid://cewoxn6t03ges" path="res://screens/levels_menu/stalingrad_summer_camp/assets/top_trees.png" id="10_3ky6c"]
+[ext_resource type="PackedScene" uid="uid://drind8lvt12co" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/barracks_popup.tscn" id="10_4afd1"]
+[ext_resource type="Texture2D" uid="uid://bv3s8c214ggih" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0003.png" id="10_xaas3"]
+[ext_resource type="Texture2D" uid="uid://dajp5qpmcs65i" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0004.png" id="11_5p7am"]
+[ext_resource type="Texture2D" uid="uid://d3issrwm4ww7a" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0005.png" id="12_r1lmi"]
+[ext_resource type="Texture2D" uid="uid://cgb3nar0poup0" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0006.png" id="13_q4aui"]
+[ext_resource type="Texture2D" uid="uid://njqh1q48q8jq" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0007.png" id="14_nsln8"]
+[ext_resource type="Texture2D" uid="uid://c1qrsk44dwj1o" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0008.png" id="15_ypfkd"]
+[ext_resource type="Texture2D" uid="uid://bw6s2k7yetp1o" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0009.png" id="16_6rupn"]
+[ext_resource type="Texture2D" uid="uid://b0uhogd4ei3oc" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0010.png" id="17_8nugg"]
+[ext_resource type="Texture2D" uid="uid://dwy45c57glcc" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0011.png" id="18_nolm2"]
+[ext_resource type="Texture2D" uid="uid://du128opdbe5hx" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0012.png" id="19_8aco3"]
+[ext_resource type="Texture2D" uid="uid://doyuxsr4yunw8" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0013.png" id="20_ft5bn"]
+[ext_resource type="Texture2D" uid="uid://k6juqlsdii2d" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0014.png" id="21_iscyg"]
+[ext_resource type="Texture2D" uid="uid://bvffydt2cqybo" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0015.png" id="22_sjjrh"]
+[ext_resource type="Texture2D" uid="uid://bhfj5wh2tie1i" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0016.png" id="23_ko10p"]
+[ext_resource type="Texture2D" uid="uid://cr2xqkxthi6d7" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0017.png" id="24_qkth3"]
+[ext_resource type="FontFile" uid="uid://c037te0jknb01" path="res://global_assets/fonts/Molot.otf" id="25_ajovs"]
+[ext_resource type="Texture2D" uid="uid://bacpqr8s2bf1p" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0018.png" id="25_kunal"]
+[ext_resource type="Texture2D" uid="uid://fkj4bbxbupgw" path="res://screens/levels_menu/stalingrad_summer_camp/assets/train_wheel_1.png" id="26_5p7am"]
+[ext_resource type="Texture2D" uid="uid://dhcvkccqmae43" path="res://screens/levels_menu/stalingrad_summer_camp/assets/train_wheel_2.png" id="27_r1lmi"]
+[ext_resource type="Texture2D" uid="uid://ctudoqaqbj7ht" path="res://screens/levels_menu/stalingrad_summer_camp/assets/train_wheel_3.png" id="28_q4aui"]
+[ext_resource type="Texture2D" uid="uid://ndvjnwl5sxa6" path="res://screens/levels_menu/stalingrad_summer_camp/assets/train.png" id="29_nsln8"]
+[ext_resource type="Texture2D" uid="uid://snnvln5tjcf8" path="res://screens/initial_screens/loading_screen/animated_background/assets/smoke_right.png" id="30_r1lmi"]
+[ext_resource type="Script" uid="uid://cc5cx846obsu8" path="res://global_systems/scene_loading_system/sls_scenes_bank/sls_scenes_bank.gd" id="38_rj5k8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c81wj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_lhgy6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_esw8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_fgkxi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xaas3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5p7am")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_r1lmi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_q4aui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_nsln8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ypfkd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_6rupn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_8nugg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_nolm2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_8aco3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ft5bn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_iscyg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_sjjrh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ko10p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_qkth3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_kunal")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_q4aui"]
+offsets = PackedFloat32Array(0, 0.148148, 0.470899, 1)
+colors = PackedColorArray(0, 0, 0, 0.105926, 0.493545, 0.493546, 0.493546, 1, 1, 1, 1, 0.756614, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_nsln8"]
+gradient = SubResource("Gradient_q4aui")
+
+[sub_resource type="Curve" id="Curve_ypfkd"]
+_data = [Vector2(0, 0.370787), 0.0, 0.0, 0, 0, Vector2(0.246512, 0.348315), 0.0, 0.0, 0, 0, Vector2(0.688372, 0.865169), 0.0, 0.0, 0, 0, Vector2(1, 0.325843), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_6rupn"]
+curve = SubResource("Curve_ypfkd")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8nugg"]
+particle_flag_disable_z = true
+angle_min = 1.07288e-05
+angle_max = 165.1
+inherit_velocity_ratio = 0.064
+initial_velocity_min = 19.76
+initial_velocity_max = 162.06
+gravity = Vector3(110, 0, 0)
+linear_accel_min = -57.7
+linear_accel_max = -20.55
+scale_curve = SubResource("CurveTexture_6rupn")
+color_ramp = SubResource("GradientTexture1D_nsln8")
+
+[sub_resource type="Animation" id="Animation_r1lmi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2473, 1016)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TrainWheel1:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_5p7am"]
+resource_name = "arrive"
+length = 12.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4.2, 5.7, 7.6, 12),
+"transitions": PackedFloat32Array(0.5, 1, 1.8025, 1, 1),
+"update": 0,
+"values": [Vector2(2473, 1016), Vector2(1407, 1016), Vector2(1407, 1016), Vector2(961.043, 1016), Vector2(-342, 1016)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TrainWheel1:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -6.28319, -12.5664]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q4aui"]
+_data = {
+&"RESET": SubResource("Animation_r1lmi"),
+&"arrive": SubResource("Animation_5p7am")
+}
+
+[node name="StalingradSummerCamp" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_rthgh")
+
+[node name="BaseBg" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_t7s7p")
+
+[node name="BarriersFactory" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1145.0
+offset_top = 295.0
+offset_right = 1627.0
+offset_bottom = 626.0
+texture_normal = ExtResource("7_yqd11")
+
+[node name="ExplosivesFactory" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 327.0
+offset_top = 291.0
+offset_right = 886.0
+offset_bottom = 679.0
+texture_normal = ExtResource("8_ujumv")
+
+[node name="ResourceGeneratorFactory" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 873.0
+offset_top = 470.0
+offset_right = 1252.0
+offset_bottom = 818.0
+texture_normal = ExtResource("9_4afd1")
+
+[node name="Barracks" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 597.0
+offset_right = 949.0
+offset_bottom = 1016.0
+texture_normal = ExtResource("6_3ky6c")
+
+[node name="Flag" type="AnimatedSprite2D" parent="Barracks"]
+position = Vector2(331, 79)
+sprite_frames = SubResource("SpriteFrames_c81wj")
+autoplay = "default"
+
+[node name="Train" type="Node2D" parent="."]
+position = Vector2(2473, 1016)
+
+[node name="TrainWheel1" type="Sprite2D" parent="Train"]
+position = Vector2(-511, 32)
+texture = ExtResource("26_5p7am")
+
+[node name="TrainWheel2" type="Sprite2D" parent="Train"]
+position = Vector2(-451, 32)
+texture = ExtResource("26_5p7am")
+
+[node name="TrainWheel3" type="Sprite2D" parent="Train"]
+position = Vector2(-408, 27)
+texture = ExtResource("28_q4aui")
+
+[node name="TrainWheel4" type="Sprite2D" parent="Train"]
+position = Vector2(-354, 27)
+texture = ExtResource("28_q4aui")
+
+[node name="TrainWheel5" type="Sprite2D" parent="Train"]
+position = Vector2(-301, 28)
+texture = ExtResource("27_r1lmi")
+
+[node name="TrainWheel6" type="Sprite2D" parent="Train"]
+position = Vector2(-216, 32)
+texture = ExtResource("26_5p7am")
+
+[node name="TrainWheel7" type="Sprite2D" parent="Train"]
+position = Vector2(-145, 32)
+texture = ExtResource("26_5p7am")
+
+[node name="TrainWheel8" type="Sprite2D" parent="Train"]
+position = Vector2(-66, 32)
+texture = ExtResource("26_5p7am")
+
+[node name="TrainWheel9" type="Sprite2D" parent="Train"]
+position = Vector2(5, 32)
+texture = ExtResource("26_5p7am")
+
+[node name="TrainWheel10" type="Sprite2D" parent="Train"]
+position = Vector2(81, 32)
+texture = ExtResource("26_5p7am")
+
+[node name="TrainWheel11" type="Sprite2D" parent="Train"]
+position = Vector2(152, 32)
+texture = ExtResource("26_5p7am")
+
+[node name="TrainWheel12" type="Sprite2D" parent="Train"]
+position = Vector2(228, 32)
+texture = ExtResource("26_5p7am")
+
+[node name="TrainWheel13" type="Sprite2D" parent="Train"]
+position = Vector2(299, 32)
+texture = ExtResource("26_5p7am")
+
+[node name="TrainBase" type="Sprite2D" parent="Train"]
+position = Vector2(-106, -21.5)
+texture = ExtResource("29_nsln8")
+
+[node name="TrainSmoke" type="GPUParticles2D" parent="Train"]
+position = Vector2(-478, -93)
+amount = 40
+texture = ExtResource("30_r1lmi")
+lifetime = 2.19
+process_material = SubResource("ParticleProcessMaterial_8nugg")
+
+[node name="TrainAnimationPlayer" type="AnimationPlayer" parent="Train"]
+libraries = {
+&"": SubResource("AnimationLibrary_q4aui")
+}
+
+[node name="TopTrees" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("10_3ky6c")
+
+[node name="BlackBorders" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("7_ujumv")
+
+[node name="GoBackButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 937.0
+offset_right = 206.0
+offset_bottom = 1053.0
+texture_normal = ExtResource("5_sux0p")
+texture_pressed = ExtResource("6_wqfrk")
+texture_hover = ExtResource("6_wqfrk")
+
+[node name="BarracksPopup" parent="." instance=ExtResource("10_4afd1")]
+visible = false
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1446.0
+offset_top = 143.0
+offset_right = 1563.0
+offset_bottom = 231.0
+
+[node name="ResourcesUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 960.0
+offset_top = 526.0
+offset_right = 1000.0
+offset_bottom = 566.0
+
+[node name="ResourcesBar" type="Sprite2D" parent="ResourcesUI"]
+position = Vector2(48, 14)
+texture = ExtResource("3_2djdf")
+
+[node name="CoinsLabel" type="Label" parent="ResourcesUI"]
+layout_mode = 0
+offset_left = -42.0
+offset_top = -481.0
+offset_right = 153.0
+offset_bottom = -412.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("25_ajovs")
+theme_override_font_sizes/font_size = 60
+text = "1000"
+horizontal_alignment = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(960.2, 540.2)
+
+[node name="SLSBank" type="Node" parent="."]
+script = ExtResource("38_rj5k8")
+scenes_paths = Array[String](["res://screens/levels_menu/stalingrad_summer_level_menu/stalingrad_summer_levels_menu.tscn", "res://screens/levels_menu/worlds_map_menu/worlds_map_menu.tscn", "res://screens/levels_menu/stalingrad_winter_level_menu/stalingrad_winter_levels_menu.tscn", "res://screens/start_menus/main_menu/main_menu.tscn"])
+metadata/_custom_type_script = "uid://cc5cx846obsu8"
+
+[connection signal="pressed" from="Barracks" to="." method="_on_barracks_pressed"]
+[connection signal="pressed" from="GoBackButton" to="." method="_on_go_back_button_pressed"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]

@@ -1,0 +1,125 @@
+[gd_scene load_steps=16 format=3 uid="uid://87lecky2hhq6"]
+
+[ext_resource type="Script" uid="uid://bup2auvskbp14" path="res://screens/start_menus/settings_menu/settings_menu.gd" id="1_ek6l5"]
+[ext_resource type="Texture2D" uid="uid://baj3lloqlxev0" path="res://screens/start_menus/settings_menu/assets/settings_menu_bg.png" id="2_6g4gv"]
+[ext_resource type="Texture2D" uid="uid://dy5tlctbsbkcg" path="res://global_assets/go_back_button.png" id="3_g3soe"]
+[ext_resource type="Texture2D" uid="uid://xollcxmkscnt" path="res://global_assets/go_back_button_selected.png" id="4_40cua"]
+[ext_resource type="Texture2D" uid="uid://6dersyppynfl" path="res://global_assets/go_back_glow.png" id="7_eyf2q"]
+[ext_resource type="PackedScene" uid="uid://b2j7arinrit4c" path="res://screens/start_menus/settings_menu/flag_vertical_slider/flag_vertical_slider.tscn" id="8_7ci4u"]
+[ext_resource type="Texture2D" uid="uid://lh54jhx07lel" path="res://screens/start_menus/settings_menu/assets/settings_sign.png" id="8_wfsem"]
+[ext_resource type="Texture2D" uid="uid://bejbohf5y5gy7" path="res://screens/start_menus/settings_menu/assets/sfx_flag_2.png" id="9_q6wvy"]
+[ext_resource type="Texture2D" uid="uid://c7y5a11glqoj4" path="res://screens/start_menus/settings_menu/assets/sfx_flag_2_selected.png" id="10_eqltu"]
+[ext_resource type="Texture2D" uid="uid://dvonp12xu27yv" path="res://screens/start_menus/settings_menu/assets/sfx_flag_muted.png" id="11_k3d17"]
+[ext_resource type="Texture2D" uid="uid://sarhxgqkompv" path="res://screens/start_menus/settings_menu/assets/sfx_flag_muted_selected.png" id="12_6oy5g"]
+[ext_resource type="Script" uid="uid://cc5cx846obsu8" path="res://global_systems/scene_loading_system/sls_scenes_bank/sls_scenes_bank.gd" id="13_ov7mf"]
+
+[sub_resource type="GDScript" id="GDScript_0s4rg"]
+script/source = "extends TextureButton
+
+func _on_pressed() -> void:
+	AudioSystem.post_event(AK.EVENTS.PLAY_GO_BACK)
+	%AnimationPlayer.play(\"go_back_pressed\")
+"
+
+[sub_resource type="Animation" id="Animation_r14a1"]
+resource_name = "go_back_pressed"
+length = 0.3
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.15),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.6, 0.6), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PointLight2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wlons"]
+_data = {
+&"go_back_pressed": SubResource("Animation_r14a1")
+}
+
+[node name="SettingsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ek6l5")
+
+[node name="BackgroundTexture" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_6g4gv")
+
+[node name="SettingsSign" type="Sprite2D" parent="."]
+position = Vector2(565, 100)
+texture = ExtResource("8_wfsem")
+
+[node name="SFXVerticalSlider" parent="." instance=ExtResource("8_7ci4u")]
+layout_mode = 0
+offset_left = 1266.0
+offset_top = 249.0
+offset_right = 1422.0
+offset_bottom = 807.0
+type = 1
+grabber_texture = ExtResource("9_q6wvy")
+grabber_highlight_texture = ExtResource("10_eqltu")
+grabber_muted_texture = ExtResource("11_k3d17")
+grabber_muted_highlight_texture = ExtResource("12_6oy5g")
+
+[node name="MusicVerticalSlider" parent="." instance=ExtResource("8_7ci4u")]
+layout_mode = 0
+offset_left = 959.0
+offset_top = 249.0
+offset_right = 1115.0
+offset_bottom = 807.0
+
+[node name="GoBackButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 34.0
+offset_right = 178.0
+offset_bottom = 150.0
+pivot_offset = Vector2(75, 59)
+texture_normal = ExtResource("3_g3soe")
+texture_focused = ExtResource("4_40cua")
+script = SubResource("GDScript_0s4rg")
+
+[node name="PointLight2D" type="Sprite2D" parent="GoBackButton"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(74.7368, 57.8947)
+texture = ExtResource("7_eyf2q")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GoBackButton"]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_wlons")
+}
+
+[node name="SLSBank" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("13_ov7mf")
+scenes_paths = Array[String](["res://screens/start_menus/main_menu/main_menu.tscn", "res://screens/start_menus/about_menu/about_menu.tscn", "res://screens/levels_menu/worlds_map_menu/worlds_map_menu.tscn"])
+metadata/_custom_type_script = "uid://cc5cx846obsu8"
+
+[connection signal="pressed" from="GoBackButton" to="." method="_on_go_back_button_pressed"]
+[connection signal="pressed" from="GoBackButton" to="GoBackButton" method="_on_pressed"]

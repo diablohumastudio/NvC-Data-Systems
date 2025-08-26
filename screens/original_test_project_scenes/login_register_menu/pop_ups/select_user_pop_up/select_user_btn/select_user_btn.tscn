@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cajyraiq1oebc"]
+
+[ext_resource type="Script" uid="uid://bjq45qqivot7h" path="res://screens/original_test_project_scenes/login_register_menu/pop_ups/select_user_pop_up/select_user_btn/select_user_btn.gd" id="1_icp5v"]
+
+[node name="SelectUserBtn" type="Button"]
+theme_override_font_sizes/font_size = 40
+toggle_mode = true
+text = "SELECT DEFAULTUSER USER"
+script = ExtResource("1_icp5v")
+
+[connection signal="toggled" from="." to="." method="_on_toggled"]

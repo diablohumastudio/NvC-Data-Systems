@@ -1,0 +1,38 @@
+{
+ "PlatformInfo": {
+  "Platform": {
+   "Name": "Android",
+   "BasePlatform": "Android",
+   "Generator": "2024.1.2.8726"
+  },
+  "RootPaths": {
+   "ProjectRoot": "../../../../../WwiseProj/NazisVsCommiesGameAudio",
+   "SourceFilesRoot": "../../../../../WwiseProj/NazisVsCommiesGameAudio/.cache",
+   "SoundBanksRoot": ".",
+   "ExternalSourcesInputFile": "",
+   "ExternalSourcesOutputRoot": "../../../../../WwiseProj/NazisVsCommiesGameAudio/GeneratedSoundBanks/Android"
+  },
+  "DefaultAlign": "16",
+  "Settings": {
+   "AutoSoundBankDefinition": "false",
+   "CopyLooseStreamedMediaFiles": "true",
+   "SubFoldersForGeneratedFiles": "false",
+   "RemoveUnusedGeneratedFiles": "true",
+   "SourceControlGeneratedFiles": "false",
+   "GenerateHeaderFile": "true",
+   "GenerateContentTxtFile": "true",
+   "GenerateMetadataXML": "true",
+   "GenerateMetadataJSON": "true",
+   "GenerateAllBanksMetadata": "true",
+   "GeneratePerBankMetadata": "true",
+   "UseSoundBankNames": "false",
+   "AllowExceedingMaxSize": "true",
+   "MaxAttenuationInfo": "true",
+   "EstimatedDurationInfo": "true",
+   "PrintObjectGuid": "true",
+   "PrintObjectPath": "true",
+   "PrintObjectColor": "true"
+  },
+  "FileHash": "{87602B1B-7C81-F336-6D0E-68CF01C8E14C}"
+ }
+}

@@ -1,0 +1,1655 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Android",
+  "BasePlatform": "Android",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "RootPaths": {
+   "ProjectRoot": "../../../../../WwiseProj/NazisVsCommiesGameAudio",
+   "SourceFilesRoot": "../../../../../WwiseProj/NazisVsCommiesGameAudio/.cache",
+   "SoundBanksRoot": ".",
+   "ExternalSourcesInputFile": "",
+   "ExternalSourcesOutputRoot": "../../../../../WwiseProj/NazisVsCommiesGameAudio/GeneratedSoundBanks/Android"
+  },
+  "DialogueEvents": [],
+  "SoundBanks": [
+   {
+    "Id": "702482391",
+    "Type": "User",
+    "GUID": "{924EE0CA-CDD3-4324-AC79-0CEBA35C0A35}",
+    "Language": "SFX",
+    "Hash": "{B0FC2463-2608-1773-0D9F-990284344445}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\game",
+    "ShortName": "game",
+    "Path": "702482391.bnk",
+    "Media": [
+     {
+      "Id": "3410972",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "click_2.wav",
+      "CachePath": "21/{21323198-742B-32A4-EBC4-EEA0E5BA3DB5}.wem"
+     },
+     {
+      "Id": "3984765",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "hit_barrier.wav",
+      "CachePath": "7D/{7D715303-D0F3-3F87-4A99-D83B070A75AC}.wem"
+     },
+     {
+      "Id": "30254775",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Aliado.wav",
+      "CachePath": "1D/{1DD674DD-FBDE-922F-9E27-5F2263672CCF}.wem"
+     },
+     {
+      "Id": "33966097",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Daño Enem 1.wav",
+      "CachePath": "3B/{3B7C6B13-0398-F973-5E1A-BED897690752}.wem"
+     },
+     {
+      "Id": "84360649",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Defend.wav",
+      "CachePath": "13/{139880E5-C0F0-D7BE-475C-4EDD8F296DBB}.wem"
+     },
+     {
+      "Id": "89826322",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "soviet_death.wav",
+      "CachePath": "95/{9573DC8E-04F0-42FF-160C-71FAB02ADE7C}.wem"
+     },
+     {
+      "Id": "135357717",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Game Over.wav",
+      "CachePath": "53/{53F2C2D1-C0C0-6547-B475-DDE18C97233F}.wem"
+     },
+     {
+      "Id": "148408226",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "pause_popup_sfx.wav",
+      "CachePath": "5C/{5CA1660D-B1BB-CE24-C6A4-7146CA9275A7}.wem"
+     },
+     {
+      "Id": "155621289",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CargaInicial.wav",
+      "CachePath": "01/{016B8C35-98FA-F881-8E66-7B7DF1AB9E9C}.wem"
+     },
+     {
+      "Id": "194127595",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Settings.wav",
+      "CachePath": "A4/{A47C4B85-B2BF-497C-1443-91EFE807BEE3}.wem"
+     },
+     {
+      "Id": "201144724",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "hitted_character.wav",
+      "CachePath": "E4/{E47BA9C8-79E5-60A1-B46D-475E795AB148}.wem"
+     },
+     {
+      "Id": "226743706",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Verano Capa 2.wav",
+      "CachePath": "51/{51B93E3C-8831-A014-D331-BC2F102B9AC3}.wem"
+     },
+     {
+      "Id": "260724265",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "matrioska_falling.wav",
+      "CachePath": "A8/{A8668872-075B-7C81-3FAB-87E5F6A0955D}.wem"
+     },
+     {
+      "Id": "321320299",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Daño Enem 2.wav",
+      "CachePath": "0C/{0C35CC11-AAE3-F539-3E6A-4B971ABEC912}.wem"
+     },
+     {
+      "Id": "322878100",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "level_wave_explotion.wav",
+      "CachePath": "A5/{A5332346-8CB1-0E0E-A167-F3142C06A05A}.wem"
+     },
+     {
+      "Id": "336573082",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "snowman_shoot.wav",
+      "CachePath": "39/{39CE2ACF-D761-D054-D2FF-F770B6CB99DD}.wem"
+     },
+     {
+      "Id": "374475123",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Daño Enem 3.wav",
+      "CachePath": "E2/{E2B04216-58CD-6B9D-D049-0EC10928D589}.wem"
+     },
+     {
+      "Id": "387689397",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Main Menu Loop.wav",
+      "CachePath": "EE/{EEC017DD-70CA-1018-339E-350CA7B62912}.wem"
+     },
+     {
+      "Id": "414861985",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Transición a selección de nivel.wav",
+      "CachePath": "99/{997B6494-E57D-DA49-C1EE-5854A27A7343}.wem"
+     },
+     {
+      "Id": "417484301",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "cannon_shooting.wav",
+      "CachePath": "BC/{BCE99FC5-0910-B84E-9E63-E24FAE2CB407}.wem"
+     },
+     {
+      "Id": "455492302",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Start.wav",
+      "CachePath": "26/{260B4737-5B60-6A83-4457-FC37CBD64D80}.wem"
+     },
+     {
+      "Id": "470021419",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ally_selected_popup_ally_selector.wav",
+      "CachePath": "4D/{4DE971A2-626A-5027-B021-BC5C65120F7C}.wem"
+     },
+     {
+      "Id": "495830009",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CargaFinal.wav",
+      "CachePath": "AE/{AE2930F3-850A-A353-0612-FD0CF68F1102}.wem"
+     },
+     {
+      "Id": "542032594",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "attacking_knife.wav",
+      "CachePath": "72/{72DE4ABC-4023-8CBB-274F-826FBE52D09B}.wem"
+     },
+     {
+      "Id": "556641162",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "button_menu_explotions.wav",
+      "CachePath": "FA/{FAF14255-35D1-8807-20D2-453996B2D27C}.wem"
+     },
+     {
+      "Id": "575695437",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Countdown 3 2 1.wav",
+      "CachePath": "F2/{F2B20696-44AE-B770-1205-09E4112AE080}.wem"
+     },
+     {
+      "Id": "582284745",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "reload_lmg.wav",
+      "CachePath": "62/{62C9A1B1-A47D-D279-E866-C54DCA59186D}.wem"
+     },
+     {
+      "Id": "590750396",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "shoot_ally3.wav",
+      "CachePath": "93/{93858243-2A11-35D1-E659-210FBB42916B}.wem"
+     },
+     {
+      "Id": "608725695",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "pick_up_rublo.wav",
+      "CachePath": "0B/{0B4DA198-BB70-87BE-1C6C-E18FCDC4FB84}.wem"
+     },
+     {
+      "Id": "609874411",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "eagle_scream.wav",
+      "CachePath": "C2/{C2EE90FD-9687-2C8D-5CD5-696BB1A45074}.wem"
+     },
+     {
+      "Id": "637210440",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "barrier_destroyed.wav",
+      "CachePath": "75/{75D7E651-2EB3-9BC7-702A-4CFEBF315D73}.wem"
+     },
+     {
+      "Id": "657253682",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Selección de nivel.wav",
+      "CachePath": "EB/{EB93471A-A762-2007-1035-6B96890235C4}.wem"
+     },
+     {
+      "Id": "700523766",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sword_swing.wav",
+      "CachePath": "2F/{2F3A82A9-184C-7A71-C91A-29F09622F712}.wem"
+     },
+     {
+      "Id": "729643390",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Main Menu Start.wav",
+      "CachePath": "1E/{1EF501C4-5724-93A9-5213-FE4BE113E1B5}.wem"
+     },
+     {
+      "Id": "747784122",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Dispara 1.wav",
+      "CachePath": "4B/{4B33A62B-9125-49D6-7593-172563956874}.wem"
+     },
+     {
+      "Id": "765331897",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "level_selected_level_selector.wav",
+      "CachePath": "86/{86B79B51-2AA4-AA7F-F67A-F5E79B42E09A}.wem"
+     },
+     {
+      "Id": "772960577",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Selec SUM_WIN.wav",
+      "CachePath": "25/{25702451-0D5A-29AF-1817-0CE034BDEA85}.wem"
+     },
+     {
+      "Id": "804743463",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Verano Capa 1.wav",
+      "CachePath": "E0/{E0952CB8-C069-A26B-26D1-F83ADB15D614}.wem"
+     },
+     {
+      "Id": "810347418",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "bear_bite.wav",
+      "CachePath": "A3/{A3CFFA8D-2379-E3F7-15B5-7F000A3D2574}.wem"
+     },
+     {
+      "Id": "822702237",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Muerte Enem.wav",
+      "CachePath": "FC/{FCFCA4DA-3E92-103E-E964-5410EA04229E}.wem"
+     },
+     {
+      "Id": "830291467",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "enemies_arrived.wav",
+      "CachePath": "3D/{3D2A972B-7271-2783-544D-EDC27A59FAEB}.wem"
+     },
+     {
+      "Id": "860968703",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Go Back.wav",
+      "CachePath": "26/{26AA6915-0598-7235-22CF-A3A37A4AD83F}.wem"
+     },
+     {
+      "Id": "891591906",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Game Win.wav",
+      "CachePath": "24/{243EF0BE-D70A-9F30-BBD6-A696266B68B5}.wem"
+     },
+     {
+      "Id": "891612806",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "flag_drop.wav",
+      "CachePath": "E1/{E1F8F8EA-7984-E104-9823-9EAAB56E7356}.wem"
+     },
+     {
+      "Id": "902039373",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Colocar Aliado.wav",
+      "CachePath": "2C/{2C37A7E3-19CE-A281-FAD7-00B5101EFFA3}.wem"
+     },
+     {
+      "Id": "935809597",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ally_weapon_explosion.wav",
+      "CachePath": "63/{63D4A09B-33AE-DB54-E5FF-829334E30B2E}.wem"
+     },
+     {
+      "Id": "960921838",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Invierno.wav",
+      "CachePath": "34/{348F6E5A-2770-6035-035C-BF2DC8CB5AD8}.wem"
+     },
+     {
+      "Id": "966742114",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "tutorial_cell_highlight.wav",
+      "CachePath": "CF/{CFD10005-BAAA-07E9-A10D-E7B5310A2724}.wem"
+     },
+     {
+      "Id": "976316169",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Dispara 2.wav",
+      "CachePath": "E0/{E02F825D-49AC-6D77-1C9D-A8D078F04783}.wem"
+     },
+     {
+      "Id": "977082275",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Invierno Capa 2.wav",
+      "CachePath": "4F/{4FF1495E-F42B-5FFC-0DE0-A219494C3803}.wem"
+     },
+     {
+      "Id": "992361939",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "menu_volume_changed_indicator.wav",
+      "CachePath": "6A/{6ADB7D87-0E16-397C-D4EB-9647C964B0CB}.wem"
+     },
+     {
+      "Id": "1031647180",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "hit_inactive_landmine.wav",
+      "CachePath": "7D/{7D715303-D0F3-3F87-4A99-D83B070A75AC}.wem"
+     },
+     {
+      "Id": "1054911345",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "bayonet_reload.wav",
+      "CachePath": "47/{47B31C76-0F93-718A-5F2A-36F9EF27F3CA}.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "2141574376",
+       "Name": "Parametric_EQ",
+       "ObjectPath": "\\Effects\\Default Work Unit\\Parametric_EQ",
+       "GUID": "{8B2FE696-A1E5-4FA4-B8B1-921FE8F425B7}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "2466477603",
+      "Name": "Play_ally_death",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\game_character\\ally\\Play_ally_death",
+      "GUID": "{4D386C1A-F331-4834-992E-265524FD09DA}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.8448542",
+      "DurationMax": "0.8448542",
+      "MediaRefs": [
+       {
+        "Id": "89826322"
+       }
+      ]
+     },
+     {
+      "Id": "2680829976",
+      "Name": "Play_ally_selected_popup_ally_selector",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\UI\\Play_ally_selected_popup_ally_selector",
+      "GUID": "{2A69244D-12BE-481E-A7DB-8015F7747604}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.2443991",
+      "DurationMax": "1.2443991",
+      "MediaRefs": [
+       {
+        "Id": "470021419"
+       }
+      ]
+     },
+     {
+      "Id": "2376034323",
+      "Name": "Play_ally_weapon_explosion",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\game_character\\ally\\Play_ally_weapon_explosion",
+      "GUID": "{2C450AA9-F832-4026-A90C-AEE2C66B80A8}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.915125",
+      "DurationMax": "1.915125",
+      "MediaRefs": [
+       {
+        "Id": "935809597"
+       }
+      ]
+     },
+     {
+      "Id": "2808319136",
+      "Name": "Play_attacking_knife",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\game_character\\Play_attacking_knife",
+      "GUID": "{0DDFADE9-4C2B-4726-AFBC-7A51F37D780B}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.42333335",
+      "DurationMax": "0.42333335",
+      "MediaRefs": [
+       {
+        "Id": "542032594"
+       }
+      ]
+     },
+     {
+      "Id": "4263576739",
+      "Name": "Play_barrier_destroyed",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\game_character\\ally\\Play_barrier_destroyed",
+      "GUID": "{0CCC8B2E-A0AF-449C-B31F-3061035ABC12}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.9642917",
+      "DurationMax": "0.9642917",
+      "MediaRefs": [
+       {
+        "Id": "637210440"
+       }
+      ]
+     },
+     {
+      "Id": "2085582137",
+      "Name": "Play_bear_bite",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\game_character\\ally\\Play_bear_bite",
+      "GUID": "{3C79F7A0-9CD1-40B8-A7AB-8519030D1A1B}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.94254166",
+      "DurationMax": "0.94254166",
+      "MediaRefs": [
+       {
+        "Id": "810347418"
+       }
+      ]
+     },
+     {
+      "Id": "3901206225",
+      "Name": "Play_button_menu_click2",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\start_menus\\Play_button_menu_click2",
+      "GUID": "{E8FADEB1-8012-476F-AAB6-DA86F0F15932}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.1445805",
+      "DurationMax": "0.1445805",
+      "MediaRefs": [
+       {
+        "Id": "3410972"
+       }
+      ]
+     },
+     {
+      "Id": "4070566300",
+      "Name": "Play_button_menu_explotions",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\UI\\Play_button_menu_explotions",
+      "GUID": "{DC330093-BE06-41E4-A332-3A0A3637339D}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.8703125",
+      "DurationMax": "1.8703125",
+      "MediaRefs": [
+       {
+        "Id": "556641162"
+       }
+      ]
+     },
+     {
+      "Id": "598478707",
+      "Name": "Play_cannon_shooting",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\game_character\\ally\\Play_cannon_shooting",
+      "GUID": "{37C5A8D3-1687-4638-A4BA-FFB1230E99EE}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.5861225",
+      "DurationMax": "2.5861225",
+      "MediaRefs": [
+       {
+        "Id": "417484301"
+       }
+      ]
+     },
+     {
+      "Id": "4023845209",
+      "Name": "Play_countdown_level_start",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\UI\\Play_countdown_level_start",
+      "GUID": "{3B2E81DB-69DB-4BCA-B9C4-0678F6ECDE00}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.146979",
+      "DurationMax": "2.146979",
+      "MediaRefs": [
+       {
+        "Id": "575695437"
+       }
+      ]
+     },
+     {
+      "Id": "3410401708",
+      "Name": "Play_defend_level_start",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\UI\\Play_defend_level_start",
+      "GUID": "{BB93B56A-87A0-4C56-867F-684195389913}",
+      "DurationType": "OneShot",
+      "DurationMin": "4.1462917",
+      "DurationMax": "4.1462917",
+      "MediaRefs": [
+       {
+        "Id": "84360649"
+       }
+      ]
+     },
+     {
+      "Id": "3029132950",
+      "Name": "Play_eagle_scream",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\game_character\\enemy\\Play_eagle_scream",
+      "GUID": "{49E7FEC9-5161-4E85-B8D1-421DF315FC2E}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.009",
+      "DurationMax": "2.009",
+      "MediaRefs": [
+       {
+        "Id": "609874411"
+       }
+      ]
+     },
+     {
+      "Id": "1386813744",
+      "Name": "Play_enemies_arrived",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\UI\\Play_enemies_arrived",
+      "GUID": "{9DEA47E7-4EB2-4C8C-B0D0-D9EE154FBE71}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.4992917",
+      "DurationMax": "2.4992917",
+      "MediaRefs": [
+       {
+        "Id": "830291467"
+       }
+      ]
+     },
+     {
+      "Id": "3046156865",
+      "Name": "Play_enemy_death",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\game_character\\enemy\\Play_enemy_death",
+      "GUID": "{4EE311E3-727F-46D9-A99B-7A2BE673F065}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.7589167",
+      "DurationMax": "0.7589167",
+      "MediaRefs": [
+       {
+        "Id": "822702237"
+       }
+      ]
+     },
+     {
+      "Id": "1156564164",
+      "Name": "Play_flag_drop",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\start_menus\\Play_flag_drop",
+      "GUID": "{F056E99A-0452-475D-BBBE-E176BDA2992B}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.32",
+      "DurationMax": "1.32",
+      "MediaRefs": [
+       {
+        "Id": "891612806"
+       }
+      ]
+     },
+     {
+      "Id": "2153046946",
+      "Name": "Play_game_over_popup",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\UI\\Play_game_over_popup",
+      "GUID": "{7DE92C0D-FCDD-40EF-A846-1FF091CBBDAF}",
+      "DurationType": "OneShot",
+      "DurationMin": "4.5822916",
+      "DurationMax": "4.5822916",
+      "MediaRefs": [
+       {
+        "Id": "135357717"
+       }
+      ]
+     },
+     {
+      "Id": "1584499706",
+      "Name": "Play_Go_Back",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\start_menus\\Play_Go_Back",
+      "GUID": "{A8006E0F-7E39-4671-947B-497C7418E393}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.5844167",
+      "DurationMax": "0.5844167",
+      "MediaRefs": [
+       {
+        "Id": "860968703"
+       }
+      ]
+     },
+     {
+      "Id": "543537113",
+      "Name": "Play_hit_barrier",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\game_character\\ally\\Play_hit_barrier",
+      "GUID": "{D422F327-1246-4869-B5BF-BC7ECAF96A6A}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.28070834",
+      "DurationMax": "0.28070834",
+      "MediaRefs": [
+       {
+        "Id": "3984765"
+       }
+      ]
+     },
+     {
+      "Id": "440747048",
+      "Name": "Play_hit_inactive_landmine",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\game_character\\ally\\Play_hit_inactive_landmine",
+      "GUID": "{443A3683-619E-4847-A40A-E02FB4A3DDBF}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.28070834",
+      "DurationMax": "0.28070834",
+      "MediaRefs": [
+       {
+        "Id": "1031647180"
+       }
+      ]
+     },
+     {
+      "Id": "58935080",
+      "Name": "Play_hitted_character",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\game_character\\ally\\Play_hitted_character",
+      "GUID": "{EF9FB686-C431-41A7-B362-D1F26CFDE299}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.454875",
+      "DurationMax": "0.454875",
+      "MediaRefs": [
+       {
+        "Id": "201144724"
+       }
+      ]
+     },
+     {
+      "Id": "222699952",
+      "Name": "Play_hurt_Enemy",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\game_character\\enemy\\Play_hurt_Enemy",
+      "GUID": "{3552AC76-0FFE-4898-B658-D75114512B8B}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.3995",
+      "DurationMax": "0.77922916",
+      "MediaRefs": [
+       {
+        "Id": "33966097"
+       },
+       {
+        "Id": "321320299"
+       },
+       {
+        "Id": "374475123"
+       }
+      ]
+     },
+     {
+      "Id": "626959273",
+      "Name": "Play_level_selected_level_selector",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\UI\\Play_level_selected_level_selector",
+      "GUID": "{DE6E93FA-7F7A-4725-9950-5DA34BCB74EF}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.20902494",
+      "DurationMax": "0.20902494",
+      "MediaRefs": [
+       {
+        "Id": "765331897"
+       }
+      ]
+     },
+     {
+      "Id": "513467537",
+      "Name": "Play_level_wave_explotion",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\UI\\Play_level_wave_explotion",
+      "GUID": "{A1537270-2565-431A-B773-50FCACC2455E}",
+      "DurationType": "OneShot",
+      "DurationMin": "5.454558",
+      "DurationMax": "5.454558",
+      "MediaRefs": [
+       {
+        "Id": "322878100"
+       }
+      ]
+     },
+     {
+      "Id": "387996737",
+      "Name": "Play_matrioska_falling",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\game_character\\ally\\Play_matrioska_falling",
+      "GUID": "{C06D391D-8C3F-4715-9695-83D2FE13382D}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.2238333",
+      "DurationMax": "1.2238333",
+      "MediaRefs": [
+       {
+        "Id": "260724265"
+       }
+      ]
+     },
+     {
+      "Id": "3878600539",
+      "Name": "Play_menu_volume_changed_indicator",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\start_menus\\Play_menu_volume_changed_indicator",
+      "GUID": "{A3F20F5C-CCB1-45C4-80F5-B6BBDD980F5B}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.19238095",
+      "DurationMax": "0.19238095",
+      "MediaRefs": [
+       {
+        "Id": "992361939"
+       }
+      ]
+     },
+     {
+      "Id": "4282641482",
+      "Name": "play_music_switch_container",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\play_music_switch_container",
+      "GUID": "{047BA3B6-CF18-42AE-BD30-8FEA0F407919}",
+      "DurationType": "Infinite",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "2434766612",
+         "Id": "3724058175",
+         "GUID": "{2139E6AF-B58D-49FA-8FD7-323644867141}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "414861985"
+         },
+         {
+          "Id": "657253682"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "2434766612",
+         "Id": "3759295949",
+         "GUID": "{8BBEE3B2-B343-467B-98B1-306CAB8B8E5F}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "960921838"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "2434766612",
+         "Id": "2315826626",
+         "GUID": "{8240B8A7-1234-4CDA-883D-6EE424E8AE10}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "960921838"
+         },
+         {
+          "Id": "977082275"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "2434766612",
+         "Id": "3892925004",
+         "GUID": "{DBFD65A4-5B4A-48B9-A6D0-38BACA92DBB8}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "155621289"
+         },
+         {
+          "Id": "495830009"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "2434766612",
+         "Id": "4144676454",
+         "GUID": "{3A8E5501-6BE7-4FA5-B634-53B735FE7413}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "729643390"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "2434766612",
+         "Id": "2676250102",
+         "GUID": "{C9115561-75A7-435B-ADE1-50002C83ADA5}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "387689397"
+         },
+         {
+          "Id": "729643390"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "2434766612",
+         "Id": "914203221",
+         "GUID": "{326C55A8-63EC-463B-851D-B880F73A90C2}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "804743463"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "2434766612",
+         "Id": "48567530",
+         "GUID": "{22416CDE-9414-45CC-9EF0-3A2169176D4D}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "226743706"
+         },
+         {
+          "Id": "804743463"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "2434766612",
+         "Id": "1290309944",
+         "GUID": "{34BD3760-0D9D-4323-9BDC-7D6231F133E7}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "657253682"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "2434766612",
+         "Id": "207979799",
+         "GUID": "{CF626A58-294A-4BC4-9BCA-C32529309F8E}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "891591906"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "Id": "2388007847",
+      "Name": "Play_pause_popup",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\UI\\Play_pause_popup",
+      "GUID": "{87F0E415-A1BD-4750-890D-FECC5A6E797D}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.38054165",
+      "DurationMax": "0.38054165",
+      "MediaRefs": [
+       {
+        "Id": "148408226"
+       }
+      ]
+     },
+     {
+      "Id": "4214031666",
+      "Name": "Play_pick_up_rublo",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\game_character\\enemy\\Play_pick_up_rublo",
+      "GUID": "{332B0582-BF68-474B-997A-C6567FE53F28}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.5584581",
+      "DurationMax": "1.5584581",
+      "MediaRefs": [
+       {
+        "Id": "608725695"
+       }
+      ]
+     },
+     {
+      "Id": "2092018151",
+      "Name": "Play_place_ally_on_cell",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\UI\\Play_place_ally_on_cell",
+      "GUID": "{ECC255AD-7E16-4EAF-99B1-F0D2FADEB47C}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.19895834",
+      "DurationMax": "0.19895834",
+      "MediaRefs": [
+       {
+        "Id": "902039373"
+       }
+      ]
+     },
+     {
+      "Id": "4111079485",
+      "Name": "Play_reload_bayonet_ally",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\game_character\\enemy\\Play_reload_bayonet_ally",
+      "GUID": "{116C24FF-DE1F-4EFD-99A4-A0A80B49C038}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.6294583",
+      "DurationMax": "0.6294583",
+      "MediaRefs": [
+       {
+        "Id": "1054911345"
+       }
+      ]
+     },
+     {
+      "Id": "3438054336",
+      "Name": "Play_reload_lmg",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\game_character\\enemy\\Play_reload_lmg",
+      "GUID": "{CED2EFD1-2176-41E4-9730-486951E38FEE}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.1949167",
+      "DurationMax": "1.1949167",
+      "MediaRefs": [
+       {
+        "Id": "582284745"
+       }
+      ]
+     },
+     {
+      "Id": "3824177564",
+      "Name": "Play_select_ally_card",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\UI\\Play_select_ally_card",
+      "GUID": "{65059D6C-F0F6-4049-9352-AED0BD763DB2}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.68833333",
+      "DurationMax": "0.68833333",
+      "MediaRefs": [
+       {
+        "Id": "30254775"
+       }
+      ]
+     },
+     {
+      "Id": "3554160719",
+      "Name": "Play_Settings_selected",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\start_menus\\Play_Settings_selected",
+      "GUID": "{9DE6B30B-5C9B-4061-B1FE-7BDDAA180843}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.51836735",
+      "DurationMax": "0.51836735",
+      "MediaRefs": [
+       {
+        "Id": "194127595"
+       }
+      ]
+     },
+     {
+      "Id": "233420644",
+      "Name": "Play_shoot_ally",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\game_character\\enemy\\Play_shoot_ally",
+      "GUID": "{0227217A-2617-4EC0-AA58-5B70E3917B12}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.5001134",
+      "DurationMax": "1.5001134",
+      "MediaRefs": [
+       {
+        "Id": "590750396"
+       }
+      ]
+     },
+     {
+      "Id": "190952086",
+      "Name": "Play_shoot_enemy",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\game_character\\enemy\\Play_shoot_enemy",
+      "GUID": "{592653F8-43D9-4E3F-A504-CCD778849746}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.8477708",
+      "DurationMax": "1.3370833",
+      "MediaRefs": [
+       {
+        "Id": "747784122"
+       },
+       {
+        "Id": "976316169"
+       }
+      ]
+     },
+     {
+      "Id": "73009529",
+      "Name": "Play_snowman_shoot",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\game_character\\ally\\Play_snowman_shoot",
+      "GUID": "{2855C39D-CE81-4017-AA2A-B2AEA2D29562}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.4555101",
+      "DurationMax": "2.4555101",
+      "MediaRefs": [
+       {
+        "Id": "336573082"
+       }
+      ]
+     },
+     {
+      "Id": "3453183150",
+      "Name": "Play_Start_selected",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\start_menus\\Play_Start_selected",
+      "GUID": "{1AFD689C-3562-43F7-9785-F8D98E274A1B}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.5844167",
+      "DurationMax": "0.5844167",
+      "MediaRefs": [
+       {
+        "Id": "455492302"
+       }
+      ]
+     },
+     {
+      "Id": "990215566",
+      "Name": "Play_sword_swing",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\game_character\\Play_sword_swing",
+      "GUID": "{C7327CA0-892A-4092-B3FF-C281B3305026}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.44058332",
+      "DurationMax": "0.44058332",
+      "MediaRefs": [
+       {
+        "Id": "700523766"
+       }
+      ]
+     },
+     {
+      "Id": "4058178510",
+      "Name": "Play_tutorial_cell_highlight",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\UI\\Play_tutorial_cell_highlight",
+      "GUID": "{7C8A8E56-ABC0-4C02-9BDE-91CAD5035C10}",
+      "DurationType": "OneShot",
+      "DurationMin": "47.65279",
+      "DurationMax": "47.65279",
+      "MediaRefs": [
+       {
+        "Id": "966742114"
+       }
+      ]
+     },
+     {
+      "Id": "1094250490",
+      "Name": "Play_world_selected",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\start_menus\\Play_world_selected",
+      "GUID": "{A4477688-FAAC-419F-9FBA-65E5A19DFD13}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.5844167",
+      "DurationMax": "0.5844167",
+      "MediaRefs": [
+       {
+        "Id": "772960577"
+       }
+      ]
+     },
+     {
+      "Id": "1948813178",
+      "Name": "reset_popup_filter",
+      "ObjectPath": "\\Events\\Default Work Unit\\Filters\\reset_popup_filter",
+      "GUID": "{BA43A9D8-350B-416F-9EF2-84001A8F8A1A}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "3297859228",
+      "Name": "set_music_sc_game_won",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\set_music_sc_game_won",
+      "GUID": "{A3F076E3-E978-4C5E-99DF-C8CE3C478680}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetState": [
+       {
+        "GroupId": "2434766612",
+        "Id": "207979799",
+        "Name": "state_game_won_popup",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\state_game_won_popup",
+        "GUID": "{CF626A58-294A-4BC4-9BCA-C32529309F8E}"
+       }
+      ]
+     },
+     {
+      "Id": "911392732",
+      "Name": "set_music_sc_level_intro",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\set_music_sc_level_intro",
+      "GUID": "{AFB56936-A2FE-436E-8FF9-D16B90A3FC53}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetState": [
+       {
+        "GroupId": "2434766612",
+        "Id": "1290309944",
+        "Name": "state_level_intro",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\state_level_intro",
+        "GUID": "{34BD3760-0D9D-4323-9BDC-7D6231F133E7}"
+       }
+      ]
+     },
+     {
+      "Id": "1791604232",
+      "Name": "set_music_sc_loading_screen",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\set_music_sc_loading_screen",
+      "GUID": "{155C5544-7058-4782-829D-65FC5FF479C0}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetState": [
+       {
+        "GroupId": "2434766612",
+        "Id": "3892925004",
+        "Name": "state_loading_screen",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\state_loading_screen",
+        "GUID": "{DBFD65A4-5B4A-48B9-A6D0-38BACA92DBB8}"
+       }
+      ]
+     },
+     {
+      "Id": "1077551946",
+      "Name": "set_music_sc_main_menu",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\set_music_sc_main_menu",
+      "GUID": "{A957E48D-32A9-4483-8EBC-89393183A0DD}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetState": [
+       {
+        "GroupId": "2434766612",
+        "Id": "4144676454",
+        "Name": "state_main_menu",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\state_main_menu",
+        "GUID": "{3A8E5501-6BE7-4FA5-B634-53B735FE7413}"
+       }
+      ]
+     },
+     {
+      "Id": "1566583922",
+      "Name": "set_music_sc_settings_menu",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\set_music_sc_settings_menu",
+      "GUID": "{5E73D598-09E0-46A2-A0E7-927920AAA531}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetState": [
+       {
+        "GroupId": "2434766612",
+        "Id": "2676250102",
+        "Name": "state_settings_menu",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\state_settings_menu",
+        "GUID": "{C9115561-75A7-435B-ADE1-50002C83ADA5}"
+       }
+      ]
+     },
+     {
+      "Id": "2845580201",
+      "Name": "set_music_sc_stalingrad_summer_game",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\set_music_sc_stalingrad_summer_game",
+      "GUID": "{D5FB66A9-7FA8-44AB-9285-A24D53FC5B29}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetState": [
+       {
+        "GroupId": "2434766612",
+        "Id": "914203221",
+        "Name": "state_stalingrad_summer_game",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\state_stalingrad_summer_game",
+        "GUID": "{326C55A8-63EC-463B-851D-B880F73A90C2}"
+       }
+      ]
+     },
+     {
+      "Id": "3605209694",
+      "Name": "set_music_sc_stalingrad_summer_game_intense",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\set_music_sc_stalingrad_summer_game_intense",
+      "GUID": "{9AB276E0-F61F-4C2E-B067-81D45E8C7A87}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetState": [
+       {
+        "GroupId": "2434766612",
+        "Id": "48567530",
+        "Name": "state_stalingrad_summer_game_intense",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\state_stalingrad_summer_game_intense",
+        "GUID": "{22416CDE-9414-45CC-9EF0-3A2169176D4D}"
+       }
+      ]
+     },
+     {
+      "Id": "3985415361",
+      "Name": "set_music_sc_stalingrad_winter_game",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\set_music_sc_stalingrad_winter_game",
+      "GUID": "{3EDF7AAE-D8BA-4C0B-8D8E-B6B5D264A641}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetState": [
+       {
+        "GroupId": "2434766612",
+        "Id": "3759295949",
+        "Name": "state_stalingrad_winter_game",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\state_stalingrad_winter_game",
+        "GUID": "{8BBEE3B2-B343-467B-98B1-306CAB8B8E5F}"
+       }
+      ]
+     },
+     {
+      "Id": "1126713366",
+      "Name": "set_music_sc_stalingrad_winter_game_intense",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\set_music_sc_stalingrad_winter_game_intense",
+      "GUID": "{CBF81B0C-D44E-4259-9E33-5C7F56478391}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetState": [
+       {
+        "GroupId": "2434766612",
+        "Id": "2315826626",
+        "Name": "state_stalingrad_winter_game_intense",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\state_stalingrad_winter_game_intense",
+        "GUID": "{8240B8A7-1234-4CDA-883D-6EE424E8AE10}"
+       }
+      ]
+     },
+     {
+      "Id": "3290919747",
+      "Name": "set_music_sc_worlds_map_menu",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\set_music_sc_worlds_map_menu",
+      "GUID": "{20CD3E28-F531-480A-95C8-93224CBC9FE8}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetState": [
+       {
+        "GroupId": "2434766612",
+        "Id": "3724058175",
+        "Name": "state_worlds_map_menu",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\state_worlds_map_menu",
+        "GUID": "{2139E6AF-B58D-49FA-8FD7-323644867141}"
+       }
+      ]
+     },
+     {
+      "Id": "4259088637",
+      "Name": "set_popup_filter",
+      "ObjectPath": "\\Events\\Default Work Unit\\Filters\\set_popup_filter",
+      "GUID": "{A473F5B5-F06B-482B-8F2F-7BAD77B83129}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "2141574376"
+        }
+       ]
+      },
+      "ActionSetFX": [
+       {
+        "Id": "3803692087",
+        "Name": "Master Audio Bus",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
+        "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+       }
+      ]
+     },
+     {
+      "Id": "1284156648",
+      "Name": "stop_music_switch_container",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\stop_music_switch_container",
+      "GUID": "{3DD3CFEB-3334-4CE0-A8C7-0DB9C7F7E1DE}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "1401018676",
+      "Name": "Stop_tutorial_cell_highlight",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\game_screen\\UI\\Stop_tutorial_cell_highlight",
+      "GUID": "{659F931C-356F-4B29-B463-0E4268FE5351}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "2434766612",
+      "Name": "music_state_group",
+      "ObjectPath": "\\States\\Default Work Unit\\music_state_group",
+      "GUID": "{AE8ACE00-371B-4221-BC27-945E3DB4A04A}",
+      "States": [
+       {
+        "Id": "48567530",
+        "Name": "state_stalingrad_summer_game_intense",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\state_stalingrad_summer_game_intense",
+        "GUID": "{22416CDE-9414-45CC-9EF0-3A2169176D4D}"
+       },
+       {
+        "Id": "207979799",
+        "Name": "state_game_won_popup",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\state_game_won_popup",
+        "GUID": "{CF626A58-294A-4BC4-9BCA-C32529309F8E}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\None",
+        "GUID": "{A7D28F19-95FC-47EC-AB90-326BCFD423E5}"
+       },
+       {
+        "Id": "914203221",
+        "Name": "state_stalingrad_summer_game",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\state_stalingrad_summer_game",
+        "GUID": "{326C55A8-63EC-463B-851D-B880F73A90C2}"
+       },
+       {
+        "Id": "1290309944",
+        "Name": "state_level_intro",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\state_level_intro",
+        "GUID": "{34BD3760-0D9D-4323-9BDC-7D6231F133E7}"
+       },
+       {
+        "Id": "2315826626",
+        "Name": "state_stalingrad_winter_game_intense",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\state_stalingrad_winter_game_intense",
+        "GUID": "{8240B8A7-1234-4CDA-883D-6EE424E8AE10}"
+       },
+       {
+        "Id": "2676250102",
+        "Name": "state_settings_menu",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\state_settings_menu",
+        "GUID": "{C9115561-75A7-435B-ADE1-50002C83ADA5}"
+       },
+       {
+        "Id": "3724058175",
+        "Name": "state_worlds_map_menu",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\state_worlds_map_menu",
+        "GUID": "{2139E6AF-B58D-49FA-8FD7-323644867141}"
+       },
+       {
+        "Id": "3759295949",
+        "Name": "state_stalingrad_winter_game",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\state_stalingrad_winter_game",
+        "GUID": "{8BBEE3B2-B343-467B-98B1-306CAB8B8E5F}"
+       },
+       {
+        "Id": "3892925004",
+        "Name": "state_loading_screen",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\state_loading_screen",
+        "GUID": "{DBFD65A4-5B4A-48B9-A6D0-38BACA92DBB8}"
+       },
+       {
+        "Id": "4144676454",
+        "Name": "state_main_menu",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\state_main_menu",
+        "GUID": "{3A8E5501-6BE7-4FA5-B634-53B735FE7413}"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "Id": "1355168291",
+    "Type": "User",
+    "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
+    "Language": "SFX",
+    "Hash": "{3BED11FE-5DBD-E999-7C69-01C76830E84A}",
+    "ObjectPath": "Init",
+    "ShortName": "Init",
+    "Path": "1355168291.bnk",
+    "Plugins": {
+     "AudioDevices": [
+      {
+       "Id": "2317455096",
+       "Name": "No_Output",
+       "ObjectPath": "\\Audio Devices\\Default Work Unit\\No_Output",
+       "GUID": "{8019F696-CC41-49C2-B217-C353875B3533}",
+       "LibName": "No Output",
+       "LibId": "11862023"
+      },
+      {
+       "Id": "3859886410",
+       "Name": "System",
+       "ObjectPath": "\\Audio Devices\\Default Work Unit\\System",
+       "GUID": "{B4FBA34E-2D52-4634-8370-BCDA5F73B9B6}",
+       "LibName": "System",
+       "LibId": "11403271"
+      }
+     ]
+    },
+    "Busses": [
+     {
+      "Id": "1502772432",
+      "Name": "SFX Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Bus",
+      "GUID": "{F7A660B3-7BDD-4083-B724-AC37FCCB0A93}"
+     },
+     {
+      "Id": "3127962312",
+      "Name": "Music Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Music Bus",
+      "GUID": "{AC433D02-5B8A-43AA-A091-8AE91299E9ED}"
+     },
+     {
+      "Id": "3803692087",
+      "Name": "Master Audio Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "1006694123",
+      "Name": "music_volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\music_volume",
+      "GUID": "{3E7E0FB7-D879-47FB-9098-960DBEC2D369}"
+     },
+     {
+      "Id": "1564184899",
+      "Name": "sfx_volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\sfx_volume",
+      "GUID": "{1C3ADC48-D78A-43A4-853C-13982DB45713}"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "2434766612",
+      "Name": "music_state_group",
+      "ObjectPath": "\\States\\Default Work Unit\\music_state_group",
+      "GUID": "{AE8ACE00-371B-4221-BC27-945E3DB4A04A}",
+      "States": [
+       {
+        "Id": "48567530",
+        "Name": "state_stalingrad_summer_game_intense",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\state_stalingrad_summer_game_intense",
+        "GUID": "{22416CDE-9414-45CC-9EF0-3A2169176D4D}"
+       },
+       {
+        "Id": "207979799",
+        "Name": "state_game_won_popup",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\state_game_won_popup",
+        "GUID": "{CF626A58-294A-4BC4-9BCA-C32529309F8E}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\None",
+        "GUID": "{A7D28F19-95FC-47EC-AB90-326BCFD423E5}"
+       },
+       {
+        "Id": "914203221",
+        "Name": "state_stalingrad_summer_game",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\state_stalingrad_summer_game",
+        "GUID": "{326C55A8-63EC-463B-851D-B880F73A90C2}"
+       },
+       {
+        "Id": "1290309944",
+        "Name": "state_level_intro",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\state_level_intro",
+        "GUID": "{34BD3760-0D9D-4323-9BDC-7D6231F133E7}"
+       },
+       {
+        "Id": "2315826626",
+        "Name": "state_stalingrad_winter_game_intense",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\state_stalingrad_winter_game_intense",
+        "GUID": "{8240B8A7-1234-4CDA-883D-6EE424E8AE10}"
+       },
+       {
+        "Id": "2676250102",
+        "Name": "state_settings_menu",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\state_settings_menu",
+        "GUID": "{C9115561-75A7-435B-ADE1-50002C83ADA5}"
+       },
+       {
+        "Id": "3724058175",
+        "Name": "state_worlds_map_menu",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\state_worlds_map_menu",
+        "GUID": "{2139E6AF-B58D-49FA-8FD7-323644867141}"
+       },
+       {
+        "Id": "3759295949",
+        "Name": "state_stalingrad_winter_game",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\state_stalingrad_winter_game",
+        "GUID": "{8BBEE3B2-B343-467B-98B1-306CAB8B8E5F}"
+       },
+       {
+        "Id": "3892925004",
+        "Name": "state_loading_screen",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\state_loading_screen",
+        "GUID": "{DBFD65A4-5B4A-48B9-A6D0-38BACA92DBB8}"
+       },
+       {
+        "Id": "4144676454",
+        "Name": "state_main_menu",
+        "ObjectPath": "\\States\\Default Work Unit\\music_state_group\\state_main_menu",
+        "GUID": "{3A8E5501-6BE7-4FA5-B634-53B735FE7413}"
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "2250165792",
+      "Name": "New_Switch_Group",
+      "ObjectPath": "\\Switches\\Default Work Unit\\New_Switch_Group",
+      "GUID": "{1FA11AF0-8191-4B16-AB45-6890F38CE5E5}",
+      "Switches": [
+       {
+        "Id": "1914034948",
+        "Name": "New_Switch",
+        "ObjectPath": "\\Switches\\Default Work Unit\\New_Switch_Group\\New_Switch",
+        "GUID": "{2D11E8D5-3113-4E10-B67B-0D383523A1C5}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{815625F2-084A-A251-44B5-4CCE8D4574B8}"
+ }
+}

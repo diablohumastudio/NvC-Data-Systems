@@ -1,0 +1,13 @@
+class_name Menu extends Control
+
+func _on_save_btn_pressed() -> void:
+	UDS.save_user_data_to_disk()
+
+func _on_goto_achievements_screen_btn_pressed() -> void:
+	SMS.change_scene(load(GC.SCREENS_UIDS.ACHIEVEMENTS))
+
+func _on_go_back_btn_pressed() -> void:
+	SMS.change_scene(load(GC.SCREENS_UIDS.WELCOME_MENU))
+
+func _on_goto_market_btn_pressed() -> void:
+	SMS.change_scene(load(GC.SCREENS_UIDS.ALLIES_MARKET))

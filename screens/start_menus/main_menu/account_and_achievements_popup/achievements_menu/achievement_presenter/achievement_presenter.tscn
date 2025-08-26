@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=3 uid="uid://cyy4hbmuetvi3"]
+
+[ext_resource type="Script" uid="uid://bl4e8hba6dxk0" path="res://screens/start_menus/main_menu/account_and_achievements_popup/achievements_menu/achievement_presenter/achievement_presenter.gd" id="1_abt1y"]
+[ext_resource type="Texture2D" uid="uid://dq7iilo7wvkm2" path="res://global_objects/achievement_achieved_banner/assets/line.png" id="2_v5885"]
+[ext_resource type="Texture2D" uid="uid://nutvxu0atfkw" path="res://global_objects/achievement_achieved_banner/assets/achievement_icon.png" id="3_773i7"]
+[ext_resource type="FontFile" uid="uid://ns85otisc51h" path="res://global_assets/fonts/Boldstone-Regular.ttf" id="4_17hsg"]
+[ext_resource type="FontFile" uid="uid://ddhakhisox2sy" path="res://global_assets/fonts/RedhandNeo-Regular.ttf" id="5_q0wuj"]
+[ext_resource type="Texture2D" uid="uid://rtvjgpll5ih6" path="res://screens/start_menus/main_menu/account_and_achievements_popup/achievements_menu/assets/progress_icon_bg.png" id="6_rfvcf"]
+[ext_resource type="Texture2D" uid="uid://epy54cyerp6k" path="res://screens/start_menus/main_menu/account_and_achievements_popup/achievements_menu/assets/progress_icon_top.png" id="7_ejh8d"]
+[ext_resource type="Texture2D" uid="uid://djf0xow16451y" path="res://screens/start_menus/main_menu/account_and_achievements_popup/achievements_menu/assets/progress_icon_progress.png" id="8_pn835"]
+
+[node name="AchievementPresenter" type="Control"]
+custom_minimum_size = Vector2(550, 176)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_abt1y")
+
+[node name="Line" type="Sprite2D" parent="."]
+position = Vector2(347, 47.5)
+texture = ExtResource("2_v5885")
+
+[node name="AchievementIcon" type="Sprite2D" parent="."]
+position = Vector2(76, 76.5)
+texture = ExtResource("3_773i7")
+
+[node name="NameLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 174.0
+offset_top = -1.0
+offset_right = 525.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0.913725, 0.858824, 0.807843, 1)
+theme_override_fonts/font = ExtResource("4_17hsg")
+theme_override_font_sizes/font_size = 48
+text = "achievement name"
+
+[node name="DescriptionLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 173.5
+offset_top = 59.0
+offset_right = 547.5
+offset_bottom = 158.0
+theme_override_colors/font_color = Color(0.689467, 0.537004, 0.49342, 1)
+theme_override_fonts/font = ExtResource("5_q0wuj")
+theme_override_font_sizes/font_size = 28
+text = "loren ipsun dolor sit amet, consectetur adipiscing elit."
+autowrap_mode = 2
+
+[node name="ProgressIconBg" type="TextureProgressBar" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 110.0
+offset_top = 109.0
+offset_right = 173.0
+offset_bottom = 170.0
+value = 42.0
+fill_mode = 5
+texture_under = ExtResource("6_rfvcf")
+texture_over = ExtResource("7_ejh8d")
+texture_progress = ExtResource("8_pn835")

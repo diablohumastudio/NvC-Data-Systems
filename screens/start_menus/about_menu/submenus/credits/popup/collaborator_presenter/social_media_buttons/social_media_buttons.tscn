@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b577gvgkwwlgj"]
+
+[ext_resource type="Script" uid="uid://w3u4ncw0kwyc" path="res://screens/start_menus/about_menu/submenus/credits/popup/collaborator_presenter/social_media_buttons/social_media_buttons.gd" id="1_h71ww"]
+[ext_resource type="PackedScene" uid="uid://cdvt75w8gi0s0" path="res://screens/start_menus/about_menu/submenus/credits/popup/collaborator_presenter/social_media_btn/social_media_btn.tscn" id="1_sg40i"]
+
+[node name="SocialMediaButtons" type="GridContainer"]
+theme_override_constants/h_separation = -21
+theme_override_constants/v_separation = -15
+columns = 3
+script = ExtResource("1_h71ww")
+
+[node name="SocialMediaBtn" parent="." instance=ExtResource("1_sg40i")]
+layout_mode = 2
+
+[node name="SocialMediaBtn2" parent="." instance=ExtResource("1_sg40i")]
+layout_mode = 2
+
+[node name="SocialMediaBtn3" parent="." instance=ExtResource("1_sg40i")]
+layout_mode = 2

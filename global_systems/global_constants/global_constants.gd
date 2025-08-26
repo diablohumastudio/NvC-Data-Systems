@@ -3,8 +3,18 @@ extends Node
 const TOTAL_NUMBER_OF_CANONS: int = 5
 
 const SCREENS_UIDS: Dictionary = {
-	"MENU": "uid://iinlpvu7gc2e",
+	"LOADING_SCREEN": "uid://b4n41kmtybwqn",
+	"MAIN_MENU": "uid://cflg2ypu25js2",
+	"SETTINGS_MENU": "uid://87lecky2hhq6",
+	"ABOUT_MENU": "uid://bo1jforvfhnbv",
+	"WORLDS_MAP_MENU": "uid://d3fq3n8sfelgm",
+	"STALINGRAD_SUMMER_LEVELS_MENU":"uid://bnl38rkw31r66",
+	"STALINGRAD_SUMMER_CAMP":"uid://ctww27adn5p47",
+	"STALINGRAD_WINTER_LEVELS_MENU":"uid://gci4nehonton",
+	
 	"GAME": "uid://c2b4jldseu5vs",
+	
+	"MENU": "uid://iinlpvu7gc2e",
 	"ACHIEVEMENTS": "uid://bbsi2yvced0xh",
 	"WELCOME_MENU": "uid://iusscgq60rcy",
 	"LOGIN_REGISTER_MENU": "uid://cxxmq32l3eqdc",

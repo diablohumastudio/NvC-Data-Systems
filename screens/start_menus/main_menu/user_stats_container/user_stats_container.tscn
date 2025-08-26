@@ -1,0 +1,280 @@
+[gd_scene load_steps=13 format=3 uid="uid://swqcdk8cggeg"]
+
+[ext_resource type="Script" uid="uid://km56ch60o73r" path="res://screens/start_menus/main_menu/user_stats_container/user_stats_container.gd" id="1_3tnu0"]
+[ext_resource type="Texture2D" uid="uid://wmnh1wr4tclr" path="res://screens/start_menus/main_menu/user_stats_container/assets/user_menu_container.png" id="2_kdss3"]
+[ext_resource type="FontFile" uid="uid://ns85otisc51h" path="res://global_assets/fonts/Boldstone-Regular.ttf" id="3_nohw3"]
+[ext_resource type="Texture2D" uid="uid://dxdpky6ovwaee" path="res://screens/start_menus/main_menu/user_stats_container/assets/down_arrow.png" id="4_jx6kt"]
+[ext_resource type="Texture2D" uid="uid://b3v6xh4pladc4" path="res://game_characters_scenes/components/ruble_coin/assets/rublo1.png" id="5_t4lju"]
+
+[sub_resource type="Animation" id="Animation_07qbm"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_ce4gk"]
+resource_name = "_close"
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UserStats/UserBalanceContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-171, 65), Vector2(-171, -55)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UserStats/ShowAccountPopupBtn:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-171, 185), Vector2(-171, -55)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("UserStats/UsernameContainer:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(3, 2, 2, 1), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("UserStats/UsernameContainer:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 0.8), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ebj3p"]
+resource_name = "_drop_down"
+length = 0.5
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UserStats/UserBalanceContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-171, -55), Vector2(-171, 65)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UserStats/ShowAccountPopupBtn:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-171, -55), Vector2(-171, 185)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("UserStats/UsernameContainer:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.35),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(3, 2, 2, 1), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("UserStats/UsernameContainer:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 0.8), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1m76q"]
+_data = {
+&"RESET": SubResource("Animation_07qbm"),
+&"_close": SubResource("Animation_ce4gk"),
+&"_drop_down": SubResource("Animation_ebj3p")
+}
+
+[sub_resource type="Animation" id="Animation_5adij"]
+resource_name = "_appear"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1, 67), Vector2(-1, 75)]
+}
+
+[sub_resource type="Animation" id="Animation_26u0x"]
+resource_name = "_bounce"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1, 75), Vector2(-1, 81)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w7hbp"]
+_data = {
+&"_appear": SubResource("Animation_5adij"),
+&"_bounce": SubResource("Animation_26u0x")
+}
+
+[node name="UserStatsContainer" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+focus_mode = 2
+script = ExtResource("1_3tnu0")
+
+[node name="UserStats" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 0
+
+[node name="ShowAccountPopupBtn" type="TextureButton" parent="UserStats"]
+layout_mode = 0
+offset_left = -171.0
+offset_top = -55.0
+offset_right = 171.0
+offset_bottom = 57.0
+texture_normal = ExtResource("2_kdss3")
+texture_pressed = ExtResource("2_kdss3")
+texture_hover = ExtResource("2_kdss3")
+texture_focused = ExtResource("2_kdss3")
+
+[node name="AccountLabel" type="Label" parent="UserStats/ShowAccountPopupBtn"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 35.0
+offset_right = 264.0
+offset_bottom = 75.0
+theme_override_colors/font_color = Color(0.968627, 0.870588, 0.776471, 1)
+theme_override_fonts/font = ExtResource("3_nohw3")
+theme_override_font_sizes/font_size = 50
+text = "account"
+horizontal_alignment = 1
+
+[node name="UserBalanceContainer" type="TextureRect" parent="UserStats"]
+visible = false
+layout_mode = 0
+offset_left = -171.0
+offset_top = -55.0
+offset_right = 171.0
+offset_bottom = 57.0
+texture = ExtResource("2_kdss3")
+
+[node name="BalanceLabel" type="Label" parent="UserStats/UserBalanceContainer"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 42.0
+offset_top = 37.0
+offset_right = 223.0
+offset_bottom = 77.0
+theme_override_colors/font_color = Color(0.968627, 0.870588, 0.776471, 1)
+theme_override_fonts/font = ExtResource("3_nohw3")
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 2
+
+[node name="SingleGoldCoin" type="Sprite2D" parent="UserStats/UserBalanceContainer"]
+position = Vector2(269, 58)
+scale = Vector2(0.772727, 0.772727)
+texture = ExtResource("5_t4lju")
+
+[node name="UsernameContainer" type="TextureButton" parent="UserStats"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = -172.0
+offset_top = -55.0
+offset_right = 170.0
+offset_bottom = 56.0
+pivot_offset = Vector2(172, 58)
+toggle_mode = true
+texture_normal = ExtResource("2_kdss3")
+
+[node name="UserNameLabel" type="Label" parent="UserStats/UsernameContainer"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 41.0
+offset_top = 36.0
+offset_right = 300.0
+offset_bottom = 76.0
+theme_override_colors/font_color = Color(0.97, 0.869767, 0.776, 1)
+theme_override_fonts/font = ExtResource("3_nohw3")
+theme_override_font_sizes/font_size = 50
+text = "Default User"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_1m76q")
+}
+
+[node name="Arrow" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-1, 67)
+texture = ExtResource("4_jx6kt")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Arrow"]
+libraries = {
+&"": SubResource("AnimationLibrary_w7hbp")
+}
+
+[connection signal="pressed" from="UserStats/ShowAccountPopupBtn" to="." method="_on_show_account_popup_btn_pressed"]
+[connection signal="focus_entered" from="UserStats/UsernameContainer" to="." method="_on_username_container_focus_entered"]
+[connection signal="focus_exited" from="UserStats/UsernameContainer" to="." method="_on_username_container_focus_exited"]
+[connection signal="mouse_entered" from="UserStats/UsernameContainer" to="." method="_on_username_container_mouse_entered"]
+[connection signal="mouse_exited" from="UserStats/UsernameContainer" to="." method="_on_username_container_mouse_exited"]
+[connection signal="pressed" from="UserStats/UsernameContainer" to="." method="_on_username_container_pressed"]

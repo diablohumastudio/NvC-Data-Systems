@@ -1,0 +1,83 @@
+[gd_scene load_steps=11 format=3 uid="uid://dklgxgubuedln"]
+
+[ext_resource type="Texture2D" uid="uid://cwbljxdr7ckys" path="res://screens/start_menus/about_menu/submenus/credits/popup/assets/credits_borders.png" id="1_bptcj"]
+[ext_resource type="Script" uid="uid://cetjjc8hl4gk5" path="res://screens/start_menus/about_menu/submenus/credits/popup/credits.gd" id="1_xlkmu"]
+[ext_resource type="Texture2D" uid="uid://unn8tje1u53b" path="res://screens/start_menus/about_menu/submenus/credits/popup/assets/credits_background.png" id="2_wkbci"]
+[ext_resource type="Texture2D" uid="uid://bl0x5quq0jxa5" path="res://screens/start_menus/about_menu/submenus/credits/popup/assets/scrollbar_background.png" id="3_7gnty"]
+[ext_resource type="Texture2D" uid="uid://brhgvuk0t2tei" path="res://screens/start_menus/about_menu/submenus/credits/popup/assets/scrollbar_handle.png" id="3_wkbci"]
+[ext_resource type="Texture2D" uid="uid://djt6dkqrjvnp" path="res://screens/start_menus/about_menu/submenus/credits/popup/assets/diablo_huma_logo.png" id="5_wwjfx"]
+[ext_resource type="Texture2D" uid="uid://bvl02l1msjmo5" path="res://screens/start_menus/about_menu/submenus/credits/popup/assets/horizontal_separator.png" id="7_fwfva"]
+[ext_resource type="PackedScene" uid="uid://bw02j1qfrxpj2" path="res://screens/start_menus/about_menu/submenus/credits/popup/collaborator_presenters_container/collaborator_presenters_container.tscn" id="8_bad11"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pqfvt"]
+texture = ExtResource("3_wkbci")
+
+[sub_resource type="Theme" id="Theme_7gnty"]
+VScrollBar/styles/grabber = SubResource("StyleBoxTexture_pqfvt")
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xlkmu")
+
+[node name="Sign" type="Control" parent="."]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 401.0
+offset_right = 1835.0
+offset_bottom = 931.0
+
+[node name="BordersTexture" type="TextureRect" parent="Sign"]
+layout_mode = 0
+offset_left = -6.0
+offset_right = 1437.0
+offset_bottom = 939.0
+texture = ExtResource("1_bptcj")
+
+[node name="BackgroundTexture" type="TextureRect" parent="Sign"]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 250.0
+offset_right = 1320.0
+offset_bottom = 917.0
+texture = ExtResource("2_wkbci")
+
+[node name="GrabberBackground" type="TextureRect" parent="Sign"]
+layout_mode = 0
+offset_left = 1277.0
+offset_top = 251.0
+offset_right = 1318.0
+offset_bottom = 909.0
+texture = ExtResource("3_7gnty")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Sign"]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 265.0
+offset_right = 1308.0
+offset_bottom = 912.0
+theme = SubResource("Theme_7gnty")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Sign/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="DiabloHumaLogo" type="TextureRect" parent="Sign/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_wwjfx")
+stretch_mode = 2
+
+[node name="HorizontalSeparator" type="TextureRect" parent="Sign/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("7_fwfva")
+
+[node name="CollaboratorPresentersGrid" parent="Sign/ScrollContainer/VBoxContainer" instance=ExtResource("8_bad11")]
+layout_mode = 2
+
+[node name="HorizontalSeparator2" type="TextureRect" parent="Sign/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("7_fwfva")

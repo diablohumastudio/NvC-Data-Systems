@@ -1,0 +1,206 @@
+[gd_scene load_steps=10 format=3 uid="uid://ci2txb162q4g2"]
+
+[ext_resource type="Texture2D" uid="uid://m7wsmpycolq5" path="res://screens/start_menus/about_menu/submenus/disclaimer/background/assets/st_summer_menu_bg.png" id="1_vncel"]
+[ext_resource type="Texture2D" uid="uid://0bbs7km2g0v1" path="res://screens/start_menus/about_menu/submenus/disclaimer/background/assets/small_dust.PNG" id="3_x4hmu"]
+[ext_resource type="Texture2D" uid="uid://b17qc1i0x83uq" path="res://screens/start_menus/about_menu/submenus/disclaimer/background/assets/big_dust.PNG" id="4_22oyb"]
+[ext_resource type="Texture2D" uid="uid://cajwfblsma4b0" path="res://screens/start_menus/about_menu/submenus/disclaimer/background/assets/wind_particle.png" id="5_tujxx"]
+
+[sub_resource type="Gradient" id="Gradient_6lqvq"]
+offsets = PackedFloat32Array(0, 0.311258, 0.655629, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0.896523, 1, 1, 1, 0.172185)
+
+[sub_resource type="Animation" id="Animation_0rveh"]
+resource_name = "_appear"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WhiteAppearRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.466667), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_nbtok"]
+resource_name = "_level_5_selected"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackgroundImage:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.0075, 1.0075), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WindParticles/WindParticlesLeft:emitting")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BackgroundImage:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.552941, 0.552941, 0.552941, 1), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("WindParticles/WindParticlesLeft:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-92, 1005), Vector2(947.5, 1048)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("WindParticles/WindParticlesRight:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2001, 1005), Vector2(946, 1005)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("WindParticles/WindParticlesRight:emitting")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_m8xhl"]
+resource_name = "_loop"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackgroundImage:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.6, 0.7, 0.8, 1.2, 1.3, 1.5, 2.7, 2.8, 2.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0.995518, 0.981513, 0.901401, 1), Color(1, 1, 1, 1), Color(0.995518, 0.981513, 0.901401, 1), Color(1, 1, 1, 1), Color(0.995518, 0.981513, 0.901401, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0.995518, 0.981513, 0.901401, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w01o4"]
+_data = {
+&"_appear": SubResource("Animation_0rveh"),
+&"_level_5_selected": SubResource("Animation_nbtok"),
+&"_loop": SubResource("Animation_m8xhl")
+}
+
+[node name="BackgroundScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundImage" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_vncel")
+
+[node name="WhiteAppearRect" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0.466667)
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="DustParticles" type="Node2D" parent="."]
+
+[node name="SmallDustParticles" type="CPUParticles2D" parent="DustParticles"]
+position = Vector2(1984, 909)
+amount = 14
+texture = ExtResource("3_x4hmu")
+lifetime = 7.0
+preprocess = 20.0
+emission_shape = 3
+emission_rect_extents = Vector2(1, 60)
+gravity = Vector2(-80, 0)
+angular_velocity_min = 138.8
+angular_velocity_max = 138.8
+
+[node name="MediumDustParticles" type="CPUParticles2D" parent="DustParticles"]
+position = Vector2(1808, 361)
+amount = 12
+texture = ExtResource("4_22oyb")
+lifetime = 9.0
+preprocess = 20.0
+direction = Vector2(-1, 0)
+gravity = Vector2(-70, 0)
+color_ramp = SubResource("Gradient_6lqvq")
+
+[node name="WindParticles" type="Node2D" parent="."]
+
+[node name="WindParticlesLeft" type="CPUParticles2D" parent="WindParticles"]
+position = Vector2(-92, 1005)
+emitting = false
+amount = 14
+texture = ExtResource("5_tujxx")
+lifetime = 0.7
+one_shot = true
+explosiveness = 0.52
+local_coords = true
+direction = Vector2(0, -1)
+gravity = Vector2(0, -700)
+initial_velocity_min = 1000.0
+initial_velocity_max = 1000.0
+
+[node name="WindParticlesRight" type="CPUParticles2D" parent="WindParticles"]
+position = Vector2(2001, 1005)
+emitting = false
+amount = 14
+texture = ExtResource("5_tujxx")
+lifetime = 0.7
+one_shot = true
+explosiveness = 0.52
+local_coords = true
+direction = Vector2(0, -1)
+gravity = Vector2(0, -700)
+initial_velocity_min = 1000.0
+initial_velocity_max = 1000.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_w01o4")
+}
+autoplay = "_appear"

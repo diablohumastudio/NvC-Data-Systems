@@ -1,3 +1,3 @@
 class_name UserProgress extends Resource
 
-@export var ud_levels: Array[UDLevel] 
+@export_storage var ud_levels: Array[UDLevel] 

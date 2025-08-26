@@ -1,3 +1,3 @@
 class_name UserAlliesInventory extends Resource
 
-@export var ud_allies: Array[UDAlly] 
+@export_storage var ud_allies: Array[UDAlly] 

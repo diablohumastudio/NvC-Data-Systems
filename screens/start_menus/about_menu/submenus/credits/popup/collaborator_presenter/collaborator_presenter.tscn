@@ -1,0 +1,68 @@
+[gd_scene load_steps=6 format=3 uid="uid://bsqnw2ullfe4c"]
+
+[ext_resource type="Script" uid="uid://b22lmv262xma0" path="res://screens/start_menus/about_menu/submenus/credits/popup/collaborator_presenter/collaborator_presenter.gd" id="1_jw40v"]
+[ext_resource type="Texture2D" uid="uid://bnyqwquptr441" path="res://screens/start_menus/about_menu/submenus/credits/popup/collaborator_presenter/assets/picture_holder.png" id="2_jw40v"]
+[ext_resource type="FontFile" uid="uid://ns85otisc51h" path="res://global_assets/fonts/Boldstone-Regular.ttf" id="3_rap83"]
+[ext_resource type="FontFile" uid="uid://ddhakhisox2sy" path="res://global_assets/fonts/RedhandNeo-Regular.ttf" id="4_dddn4"]
+[ext_resource type="PackedScene" uid="uid://b577gvgkwwlgj" path="res://screens/start_menus/about_menu/submenus/credits/popup/collaborator_presenter/social_media_buttons/social_media_buttons.tscn" id="5_fwgu8"]
+
+[node name="CollaboratorPresenter" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jw40v")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_right = 564.0
+offset_bottom = 284.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="PhotoHolder" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(155, 157)
+layout_mode = 2
+texture = ExtResource("2_jw40v")
+
+[node name="CollaboratorInfo" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="CollaboratorName" type="Label" parent="VBoxContainer/HBoxContainer/CollaboratorInfo"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.886275, 0.854902, 0.780392, 1)
+theme_override_fonts/font = ExtResource("3_rap83")
+theme_override_font_sizes/font_size = 36
+text = "COLLABORATOR NAME"
+
+[node name="Role" type="Label" parent="VBoxContainer/HBoxContainer/CollaboratorInfo"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.705882, 0.588235, 0.533333, 1)
+theme_override_fonts/font = ExtResource("3_rap83")
+theme_override_font_sizes/font_size = 26
+text = "DIRECTOR AND PRODUCER"
+
+[node name="Description" type="Label" parent="VBoxContainer/HBoxContainer/CollaboratorInfo"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(377, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.709804, 0.545098, 0.470588, 1)
+theme_override_fonts/font = ExtResource("4_dddn4")
+theme_override_font_sizes/font_size = 22
+text = "LOREM IPSUM DOLOR SIT AMET,
+CONSECTETUR ADIPISCING ELIT, SED DO
+EIUSMOD TEMPOR INCIDIDUNT UT
+LABORE ET DOLORE MAGNA ALIQUA"
+horizontal_alignment = 3
+autowrap_mode = 3
+
+[node name="SocialMediaButtons" parent="VBoxContainer" instance=ExtResource("5_fwgu8")]
+unique_name_in_owner = true
+layout_mode = 2

@@ -6,7 +6,7 @@ func _on_pressed() -> void:
 	_validate_children()
 	if !GSS.removing_ally_state and !is_ocupied() and GSS.ally_to_place:
 		_add_ally()
-		GSS._ally_just_placed.emit(GSS.ally_to_place)
+		GSS.ally_just_placed.emit(GSS.ally_to_place)
 		GSS.ally_to_place = null
 
 func is_ocupied() -> bool:

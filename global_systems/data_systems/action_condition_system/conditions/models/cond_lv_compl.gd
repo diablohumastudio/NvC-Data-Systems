@@ -8,11 +8,9 @@ func _init() -> void:
 func evaluate(action: Action): 
 	if !action:
 		push_error("Action MUST NOT be null when calling evaluate in object type CondLvCompl")
-		print_stack()
 		return
 	if action.payload is not PayLvCompl:
 		push_error("Action.payload MUST be of type PayLvCompl when calling evaluate in object type CondLvCompl")
-		print_stack()
 		return
 	
 	var payload: PayLvCompl = action.payload
