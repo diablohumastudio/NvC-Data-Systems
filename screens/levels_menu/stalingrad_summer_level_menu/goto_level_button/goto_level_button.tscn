@@ -476,9 +476,10 @@ texture = ExtResource("12_687ru")
 offset = Vector2(22, -9)
 
 [node name="Icon" type="AnimatedSprite2D" parent="Textures"]
+unique_name_in_owner = true
 position = Vector2(0, -75)
 sprite_frames = SubResource("SpriteFrames_f1d3t")
-animation = &"unlocked"
+animation = &"uncompleted"
 offset = Vector2(1.5, 0)
 
 [node name="IconLight" type="Sprite2D" parent="Textures"]

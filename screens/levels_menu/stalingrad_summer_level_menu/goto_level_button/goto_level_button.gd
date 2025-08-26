@@ -1,16 +1,7 @@
 @tool
 class_name GotoLevelButton extends TextureButton
 
-@export var level: LevelData :set = set_level
-
-func set_level(new_value:LevelData) -> void:
-	level = new_value
-	if Engine.is_editor_hint(): 
-		set_state_visuals()
-
-func _ready() -> void:
-	pass
-	#set_state_visuals()
+@export var level: LevelData 
 
 func set_state_visuals():
 	if !level: return
@@ -18,12 +9,11 @@ func set_state_visuals():
 	%NameLabel.text = level.level_name
 	print(ud_level.completed)
 	if ud_level.completed:
-		print("completed")
-		modulate = Color.AQUA
+		%Icon.animation = "completed"
 	if ud_level.locked:
-		disabled = true
-		modulate = Color.CADET_BLUE
+		%Icon.animation = "locked"
 	elif !ud_level.completed and !ud_level.locked:
+		%Icon.animation = "unlocked"
 		disabled = false
 		modulate = Color.WHITE
 
