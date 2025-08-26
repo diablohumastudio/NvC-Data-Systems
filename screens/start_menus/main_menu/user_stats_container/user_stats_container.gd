@@ -29,10 +29,16 @@ func _set_user_balance(new_value:int):
 
 func _on_username_container_pressed():
 	if _stats_opened == false:
+		show_items()
+	elif _stats_opened == true:
+		hide_items()
+
+func show_items():
 		$Arrow.visible = false
 		$AnimationPlayer.play("_drop_down")
 		_stats_opened = true
-	elif _stats_opened == true:
+
+func hide_items():
 		$AnimationPlayer.play("_close")
 		_stats_opened = false
 		$Arrow.visible = true
