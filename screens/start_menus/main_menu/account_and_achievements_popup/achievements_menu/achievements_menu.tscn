@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://dts0s5jhqb7pk"]
+[gd_scene load_steps=12 format=3 uid="uid://dts0s5jhqb7pk"]
 
+[ext_resource type="Script" uid="uid://b443cv0hiyki4" path="res://screens/start_menus/main_menu/account_and_achievements_popup/achievements_menu/achievements_menu.gd" id="1_mdsjb"]
 [ext_resource type="Texture2D" uid="uid://c08r8s55i2l6i" path="res://screens/start_menus/main_menu/account_and_achievements_popup/achievements_menu/assets/line.png" id="1_x3v50"]
 [ext_resource type="Texture2D" uid="uid://bnyxltg6qiq4o" path="res://screens/start_menus/main_menu/account_and_achievements_popup/achievements_menu/assets/scrollbar_handle.png" id="2_mdsjb"]
 [ext_resource type="Texture2D" uid="uid://deae246agnvj1" path="res://screens/start_menus/main_menu/account_and_achievements_popup/achievements_menu/assets/scrollbar_handle_selected.png" id="3_k5hno"]
 [ext_resource type="Texture2D" uid="uid://31w8eitc4pf2" path="res://screens/start_menus/main_menu/account_and_achievements_popup/achievements_menu/assets/scrollbar_background.png" id="4_mh8r6"]
-[ext_resource type="PackedScene" uid="uid://cyy4hbmuetvi3" path="res://screens/start_menus/main_menu/account_and_achievements_popup/achievements_menu/achievements/achievement.tscn" id="5_kcqkh"]
+[ext_resource type="PackedScene" uid="uid://cyy4hbmuetvi3" path="res://screens/start_menus/main_menu/account_and_achievements_popup/achievements_menu/achievement_presenter/achievement_presenter.tscn" id="5_kcqkh"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xfnua"]
 texture = ExtResource("2_mdsjb")
@@ -33,6 +34,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_mdsjb")
 
 [node name="Line" type="TextureRect" parent="."]
 layout_mode = 0
@@ -50,38 +52,39 @@ offset_right = 1589.0
 offset_bottom = 971.0
 theme = SubResource("Theme_lr7ct")
 
-[node name="AchievementContainer" type="GridContainer" parent="AchievementScrollContainer"]
+[node name="AchievementsContainer" type="GridContainer" parent="AchievementScrollContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/h_separation = 45
 theme_override_constants/v_separation = 15
 columns = 2
 
-[node name="Achievement" parent="AchievementScrollContainer/AchievementContainer" instance=ExtResource("5_kcqkh")]
+[node name="Achievement" parent="AchievementScrollContainer/AchievementsContainer" instance=ExtResource("5_kcqkh")]
 layout_mode = 2
 
-[node name="Achievement2" parent="AchievementScrollContainer/AchievementContainer" instance=ExtResource("5_kcqkh")]
+[node name="Achievement2" parent="AchievementScrollContainer/AchievementsContainer" instance=ExtResource("5_kcqkh")]
 layout_mode = 2
 
-[node name="Achievement3" parent="AchievementScrollContainer/AchievementContainer" instance=ExtResource("5_kcqkh")]
+[node name="Achievement3" parent="AchievementScrollContainer/AchievementsContainer" instance=ExtResource("5_kcqkh")]
 layout_mode = 2
 
-[node name="Achievement4" parent="AchievementScrollContainer/AchievementContainer" instance=ExtResource("5_kcqkh")]
+[node name="Achievement4" parent="AchievementScrollContainer/AchievementsContainer" instance=ExtResource("5_kcqkh")]
 layout_mode = 2
 
-[node name="Achievement5" parent="AchievementScrollContainer/AchievementContainer" instance=ExtResource("5_kcqkh")]
+[node name="Achievement5" parent="AchievementScrollContainer/AchievementsContainer" instance=ExtResource("5_kcqkh")]
 layout_mode = 2
 
-[node name="Achievement6" parent="AchievementScrollContainer/AchievementContainer" instance=ExtResource("5_kcqkh")]
+[node name="Achievement6" parent="AchievementScrollContainer/AchievementsContainer" instance=ExtResource("5_kcqkh")]
 layout_mode = 2
 
-[node name="Achievement7" parent="AchievementScrollContainer/AchievementContainer" instance=ExtResource("5_kcqkh")]
+[node name="Achievement7" parent="AchievementScrollContainer/AchievementsContainer" instance=ExtResource("5_kcqkh")]
 layout_mode = 2
 
-[node name="Achievement8" parent="AchievementScrollContainer/AchievementContainer" instance=ExtResource("5_kcqkh")]
+[node name="Achievement8" parent="AchievementScrollContainer/AchievementsContainer" instance=ExtResource("5_kcqkh")]
 layout_mode = 2
 
-[node name="Achievement9" parent="AchievementScrollContainer/AchievementContainer" instance=ExtResource("5_kcqkh")]
+[node name="Achievement9" parent="AchievementScrollContainer/AchievementsContainer" instance=ExtResource("5_kcqkh")]
 layout_mode = 2
 
-[node name="Achievement10" parent="AchievementScrollContainer/AchievementContainer" instance=ExtResource("5_kcqkh")]
+[node name="Achievement10" parent="AchievementScrollContainer/AchievementsContainer" instance=ExtResource("5_kcqkh")]
 layout_mode = 2
