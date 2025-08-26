@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cch6b4h5wk2jy"]
 
-[ext_resource type="Script" uid="uid://doltbn16js28r" path="res://screens/original_test_project_scenes/game/components/terrain_grid/terrain_grid.gd" id="1_ppx26"]
+[ext_resource type="Script" uid="uid://doltbn16js28r" path="res://screens/game/components/terrain_grid/terrain_grid.gd" id="1_ppx26"]
 
 [node name="TerrainGrid" type="CenterContainer"]
 offset_left = 28.0

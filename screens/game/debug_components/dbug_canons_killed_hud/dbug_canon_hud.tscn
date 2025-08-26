@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bk5r5vrhhaf2x"]
 
-[ext_resource type="Script" uid="uid://d2wnmtq30fo2x" path="res://screens/original_test_project_scenes/game/debug_components/dbug_canons_killed_hud/dbug_canon_hud.gd" id="1_dhegc"]
+[ext_resource type="Script" uid="uid://d2wnmtq30fo2x" path="res://screens/game/debug_components/dbug_canons_killed_hud/dbug_canon_hud.gd" id="1_dhegc"]
 
 [node name="DbugCanonHUD" type="VBoxContainer"]
 offset_left = 1168.0

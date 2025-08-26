@@ -434,7 +434,7 @@ texture_hover = ExtResource("11_i71b3")
 
 [node name="SLSBank" type="Node" parent="."]
 script = ExtResource("23_gqh12")
-scenes_paths = Array[String](["res://screens/levels_menu/worlds_map_menu/worlds_map_menu.tscn"])
+scenes_paths = Array[String](["res://screens/game/game.tscn", "res://screens/levels_menu/worlds_map_menu/worlds_map_menu.tscn", "res://screens/start_menus/main_menu/main_menu.tscn"])
 metadata/_custom_type_script = "uid://cc5cx846obsu8"
 
 [connection signal="pressed" from="GotoStalingradWinterCampButton" to="." method="_on_goto_stalingrad_summer_camp_button_pressed"]

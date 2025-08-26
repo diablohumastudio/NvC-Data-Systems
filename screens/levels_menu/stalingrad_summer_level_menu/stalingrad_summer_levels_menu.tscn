@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://bnl38rkw31r66"]
+[gd_scene load_steps=47 format=3 uid="uid://bnl38rkw31r66"]
 
 [ext_resource type="Script" uid="uid://clhlf16br12ye" path="res://screens/levels_menu/stalingrad_summer_level_menu/stalingrad_summer_levels_menu.gd" id="1_wuwyd"]
 [ext_resource type="Texture2D" uid="uid://c30st7u56etvb" path="res://screens/levels_menu/stalingrad_summer_level_menu/assets/level_selector_bg.png" id="2_e1seu"]
@@ -36,6 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://cr2xqkxthi6d7" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0017.png" id="28_61d74"]
 [ext_resource type="Texture2D" uid="uid://bacpqr8s2bf1p" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0018.png" id="29_wjcym"]
 [ext_resource type="Texture2D" uid="uid://cewoxn6t03ges" path="res://screens/levels_menu/stalingrad_summer_camp/assets/top_trees.png" id="30_mus46"]
+[ext_resource type="Resource" uid="uid://kqa382ik0yuh" path="res://data/levels/data/level_1.tres" id="36_5lyy3"]
 [ext_resource type="Texture2D" uid="uid://br53du61bbj6t" path="res://screens/levels_menu/stalingrad_summer_level_menu/assets/base_button.png" id="42_j1ous"]
 [ext_resource type="Texture2D" uid="uid://do6ujev7116a" path="res://screens/levels_menu/stalingrad_summer_level_menu/assets/base_button_selected.png" id="43_apmvp"]
 
@@ -977,6 +978,21 @@ texture = ExtResource("4_v8a2b")
 position = Vector2(240, 46)
 texture = ExtResource("5_0c37s")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BlackBorders" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(960, 540)
+texture = ExtResource("23_fgca6")
+
+[node name="GoBackButton" type="TextureButton" parent="CanvasLayer"]
+offset_left = 64.0
+offset_top = 899.0
+offset_right = 240.0
+offset_bottom = 1020.0
+texture_normal = ExtResource("10_mfed6")
+texture_pressed = ExtResource("11_dsxqw")
+texture_hover = ExtResource("11_dsxqw")
+
 [node name="GotoLevelButtons" type="Control" parent="."]
 unique_name_in_owner = true
 layout_mode = 3
@@ -992,6 +1008,7 @@ offset_left = -962.5
 offset_top = -205.0
 offset_right = -766.5
 offset_bottom = -76.0
+level = ExtResource("36_5lyy3")
 
 [node name="GotoLevelButton2" parent="GotoLevelButtons" instance=ExtResource("12_a6n0u")]
 layout_mode = 0
@@ -1074,21 +1091,6 @@ texture_pressed = ExtResource("43_apmvp")
 texture_hover = ExtResource("43_apmvp")
 texture_focused = ExtResource("43_apmvp")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="BlackBorders" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(960, 540)
-texture = ExtResource("23_fgca6")
-
-[node name="GoBackButton" type="TextureButton" parent="CanvasLayer"]
-offset_left = 64.0
-offset_top = 899.0
-offset_right = 240.0
-offset_bottom = 1020.0
-texture_normal = ExtResource("10_mfed6")
-texture_pressed = ExtResource("11_dsxqw")
-texture_hover = ExtResource("11_dsxqw")
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1020, 377)
 ignore_rotation = false
@@ -1108,8 +1110,8 @@ autoplay = "start"
 
 [node name="SLSBank" type="Node" parent="."]
 script = ExtResource("27_tu45k")
-scenes_paths = Array[String](["res://screens/levels_menu/worlds_map_menu/worlds_map_menu.tscn", "res://screens/levels_menu/stalingrad_summer_camp/stalingrad_summer_camp.tscn"])
+scenes_paths = Array[String](["res://screens/game/game.tscn", "res://screens/levels_menu/worlds_map_menu/worlds_map_menu.tscn", "res://screens/levels_menu/stalingrad_summer_camp/stalingrad_summer_camp.tscn", "res://screens/start_menus/main_menu/main_menu.tscn"])
 metadata/_custom_type_script = "uid://cc5cx846obsu8"
 
-[connection signal="pressed" from="GotoStalingradSummerCampButton" to="." method="_on_goto_stalingrad_summer_camp_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/GoBackButton" to="." method="_on_go_back_button_pressed"]
+[connection signal="pressed" from="GotoStalingradSummerCampButton" to="." method="_on_goto_stalingrad_summer_camp_button_pressed"]

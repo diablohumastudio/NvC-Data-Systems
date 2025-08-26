@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://d3ht2nmc2bh8o"]
 
-[ext_resource type="Script" uid="uid://dkddcq31gwpu3" path="res://screens/original_test_project_scenes/game/components/allies_selector/ally_selector_card/ally_selector_card.gd" id="1_0o2rt"]
+[ext_resource type="Script" uid="uid://dkddcq31gwpu3" path="res://screens/game/components/allies_selector/ally_selector_card/ally_selector_card.gd" id="1_0o2rt"]
 [ext_resource type="Texture2D" uid="uid://dglhyp43egvd6" path="res://icon.svg" id="1_aplyu"]
-[ext_resource type="ButtonGroup" uid="uid://tyopysg35h4n" path="res://screens/original_test_project_scenes/game/components/allies_selector/allies_selector_button_group.tres" id="2_ph11k"]
+[ext_resource type="ButtonGroup" uid="uid://tyopysg35h4n" path="res://screens/game/components/allies_selector/allies_selector_button_group.tres" id="2_ph11k"]
 
 [sub_resource type="Animation" id="Animation_eo1fq"]
 length = 0.001

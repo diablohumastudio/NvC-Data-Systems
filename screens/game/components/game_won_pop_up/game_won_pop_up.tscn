@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://3p1rfa3f7you"]
 
-[ext_resource type="Script" uid="uid://fqq86pqcfwot" path="res://screens/original_test_project_scenes/game/components/game_won_pop_up/game_won_pop_up.gd" id="1_tbsam"]
+[ext_resource type="Script" uid="uid://fqq86pqcfwot" path="res://screens/game/components/game_won_pop_up/game_won_pop_up.gd" id="1_tbsam"]
 
 [sub_resource type="Animation" id="Animation_18b3j"]
 length = 0.001

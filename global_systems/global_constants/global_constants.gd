@@ -12,9 +12,9 @@ const SCREENS_UIDS: Dictionary = {
 	"STALINGRAD_SUMMER_CAMP":"uid://ctww27adn5p47",
 	"STALINGRAD_WINTER_LEVELS_MENU":"uid://gci4nehonton",
 	
+	"GAME": "uid://c2b4jldseu5vs",
 	
 	"MENU": "uid://iinlpvu7gc2e",
-	"GAME": "uid://c2b4jldseu5vs",
 	"ACHIEVEMENTS": "uid://bbsi2yvced0xh",
 	"WELCOME_MENU": "uid://iusscgq60rcy",
 	"LOGIN_REGISTER_MENU": "uid://cxxmq32l3eqdc",

@@ -6,18 +6,17 @@ class_name GotoLevelButton extends TextureButton
 func set_level(new_value:LevelData) -> void:
 	level = new_value
 	if !level: return
-	disabled = level.progress.locked
+	disabled = level.get_saved_ud_level().locked
 
 func _ready() -> void:
 	if !level: return
 	%NameLabel.text = level.level_name
-	disabled = level.progress.locked
+	disabled = level.get_saved_ud_level().locked
 
 func _on_pressed() -> void:
-	var games_screen: PackedScene = load("")
-	games_screen.level = level
-	SMS.goto_scene(games_screen)
-
+	GSS.level = level
+	GSS.reset_values()
+	SMS.change_scene(load(GC.SCREENS_UIDS.GAME))
 
 func _on_focus_entered() -> void:
 	$AnimationPlayer.play("selected")
