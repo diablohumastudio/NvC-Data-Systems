@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="NvC Data Systems"
-run/main_scene="uid://iusscgq60rcy"
+run/main_scene="uid://cflg2ypu25js2"
 config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/bg_color=Color(0.0980392, 0.0666667, 0.0666667, 1)
 boot_splash/image="uid://mhtg4423uwra"

@@ -38,6 +38,7 @@ func _on_go_to_worlds_map_menu_button_pressed() -> void:
 func _on_go_to_about_menu_button_pressed() -> void:
 	await get_tree().create_timer(0.2).timeout #0.2 is half of start_player "start_pressed" animation conected in button script
 	AudioSystem.post_event(AK.EVENTS.SET_MUSIC_SC_WORLDS_MAP_MENU)
+	AudioSystem.post_event(AK.EVENTS.PLAY_BUTTON_MENU_CLICK2)
 	var games_menu: PackedScene = SLS.get_scene(GC.SCREENS_UIDS.ABOUT_MENU)
 	%MenusTransitionAnimationPlayer.callv("play", ["goto_about_menu"])
 	await %MenusTransitionAnimationPlayer.animation_finished

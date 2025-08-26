@@ -2,7 +2,6 @@ class_name UserStatsContainer extends Control
 
 var user_name : String : set = _set_user_name
 var user_balance : int : set = _set_user_balance
-#var _player_user_data : PlayerUserData = UserDataManager.user_data.player_user_data
 var _stats_opened : bool 
 
 @onready var _balance_label : Label = $"%BalanceLabel"
@@ -12,9 +11,9 @@ var _stats_opened : bool
 
 func _ready():
 	#Set user stats container
-	#user_name = _player_user_data.player_name
-	#user_balance = _player_user_data.player_balance
-	#_set_user_balance(user_balance)
+	user_name = UDS.get_property(UDS.PROPERTIES.USER_NAME)
+	user_balance = UDS.current_user_data.player_balance
+	_set_user_balance(user_balance)
 	pass
 
 func _set_user_name(new_value:String):

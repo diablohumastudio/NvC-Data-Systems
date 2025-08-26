@@ -17,6 +17,7 @@
 script/source = "extends TextureButton
 
 func _on_pressed() -> void:
+	AudioSystem.post_event(AK.EVENTS.PLAY_GO_BACK)
 	%AnimationPlayer.play(\"go_back_pressed\")
 "
 

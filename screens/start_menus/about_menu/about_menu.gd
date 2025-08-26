@@ -11,6 +11,8 @@ func _on_submenu_selector_submenu_selected(submenu_background_scene:PackedScene,
 	%PopupPresenter.display_popup_scene(submenu_popup_scene)
 
 func _on_go_back_button_pressed():
+	AudioSystem.post_event(AK.EVENTS.SET_MUSIC_SC_MAIN_MENU)
+	AudioSystem.post_event(AK.EVENTS.PLAY_GO_BACK)
 	%AnimationPlayer.play("go_back_selected")
 	var main_menu: PackedScene = SLS.get_scene(GC.SCREENS_UIDS.MAIN_MENU)
 	SMS.change_scene(main_menu, {"_entering_from_about_menu": true})

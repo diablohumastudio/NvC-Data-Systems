@@ -21,8 +21,7 @@ func replace_scenes(scene_paths: Array[String]) -> void:
 
 func add_scenes(scene_paths: Array[String]) -> void:
 	for path in scene_paths:
-		if await add_scene(path):
-			scene_loaded.emit(path)
+		await add_scene(path)
 	all_scenes_loaded.emit()
 
 func add_scene(scene_path: String) -> PackedScene:
@@ -31,7 +30,7 @@ func add_scene(scene_path: String) -> PackedScene:
 	
 	if not _is_path_valid(scene_path): return
 	if _scenes.has(scene_uid):
-		push_warning("Scene already loaded.")
+		scene_loaded.emit(scene_path)
 		return _scenes[scene_uid]
 
 	ResourceLoader.load_threaded_request(scene_path)
@@ -41,6 +40,7 @@ func add_scene(scene_path: String) -> PackedScene:
 	var loaded_packed_scene : PackedScene = ResourceLoader.load_threaded_get(scene_path)
 	
 	_scenes[scene_uid] = loaded_packed_scene
+	scene_loaded.emit(scene_path)
 	return loaded_packed_scene
 
 func _is_path_valid(scene_path: String) -> bool:
