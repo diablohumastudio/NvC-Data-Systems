@@ -26,7 +26,6 @@ VScrollBar/styles/grabber_pressed = SubResource("StyleBoxTexture_cx52j")
 VScrollBar/styles/scroll = SubResource("StyleBoxTexture_lr7ct")
 
 [node name="AchievementsMenu" type="Control"]
-visible = false
 clip_children = 1
 layout_mode = 3
 anchors_preset = 15
@@ -35,8 +34,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Line" type="Sprite2D" parent="."]
-position = Vector2(951, 278)
+[node name="Line" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 424.0
+offset_top = 272.0
+offset_right = 1548.0
+offset_bottom = 286.0
 texture = ExtResource("1_x3v50")
 
 [node name="AchievementScrollContainer" type="ScrollContainer" parent="."]

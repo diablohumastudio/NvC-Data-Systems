@@ -1,4 +1,4 @@
-[gd_scene load_steps=90 format=3 uid="uid://cflg2ypu25js2"]
+[gd_scene load_steps=91 format=3 uid="uid://cflg2ypu25js2"]
 
 [ext_resource type="Script" uid="uid://xbhqiu414occ" path="res://screens/start_menus/main_menu/main_menu.gd" id="1_tf8ke"]
 [ext_resource type="Texture2D" uid="uid://xfv5l6akgc8p" path="res://screens/start_menus/main_menu/assets/main_menu_bg.png" id="2_0cygk"]
@@ -49,6 +49,7 @@
 [ext_resource type="PackedScene" uid="uid://bw61voyxm3wti" path="res://screens/start_menus/main_menu/go_to_settings_menu_button/go_to_settings_menu_button.tscn" id="43_jom10"]
 [ext_resource type="PackedScene" uid="uid://d543jno4noka" path="res://screens/start_menus/main_menu/go_to_games_menu_button/go_to_games_menu_button.tscn" id="44_kfmfx"]
 [ext_resource type="Texture2D" uid="uid://cqrrt3vy3xsmn" path="res://screens/start_menus/main_menu/assets/about_button_selected.png" id="50_53gr8"]
+[ext_resource type="PackedScene" uid="uid://bem1470lq7oa4" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_and_achievements_popup.tscn" id="51_ou335"]
 [ext_resource type="Script" uid="uid://cc5cx846obsu8" path="res://global_systems/scene_loading_system/sls_scenes_bank/sls_scenes_bank.gd" id="52_uw2wa"]
 [ext_resource type="Texture2D" uid="uid://v88wr20krdem" path="res://screens/levels_menu/worlds_map_menu/assets/world_maps_menu_borders.png" id="53_53gr8"]
 [ext_resource type="Texture2D" uid="uid://dx315ovvalm7a" path="res://screens/start_menus/main_menu/assets/about_button.png" id="53_ou335"]
@@ -1879,10 +1880,14 @@ offset_right = 1706.0
 offset_bottom = 53.0
 focus_mode = 0
 
+[node name="UserBalanceContainer" parent="UserStatsContainer/UserStats" index="1"]
+visible = true
+
 [node name="SingleGoldCoin" parent="UserStatsContainer/UserStats/UserBalanceContainer" index="1"]
 texture = null
 
 [node name="UsernameContainer" parent="UserStatsContainer/UserStats" index="2"]
+visible = true
 focus_neighbor_left = NodePath("../../../GotoButtons/GoToSettingsMenuButton")
 
 [node name="UserNameLabel" parent="UserStatsContainer/UserStats/UsernameContainer" index="0"]
@@ -1896,7 +1901,9 @@ offset_bottom = 40.0
 [node name="GoToSettingsMenuButton" parent="GotoButtons" instance=ExtResource("43_jom10")]
 unique_name_in_owner = true
 layout_mode = 0
+offset_left = 0.0
 offset_top = 478.0
+offset_right = 630.0
 offset_bottom = 1078.0
 scale = Vector2(1, 1)
 focus_neighbor_left = NodePath("../GoToWorldsMapMenuButton")
@@ -1935,6 +1942,11 @@ texture_normal = ExtResource("53_ou335")
 texture_pressed = ExtResource("50_53gr8")
 texture_hover = ExtResource("50_53gr8")
 texture_focused = ExtResource("50_53gr8")
+
+[node name="AccountAndAchievementsPopup" parent="." instance=ExtResource("51_ou335")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
 
 [node name="ExitPopup" parent="." instance=ExtResource("10_gotav")]
 unique_name_in_owner = true
@@ -1976,6 +1988,7 @@ metadata/_custom_type_script = "uid://cc5cx846obsu8"
 [connection signal="focus_entered" from="BackgroundAnimation/AboutMenuItems/PopupSelector/PopupSelectorButtons/DisclaimerPopupBtn2" to="BackgroundAnimation/AboutMenuItems/PopupSelector/PopupSelectorButtons/DisclaimerPopupBtn2" method="_on_focus_entered"]
 [connection signal="focus_exited" from="BackgroundAnimation/AboutMenuItems/PopupSelector/PopupSelectorButtons/DisclaimerPopupBtn2" to="BackgroundAnimation/AboutMenuItems/PopupSelector/PopupSelectorButtons/DisclaimerPopupBtn2" method="_on_focus_exited"]
 [connection signal="pressed" from="BackgroundAnimation/AboutMenuItems/GoBackButton" to="BackgroundAnimation/AboutMenuItems" method="_on_go_back_button_pressed"]
+[connection signal="show_account_popup_btn_pressed" from="UserStatsContainer" to="." method="_on_user_stats_container_show_account_popup_btn_pressed"]
 [connection signal="pressed" from="GotoButtons/GoToSettingsMenuButton" to="." method="_on_go_to_settings_menu_button_pressed"]
 [connection signal="pressed" from="GotoButtons/GoToWorldsMapMenuButton" to="." method="_on_go_to_worlds_map_menu_button_pressed"]
 [connection signal="pressed" from="GotoButtons/GoToMarketButton" to="." method="_on_go_to_market_button_pressed"]

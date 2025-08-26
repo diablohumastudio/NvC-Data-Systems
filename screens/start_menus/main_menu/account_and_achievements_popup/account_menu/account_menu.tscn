@@ -17,7 +17,7 @@
 [ext_resource type="FontFile" uid="uid://ns85otisc51h" path="res://global_assets/fonts/Boldstone-Regular.ttf" id="15_ksvcc"]
 [ext_resource type="Texture2D" uid="uid://du3tlfa27nbjd" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/assets/plus_button.png" id="16_lniqm"]
 [ext_resource type="FontFile" uid="uid://b4nmgmlb4xi24" path="res://screens/initial_screens/splash_screen_2/assets/EdgeDisplay-Regular.otf" id="17_srait"]
-[ext_resource type="FontFile" uid="uid://3iv2fk2whit2" path="res://global_assets/fonts/Molot.otf" id="18_i1n8u"]
+[ext_resource type="FontFile" uid="uid://c037te0jknb01" path="res://global_assets/fonts/Molot.otf" id="18_i1n8u"]
 
 [node name="AccountMenu" type="Control"]
 layout_mode = 3
@@ -99,6 +99,7 @@ position = Vector2(456, 39)
 texture = ExtResource("14_yl4o3")
 
 [node name="SlotLabel" type="Label" parent="SlotButton1"]
+layout_mode = 0
 offset_left = 21.0
 offset_top = 19.0
 offset_right = 213.0
@@ -124,6 +125,7 @@ position = Vector2(456, 39)
 texture = ExtResource("16_lniqm")
 
 [node name="SlotLabel" type="Label" parent="SlotButton2"]
+layout_mode = 0
 offset_left = 21.0
 offset_top = 19.0
 offset_right = 213.0
@@ -149,6 +151,7 @@ position = Vector2(456, 39)
 texture = ExtResource("16_lniqm")
 
 [node name="SlotLabel" type="Label" parent="SlotButton3"]
+layout_mode = 0
 offset_left = 21.0
 offset_top = 19.0
 offset_right = 213.0

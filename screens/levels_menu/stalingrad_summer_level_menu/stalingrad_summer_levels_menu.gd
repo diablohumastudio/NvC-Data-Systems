@@ -5,6 +5,12 @@ var entering_from_stalingrad_summer_camp: bool = false
 func _ready() -> void:
 	if entering_from_stalingrad_summer_camp:
 		%GotoCampAnimationPlayer.play("goto_stalingrad_summer_camp", -1, -1, true)
+		%GotoCampAnimationPlayer.animation_finished.connect(_set_goto_levels_initial_states)
+	%InitialAnimationPlayer.animation_finished.connect(_set_goto_levels_initial_states)
+
+func _set_goto_levels_initial_states(_animation_name: String):
+	for button: GotoLevelButton in %GotoLevelButtons.get_children():
+		button.set_state_visuals()
 
 func _on_go_back_button_pressed() -> void:
 	AudioSystem.post_event(AK.EVENTS.PLAY_GO_BACK)

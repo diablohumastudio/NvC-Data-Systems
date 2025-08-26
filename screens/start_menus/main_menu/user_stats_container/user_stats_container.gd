@@ -1,5 +1,7 @@
 class_name UserStatsContainer extends Control
 
+signal show_account_popup_btn_pressed
+
 var user_name : String : set = _set_user_name
 var user_balance : int : set = _set_user_balance
 var _stats_opened : bool 
@@ -49,7 +51,9 @@ func _on_username_container_focus_entered():
 		$Arrow.visible = true
 	$Arrow/AnimationPlayer.play("_appear")
 	$Arrow/AnimationPlayer.queue("_bounce")
-	
+
 func _on_username_container_focus_exited():
 	$Arrow/AnimationPlayer.play_backwards("_appear")
-	
+
+func _on_show_account_popup_btn_pressed() -> void:
+	show_account_popup_btn_pressed.emit()

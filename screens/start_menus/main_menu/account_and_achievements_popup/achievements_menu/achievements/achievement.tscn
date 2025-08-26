@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dq7iilo7wvkm2" path="res://global_objects/achievement_achieved_banner/assets/line.png" id="1_7bxxk"]
 [ext_resource type="Texture2D" uid="uid://nutvxu0atfkw" path="res://global_objects/achievement_achieved_banner/assets/achievement_icon.png" id="2_p4f4m"]
 [ext_resource type="FontFile" uid="uid://ns85otisc51h" path="res://global_assets/fonts/Boldstone-Regular.ttf" id="3_g3gqo"]
-[ext_resource type="FontFile" uid="uid://c36g3clh0rwyk" path="res://global_assets/fonts/RedhandNeo-Regular.ttf" id="4_dxu32"]
+[ext_resource type="FontFile" uid="uid://ddhakhisox2sy" path="res://global_assets/fonts/RedhandNeo-Regular.ttf" id="4_dxu32"]
 [ext_resource type="Texture2D" uid="uid://rtvjgpll5ih6" path="res://screens/start_menus/main_menu/account_and_achievements_popup/achievements_menu/assets/progress_icon_bg.png" id="5_7bswf"]
 [ext_resource type="Texture2D" uid="uid://epy54cyerp6k" path="res://screens/start_menus/main_menu/account_and_achievements_popup/achievements_menu/assets/progress_icon_top.png" id="6_o0mci"]
 [ext_resource type="Texture2D" uid="uid://djf0xow16451y" path="res://screens/start_menus/main_menu/account_and_achievements_popup/achievements_menu/assets/progress_icon_progress.png" id="7_g0tmd"]
@@ -22,6 +22,7 @@ position = Vector2(76, 76.5)
 texture = ExtResource("2_p4f4m")
 
 [node name="NameLabel" type="Label" parent="."]
+layout_mode = 0
 offset_left = 174.0
 offset_top = -1.0
 offset_right = 525.0
@@ -32,6 +33,7 @@ theme_override_font_sizes/font_size = 48
 text = "achievement name"
 
 [node name="DescriptionLabel" type="Label" parent="."]
+layout_mode = 0
 offset_left = 173.5
 offset_top = 59.0
 offset_right = 547.5

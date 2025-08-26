@@ -56,3 +56,6 @@ func handle_mobile_go_back():
 
 func _on_exit_popup_hidden():
 	%InputControl.enable()
+
+func _on_user_stats_container_show_account_popup_btn_pressed() -> void:
+	%AccountAndAchievementsPopup.appear()

@@ -12,8 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://b6pbkkdjk1f37" path="res://screens/start_menus/main_menu/account_and_achievements_popup/assets/account_button_hover.png" id="6_ffm7q"]
 [ext_resource type="Texture2D" uid="uid://dm32oaiyvgg23" path="res://screens/start_menus/main_menu/account_and_achievements_popup/assets/achievements_button_pressed.png" id="8_gsicq"]
 [ext_resource type="Texture2D" uid="uid://djps5bmv1lggd" path="res://screens/start_menus/main_menu/account_and_achievements_popup/assets/achievements_button_hover.png" id="9_4pnot"]
-[ext_resource type="Texture2D" uid="uid://dsx4ykwqjx1x0" path="res://screens/original_test_project_scenes/allies_market/barracks_popup/assets/x_button.png" id="30_xfnua"]
-[ext_resource type="Texture2D" uid="uid://th5h8fc336js" path="res://screens/original_test_project_scenes/allies_market/barracks_popup/assets/x_button_selected.png" id="31_kxbyf"]
+[ext_resource type="Texture2D" uid="uid://dsx4ykwqjx1x0" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/x_button.png" id="30_xfnua"]
+[ext_resource type="Texture2D" uid="uid://th5h8fc336js" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/x_button_selected.png" id="31_kxbyf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r2ocr"]
 shader = ExtResource("2_efii4")
@@ -391,6 +391,12 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0.12, 0.0516, 0.0516, 1)
 
+[node name="BlackBGBtn" type="TextureButton" parent="BlackBG"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
 [node name="Background" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_r2ocr")
 position = Vector2(963, 46)
@@ -409,6 +415,7 @@ grow_vertical = 2
 layout_mode = 1
 
 [node name="AchievementsMenu" parent="MenuContainer" instance=ExtResource("4_efii4")]
+visible = false
 layout_mode = 1
 
 [node name="Borders" type="Sprite2D" parent="."]
@@ -454,9 +461,12 @@ texture_hover = ExtResource("31_kxbyf")
 texture_focused = ExtResource("31_kxbyf")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
 libraries = {
 &"": SubResource("AnimationLibrary_efii4")
 }
 
+[connection signal="pressed" from="BlackBG/BlackBGBtn" to="." method="_on_close_button_pressed"]
 [connection signal="pressed" from="AccountButton" to="." method="_on_account_button_pressed"]
 [connection signal="pressed" from="AchievementsButton" to="." method="_on_achievements_button_pressed"]
+[connection signal="pressed" from="XButton" to="." method="_on_close_button_pressed"]
