@@ -16,7 +16,7 @@ func display_levels() -> void:
 	for child in %AllylevelsPresContainer.get_children():
 		child.queue_free()
 	for ally_level in ally.levels:
-		var new_level_presenter: AllyLevelPresenter = load("res://screens/allies_market/ally_details_popup/ally_level_presenter/ally_level_presenter.tscn").instantiate()
+		var new_level_presenter: AllyLevelPresenter = load("uid://dr58mra5vkhob").instantiate()
 		new_level_presenter.ally_level = ally_level
 		if !new_level_presenter.level_buyed.is_connected(update_all_level_presenters):
 			new_level_presenter.level_buyed.connect(update_all_level_presenters)

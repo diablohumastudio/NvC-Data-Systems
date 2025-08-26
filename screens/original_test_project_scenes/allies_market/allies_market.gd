@@ -6,7 +6,7 @@ func _ready() -> void:
 	for child in %MAPContainer.get_children():
 		child.queue_free()
 	for ally in allies:
-		var new_ally_presenter: MarketAllyPresenter = load("res://screens/allies_market/market_ally_presenter/market_ally_presenter.tscn").instantiate()
+		var new_ally_presenter: MarketAllyPresenter = load("uid://cn2bbomafg8ko").instantiate()
 		new_ally_presenter.ally = ally
 		new_ally_presenter.ally_details_requested.connect(_on_ally_details_requested)
 		%MAPContainer.add_child(new_ally_presenter)
