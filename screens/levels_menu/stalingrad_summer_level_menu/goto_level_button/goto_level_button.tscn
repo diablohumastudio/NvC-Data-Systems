@@ -1,21 +1,59 @@
-[gd_scene load_steps=23 format=3 uid="uid://3qp3q74ukss3"]
+[gd_scene load_steps=26 format=3 uid="uid://3qp3q74ukss3"]
 
 [ext_resource type="Script" uid="uid://cv7xqdeevqlmq" path="res://screens/levels_menu/stalingrad_summer_level_menu/goto_level_button/goto_level_button.gd" id="1_ix5mt"]
 [ext_resource type="Texture2D" uid="uid://c7i3rabcolhcd" path="res://screens/levels_menu/stalingrad_summer_level_menu/goto_level_button/assets/shadow.png" id="5_w34j5"]
 [ext_resource type="Texture2D" uid="uid://djoo4yrnlfujv" path="res://screens/levels_menu/stalingrad_summer_level_menu/goto_level_button/assets/base.png" id="6_3m1tv"]
 [ext_resource type="FontFile" uid="uid://ns85otisc51h" path="res://global_assets/fonts/Boldstone-Regular.ttf" id="6_tewpx"]
 [ext_resource type="Texture2D" uid="uid://csvi3eqma63hc" path="res://screens/levels_menu/stalingrad_summer_level_menu/goto_level_button/assets/left_wing_selected.png" id="7_356q6"]
+[ext_resource type="Texture2D" uid="uid://bsxhcachofacn" path="res://screens/levels_menu/stalingrad_summer_level_menu/goto_level_button/assets/communist_icon.png" id="8_8jwsg"]
 [ext_resource type="Texture2D" uid="uid://rm32r2nx1hcv" path="res://screens/levels_menu/stalingrad_summer_level_menu/goto_level_button/assets/icon_light.png" id="8_356q6"]
 [ext_resource type="Texture2D" uid="uid://b0mqjpf86cnk6" path="res://screens/levels_menu/stalingrad_summer_level_menu/goto_level_button/assets/right_wing_selected.png" id="8_waro3"]
 [ext_resource type="Texture2D" uid="uid://bbqbr3vjj86su" path="res://screens/levels_menu/stalingrad_summer_level_menu/goto_level_button/assets/left_spike.png" id="9_waro3"]
 [ext_resource type="Texture2D" uid="uid://v3iasye1j7r3" path="res://screens/levels_menu/stalingrad_summer_level_menu/goto_level_button/assets/locked_icon.png" id="9_xuilu"]
+[ext_resource type="Texture2D" uid="uid://bawqjpb7hlmu0" path="res://screens/levels_menu/stalingrad_summer_level_menu/goto_level_button/assets/vs_icon.png" id="10_8dsbh"]
 [ext_resource type="Texture2D" uid="uid://c5ig5gkcyevu3" path="res://screens/levels_menu/stalingrad_summer_level_menu/goto_level_button/assets/left_wing.png" id="10_xuilu"]
 [ext_resource type="Texture2D" uid="uid://dyfei16lmgwf1" path="res://screens/levels_menu/stalingrad_summer_level_menu/goto_level_button/assets/right_spike.png" id="11_1ad8f"]
+[ext_resource type="Texture2D" uid="uid://tvkel1gh5h2e" path="res://screens/levels_menu/stalingrad_summer_level_menu/goto_level_button/assets/nazi_icon.png" id="11_30qai"]
 [ext_resource type="Texture2D" uid="uid://bw643s8ypmd0h" path="res://screens/levels_menu/stalingrad_summer_level_menu/goto_level_button/assets/left_spike_selected.png" id="12_3m1tv"]
 [ext_resource type="Texture2D" uid="uid://ksrge0nnd8wa" path="res://screens/levels_menu/stalingrad_summer_level_menu/goto_level_button/assets/right_wing.png" id="12_687ru"]
 [ext_resource type="Texture2D" uid="uid://cou38jw7jkqci" path="res://screens/levels_menu/stalingrad_summer_level_menu/goto_level_button/assets/right_spike_selected.png" id="13_qb4tu"]
 [ext_resource type="Texture2D" uid="uid://b2b8n2wp6luc5" path="res://screens/levels_menu/stalingrad_summer_level_menu/goto_level_button/assets/base_selected.png" id="14_xuilu"]
 [ext_resource type="Texture2D" uid="uid://bbgjn7mwoqd1y" path="res://screens/start_menus/main_menu/assets/small_bg_particle.png" id="17_xuilu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f1d3t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_8jwsg")
+}],
+"loop": true,
+"name": &"completed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_xuilu")
+}],
+"loop": true,
+"name": &"locked",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_8dsbh")
+}],
+"loop": true,
+"name": &"uncompleted",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_30qai")
+}],
+"loop": true,
+"name": &"unlocked",
+"speed": 5.0
+}]
 
 [sub_resource type="Curve" id="Curve_1ad8f"]
 _limits = [0.0, 1.3, 0.0, 1.0]
@@ -209,22 +247,6 @@ tracks/14/keys = {
 "values": [0.0]
 }
 
-[sub_resource type="Animation" id="Animation_687ru"]
-resource_name = "locked"
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Textures/IconLight:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 0.54, 0.54, 0)]
-}
-
 [sub_resource type="Animation" id="Animation_h7xu7"]
 resource_name = "selected"
 length = 3.5
@@ -414,7 +436,6 @@ tracks/14/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_toipu"]
 _data = {
 &"RESET": SubResource("Animation_dx7kg"),
-&"locked": SubResource("Animation_687ru"),
 &"selected": SubResource("Animation_h7xu7")
 }
 
@@ -454,12 +475,14 @@ position = Vector2(27, -81)
 texture = ExtResource("12_687ru")
 offset = Vector2(22, -9)
 
-[node name="Icon" type="Sprite2D" parent="Textures"]
+[node name="Icon" type="AnimatedSprite2D" parent="Textures"]
 position = Vector2(0, -75)
-texture = ExtResource("9_xuilu")
+sprite_frames = SubResource("SpriteFrames_f1d3t")
+animation = &"unlocked"
 offset = Vector2(1.5, 0)
 
 [node name="IconLight" type="Sprite2D" parent="Textures"]
+visible = false
 modulate = Color(1, 0.54, 0.54, 0.611765)
 position = Vector2(-1, -69)
 texture = ExtResource("8_356q6")
