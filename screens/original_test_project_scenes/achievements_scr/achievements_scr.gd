@@ -11,4 +11,4 @@ func _ready() -> void:
 		%AchievementsList.add_child(new_achievement_presenter)
 
 func _on_go_back_btn_pressed() -> void:
-	SMS.change_scene(GC.SCREENS_UIDS.MENU)
+	SMS.change_scene(load(GC.SCREENS_UIDS.MENU))

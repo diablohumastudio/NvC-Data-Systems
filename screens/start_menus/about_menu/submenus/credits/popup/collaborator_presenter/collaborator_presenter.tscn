@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b22lmv262xma0" path="res://screens/start_menus/about_menu/submenus/credits/popup/collaborator_presenter/collaborator_presenter.gd" id="1_jw40v"]
 [ext_resource type="Texture2D" uid="uid://bnyqwquptr441" path="res://screens/start_menus/about_menu/submenus/credits/popup/collaborator_presenter/assets/picture_holder.png" id="2_jw40v"]
 [ext_resource type="FontFile" uid="uid://ns85otisc51h" path="res://global_assets/fonts/Boldstone-Regular.ttf" id="3_rap83"]
-[ext_resource type="FontFile" uid="uid://c36g3clh0rwyk" path="res://global_assets/fonts/RedhandNeo-Regular.ttf" id="4_dddn4"]
+[ext_resource type="FontFile" uid="uid://ddhakhisox2sy" path="res://global_assets/fonts/RedhandNeo-Regular.ttf" id="4_dddn4"]
 [ext_resource type="PackedScene" uid="uid://b577gvgkwwlgj" path="res://screens/start_menus/about_menu/submenus/credits/popup/collaborator_presenter/social_media_buttons/social_media_buttons.tscn" id="5_fwgu8"]
 
 [node name="CollaboratorPresenter" type="Control"]

@@ -14,7 +14,7 @@ func _ready() -> void:
 	disabled = level.progress.locked
 
 func _on_pressed() -> void:
-	var games_screen: PackedScene = load("uid://0yp607cucppk")
+	var games_screen: PackedScene = load("")
 	games_screen.level = level
 	SMS.goto_scene(games_screen)
 

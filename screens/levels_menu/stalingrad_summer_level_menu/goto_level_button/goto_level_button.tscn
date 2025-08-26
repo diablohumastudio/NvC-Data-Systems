@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://3qp3q74ukss3"]
+[gd_scene load_steps=23 format=3 uid="uid://3qp3q74ukss3"]
 
 [ext_resource type="Script" uid="uid://cv7xqdeevqlmq" path="res://screens/levels_menu/stalingrad_summer_level_menu/goto_level_button/goto_level_button.gd" id="1_ix5mt"]
 [ext_resource type="Texture2D" uid="uid://c7i3rabcolhcd" path="res://screens/levels_menu/stalingrad_summer_level_menu/goto_level_button/assets/shadow.png" id="5_w34j5"]
@@ -16,9 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://cou38jw7jkqci" path="res://screens/levels_menu/stalingrad_summer_level_menu/goto_level_button/assets/right_spike_selected.png" id="13_qb4tu"]
 [ext_resource type="Texture2D" uid="uid://b2b8n2wp6luc5" path="res://screens/levels_menu/stalingrad_summer_level_menu/goto_level_button/assets/base_selected.png" id="14_xuilu"]
 [ext_resource type="Texture2D" uid="uid://bbgjn7mwoqd1y" path="res://screens/start_menus/main_menu/assets/small_bg_particle.png" id="17_xuilu"]
-
-[sub_resource type="Resource" id="Resource_v1l2e"]
-metadata/__load_path__ = "res://data/worlds/stalingrad_summer/level_1/level_1_stalingrad_sm_tut_level.tres"
 
 [sub_resource type="Curve" id="Curve_1ad8f"]
 _limits = [0.0, 1.3, 0.0, 1.0]
@@ -425,7 +422,6 @@ _data = {
 offset_right = 88.0
 offset_bottom = 129.0
 script = ExtResource("1_ix5mt")
-level = SubResource("Resource_v1l2e")
 
 [node name="Textures" type="Node2D" parent="."]
 position = Vector2(43, 116)

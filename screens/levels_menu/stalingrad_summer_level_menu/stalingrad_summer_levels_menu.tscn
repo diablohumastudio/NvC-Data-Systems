@@ -992,7 +992,6 @@ offset_left = -962.5
 offset_top = -205.0
 offset_right = -766.5
 offset_bottom = -76.0
-level = null
 
 [node name="GotoLevelButton2" parent="GotoLevelButtons" instance=ExtResource("12_a6n0u")]
 layout_mode = 0
@@ -1000,7 +999,6 @@ offset_left = -772.5
 offset_top = -311.0
 offset_right = -576.5
 offset_bottom = -182.0
-level = null
 
 [node name="GotoLevelButton3" parent="GotoLevelButtons" instance=ExtResource("12_a6n0u")]
 layout_mode = 0
@@ -1008,7 +1006,6 @@ offset_left = -596.5
 offset_top = -218.0
 offset_right = -400.5
 offset_bottom = -89.0
-level = null
 
 [node name="GotoLevelButton4" parent="GotoLevelButtons" instance=ExtResource("12_a6n0u")]
 layout_mode = 0
@@ -1017,7 +1014,6 @@ offset_top = 96.0
 offset_right = -533.5
 offset_bottom = 225.0
 disabled = true
-level = null
 
 [node name="GotoLevelButton5" parent="GotoLevelButtons" instance=ExtResource("12_a6n0u")]
 layout_mode = 0
@@ -1026,7 +1022,6 @@ offset_top = -6.0
 offset_right = -343.5
 offset_bottom = 123.0
 disabled = true
-level = null
 
 [node name="GotoLevelButton6" parent="GotoLevelButtons" instance=ExtResource("12_a6n0u")]
 layout_mode = 0
@@ -1035,7 +1030,6 @@ offset_top = -174.0
 offset_right = -175.5
 offset_bottom = -45.0
 disabled = true
-level = null
 
 [node name="GotoLevelButton7" parent="GotoLevelButtons" instance=ExtResource("12_a6n0u")]
 layout_mode = 0
@@ -1043,7 +1037,6 @@ offset_left = -237.5
 offset_top = -319.0
 offset_right = -41.5
 offset_bottom = -190.0
-level = null
 
 [node name="GotoLevelButton8" parent="GotoLevelButtons" instance=ExtResource("12_a6n0u")]
 layout_mode = 0
@@ -1052,7 +1045,6 @@ offset_top = -446.0
 offset_right = 85.5
 offset_bottom = -317.0
 disabled = true
-level = null
 
 [node name="GotoLevelButton9" parent="GotoLevelButtons" instance=ExtResource("12_a6n0u")]
 layout_mode = 0
@@ -1061,7 +1053,6 @@ offset_top = -282.0
 offset_right = 213.5
 offset_bottom = -153.0
 disabled = true
-level = null
 
 [node name="GotoLevelButton10" parent="GotoLevelButtons" instance=ExtResource("12_a6n0u")]
 layout_mode = 0
@@ -1070,7 +1061,6 @@ offset_top = -136.0
 offset_right = 328.5
 offset_bottom = -7.0
 disabled = true
-level = null
 
 [node name="GotoStalingradSummerCampButton" type="TextureButton" parent="."]
 layout_mode = 0

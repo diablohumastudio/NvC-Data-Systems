@@ -336,7 +336,6 @@ offset_left = -962.5
 offset_top = -205.0
 offset_right = -738.5
 offset_bottom = 81.0
-level = null
 
 [node name="GotoLevelButton2" parent="GotoLevelButtons" instance=ExtResource("12_obvwi")]
 layout_mode = 0
@@ -344,7 +343,6 @@ offset_left = -772.5
 offset_top = -311.0
 offset_right = -548.5
 offset_bottom = -25.0
-level = null
 
 [node name="GotoLevelButton3" parent="GotoLevelButtons" instance=ExtResource("12_obvwi")]
 layout_mode = 0
@@ -352,7 +350,6 @@ offset_left = -596.5
 offset_top = -218.0
 offset_right = -400.5
 offset_bottom = -89.0
-level = null
 
 [node name="GotoLevelButton4" parent="GotoLevelButtons" instance=ExtResource("12_obvwi")]
 layout_mode = 0
@@ -363,7 +360,6 @@ offset_bottom = 382.0
 mouse_filter = 2
 disabled = true
 texture_normal = ExtResource("15_66hpt")
-level = null
 
 [node name="GotoLevelButton5" parent="GotoLevelButtons" instance=ExtResource("12_obvwi")]
 layout_mode = 0
@@ -374,7 +370,6 @@ offset_bottom = 280.0
 mouse_filter = 2
 disabled = true
 texture_normal = ExtResource("15_66hpt")
-level = null
 
 [node name="GotoLevelButton6" parent="GotoLevelButtons" instance=ExtResource("12_obvwi")]
 layout_mode = 0
@@ -385,7 +380,6 @@ offset_bottom = 112.0
 mouse_filter = 2
 disabled = true
 texture_normal = ExtResource("15_66hpt")
-level = null
 
 [node name="GotoLevelButton7" parent="GotoLevelButtons" instance=ExtResource("12_obvwi")]
 layout_mode = 0
@@ -393,7 +387,6 @@ offset_left = -237.5
 offset_top = -319.0
 offset_right = -13.5
 offset_bottom = -33.0
-level = null
 
 [node name="GotoLevelButton8" parent="GotoLevelButtons" instance=ExtResource("12_obvwi")]
 layout_mode = 0
@@ -404,7 +397,6 @@ offset_bottom = -160.0
 mouse_filter = 2
 disabled = true
 texture_normal = ExtResource("15_66hpt")
-level = null
 
 [node name="GotoLevelButton9" parent="GotoLevelButtons" instance=ExtResource("12_obvwi")]
 layout_mode = 0
@@ -415,7 +407,6 @@ offset_bottom = 4.0
 mouse_filter = 2
 disabled = true
 texture_normal = ExtResource("15_66hpt")
-level = null
 
 [node name="GotoLevelButton10" parent="GotoLevelButtons" instance=ExtResource("12_obvwi")]
 layout_mode = 0
@@ -425,7 +416,6 @@ offset_right = 356.5
 offset_bottom = 150.0
 mouse_filter = 2
 texture_normal = ExtResource("15_66hpt")
-level = null
 
 [node name="BlackBorders" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
