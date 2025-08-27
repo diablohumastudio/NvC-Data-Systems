@@ -91,6 +91,7 @@ texture_hover = ExtResource("7_nonmb")
 texture_focused = ExtResource("7_nonmb")
 
 [node name="Label" type="Label" parent="DeleteUserBtn"]
+layout_mode = 0
 offset_left = 17.0
 offset_top = 18.0
 offset_right = 288.0
@@ -116,6 +117,7 @@ position = Vector2(299, 10)
 texture = ExtResource("11_a3o6m")
 
 [node name="Label" type="Label" parent="LoginBackendButton"]
+layout_mode = 0
 offset_left = 17.0
 offset_top = 18.0
 offset_right = 288.0
