@@ -57,6 +57,10 @@ folder_colors={
 "res://global_systems/data_systems/action_condition_system/conditions/models/": "gray"
 }
 
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true
+
 [wwise]
 
 common_user_settings/root_output_path="res://Wwise/GeneratedSoundBanks"
