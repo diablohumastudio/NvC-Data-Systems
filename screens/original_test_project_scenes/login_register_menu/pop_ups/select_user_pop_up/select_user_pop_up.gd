@@ -1,5 +1,6 @@
 class_name SelectUserPopUp extends Control
 
+var select_user_btn_pksc: PackedScene = load("uid://cajyraiq1oebc")
 var new_button_group: ButtonGroup = ButtonGroup.new()
 
 func _ready() -> void:
@@ -8,7 +9,7 @@ func _ready() -> void:
 		child.queue_free()
 	for ii in users_credentials.credentials.size():
 		var user_credentials: UserCredentials = users_credentials.credentials[ii]
-		var new_select_user_btn: SelectUserBtn = load("res://screens/login_register_menu/pop_ups/select_user_pop_up/select_user_btn/select_user_btn.tscn").instantiate()
+		var new_select_user_btn: SelectUserBtn = select_user_btn_pksc.instantiate()
 		new_select_user_btn.user_credentials = user_credentials
 		new_select_user_btn.button_group = new_button_group
 		new_select_user_btn.pressed.connect(_on_select_user_btn_pressed)

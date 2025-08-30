@@ -10,7 +10,10 @@ enum types { music, sfx }
 @export var grabber_muted_highlight_texture: Texture2D
 
 func _ready():
+	_set_user_values()
 	%AnimationPlayer.play("appear")
+
+func _set_user_values():
 	if type == types.music: value = UDS.get_property(UDS.PROPERTIES.MUSIC_VOLUME)
 	if type == types.sfx: value = UDS.get_property(UDS.PROPERTIES.SFX_VOLUME)
 #

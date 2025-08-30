@@ -1,4 +1,4 @@
-[gd_scene load_steps=91 format=3 uid="uid://cflg2ypu25js2"]
+[gd_scene load_steps=93 format=3 uid="uid://cflg2ypu25js2"]
 
 [ext_resource type="Script" uid="uid://xbhqiu414occ" path="res://screens/start_menus/main_menu/main_menu.gd" id="1_tf8ke"]
 [ext_resource type="Texture2D" uid="uid://xfv5l6akgc8p" path="res://screens/start_menus/main_menu/assets/main_menu_bg.png" id="2_0cygk"]
@@ -48,6 +48,8 @@
 [ext_resource type="Texture2D" uid="uid://b26l7efnw6gdo" path="res://screens/start_menus/about_menu/submenu_selector/assets/credits_button.png" id="37_53gr8"]
 [ext_resource type="PackedScene" uid="uid://bw61voyxm3wti" path="res://screens/start_menus/main_menu/go_to_settings_menu_button/go_to_settings_menu_button.tscn" id="43_jom10"]
 [ext_resource type="PackedScene" uid="uid://d543jno4noka" path="res://screens/start_menus/main_menu/go_to_games_menu_button/go_to_games_menu_button.tscn" id="44_kfmfx"]
+[ext_resource type="Texture2D" uid="uid://ckpyy1tdouq04" path="res://screens/start_menus/main_menu/go_to_games_menu_button/assets/start_hover.png" id="47_53gr8"]
+[ext_resource type="Texture2D" uid="uid://co1cipww5iin4" path="res://screens/start_menus/main_menu/go_to_settings_menu_button/assets/settings_hover.png" id="47_iuwny"]
 [ext_resource type="Texture2D" uid="uid://cqrrt3vy3xsmn" path="res://screens/start_menus/main_menu/assets/about_button_selected.png" id="50_53gr8"]
 [ext_resource type="PackedScene" uid="uid://bem1470lq7oa4" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_and_achievements_popup.tscn" id="51_ou335"]
 [ext_resource type="Script" uid="uid://cc5cx846obsu8" path="res://global_systems/scene_loading_system/sls_scenes_bank/sls_scenes_bank.gd" id="52_uw2wa"]
@@ -1409,6 +1411,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="MainMenuBg" type="Sprite2D" parent="BackgroundAnimation"]
 position = Vector2(960, 540)
@@ -1908,6 +1911,7 @@ offset_bottom = 1078.0
 scale = Vector2(1, 1)
 focus_neighbor_left = NodePath("../GoToWorldsMapMenuButton")
 focus_neighbor_right = NodePath("../../UserStatsContainer/UserStats/UsernameContainer")
+texture_hover = ExtResource("47_iuwny")
 
 [node name="GoToWorldsMapMenuButton" parent="GotoButtons" instance=ExtResource("44_kfmfx")]
 unique_name_in_owner = true
@@ -1917,6 +1921,7 @@ offset_top = 418.0
 offset_right = 975.0
 offset_bottom = 1080.0
 scale = Vector2(1, 1)
+texture_hover = ExtResource("47_53gr8")
 
 [node name="GoToMarketButton" type="TextureButton" parent="GotoButtons"]
 unique_name_in_owner = true
@@ -1993,6 +1998,5 @@ metadata/_custom_type_script = "uid://cc5cx846obsu8"
 [connection signal="pressed" from="GotoButtons/GoToWorldsMapMenuButton" to="." method="_on_go_to_worlds_map_menu_button_pressed"]
 [connection signal="pressed" from="GotoButtons/GoToMarketButton" to="." method="_on_go_to_market_button_pressed"]
 [connection signal="pressed" from="GotoButtons/GoToAboutMenuButton" to="." method="_on_go_to_about_menu_button_pressed"]
-[connection signal="hidden" from="ExitPopup" to="." method="_on_exit_popup_hidden"]
 
 [editable path="UserStatsContainer"]
