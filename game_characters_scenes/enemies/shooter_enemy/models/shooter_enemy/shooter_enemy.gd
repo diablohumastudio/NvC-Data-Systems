@@ -1,4 +1,4 @@
-class_name ShooterEnemy extends Enemy
+class_name ShooterEnemy extends EnemyScene
 
 #const BULLET_SCENE_UID : String = "uid://v2dsu1x0lbhw"
 
