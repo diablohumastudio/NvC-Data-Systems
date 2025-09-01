@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwvww3umghin3"]
+
+[ext_resource type="Script" uid="uid://ctbiiidoymej" path="res://game_characters_scenes/enemies/shooter_enemy/models/state_machine_shooter_enemy/shooter_enemy_state_machine.gd" id="1_yv0m8"]
+
+[node name="ShooterEnemyStateMachine" type="Node"]
+script = ExtResource("1_yv0m8")

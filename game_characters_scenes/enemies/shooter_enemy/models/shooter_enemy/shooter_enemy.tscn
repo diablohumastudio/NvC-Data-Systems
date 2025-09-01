@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvkumb6mqp5j1"]
+
+[ext_resource type="Script" uid="uid://djy8y5mrbobs3" path="res://game_characters_scenes/enemies/shooter_enemy/models/shooter_enemy/shooter_enemy.gd" id="1_k264u"]
+
+[node name="ShooterEnemy" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_k264u")
