@@ -2,6 +2,9 @@ class_name GameCharacter extends CharacterBody2D
 
 enum DAMAGE_TYPES {LONG_NORMAL, LONG_FREEZING, SHORT_NORMAL, SHORT_EXPLOSION}
 
+var column: int
+var row: int
+
 @export var hp : float # Initial HP
 var current_hp : float
 
