@@ -1,4 +1,4 @@
-class_name Cell extends Button
+class_name TerrainGridCell extends Cell
 
 const SC_ALLY_CONTAINER_PATH: PackedScene = preload("uid://b1xs0qcyd7lb4")
 
@@ -8,9 +8,6 @@ func _on_pressed() -> void:
 		_add_ally()
 		GSS.ally_just_placed.emit(GSS.ally_to_place)
 		GSS.ally_to_place = null
-
-func is_ocupied() -> bool:
-	return !get_child_count() == 0
 
 func _validate_children():
 	if get_child_count() > 1:

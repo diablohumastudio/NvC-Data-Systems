@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://catyyevb26p6e"]
+
+[ext_resource type="Script" uid="uid://bw2ito8oxknam" path="res://screens/game/components/terrain_grid/terrain_grid_cell/terrain_grid.gd" id="1_iemgx"]
+
+[node name="TerrainGrid" type="CenterContainer"]
+script = ExtResource("1_iemgx")
+columns = 9
+rows = 5
+cell_width_px = 100
+cell_heigth_px = 100
+
+[node name="CellsContainer" type="GridContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+columns = 9

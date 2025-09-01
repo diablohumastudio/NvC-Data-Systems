@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://cch6b4h5wk2jy"]
+
+[ext_resource type="Script" uid="uid://doltbn16js28r" path="res://global_objects/button_cell_grid/button_cell_grid.gd" id="1_swb8k"]
+
+[node name="ButtonCellGrid" type="CenterContainer"]
+offset_left = 28.0
+offset_top = 31.0
+offset_right = 156.0
+offset_bottom = 198.0
+script = ExtResource("1_swb8k")
+columns = 3
+rows = 5
+cell_width_px = 100
+cell_heigth_px = 100
+
+[node name="CellsContainer" type="GridContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+columns = 3
+
+[connection signal="pressed" from="CellsContainer/Cell_0_0" to="CellsContainer/Cell_0_0" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_1_0" to="CellsContainer/Cell_1_0" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_2_0" to="CellsContainer/Cell_2_0" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_0_1" to="CellsContainer/Cell_0_1" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_1_1" to="CellsContainer/Cell_1_1" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_2_1" to="CellsContainer/Cell_2_1" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_0_2" to="CellsContainer/Cell_0_2" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_1_2" to="CellsContainer/Cell_1_2" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_2_2" to="CellsContainer/Cell_2_2" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_0_3" to="CellsContainer/Cell_0_3" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_1_3" to="CellsContainer/Cell_1_3" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_2_3" to="CellsContainer/Cell_2_3" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_0_4" to="CellsContainer/Cell_0_4" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_1_4" to="CellsContainer/Cell_1_4" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_2_4" to="CellsContainer/Cell_2_4" method="_on_pressed"]

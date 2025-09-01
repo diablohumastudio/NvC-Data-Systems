@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddno47pjc4k1h"]
+
+[ext_resource type="Script" uid="uid://7xmb8nfxqopm" path="res://screens/game/components/terrain_grid/terrain_grid_cell/terrain_grid_cell.gd" id="1_672ob"]
+
+[node name="TerrainGridCell" type="Button"]
+script = ExtResource("1_672ob")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
