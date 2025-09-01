@@ -18,9 +18,7 @@ func set_state_visuals():
 		modulate = Color.WHITE
 
 func _on_pressed() -> void:
-	GSS.level = level
-	GSS.reset_values()
-	SMS.change_scene(load(GC.SCREENS_UIDS.GAME))
+	SMS.change_scene(load(GC.SCREENS_UIDS.GAME), {"level": level})
 
 func _on_focus_entered() -> void:
 	$AnimationPlayer.play("selected")
