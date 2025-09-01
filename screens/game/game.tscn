@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c2b4jldseu5vs"]
+[gd_scene load_steps=11 format=3 uid="uid://c2b4jldseu5vs"]
 
 [ext_resource type="Script" uid="uid://bvalrtinik0vd" path="res://screens/game/game.gd" id="1_eyx8b"]
 [ext_resource type="PackedScene" uid="uid://b4nna6eulgfw" path="res://screens/game/components/allies_selector/allies_selector.tscn" id="2_khowf"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://catyyevb26p6e" path="res://screens/game/components/terrain_grid/terrain_grid_cell/terrain_grid.tscn" id="4_18b3j"]
 [ext_resource type="PackedScene" uid="uid://dm2l1uxm8jud0" path="res://screens/game/debug_components/dbug_killed_enemies_hud/dbug_killed_enemies_hud.tscn" id="5_2v4l3"]
 [ext_resource type="PackedScene" uid="uid://xydq20wuc0hp" path="res://screens/game/components/remove_ally_button/remove_ally_button.tscn" id="5_g1ktd"]
+[ext_resource type="PackedScene" uid="uid://cjay4w6imp8r7" path="res://screens/game/components/enemies_spawn_grid/enemies_spawner_grid.tscn" id="5_kc255"]
 [ext_resource type="PackedScene" uid="uid://bk5r5vrhhaf2x" path="res://screens/game/debug_components/dbug_canons_killed_hud/dbug_canon_hud.tscn" id="5_uain1"]
 [ext_resource type="PackedScene" uid="uid://cafe6vrkyihc5" path="res://screens/game/debug_components/dbug_win_btn/dbug_win_btn.tscn" id="6_cpxdg"]
 [ext_resource type="PackedScene" uid="uid://3p1rfa3f7you" path="res://screens/game/components/game_won_pop_up/game_won_pop_up.tscn" id="9_18b3j"]
@@ -37,12 +38,19 @@ offset_bottom = 198.0
 
 [node name="TerrainGrid" parent="." instance=ExtResource("4_18b3j")]
 layout_mode = 0
-offset_left = 216.0
+offset_left = 153.0
 offset_top = 139.0
-offset_right = 1823.0
+offset_right = 1760.0
 offset_bottom = 1030.0
 cell_width_px = 175
 cell_heigth_px = 175
+
+[node name="EnemiesSpawnersGrid" parent="." instance=ExtResource("5_kc255")]
+layout_mode = 0
+offset_left = 1686.0
+offset_top = 131.0
+offset_right = 2040.0
+offset_bottom = 1022.0
 
 [node name="DbugCanonHUD" parent="." instance=ExtResource("5_uain1")]
 layout_mode = 0
