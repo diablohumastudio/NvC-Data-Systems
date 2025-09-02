@@ -28,7 +28,7 @@ func _set_cell_heigth_px(new_value: int):
 	cell_heigth_px = new_value
 	if Engine.is_editor_hint() and is_inside_tree():
 		_set_cells()
-		
+
 func _ready() -> void:
 	CELL_PKSC = load("uid://bubd7o2pf31bi")
 	if !is_inside_tree(): return
@@ -54,3 +54,9 @@ func _create_cells():
 			new_cell.custom_minimum_size = Vector2(cell_width_px, cell_heigth_px)
 			new_cell.size =  Vector2(cell_width_px, cell_heigth_px)
 			%CellsContainer.add_child(new_cell)
+
+func get_cells() -> Array[Cell]:
+	var cells: Array[Cell]
+	for cell: Cell in %CellsContainer:
+		cells.append(cell)
+	return cells

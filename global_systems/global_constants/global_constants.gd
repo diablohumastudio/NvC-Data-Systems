@@ -28,3 +28,7 @@ const DATA_FOLDERS_PATHS: Dictionary = {
 	"CONDITIONS":"res://data/acs_system/conditions/data/",
 	"STATE_CHANGERS":"res://data/acs_system/state_changers/data/",
 }
+
+const ENEMIES_TYPES_UIDS: Dictionary[EnemyScene.TYPES, String] = {
+	EnemyScene.TYPES.HandGunGerman: "uid://dq5mtgrma5krp"
+}

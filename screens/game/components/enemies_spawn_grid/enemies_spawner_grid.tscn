@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cjay4w6imp8r7"]
+[gd_scene load_steps=3 format=3 uid="uid://cjay4w6imp8r7"]
 
 [ext_resource type="Script" uid="uid://ckvn578vnk6ve" path="res://screens/game/components/enemies_spawn_grid/enemies_spawner_grid.gd" id="1_2ymyl"]
+[ext_resource type="Script" uid="uid://und4yb62nk5n" path="res://screens/game/components/enemies_spawn_grid/enemy_grid_spawn_manager.gd" id="2_iddo3"]
 
 [node name="EnemiesSpawnersGrid" type="CenterContainer"]
 script = ExtResource("1_2ymyl")
@@ -9,7 +10,23 @@ rows = 5
 cell_width_px = 175
 cell_heigth_px = 175
 
+[node name="EnemyGridSpawnManager" type="Node" parent="." node_paths=PackedStringArray("enemies_spawners_grid")]
+script = ExtResource("2_iddo3")
+enemies_spawners_grid = NodePath("..")
+metadata/_custom_type_script = "uid://und4yb62nk5n"
+
 [node name="CellsContainer" type="GridContainer" parent="."]
 unique_name_in_owner = true
 layout_mode = 2
 columns = 2
+
+[connection signal="pressed" from="CellsContainer/Cell_0_0" to="CellsContainer/Cell_0_0" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_1_0" to="CellsContainer/Cell_1_0" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_0_1" to="CellsContainer/Cell_0_1" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_1_1" to="CellsContainer/Cell_1_1" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_0_2" to="CellsContainer/Cell_0_2" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_1_2" to="CellsContainer/Cell_1_2" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_0_3" to="CellsContainer/Cell_0_3" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_1_3" to="CellsContainer/Cell_1_3" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_0_4" to="CellsContainer/Cell_0_4" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_1_4" to="CellsContainer/Cell_1_4" method="_on_pressed"]
