@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://c46cwjjm8k4w8"]
 
-[ext_resource type="PackedScene" uid="uid://bkhds6kw3t8tq" path="res://data/levels/data/level_1/background_scene/st_summer_bg_l1.tscn" id="1_j2bky"]
+[ext_resource type="PackedScene" uid="uid://bkhds6kw3t8tq" path="res://data/levels/data/level_1/background_scene_and_assets/st_summer_bg_l1.tscn" id="1_j2bky"]
 [ext_resource type="Script" uid="uid://cn5j213fwdni1" path="res://data/levels/data/level_5/st_summer_bg_l5.gd" id="2_qxask"]
 [ext_resource type="Texture2D" uid="uid://c4s1upp1ob01" path="res://data/levels/data/level_4/sprite_frames/assets/first_wave_animation/fotograma0012.webp" id="3_a21ev"]
 [ext_resource type="Texture2D" uid="uid://ldqmwtjxytrn" path="res://data/levels/data/level_3/sprite_frames/assets/first_wave_animation/low_floor_destroyed_0012.webp" id="3_hmq1s"]
