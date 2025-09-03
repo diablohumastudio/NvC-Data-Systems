@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://bj0wscnker5f"]
+
+[ext_resource type="Script" uid="uid://ik5gx1n5mvhd" path="res://screens/game/debug_components/dbug_trigger_animation_hud/dbug_trigger_animation_hud.gd" id="1_l0v8d"]
+
+[node name="DbugTriggerAnimationBtn" type="Button"]
+offset_right = 135.0
+offset_bottom = 31.0
+theme_override_font_sizes/font_size = 35
+text = "triger animation"
+script = ExtResource("1_l0v8d")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 3.0
+offset_top = 66.0
+offset_right = 282.0
+offset_bottom = 120.0
+theme_override_font_sizes/font_size = 30
+text = "INITIAL_STATE"
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

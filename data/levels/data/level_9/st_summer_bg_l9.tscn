@@ -1,0 +1,137 @@
+[gd_scene load_steps=19 format=3 uid="uid://f6ap0f1kw0un"]
+
+[ext_resource type="PackedScene" uid="uid://bkhds6kw3t8tq" path="res://data/levels/data/level_1/background/st_summer_bg_l1.tscn" id="1_cnn3g"]
+[ext_resource type="Script" uid="uid://mawxj24eswrs" path="res://data/levels/data/level_9/st_summer_bg_l9.gd" id="2_lg14k"]
+[ext_resource type="Texture2D" uid="uid://bsmvdph6fnjj" path="res://data/levels/data/level_8/sprite_frames/assets/first_wave_animation/fotograma0014.webp" id="3_5yc3c"]
+[ext_resource type="Texture2D" uid="uid://bpjr3nrmxgahe" path="res://data/levels/data/level_8/sprite_frames/assets/last_wave_animation/fotograma0013.webp" id="4_lel15"]
+[ext_resource type="Texture2D" uid="uid://3gnot68x5lhj" path="res://data/levels/data/level_7/sprite_frames/assets/last_wave_animation/trees_foreground_dead.webp" id="4_mdo1m"]
+[ext_resource type="Texture2D" uid="uid://bgr8c50500pdu" path="res://data/levels/data/level_7/sprite_frames/assets/first_wave_animation/fotograma0018.webp" id="4_qb77e"]
+[ext_resource type="Texture2D" uid="uid://cadf08cxm88ol" path="res://data/levels/data/level_2/sprite_frames/assets/first_wave_animation/fotograma0013.webp" id="5_lfwio"]
+[ext_resource type="Texture2D" uid="uid://fyvxwf1x518h" path="res://data/levels/data/level_6/sprite_frames/assets/last_wave_animation/fotograma0013.webp" id="7_mreca"]
+[ext_resource type="Texture2D" uid="uid://do77e8fpl8c46" path="res://data/levels/data/level_2/sprite_frames/assets/last_wave_animation/fotograma0013.webp" id="8_0hggv"]
+[ext_resource type="Texture2D" uid="uid://bhttm12u4y31j" path="res://data/levels/data/level_3/sprite_frames/assets/last_wave_animation/foreground_house0012.webp" id="10_i4d8j"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3a68f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_5yc3c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j8ct7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_qb77e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e7rqc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_lfwio")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o8lre"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_lel15")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pge2w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_mreca")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ih4lt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_0hggv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kt810"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_mdo1m")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j53cw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_i4d8j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="BackgroundScene" instance=ExtResource("1_cnn3g")]
+script = ExtResource("2_lg14k")
+
+[node name="BackgroundObject3" parent="Background" index="0"]
+sprite_frames = SubResource("SpriteFrames_3a68f")
+action_type = 1
+sprite_frames_path = "uid://du1405krexphw"
+
+[node name="BackgroundObject2" parent="Background" index="1"]
+sprite_frames = SubResource("SpriteFrames_j8ct7")
+
+[node name="BackgroundObject1" parent="Background" index="2"]
+sprite_frames = SubResource("SpriteFrames_e7rqc")
+action_type = 0
+sprite_frames_path = ""
+
+[node name="MidlegroundObject3" parent="Middleground" index="0"]
+sprite_frames = SubResource("SpriteFrames_o8lre")
+action_type = 2
+sprite_frames_path = "uid://byo0jo2srcrlj"
+
+[node name="MidlegroundObject2" parent="Middleground" index="1"]
+sprite_frames = SubResource("SpriteFrames_pge2w")
+
+[node name="MidlegroundObject1" parent="Middleground" index="2"]
+sprite_frames = SubResource("SpriteFrames_ih4lt")
+action_type = 0
+sprite_frames_path = ""
+
+[node name="ForegroundObject2" parent="Foreground" index="1"]
+sprite_frames = SubResource("SpriteFrames_kt810")
+
+[node name="ForegroundObject1" parent="Foreground" index="2"]
+sprite_frames = SubResource("SpriteFrames_j53cw")
+
+[editable path="Clouds"]

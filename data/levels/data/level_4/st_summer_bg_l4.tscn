@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://ceu67j76wor5a"]
+
+[ext_resource type="PackedScene" uid="uid://bkhds6kw3t8tq" path="res://data/levels/data/level_1/background/st_summer_bg_l1.tscn" id="1_q166n"]
+[ext_resource type="Script" uid="uid://bg11akbjwmrs0" path="res://data/levels/data/level_4/st_summer_bg_l4.gd" id="2_ojrid"]
+[ext_resource type="Texture2D" uid="uid://ldqmwtjxytrn" path="res://data/levels/data/level_3/sprite_frames/assets/first_wave_animation/low_floor_destroyed_0012.webp" id="3_ytfyw"]
+[ext_resource type="Texture2D" uid="uid://bhttm12u4y31j" path="res://data/levels/data/level_3/sprite_frames/assets/last_wave_animation/foreground_house0012.webp" id="4_ahrmu"]
+[ext_resource type="Texture2D" uid="uid://do77e8fpl8c46" path="res://data/levels/data/level_2/sprite_frames/assets/last_wave_animation/fotograma0013.webp" id="4_kcsde"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4vbrt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ytfyw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3hqrb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_kcsde")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_igld5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ahrmu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="BackgroundScene" instance=ExtResource("1_q166n")]
+script = ExtResource("2_ojrid")
+
+[node name="BackgroundObject2" parent="Background" index="1"]
+action_type = 1
+sprite_frames_path = "uid://p5o0t8o0tvrw"
+
+[node name="BackgroundObject1" parent="Background" index="2"]
+sprite_frames = SubResource("SpriteFrames_4vbrt")
+action_type = 0
+sprite_frames_path = ""
+
+[node name="MidlegroundObject2" parent="Middleground" index="1"]
+action_type = 2
+sprite_frames_path = "uid://beml8k0bwwxot"
+
+[node name="MidlegroundObject1" parent="Middleground" index="2"]
+sprite_frames = SubResource("SpriteFrames_3hqrb")
+action_type = 0
+sprite_frames_path = ""
+
+[node name="ForegroundObject1" parent="Foreground" index="2"]
+modulate = Color(1, 1, 1, 0.7)
+sprite_frames = SubResource("SpriteFrames_igld5")
+
+[editable path="Clouds"]
