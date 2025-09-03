@@ -11,6 +11,7 @@ cell_width_px = 175
 cell_heigth_px = 175
 
 [node name="EnemyGridSpawnManager" type="Node" parent="." node_paths=PackedStringArray("enemies_spawners_grid")]
+unique_name_in_owner = true
 script = ExtResource("2_iddo3")
 enemies_spawners_grid = NodePath("..")
 metadata/_custom_type_script = "uid://und4yb62nk5n"
@@ -19,6 +20,8 @@ metadata/_custom_type_script = "uid://und4yb62nk5n"
 unique_name_in_owner = true
 layout_mode = 2
 columns = 2
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
 
 [connection signal="pressed" from="CellsContainer/Cell_0_0" to="CellsContainer/Cell_0_0" method="_on_pressed"]
 [connection signal="pressed" from="CellsContainer/Cell_1_0" to="CellsContainer/Cell_1_0" method="_on_pressed"]

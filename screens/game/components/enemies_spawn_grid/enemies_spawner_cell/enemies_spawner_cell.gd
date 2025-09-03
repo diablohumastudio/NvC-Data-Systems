@@ -1,3 +1,7 @@
 class_name EnemiesSpawnerCell extends Cell
 
-var enemies_spawner: EnemiesSpawner = EnemiesSpawner.new()
+signal enemy_spawned(enemy: EnemyScene)
+
+func spawn_enemy(enemy: EnemyScene):
+	add_child(enemy)
+	enemy_spawned.emit(enemy)

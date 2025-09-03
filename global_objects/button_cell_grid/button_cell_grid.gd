@@ -57,6 +57,18 @@ func _create_cells():
 
 func get_cells() -> Array[Cell]:
 	var cells: Array[Cell]
-	for cell: Cell in %CellsContainer:
+	for cell: Cell in %CellsContainer.get_children():
 		cells.append(cell)
 	return cells
+
+func get_cell_by_col_and_row(col: int, row: int) -> Cell:
+	if col > columns - 1: 
+		push_error("trying to get cell of an inexistent column. Column = ", col)
+		return null
+	if row > rows - 1: 
+		push_error("trying to get cell of an inexistent row. Row = ", row)
+		return null
+	return %CellsContainer.get_child(col + row * (columns))
+
+func get_cell_by_index(index: int) -> Cell:
+	return %CellsContainer.get_child(index)
