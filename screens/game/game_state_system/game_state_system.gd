@@ -4,9 +4,17 @@ extends Node
 signal ally_just_placed(ally: AllyData)
 @warning_ignore("unused_signal")
 signal game_just_won
-signal triger_animation
+signal animation_trigered(animation_type: ANIMATION_TYPES)
 
 signal _removing_ally_state_changed(state: bool)
+
+enum ANIMATION_TYPES {
+	INITIAL_STATE,
+	FIRST_WAVE_STARTED,
+	LAST_WAVE_STARTED,
+	OTHER_ACTION_ACTIVATED,
+	COUNTER_REACH_FIVE
+}
 
 var level: LevelData
 var canons_alive: int
@@ -19,7 +27,12 @@ func _set_removing_ally_state(new_value):
 		_removing_ally_state_changed.emit(removing_ally_state)
 
 func _ready() -> void:
+	animation_trigered.connect(_on_animation_trigered)
 	reset_values()
+
+func _on_animation_trigered(animation_type: ANIMATION_TYPES):
+	get_tree().call_group("animatable_elements", "play_animation", animation_type)
+	print("anim trig", animation_type)
 
 func reset_values():
 	canons_alive = GC.TOTAL_NUMBER_OF_CANONS
