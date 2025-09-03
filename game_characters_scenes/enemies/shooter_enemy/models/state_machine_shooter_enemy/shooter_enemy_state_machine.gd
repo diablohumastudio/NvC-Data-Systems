@@ -8,7 +8,7 @@ var walking_state : WalkingState
 var shooting_state : ShootingState
 var stabbing_state : StabbingState
 var dying_state : DyingState
-"uid://v2dsu1x0lbhw"
+
 func _ready() -> void:
 	shooter_enemy = get_parent() as ShooterEnemy
 	walking_state = WalkingState.new(shooter_enemy, self)

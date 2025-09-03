@@ -4,6 +4,7 @@ enum DAMAGE_TYPES {LONG_NORMAL, LONG_FREEZING, SHORT_NORMAL, SHORT_EXPLOSION}
 
 var column: int
 var row: int
+var is_dying: bool = false
 
 @export var hp : float # Initial HP
 var current_hp : float
