@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bvalrtinik0vd" path="res://screens/game/game.gd" id="1_eyx8b"]
 [ext_resource type="PackedScene" uid="uid://b4nna6eulgfw" path="res://screens/game/components/allies_selector/allies_selector.tscn" id="2_khowf"]
-[ext_resource type="PackedScene" uid="uid://djrrsvmhtjlho" path="res://screens/game/components/background_scene/background_scene.tscn" id="2_lvnyp"]
+[ext_resource type="PackedScene" uid="uid://ckfpk4nd44775" path="res://screens/game/components/background_scene/background_scene.tscn" id="2_lvnyp"]
 [ext_resource type="PackedScene" uid="uid://bepu7cd0ik6av" path="res://screens/game/components/level_name_presenter/level_name_presenter.tscn" id="3_kc255"]
 [ext_resource type="PackedScene" uid="uid://catyyevb26p6e" path="res://screens/game/components/terrain_grid/terrain_grid_cell/terrain_grid.tscn" id="4_18b3j"]
 [ext_resource type="PackedScene" uid="uid://dm2l1uxm8jud0" path="res://screens/game/debug_components/dbug_killed_enemies_hud/dbug_killed_enemies_hud.tscn" id="5_2v4l3"]
@@ -43,19 +43,19 @@ offset_bottom = 198.0
 
 [node name="TerrainGrid" parent="." instance=ExtResource("4_18b3j")]
 layout_mode = 0
-offset_left = 153.0
-offset_top = 139.0
-offset_right = 1760.0
-offset_bottom = 1030.0
+offset_left = 256.0
+offset_top = 158.0
+offset_right = 1881.0
+offset_bottom = 1059.0
 cell_width_px = 175
 cell_heigth_px = 175
 
 [node name="EnemiesSpawnersGrid" parent="." instance=ExtResource("5_kc255")]
 layout_mode = 0
-offset_left = 1686.0
-offset_top = 131.0
-offset_right = 2040.0
-offset_bottom = 1022.0
+offset_left = 1989.0
+offset_top = 158.0
+offset_right = 2347.0
+offset_bottom = 1059.0
 
 [node name="GoBackBtn" type="Button" parent="."]
 layout_mode = 0
@@ -125,7 +125,6 @@ offset_top = 11.0
 offset_right = 1022.0
 offset_bottom = 74.0
 theme_override_font_sizes/font_size = 40
-text = "triger animation"
 
 [connection signal="pressed" from="GoBackBtn" to="." method="_on_go_back_btn_pressed"]
 [connection signal="pressed" from="GoBackToTestBtn" to="." method="_on_go_back_to_test_btn_pressed"]
