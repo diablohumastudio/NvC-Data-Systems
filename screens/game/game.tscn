@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://xydq20wuc0hp" path="res://screens/game/components/remove_ally_button/remove_ally_button.tscn" id="5_g1ktd"]
 [ext_resource type="PackedScene" uid="uid://cjay4w6imp8r7" path="res://screens/game/components/enemies_spawn_grid/enemies_spawner_grid.tscn" id="5_kc255"]
 [ext_resource type="PackedScene" uid="uid://bk5r5vrhhaf2x" path="res://screens/game/debug_components/dbug_canons_killed_hud/dbug_canon_hud.tscn" id="5_uain1"]
-[ext_resource type="PackedScene" uid="uid://cafe6vrkyihc5" path="res://screens/game/debug_components/dbug_win_btn/dbug_win_btn.tscn" id="6_cpxdg"]
+[ext_resource type="PackedScene" uid="uid://cafe6vrkyihc5" path="res://screens/game/debug_components/dbug_win_loose_btns/dbug_win_loose_btns.tscn" id="6_cpxdg"]
 [ext_resource type="PackedScene" uid="uid://3p1rfa3f7you" path="res://screens/game/components/game_won_pop_up/game_won_pop_up.tscn" id="9_18b3j"]
 [ext_resource type="PackedScene" uid="uid://bj0wscnker5f" path="res://screens/game/debug_components/dbug_trigger_animation_hud/dbug_trigger_animation_hud.tscn" id="12_ou2j6"]
 [ext_resource type="PackedScene" uid="uid://doqxafbxr50re" path="res://screens/game/debug_components/dbug_balance_change_hud/dbug_balance_change_hud.tscn" id="13_lovpr"]
