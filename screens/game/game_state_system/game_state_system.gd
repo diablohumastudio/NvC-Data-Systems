@@ -7,6 +7,7 @@ signal game_just_won
 signal animation_trigered(animation_type: ANIMATION_TYPES)
 signal balance_changed(balance: int)
 signal _removing_ally_state_changed(state: bool)
+signal star_countdown_finished
 
 enum ANIMATION_TYPES {
 	INITIAL_STATE,
@@ -27,12 +28,6 @@ func _set_balance(new_value):
 	balance = new_value
 	balance_changed.emit(balance)
 
-func add_value_to_balance(value_to_add:int):
-	balance += value_to_add
-
-func substract_value_from_balance(value_to_substract:int):
-	balance -= value_to_substract
-
 func _set_removing_ally_state(new_value):
 		removing_ally_state = new_value
 		_removing_ally_state_changed.emit(removing_ally_state)
@@ -50,3 +45,9 @@ func reset_values():
 	enemies_killed = 0
 	ally_to_place = null
 	removing_ally_state = false
+	
+func add_value_to_balance(value_to_add:int):
+	balance += value_to_add
+
+func substract_value_from_balance(value_to_substract:int):
+	balance -= value_to_substract
