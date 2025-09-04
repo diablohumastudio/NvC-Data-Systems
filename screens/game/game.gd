@@ -10,6 +10,7 @@ func _set_level(new_value: LevelData) -> void:
 func _ready() -> void:
 	SMS.change_scene(load(level.background_path), {}, $BackgroundScene, true)
 	$BackgroundScene.position.x = level.background_position
+	%GameStartCountdown.start_count_down()
 
 func _on_go_back_btn_pressed() -> void:
 	SMS.change_scene(load(GC.SCREENS_UIDS.MAIN_MENU))

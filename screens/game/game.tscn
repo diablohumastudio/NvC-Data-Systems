@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://c2b4jldseu5vs"]
+[gd_scene load_steps=16 format=3 uid="uid://c2b4jldseu5vs"]
 
 [ext_resource type="Script" uid="uid://bvalrtinik0vd" path="res://screens/game/game.gd" id="1_eyx8b"]
 [ext_resource type="PackedScene" uid="uid://b4nna6eulgfw" path="res://screens/game/components/allies_selector/allies_selector.tscn" id="2_khowf"]
 [ext_resource type="PackedScene" uid="uid://ckfpk4nd44775" path="res://screens/game/components/background_scene/background_scene.tscn" id="2_lvnyp"]
+[ext_resource type="PackedScene" uid="uid://ca3r71n17u75p" path="res://screens/game/components/game_start_countdown/game_start_countdown.tscn" id="3_a032w"]
 [ext_resource type="PackedScene" uid="uid://bepu7cd0ik6av" path="res://screens/game/components/level_name_presenter/level_name_presenter.tscn" id="3_kc255"]
 [ext_resource type="PackedScene" uid="uid://catyyevb26p6e" path="res://screens/game/components/terrain_grid/terrain_grid_cell/terrain_grid.tscn" id="4_18b3j"]
 [ext_resource type="PackedScene" uid="uid://dm2l1uxm8jud0" path="res://screens/game/debug_components/dbug_killed_enemies_hud/dbug_killed_enemies_hud.tscn" id="5_2v4l3"]
@@ -26,6 +27,11 @@ script = ExtResource("1_eyx8b")
 
 [node name="BackgroundScene" parent="." instance=ExtResource("2_lvnyp")]
 unique_name_in_owner = true
+layout_mode = 1
+
+[node name="GameStartCountdown" parent="." instance=ExtResource("3_a032w")]
+unique_name_in_owner = true
+visible = false
 layout_mode = 1
 
 [node name="LevelNamePresenter" parent="." instance=ExtResource("3_kc255")]
