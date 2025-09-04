@@ -11,6 +11,10 @@ func _ready() -> void:
 	SMS.change_scene(load(level.background_path), {}, $BackgroundScene, true)
 	$BackgroundScene.position.x = level.background_position
 	%GameStartCountdown.start_count_down()
+	GSS.enemy_reached_last_column.connect(on_enemy_reach_last_column)
+
+func on_enemy_reach_last_column():
+	print("verch, perdi")
 
 func _on_go_back_btn_pressed() -> void:
 	SMS.change_scene(load(GC.SCREENS_UIDS.MAIN_MENU))

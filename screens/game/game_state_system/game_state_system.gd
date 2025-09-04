@@ -8,6 +8,7 @@ signal animation_trigered(animation_type: ANIMATION_TYPES)
 signal balance_changed(balance: int)
 signal _removing_ally_state_changed(state: bool)
 signal star_countdown_finished
+signal enemy_reached_last_column
 
 enum ANIMATION_TYPES {
 	INITIAL_STATE,
