@@ -1,12 +1,14 @@
 class_name AchievementsScr extends Control
 
+const achievement_achieved_presenter_pksc: PackedScene = preload("uid://dp353oa1f38v3")
+
 func _ready() -> void:
 	var achievements: Array[AchievementData]
 	achievements = DataFilesLoader.get_achievements_from_res_files()
 	for child in %AchievementsList.get_children():
 		child.queue_free()
 	for achievement in achievements:
-		var new_achievement_presenter: AchievementPresenter = load("res://screens/achievements_scr/achievement_presenter/achievement_presenter.tscn").instantiate()
+		var new_achievement_presenter: AchievementPresenter = achievement_achieved_presenter_pksc.instantiate()
 		new_achievement_presenter.achievement = achievement
 		%AchievementsList.add_child(new_achievement_presenter)
 

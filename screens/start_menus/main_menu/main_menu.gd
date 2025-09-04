@@ -7,6 +7,7 @@ var _entering_from_worlds_map_menu: bool = false
 
 func _ready():
 	AudioSystem.post_event(AK.EVENTS.SET_MUSIC_SC_MAIN_MENU)
+	%AccountAndAchievementsPopup.closed.connect(_on_account_and_achivemens_popup)
 
 func _sms_initialize():
 	if _entering_from_about_menu:
@@ -18,6 +19,9 @@ func _sms_initialize():
 	if _entering_from_worlds_map_menu:
 		%MenusTransitionAnimationPlayer.play("goto_worlds_map_menu",-1, -3, true)
 		%InitialAnimationPlayer.play("start_from_games_menu")
+
+func _on_account_and_achivemens_popup():
+	%UserStatsContainer.hide_items()
 
 func _on_go_to_settings_menu_button_pressed():
 	await get_tree().create_timer(0.2).timeout #0.2 is half of start_player "start_pressed" animation conected in button script
@@ -53,9 +57,6 @@ func handle_mobile_go_back():
 		return
 	%InputControl.disable()
 	%ExitPopup.appear()
-
-func _on_exit_popup_hidden():
-	%InputControl.enable()
 
 func _on_user_stats_container_show_account_popup_btn_pressed() -> void:
 	%AccountAndAchievementsPopup.appear()
