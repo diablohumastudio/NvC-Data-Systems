@@ -9,7 +9,7 @@ func _ready() -> void:
 	CELL_PKSC = load("uid://cpt4e3qp1ti4")
 	if !is_inside_tree(): return
 	_set_cells()
-	GSS.star_countdown_finished.connect(start_spawning)
+	if !Engine.is_editor_hint(): GSS.star_countdown_finished.connect(start_spawning)
 
 func start_spawning():
 	var level: LevelData = GSS.level
