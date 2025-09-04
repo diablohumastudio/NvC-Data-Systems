@@ -1,6 +1,6 @@
 class_name Game extends Control
 
-var level: LevelData : set = _set_level
+@export var level: LevelData : set = _set_level
 
 func _set_level(new_value: LevelData) -> void:
 	level = new_value
