@@ -12,7 +12,6 @@ func _ready() -> void:
 
 func _physics_process(delta):
 	_shake_strenght = lerpf(_shake_strenght, 0, _shake_fade_effect * delta)
-	print(_shake_strenght)
 	current_offset = _get_random_offset()
 	animate_node.position = current_offset
 	if _shake_strenght < 0.001: 
