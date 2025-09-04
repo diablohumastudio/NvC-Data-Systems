@@ -150,7 +150,7 @@ tracks/10/keys = {
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
-"method": &"_emit_defense_displayed"
+"method": &"play_defend_level_start_sound"
 }]
 }
 

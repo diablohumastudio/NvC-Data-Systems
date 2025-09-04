@@ -9,4 +9,8 @@ func start_count_down():
 
 func _on_animation_player_animation_finished(_anim_name):
 	visible = false
+	GSS.on_start_countdown_finished()
+
+#called by the animation player so sound is exactly when it should
+func play_defend_level_start_sound():
 	AudioSystem.post_event(AK.EVENTS.PLAY_DEFEND_LEVEL_START)
