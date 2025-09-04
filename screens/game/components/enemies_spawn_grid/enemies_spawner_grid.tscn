@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjay4w6imp8r7"]
+[gd_scene load_steps=2 format=3 uid="uid://cjay4w6imp8r7"]
 
 [ext_resource type="Script" uid="uid://ckvn578vnk6ve" path="res://screens/game/components/enemies_spawn_grid/enemies_spawner_grid.gd" id="1_2ymyl"]
-[ext_resource type="Script" uid="uid://und4yb62nk5n" path="res://screens/game/components/enemies_spawn_grid/enemy_grid_spawn_manager.gd" id="2_iddo3"]
 
 [node name="EnemiesSpawnersGrid" type="CenterContainer"]
 script = ExtResource("1_2ymyl")
@@ -9,12 +8,6 @@ columns = 2
 rows = 5
 cell_width_px = 175
 cell_heigth_px = 175
-
-[node name="EnemyGridSpawnManager" type="Node" parent="." node_paths=PackedStringArray("enemies_spawners_grid")]
-unique_name_in_owner = true
-script = ExtResource("2_iddo3")
-enemies_spawners_grid = NodePath("..")
-metadata/_custom_type_script = "uid://und4yb62nk5n"
 
 [node name="CellsContainer" type="GridContainer" parent="."]
 unique_name_in_owner = true
