@@ -14,7 +14,11 @@ func _ready() -> void:
 	GSS.enemy_reached_last_column.connect(on_enemy_reach_last_column)
 
 func on_enemy_reach_last_column():
-	print("verch, perdi")
+	disable_process.call_deferred()
+	%GameOverPopup.show()
+
+func disable_process(): 
+	process_mode = Node.PROCESS_MODE_DISABLED
 
 func _on_go_back_btn_pressed() -> void:
 	SMS.change_scene(load(GC.SCREENS_UIDS.MAIN_MENU))

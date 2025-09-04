@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c2b4jldseu5vs"]
+[gd_scene load_steps=19 format=3 uid="uid://c2b4jldseu5vs"]
 
 [ext_resource type="Script" uid="uid://bvalrtinik0vd" path="res://screens/game/game.gd" id="1_eyx8b"]
 [ext_resource type="Resource" uid="uid://c0580eyighege" path="res://data/levels/data/level_2p.tres" id="2_by56y"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://doqxafbxr50re" path="res://screens/game/debug_components/dbug_balance_change_hud/dbug_balance_change_hud.tscn" id="13_lovpr"]
 [ext_resource type="PackedScene" uid="uid://dud1ujrys61qg" path="res://screens/game/components/balance_displayer/balance_displayer.tscn" id="13_ou2j6"]
 [ext_resource type="PackedScene" uid="uid://df03qm0on10kk" path="res://screens/game/components/last_column_enemy_detectors/last_column_enemy_detectors.tscn" id="17_y2n64"]
+[ext_resource type="PackedScene" uid="uid://6xhrmrplu0ha" path="res://screens/game/pop_ups/game_over_popup/game_over_popup.tscn" id="18_n6j5y"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -156,6 +157,20 @@ offset_bottom = 150.0
 
 [node name="LastColumnEnemyDetectors" parent="." instance=ExtResource("17_y2n64")]
 position = Vector2(1431, 3)
+
+[node name="popups" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GameOverPopup" parent="popups" instance=ExtResource("18_n6j5y")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+offset_left = 419.0
+offset_top = 183.0
+offset_right = 379.0
+offset_bottom = 143.0
 
 [connection signal="pressed" from="GoBackBtn" to="." method="_on_go_back_btn_pressed"]
 [connection signal="pressed" from="GoBackToTestBtn" to="." method="_on_go_back_to_test_btn_pressed"]

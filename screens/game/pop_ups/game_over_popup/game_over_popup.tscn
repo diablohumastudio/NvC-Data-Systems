@@ -1,0 +1,297 @@
+[gd_scene load_steps=20 format=3 uid="uid://6xhrmrplu0ha"]
+
+[ext_resource type="Script" uid="uid://dmpfbpry8k674" path="res://screens/game/pop_ups/game_over_popup/game_over_popup.gd" id="1_pivp5"]
+[ext_resource type="Shader" uid="uid://boa325ynfrjd4" path="res://global_assets/shaders/perspective_shader.gdshader" id="2_dpi26"]
+[ext_resource type="Texture2D" uid="uid://dim4ogihxnj50" path="res://screens/game/pop_ups/game_over_popup/assets/game_over_popup.png" id="2_pcg4e"]
+[ext_resource type="Texture2D" uid="uid://bsjmy2yya2ryy" path="res://screens/game/pop_ups/game_over_popup/assets/main_menu_button.png" id="3_qlh0f"]
+[ext_resource type="Texture2D" uid="uid://d3fj387i24na8" path="res://screens/game/pop_ups/game_over_popup/assets/main_menu_button_selected.png" id="4_sextl"]
+[ext_resource type="Texture2D" uid="uid://cel3bmflabrwu" path="res://screens/game/pop_ups/game_over_popup/assets/try again_button.png" id="5_cxig5"]
+[ext_resource type="Texture2D" uid="uid://lr87lymbty40" path="res://screens/game/pop_ups/game_over_popup/assets/try again_button_selected.png" id="6_dpi26"]
+[ext_resource type="Script" uid="uid://dxu15e362h623" path="res://screens/game/pop_ups/shake_animation_controller.gd" id="10_72iwg"]
+[ext_resource type="Texture2D" uid="uid://cuvl47v2bj40c" path="res://global_assets/particles/blood_particle_1.png" id="10_so0ke"]
+[ext_resource type="Texture2D" uid="uid://mh6gn6wchrg6" path="res://global_assets/particles/blood_particle_2.png" id="11_yh3yj"]
+[ext_resource type="Texture2D" uid="uid://b3g35fgmhmf86" path="res://global_assets/particles/blood_particle_3.png" id="12_vx1u7"]
+[ext_resource type="Texture2D" uid="uid://dd6op5jmyue5o" path="res://global_assets/particles/blood_particle_4.png" id="13_1gd05"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_so0ke"]
+frames = 4
+frame_0/texture = ExtResource("10_so0ke")
+frame_0/duration = 0.1
+frame_1/texture = ExtResource("11_yh3yj")
+frame_1/duration = 0.1
+frame_2/texture = ExtResource("12_vx1u7")
+frame_2/duration = 0.1
+frame_3/texture = ExtResource("13_1gd05")
+frame_3/duration = 0.1
+
+[sub_resource type="Curve" id="Curve_so0ke"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 2.76405), 0.0, 0.0, 0, 0, Vector2(0.270718, 1.14607), -2.61477, -2.61477, 0, 0, Vector2(1, 0.101124), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_so0ke"]
+offsets = PackedFloat32Array(0, 0.180645, 0.406452, 0.754839, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.423651, 0.423651, 0.423651, 1, 0.711341, 0.711341, 0.711341, 1, 0.427493, 0.427493, 0.427493, 1, 1, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nw8sk"]
+shader = ExtResource("2_dpi26")
+shader_parameter/fov = 90.0
+shader_parameter/cull_back = true
+shader_parameter/y_rot = 0.0
+shader_parameter/x_rot = 0.0
+shader_parameter/inset = 0.0
+
+[sub_resource type="Animation" id="Animation_cnruo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackgroundTexture:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GoToMainMenuButton:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PlayAgainButton:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BackgroundTexture:material:shader_parameter/x_rot")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("BloodParticles:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_we2fo"]
+resource_name = "_appear"
+length = 0.4
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackgroundTexture:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.4, 0.4), Vector2(1, 1), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GoToMainMenuButton:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PlayAgainButton:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ShakeAnimationController")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.15),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"apply_shake"
+}]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("BackgroundTexture:material:shader_parameter/x_rot")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.25, 0.35, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-40.0, 10.0, -7.99999, 4.00001, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BloodParticles:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nhvt5"]
+_data = {
+&"RESET": SubResource("Animation_cnruo"),
+&"_appear": SubResource("Animation_we2fo")
+}
+
+[node name="GameOverPopup" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -857.0
+offset_bottom = -275.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pivp5")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -420.0
+offset_top = -184.0
+offset_right = 1500.0
+offset_bottom = 896.0
+color = Color(0.258241, 0.0316205, 0.0207382, 0.627451)
+
+[node name="BloodParticles" type="CPUParticles2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(516, 757)
+amount = 70
+texture = SubResource("AnimatedTexture_so0ke")
+lifetime = 9.0
+preprocess = 11.0
+emission_shape = 3
+emission_rect_extents = Vector2(1200, 200)
+direction = Vector2(0, -1)
+gravity = Vector2(0, -20)
+initial_velocity_min = 29.7
+initial_velocity_max = 29.7
+scale_amount_curve = SubResource("Curve_so0ke")
+color_ramp = SubResource("Gradient_so0ke")
+
+[node name="BackgroundTexture" type="TextureRect" parent="."]
+process_mode = 3
+material = SubResource("ShaderMaterial_nw8sk")
+layout_mode = 0
+offset_right = 1061.0
+offset_bottom = 805.0
+pivot_offset = Vector2(519, 27)
+texture = ExtResource("2_pcg4e")
+
+[node name="GoToMainMenuButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 441.0
+offset_right = 449.0
+offset_bottom = 556.0
+action_mode = 0
+texture_normal = ExtResource("3_qlh0f")
+texture_pressed = ExtResource("4_sextl")
+texture_hover = ExtResource("4_sextl")
+texture_focused = ExtResource("4_sextl")
+
+[node name="PlayAgainButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 605.0
+offset_top = 436.0
+offset_right = 958.0
+offset_bottom = 552.0
+action_mode = 0
+texture_normal = ExtResource("5_cxig5")
+texture_pressed = ExtResource("6_dpi26")
+texture_hover = ExtResource("6_dpi26")
+texture_focused = ExtResource("6_dpi26")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_nhvt5")
+}
+
+[node name="ShakeAnimationController" type="Node" parent="." node_paths=PackedStringArray("animate_node")]
+script = ExtResource("10_72iwg")
+animate_node = NodePath("../BackgroundTexture")
+_shake_fade_effect = 10.0
+
+[connection signal="pressed" from="GoToMainMenuButton" to="." method="_on_go_to_main_menu_button_pressed"]
+[connection signal="pressed" from="PlayAgainButton" to="." method="_on_play_again_button_pressed"]
