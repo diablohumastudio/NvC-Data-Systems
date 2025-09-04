@@ -23,6 +23,7 @@ grow_vertical = 2
 script = ExtResource("1_eyx8b")
 
 [node name="BackgroundScene" parent="." instance=ExtResource("2_lvnyp")]
+unique_name_in_owner = true
 layout_mode = 1
 
 [node name="LevelNamePresenter" parent="." instance=ExtResource("3_kc255")]

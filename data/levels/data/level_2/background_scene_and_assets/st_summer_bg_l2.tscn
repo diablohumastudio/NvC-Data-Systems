@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dqetx38sx6id8"]
+[gd_scene load_steps=6 format=3 uid="uid://dqetx38sx6id8"]
 
 [ext_resource type="PackedScene" uid="uid://bkhds6kw3t8tq" path="res://data/levels/data/level_1/background_scene_and_assets/st_summer_bg_l1.tscn" id="1_0ghsp"]
-[ext_resource type="Script" uid="uid://btf2ixpob6cdr" path="res://data/levels/data/level_2/st_summer_bg_l2.gd" id="2_yhdo4"]
 [ext_resource type="Texture2D" uid="uid://n2gkbfle7n07" path="res://data/levels/data/level_1/background_scene_and_assets/sprite_frames/assets/first_wave_animation/right_house_detroyed0013.webp" id="3_u4u0l"]
 [ext_resource type="Texture2D" uid="uid://dmy5txfu7dfcl" path="res://data/levels/data/level_1/background_scene_and_assets/sprite_frames/assets/last_wave_animation/fotograma0013.webp" id="4_dy3jb"]
 
@@ -28,7 +27,6 @@ animations = [{
 }]
 
 [node name="BackgroundScene" instance=ExtResource("1_0ghsp")]
-script = ExtResource("2_yhdo4")
 
 [node name="BackgroundObject1" parent="Background" index="2"]
 sprite_frames = SubResource("SpriteFrames_rt8ln")

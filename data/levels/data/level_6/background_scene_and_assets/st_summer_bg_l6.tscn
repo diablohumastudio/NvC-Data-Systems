@@ -1,12 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://com2v2wck60wc"]
+[gd_scene load_steps=12 format=3 uid="uid://com2v2wck60wc"]
 
 [ext_resource type="PackedScene" uid="uid://bkhds6kw3t8tq" path="res://data/levels/data/level_1/background_scene_and_assets/st_summer_bg_l1.tscn" id="1_pcvc5"]
-[ext_resource type="Script" uid="uid://dn0kiwao2b8c2" path="res://data/levels/data/level_6/st_summer_bg_l6.gd" id="2_kyga4"]
-[ext_resource type="Texture2D" uid="uid://c7rfrcimvoqvn" path="res://data/levels/data/level_5/sprite_frames/assets/first_wave_animation/fotograma0019.webp" id="3_jnd4v"]
-[ext_resource type="Texture2D" uid="uid://cadf08cxm88ol" path="res://data/levels/data/level_2/sprite_frames/assets/first_wave_animation/fotograma0013.webp" id="4_orj7s"]
-[ext_resource type="Texture2D" uid="uid://bf4cpqhrpwdu6" path="res://data/levels/data/level_5/sprite_frames/assets/last_wave_animation/fotograma0013.webp" id="5_dq8i0"]
-[ext_resource type="Texture2D" uid="uid://do77e8fpl8c46" path="res://data/levels/data/level_2/sprite_frames/assets/last_wave_animation/fotograma0013.webp" id="6_lvyon"]
-[ext_resource type="Texture2D" uid="uid://bhttm12u4y31j" path="res://data/levels/data/level_3/sprite_frames/assets/last_wave_animation/foreground_house0012.webp" id="7_uyqgw"]
+[ext_resource type="Texture2D" uid="uid://c7rfrcimvoqvn" path="res://data/levels/data/level_5/background_scene_and_assets/sprite_frames/assets/first_wave_animation/fotograma0019.webp" id="3_jnd4v"]
+[ext_resource type="Texture2D" uid="uid://cadf08cxm88ol" path="res://data/levels/data/level_2/background_scene_and_assets/sprite_frames/assets/first_wave_animation/fotograma0013.webp" id="4_orj7s"]
+[ext_resource type="Texture2D" uid="uid://bf4cpqhrpwdu6" path="res://data/levels/data/level_5/background_scene_and_assets/sprite_frames/assets/last_wave_animation/fotograma0013.webp" id="5_dq8i0"]
+[ext_resource type="Texture2D" uid="uid://do77e8fpl8c46" path="res://data/levels/data/level_2/background_scene_and_assets/sprite_frames/assets/last_wave_animation/fotograma0013.webp" id="6_lvyon"]
+[ext_resource type="Texture2D" uid="uid://bhttm12u4y31j" path="res://data/levels/data/level_3/background_scene_and_assets/sprite_frames/assets/last_wave_animation/foreground_house0012.webp" id="7_uyqgw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ovjla"]
 animations = [{
@@ -64,7 +63,6 @@ animations = [{
 }]
 
 [node name="BackgroundScene" instance=ExtResource("1_pcvc5")]
-script = ExtResource("2_kyga4")
 
 [node name="BackgroundObject2" parent="Background" index="1"]
 sprite_frames = SubResource("SpriteFrames_ovjla")

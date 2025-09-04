@@ -1,15 +1,14 @@
-[gd_scene load_steps=19 format=3 uid="uid://db28u74wna61b"]
+[gd_scene load_steps=18 format=3 uid="uid://db28u74wna61b"]
 
 [ext_resource type="PackedScene" uid="uid://bkhds6kw3t8tq" path="res://data/levels/data/level_1/background_scene_and_assets/st_summer_bg_l1.tscn" id="1_2xtkp"]
-[ext_resource type="Script" uid="uid://diyedjpnbwtiw" path="res://data/levels/data/level_10/st_summer_bg_l10.gd" id="2_fiuku"]
-[ext_resource type="Texture2D" uid="uid://fyvxwf1x518h" path="res://data/levels/data/level_6/sprite_frames/assets/last_wave_animation/fotograma0013.webp" id="3_bjhxr"]
-[ext_resource type="Texture2D" uid="uid://bph01fn4b8661" path="res://data/levels/data/level_9/sprite_frames/assets/first_wave_animation/fotograma0021.webp" id="3_fuyxg"]
-[ext_resource type="Texture2D" uid="uid://do77e8fpl8c46" path="res://data/levels/data/level_2/sprite_frames/assets/last_wave_animation/fotograma0013.webp" id="4_1k4hu"]
-[ext_resource type="Texture2D" uid="uid://cadf08cxm88ol" path="res://data/levels/data/level_2/sprite_frames/assets/first_wave_animation/fotograma0013.webp" id="4_e5hr0"]
-[ext_resource type="Texture2D" uid="uid://bgr8c50500pdu" path="res://data/levels/data/level_7/sprite_frames/assets/first_wave_animation/fotograma0018.webp" id="4_jisds"]
-[ext_resource type="Texture2D" uid="uid://bivgyfmqkx6t7" path="res://data/levels/data/level_9/sprite_frames/assets/last_wave_animation/fotograma0020.webp" id="6_qo4d6"]
-[ext_resource type="Texture2D" uid="uid://3gnot68x5lhj" path="res://data/levels/data/level_7/sprite_frames/assets/last_wave_animation/trees_foreground_dead.webp" id="8_cfgn6"]
-[ext_resource type="Texture2D" uid="uid://bhttm12u4y31j" path="res://data/levels/data/level_3/sprite_frames/assets/last_wave_animation/foreground_house0012.webp" id="8_s2ifj"]
+[ext_resource type="Texture2D" uid="uid://fyvxwf1x518h" path="res://data/levels/data/level_6/background_scene_and_assets/sprite_frames/assets/last_wave_animation/fotograma0013.webp" id="3_bjhxr"]
+[ext_resource type="Texture2D" uid="uid://bph01fn4b8661" path="res://data/levels/data/level_9/background_scene_and_assets/sprite_frames/assets/first_wave_animation/fotograma0021.webp" id="3_fuyxg"]
+[ext_resource type="Texture2D" uid="uid://do77e8fpl8c46" path="res://data/levels/data/level_2/background_scene_and_assets/sprite_frames/assets/last_wave_animation/fotograma0013.webp" id="4_1k4hu"]
+[ext_resource type="Texture2D" uid="uid://cadf08cxm88ol" path="res://data/levels/data/level_2/background_scene_and_assets/sprite_frames/assets/first_wave_animation/fotograma0013.webp" id="4_e5hr0"]
+[ext_resource type="Texture2D" uid="uid://bgr8c50500pdu" path="res://data/levels/data/level_7/background_scene_and_assets/sprite_frames/assets/first_wave_animation/fotograma0018.webp" id="4_jisds"]
+[ext_resource type="Texture2D" uid="uid://bivgyfmqkx6t7" path="res://data/levels/data/level_9/background_scene_and_assets/sprite_frames/assets/last_wave_animation/fotograma0020.webp" id="6_qo4d6"]
+[ext_resource type="Texture2D" uid="uid://3gnot68x5lhj" path="res://data/levels/data/level_7/background_scene_and_assets/sprite_frames/assets/last_wave_animation/trees_foreground_dead.webp" id="8_cfgn6"]
+[ext_resource type="Texture2D" uid="uid://bhttm12u4y31j" path="res://data/levels/data/level_3/background_scene_and_assets/sprite_frames/assets/last_wave_animation/foreground_house0012.webp" id="8_s2ifj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gx1qb"]
 animations = [{
@@ -100,7 +99,6 @@ animations = [{
 }]
 
 [node name="BackgroundScene" instance=ExtResource("1_2xtkp")]
-script = ExtResource("2_fiuku")
 
 [node name="BackgroundObject3" parent="Background" index="0"]
 sprite_frames = SubResource("SpriteFrames_gx1qb")

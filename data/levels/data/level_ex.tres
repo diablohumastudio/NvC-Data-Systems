@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="Level" load_steps=5 format=3 uid="uid://bxydxjqj1kqm8"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=5 format=3 uid="uid://bxydxjqj1kqm8"]
 
 [ext_resource type="Script" uid="uid://sukboetqeqqg" path="res://data/levels/model/level_data.gd" id="1_4chq5"]
-[ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://global_systems/data_systems/action_condition_system/condition.gd" id="1_cl1w6"]
+[ext_resource type="Script" path="res://global_systems/data_systems/action_condition_system/condition.gd" id="1_cl1w6"]
 [ext_resource type="Resource" uid="uid://dr8x0p2einy6a" path="res://global_systems/data_systems/action_condition_system/conditions/data/cond_lv_compl_lv_1.tres" id="2_uy7d0"]
 [ext_resource type="Resource" uid="uid://c2fdve1l4yaob" path="res://global_systems/data_systems/action_condition_system/conditions/data/cond_enem_killd_tot_5.tres" id="3_qfvbt"]
 
@@ -11,4 +11,5 @@ id = 4
 level_name = "lvl ex"
 conditions = Array[ExtResource("1_cl1w6")]([ExtResource("2_uy7d0"), ExtResource("3_qfvbt")])
 unlockd_by_default = false
+background_path = "uid://com2v2wck60wc"
 metadata/_custom_type_script = "uid://sukboetqeqqg"

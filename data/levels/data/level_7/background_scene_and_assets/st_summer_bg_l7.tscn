@@ -1,12 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://sj10tfpx3620"]
+[gd_scene load_steps=11 format=3 uid="uid://sj10tfpx3620"]
 
 [ext_resource type="PackedScene" uid="uid://bkhds6kw3t8tq" path="res://data/levels/data/level_1/background_scene_and_assets/st_summer_bg_l1.tscn" id="1_itfvw"]
-[ext_resource type="Script" uid="uid://cn6uidp7twgwe" path="res://data/levels/data/level_7/st_summer_bg_l7.gd" id="2_ynwdm"]
-[ext_resource type="Texture2D" uid="uid://ckbymrs8fvtoo" path="res://data/levels/data/level_6/sprite_frames/assets/first_wave_animation/fotograma0013.webp" id="3_xnnv6"]
-[ext_resource type="Texture2D" uid="uid://cadf08cxm88ol" path="res://data/levels/data/level_2/sprite_frames/assets/first_wave_animation/fotograma0013.webp" id="4_1vnmy"]
+[ext_resource type="Texture2D" uid="uid://ckbymrs8fvtoo" path="res://data/levels/data/level_6/background_scene_and_assets/sprite_frames/assets/first_wave_animation/fotograma0013.webp" id="3_xnnv6"]
+[ext_resource type="Texture2D" uid="uid://cadf08cxm88ol" path="res://data/levels/data/level_2/background_scene_and_assets/sprite_frames/assets/first_wave_animation/fotograma0013.webp" id="4_1vnmy"]
 [ext_resource type="SpriteFrames" uid="uid://bwolwmif2p7ql" path="res://data/levels/data/shared_assets/middleground_initial_state_after_stage_2.tres" id="5_y56eu"]
-[ext_resource type="Texture2D" uid="uid://do77e8fpl8c46" path="res://data/levels/data/level_2/sprite_frames/assets/last_wave_animation/fotograma0013.webp" id="6_gagp0"]
-[ext_resource type="Texture2D" uid="uid://bhttm12u4y31j" path="res://data/levels/data/level_3/sprite_frames/assets/last_wave_animation/foreground_house0012.webp" id="7_jpacw"]
+[ext_resource type="Texture2D" uid="uid://do77e8fpl8c46" path="res://data/levels/data/level_2/background_scene_and_assets/sprite_frames/assets/last_wave_animation/fotograma0013.webp" id="6_gagp0"]
+[ext_resource type="Texture2D" uid="uid://bhttm12u4y31j" path="res://data/levels/data/level_3/background_scene_and_assets/sprite_frames/assets/last_wave_animation/foreground_house0012.webp" id="7_jpacw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_otdwp"]
 animations = [{
@@ -53,7 +52,6 @@ animations = [{
 }]
 
 [node name="BackgroundScene" instance=ExtResource("1_itfvw")]
-script = ExtResource("2_ynwdm")
 
 [node name="BackgroundObject2" parent="Background" index="1"]
 sprite_frames = SubResource("SpriteFrames_otdwp")

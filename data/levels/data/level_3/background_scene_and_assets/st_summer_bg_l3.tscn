@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://c42gtusd75k1w"]
+[gd_scene load_steps=6 format=3 uid="uid://c42gtusd75k1w"]
 
 [ext_resource type="PackedScene" uid="uid://bkhds6kw3t8tq" path="res://data/levels/data/level_1/background_scene_and_assets/st_summer_bg_l1.tscn" id="1_3ymie"]
-[ext_resource type="Script" uid="uid://bxrecvfja3fai" path="res://data/levels/data/level_3/st_summer_bg_l3.gd" id="2_oaon2"]
-[ext_resource type="Texture2D" uid="uid://cadf08cxm88ol" path="res://data/levels/data/level_2/sprite_frames/assets/first_wave_animation/fotograma0013.webp" id="3_mkwtp"]
-[ext_resource type="Texture2D" uid="uid://do77e8fpl8c46" path="res://data/levels/data/level_2/sprite_frames/assets/last_wave_animation/fotograma0013.webp" id="4_6d1ek"]
+[ext_resource type="Texture2D" uid="uid://cadf08cxm88ol" path="res://data/levels/data/level_2/background_scene_and_assets/sprite_frames/assets/first_wave_animation/fotograma0013.webp" id="3_mkwtp"]
+[ext_resource type="Texture2D" uid="uid://do77e8fpl8c46" path="res://data/levels/data/level_2/background_scene_and_assets/sprite_frames/assets/last_wave_animation/fotograma0013.webp" id="4_6d1ek"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8x3sk"]
 animations = [{
@@ -28,7 +27,6 @@ animations = [{
 }]
 
 [node name="BackgroundScene" instance=ExtResource("1_3ymie")]
-script = ExtResource("2_oaon2")
 
 [node name="BackgroundObject1" parent="Background" index="2"]
 sprite_frames = SubResource("SpriteFrames_8x3sk")

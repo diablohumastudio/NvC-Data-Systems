@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://ceu67j76wor5a"]
+[gd_scene load_steps=8 format=3 uid="uid://ceu67j76wor5a"]
 
 [ext_resource type="PackedScene" uid="uid://bkhds6kw3t8tq" path="res://data/levels/data/level_1/background_scene_and_assets/st_summer_bg_l1.tscn" id="1_q166n"]
-[ext_resource type="Script" uid="uid://bg11akbjwmrs0" path="res://data/levels/data/level_4/st_summer_bg_l4.gd" id="2_ojrid"]
-[ext_resource type="Texture2D" uid="uid://ldqmwtjxytrn" path="res://data/levels/data/level_3/sprite_frames/assets/first_wave_animation/low_floor_destroyed_0012.webp" id="3_ytfyw"]
-[ext_resource type="Texture2D" uid="uid://bhttm12u4y31j" path="res://data/levels/data/level_3/sprite_frames/assets/last_wave_animation/foreground_house0012.webp" id="4_ahrmu"]
-[ext_resource type="Texture2D" uid="uid://do77e8fpl8c46" path="res://data/levels/data/level_2/sprite_frames/assets/last_wave_animation/fotograma0013.webp" id="4_kcsde"]
+[ext_resource type="Texture2D" uid="uid://ldqmwtjxytrn" path="res://data/levels/data/level_3/background_scene_and_assets/sprite_frames/assets/first_wave_animation/low_floor_destroyed_0012.webp" id="3_ytfyw"]
+[ext_resource type="Texture2D" uid="uid://bhttm12u4y31j" path="res://data/levels/data/level_3/background_scene_and_assets/sprite_frames/assets/last_wave_animation/foreground_house0012.webp" id="4_ahrmu"]
+[ext_resource type="Texture2D" uid="uid://do77e8fpl8c46" path="res://data/levels/data/level_2/background_scene_and_assets/sprite_frames/assets/last_wave_animation/fotograma0013.webp" id="4_kcsde"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4vbrt"]
 animations = [{
@@ -40,7 +39,6 @@ animations = [{
 }]
 
 [node name="BackgroundScene" instance=ExtResource("1_q166n")]
-script = ExtResource("2_ojrid")
 
 [node name="BackgroundObject2" parent="Background" index="1"]
 action_type = 1
