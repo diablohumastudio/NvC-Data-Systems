@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c2b4jldseu5vs"]
+[gd_scene load_steps=15 format=3 uid="uid://c2b4jldseu5vs"]
 
 [ext_resource type="Script" uid="uid://bvalrtinik0vd" path="res://screens/game/game.gd" id="1_eyx8b"]
 [ext_resource type="PackedScene" uid="uid://b4nna6eulgfw" path="res://screens/game/components/allies_selector/allies_selector.tscn" id="2_khowf"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://cafe6vrkyihc5" path="res://screens/game/debug_components/dbug_win_btn/dbug_win_btn.tscn" id="6_cpxdg"]
 [ext_resource type="PackedScene" uid="uid://3p1rfa3f7you" path="res://screens/game/components/game_won_pop_up/game_won_pop_up.tscn" id="9_18b3j"]
 [ext_resource type="PackedScene" uid="uid://bj0wscnker5f" path="res://screens/game/debug_components/dbug_trigger_animation_hud/dbug_trigger_animation_hud.tscn" id="12_ou2j6"]
+[ext_resource type="PackedScene" uid="uid://doqxafbxr50re" path="res://screens/game/debug_components/dbug_balance_change_hud/dbug_balance_change_hud.tscn" id="13_lovpr"]
+[ext_resource type="PackedScene" uid="uid://dud1ujrys61qg" path="res://screens/game/components/balance_displayer/balance_displayer.tscn" id="13_ou2j6"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -94,8 +96,10 @@ offset_bottom = 872.0
 
 [node name="DbugComponents" type="Control" parent="."]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -296.0
+offset_top = 11.0
+offset_right = -256.0
+offset_bottom = 51.0
 
 [node name="DbugCanonHUD" parent="DbugComponents" instance=ExtResource("5_uain1")]
 layout_mode = 0
@@ -126,6 +130,20 @@ offset_top = 11.0
 offset_right = 1022.0
 offset_bottom = 74.0
 theme_override_font_sizes/font_size = 40
+
+[node name="DbugBalanceChangeHud" parent="DbugComponents" instance=ExtResource("13_lovpr")]
+layout_mode = 0
+offset_left = 996.0
+offset_top = 127.0
+offset_right = 1270.0
+offset_bottom = 245.0
+
+[node name="BalanceDisplayer" parent="." instance=ExtResource("13_ou2j6")]
+layout_mode = 0
+offset_left = 1603.0
+offset_top = 23.0
+offset_right = 1883.0
+offset_bottom = 150.0
 
 [connection signal="pressed" from="GoBackBtn" to="." method="_on_go_back_btn_pressed"]
 [connection signal="pressed" from="GoBackToTestBtn" to="." method="_on_go_back_to_test_btn_pressed"]

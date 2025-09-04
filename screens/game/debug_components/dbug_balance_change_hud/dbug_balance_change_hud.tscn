@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://doqxafbxr50re"]
+
+[ext_resource type="Script" uid="uid://dl64p48dvly33" path="res://screens/game/debug_components/dbug_balance_change_hud/dbug_balance_change_hud.gd" id="1_hc2bb"]
+
+[node name="DbugBalanceChangeHud" type="HBoxContainer"]
+script = ExtResource("1_hc2bb")
+
+[node name="Add50Btn" type="Button" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "+50"
+
+[node name="Remove50Btn" type="Button" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "-50"
+
+[connection signal="pressed" from="Add50Btn" to="." method="_on_add_50_btn_pressed"]
+[connection signal="pressed" from="Remove50Btn" to="." method="_on_remove_50_btn_pressed"]
