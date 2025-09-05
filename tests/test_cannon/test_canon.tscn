@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://bp3bur5mrkwxu"]
+
+[ext_resource type="Script" uid="uid://b4fkbgry52ksd" path="res://tests/test_cannon/test_canon.gd" id="1_831x3"]
+[ext_resource type="PackedScene" uid="uid://b7iygktoqf3th" path="res://screens/game/components/row_cannons/row_cannon/row_cannon.tscn" id="1_jyeju"]
+
+[node name="TestCanon" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_831x3")
+
+[node name="RowCannon" parent="." instance=ExtResource("1_jyeju")]
+unique_name_in_owner = true
+position = Vector2(353, 485)
+
+[node name="ShootBtn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 729.0
+offset_right = 521.0
+offset_bottom = 900.0
+theme_override_font_sizes/font_size = 50
+text = "shoot"
+
+[connection signal="pressed" from="ShootBtn" to="." method="_on_shoot_btn_pressed"]

@@ -9,6 +9,7 @@ signal balance_changed(balance: int)
 signal _removing_ally_state_changed(state: bool)
 signal star_countdown_finished
 signal enemy_reached_last_column
+signal cannon_shooted(canon: Cannon)
 
 enum ANIMATION_TYPES {
 	INITIAL_STATE,

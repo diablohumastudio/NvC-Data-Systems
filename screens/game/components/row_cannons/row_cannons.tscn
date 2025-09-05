@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://qftq3cyiybja" path="res://screens/game/components/row_cannons/row_cannons.gd" id="1_gc3oc"]
 [ext_resource type="PackedScene" uid="uid://b7iygktoqf3th" path="res://screens/game/components/row_cannons/row_cannon/row_cannon.tscn" id="2_ua8t6"]
 
-[node name="RowCannons" type="VBoxContainer"]
+[node name="Cannons" type="VBoxContainer"]
 theme_override_constants/separation = 176
 script = ExtResource("1_gc3oc")
 

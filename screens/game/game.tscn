@@ -175,10 +175,10 @@ offset_bottom = 143.0
 
 [node name="RowCannons" parent="." instance=ExtResource("19_1jmhe")]
 layout_mode = 0
-offset_left = 1432.0
-offset_top = 215.0
-offset_right = 1432.0
-offset_bottom = 215.0
+offset_left = 736.0
+offset_top = 239.0
+offset_right = 736.0
+offset_bottom = 239.0
 
 [connection signal="pressed" from="GoBackBtn" to="." method="_on_go_back_btn_pressed"]
 [connection signal="pressed" from="GoBackToTestBtn" to="." method="_on_go_back_to_test_btn_pressed"]

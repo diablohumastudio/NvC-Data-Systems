@@ -1,15 +1,12 @@
-class_name RowCannons extends VBoxContainer
+class_name Cannons extends VBoxContainer
 
-signal row_cannon_used(row_cannon_index:int)
-
-var playable_rows : Array[int] = [1,2,3,4,5]
+var playable_rows : Array[int] = [0,1,2,3,4]
 
 func _ready() -> void:
-	for ii in get_children().size():
-		var cannon: RowCannon = get_child(ii)
-		if !playable_rows.has(ii):
-			cannon.is_active = false
+	_set_cannons_on_playable_rows()
 
-func display_all_row_cannons():
-	for row_cannon: RowCannon in get_children():
-		row_cannon.is_active = true
+func _set_cannons_on_playable_rows():
+	for ii in get_children().size():
+		var cannon: Cannon = get_child(ii)
+		if !playable_rows.has(ii):
+			cannon.visible = false
