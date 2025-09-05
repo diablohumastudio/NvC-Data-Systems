@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdr08hlqbnt41"]
+
+[ext_resource type="Texture2D" uid="uid://nw13v7fixxtw" path="res://global_assets/particles/shoot_particles/textures/circle_particle.png" id="1_yatdr"]
+
+[sub_resource type="Curve" id="Curve_tsxu7"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.292593, 0.6), 0.334749, 0.334749, 0, 0, Vector2(1, 0), -1.44907, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_7tfci"]
+offsets = PackedFloat32Array(0, 0.225806, 0.36129, 0.767742, 1)
+colors = PackedColorArray(2, 2, 2, 0.503, 0.470042, 0.197069, 3.34822e-07, 0.951049, 0.988092, 0.667682, 1.54018e-06, 0.774826, 0.997529, 0.671673, 0.466779, 0.895, 1, 0.410216, 0.398177, 0.607843)
+
+[node name="ShootParticles" type="CPUParticles2D"]
+emitting = false
+amount = 20
+texture = ExtResource("1_yatdr")
+lifetime = 0.4
+one_shot = true
+explosiveness = 0.8
+randomness = 0.34
+emission_shape = 1
+emission_sphere_radius = 1.0
+spread = 29.04
+gravity = Vector2(0, 200)
+initial_velocity_min = 265.57
+initial_velocity_max = 265.57
+linear_accel_min = 74.14
+linear_accel_max = 74.14
+scale_amount_curve = SubResource("Curve_tsxu7")
+color_ramp = SubResource("Gradient_7tfci")

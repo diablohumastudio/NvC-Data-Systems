@@ -8,10 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://cel3bmflabrwu" path="res://screens/game/pop_ups/game_over_popup/assets/try again_button.png" id="5_cxig5"]
 [ext_resource type="Texture2D" uid="uid://lr87lymbty40" path="res://screens/game/pop_ups/game_over_popup/assets/try again_button_selected.png" id="6_dpi26"]
 [ext_resource type="Script" uid="uid://dxu15e362h623" path="res://screens/game/pop_ups/shake_animation_controller.gd" id="10_72iwg"]
-[ext_resource type="Texture2D" uid="uid://cuvl47v2bj40c" path="res://global_assets/particles/blood_particle_1.png" id="10_so0ke"]
-[ext_resource type="Texture2D" uid="uid://mh6gn6wchrg6" path="res://global_assets/particles/blood_particle_2.png" id="11_yh3yj"]
-[ext_resource type="Texture2D" uid="uid://b3g35fgmhmf86" path="res://global_assets/particles/blood_particle_3.png" id="12_vx1u7"]
-[ext_resource type="Texture2D" uid="uid://dd6op5jmyue5o" path="res://global_assets/particles/blood_particle_4.png" id="13_1gd05"]
+[ext_resource type="Texture2D" uid="uid://cuvl47v2bj40c" path="res://global_assets/particles/blood_particles_textures/blood_particle_1.png" id="10_so0ke"]
+[ext_resource type="Texture2D" uid="uid://mh6gn6wchrg6" path="res://global_assets/particles/blood_particles_textures/blood_particle_2.png" id="11_yh3yj"]
+[ext_resource type="Texture2D" uid="uid://b3g35fgmhmf86" path="res://global_assets/particles/blood_particles_textures/blood_particle_3.png" id="12_vx1u7"]
+[ext_resource type="Texture2D" uid="uid://dd6op5jmyue5o" path="res://global_assets/particles/blood_particles_textures/blood_particle_4.png" id="13_1gd05"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_so0ke"]
 frames = 4

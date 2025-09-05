@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cuvl47v2bj40c"
-path="res://.godot/imported/blood_particle_1.png-b1a154eb5c242b6884932af4f45b9111.ctex"
+uid="uid://b3g35fgmhmf86"
+path="res://.godot/imported/blood_particle_3.png-71b82ace9589334a6148d0c277c20ba0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://global_assets/particles/blood_particle_1.png"
-dest_files=["res://.godot/imported/blood_particle_1.png-b1a154eb5c242b6884932af4f45b9111.ctex"]
+source_file="res://global_assets/particles/blood_particles_textures/blood_particle_3.png"
+dest_files=["res://.godot/imported/blood_particle_3.png-71b82ace9589334a6148d0c277c20ba0.ctex"]
 
 [params]
 

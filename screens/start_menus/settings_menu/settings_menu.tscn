@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bup2auvskbp14" path="res://screens/start_menus/settings_menu/settings_menu.gd" id="1_ek6l5"]
 [ext_resource type="Texture2D" uid="uid://baj3lloqlxev0" path="res://screens/start_menus/settings_menu/assets/settings_menu_bg.png" id="2_6g4gv"]
-[ext_resource type="Texture2D" uid="uid://dy5tlctbsbkcg" path="res://global_assets/go_back_button.png" id="3_g3soe"]
-[ext_resource type="Texture2D" uid="uid://xollcxmkscnt" path="res://global_assets/go_back_button_selected.png" id="4_40cua"]
-[ext_resource type="Texture2D" uid="uid://6dersyppynfl" path="res://global_assets/go_back_glow.png" id="7_eyf2q"]
+[ext_resource type="Texture2D" uid="uid://dy5tlctbsbkcg" path="res://global_assets/go_back_btn_textures/go_back_button.png" id="3_g3soe"]
+[ext_resource type="Texture2D" uid="uid://xollcxmkscnt" path="res://global_assets/go_back_btn_textures/go_back_button_selected.png" id="4_40cua"]
+[ext_resource type="Texture2D" uid="uid://6dersyppynfl" path="res://global_assets/go_back_btn_textures/go_back_glow.png" id="7_eyf2q"]
 [ext_resource type="PackedScene" uid="uid://b2j7arinrit4c" path="res://screens/start_menus/settings_menu/flag_vertical_slider/flag_vertical_slider.tscn" id="8_7ci4u"]
 [ext_resource type="Texture2D" uid="uid://lh54jhx07lel" path="res://screens/start_menus/settings_menu/assets/settings_sign.png" id="8_wfsem"]
 [ext_resource type="Texture2D" uid="uid://bejbohf5y5gy7" path="res://screens/start_menus/settings_menu/assets/sfx_flag_2.png" id="9_q6wvy"]

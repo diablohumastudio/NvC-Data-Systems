@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xollcxmkscnt"
-path="res://.godot/imported/go_back_button_selected.png-0dd9e8e19625778dd78dc69494cba86f.ctex"
+uid="uid://6dersyppynfl"
+path="res://.godot/imported/go_back_glow.png-f0f06dabca3f954e9e3b5bea55d791dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://global_assets/go_back_button_selected.png"
-dest_files=["res://.godot/imported/go_back_button_selected.png-0dd9e8e19625778dd78dc69494cba86f.ctex"]
+source_file="res://global_assets/go_back_btn_textures/go_back_glow.png"
+dest_files=["res://.godot/imported/go_back_glow.png-f0f06dabca3f954e9e3b5bea55d791dc.ctex"]
 
 [params]
 
