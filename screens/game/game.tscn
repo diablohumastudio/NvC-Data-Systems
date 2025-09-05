@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c2b4jldseu5vs"]
+[gd_scene load_steps=20 format=3 uid="uid://c2b4jldseu5vs"]
 
 [ext_resource type="Script" uid="uid://bvalrtinik0vd" path="res://screens/game/game.gd" id="1_eyx8b"]
 [ext_resource type="Resource" uid="uid://c0580eyighege" path="res://data/levels/data/level_2p.tres" id="2_by56y"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://dud1ujrys61qg" path="res://screens/game/components/balance_displayer/balance_displayer.tscn" id="13_ou2j6"]
 [ext_resource type="PackedScene" uid="uid://df03qm0on10kk" path="res://screens/game/components/last_column_enemy_detectors/last_column_enemy_detectors.tscn" id="17_y2n64"]
 [ext_resource type="PackedScene" uid="uid://6xhrmrplu0ha" path="res://screens/game/pop_ups/game_over_popup/game_over_popup.tscn" id="18_n6j5y"]
+[ext_resource type="PackedScene" uid="uid://c8ja2opfaohj7" path="res://screens/game/components/row_cannons/row_cannons.tscn" id="19_1jmhe"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -156,7 +157,7 @@ offset_right = 1883.0
 offset_bottom = 150.0
 
 [node name="LastColumnEnemyDetectors" parent="." instance=ExtResource("17_y2n64")]
-position = Vector2(1431, 3)
+position = Vector2(235, -2)
 
 [node name="popups" type="Control" parent="."]
 anchors_preset = 0
@@ -171,6 +172,13 @@ offset_left = 419.0
 offset_top = 183.0
 offset_right = 379.0
 offset_bottom = 143.0
+
+[node name="RowCannons" parent="." instance=ExtResource("19_1jmhe")]
+layout_mode = 0
+offset_left = 1432.0
+offset_top = 215.0
+offset_right = 1432.0
+offset_bottom = 215.0
 
 [connection signal="pressed" from="GoBackBtn" to="." method="_on_go_back_btn_pressed"]
 [connection signal="pressed" from="GoBackToTestBtn" to="." method="_on_go_back_to_test_btn_pressed"]
