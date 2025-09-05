@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yet7rp3hbocb"
-path="res://.godot/imported/top_metal_piece.png-a45a47e35f2992cb8785ca123ccd9c20.ctex"
+uid="uid://b7mvuu33dgcl0"
+path="res://.godot/imported/top_pipe.png-b30bf82e5a45fb5272f00a0d1be944b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://screens/game/components/row_cannons/row_cannon/assets/top_metal_piece.png"
-dest_files=["res://.godot/imported/top_metal_piece.png-a45a47e35f2992cb8785ca123ccd9c20.ctex"]
+source_file="res://screens/game/components/cannons/cannon/assets/top_pipe.png"
+dest_files=["res://.godot/imported/top_pipe.png-b30bf82e5a45fb5272f00a0d1be944b1.ctex"]
 
 [params]
 

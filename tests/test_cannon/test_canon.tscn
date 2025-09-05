@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bp3bur5mrkwxu"]
 
 [ext_resource type="Script" uid="uid://b4fkbgry52ksd" path="res://tests/test_cannon/test_canon.gd" id="1_831x3"]
-[ext_resource type="PackedScene" uid="uid://b7iygktoqf3th" path="res://screens/game/components/row_cannons/row_cannon/row_cannon.tscn" id="1_jyeju"]
+[ext_resource type="PackedScene" uid="uid://b7iygktoqf3th" path="res://screens/game/components/cannons/cannon/cannon.tscn" id="1_jyeju"]
 
 [node name="TestCanon" type="Control"]
 layout_mode = 3

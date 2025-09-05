@@ -18,7 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://dud1ujrys61qg" path="res://screens/game/components/balance_displayer/balance_displayer.tscn" id="13_ou2j6"]
 [ext_resource type="PackedScene" uid="uid://df03qm0on10kk" path="res://screens/game/components/last_column_enemy_detectors/last_column_enemy_detectors.tscn" id="17_y2n64"]
 [ext_resource type="PackedScene" uid="uid://6xhrmrplu0ha" path="res://screens/game/pop_ups/game_over_popup/game_over_popup.tscn" id="18_n6j5y"]
-[ext_resource type="PackedScene" uid="uid://c8ja2opfaohj7" path="res://screens/game/components/row_cannons/row_cannons.tscn" id="19_1jmhe"]
+[ext_resource type="PackedScene" uid="uid://c8ja2opfaohj7" path="res://screens/game/components/cannons/cannons.tscn" id="19_1jmhe"]
 
 [node name="Game" type="Control"]
 layout_mode = 3

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://427pqr2memx5"
-path="res://.godot/imported/basebottom.png-ab29737aae21884c179ad0c0bcb808f3.ctex"
+uid="uid://b50xvkwe31ttu"
+path="res://.godot/imported/base_pipe.png-d3be6c322b026b1b779d6ffb52bf47c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://screens/game/components/row_cannons/row_cannon/assets/basebottom.png"
-dest_files=["res://.godot/imported/basebottom.png-ab29737aae21884c179ad0c0bcb808f3.ctex"]
+source_file="res://screens/game/components/cannons/cannon/assets/base_pipe.png"
+dest_files=["res://.godot/imported/base_pipe.png-d3be6c322b026b1b779d6ffb52bf47c1.ctex"]
 
 [params]
 

@@ -1,15 +1,15 @@
 [gd_scene load_steps=16 format=3 uid="uid://b7iygktoqf3th"]
 
-[ext_resource type="Texture2D" uid="uid://427pqr2memx5" path="res://screens/game/components/row_cannons/row_cannon/assets/basebottom.png" id="1_6wf37"]
-[ext_resource type="Script" uid="uid://cfeji17ww1121" path="res://screens/game/components/row_cannons/row_cannon/row_cannon.gd" id="1_8xn1t"]
-[ext_resource type="Texture2D" uid="uid://b50xvkwe31ttu" path="res://screens/game/components/row_cannons/row_cannon/assets/base_pipe.png" id="2_6l0fd"]
+[ext_resource type="Texture2D" uid="uid://427pqr2memx5" path="res://screens/game/components/cannons/cannon/assets/basebottom.png" id="1_6wf37"]
+[ext_resource type="Script" uid="uid://cfeji17ww1121" path="res://screens/game/components/cannons/cannon/cannon.gd" id="1_8xn1t"]
+[ext_resource type="Texture2D" uid="uid://b50xvkwe31ttu" path="res://screens/game/components/cannons/cannon/assets/base_pipe.png" id="2_6l0fd"]
 [ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/shared_assets/circle_shadow.png" id="2_pkgno"]
-[ext_resource type="Texture2D" uid="uid://b0iag63alnokn" path="res://screens/game/components/row_cannons/row_cannon/assets/middle_pipe.png" id="3_a1ke3"]
-[ext_resource type="Texture2D" uid="uid://b7mvuu33dgcl0" path="res://screens/game/components/row_cannons/row_cannon/assets/top_pipe.png" id="4_e1vhk"]
-[ext_resource type="Texture2D" uid="uid://yet7rp3hbocb" path="res://screens/game/components/row_cannons/row_cannon/assets/top_metal_piece.png" id="6_c1cxa"]
+[ext_resource type="Texture2D" uid="uid://b0iag63alnokn" path="res://screens/game/components/cannons/cannon/assets/middle_pipe.png" id="3_a1ke3"]
+[ext_resource type="Texture2D" uid="uid://b7mvuu33dgcl0" path="res://screens/game/components/cannons/cannon/assets/top_pipe.png" id="4_e1vhk"]
+[ext_resource type="Texture2D" uid="uid://yet7rp3hbocb" path="res://screens/game/components/cannons/cannon/assets/top_metal_piece.png" id="6_c1cxa"]
 [ext_resource type="PackedScene" uid="uid://bdr08hlqbnt41" path="res://global_assets/particles/shoot_particles/shoot_particles.tscn" id="7_55q04"]
-[ext_resource type="Texture2D" uid="uid://bi8exuo8f0kdn" path="res://screens/game/components/row_cannons/row_cannon/assets/base_top.png" id="7_vudpt"]
-[ext_resource type="Shader" uid="uid://derk1f24rx2gi" path="res://screens/game/components/row_cannons/row_cannon/distort.gdshader" id="12_bspbb"]
+[ext_resource type="Texture2D" uid="uid://bi8exuo8f0kdn" path="res://screens/game/components/cannons/cannon/assets/base_top.png" id="7_vudpt"]
+[ext_resource type="Shader" uid="uid://derk1f24rx2gi" path="res://screens/game/components/cannons/cannon/distort.gdshader" id="12_bspbb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mldd5"]
 shader = ExtResource("12_bspbb")
