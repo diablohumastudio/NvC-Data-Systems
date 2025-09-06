@@ -1,13 +1,11 @@
 class_name GameOverPopup extends Control
 
-var level : LevelData
-
-@onready var _go_to_main_menu_button : TextureButton = $GoToMainMenuButton
-@onready var _play_again_button : TextureButton = $PlayAgainButton
+@export var level : LevelData # Its exported for testing purposes
 
 func _ready() -> void:
-	level = GSS.level
+	if GSS.level: level = GSS.level
 	GSS.enemy_reached_last_column.connect(on_gss_enemy_reached_last_column)
+	appear()
 
 func on_gss_enemy_reached_last_column():
 	appear()
