@@ -25,3 +25,8 @@ func _on_go_back_btn_pressed() -> void:
 
 func _on_go_back_to_test_btn_pressed() -> void:
 	SMS.change_scene(load(GC.SCREENS_UIDS.MENU))
+
+func _on_pause_btn_pressed() -> void:
+	print("apper")
+	%PausedGamePopup.appear()
+	pass # Replace with function body.

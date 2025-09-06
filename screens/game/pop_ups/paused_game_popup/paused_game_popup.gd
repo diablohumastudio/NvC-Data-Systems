@@ -8,7 +8,7 @@ var _saved_settings = UDS.current_user_data.settings
 
 func _ready():
 	if GSS.level: level = GSS.level
-	appear()
+	#appear()
 
 func _hide_popup():
 	AudioSystem.post_event(AK.EVENTS.RESET_POPUP_FILTER)
@@ -22,6 +22,7 @@ func _hide_popup():
 	
 func appear():
 	AudioSystem.post_event(AK.EVENTS.SET_POPUP_FILTER)
+	visible = true
 	%AnimationPlayer.play("appear")
 
 func _on_resume_game_button_pressed() -> void:

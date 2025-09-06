@@ -109,20 +109,6 @@ offset_bottom = 150.0
 [node name="LastColumnEnemyDetectors" parent="." instance=ExtResource("17_y2n64")]
 position = Vector2(235, -2)
 
-[node name="popups" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="GameOverPopup" parent="popups" instance=ExtResource("18_n6j5y")]
-unique_name_in_owner = true
-visible = false
-layout_mode = 1
-offset_left = 419.0
-offset_top = 183.0
-offset_right = 379.0
-offset_bottom = 143.0
-
 [node name="RowCannons" parent="." instance=ExtResource("19_1jmhe")]
 layout_mode = 0
 offset_left = 375.0
@@ -193,5 +179,18 @@ texture_pressed = ExtResource("21_wh4ub")
 texture_hover = ExtResource("21_wh4ub")
 texture_focused = ExtResource("21_wh4ub")
 
+[node name="popups" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GameOverPopup" parent="popups" instance=ExtResource("18_n6j5y")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+offset_right = -40.0
+offset_bottom = -40.0
+
 [connection signal="pressed" from="GoBackBtn" to="." method="_on_go_back_btn_pressed"]
 [connection signal="pressed" from="GoBackToTestBtn" to="." method="_on_go_back_to_test_btn_pressed"]
+[connection signal="pressed" from="PauseBtn" to="." method="_on_pause_btn_pressed"]
