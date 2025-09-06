@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://c2b4jldseu5vs"]
+[gd_scene load_steps=22 format=3 uid="uid://c2b4jldseu5vs"]
 
 [ext_resource type="Script" uid="uid://bvalrtinik0vd" path="res://screens/game/game.gd" id="1_eyx8b"]
 [ext_resource type="Resource" uid="uid://c0580eyighege" path="res://data/levels/data/level_2p.tres" id="2_by56y"]
@@ -19,6 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://df03qm0on10kk" path="res://screens/game/components/last_column_enemy_detectors/last_column_enemy_detectors.tscn" id="17_y2n64"]
 [ext_resource type="PackedScene" uid="uid://6xhrmrplu0ha" path="res://screens/game/pop_ups/game_over_popup/game_over_popup.tscn" id="18_n6j5y"]
 [ext_resource type="PackedScene" uid="uid://c8ja2opfaohj7" path="res://screens/game/components/cannons/cannons.tscn" id="19_1jmhe"]
+[ext_resource type="Texture2D" uid="uid://c3mslriaxmk3o" path="res://screens/game/components/pause_button/assets/pause _button _unselected.png" id="20_1ad28"]
+[ext_resource type="Texture2D" uid="uid://bsjna513oyo50" path="res://screens/game/components/pause_button/assets/pause _button _selected.png" id="21_wh4ub"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -38,14 +40,6 @@ layout_mode = 1
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
-
-[node name="LevelNamePresenter" parent="." instance=ExtResource("3_kc255")]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 1048.0
-offset_top = 41.0
-offset_right = 1147.0
-offset_bottom = 90.0
 
 [node name="AlliesSelector" parent="." instance=ExtResource("2_khowf")]
 unique_name_in_owner = true
@@ -92,9 +86,9 @@ text = "BACK test"
 [node name="RemoveAllyButton" parent="." instance=ExtResource("5_g1ktd")]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 255.0
+offset_left = 164.0
 offset_top = 21.0
-offset_right = 380.0
+offset_right = 289.0
 offset_bottom = 152.0
 
 [node name="GameWonPopUp" parent="." instance=ExtResource("9_18b3j")]
@@ -104,50 +98,6 @@ offset_left = 452.0
 offset_top = 286.0
 offset_right = 1497.0
 offset_bottom = 872.0
-
-[node name="DbugComponents" type="Control" parent="."]
-anchors_preset = 0
-offset_left = -296.0
-offset_top = 11.0
-offset_right = -256.0
-offset_bottom = 51.0
-
-[node name="DbugCanonHUD" parent="DbugComponents" instance=ExtResource("5_uain1")]
-layout_mode = 0
-offset_left = 1181.0
-offset_top = 11.0
-offset_right = 1410.0
-offset_bottom = 121.0
-
-[node name="DbugWinBtn" parent="DbugComponents" instance=ExtResource("6_cpxdg")]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 1428.0
-offset_top = 28.0
-offset_right = 1538.0
-offset_bottom = 105.0
-
-[node name="DbugKilledEnemiesHUD" parent="DbugComponents" instance=ExtResource("5_2v4l3")]
-layout_mode = 0
-offset_left = 1542.0
-offset_top = 15.0
-offset_right = 2017.0
-offset_bottom = 171.0
-
-[node name="DbugTriggerAnimationBtn" parent="DbugComponents" instance=ExtResource("12_ou2j6")]
-layout_mode = 0
-offset_left = 699.0
-offset_top = 11.0
-offset_right = 1022.0
-offset_bottom = 74.0
-theme_override_font_sizes/font_size = 40
-
-[node name="DbugBalanceChangeHud" parent="DbugComponents" instance=ExtResource("13_lovpr")]
-layout_mode = 0
-offset_left = 996.0
-offset_top = 127.0
-offset_right = 1270.0
-offset_bottom = 245.0
 
 [node name="BalanceDisplayer" parent="." instance=ExtResource("13_ou2j6")]
 layout_mode = 0
@@ -175,10 +125,73 @@ offset_bottom = 143.0
 
 [node name="RowCannons" parent="." instance=ExtResource("19_1jmhe")]
 layout_mode = 0
-offset_left = 736.0
-offset_top = 239.0
-offset_right = 736.0
-offset_bottom = 239.0
+offset_left = 375.0
+offset_top = 220.0
+offset_right = 375.0
+offset_bottom = 220.0
+
+[node name="LevelNamePresenter" parent="." instance=ExtResource("3_kc255")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1071.0
+offset_top = 23.0
+offset_right = 1170.0
+offset_bottom = 72.0
+
+[node name="DbugComponents" type="Control" parent="."]
+anchors_preset = 0
+offset_left = -296.0
+offset_top = 11.0
+offset_right = -256.0
+offset_bottom = 51.0
+
+[node name="DbugCanonHUD" parent="DbugComponents" instance=ExtResource("5_uain1")]
+layout_mode = 0
+offset_left = 1181.0
+offset_top = 11.0
+offset_right = 1338.0
+offset_bottom = 121.0
+
+[node name="DbugWinBtn" parent="DbugComponents" instance=ExtResource("6_cpxdg")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1364.0
+offset_top = 64.0
+offset_right = 1474.0
+offset_bottom = 120.0
+
+[node name="DbugKilledEnemiesHUD" parent="DbugComponents" instance=ExtResource("5_2v4l3")]
+layout_mode = 0
+offset_left = 1542.0
+offset_top = 15.0
+offset_right = 2017.0
+offset_bottom = 171.0
+
+[node name="DbugTriggerAnimationBtn" parent="DbugComponents" instance=ExtResource("12_ou2j6")]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 20.0
+offset_right = 799.0
+offset_bottom = 83.0
+theme_override_font_sizes/font_size = 40
+
+[node name="DbugBalanceChangeHud" parent="DbugComponents" instance=ExtResource("13_lovpr")]
+layout_mode = 0
+offset_left = 814.0
+offset_top = 15.0
+offset_right = 908.0
+offset_bottom = 173.0
+
+[node name="PauseBtn" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 635.0
+offset_top = 36.0
+offset_right = 864.0
+offset_bottom = 140.0
+texture_normal = ExtResource("20_1ad28")
+texture_pressed = ExtResource("21_wh4ub")
+texture_hover = ExtResource("21_wh4ub")
+texture_focused = ExtResource("21_wh4ub")
 
 [connection signal="pressed" from="GoBackBtn" to="." method="_on_go_back_btn_pressed"]
 [connection signal="pressed" from="GoBackToTestBtn" to="." method="_on_go_back_to_test_btn_pressed"]

@@ -6,7 +6,7 @@
 offset_right = 135.0
 offset_bottom = 31.0
 theme_override_font_sizes/font_size = 35
-text = "triger animation"
+text = "triger anim"
 script = ExtResource("1_l0v8d")
 
 [node name="TextEdit" type="TextEdit" parent="."]
@@ -14,9 +14,9 @@ unique_name_in_owner = true
 layout_mode = 0
 offset_left = 3.0
 offset_top = 66.0
-offset_right = 282.0
+offset_right = 201.0
 offset_bottom = 120.0
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 25
 text = "INITIAL_STATE"
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]
