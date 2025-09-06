@@ -80,11 +80,11 @@ offset_left = 1266.0
 offset_top = 249.0
 offset_right = 1422.0
 offset_bottom = 807.0
-type = 1
 grabber_texture = ExtResource("9_q6wvy")
 grabber_highlight_texture = ExtResource("10_eqltu")
 grabber_muted_texture = ExtResource("11_k3d17")
 grabber_muted_highlight_texture = ExtResource("12_6oy5g")
+type = 1
 
 [node name="MusicVerticalSlider" parent="." instance=ExtResource("8_7ci4u")]
 layout_mode = 0
