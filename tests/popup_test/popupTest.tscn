@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dxj30vlt767xq"]
+[gd_scene load_steps=8 format=3 uid="uid://dxj30vlt767xq"]
 
 [ext_resource type="Script" uid="uid://clfknb83cemfg" path="res://tests/popup_test/popup_test.gd" id="1_ha15u"]
 [ext_resource type="PackedScene" uid="uid://dr75bqddrjto7" path="res://screens/game/pop_ups/paused_game_popup/paused_game_popup.tscn" id="2_oqus8"]
 [ext_resource type="PackedScene" uid="uid://6xhrmrplu0ha" path="res://screens/game/pop_ups/game_over_popup/game_over_popup.tscn" id="3_oqus8"]
+[ext_resource type="PackedScene" uid="uid://bfpngr2c5ibha" path="res://screens/game/pop_ups/game_won_popup/game_won_popup.tscn" id="4_7yt8s"]
 
 [sub_resource type="Animation" id="Animation_ha15u"]
 resource_name = "move_test_rect"
@@ -50,7 +51,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ha15u")
-popup_menu = NodePath("GameOverPopup")
+popup_menu = NodePath("GameWonPopup")
 
 [node name="TestProcessRect" type="ColorRect" parent="."]
 unique_name_in_owner = true
@@ -71,6 +72,10 @@ autoplay = "move_test_rect"
 unique_name_in_owner = true
 
 [node name="GameOverPopup" parent="." instance=ExtResource("3_oqus8")]
+
+[node name="GameWonPopup" parent="." instance=ExtResource("4_7yt8s")]
+visible = false
+layout_mode = 1
 
 [node name="ShowPausePopUpBtn" type="Button" parent="."]
 unique_name_in_owner = true

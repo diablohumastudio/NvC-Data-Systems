@@ -1,0 +1,962 @@
+[gd_scene load_steps=34 format=3 uid="uid://bfpngr2c5ibha"]
+
+[ext_resource type="Script" uid="uid://cftdvir46qx8t" path="res://screens/game/pop_ups/game_won_popup/game_won_popup.gd" id="1_4oa1d"]
+[ext_resource type="StyleBox" uid="uid://bbcul6xpd1y6k" path="res://screens/game/pop_ups/game_won_popup/gamewon_bkfilterbtn_style_flat.tres" id="1_8mqqk"]
+[ext_resource type="Theme" uid="uid://kl1a7a0qepqx" path="res://screens/game/pop_ups/game_won_popup/game_won.tres" id="1_c7l2l"]
+[ext_resource type="Texture2D" uid="uid://dqkm5mdxivggx" path="res://screens/game/pop_ups/game_won_popup/assets/game_won_popup_background.png" id="1_d8od3"]
+[ext_resource type="Resource" uid="uid://c0580eyighege" path="res://data/levels/data/level_2p.tres" id="2_4valm"]
+[ext_resource type="Shader" uid="uid://boa325ynfrjd4" path="res://global_assets/shaders/perspective_shader.gdshader" id="3_maqfv"]
+[ext_resource type="Shader" uid="uid://besc5dmtdgtma" path="res://screens/start_menus/about_menu/submenu_selector/submenu_btn/submenu_btn_shader.gdshader" id="4_era4i"]
+[ext_resource type="Texture2D" uid="uid://bwf8tpryja0gb" path="res://screens/game/pop_ups/game_won_popup/assets/you_win_text.png" id="5_e6hqu"]
+[ext_resource type="Texture2D" uid="uid://dfqdk6f8rbg7" path="res://screens/game/pop_ups/game_won_popup/assets/description_box.png" id="7_rxjnf"]
+[ext_resource type="Texture2D" uid="uid://cde2atn0arwjb" path="res://screens/game/pop_ups/game_won_popup/assets/single_gold_coin.png" id="8_1axay"]
+[ext_resource type="Texture2D" uid="uid://dv0uluvvhnilr" path="res://screens/game/pop_ups/game_won_popup/assets/reward_container_no_title.png" id="8_g5kxb"]
+[ext_resource type="Texture2D" uid="uid://driwbbjv274rk" path="res://screens/game/pop_ups/game_won_popup/assets/reward_container.png" id="8_nhxyk"]
+[ext_resource type="Texture2D" uid="uid://ck8cw3b2onb3d" path="res://screens/game/pop_ups/game_won_popup/assets/description_holder.png" id="9_asisb"]
+[ext_resource type="Texture2D" uid="uid://6n0qm4ba5jfk" path="res://screens/game/pop_ups/game_won_popup/assets/money_box_reward.png" id="9_w15qd"]
+[ext_resource type="Texture2D" uid="uid://b5ro46i71vfn0" path="res://screens/game/pop_ups/game_won_popup/assets/star_blink.png" id="11_hr7ua"]
+[ext_resource type="Texture2D" uid="uid://cluee0i7vbmap" path="res://screens/game/pop_ups/paused_game_popup/assets/retry_button.png" id="13_hgtyr"]
+[ext_resource type="Texture2D" uid="uid://d1ntuxd6nqqmq" path="res://screens/game/pop_ups/paused_game_popup/assets/retry_button_selected.png" id="14_maqfv"]
+[ext_resource type="Texture2D" uid="uid://imlptc6ith4b" path="res://screens/game/pop_ups/paused_game_popup/assets/main_menu_button.png" id="15_dlcck"]
+[ext_resource type="Texture2D" uid="uid://buh7v6gv6475" path="res://screens/game/pop_ups/paused_game_popup/assets/main_menu_button_selected.png" id="16_qen5y"]
+[ext_resource type="Texture2D" uid="uid://o8lh4ibwga0l" path="res://screens/game/pop_ups/paused_game_popup/assets/resume_button.png" id="17_1py70"]
+[ext_resource type="Texture2D" uid="uid://cjjdben0b1u1j" path="res://screens/game/pop_ups/paused_game_popup/assets/resume_button_selected.png" id="18_labjq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dlcck"]
+shader = ExtResource("3_maqfv")
+shader_parameter/fov = 90.0
+shader_parameter/cull_back = true
+shader_parameter/y_rot = 0.0
+shader_parameter/x_rot = 0.0
+shader_parameter/inset = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vxv3g"]
+shader = ExtResource("4_era4i")
+shader_parameter/hue = 0.0
+shader_parameter/saturation = 1.0
+shader_parameter/brightness = 1.0
+
+[sub_resource type="Animation" id="Animation_g1rae"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/brightness")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_f8633"]
+resource_name = "loop"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/brightness")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.20218),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.8, 2.0, 0.8, 2.0, 0.8]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.02, 1.02), Vector2(1, 1), Vector2(1.02, 1.02), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c2jt8"]
+_data = {
+&"RESET": SubResource("Animation_g1rae"),
+&"loop": SubResource("Animation_f8633")
+}
+
+[sub_resource type="Curve" id="Curve_ls2gj"]
+_data = [Vector2(0, 0.142857), 0.0, 0.852747, 0, 0, Vector2(0.342508, 0.772068), 0.0, 0.0, 0, 0, Vector2(0.48318, 0.504837), 0.0, 0.0, 0, 0, Vector2(0.663609, 0.622733), 0.0, 0.0, 0, 0, Vector2(0.801223, 0), -2.91729, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="Gradient" id="Gradient_0xldr"]
+offsets = PackedFloat32Array(0.0120482, 0.168675, 0.331325, 0.403614, 0.518072, 0.86747)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 0.559543, 0.900356, 0.518341, 1, 0.540952, 0.961605, 0.958579, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="Animation" id="Animation_rl7jr"]
+resource_name = "loop"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AllyThumbnail:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_36h7w"]
+_data = {
+&"loop": SubResource("Animation_rl7jr")
+}
+
+[sub_resource type="Animation" id="Animation_1j2wh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackgroundTexture:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CongratulationsTexture:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DescriptionHolderDecoration:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DescriptionBox:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CongratulationsTexture:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(127, 176)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("RewardContainer:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AllyThumbnail:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("RewardLabel:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("RewardContainer:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(152, 410)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("DescriptionBox:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(336, 429)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Buttons:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Buttons:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1268, 489)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("RewardContainer:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("DescriptionLabel:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("BackgroundTexture:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("CoinsRewardThumbnail:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("RewardContainerNoTitle:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("RewardContainerNoTitle:rotation")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("RewardContainerNoTitle:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(152, 400)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("CoinDecoration:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("StarBlink:modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("StarBlink:scale")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(9, 9)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("BackgroundTexture:material:shader_parameter/x_rot")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("../BackgroundFilterBtn:modulate")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_lgkju"]
+resource_name = "_appear"
+length = 1.6
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackgroundTexture:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.5, 0.5), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CongratulationsTexture:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.65, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DescriptionHolderDecoration:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.15, 0.35, 0.45, 0.55, 0.75, 0.85, 1.15),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1.1, 0), Vector2(1.4, 1.5), Vector2(1.2, 1.1), Vector2(1, 0.9), Vector2(1, 1), Vector2(1, 0.98), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DescriptionBox:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.35, 0.55),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CongratulationsTexture:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.65, 0.9, 1.05),
+"transitions": PackedFloat32Array(1, 2.07053, 1, 1),
+"update": 0,
+"values": [Vector2(900, 176), Vector2(900, 176), Vector2(120.167, 176), Vector2(127, 176)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("RewardContainer:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.35, 0.55),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AllyThumbnail:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.95, 1.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("RewardLabel:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.35, 0.55),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("RewardContainer:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.35, 0.55, 0.65),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(152, 210), Vector2(152, 440), Vector2(152, 410)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("DescriptionBox:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.35, 0.55, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(336, 330), Vector2(336, 450), Vector2(336, 429)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Buttons:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(1, 1.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Buttons:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 1, 1.3, 1.4, 1.55),
+"transitions": PackedFloat32Array(1, 1.46409, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1268, -30), Vector2(1268, -30), Vector2(1268, 512), Vector2(1268, 476), Vector2(1268, 489)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("RewardContainer:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.35, 0.55, 0.7, 0.9, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.199897, -0.10762, 0.0, 0.0461387, 0.0]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("DescriptionLabel:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(1, 1.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("BackgroundTexture:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("CoinsRewardThumbnail:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0.65, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("RewardContainerNoTitle:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0.35, 0.55),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("RewardContainerNoTitle:rotation")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0.35, 0.55, 0.7, 0.9, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.200713, -0.10821, 0.0, 0.0453786, 0.0]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("RewardContainerNoTitle:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0.35, 0.55, 0.65),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(152, 200), Vector2(152, 430), Vector2(152, 400)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("CPUParticles2D:emitting")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("CoinDecoration:modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0.35, 0.55),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("StarBlink:modulate")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0.25, 0.3, 1.05),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("StarBlink:scale")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0.25, 1.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(9, 9)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("BackgroundTexture:material:shader_parameter/x_rot")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.35, 0.55, 0.75, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-40.0, 8.00001, -5.99999, 4.00001, -1.99999, 0.0]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("../BackgroundFilterBtn:modulate")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0, 1, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0.403922)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jucsf"]
+_data = {
+&"RESET": SubResource("Animation_1j2wh"),
+&"_appear": SubResource("Animation_lgkju")
+}
+
+[node name="GameWonPopup" type="Control"]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4oa1d")
+level = ExtResource("2_4valm")
+
+[node name="BackgroundFilterBtn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = ExtResource("1_8mqqk")
+theme_override_styles/hover_pressed_mirrored = ExtResource("1_8mqqk")
+theme_override_styles/hover = ExtResource("1_8mqqk")
+theme_override_styles/pressed = ExtResource("1_8mqqk")
+theme_override_styles/normal = ExtResource("1_8mqqk")
+
+[node name="WoodenPopup" type="Control" parent="."]
+process_mode = 3
+layout_mode = 1
+anchor_right = 0.812
+anchor_bottom = 0.956
+offset_left = 194.0
+offset_top = 27.0
+offset_right = 163.96
+offset_bottom = -31.48
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_c7l2l")
+
+[node name="WinningCongratulationsLabel" type="Label" parent="WoodenPopup"]
+visible = false
+layout_mode = 0
+offset_left = 296.0
+offset_top = 128.0
+offset_right = 859.0
+offset_bottom = 296.0
+theme_override_colors/font_color = Color(0.140625, 0.824219, 0.824219, 1)
+theme_override_font_sizes/font_size = 120
+text = "YOU WIN!"
+
+[node name="BackgroundTexture" type="TextureRect" parent="WoodenPopup"]
+material = SubResource("ShaderMaterial_dlcck")
+custom_minimum_size = Vector2(1144, 648)
+layout_mode = 0
+offset_left = -136.0
+offset_top = -40.0
+offset_right = 1672.0
+offset_bottom = 1048.0
+pivot_offset = Vector2(907.979, 97.4462)
+texture = ExtResource("1_d8od3")
+expand_mode = 1
+
+[node name="CongratulationsTexture" type="TextureRect" parent="WoodenPopup"]
+material = SubResource("ShaderMaterial_vxv3g")
+layout_mode = 0
+offset_left = 900.0
+offset_top = 176.0
+offset_right = 1937.0
+offset_bottom = 389.0
+pivot_offset = Vector2(533, 97)
+texture = ExtResource("5_e6hqu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="WoodenPopup/CongratulationsTexture"]
+libraries = {
+&"": SubResource("AnimationLibrary_c2jt8")
+}
+autoplay = "loop"
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="WoodenPopup"]
+position = Vector2(791, 695)
+emitting = false
+amount = 50
+texture = ExtResource("11_hr7ua")
+lifetime = 1.6
+one_shot = true
+preprocess = 0.1
+explosiveness = 0.95
+randomness = 0.15
+lifetime_randomness = 0.13
+emission_shape = 1
+emission_sphere_radius = 31.94
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 619.56
+initial_velocity_max = 619.56
+linear_accel_min = 41.76
+linear_accel_max = 41.76
+scale_amount_curve = SubResource("Curve_ls2gj")
+color_ramp = SubResource("Gradient_0xldr")
+
+[node name="StarBlink" type="Sprite2D" parent="WoodenPopup"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(795, 736)
+scale = Vector2(9, 9)
+texture = ExtResource("11_hr7ua")
+
+[node name="DescriptionBox" type="TextureRect" parent="WoodenPopup"]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 330.0
+offset_right = 1155.0
+offset_bottom = 636.001
+texture = ExtResource("7_rxjnf")
+
+[node name="RewardContainer" type="TextureRect" parent="WoodenPopup"]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 210.0
+offset_right = 534.0
+offset_bottom = 560.0
+pivot_offset = Vector2(202, 170)
+texture = ExtResource("8_nhxyk")
+
+[node name="RewardContainerNoTitle" type="TextureRect" parent="WoodenPopup"]
+visible = false
+layout_mode = 0
+offset_left = 152.0
+offset_top = 200.0
+offset_right = 534.0
+offset_bottom = 550.0
+texture = ExtResource("8_g5kxb")
+
+[node name="AllyThumbnail" type="TextureRect" parent="WoodenPopup"]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 480.0
+offset_right = 413.0
+offset_bottom = 625.0
+pivot_offset = Vector2(85.9796, 74.1092)
+expand_mode = 3
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="WoodenPopup/AllyThumbnail"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_36h7w")
+}
+autoplay = "loop"
+
+[node name="CoinsRewardThumbnail" type="TextureRect" parent="WoodenPopup"]
+visible = false
+layout_mode = 0
+offset_left = 248.0
+offset_top = 480.0
+offset_right = 446.0
+offset_bottom = 669.0
+texture = ExtResource("9_w15qd")
+
+[node name="CoinDecoration" type="TextureRect" parent="WoodenPopup"]
+visible = false
+layout_mode = 0
+offset_left = 381.0
+offset_top = 672.0
+offset_right = 461.0
+offset_bottom = 749.0
+texture = ExtResource("8_1axay")
+expand_mode = 1
+
+[node name="RewardLabel" type="Label" parent="WoodenPopup"]
+visible = false
+layout_mode = 0
+offset_left = 245.0
+offset_top = 681.0
+offset_right = 374.0
+offset_bottom = 753.0
+theme_override_font_sizes/font_size = 50
+
+[node name="DescriptionLabel" type="Label" parent="WoodenPopup"]
+layout_mode = 0
+offset_left = 536.0
+offset_top = 448.0
+offset_right = 1111.0
+offset_bottom = 673.0
+theme_override_colors/font_color = Color(0.0666667, 0.266667, 0.482353, 1)
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="DescriptionHolderDecoration" type="TextureRect" parent="WoodenPopup"]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 703.0
+offset_right = 1012.0
+offset_bottom = 896.0
+pivot_offset = Vector2(218, 185)
+texture = ExtResource("9_asisb")
+
+[node name="Buttons" type="Node2D" parent="WoodenPopup"]
+position = Vector2(1268, 489)
+
+[node name="RetryLevelButton" type="TextureButton" parent="WoodenPopup/Buttons"]
+unique_name_in_owner = true
+offset_left = -108.0
+offset_top = -324.0
+offset_right = 116.0
+offset_bottom = -112.0
+action_mode = 0
+texture_normal = ExtResource("13_hgtyr")
+texture_pressed = ExtResource("14_maqfv")
+texture_hover = ExtResource("14_maqfv")
+texture_focused = ExtResource("14_maqfv")
+
+[node name="GoToMainMenuButton" type="TextureButton" parent="WoodenPopup/Buttons"]
+unique_name_in_owner = true
+offset_left = -108.0
+offset_top = -92.0
+offset_right = 116.0
+offset_bottom = 120.0
+action_mode = 0
+texture_normal = ExtResource("15_dlcck")
+texture_pressed = ExtResource("16_qen5y")
+texture_hover = ExtResource("16_qen5y")
+texture_focused = ExtResource("16_qen5y")
+
+[node name="ContinueButton" type="TextureButton" parent="WoodenPopup/Buttons"]
+unique_name_in_owner = true
+offset_left = -108.0
+offset_top = 132.0
+offset_right = 116.0
+offset_bottom = 345.0
+action_mode = 0
+texture_normal = ExtResource("17_1py70")
+texture_pressed = ExtResource("18_labjq")
+texture_hover = ExtResource("18_labjq")
+texture_focused = ExtResource("18_labjq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="WoodenPopup"]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_jucsf")
+}
+
+[connection signal="pressed" from="WoodenPopup/Buttons/RetryLevelButton" to="." method="_on_retry_level_button_pressed"]
+[connection signal="pressed" from="WoodenPopup/Buttons/GoToMainMenuButton" to="." method="_on_go_to_main_menu_button_pressed"]
+[connection signal="pressed" from="WoodenPopup/Buttons/ContinueButton" to="WoodenPopup" method="_on_continue_button_pressed"]
