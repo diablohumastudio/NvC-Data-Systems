@@ -40,7 +40,6 @@ func _ready() -> void:
 
 func _on_animation_trigered(animation_type: ANIMATION_TYPES):
 	get_tree().call_group("animatable_elements", "play_animation", animation_type)
-	print("anim trig", animation_type)
 
 func reset_values():
 	canons_alive = GC.TOTAL_NUMBER_OF_CANONS

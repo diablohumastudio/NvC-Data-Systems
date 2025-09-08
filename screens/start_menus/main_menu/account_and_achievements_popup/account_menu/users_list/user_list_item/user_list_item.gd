@@ -14,8 +14,6 @@ func update_visuals():
 		%SelectedIcon.texture = plus_sign_texture
 		return
 	%SlotLabel.text = user_credentials.user_name
-	print("my index",UDS.all_users_credentials.credentials.find(user_credentials))
-	print("current index",UDS.all_users_credentials.current_user_index)
 	if UDS.all_users_credentials.credentials.find(user_credentials) == UDS.all_users_credentials.current_user_index:
 		%SelectedIcon.texture = check_sign_texture
 	else:

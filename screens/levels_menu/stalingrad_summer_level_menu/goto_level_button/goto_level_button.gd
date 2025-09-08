@@ -7,7 +7,6 @@ func set_state_visuals():
 	if !level: return
 	var ud_level: UDLevel = level.get_saved_ud_level()
 	%NameLabel.text = level.level_name
-	print(ud_level.completed)
 	if ud_level.completed:
 		%Icon.animation = "completed"
 	if ud_level.locked:
