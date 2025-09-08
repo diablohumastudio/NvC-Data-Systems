@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://c2b4jldseu5vs"]
+[gd_scene load_steps=23 format=3 uid="uid://c2b4jldseu5vs"]
 
 [ext_resource type="Script" uid="uid://bvalrtinik0vd" path="res://screens/game/game.gd" id="1_eyx8b"]
 [ext_resource type="Resource" uid="uid://c0580eyighege" path="res://data/levels/data/level_2p.tres" id="2_by56y"]
@@ -12,15 +12,16 @@
 [ext_resource type="PackedScene" uid="uid://cjay4w6imp8r7" path="res://screens/game/components/enemies_spawn_grid/enemies_spawner_grid.tscn" id="5_kc255"]
 [ext_resource type="PackedScene" uid="uid://bk5r5vrhhaf2x" path="res://screens/game/debug_components/dbug_canons_killed_hud/dbug_canon_hud.tscn" id="5_uain1"]
 [ext_resource type="PackedScene" uid="uid://cafe6vrkyihc5" path="res://screens/game/debug_components/dbug_win_loose_btns/dbug_win_loose_btns.tscn" id="6_cpxdg"]
-[ext_resource type="PackedScene" uid="uid://3p1rfa3f7you" path="res://screens/game/components/game_won_pop_up/game_won_pop_up.tscn" id="9_18b3j"]
 [ext_resource type="PackedScene" uid="uid://bj0wscnker5f" path="res://screens/game/debug_components/dbug_trigger_animation_hud/dbug_trigger_animation_hud.tscn" id="12_ou2j6"]
 [ext_resource type="PackedScene" uid="uid://doqxafbxr50re" path="res://screens/game/debug_components/dbug_balance_change_hud/dbug_balance_change_hud.tscn" id="13_lovpr"]
 [ext_resource type="PackedScene" uid="uid://dud1ujrys61qg" path="res://screens/game/components/balance_displayer/balance_displayer.tscn" id="13_ou2j6"]
+[ext_resource type="PackedScene" uid="uid://dr75bqddrjto7" path="res://screens/game/pop_ups/paused_game_popup/paused_game_popup.tscn" id="13_wh4ub"]
 [ext_resource type="PackedScene" uid="uid://df03qm0on10kk" path="res://screens/game/components/last_column_enemy_detectors/last_column_enemy_detectors.tscn" id="17_y2n64"]
 [ext_resource type="PackedScene" uid="uid://6xhrmrplu0ha" path="res://screens/game/pop_ups/game_over_popup/game_over_popup.tscn" id="18_n6j5y"]
 [ext_resource type="PackedScene" uid="uid://c8ja2opfaohj7" path="res://screens/game/components/cannons/cannons.tscn" id="19_1jmhe"]
 [ext_resource type="Texture2D" uid="uid://c3mslriaxmk3o" path="res://screens/game/components/pause_button/assets/pause _button _unselected.png" id="20_1ad28"]
 [ext_resource type="Texture2D" uid="uid://bsjna513oyo50" path="res://screens/game/components/pause_button/assets/pause _button _selected.png" id="21_wh4ub"]
+[ext_resource type="PackedScene" uid="uid://bfpngr2c5ibha" path="res://screens/game/pop_ups/game_won_popup/game_won_popup.tscn" id="23_p21lm"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -90,14 +91,6 @@ offset_left = 164.0
 offset_top = 21.0
 offset_right = 289.0
 offset_bottom = 152.0
-
-[node name="GameWonPopUp" parent="." instance=ExtResource("9_18b3j")]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 452.0
-offset_top = 286.0
-offset_right = 1497.0
-offset_bottom = 872.0
 
 [node name="BalanceDisplayer" parent="." instance=ExtResource("13_ou2j6")]
 layout_mode = 0
@@ -186,10 +179,18 @@ offset_bottom = 40.0
 
 [node name="GameOverPopup" parent="popups" instance=ExtResource("18_n6j5y")]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 offset_right = -40.0
 offset_bottom = -40.0
+
+[node name="PausedGamePopup" parent="popups" instance=ExtResource("13_wh4ub")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="GameWonPopup" parent="popups" instance=ExtResource("23_p21lm")]
+layout_mode = 1
+offset_right = 1880.0
+offset_bottom = 1040.0
 
 [connection signal="pressed" from="GoBackBtn" to="." method="_on_go_back_btn_pressed"]
 [connection signal="pressed" from="GoBackToTestBtn" to="." method="_on_go_back_to_test_btn_pressed"]

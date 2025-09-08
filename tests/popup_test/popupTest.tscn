@@ -74,7 +74,6 @@ unique_name_in_owner = true
 [node name="GameOverPopup" parent="." instance=ExtResource("3_oqus8")]
 
 [node name="GameWonPopup" parent="." instance=ExtResource("4_7yt8s")]
-visible = false
 layout_mode = 1
 
 [node name="ShowPausePopUpBtn" type="Button" parent="."]

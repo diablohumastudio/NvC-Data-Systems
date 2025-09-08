@@ -4,6 +4,7 @@ class_name GameWonPopup extends Control
 
 func _ready():
 	if GSS.level: level = GSS.level
+	GSS.game_just_won.connect(_show)
 
 func _show():
 	get_tree().paused = true
