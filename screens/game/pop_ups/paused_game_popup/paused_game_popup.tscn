@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dr75bqddrjto7"]
+[gd_scene load_steps=21 format=3 uid="uid://dr75bqddrjto7"]
 
 [ext_resource type="Script" uid="uid://bvodsx6fmyvm7" path="res://screens/game/pop_ups/paused_game_popup/paused_game_popup.gd" id="1_omj55"]
 [ext_resource type="Material" uid="uid://bko5g3sqiwqsh" path="res://global_assets/shaders/perspective_shader_material.tres" id="1_wioex"]
@@ -7,119 +7,15 @@
 [ext_resource type="Resource" uid="uid://c0580eyighege" path="res://data/levels/data/level_2p.tres" id="2_qigje"]
 [ext_resource type="StyleBox" uid="uid://cfmm6gy6xt1rq" path="res://screens/game/pop_ups/paused_game_popup/assets/paused_game_popup_bk_filter_syle_box_flat.tres" id="2_qohp2"]
 [ext_resource type="Texture2D" uid="uid://dnnnyc6lgax4r" path="res://screens/game/pop_ups/paused_game_popup/assets/slider_background.PNG" id="3_gbjcu"]
-[ext_resource type="Texture2D" uid="uid://o8lh4ibwga0l" path="res://screens/game/pop_ups/paused_game_popup/assets/resume_button.png" id="3_xk0mj"]
 [ext_resource type="PackedScene" uid="uid://bnw6e40cvuxp1" path="res://screens/game/pop_ups/paused_game_popup/volume_horizontal_slider/volume_horizontal_slider.tscn" id="4_s32kb"]
-[ext_resource type="Texture2D" uid="uid://cjjdben0b1u1j" path="res://screens/game/pop_ups/paused_game_popup/assets/resume_button_selected.png" id="4_w5hwk"]
 [ext_resource type="Texture2D" uid="uid://cluee0i7vbmap" path="res://screens/game/pop_ups/paused_game_popup/assets/retry_button.png" id="5_opa6a"]
 [ext_resource type="Texture2D" uid="uid://d1ntuxd6nqqmq" path="res://screens/game/pop_ups/paused_game_popup/assets/retry_button_selected.png" id="6_3etcl"]
 [ext_resource type="Texture2D" uid="uid://imlptc6ith4b" path="res://screens/game/pop_ups/paused_game_popup/assets/main_menu_button.png" id="7_0u3vh"]
 [ext_resource type="Texture2D" uid="uid://buh7v6gv6475" path="res://screens/game/pop_ups/paused_game_popup/assets/main_menu_button_selected.png" id="8_4ooyn"]
-[ext_resource type="Texture2D" uid="uid://befg0bi27mjys" path="res://screens/game/pop_ups/paused_game_popup/assets/resume_button_glow.png" id="9_tsnk3"]
+[ext_resource type="PackedScene" uid="uid://d3edgeqlyxuto" path="res://screens/game/pop_ups/paused_game_popup/pause_popup_btn/pause_popup_btn.tscn" id="8_5mtc3"]
 [ext_resource type="Texture2D" uid="uid://jnc55rw8hm65" path="res://screens/game/pop_ups/paused_game_popup/assets/retry_button_glow.png" id="12_t7ipy"]
 [ext_resource type="Script" uid="uid://dxu15e362h623" path="res://global_objects/node_shaker/node_shaker.gd" id="14_48btd"]
 [ext_resource type="Texture2D" uid="uid://d4euviglbbn5f" path="res://screens/game/pop_ups/paused_game_popup/assets/main_menu_button_glow.png" id="15_twny6"]
-
-[sub_resource type="Animation" id="Animation_74jmg"]
-resource_name = "continue_pressed"
-length = 0.2
-step = 0.05
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(0.9, 0.9), Vector2(1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(2, 2, 2, 1), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_q2b8e"]
-_data = {
-&"continue_pressed": SubResource("Animation_74jmg")
-}
-
-[sub_resource type="Animation" id="Animation_si1rh"]
-resource_name = "retry_pressed"
-length = 0.2
-step = 0.05
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(0.9, 0.9), Vector2(1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(2, 2, 2, 1), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_rdv2s"]
-_data = {
-&"retry_pressed": SubResource("Animation_si1rh")
-}
-
-[sub_resource type="Animation" id="Animation_3ukgr"]
-resource_name = "menu_pressed"
-length = 0.2
-step = 0.05
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(0.9, 0.9), Vector2(1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(2, 2, 2, 1), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_l385b"]
-_data = {
-&"menu_pressed": SubResource("Animation_3ukgr")
-}
 
 [sub_resource type="Animation" id="Animation_hr6jj"]
 resource_name = "RESET"
@@ -361,23 +257,15 @@ _data = {
 }
 
 [node name="PausedGamePopup" type="Control"]
+process_mode = 2
+visible = false
+custom_minimum_size = Vector2(1920, 1080)
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
 script = ExtResource("1_omj55")
 level = ExtResource("2_qigje")
-
-[node name="ColorRect" type="ColorRect" parent="."]
-custom_minimum_size = Vector2(1920, 1080)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="BackgroundFilterBtn" type="Button" parent="."]
 layout_mode = 1
@@ -399,9 +287,9 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 5.0
-offset_top = -8.0
+offset_top = -5.0
 offset_right = 5.0
-offset_bottom = -8.0
+offset_bottom = -5.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -421,7 +309,48 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_8fk6d")
 
-[node name="MusicSliderBackground" type="TextureRect" parent="WoodenPopUp"]
+[node name="Btns" type="Control" parent="WoodenPopUp"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -6.10352e-05
+offset_right = 39.9999
+offset_bottom = 40.0
+
+[node name="ResumeGameButton" parent="WoodenPopUp/Btns" instance=ExtResource("8_5mtc3")]
+layout_mode = 0
+offset_left = 584.0
+offset_top = 622.0
+offset_right = 820.0
+offset_bottom = 836.0
+
+[node name="RetryLevelButton" parent="WoodenPopUp/Btns" instance=ExtResource("8_5mtc3")]
+layout_mode = 0
+offset_left = 833.0
+offset_top = 623.0
+offset_right = 1069.0
+offset_bottom = 837.0
+texture_normal = ExtResource("5_opa6a")
+texture_pressed = ExtResource("12_t7ipy")
+texture_hover = ExtResource("6_3etcl")
+texture_focused = ExtResource("6_3etcl")
+
+[node name="GoToMainMenuButton" parent="WoodenPopUp/Btns" instance=ExtResource("8_5mtc3")]
+layout_mode = 0
+offset_left = 1081.0
+offset_top = 621.0
+offset_right = 1317.0
+offset_bottom = 835.0
+texture_normal = ExtResource("7_0u3vh")
+texture_pressed = ExtResource("15_twny6")
+texture_hover = ExtResource("8_4ooyn")
+texture_focused = ExtResource("8_4ooyn")
+
+[node name="Slliders" type="Control" parent="WoodenPopUp"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MusicSliderBackground" type="TextureRect" parent="WoodenPopUp/Slliders"]
 layout_mode = 1
 offset_left = 721.0
 offset_top = 425.0
@@ -430,7 +359,7 @@ offset_bottom = 492.0
 pivot_offset = Vector2(123, 59)
 texture = ExtResource("3_gbjcu")
 
-[node name="MusicHorizontalSlider" parent="WoodenPopUp/MusicSliderBackground" instance=ExtResource("4_s32kb")]
+[node name="MusicHorizontalSlider" parent="WoodenPopUp/Slliders/MusicSliderBackground" instance=ExtResource("4_s32kb")]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(490, 26)
 layout_mode = 0
@@ -440,7 +369,7 @@ offset_right = 539.0
 offset_bottom = 79.0
 max_value = 100.0
 
-[node name="SFXSliderBackground" type="TextureRect" parent="WoodenPopUp"]
+[node name="SFXSliderBackground" type="TextureRect" parent="WoodenPopUp/Slliders"]
 layout_mode = 1
 offset_left = 698.0
 offset_top = 509.0
@@ -448,7 +377,7 @@ offset_right = 1280.0
 offset_bottom = 576.0
 texture = ExtResource("3_gbjcu")
 
-[node name="SFXHorizontalSlider" parent="WoodenPopUp/SFXSliderBackground" instance=ExtResource("4_s32kb")]
+[node name="SFXHorizontalSlider" parent="WoodenPopUp/Slliders/SFXSliderBackground" instance=ExtResource("4_s32kb")]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(490, 26)
 layout_mode = 0
@@ -457,59 +386,6 @@ offset_top = -7.0
 offset_right = 536.0
 offset_bottom = 79.0
 max_value = 100.0
-
-[node name="ResumeGameButton" type="TextureButton" parent="WoodenPopUp"]
-layout_mode = 0
-offset_left = 584.0
-offset_top = 625.0
-offset_right = 820.0
-offset_bottom = 839.0
-pivot_offset = Vector2(119, 88)
-action_mode = 0
-texture_normal = ExtResource("3_xk0mj")
-texture_pressed = ExtResource("9_tsnk3")
-texture_hover = ExtResource("4_w5hwk")
-texture_focused = ExtResource("4_w5hwk")
-
-[node name="ResumePlayer" type="AnimationPlayer" parent="WoodenPopUp/ResumeGameButton"]
-unique_name_in_owner = true
-libraries = {
-&"": SubResource("AnimationLibrary_q2b8e")
-}
-
-[node name="RetryLevelButton" type="TextureButton" parent="WoodenPopUp"]
-layout_mode = 2
-offset_left = 832.0
-offset_top = 627.0
-offset_right = 1068.0
-offset_bottom = 841.0
-action_mode = 0
-texture_normal = ExtResource("5_opa6a")
-texture_pressed = ExtResource("12_t7ipy")
-texture_hover = ExtResource("6_3etcl")
-texture_focused = ExtResource("6_3etcl")
-
-[node name="RetryPlayer" type="AnimationPlayer" parent="WoodenPopUp/RetryLevelButton"]
-libraries = {
-&"": SubResource("AnimationLibrary_rdv2s")
-}
-
-[node name="GoToMainMenuButton" type="TextureButton" parent="WoodenPopUp"]
-layout_mode = 0
-offset_left = 1085.0
-offset_top = 625.0
-offset_right = 1321.0
-offset_bottom = 839.0
-action_mode = 0
-texture_normal = ExtResource("7_0u3vh")
-texture_pressed = ExtResource("15_twny6")
-texture_hover = ExtResource("8_4ooyn")
-texture_focused = ExtResource("8_4ooyn")
-
-[node name="MenuPlayer" type="AnimationPlayer" parent="WoodenPopUp/GoToMainMenuButton"]
-libraries = {
-&"": SubResource("AnimationLibrary_l385b")
-}
 
 [node name="PopupLight" type="Sprite2D" parent="WoodenPopUp"]
 visible = false
@@ -529,10 +405,10 @@ libraries = {
 [node name="NodeShaker" type="Node" parent="." node_paths=PackedStringArray("animate_node")]
 script = ExtResource("14_48btd")
 animate_node = NodePath("../WoodenPopUp")
-initial_strength = 25.0
+initial_strength = 20.0
 shake_fade_effect = 7.0
 metadata/_custom_type_script = "uid://dxu15e362h623"
 
-[connection signal="pressed" from="WoodenPopUp/ResumeGameButton" to="." method="_on_resume_game_button_pressed"]
-[connection signal="pressed" from="WoodenPopUp/RetryLevelButton" to="." method="_on_retry_level_button_pressed"]
-[connection signal="pressed" from="WoodenPopUp/GoToMainMenuButton" to="." method="_on_go_to_main_menu_button_pressed"]
+[connection signal="pressed" from="WoodenPopUp/Btns/ResumeGameButton" to="." method="_on_resume_game_button_pressed"]
+[connection signal="pressed" from="WoodenPopUp/Btns/RetryLevelButton" to="." method="_on_retry_level_button_pressed"]
+[connection signal="pressed" from="WoodenPopUp/Btns/GoToMainMenuButton" to="." method="_on_go_to_main_menu_button_pressed"]

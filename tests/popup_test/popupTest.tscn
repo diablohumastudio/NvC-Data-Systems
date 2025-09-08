@@ -50,7 +50,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ha15u")
-popup_menu = NodePath("PausedGamePopup")
+popup_menu = NodePath("GameOverPopup")
 
 [node name="TestProcessRect" type="ColorRect" parent="."]
 unique_name_in_owner = true
