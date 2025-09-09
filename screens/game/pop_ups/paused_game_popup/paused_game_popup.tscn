@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dr75bqddrjto7"]
+[gd_scene load_steps=22 format=3 uid="uid://dr75bqddrjto7"]
 
 [ext_resource type="Script" uid="uid://bvodsx6fmyvm7" path="res://screens/game/pop_ups/paused_game_popup/paused_game_popup.gd" id="1_omj55"]
 [ext_resource type="Material" uid="uid://bko5g3sqiwqsh" path="res://global_assets/shaders/perspective_shader_material.tres" id="1_wioex"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://jnc55rw8hm65" path="res://screens/game/pop_ups/paused_game_popup/assets/retry_button_glow.png" id="12_t7ipy"]
 [ext_resource type="Script" uid="uid://dxu15e362h623" path="res://global_objects/node_shaker/node_shaker.gd" id="14_48btd"]
 [ext_resource type="Texture2D" uid="uid://d4euviglbbn5f" path="res://screens/game/pop_ups/paused_game_popup/assets/main_menu_button_glow.png" id="15_twny6"]
+[ext_resource type="PackedScene" uid="uid://dgtj30r4vgfhy" path="res://screens/game/pop_ups/exit_to_menu_confirm_popup/exit_to_menu_confirm_popup.tscn" id="17_0saka"]
 
 [sub_resource type="Animation" id="Animation_hr6jj"]
 resource_name = "RESET"
@@ -287,9 +288,9 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 5.0
-offset_top = -5.0
+offset_top = -8.0
 offset_right = 5.0
-offset_bottom = -5.0
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -409,6 +410,12 @@ initial_strength = 20.0
 shake_fade_effect = 7.0
 metadata/_custom_type_script = "uid://dxu15e362h623"
 
+[node name="ExitToMenuConfirmPopup" parent="." instance=ExtResource("17_0saka")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+
 [connection signal="pressed" from="WoodenPopUp/Btns/ResumeGameButton" to="." method="_on_resume_game_button_pressed"]
 [connection signal="pressed" from="WoodenPopUp/Btns/RetryLevelButton" to="." method="_on_retry_level_button_pressed"]
 [connection signal="pressed" from="WoodenPopUp/Btns/GoToMainMenuButton" to="." method="_on_go_to_main_menu_button_pressed"]
+[connection signal="exit_confirmed" from="ExitToMenuConfirmPopup" to="." method="_on_exit_to_menu_confirm_popup_exit_confirmed"]

@@ -33,6 +33,9 @@ func _on_retry_level_button_pressed() -> void:
 	SMS.change_scene(game,{"level": level})
 
 func _on_go_to_main_menu_button_pressed():
+	%ExitToMenuConfirmPopup.show()
+
+func _on_exit_to_menu_confirm_popup_exit_confirmed() -> void:
 	var main_menu : PackedScene = load(GC.SCREENS_UIDS.MAIN_MENU)
 
 	await get_tree().create_timer(.5).timeout
