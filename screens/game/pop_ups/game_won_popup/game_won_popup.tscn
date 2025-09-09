@@ -781,9 +781,9 @@ expand_mode = 1
 [node name="CongratulationsTexture" type="TextureRect" parent="WoodenPopup"]
 material = SubResource("ShaderMaterial_vxv3g")
 layout_mode = 0
-offset_left = 900.0
+offset_left = 127.0
 offset_top = 176.0
-offset_right = 1937.0
+offset_right = 1164.0
 offset_bottom = 389.0
 pivot_offset = Vector2(533, 97)
 texture = ExtResource("5_e6hqu")
@@ -825,17 +825,17 @@ texture = ExtResource("11_hr7ua")
 [node name="DescriptionBox" type="TextureRect" parent="WoodenPopup"]
 layout_mode = 0
 offset_left = 336.0
-offset_top = 330.0
+offset_top = 429.0
 offset_right = 1155.0
-offset_bottom = 636.001
+offset_bottom = 735.001
 texture = ExtResource("7_rxjnf")
 
 [node name="RewardContainer" type="TextureRect" parent="WoodenPopup"]
 layout_mode = 0
 offset_left = 152.0
-offset_top = 210.0
+offset_top = 410.0
 offset_right = 534.0
-offset_bottom = 560.0
+offset_bottom = 760.0
 pivot_offset = Vector2(202, 170)
 texture = ExtResource("8_nhxyk")
 
@@ -843,9 +843,9 @@ texture = ExtResource("8_nhxyk")
 visible = false
 layout_mode = 0
 offset_left = 152.0
-offset_top = 200.0
+offset_top = 400.0
 offset_right = 534.0
-offset_bottom = 550.0
+offset_bottom = 750.0
 texture = ExtResource("8_g5kxb")
 
 [node name="AllyThumbnail" type="TextureRect" parent="WoodenPopup"]
