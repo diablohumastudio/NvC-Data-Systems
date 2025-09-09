@@ -10,6 +10,7 @@ signal _removing_ally_state_changed(state: bool)
 signal star_countdown_finished
 signal enemy_reached_last_column
 signal cannon_shooted(canon: Cannon)
+signal enemies_preview_animation_ended
 
 enum ANIMATION_TYPES {
 	INITIAL_STATE,

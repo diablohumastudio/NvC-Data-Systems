@@ -1,6 +1,11 @@
 class_name GameStartCountDown extends Control
 
+signal start_countdown_finished
+
 @onready var animation_player = %AnimationPlayer
+
+func _ready() -> void:
+	GSS.enemies_preview_animation_ended.connect(start_count_down)
 
 func start_count_down():
 	visible = true
@@ -9,6 +14,7 @@ func start_count_down():
 
 func _on_animation_player_animation_finished(_anim_name):
 	visible = false
+	start_countdown_finished.emit()
 	GSS.star_countdown_finished.emit()
 
 #called by the animation player so sound is exactly when it should
