@@ -1,18 +1,18 @@
-[gd_scene load_steps=27 format=3 uid="uid://ckfpk4nd44775"]
+[gd_scene load_steps=27 format=3 uid="uid://bkhds6kw3t8tq"]
 
-[ext_resource type="Texture2D" uid="uid://mup55gb5atwy" path="res://screens/game/components/background_scene/sky/sky_texture.png" id="1_r3v67"]
-[ext_resource type="PackedScene" uid="uid://wgs54xkae8nn" path="res://screens/game/components/background_scene/sky/clouds/clouds.tscn" id="2_h813f"]
-[ext_resource type="Texture2D" uid="uid://dixt81rom42ev" path="res://screens/game/components/background_scene/shared_assets/smoke_partice_1.png" id="3_f78la"]
-[ext_resource type="Texture2D" uid="uid://b0ksf1f5haf2v" path="res://data/levels/data/level_8/background_scene_and_assets/sprite_frames/assets/first_wave_animation/fotograma0000.webp" id="4_0f4h7"]
-[ext_resource type="Script" uid="uid://dlrwk2lsaqgal" path="res://screens/game/components/background_scene/animatable_element/animatable_element.gd" id="5_luqa5"]
-[ext_resource type="Texture2D" uid="uid://bqiwddsyu30h7" path="res://data/levels/data/level_4/background_scene_and_assets/sprite_frames/assets/first_wave_animation/fotograma0000.webp" id="6_kuk0y"]
-[ext_resource type="Texture2D" uid="uid://dfcipl75jsjea" path="res://data/levels/data/level_1/background_scene_and_assets/sprite_frames/assets/first_wave_animation/right_house_detroyed0000.webp" id="7_2fdoc"]
-[ext_resource type="Texture2D" uid="uid://ceo1kgjv7erig" path="res://data/levels/data/level_8/background_scene_and_assets/sprite_frames/assets/last_wave_animation/fotograma0000.webp" id="8_hflqx"]
-[ext_resource type="Texture2D" uid="uid://cqwlhrh4jp1sf" path="res://data/levels/data/level_4/background_scene_and_assets/sprite_frames/assets/last_wave_animation/fotograma0000.webp" id="9_hvrk1"]
-[ext_resource type="Texture2D" uid="uid://dgg1prfmav1qh" path="res://data/levels/data/level_1/background_scene_and_assets/sprite_frames/assets/last_wave_animation/fotograma0000.webp" id="10_trmbk"]
-[ext_resource type="Texture2D" uid="uid://bmva0tec4ugk7" path="res://data/levels/data/level_10/background_scene_and_assets/sprite_frames/assets/last_wave_animation/fotograma0000.webp" id="11_b5cmw"]
-[ext_resource type="Texture2D" uid="uid://djoc2ncv65ds2" path="res://data/levels/data/level_7/background_scene_and_assets/sprite_frames/assets/last_wave_animation/fotograma0000.webp" id="12_81x0c"]
-[ext_resource type="Texture2D" uid="uid://bbvmdshk81jrv" path="res://data/levels/data/level_3/background_scene_and_assets/sprite_frames/assets/last_wave_animation/foreground_house0000.webp" id="13_3neew"]
+[ext_resource type="Texture2D" uid="uid://mup55gb5atwy" path="res://screens/game/components/background_scene/sky/sky_texture.png" id="3_2arkm"]
+[ext_resource type="PackedScene" uid="uid://wgs54xkae8nn" path="res://screens/game/components/background_scene/sky/clouds/clouds.tscn" id="4_h02yx"]
+[ext_resource type="Texture2D" uid="uid://b0ksf1f5haf2v" path="res://data/levels/data/level_8/background_scene_and_assets/sprite_frames/assets/first_wave_animation/fotograma0000.webp" id="5_7jk86"]
+[ext_resource type="Texture2D" uid="uid://bqiwddsyu30h7" path="res://data/levels/data/level_4/background_scene_and_assets/sprite_frames/assets/first_wave_animation/fotograma0000.webp" id="6_4bgcy"]
+[ext_resource type="Texture2D" uid="uid://dfcipl75jsjea" path="res://data/levels/data/level_1/background_scene_and_assets/sprite_frames/assets/first_wave_animation/right_house_detroyed0000.webp" id="6_r61t4"]
+[ext_resource type="Texture2D" uid="uid://dgg1prfmav1qh" path="res://data/levels/data/level_1/background_scene_and_assets/sprite_frames/assets/last_wave_animation/fotograma0000.webp" id="7_ga565"]
+[ext_resource type="Texture2D" uid="uid://bbvmdshk81jrv" path="res://data/levels/data/level_3/background_scene_and_assets/sprite_frames/assets/last_wave_animation/foreground_house0000.webp" id="8_ioeha"]
+[ext_resource type="Texture2D" uid="uid://cqwlhrh4jp1sf" path="res://data/levels/data/level_4/background_scene_and_assets/sprite_frames/assets/last_wave_animation/fotograma0000.webp" id="8_nd0ak"]
+[ext_resource type="Texture2D" uid="uid://ceo1kgjv7erig" path="res://data/levels/data/level_8/background_scene_and_assets/sprite_frames/assets/last_wave_animation/fotograma0000.webp" id="9_0i6gx"]
+[ext_resource type="Texture2D" uid="uid://djoc2ncv65ds2" path="res://data/levels/data/level_7/background_scene_and_assets/sprite_frames/assets/last_wave_animation/fotograma0000.webp" id="10_ltt3c"]
+[ext_resource type="Texture2D" uid="uid://bmva0tec4ugk7" path="res://data/levels/data/level_10/background_scene_and_assets/sprite_frames/assets/last_wave_animation/fotograma0000.webp" id="12_8jpoa"]
+[ext_resource type="Script" uid="uid://dlrwk2lsaqgal" path="res://screens/game/components/background_scene/animatable_element/animatable_element.gd" id="19_8f8e6"]
+[ext_resource type="Texture2D" uid="uid://dixt81rom42ev" path="res://screens/game/components/background_scene/shared_assets/smoke_partice_1.png" id="330_dlv0x"]
 
 [sub_resource type="Curve" id="Curve_oddlv"]
 _limits = [0.0, 3.0, 0.0, 1.0]
@@ -36,7 +36,7 @@ colors = PackedColorArray(0, 0, 0, 0.184314, 1, 1, 1, 1, 1, 1, 1, 0.815686, 1, 1
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_0f4h7")
+"texture": ExtResource("5_7jk86")
 }],
 "loop": true,
 "name": &"default",
@@ -47,7 +47,7 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_kuk0y")
+"texture": ExtResource("6_4bgcy")
 }],
 "loop": true,
 "name": &"default",
@@ -58,7 +58,7 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("7_2fdoc")
+"texture": ExtResource("6_r61t4")
 }],
 "loop": true,
 "name": &"default",
@@ -69,7 +69,7 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("8_hflqx")
+"texture": ExtResource("9_0i6gx")
 }],
 "loop": true,
 "name": &"default",
@@ -80,7 +80,7 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("9_hvrk1")
+"texture": ExtResource("8_nd0ak")
 }],
 "loop": true,
 "name": &"default",
@@ -91,7 +91,7 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("10_trmbk")
+"texture": ExtResource("7_ga565")
 }],
 "loop": true,
 "name": &"default",
@@ -102,7 +102,7 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("11_b5cmw")
+"texture": ExtResource("12_8jpoa")
 }],
 "loop": true,
 "name": &"default",
@@ -113,7 +113,7 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("12_81x0c")
+"texture": ExtResource("10_ltt3c")
 }],
 "loop": true,
 "name": &"default",
@@ -124,7 +124,7 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("13_3neew")
+"texture": ExtResource("8_ioeha")
 }],
 "loop": true,
 "name": &"default",
@@ -138,21 +138,20 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
 metadata/_edit_vertical_guides_ = [0.0]
 
 [node name="Sky" type="Sprite2D" parent="."]
 position = Vector2(3162, 187.5)
-texture = ExtResource("1_r3v67")
+texture = ExtResource("3_2arkm")
 
-[node name="Clouds" parent="." instance=ExtResource("2_h813f")]
+[node name="Clouds" parent="." instance=ExtResource("4_h02yx")]
 
 [node name="SmokeParticles" type="Node2D" parent="."]
 position = Vector2(3162, 187.5)
 
 [node name="SmokeParticlesRight1" type="CPUParticles2D" parent="SmokeParticles"]
 position = Vector2(2640, 47)
-texture = ExtResource("3_f78la")
+texture = ExtResource("330_dlv0x")
 lifetime = 6.0
 preprocess = 8.0
 local_coords = true
@@ -168,7 +167,7 @@ color_ramp = SubResource("Gradient_bt5bq")
 
 [node name="SmokeParticlesRight2" type="CPUParticles2D" parent="SmokeParticles"]
 position = Vector2(1699, 38)
-texture = ExtResource("3_f78la")
+texture = ExtResource("330_dlv0x")
 lifetime = 6.0
 preprocess = 8.0
 local_coords = true
@@ -184,7 +183,7 @@ color_ramp = SubResource("Gradient_bt5bq")
 
 [node name="SmokeParticlesMiddle1" type="CPUParticles2D" parent="SmokeParticles"]
 position = Vector2(142, 38)
-texture = ExtResource("3_f78la")
+texture = ExtResource("330_dlv0x")
 lifetime = 6.0
 preprocess = 8.0
 local_coords = true
@@ -200,7 +199,7 @@ color_ramp = SubResource("Gradient_bt5bq")
 
 [node name="SmokeParticlesMiddle2" type="CPUParticles2D" parent="SmokeParticles"]
 position = Vector2(154, 26)
-texture = ExtResource("3_f78la")
+texture = ExtResource("330_dlv0x")
 lifetime = 6.0
 preprocess = 8.0
 local_coords = true
@@ -215,7 +214,7 @@ color_ramp = SubResource("Gradient_lg8ck")
 
 [node name="SmokeParticlesLeft" type="CPUParticles2D" parent="SmokeParticles"]
 position = Vector2(-1675, 39)
-texture = ExtResource("3_f78la")
+texture = ExtResource("330_dlv0x")
 lifetime = 6.0
 preprocess = 8.0
 local_coords = true
@@ -234,17 +233,17 @@ color_ramp = SubResource("Gradient_bt5bq")
 [node name="BackgroundObject3" type="AnimatedSprite2D" parent="Background"]
 position = Vector2(921, 114)
 sprite_frames = SubResource("SpriteFrames_a3sh2")
-script = ExtResource("5_luqa5")
+script = ExtResource("19_8f8e6")
 
 [node name="BackgroundObject2" type="AnimatedSprite2D" parent="Background"]
 position = Vector2(2817, 114)
 sprite_frames = SubResource("SpriteFrames_tqryq")
-script = ExtResource("5_luqa5")
+script = ExtResource("19_8f8e6")
 
 [node name="BackgroundObject1" type="AnimatedSprite2D" parent="Background"]
 position = Vector2(5056, 114)
 sprite_frames = SubResource("SpriteFrames_uvckk")
-script = ExtResource("5_luqa5")
+script = ExtResource("19_8f8e6")
 action_type = 1
 sprite_frames_path = "uid://dnrpj8n12addn"
 
@@ -253,17 +252,17 @@ sprite_frames_path = "uid://dnrpj8n12addn"
 [node name="MidlegroundObject3" type="AnimatedSprite2D" parent="Middleground"]
 position = Vector2(959, 540)
 sprite_frames = SubResource("SpriteFrames_0h208")
-script = ExtResource("5_luqa5")
+script = ExtResource("19_8f8e6")
 
 [node name="MidlegroundObject2" type="AnimatedSprite2D" parent="Middleground"]
 position = Vector2(2879, 540)
 sprite_frames = SubResource("SpriteFrames_itc2t")
-script = ExtResource("5_luqa5")
+script = ExtResource("19_8f8e6")
 
 [node name="MidlegroundObject1" type="AnimatedSprite2D" parent="Middleground"]
 position = Vector2(5080, 540)
 sprite_frames = SubResource("SpriteFrames_aaltl")
-script = ExtResource("5_luqa5")
+script = ExtResource("19_8f8e6")
 action_type = 2
 sprite_frames_path = "uid://dxvmfd7nmpm72"
 
@@ -274,18 +273,18 @@ z_index = 10
 modulate = Color(1, 1, 1, 0.7)
 position = Vector2(976, 945)
 sprite_frames = SubResource("SpriteFrames_6etql")
-script = ExtResource("5_luqa5")
+script = ExtResource("19_8f8e6")
 
 [node name="ForegroundObject2" type="AnimatedSprite2D" parent="Foreground"]
 modulate = Color(1, 1, 1, 0.7)
 position = Vector2(3038, 943)
 sprite_frames = SubResource("SpriteFrames_yivbu")
-script = ExtResource("5_luqa5")
+script = ExtResource("19_8f8e6")
 
 [node name="ForegroundObject1" type="AnimatedSprite2D" parent="Foreground"]
 modulate = Color(1, 1, 1, 0.921569)
 position = Vector2(5009, 924)
 sprite_frames = SubResource("SpriteFrames_fcupp")
-script = ExtResource("5_luqa5")
+script = ExtResource("19_8f8e6")
 
 [editable path="Clouds"]
