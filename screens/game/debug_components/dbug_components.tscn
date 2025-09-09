@@ -28,6 +28,7 @@ text = "Debug"
 
 [node name="ComponentsContainer" type="Control" parent="."]
 unique_name_in_owner = true
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
