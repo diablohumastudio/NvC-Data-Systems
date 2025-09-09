@@ -1,19 +1,14 @@
-[gd_scene load_steps=23 format=3 uid="uid://c2b4jldseu5vs"]
+[gd_scene load_steps=18 format=3 uid="uid://c2b4jldseu5vs"]
 
 [ext_resource type="Script" uid="uid://bvalrtinik0vd" path="res://screens/game/game.gd" id="1_eyx8b"]
 [ext_resource type="Resource" uid="uid://c0580eyighege" path="res://data/levels/data/level_2p.tres" id="2_by56y"]
 [ext_resource type="PackedScene" uid="uid://b4nna6eulgfw" path="res://screens/game/components/allies_selector/allies_selector.tscn" id="2_khowf"]
 [ext_resource type="PackedScene" uid="uid://ckfpk4nd44775" path="res://screens/game/components/background_scene/background_scene.tscn" id="2_lvnyp"]
 [ext_resource type="PackedScene" uid="uid://ca3r71n17u75p" path="res://screens/game/components/game_start_countdown/game_start_countdown.tscn" id="3_a032w"]
-[ext_resource type="PackedScene" uid="uid://bepu7cd0ik6av" path="res://screens/game/components/level_name_presenter/level_name_presenter.tscn" id="3_kc255"]
 [ext_resource type="PackedScene" uid="uid://catyyevb26p6e" path="res://screens/game/components/terrain_grid/terrain_grid_cell/terrain_grid.tscn" id="4_18b3j"]
-[ext_resource type="PackedScene" uid="uid://dm2l1uxm8jud0" path="res://screens/game/debug_components/dbug_killed_enemies_hud/dbug_killed_enemies_hud.tscn" id="5_2v4l3"]
 [ext_resource type="PackedScene" uid="uid://xydq20wuc0hp" path="res://screens/game/components/remove_ally_button/remove_ally_button.tscn" id="5_g1ktd"]
 [ext_resource type="PackedScene" uid="uid://cjay4w6imp8r7" path="res://screens/game/components/enemies_spawn_grid/enemies_spawner_grid.tscn" id="5_kc255"]
-[ext_resource type="PackedScene" uid="uid://bk5r5vrhhaf2x" path="res://screens/game/debug_components/dbug_canons_killed_hud/dbug_canon_hud.tscn" id="5_uain1"]
-[ext_resource type="PackedScene" uid="uid://cafe6vrkyihc5" path="res://screens/game/debug_components/dbug_win_loose_btns/dbug_win_loose_btns.tscn" id="6_cpxdg"]
-[ext_resource type="PackedScene" uid="uid://bj0wscnker5f" path="res://screens/game/debug_components/dbug_trigger_animation_hud/dbug_trigger_animation_hud.tscn" id="12_ou2j6"]
-[ext_resource type="PackedScene" uid="uid://doqxafbxr50re" path="res://screens/game/debug_components/dbug_balance_change_hud/dbug_balance_change_hud.tscn" id="13_lovpr"]
+[ext_resource type="PackedScene" uid="uid://boq4ca8rj0iic" path="res://screens/game/debug_components/dbug_components.tscn" id="13_n6j5y"]
 [ext_resource type="PackedScene" uid="uid://dud1ujrys61qg" path="res://screens/game/components/balance_displayer/balance_displayer.tscn" id="13_ou2j6"]
 [ext_resource type="PackedScene" uid="uid://dr75bqddrjto7" path="res://screens/game/pop_ups/paused_game_popup/paused_game_popup.tscn" id="13_wh4ub"]
 [ext_resource type="PackedScene" uid="uid://df03qm0on10kk" path="res://screens/game/components/last_column_enemy_detectors/last_column_enemy_detectors.tscn" id="17_y2n64"]
@@ -46,9 +41,9 @@ layout_mode = 1
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 28.0
-offset_top = 31.0
+offset_top = 145.0
 offset_right = 156.0
-offset_bottom = 198.0
+offset_bottom = 312.0
 
 [node name="TerrainGrid" parent="." instance=ExtResource("4_18b3j")]
 layout_mode = 0
@@ -94,9 +89,9 @@ offset_bottom = 152.0
 
 [node name="BalanceDisplayer" parent="." instance=ExtResource("13_ou2j6")]
 layout_mode = 0
-offset_left = 1603.0
+offset_left = 22.0
 offset_top = 23.0
-offset_right = 1883.0
+offset_right = 302.0
 offset_bottom = 150.0
 
 [node name="LastColumnEnemyDetectors" parent="." instance=ExtResource("17_y2n64")]
@@ -104,62 +99,10 @@ position = Vector2(235, -2)
 
 [node name="RowCannons" parent="." instance=ExtResource("19_1jmhe")]
 layout_mode = 0
-offset_left = 375.0
-offset_top = 220.0
-offset_right = 375.0
-offset_bottom = 220.0
-
-[node name="LevelNamePresenter" parent="." instance=ExtResource("3_kc255")]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 1071.0
-offset_top = 23.0
-offset_right = 1170.0
-offset_bottom = 72.0
-
-[node name="DbugComponents" type="Control" parent="."]
-anchors_preset = 0
-offset_left = -296.0
-offset_top = 11.0
-offset_right = -256.0
-offset_bottom = 51.0
-
-[node name="DbugCanonHUD" parent="DbugComponents" instance=ExtResource("5_uain1")]
-layout_mode = 0
-offset_left = 1181.0
-offset_top = 11.0
-offset_right = 1338.0
-offset_bottom = 121.0
-
-[node name="DbugWinBtn" parent="DbugComponents" instance=ExtResource("6_cpxdg")]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 1364.0
-offset_top = 64.0
-offset_right = 1474.0
-offset_bottom = 120.0
-
-[node name="DbugKilledEnemiesHUD" parent="DbugComponents" instance=ExtResource("5_2v4l3")]
-layout_mode = 0
-offset_left = 1542.0
-offset_top = 15.0
-offset_right = 2017.0
-offset_bottom = 171.0
-
-[node name="DbugTriggerAnimationBtn" parent="DbugComponents" instance=ExtResource("12_ou2j6")]
-layout_mode = 0
-offset_left = 576.0
-offset_top = 20.0
-offset_right = 799.0
-offset_bottom = 83.0
-theme_override_font_sizes/font_size = 40
-
-[node name="DbugBalanceChangeHud" parent="DbugComponents" instance=ExtResource("13_lovpr")]
-layout_mode = 0
-offset_left = 814.0
-offset_top = 15.0
-offset_right = 908.0
-offset_bottom = 173.0
+offset_left = 252.0
+offset_top = 283.0
+offset_right = 252.0
+offset_bottom = 283.0
 
 [node name="PauseBtn" type="TextureButton" parent="."]
 layout_mode = 0
@@ -171,6 +114,9 @@ texture_normal = ExtResource("20_1ad28")
 texture_pressed = ExtResource("21_wh4ub")
 texture_hover = ExtResource("21_wh4ub")
 texture_focused = ExtResource("21_wh4ub")
+
+[node name="DbugComponents" parent="." instance=ExtResource("13_n6j5y")]
+layout_mode = 1
 
 [node name="popups" type="Control" parent="."]
 anchors_preset = 0

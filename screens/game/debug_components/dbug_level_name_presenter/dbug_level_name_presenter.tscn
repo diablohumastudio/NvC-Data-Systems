@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bepu7cd0ik6av"]
 
-[ext_resource type="Script" uid="uid://c0x6f7a1yjhbl" path="res://screens/game/components/level_name_presenter/level_name_presenter.gd" id="1_nq1ko"]
+[ext_resource type="Script" uid="uid://c0x6f7a1yjhbl" path="res://screens/game/debug_components/dbug_level_name_presenter/dbug_level_name_presenter.gd" id="1_nq1ko"]
 
 [node name="LevelNamePresenter" type="Label"]
 offset_left = 1074.0
