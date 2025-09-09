@@ -1,6 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://boq4ca8rj0iic"]
+[gd_scene load_steps=8 format=3 uid="uid://c8de10anym03i"]
 
-[ext_resource type="Script" uid="uid://dnunv25rb2wnb" path="res://screens/game/debug_components/dbug_components.gd" id="1_odmso"]
+[ext_resource type="Script" path="res://screens/game/debug_components/dbug_components.gd" id="1_odmso"]
 [ext_resource type="PackedScene" uid="uid://bk5r5vrhhaf2x" path="res://screens/game/debug_components/dbug_canons_killed_hud/dbug_canon_hud.tscn" id="1_r85kr"]
 [ext_resource type="PackedScene" uid="uid://cafe6vrkyihc5" path="res://screens/game/debug_components/dbug_win_loose_btns/dbug_win_loose_btns.tscn" id="2_odmso"]
 [ext_resource type="PackedScene" uid="uid://dm2l1uxm8jud0" path="res://screens/game/debug_components/dbug_killed_enemies_hud/dbug_killed_enemies_hud.tscn" id="3_8m8q8"]
@@ -9,13 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://bepu7cd0ik6av" path="res://screens/game/debug_components/dbug_level_name_presenter/dbug_level_name_presenter.tscn" id="7_8m8q8"]
 
 [node name="DbugComponents" type="Control"]
-custom_minimum_size = Vector2(1920, 1080)
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+offset_right = 9.0
+offset_bottom = 10.0
+mouse_filter = 2
 script = ExtResource("1_odmso")
 
 [node name="ShowComponentsBtn" type="Button" parent="."]

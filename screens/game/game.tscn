@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://catyyevb26p6e" path="res://screens/game/components/terrain_grid/terrain_grid_cell/terrain_grid.tscn" id="4_18b3j"]
 [ext_resource type="PackedScene" uid="uid://xydq20wuc0hp" path="res://screens/game/components/remove_ally_button/remove_ally_button.tscn" id="5_g1ktd"]
 [ext_resource type="PackedScene" uid="uid://cjay4w6imp8r7" path="res://screens/game/components/enemies_spawn_grid/enemies_spawner_grid.tscn" id="5_kc255"]
-[ext_resource type="PackedScene" uid="uid://boq4ca8rj0iic" path="res://screens/game/debug_components/dbug_components.tscn" id="13_n6j5y"]
+[ext_resource type="PackedScene" uid="uid://c8de10anym03i" path="res://screens/game/debug_components/dbug_components.tscn" id="13_n6j5y"]
 [ext_resource type="PackedScene" uid="uid://dud1ujrys61qg" path="res://screens/game/components/balance_displayer/balance_displayer.tscn" id="13_ou2j6"]
 [ext_resource type="PackedScene" uid="uid://dr75bqddrjto7" path="res://screens/game/pop_ups/paused_game_popup/paused_game_popup.tscn" id="13_wh4ub"]
 [ext_resource type="PackedScene" uid="uid://df03qm0on10kk" path="res://screens/game/components/last_column_enemy_detectors/last_column_enemy_detectors.tscn" id="17_y2n64"]
@@ -61,24 +61,6 @@ offset_top = 158.0
 offset_right = 2347.0
 offset_bottom = 1059.0
 
-[node name="GoBackBtn" type="Button" parent="."]
-layout_mode = 0
-offset_left = 17.0
-offset_top = 983.0
-offset_right = 155.0
-offset_bottom = 1069.0
-theme_override_font_sizes/font_size = 50
-text = "BACK"
-
-[node name="GoBackToTestBtn" type="Button" parent="."]
-layout_mode = 0
-offset_left = 3.0
-offset_top = 895.0
-offset_right = 209.0
-offset_bottom = 961.0
-theme_override_font_sizes/font_size = 42
-text = "BACK test"
-
 [node name="RemoveAllyButton" parent="." instance=ExtResource("5_g1ktd")]
 unique_name_in_owner = true
 layout_mode = 0
@@ -97,7 +79,7 @@ offset_bottom = 150.0
 [node name="LastColumnEnemyDetectors" parent="." instance=ExtResource("17_y2n64")]
 position = Vector2(235, -2)
 
-[node name="RowCannons" parent="." instance=ExtResource("19_1jmhe")]
+[node name="Cannons" parent="." instance=ExtResource("19_1jmhe")]
 layout_mode = 0
 offset_left = 252.0
 offset_top = 283.0
@@ -114,6 +96,24 @@ texture_normal = ExtResource("20_1ad28")
 texture_pressed = ExtResource("21_wh4ub")
 texture_hover = ExtResource("21_wh4ub")
 texture_focused = ExtResource("21_wh4ub")
+
+[node name="GoBackBtn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 947.0
+offset_right = 171.0
+offset_bottom = 1033.0
+theme_override_font_sizes/font_size = 50
+text = "BACK"
+
+[node name="GoBackToTestBtn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 859.0
+offset_right = 225.0
+offset_bottom = 925.0
+theme_override_font_sizes/font_size = 42
+text = "BACK test"
 
 [node name="DbugComponents" parent="." instance=ExtResource("13_n6j5y")]
 layout_mode = 1
@@ -138,6 +138,6 @@ layout_mode = 1
 offset_right = 1880.0
 offset_bottom = 1040.0
 
+[connection signal="pressed" from="PauseBtn" to="." method="_on_pause_btn_pressed"]
 [connection signal="pressed" from="GoBackBtn" to="." method="_on_go_back_btn_pressed"]
 [connection signal="pressed" from="GoBackToTestBtn" to="." method="_on_go_back_to_test_btn_pressed"]
-[connection signal="pressed" from="PauseBtn" to="." method="_on_pause_btn_pressed"]
