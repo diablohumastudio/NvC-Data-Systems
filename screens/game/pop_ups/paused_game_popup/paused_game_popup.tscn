@@ -173,7 +173,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("WoodenPopUp:material:shader_parameter/x_rot")
+tracks/5/path = NodePath("WoodenPopUp/BackgroundTexture:material:shader_parameter/x_rot")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -259,7 +259,6 @@ _data = {
 
 [node name="PausedGamePopup" type="Control"]
 process_mode = 2
-visible = false
 custom_minimum_size = Vector2(1920, 1080)
 layout_mode = 3
 anchors_preset = 0
@@ -282,7 +281,6 @@ theme_override_styles/pressed = ExtResource("2_qohp2")
 theme_override_styles/normal = ExtResource("2_qohp2")
 
 [node name="WoodenPopUp" type="Control" parent="."]
-material = ExtResource("1_wioex")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -293,6 +291,7 @@ offset_right = 5.0
 offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(926, 155)
 
 [node name="BackgroundTexture" type="TextureRect" parent="WoodenPopUp"]
 material = ExtResource("1_wioex")
@@ -308,6 +307,7 @@ offset_right = 567.0
 offset_bottom = 391.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(548, 161)
 texture = ExtResource("2_8fk6d")
 
 [node name="Btns" type="Control" parent="WoodenPopUp"]
@@ -396,6 +396,11 @@ rotation = -0.0260824
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("2_kctm6")
 
+[node name="ExitToMenuConfirmPopup" parent="." instance=ExtResource("17_0saka")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
 process_mode = 3
@@ -409,11 +414,6 @@ animate_node = NodePath("../WoodenPopUp")
 initial_strength = 20.0
 shake_fade_effect = 7.0
 metadata/_custom_type_script = "uid://dxu15e362h623"
-
-[node name="ExitToMenuConfirmPopup" parent="." instance=ExtResource("17_0saka")]
-unique_name_in_owner = true
-visible = false
-layout_mode = 1
 
 [connection signal="pressed" from="WoodenPopUp/Btns/ResumeGameButton" to="." method="_on_resume_game_button_pressed"]
 [connection signal="pressed" from="WoodenPopUp/Btns/RetryLevelButton" to="." method="_on_retry_level_button_pressed"]
