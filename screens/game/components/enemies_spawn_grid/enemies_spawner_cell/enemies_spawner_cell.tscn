@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cdmp02gj4ppfy" path="res://screens/game/components/enemies_spawn_grid/enemies_spawner_cell/enemies_spawner_cell.gd" id="1_kjqc1"]
 
 [node name="EnemiesSpawnerCell" type="Button"]
+self_modulate = Color(1, 1, 1, 0.317647)
 script = ExtResource("1_kjqc1")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

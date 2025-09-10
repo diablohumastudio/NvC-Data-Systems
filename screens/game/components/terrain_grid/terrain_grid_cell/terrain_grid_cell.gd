@@ -2,6 +2,9 @@ class_name TerrainGridCell extends Cell
 
 const SC_ALLY_CONTAINER_PATH: PackedScene = preload("uid://b1xs0qcyd7lb4")
 
+func _ready() -> void:
+	if !Engine.is_editor_hint(): self_modulate = Color.TRANSPARENT
+
 func _on_pressed() -> void:
 	_validate_children()
 	if !GSS.removing_ally_state and !is_ocupied() and GSS.ally_to_place:

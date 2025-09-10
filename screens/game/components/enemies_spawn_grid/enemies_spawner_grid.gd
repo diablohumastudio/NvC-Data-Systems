@@ -3,16 +3,16 @@ class_name EnemiesSpawnersGrid extends ButtonCellGrid
 
 signal wave_spawned(wave:WaveData)
 
-var level: LevelData 
+@export var level: LevelData 
 var enemies_pkscs: Dictionary[EnemyScene.TYPES, PackedScene]
 
 func _ready() -> void:
-	level = GSS.level
-	for wave in level.waves:
-		load_enemies_from_wave(wave)
 	CELL_PKSC = load("uid://cpt4e3qp1ti4")
 	if !is_inside_tree(): return
 	_set_cells()
+	if !Engine.is_editor_hint() and GSS.level: level = GSS.level
+	for wave in level.waves:
+		load_enemies_from_wave(wave)
 
 func start_spawning():
 	spawn_waves(level.waves)
@@ -27,6 +27,7 @@ func spawn_preview_wave():
 	var preview_wave : WaveData = level.waves[0]
 	preview_wave.timing_strategy = InmediateSpawnTimingStrategy.new()
 	spawn_wave(preview_wave)
+	await wave_spawned
 
 func spawn_wave(wave: WaveData):
 	var total_enemies_number: int = get_total_enemies_number_in_wave(wave)

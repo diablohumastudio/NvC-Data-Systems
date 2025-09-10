@@ -18,13 +18,16 @@ func _initialize_background():
 	$BackgroundScene.position.x = level.background_position
 
 func _show_preview_process():
-	await %CameraManager.show_black_borders()
+	get_tree().paused = true
+
 	%AnimationPlayer.play("appear_HUD")
 	await %AnimationPlayer.animation_finished
-	%EnemiesSpawnersGrid.spawn_preview_wave()
-	await %EnemiesSpawnersGrid.wave_spawned
-	get_tree().paused = true
-	%CameraManager.show_enemies_preview()
+	await %EnemiesSpawnersGrid.spawn_preview_wave()
+	await %CameraManager.show_enemies_preview()
+	%GameStartCountdown.start_count_down()
+	await %GameStartCountdown.played_defend_sound
+	AudioSystem.post_event(AK.EVENTS.SET_MUSIC_SC_STALINGRAD_SUMMER_GAME)
+	await %CameraManager.show_black_borders()
 	await %GameStartCountdown.start_countdown_finished
 	get_tree().paused = false
 
