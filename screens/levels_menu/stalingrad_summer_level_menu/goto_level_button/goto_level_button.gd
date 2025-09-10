@@ -9,8 +9,10 @@ func set_state_visuals():
 	%NameLabel.text = level.level_name
 	if ud_level.completed:
 		%Icon.animation = "completed"
+		disabled = false
 	if ud_level.locked:
 		%Icon.animation = "locked"
+		disabled = true
 	elif !ud_level.completed and !ud_level.locked:
 		%Icon.animation = "unlocked"
 		disabled = false
