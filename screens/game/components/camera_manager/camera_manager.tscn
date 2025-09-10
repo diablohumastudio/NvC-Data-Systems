@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://wld4ag15itcu"]
+[gd_scene load_steps=7 format=3 uid="uid://wld4ag15itcu"]
 
 [ext_resource type="Script" uid="uid://csi0ro8mn77se" path="res://screens/game/components/camera_manager/camera_manager.gd" id="1_xxjy7"]
 [ext_resource type="Script" uid="uid://dxu15e362h623" path="res://global_objects/node_shaker/node_shaker.gd" id="2_045yi"]
+[ext_resource type="PackedScene" uid="uid://bv3eiijl20jl4" path="res://global_objects/black_borders/black_borders.tscn" id="2_crb8y"]
 
 [sub_resource type="Animation" id="Animation_045yi"]
 resource_name = "show_enemies_preview"
@@ -9,7 +10,7 @@ length = 4.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:offset")
+tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -44,6 +45,9 @@ _data = {
 process_mode = 3
 anchor_mode = 0
 script = ExtResource("1_xxjy7")
+
+[node name="BlackBordersFilter" parent="." instance=ExtResource("2_crb8y")]
+unique_name_in_owner = true
 
 [node name="NodeShaker" type="Node" parent="." node_paths=PackedStringArray("animate_node")]
 script = ExtResource("2_045yi")

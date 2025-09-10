@@ -7,3 +7,9 @@ func show_enemies_preview():
 	await %AnimationPlayer.animation_finished
 	enemies_preview_animation_ended.emit()
 	GSS.enemies_preview_animation_ended.emit()
+
+func show_black_borders():
+	await %BlackBordersFilter._show()
+
+func hide_black_borders():
+	%BlackBordersFilter._hide()

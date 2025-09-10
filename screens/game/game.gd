@@ -8,6 +8,7 @@ func _set_level(new_value: LevelData) -> void:
 	GSS.reset_values()
 
 func _ready() -> void:
+	%HUD.modulate = Color.TRANSPARENT
 	_initialize_background()
 	_show_preview_process()
 	GSS.enemy_reached_last_column.connect(on_enemy_reach_last_column)
@@ -17,6 +18,9 @@ func _initialize_background():
 	$BackgroundScene.position.x = level.background_position
 
 func _show_preview_process():
+	await %CameraManager.show_black_borders()
+	%AnimationPlayer.play("appear_HUD")
+	await %AnimationPlayer.animation_finished
 	%EnemiesSpawnersGrid.spawn_preview_wave()
 	await %EnemiesSpawnersGrid.wave_spawned
 	get_tree().paused = true
