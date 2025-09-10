@@ -30,5 +30,7 @@ func _on_wwise_audio_system_music_sync_exit(_event_data:Dictionary):
 #only when every loader finished loading AND loading screen music finishes, it goes to main menu
 func _go_to_main_menu() -> void:
 	if _is_initial_music_segment_played and _are_all_resources_loaded:
+		%MenusTransitionAnimationPlayer.play("goto_main_menu")
+		await %MenusTransitionAnimationPlayer.animation_finished
 		var main_menu : PackedScene = SLS.get_scene(GC.SCREENS_UIDS.MAIN_MENU)
 		SMS.change_scene(main_menu)

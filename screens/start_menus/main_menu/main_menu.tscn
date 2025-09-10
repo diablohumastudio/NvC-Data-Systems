@@ -1904,9 +1904,7 @@ offset_bottom = 40.0
 [node name="GoToSettingsMenuButton" parent="GotoButtons" instance=ExtResource("43_jom10")]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 0.0
 offset_top = 478.0
-offset_right = 630.0
 offset_bottom = 1078.0
 scale = Vector2(1, 1)
 focus_neighbor_left = NodePath("../GoToWorldsMapMenuButton")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b4n41kmtybwqn"]
+[gd_scene load_steps=62 format=3 uid="uid://b4n41kmtybwqn"]
 
 [ext_resource type="Script" uid="uid://dewveiekukrdj" path="res://screens/initial_screens/loading_screen/loading_screen.gd" id="1_ti8cj"]
 [ext_resource type="PackedScene" uid="uid://ch80xmnv4dmtb" path="res://screens/initial_screens/loading_screen/animated_loader/animated_loader.tscn" id="2_6kal7"]
@@ -7,7 +7,96 @@
 [ext_resource type="PackedScene" uid="uid://cw5i53clevpnv" path="res://screens/initial_screens/loading_screen/animated_background/animated_background.tscn" id="5_wh8xf"]
 [ext_resource type="Shader" uid="uid://dfnf5rlm54k7g" path="res://global_assets/shaders/distort.gdshader" id="7_lps3n"]
 [ext_resource type="PackedScene" uid="uid://yaecy5i836q2" path="res://screens/start_menus/about_menu/submenu_selector/submenu_btn/submenu_btn.tscn" id="8_l13hd"]
+[ext_resource type="Texture2D" uid="uid://xfv5l6akgc8p" path="res://screens/start_menus/main_menu/assets/main_menu_bg.png" id="9_ojrm4"]
 [ext_resource type="PackedScene" uid="uid://kaumcd515jsx" path="res://screens/initial_screens/loading_screen/animated_loader/animated_loader_nazi.tscn" id="9_xr7nt"]
+[ext_resource type="Texture2D" uid="uid://cy7e5v42vxb5e" path="res://screens/start_menus/main_menu/assets/menu_clouds.png" id="10_kvomm"]
+[ext_resource type="Texture2D" uid="uid://dw0u8g7bcob6y" path="res://screens/start_menus/main_menu/assets/main_menu_middleground.png" id="11_jj8kx"]
+[ext_resource type="Texture2D" uid="uid://qi3g0yrcv8fl" path="res://screens/start_menus/main_menu/assets/mini_roof_soldier_1.png" id="12_108yv"]
+[ext_resource type="Texture2D" uid="uid://r7xql0tw77is" path="res://screens/start_menus/main_menu/assets/rooftop.png" id="13_urekh"]
+[ext_resource type="Texture2D" uid="uid://b8jqcrcxt1g1u" path="res://screens/start_menus/main_menu/assets/right_tank.PNG" id="14_bwne7"]
+[ext_resource type="Texture2D" uid="uid://d3m2ymkclsdx7" path="res://game_characters_scenes/shared_assets/hurt_light.png" id="15_sw3yx"]
+[ext_resource type="Texture2D" uid="uid://dedp5ayhjbfcg" path="res://screens/start_menus/main_menu/assets/bg_flags.PNG" id="16_cfcu6"]
+[ext_resource type="Texture2D" uid="uid://5cropl0xqitk" path="res://screens/start_menus/main_menu/assets/left_back_flag.PNG" id="17_l0lhf"]
+[ext_resource type="Texture2D" uid="uid://drtx3153pou5d" path="res://screens/start_menus/main_menu/assets/left_middle_flag.PNG" id="18_1yu5q"]
+[ext_resource type="Texture2D" uid="uid://do2a4xhi5kbog" path="res://screens/start_menus/main_menu/assets/tank_dust_particle.png" id="19_4mv1u"]
+[ext_resource type="Texture2D" uid="uid://dq44cnlupr17k" path="res://screens/start_menus/main_menu/assets/soldiers_2.png" id="20_hh5ll"]
+[ext_resource type="Texture2D" uid="uid://balufihyj373k" path="res://screens/start_menus/main_menu/assets/soldiers_3.png" id="21_l3gyn"]
+[ext_resource type="Texture2D" uid="uid://bgrxrx4vw3kra" path="res://screens/start_menus/main_menu/assets/little_soldiers.PNG" id="22_kkurh"]
+[ext_resource type="Texture2D" uid="uid://cbr241vkpnmh3" path="res://screens/start_menus/main_menu/assets/left_tanks.PNG" id="23_35mim"]
+[ext_resource type="Texture2D" uid="uid://khpi3jcehtf2" path="res://screens/levels_menu/worlds_map_menu/assets/europe_map_city_selector_bg.png" id="23_urekh"]
+[ext_resource type="Texture2D" uid="uid://crqbl4g1ownqe" path="res://screens/start_menus/main_menu/assets/right_back_flag.PNG" id="24_2vlps"]
+[ext_resource type="Texture2D" uid="uid://vl6ns0gjiwai" path="res://screens/levels_menu/worlds_map_menu/assets/lamp.png" id="24_bwne7"]
+[ext_resource type="Texture2D" uid="uid://c0viplvklwv18" path="res://screens/start_menus/main_menu/assets/right_middle_flags.PNG" id="25_ftx3u"]
+[ext_resource type="Texture2D" uid="uid://b7bwy0703oesq" path="res://screens/levels_menu/worlds_map_menu/assets/middle_light.png" id="25_sw3yx"]
+[ext_resource type="Texture2D" uid="uid://c61l4sc4e5g65" path="res://screens/start_menus/main_menu/assets/left_front_flag.PNG" id="26_5nfeu"]
+[ext_resource type="Texture2D" uid="uid://d3yrhhhctp5hh" path="res://screens/levels_menu/worlds_map_menu/assets/soldiers.png" id="26_cfcu6"]
+[ext_resource type="Texture2D" uid="uid://de5656vqvctsl" path="res://screens/start_menus/main_menu/assets/right_front_flag.PNG" id="27_du32y"]
+[ext_resource type="Texture2D" uid="uid://cbhwu7fx14ek" path="res://screens/start_menus/main_menu/assets/lights.PNG" id="28_yalhn"]
+[ext_resource type="Texture2D" uid="uid://u81ebrjqug13" path="res://screens/start_menus/main_menu/assets/wooden_barriers.PNG" id="29_vkcux"]
+[ext_resource type="Texture2D" uid="uid://qoigk0vkxgia" path="res://screens/start_menus/main_menu/assets/foreground_building.png" id="30_isr8b"]
+[ext_resource type="Texture2D" uid="uid://j0ipqbbbmkap" path="res://screens/start_menus/main_menu/assets/window_light.png" id="31_mx75g"]
+[ext_resource type="Texture2D" uid="uid://copqkfpnsd7pb" path="res://screens/start_menus/main_menu/assets/window_light_2.png" id="32_6sfa0"]
+[ext_resource type="Texture2D" uid="uid://co01upamdiru6" path="res://screens/start_menus/main_menu/assets/window_light_3.png" id="33_iep7o"]
+[ext_resource type="Texture2D" uid="uid://coyicwywxbayr" path="res://screens/start_menus/main_menu/assets/foreground_flag.png" id="34_1gjnl"]
+[ext_resource type="Texture2D" uid="uid://v88wr20krdem" path="res://screens/levels_menu/worlds_map_menu/assets/world_maps_menu_borders.png" id="35_6td2s"]
+[ext_resource type="Texture2D" uid="uid://wmnh1wr4tclr" path="res://screens/start_menus/main_menu/user_stats_container/assets/user_menu_container.png" id="36_g55vr"]
+[ext_resource type="Texture2D" uid="uid://dxdpky6ovwaee" path="res://screens/start_menus/main_menu/user_stats_container/assets/down_arrow.png" id="37_yual4"]
+[ext_resource type="Texture2D" uid="uid://civ6krpqfugoc" path="res://screens/start_menus/main_menu/go_to_settings_menu_button/assets/settings_normal.png" id="38_s7ir2"]
+[ext_resource type="Texture2D" uid="uid://co1cipww5iin4" path="res://screens/start_menus/main_menu/go_to_settings_menu_button/assets/settings_hover.png" id="39_1ar4m"]
+[ext_resource type="Texture2D" uid="uid://blaf6yqk37rn" path="res://screens/start_menus/main_menu/go_to_games_menu_button/assets/start_normal.png" id="40_ysf0s"]
+[ext_resource type="Texture2D" uid="uid://ckpyy1tdouq04" path="res://screens/start_menus/main_menu/go_to_games_menu_button/assets/start_hover.png" id="41_4l8hb"]
+[ext_resource type="Texture2D" uid="uid://1gmrkml2ov3j" path="res://screens/start_menus/main_menu/assets/market_button.png" id="42_0paxd"]
+[ext_resource type="Texture2D" uid="uid://dx315ovvalm7a" path="res://screens/start_menus/main_menu/assets/about_button.png" id="43_wgfjg"]
+[ext_resource type="Texture2D" uid="uid://cqrrt3vy3xsmn" path="res://screens/start_menus/main_menu/assets/about_button_selected.png" id="44_dva37"]
+
+[sub_resource type="Curve" id="Curve_u6en1"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 0.362638), 0.0, 0.0, 0, 0, Vector2(0.47191, 2.7033), 0.0, 0.0, 0, 0, Vector2(1, 0.527472), -4.37782, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_1v2er"]
+offsets = PackedFloat32Array(0, 0.3, 0.706667, 0.9)
+colors = PackedColorArray(0.207843, 0.207843, 0.207843, 0.541176, 1, 1, 1, 1, 1, 1, 1, 1, 0.545098, 0.392157, 0.423529, 0.0705882)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kfhy1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_hh5ll")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_l3gyn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_kkurh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_l3gyn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="Curve" id="Curve_f11un"]
+_limits = [0.0, 2.0, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.797753, 1.49451), -0.961989, -0.961989, 0, 0, Vector2(1, 0), -11.3016, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_onlr3"]
+offsets = PackedFloat32Array(0, 0.3, 0.833333, 1)
+colors = PackedColorArray(0, 0, 0, 0.8, 0.482353, 0.482353, 0.482353, 0.568627, 1, 1, 1, 0.356863, 0.545098, 0.392157, 0.423529, 0)
+
+[sub_resource type="Curve" id="Curve_kavga"]
+_limits = [0.0, 2.0, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.898876, 1.14286), 0.0, 0.0, 0, 0, Vector2(1, 0.043956), -4.37782, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_to0i8"]
+offsets = PackedFloat32Array(0, 0.3, 0.706667, 0.9)
+colors = PackedColorArray(0.207843, 0.207843, 0.207843, 0.541176, 0.489622, 0.489622, 0.489622, 0.803922, 1, 1, 1, 0.752941, 0.545098, 0.392157, 0.423529, 0.0705882)
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_4mv1u"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jj6fj"]
 shader = ExtResource("7_lps3n")
@@ -27,6 +116,55 @@ func _ready():
 	material.set(\"shader_parameter/wave_amplitude\",.05)
 	material.set(\"shader_parameter/wave_frequency\",4)"
 
+[sub_resource type="Animation" id="Animation_ojrm4"]
+resource_name = "goto_main_menu"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -1080)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainMenuItems:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 1080)]
+}
+
+[sub_resource type="Animation" id="Animation_kvomm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kvomm"]
+_data = {
+&"RESET": SubResource("Animation_kvomm"),
+&"goto_main_menu": SubResource("Animation_ojrm4")
+}
+
 [node name="LoadingScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -35,6 +173,402 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ti8cj")
+
+[node name="MainMenuItems" type="Control" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="BackgroundAnimation" type="Control" parent="MainMenuItems"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MainMenuBg" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation"]
+position = Vector2(960, 540)
+texture = ExtResource("9_ojrm4")
+
+[node name="Clouds" type="Node2D" parent="MainMenuItems/BackgroundAnimation"]
+
+[node name="Cloud1" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation/Clouds"]
+position = Vector2(959, 225)
+texture = ExtResource("10_kvomm")
+
+[node name="Cloud2" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation/Clouds"]
+position = Vector2(2879, 225)
+texture = ExtResource("10_kvomm")
+
+[node name="Middleground" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation"]
+modulate = Color(0.927273, 0.927273, 0.927273, 0.995152)
+position = Vector2(960, 540)
+scale = Vector2(1.08, 1.08)
+texture = ExtResource("11_jj8kx")
+
+[node name="RoofSoldiers" type="Node2D" parent="MainMenuItems/BackgroundAnimation/Middleground"]
+position = Vector2(922, -19)
+rotation = -0.0366434
+scale = Vector2(0.7, 0.7)
+
+[node name="MiniRoofSoldier" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation/Middleground/RoofSoldiers"]
+position = Vector2(-438, -504)
+texture = ExtResource("12_108yv")
+offset = Vector2(-6, 0)
+flip_h = true
+
+[node name="MiniRoofSoldier2" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation/Middleground/RoofSoldiers"]
+position = Vector2(-142, -502)
+texture = ExtResource("12_108yv")
+
+[node name="MiniRoofSoldier3" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation/Middleground/RoofSoldiers"]
+position = Vector2(-299, -504)
+texture = ExtResource("12_108yv")
+
+[node name="Rooftop" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation/Middleground"]
+position = Vector2(732, -340)
+texture = ExtResource("13_urekh")
+
+[node name="Marchinsoldiers" type="Node2D" parent="MainMenuItems/BackgroundAnimation"]
+position = Vector2(186, 576)
+
+[node name="RightTank" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation/Marchinsoldiers"]
+position = Vector2(35, -17.5)
+texture = ExtResource("14_bwne7")
+
+[node name="BGLight" type="PointLight2D" parent="MainMenuItems/BackgroundAnimation/Marchinsoldiers"]
+visible = false
+position = Vector2(-19, -57)
+color = Color(0.796078, 0.439216, 0.403922, 1)
+energy = 0.5
+texture = ExtResource("15_sw3yx")
+
+[node name="BgFlags" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation/Marchinsoldiers"]
+position = Vector2(35, -17.5)
+texture = ExtResource("16_cfcu6")
+
+[node name="LeftBackFlag" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation/Marchinsoldiers"]
+position = Vector2(-101, 2)
+texture = ExtResource("17_l0lhf")
+offset = Vector2(136, -19.5)
+
+[node name="LeftMiddleFlag" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation/Marchinsoldiers"]
+position = Vector2(-85.8741, 8.88354)
+texture = ExtResource("18_1yu5q")
+offset = Vector2(120.874, -26.3835)
+
+[node name="SoldierParticles2D" type="CPUParticles2D" parent="MainMenuItems/BackgroundAnimation/Marchinsoldiers"]
+show_behind_parent = true
+position = Vector2(-8.88188, -18.7506)
+scale = Vector2(0.980392, 0.980392)
+amount = 10
+texture = ExtResource("19_4mv1u")
+lifetime = 4.0
+emission_shape = 3
+emission_rect_extents = Vector2(100, 1)
+gravity = Vector2(0, -8)
+scale_amount_curve = SubResource("Curve_u6en1")
+color_ramp = SubResource("Gradient_1v2er")
+
+[node name="LittleSoldiers" type="AnimatedSprite2D" parent="MainMenuItems/BackgroundAnimation/Marchinsoldiers"]
+position = Vector2(-119, 86)
+sprite_frames = SubResource("SpriteFrames_kfhy1")
+autoplay = "default"
+offset = Vector2(154, -103.5)
+
+[node name="LeftTanks" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation/Marchinsoldiers"]
+position = Vector2(35, -17.5)
+texture = ExtResource("23_35mim")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="MainMenuItems/BackgroundAnimation/Marchinsoldiers/LeftTanks"]
+show_behind_parent = true
+position = Vector2(-170.156, 109.778)
+scale = Vector2(0.681677, 0.527762)
+amount = 25
+texture = ExtResource("19_4mv1u")
+lifetime = 5.0
+preprocess = 3.0
+emission_shape = 3
+emission_rect_extents = Vector2(30, 1)
+direction = Vector2(0, -1)
+spread = 97.72
+gravity = Vector2(-2, -7)
+scale_amount_curve = SubResource("Curve_f11un")
+color_ramp = SubResource("Gradient_onlr3")
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="MainMenuItems/BackgroundAnimation/Marchinsoldiers/LeftTanks"]
+show_behind_parent = true
+position = Vector2(-159.428, 72.5265)
+scale = Vector2(0.681677, 0.527762)
+amount = 22
+texture = ExtResource("19_4mv1u")
+lifetime = 4.0
+preprocess = 3.0
+emission_shape = 3
+emission_rect_extents = Vector2(10, 1)
+direction = Vector2(-1, 0)
+gravity = Vector2(-3, -5)
+angle_min = 160.0
+angle_max = 160.0
+scale_amount_curve = SubResource("Curve_kavga")
+color_ramp = SubResource("Gradient_to0i8")
+
+[node name="RightBackFlag" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation/Marchinsoldiers"]
+position = Vector2(33.3176, -4.89966)
+texture = ExtResource("24_2vlps")
+offset = Vector2(1.68239, -12.6003)
+
+[node name="RightMiddleFlags" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation/Marchinsoldiers"]
+position = Vector2(56.25, 3.94739)
+texture = ExtResource("25_ftx3u")
+offset = Vector2(-21.25, -21.4474)
+
+[node name="LeftFrontFlag" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation/Marchinsoldiers"]
+position = Vector2(-60.8638, 32.9263)
+texture = ExtResource("26_5nfeu")
+offset = Vector2(95.8638, -50.4263)
+
+[node name="RightFrontFlag" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation/Marchinsoldiers"]
+position = Vector2(98, 15)
+texture = ExtResource("27_du32y")
+offset = Vector2(-63, -32.5)
+
+[node name="Lights" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation/Marchinsoldiers"]
+position = Vector2(35, -17.5)
+texture = ExtResource("28_yalhn")
+
+[node name="WoodenBarriers" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation"]
+position = Vector2(274, 619)
+texture = ExtResource("29_vkcux")
+
+[node name="WorldsMapMenuItems" type="Node2D" parent="MainMenuItems/BackgroundAnimation"]
+position = Vector2(863.504, 435.573)
+scale = Vector2(0.02, 0.02)
+
+[node name="EuropeMapCitySelectorBg" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation/WorldsMapMenuItems"]
+position = Vector2(986, 786)
+texture = ExtResource("23_urekh")
+
+[node name="EuropeIcons" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation/WorldsMapMenuItems"]
+position = Vector2(986, 786)
+
+[node name="Lamp" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation/WorldsMapMenuItems"]
+position = Vector2(989.4, 789.4)
+texture = ExtResource("24_bwne7")
+
+[node name="MiddleLight" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation/WorldsMapMenuItems/Lamp"]
+modulate = Color(2, 2, 2, 0.749)
+show_behind_parent = true
+position = Vector2(-3.40234, -3.40039)
+texture = ExtResource("25_sw3yx")
+
+[node name="Soldiers" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation/WorldsMapMenuItems"]
+modulate = Color(0.185, 0.0197335, 0.0294519, 1)
+position = Vector2(986, 786)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("26_cfcu6")
+
+[node name="ForegroundBuilding" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation"]
+position = Vector2(885, 442)
+texture = ExtResource("30_isr8b")
+offset = Vector2(75, 86)
+
+[node name="WindowLights" type="Node2D" parent="MainMenuItems/BackgroundAnimation"]
+position = Vector2(898, 218)
+scale = Vector2(0.911483, 0.931592)
+
+[node name="WindowLight" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation/WindowLights"]
+texture = ExtResource("31_mx75g")
+
+[node name="WindowLight2" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation/WindowLights"]
+position = Vector2(-255.627, 115.931)
+scale = Vector2(1.09711, 1.07343)
+texture = ExtResource("31_mx75g")
+
+[node name="WindowLight3" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation/WindowLights"]
+position = Vector2(712.026, 163.162)
+scale = Vector2(1.09711, 1.07343)
+texture = ExtResource("32_6sfa0")
+
+[node name="WindowLight4" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation/WindowLights"]
+position = Vector2(822.835, 128.812)
+scale = Vector2(1.09711, 1.07343)
+texture = ExtResource("33_iep7o")
+
+[node name="WorldsMapMenuWindowLight" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation/WindowLights"]
+modulate = Color(1, 1, 1, 0.658824)
+position = Vector2(-1.09717, 245.816)
+scale = Vector2(1.09711, 1.07343)
+texture = ExtResource("31_mx75g")
+
+[node name="ForegroundFlag" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation"]
+position = Vector2(1601, 728)
+texture = ExtResource("34_1gjnl")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="MainMenuItems/BackgroundAnimation"]
+
+[node name="BlackBorders" type="Sprite2D" parent="MainMenuItems/BackgroundAnimation/CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(959.5, 540.5)
+scale = Vector2(1.057, 1.056)
+texture = ExtResource("35_6td2s")
+
+[node name="UserStatsContainer" type="Control" parent="MainMenuItems"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 1706.0
+offset_top = 53.0
+offset_right = 1706.0
+offset_bottom = 53.0
+
+[node name="UserStats" type="Control" parent="MainMenuItems/UserStatsContainer"]
+layout_mode = 1
+anchors_preset = 0
+
+[node name="ShowAccountPopupBtn" type="TextureButton" parent="MainMenuItems/UserStatsContainer/UserStats"]
+layout_mode = 0
+offset_left = -171.0
+offset_top = -55.0
+offset_right = 171.0
+offset_bottom = 57.0
+texture_normal = ExtResource("36_g55vr")
+texture_pressed = ExtResource("36_g55vr")
+texture_hover = ExtResource("36_g55vr")
+texture_focused = ExtResource("36_g55vr")
+
+[node name="AccountLabel" type="Label" parent="MainMenuItems/UserStatsContainer/UserStats/ShowAccountPopupBtn"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 35.0
+offset_right = 264.0
+offset_bottom = 75.0
+theme_override_colors/font_color = Color(0.968627, 0.870588, 0.776471, 1)
+theme_override_fonts/font = ExtResource("4_30k2f")
+theme_override_font_sizes/font_size = 50
+text = "account"
+horizontal_alignment = 1
+
+[node name="UserBalanceContainer" type="TextureRect" parent="MainMenuItems/UserStatsContainer/UserStats"]
+layout_mode = 0
+offset_left = -171.0
+offset_top = -55.0
+offset_right = 171.0
+offset_bottom = 57.0
+texture = ExtResource("36_g55vr")
+
+[node name="BalanceLabel" type="Label" parent="MainMenuItems/UserStatsContainer/UserStats/UserBalanceContainer"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 37.0
+offset_right = 223.0
+offset_bottom = 77.0
+theme_override_colors/font_color = Color(0.968627, 0.870588, 0.776471, 1)
+theme_override_fonts/font = ExtResource("4_30k2f")
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 2
+
+[node name="SingleGoldCoin" type="Sprite2D" parent="MainMenuItems/UserStatsContainer/UserStats/UserBalanceContainer"]
+position = Vector2(269, 58)
+scale = Vector2(0.772727, 0.772727)
+
+[node name="UsernameContainer" type="TextureButton" parent="MainMenuItems/UserStatsContainer/UserStats"]
+layout_mode = 0
+offset_left = -172.0
+offset_top = -55.0
+offset_right = 170.0
+offset_bottom = 56.0
+pivot_offset = Vector2(172, 58)
+focus_neighbor_left = NodePath("../../../GotoButtons/GoToSettingsMenuButton")
+toggle_mode = true
+texture_normal = ExtResource("36_g55vr")
+
+[node name="UserNameLabel" type="Label" parent="MainMenuItems/UserStatsContainer/UserStats/UsernameContainer"]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 36.0
+offset_right = 292.0
+offset_bottom = 76.0
+theme_override_colors/font_color = Color(0.97, 0.869767, 0.776, 1)
+theme_override_fonts/font = ExtResource("4_30k2f")
+theme_override_font_sizes/font_size = 50
+text = "Default User"
+
+[node name="Arrow" type="Sprite2D" parent="MainMenuItems/UserStatsContainer"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-1, 67)
+texture = ExtResource("37_yual4")
+
+[node name="GotoButtons" type="Control" parent="MainMenuItems"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GoToSettingsMenuButton" type="TextureButton" parent="MainMenuItems/GotoButtons"]
+layout_mode = 0
+offset_left = 800.0
+offset_top = 584.0
+offset_right = 1430.0
+offset_bottom = 1184.0
+scale = Vector2(0.9, 0.9)
+pivot_offset = Vector2(248, 586)
+focus_neighbor_left = NodePath("../GoToWorldsMapMenuButton")
+focus_neighbor_right = NodePath("../../UserStatsContainer/UserStats/UsernameContainer")
+toggle_mode = true
+texture_normal = ExtResource("38_s7ir2")
+texture_hover = ExtResource("39_1ar4m")
+texture_focused = ExtResource("39_1ar4m")
+
+[node name="GoToWorldsMapMenuButton" type="TextureButton" parent="MainMenuItems/GotoButtons"]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 477.5
+offset_right = 993.0
+offset_bottom = 1139.5
+scale = Vector2(0.9, 0.9)
+pivot_offset = Vector2(382, 621)
+focus_neighbor_right = NodePath("../GoToSettingsMenuButton")
+texture_normal = ExtResource("40_ysf0s")
+texture_hover = ExtResource("41_4l8hb")
+texture_focused = ExtResource("41_4l8hb")
+
+[node name="GoToMarketButton" type="TextureButton" parent="MainMenuItems/GotoButtons"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = -39.0
+offset_right = 332.0
+offset_bottom = 179.0
+focus_neighbor_right = NodePath("../GoToWorldsMapMenuButton")
+focus_mode = 0
+disabled = true
+toggle_mode = true
+button_group = SubResource("ButtonGroup_4mv1u")
+texture_normal = ExtResource("42_0paxd")
+
+[node name="GoToAboutMenuButton" type="TextureButton" parent="MainMenuItems/GotoButtons"]
+layout_mode = 0
+offset_left = 1612.0
+offset_top = 948.0
+offset_right = 1886.0
+offset_bottom = 1131.0
+texture_normal = ExtResource("43_wgfjg")
+texture_pressed = ExtResource("44_dva37")
+texture_hover = ExtResource("44_dva37")
+texture_focused = ExtResource("44_dva37")
+
+[node name="Camera2D" type="Camera2D" parent="MainMenuItems"]
+unique_name_in_owner = true
+position = Vector2(960, 540)
+process_callback = 0
+drag_horizontal_enabled = true
+drag_left_margin = 0.0
+drag_top_margin = 0.0
+drag_right_margin = 0.0
+drag_bottom_margin = 0.0
 
 [node name="AnimatedBackground" parent="." instance=ExtResource("5_wh8xf")]
 layout_mode = 0
@@ -113,6 +647,12 @@ offset_left = -422.0
 offset_top = 3.0
 offset_right = -422.32
 offset_bottom = 3.51999
+
+[node name="MenusTransitionAnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_kvomm")
+}
 
 [editable path="AnimatedLoadersContainer/AnimatedLoader1"]
 [editable path="AnimatedLoadersContainer/AnimatedLoader2"]
