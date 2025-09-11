@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://lg5qdekhnaus"]
+
+[ext_resource type="Texture2D" uid="uid://n82t1x7tnarm" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/assets/slot_button.png" id="1_heq48"]
+[ext_resource type="ButtonGroup" uid="uid://b6q4am4i0feoa" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/delete_user_popup/delete_user_item/delete_user_item_btn_group.tres" id="1_hyh3h"]
+[ext_resource type="Script" uid="uid://d2x71m4gumgqj" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/delete_user_popup/delete_user_item/delete_user_item.gd" id="1_nsylu"]
+[ext_resource type="Texture2D" uid="uid://c086yrkv7bodh" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/assets/slot_button_selected.png" id="2_iub7k"]
+[ext_resource type="Texture2D" uid="uid://bc47u08r8m6ob" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/assets/square_button_empty.png" id="4_hyh3h"]
+[ext_resource type="FontFile" uid="uid://ns85otisc51h" path="res://global_assets/fonts/Boldstone-Regular.ttf" id="4_iub7k"]
+
+[node name="DeleteUserItem" type="TextureButton"]
+toggle_mode = true
+button_group = ExtResource("1_hyh3h")
+texture_normal = ExtResource("1_heq48")
+texture_pressed = ExtResource("2_iub7k")
+texture_hover = ExtResource("2_iub7k")
+texture_focused = ExtResource("2_iub7k")
+script = ExtResource("1_nsylu")
+
+[node name="NameLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 21.0
+offset_top = 13.0
+offset_right = 307.0
+offset_bottom = 61.0
+theme_override_fonts/font = ExtResource("4_iub7k")
+theme_override_font_sizes/font_size = 60
+text = "Placeholder"
+
+[node name="CheckSquare" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 421.0
+offset_top = 8.0
+offset_right = 480.0
+offset_bottom = 66.0
+texture = ExtResource("4_hyh3h")
+
+[node name="CheckSign" type="TextureRect" parent="CheckSquare"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 10.0
+offset_top = 8.0
+offset_right = 50.0
+offset_bottom = 48.0
+
+[connection signal="toggled" from="." to="." method="_on_toggled"]

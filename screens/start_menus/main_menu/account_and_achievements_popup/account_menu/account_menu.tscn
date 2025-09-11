@@ -1,10 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://bqjh1bot43qap"]
+[gd_scene load_steps=14 format=3 uid="uid://bqjh1bot43qap"]
 
 [ext_resource type="Script" uid="uid://d0dtbdadqt3ak" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/account_menu.gd" id="1_45dyf"]
 [ext_resource type="Texture2D" uid="uid://dmlw3j7janvly" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/assets/account_bg.png" id="1_hsiwq"]
 [ext_resource type="Texture2D" uid="uid://bpfl5uj2tg03l" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/assets/account_icons/account_icon_1.png" id="2_45dyf"]
-[ext_resource type="Texture2D" uid="uid://i0vptnaahjwj" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/assets/edit_button.png" id="3_cublh"]
-[ext_resource type="Texture2D" uid="uid://fbqyhehw677h" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/assets/edit_button_selected.png" id="4_cgpuv"]
 [ext_resource type="Texture2D" uid="uid://d3ht1dr6r2d46" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/assets/empty_button.png" id="6_qwnp8"]
 [ext_resource type="Texture2D" uid="uid://sa5nwsglbrfr" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/assets/empty_button_selected.png" id="7_nonmb"]
 [ext_resource type="Texture2D" uid="uid://bpx51raefwebo" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/assets/warning_notification_icon.png" id="11_a3o6m"]
@@ -16,12 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://b1q1dc6ig3yxq" path="res://screens/original_test_project_scenes/login_register_menu/pop_ups/log_reg_pop_ups/register_pop_up/register_pop_up.tscn" id="20_cgpuv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hsiwq"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_45dyf"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cublh"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="AccountMenu" type="Control"]
@@ -40,18 +32,6 @@ offset_top = 25.0
 offset_right = 266.0
 offset_bottom = 242.0
 texture = ExtResource("2_45dyf")
-
-[node name="EditAccountBtn" type="TextureButton" parent="AccountIcon"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 149.0
-offset_top = 11.0
-offset_right = 221.0
-offset_bottom = 78.0
-texture_normal = ExtResource("3_cublh")
-texture_pressed = ExtResource("4_cgpuv")
-texture_hover = ExtResource("4_cgpuv")
-texture_focused = ExtResource("4_cgpuv")
 
 [node name="NewUserBtn" type="TextureButton" parent="."]
 layout_mode = 0
@@ -130,31 +110,19 @@ offset_top = 330.0
 offset_right = 533.0
 offset_bottom = 627.0
 
-[node name="UsernameTextEdit" type="TextEdit" parent="."]
+[node name="UsernameLabel" type="Label" parent="."]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 296.0
 offset_top = 26.0
 offset_right = 807.0
 offset_bottom = 87.0
-theme_override_colors/font_readonly_color = Color(0.878431, 0.847059, 0.772549, 1)
 theme_override_colors/font_color = Color(0.878431, 0.847059, 0.772549, 1)
 theme_override_constants/line_spacing = 6
 theme_override_fonts/font = ExtResource("17_srait")
 theme_override_font_sizes/font_size = 56
 theme_override_styles/normal = SubResource("StyleBoxFlat_hsiwq")
-theme_override_styles/focus = SubResource("StyleBoxFlat_45dyf")
-theme_override_styles/read_only = SubResource("StyleBoxFlat_cublh")
 text = "USERNAME"
-
-[node name="EditUsernameIcon" type="TextureRect" parent="UsernameTextEdit"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 445.0
-offset_top = -4.0
-offset_right = 517.0
-offset_bottom = 63.0
-texture = ExtResource("3_cublh")
 
 [node name="XPLabel" type="Label" parent="."]
 layout_mode = 0
@@ -270,4 +238,4 @@ visible = false
 layout_mode = 1
 
 [connection signal="pressed" from="NewUserBtn" to="." method="_on_new_user_btn_pressed"]
-[connection signal="text_changed" from="UsernameTextEdit" to="." method="_on_username_text_edit_text_changed"]
+[connection signal="pressed" from="DeleteUserBtn" to="." method="_on_delete_user_btn_pressed"]

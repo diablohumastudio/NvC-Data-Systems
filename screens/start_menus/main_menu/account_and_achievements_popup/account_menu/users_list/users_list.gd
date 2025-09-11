@@ -1,14 +1,10 @@
-extends Control
+class_name UsersList extends Control
 
 signal create_new_user_requested
 
 const user_list_item_pksc: PackedScene = preload("uid://dvlb36pw703xc")
 
-var current_user_credential: UserCredentials = UDS.all_users_credentials.credentials[UDS.all_users_credentials.current_user_index]
-
-func _on_uds_current_user_changed():
-	current_user_credential = UDS.all_users_credentials.credentials[UDS.all_users_credentials.current_user_index]
-	_set_items()
+var current_user_credential: UserCredentials = UDS.get_current_user_credentials()
 
 func _ready() -> void:
 	UDS.current_user_changed.connect(_on_uds_current_user_changed)
@@ -18,7 +14,7 @@ func _set_items():
 	for child in get_children():
 		child.queue_free()
 
-	for ii in UDS.all_users_credentials.credentials.size():
+	for ii in 3:
 		var user_credential: UserCredentials 
 		user_credential = UDS.all_users_credentials.credentials[ii] if UDS.all_users_credentials.credentials.size()> ii else null
 		
@@ -30,11 +26,14 @@ func _set_items():
 		add_child(new_user_list_item)
 	_set_children_visuals()
 
+func _on_uds_current_user_changed():
+	current_user_credential = UDS.get_current_user_credentials()
+	_set_items()
+
 func _on_slot_button_pressed(user_list_item: UserListItem) -> void:
 	if user_list_item.user_credentials == null:
 		create_new_user_requested.emit()
 		return
-	UDS.all_users_credentials.current_user_index = UDS.all_users_credentials.credentials.find(user_list_item.user_credentials)
 	UDS.set_current_user(user_list_item.user_credentials.user_name)
 	_set_children_visuals()
 

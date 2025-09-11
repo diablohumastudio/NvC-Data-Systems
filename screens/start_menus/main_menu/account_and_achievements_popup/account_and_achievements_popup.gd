@@ -13,7 +13,11 @@ func _on_achievements_button_pressed() -> void:
 func _on_account_menu_create_new_user_btn_pressed() -> void:
 	%DoubleMenuWoodenPopup.hide()
 	%CreateNewUserPopup.show()
-
+	
+func _on_account_menu_delete_user_btn_pressed() -> void:
+	%DoubleMenuWoodenPopup.hide()
+	%DeleteUserPopup.show()
+	
 func _on_create_new_user_popup_accept_btn_pressed() -> void:
 	%DoubleMenuWoodenPopup.show()
 	%CreateNewUserPopup.hide()
@@ -22,6 +26,14 @@ func _on_create_new_user_popup_cancel_btn_pressed() -> void:
 	%DoubleMenuWoodenPopup.show()
 	%CreateNewUserPopup.hide()
 
+func _on_delete_user_popup_accept_btn_pressed() -> void:
+	%DoubleMenuWoodenPopup.show()
+	%DeleteUserPopup.hide()
+
+func _on_delete_user_popup_cancel_btn_pressed() -> void:
+	%DoubleMenuWoodenPopup.show()
+	%DeleteUserPopup.hide()
+	
 func _on_close_button_pressed() -> void:
 	dissapear()
 

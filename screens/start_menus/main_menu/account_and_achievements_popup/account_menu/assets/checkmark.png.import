@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwdnvghl48y1j"
-path="res://.godot/imported/login_button_selected.png-ac1edf26a23401be45fbe0311201270f.ctex"
+uid="uid://c3psaa220khtt"
+path="res://.godot/imported/checkmark.png-7044fc6b89cf5e38e60b06f834b5a667.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/assets/login_button_selected.png"
-dest_files=["res://.godot/imported/login_button_selected.png-ac1edf26a23401be45fbe0311201270f.ctex"]
+source_file="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/assets/checkmark.png"
+dest_files=["res://.godot/imported/checkmark.png-7044fc6b89cf5e38e60b06f834b5a667.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bexhtmhrltlwf"
-path="res://.godot/imported/plus_button_selected.png-1a09033b2482f2cd89377d1765e023ed.ctex"
+uid="uid://b86d0yam8ffoa"
+path="res://.godot/imported/new_account_background.png-c1b540547b83f96c969cf2cde9c1b3d1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/assets/plus_button_selected.png"
-dest_files=["res://.godot/imported/plus_button_selected.png-1a09033b2482f2cd89377d1765e023ed.ctex"]
+source_file="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/create_new_user_popup/assets/new_account_background.png"
+dest_files=["res://.godot/imported/new_account_background.png-c1b540547b83f96c969cf2cde9c1b3d1.ctex"]
 
 [params]
 

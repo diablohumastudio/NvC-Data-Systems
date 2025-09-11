@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2ktqctlrngns"
-path="res://.godot/imported/new_account_username_box.png-c42ca0693a1260c852ec0c182e34ff37.ctex"
+uid="uid://d27de7hiu47rq"
+path="res://.godot/imported/delete_account_background.png-3b88ac9bba21e1cdcb550d6962fed8b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/assets/new_account_username_box.png"
-dest_files=["res://.godot/imported/new_account_username_box.png-c42ca0693a1260c852ec0c182e34ff37.ctex"]
+source_file="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/delete_user_popup/assets/delete_account_background.png"
+dest_files=["res://.godot/imported/delete_account_background.png-3b88ac9bba21e1cdcb550d6962fed8b7.ctex"]
 
 [params]
 

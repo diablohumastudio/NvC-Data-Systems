@@ -1948,6 +1948,7 @@ texture_focused = ExtResource("50_53gr8")
 
 [node name="AccountAndAchievementsPopup" parent="." instance=ExtResource("51_ou335")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 
 [node name="ExitPopup" parent="." instance=ExtResource("10_gotav")]

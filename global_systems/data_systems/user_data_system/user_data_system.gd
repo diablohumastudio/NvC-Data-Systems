@@ -13,10 +13,12 @@ enum PROPERTIES {
 	MUSIC_VOLUME,
 	SFX_VOLUME}
 
-enum CAN_CREATE_USER_ERRORS{
+enum USER_PROCESSES_ERRORS{
 	OK,
 	MAX_NUMBER_OF_USER_CREATED,
-	USER_SAME_NAME
+	USER_SAME_NAME,
+	USER_DONT_EXIST,
+	CANNOT_DELETE_ALL_USERS
 }
 
 const _USERS_CREDENTIALS_FILE_PATH : String = "user://users.tres"
@@ -40,10 +42,10 @@ func initialize_users_data():
 		var new_user_credentials: UserCredentials = UserCredentials.new()
 		create_new_user(new_user_credentials)
 
-func can_create_new_user(user_credentials: UserCredentials) -> CAN_CREATE_USER_ERRORS:
-	if all_users_credentials.credentials.size() >= MAX_NUMBER_OF_USERS: return CAN_CREATE_USER_ERRORS.MAX_NUMBER_OF_USER_CREATED
-	if user_exists(user_credentials.user_name): return CAN_CREATE_USER_ERRORS.USER_SAME_NAME
-	else: return CAN_CREATE_USER_ERRORS.OK
+func can_create_new_user(user_credentials: UserCredentials) -> USER_PROCESSES_ERRORS:
+	if all_users_credentials.credentials.size() >= MAX_NUMBER_OF_USERS: return USER_PROCESSES_ERRORS.MAX_NUMBER_OF_USER_CREATED
+	if user_exists(user_credentials.user_name): return USER_PROCESSES_ERRORS.USER_SAME_NAME
+	else: return USER_PROCESSES_ERRORS.OK
 
 func create_new_user(user_credentials: UserCredentials, set_to_current: bool = true) -> UserData:
 	if all_users_credentials.credentials.size() >= MAX_NUMBER_OF_USERS: return null
@@ -109,17 +111,20 @@ func _create_new_ud_achievements() -> Array[UDAchievement]:
 func set_current_user(user_name: String) -> void:
 	if current_user_data:
 		save_user_data_to_disk()
-	set_all_users_cred_by_name(user_name)
+	set_current_user_credentials(user_name)
 	current_user_data = get_user_data_by_name(user_name)
 	current_user_changed.emit()
 	save_user_data_to_disk()
 
-func set_all_users_cred_by_name(user_name: String):
+func set_current_user_credentials(user_name: String):
 	var new_user_index: int
 	for user_credential in all_users_credentials.credentials:
 		if user_credential.user_name == user_name:
 			new_user_index = all_users_credentials.credentials.find(user_credential)
 	all_users_credentials.current_user_index = new_user_index
+
+func get_current_user_credentials() -> UserCredentials:
+	return all_users_credentials.credentials[all_users_credentials.current_user_index]
 
 func get_user_data_by_name(user_name: String) -> UserData:
 	var user_data: UserData
@@ -144,10 +149,26 @@ func is_user_password_valid(user_name: String, password: String) -> bool:
 	return false
 
 func save_user_data_to_disk(user_data: UserData = current_user_data) -> void:
+	save_user_credentials()
+	var result = ResourceSaver.save(user_data, _USER_FILE_BASE + user_data.user_name + ".tres")
+	assert(result == OK)
+
+func save_user_credentials():
 	var result : Error = ResourceSaver.save(all_users_credentials, _USERS_CREDENTIALS_FILE_PATH)
 	assert(result == OK)
-	result = ResourceSaver.save(user_data, _USER_FILE_BASE + user_data.user_name + ".tres")
-	assert(result == OK)
+
+func delete_user_by_name(user_name: String) -> USER_PROCESSES_ERRORS:
+	if !user_exists(user_name): return USER_PROCESSES_ERRORS.USER_DONT_EXIST
+	var size = all_users_credentials.credentials.size()
+	if all_users_credentials.credentials.size() == 1 : return USER_PROCESSES_ERRORS.CANNOT_DELETE_ALL_USERS
+	for user_credential in all_users_credentials.credentials:
+		if user_credential.user_name == user_name:
+			var index = all_users_credentials.credentials.find(user_credential)
+			all_users_credentials.credentials.pop_at(index)
+			DirAccess.open(_USER_FILE_BASE).remove(user_name + ".tres")
+	set_current_user(all_users_credentials.credentials[0].user_name)
+	save_user_data_to_disk()
+	return USER_PROCESSES_ERRORS.OK
 
 func get_property(property: PROPERTIES):
 	match property:
