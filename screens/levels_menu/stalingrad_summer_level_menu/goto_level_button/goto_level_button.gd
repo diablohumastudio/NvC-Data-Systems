@@ -17,7 +17,7 @@ func set_state_visuals():
 	if ud_level.completed:
 		%Icon.animation = "completed"
 		$Textures/IconLight.visible = false
-    disabled = false
+		disabled = false
 	if ud_level.locked:
 		%Icon.animation = "locked"
 		$Textures/IconLight.visible = false
