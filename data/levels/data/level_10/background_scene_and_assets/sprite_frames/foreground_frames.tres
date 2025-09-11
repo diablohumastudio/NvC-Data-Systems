@@ -1,0 +1,78 @@
+[gd_resource type="SpriteFrames" load_steps=18 format=3 uid="uid://dmt1ldthrihf"]
+
+[ext_resource type="Texture2D" uid="uid://bmva0tec4ugk7" path="res://data/levels/data/level_10/sprite_frames/assets/last_wave_animation/fotograma0000.webp" id="1_eft82"]
+[ext_resource type="Texture2D" uid="uid://dnrx8qierm367" path="res://data/levels/data/level_10/sprite_frames/assets/last_wave_animation/fotograma0001.webp" id="2_sboxc"]
+[ext_resource type="Texture2D" uid="uid://tm1j7paw34w4" path="res://data/levels/data/level_10/sprite_frames/assets/last_wave_animation/fotograma0002.webp" id="3_fd70u"]
+[ext_resource type="Texture2D" uid="uid://2g0qc7qnb7li" path="res://data/levels/data/level_10/sprite_frames/assets/last_wave_animation/fotograma0003.webp" id="4_v24ra"]
+[ext_resource type="Texture2D" uid="uid://rf0xx346gi6k" path="res://data/levels/data/level_10/sprite_frames/assets/last_wave_animation/fotograma0004.webp" id="5_omxh4"]
+[ext_resource type="Texture2D" uid="uid://vswelk7id8iq" path="res://data/levels/data/level_10/sprite_frames/assets/last_wave_animation/fotograma0005.webp" id="6_pkh55"]
+[ext_resource type="Texture2D" uid="uid://bt75ftlbxjdpt" path="res://data/levels/data/level_10/sprite_frames/assets/last_wave_animation/fotograma0006.webp" id="7_iu4oq"]
+[ext_resource type="Texture2D" uid="uid://cpa6odtydbinu" path="res://data/levels/data/level_10/sprite_frames/assets/last_wave_animation/fotograma0007.webp" id="8_l8xka"]
+[ext_resource type="Texture2D" uid="uid://cd1cfbyoytcde" path="res://data/levels/data/level_10/sprite_frames/assets/last_wave_animation/fotograma0008.webp" id="9_tu5cx"]
+[ext_resource type="Texture2D" uid="uid://dt6hu806rjaty" path="res://data/levels/data/level_10/sprite_frames/assets/last_wave_animation/fotograma0009.webp" id="10_pu7vi"]
+[ext_resource type="Texture2D" uid="uid://dvrao622yjx8m" path="res://data/levels/data/level_10/sprite_frames/assets/last_wave_animation/fotograma0010.webp" id="11_o0mru"]
+[ext_resource type="Texture2D" uid="uid://ckv5h8j00qqxv" path="res://data/levels/data/level_10/sprite_frames/assets/last_wave_animation/fotograma0011.webp" id="12_yddqj"]
+[ext_resource type="Texture2D" uid="uid://dcw6ki4ywvvcb" path="res://data/levels/data/level_10/sprite_frames/assets/last_wave_animation/fotograma0012.webp" id="13_mrdx0"]
+[ext_resource type="Texture2D" uid="uid://cilkixiem61gk" path="res://data/levels/data/level_10/sprite_frames/assets/last_wave_animation/fotograma0013.webp" id="14_mk6ld"]
+[ext_resource type="Texture2D" uid="uid://bx383cb5kjo7l" path="res://data/levels/data/level_10/sprite_frames/assets/last_wave_animation/fotograma0014.webp" id="15_buwgj"]
+[ext_resource type="Texture2D" uid="uid://qohpg4wrxi8w" path="res://data/levels/data/level_10/sprite_frames/assets/last_wave_animation/fotograma0015.webp" id="16_0jxos"]
+[ext_resource type="Texture2D" uid="uid://6djbdk3pf6gc" path="res://data/levels/data/level_10/sprite_frames/assets/last_wave_animation/fotograma0016.webp" id="17_74fni"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_eft82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_sboxc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fd70u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_v24ra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_omxh4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pkh55")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_iu4oq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_l8xka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_tu5cx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_pu7vi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_o0mru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_yddqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_mrdx0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_mk6ld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_buwgj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_0jxos")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_74fni")
+}],
+"loop": false,
+"name": &"last_wave_started_l10",
+"speed": 5.0
+}]

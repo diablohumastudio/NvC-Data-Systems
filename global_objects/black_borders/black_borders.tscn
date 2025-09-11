@@ -4,6 +4,9 @@
 [ext_resource type="Script" uid="uid://bg8jnow2eyt57" path="res://global_objects/black_borders/black_borders.gd" id="1_h3fm1"]
 
 [node name="BlackBordersFilter" type="TextureRect"]
+top_level = true
+z_index = 10
+z_as_relative = false
 mouse_filter = 2
 texture = ExtResource("1_gqiew")
 script = ExtResource("1_h3fm1")

@@ -8,8 +8,6 @@ var _entering_from_worlds_map_menu: bool = false
 func _ready():
 	AudioSystem.post_event(AK.EVENTS.SET_MUSIC_SC_MAIN_MENU)
 	%AccountAndAchievementsPopup.closed.connect(_on_account_and_achivemens_popup)
-
-func _sms_initialize():
 	if _entering_from_about_menu:
 		%MenusTransitionAnimationPlayer.play_backwards("goto_about_menu")
 		%InitialAnimationPlayer.play("start_from_games_menu")

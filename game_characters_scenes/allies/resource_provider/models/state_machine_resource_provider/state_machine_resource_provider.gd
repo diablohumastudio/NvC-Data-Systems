@@ -8,6 +8,28 @@ var spawn_state: SpawnState
 var idle_state: IdleState
 var giving_coin_state: GivingCoinState
 var dead_state: DeadState
+var shooting_state: ShootingState
+
+enum SHOOTING_STATES { NORMAL, MOSTSTRONG}
+
+var shooting_state_type: SHOOTING_STATES: set = _set_shooting_state_type
+
+func _set_shooting_state_type(new_value: SHOOTING_STATES):
+	match new_value:
+		SHOOTING_STATES.NORMAL:
+			shooting_state = NormalShootingState.new(resource_provider, self)
+
+class ShootingState:
+	var resource_provider: ResourceProvider
+	var state_machine: ResourceProviderStateMachine
+	func _init(provider: ResourceProvider, machine: ResourceProviderStateMachine):
+		resource_provider = provider
+		state_machine = machine
+	pass
+class NormalShootingState extends ShootingState:
+	pass
+class MostStrongShottingState extends  ShootingState:
+	pass
 
 func _ready():
 	resource_provider = get_parent() as ResourceProvider
@@ -15,7 +37,8 @@ func _ready():
 	spawn_state = SpawnState.new(resource_provider, self)
 	idle_state = IdleState.new(resource_provider, self)
 	giving_coin_state = GivingCoinState.new(resource_provider, self)
-	dead_state = DeadState.new(resource_provider, self)
+	
+	
 	
 	transition_to(spawn_state)
 

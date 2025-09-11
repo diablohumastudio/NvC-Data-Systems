@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="WaveData" load_steps=6 format=3 uid="uid://dij34l0lxkdfr"]
+
+[ext_resource type="Script" uid="uid://c0331f0oa5ot4" path="res://data/levels/model/waves/ene_spawn_pos_strategy/random_spawn_pos_stratgy.gd" id="1_5f8hh"]
+[ext_resource type="Script" uid="uid://dd6up2lw38wb3" path="res://data/levels/model/waves/wave_data.gd" id="1_b3p23"]
+[ext_resource type="Script" uid="uid://cy8oemb6ch5th" path="res://data/levels/model/waves/ene_spawn_timing_strategy/random_spawn_timing_stratgy.gd" id="3_m640n"]
+
+[sub_resource type="Resource" id="Resource_m2a5r"]
+script = ExtResource("1_5f8hh")
+metadata/_custom_type_script = "uid://c0331f0oa5ot4"
+
+[sub_resource type="Resource" id="Resource_sauqg"]
+script = ExtResource("3_m640n")
+min_wait_time = 0.5
+max_wait_time = 1.5
+metadata/_custom_type_script = "uid://cy8oemb6ch5th"
+
+[resource]
+script = ExtResource("1_b3p23")
+enemies = Dictionary[int, int]({
+0: 4
+})
+position_strategy = SubResource("Resource_m2a5r")
+timing_strategy = SubResource("Resource_sauqg")
+metadata/_custom_type_script = "uid://dd6up2lw38wb3"

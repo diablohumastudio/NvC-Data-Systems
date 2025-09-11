@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bkw6opjkyqyh3"]
 
 [ext_resource type="Script" uid="uid://n7gwx5w87na" path="res://tests/game_components_tests/terrain_grid_test/terrain_grid_test.gd" id="1_w3jjf"]
-[ext_resource type="PackedScene" uid="uid://cch6b4h5wk2jy" path="res://screens/game/components/terrain_grid/terrain_grid.tscn" id="2_4q2ja"]
+[ext_resource type="PackedScene" uid="uid://cch6b4h5wk2jy" path="res://global_objects/button_cell_grid/button_cell_grid.tscn" id="2_4q2ja"]
 
 [node name="TerrainGridTest" type="Control"]
 layout_mode = 3

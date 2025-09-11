@@ -7,20 +7,19 @@ func set_state_visuals():
 	if !level: return
 	var ud_level: UDLevel = level.get_saved_ud_level()
 	%NameLabel.text = level.level_name
-	print(ud_level.completed)
 	if ud_level.completed:
 		%Icon.animation = "completed"
+		disabled = false
 	if ud_level.locked:
 		%Icon.animation = "locked"
+		disabled = true
 	elif !ud_level.completed and !ud_level.locked:
 		%Icon.animation = "unlocked"
 		disabled = false
 		modulate = Color.WHITE
 
 func _on_pressed() -> void:
-	GSS.level = level
-	GSS.reset_values()
-	SMS.change_scene(load(GC.SCREENS_UIDS.GAME))
+	SMS.change_scene(load(GC.SCREENS_UIDS.GAME), {"level": level})
 
 func _on_focus_entered() -> void:
 	$AnimationPlayer.play("selected")

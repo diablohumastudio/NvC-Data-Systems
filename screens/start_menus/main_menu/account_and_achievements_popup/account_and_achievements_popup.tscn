@@ -1,8 +1,9 @@
-[gd_scene load_steps=21 format=3 uid="uid://bem1470lq7oa4"]
+[gd_scene load_steps=24 format=3 uid="uid://bem1470lq7oa4"]
 
 [ext_resource type="Script" uid="uid://uncgen6shqoo" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_and_achievements_popup.gd" id="1_cx52j"]
 [ext_resource type="Texture2D" uid="uid://d04tkxanl6yk6" path="res://screens/start_menus/main_menu/account_and_achievements_popup/assets/background.png" id="1_hpbon"]
 [ext_resource type="Shader" uid="uid://boa325ynfrjd4" path="res://global_assets/shaders/perspective_shader.gdshader" id="2_efii4"]
+[ext_resource type="StyleBox" uid="uid://11y5vao8e46h" path="res://screens/start_menus/main_menu/account_and_achievements_popup/assets/bg_btn_style_box_flat.tres" id="2_r2ocr"]
 [ext_resource type="Texture2D" uid="uid://bib8b2hfp7eq1" path="res://screens/start_menus/main_menu/account_and_achievements_popup/assets/achievements_button.png" id="3_d6oqd"]
 [ext_resource type="PackedScene" uid="uid://bqjh1bot43qap" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/account_menu.tscn" id="3_kllku"]
 [ext_resource type="PackedScene" uid="uid://dts0s5jhqb7pk" path="res://screens/start_menus/main_menu/account_and_achievements_popup/achievements_menu/achievements_menu.tscn" id="4_efii4"]
@@ -12,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://b6pbkkdjk1f37" path="res://screens/start_menus/main_menu/account_and_achievements_popup/assets/account_button_hover.png" id="6_ffm7q"]
 [ext_resource type="Texture2D" uid="uid://dm32oaiyvgg23" path="res://screens/start_menus/main_menu/account_and_achievements_popup/assets/achievements_button_pressed.png" id="8_gsicq"]
 [ext_resource type="Texture2D" uid="uid://djps5bmv1lggd" path="res://screens/start_menus/main_menu/account_and_achievements_popup/assets/achievements_button_hover.png" id="9_4pnot"]
+[ext_resource type="PackedScene" uid="uid://bru5xmejfsk53" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/create_new_user_popup/create_new_user_popup.tscn" id="16_wwx61"]
+[ext_resource type="PackedScene" uid="uid://ddp8ihfe7dk8f" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/delete_user_popup/delete_user_popup.tscn" id="17_2gcee"]
 [ext_resource type="Texture2D" uid="uid://dsx4ykwqjx1x0" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/x_button.png" id="30_xfnua"]
 [ext_resource type="Texture2D" uid="uid://th5h8fc336js" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/x_button_selected.png" id="31_kxbyf"]
 
@@ -36,7 +39,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Background:scale")
+tracks/0/path = NodePath("DoubleMenuWoodenPopup/Background:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -48,7 +51,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Borders:scale")
+tracks/1/path = NodePath("DoubleMenuWoodenPopup/Borders:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -60,7 +63,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("MenuContainer:modulate")
+tracks/2/path = NodePath("DoubleMenuWoodenPopup/MenuContainer:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -72,7 +75,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("AccountButton:modulate")
+tracks/3/path = NodePath("DoubleMenuWoodenPopup/AccountButton:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -84,7 +87,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("AchievementsButton:modulate")
+tracks/4/path = NodePath("DoubleMenuWoodenPopup/AchievementsButton:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -96,7 +99,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("XButton:modulate")
+tracks/5/path = NodePath("DoubleMenuWoodenPopup/XButton:modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -120,7 +123,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Background:material:shader_parameter/x_rot")
+tracks/7/path = NodePath("DoubleMenuWoodenPopup/Background:material:shader_parameter/x_rot")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -132,7 +135,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("Borders:material:shader_parameter/x_rot")
+tracks/8/path = NodePath("DoubleMenuWoodenPopup/Borders:material:shader_parameter/x_rot")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -149,7 +152,7 @@ step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Background:scale")
+tracks/0/path = NodePath("DoubleMenuWoodenPopup/Background:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -161,7 +164,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Borders:scale")
+tracks/1/path = NodePath("DoubleMenuWoodenPopup/Borders:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -173,7 +176,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("MenuContainer:modulate")
+tracks/2/path = NodePath("DoubleMenuWoodenPopup/MenuContainer:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -185,7 +188,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("AccountButton:modulate")
+tracks/3/path = NodePath("DoubleMenuWoodenPopup/AccountButton:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -197,7 +200,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("AchievementsButton:modulate")
+tracks/4/path = NodePath("DoubleMenuWoodenPopup/AchievementsButton:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -209,7 +212,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("XButton:modulate")
+tracks/5/path = NodePath("DoubleMenuWoodenPopup/XButton:modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -233,7 +236,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Background:material:shader_parameter/x_rot")
+tracks/7/path = NodePath("DoubleMenuWoodenPopup/Background:material:shader_parameter/x_rot")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -245,7 +248,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("Borders:material:shader_parameter/x_rot")
+tracks/8/path = NodePath("DoubleMenuWoodenPopup/Borders:material:shader_parameter/x_rot")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -262,7 +265,7 @@ step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Background:scale")
+tracks/0/path = NodePath("DoubleMenuWoodenPopup/Background:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -274,7 +277,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Borders:scale")
+tracks/1/path = NodePath("DoubleMenuWoodenPopup/Borders:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -286,7 +289,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("MenuContainer:modulate")
+tracks/2/path = NodePath("DoubleMenuWoodenPopup/MenuContainer:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -298,7 +301,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("AccountButton:modulate")
+tracks/3/path = NodePath("DoubleMenuWoodenPopup/AccountButton:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -310,7 +313,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("AchievementsButton:modulate")
+tracks/4/path = NodePath("DoubleMenuWoodenPopup/AchievementsButton:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -322,7 +325,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("XButton:modulate")
+tracks/5/path = NodePath("DoubleMenuWoodenPopup/XButton:modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -346,7 +349,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Background:material:shader_parameter/x_rot")
+tracks/7/path = NodePath("DoubleMenuWoodenPopup/Background:material:shader_parameter/x_rot")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -358,7 +361,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("Borders:material:shader_parameter/x_rot")
+tracks/8/path = NodePath("DoubleMenuWoodenPopup/Borders:material:shader_parameter/x_rot")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -376,6 +379,7 @@ _data = {
 }
 
 [node name="AccountAndAchievementsPopup" type="Control"]
+custom_minimum_size = Vector2(1920, 1080)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -384,54 +388,35 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_cx52j")
 
-[node name="BlackBG" type="ColorRect" parent="."]
+[node name="BlackBG" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0.498039)
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-color = Color(0.12, 0.0516, 0.0516, 1)
+theme_override_styles/focus = ExtResource("2_r2ocr")
+theme_override_styles/hover = ExtResource("2_r2ocr")
+theme_override_styles/pressed = ExtResource("2_r2ocr")
+theme_override_styles/normal = ExtResource("2_r2ocr")
 
-[node name="BlackBGBtn" type="TextureButton" parent="BlackBG"]
+[node name="DoubleMenuWoodenPopup" type="Control" parent="."]
 unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_default_cursor_shape = 1
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="DoubleMenuWoodenPopup"]
 material = SubResource("ShaderMaterial_r2ocr")
 position = Vector2(965, 35)
 texture = ExtResource("1_hpbon")
 offset = Vector2(2, 504)
 
-[node name="MenuContainer" type="Control" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-
-[node name="AccountMenu" parent="MenuContainer" instance=ExtResource("3_kllku")]
-layout_mode = 1
-mouse_filter = 2
-
-[node name="AchievementsMenu" parent="MenuContainer" instance=ExtResource("4_efii4")]
-visible = false
-layout_mode = 1
-mouse_filter = 2
-
-[node name="Borders" type="Sprite2D" parent="."]
+[node name="Borders" type="Sprite2D" parent="DoubleMenuWoodenPopup"]
 material = SubResource("ShaderMaterial_efii4")
 position = Vector2(964, 48)
 texture = ExtResource("5_l8cks")
 offset = Vector2(21, 488)
 
-[node name="AccountButton" type="TextureButton" parent="."]
+[node name="AccountButton" type="TextureButton" parent="DoubleMenuWoodenPopup"]
 layout_mode = 0
 offset_left = 340.0
 offset_top = 137.5
@@ -443,7 +428,7 @@ texture_pressed = ExtResource("5_ftrhk")
 texture_hover = ExtResource("6_ffm7q")
 texture_focused = ExtResource("5_ftrhk")
 
-[node name="AchievementsButton" type="TextureButton" parent="."]
+[node name="AchievementsButton" type="TextureButton" parent="DoubleMenuWoodenPopup"]
 layout_mode = 0
 offset_left = 960.0
 offset_top = 136.0
@@ -455,7 +440,7 @@ texture_pressed = ExtResource("8_gsicq")
 texture_hover = ExtResource("9_4pnot")
 texture_focused = ExtResource("8_gsicq")
 
-[node name="XButton" type="TextureButton" parent="."]
+[node name="XButton" type="TextureButton" parent="DoubleMenuWoodenPopup"]
 layout_mode = 0
 offset_left = 1546.0
 offset_top = 87.0
@@ -467,13 +452,63 @@ texture_pressed = ExtResource("31_kxbyf")
 texture_hover = ExtResource("31_kxbyf")
 texture_focused = ExtResource("31_kxbyf")
 
+[node name="MenuContainer" type="Control" parent="DoubleMenuWoodenPopup"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="AccountMenu" parent="DoubleMenuWoodenPopup/MenuContainer" instance=ExtResource("3_kllku")]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 363.0
+offset_top = 259.0
+offset_right = 363.0
+offset_bottom = 259.0
+mouse_filter = 2
+
+[node name="AchievementsMenu" parent="DoubleMenuWoodenPopup/MenuContainer" instance=ExtResource("4_efii4")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+offset_left = 377.0
+offset_top = 271.0
+offset_right = 377.0
+offset_bottom = 271.0
+mouse_filter = 2
+
+[node name="CreateNewUserPopup" parent="." instance=ExtResource("16_wwx61")]
+unique_name_in_owner = true
+visible = false
+offset_left = 398.0
+offset_top = 151.0
+offset_right = 498.0
+offset_bottom = 226.0
+
+[node name="DeleteUserPopup" parent="." instance=ExtResource("17_2gcee")]
+unique_name_in_owner = true
+visible = false
+offset_left = 424.0
+offset_top = 146.0
+offset_right = 424.0
+offset_bottom = 146.0
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
 libraries = {
 &"": SubResource("AnimationLibrary_efii4")
 }
 
-[connection signal="pressed" from="BlackBG/BlackBGBtn" to="." method="_on_close_button_pressed"]
-[connection signal="pressed" from="AccountButton" to="." method="_on_account_button_pressed"]
-[connection signal="pressed" from="AchievementsButton" to="." method="_on_achievements_button_pressed"]
-[connection signal="pressed" from="XButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="BlackBG" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="DoubleMenuWoodenPopup/AccountButton" to="." method="_on_account_button_pressed"]
+[connection signal="pressed" from="DoubleMenuWoodenPopup/AchievementsButton" to="." method="_on_achievements_button_pressed"]
+[connection signal="pressed" from="DoubleMenuWoodenPopup/XButton" to="." method="_on_close_button_pressed"]
+[connection signal="create_new_user_btn_pressed" from="DoubleMenuWoodenPopup/MenuContainer/AccountMenu" to="." method="_on_account_menu_create_new_user_btn_pressed"]
+[connection signal="delete_user_btn_pressed" from="DoubleMenuWoodenPopup/MenuContainer/AccountMenu" to="." method="_on_account_menu_delete_user_btn_pressed"]
+[connection signal="accept_btn_pressed" from="CreateNewUserPopup" to="." method="_on_create_new_user_popup_accept_btn_pressed"]
+[connection signal="cancel_btn_pressed" from="CreateNewUserPopup" to="." method="_on_create_new_user_popup_cancel_btn_pressed"]
+[connection signal="accept_btn_pressed" from="DeleteUserPopup" to="." method="_on_delete_user_popup_accept_btn_pressed"]
+[connection signal="cancel_btn_pressed" from="DeleteUserPopup" to="." method="_on_delete_user_popup_cancel_btn_pressed"]

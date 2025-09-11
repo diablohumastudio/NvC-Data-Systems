@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="NvC Data Systems"
-run/main_scene="uid://cflg2ypu25js2"
+run/main_scene="uid://dw2aqgkww2ttq"
 config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/bg_color=Color(0.0980392, 0.0666667, 0.0666667, 1)
 boot_splash/image="uid://mhtg4423uwra"
@@ -23,11 +23,11 @@ ACS="*res://global_systems/data_systems/action_condition_system/action_condition
 UDS="*res://global_systems/data_systems/user_data_system/user_data_system.gd"
 SMS="*res://global_systems/scene_manager_system/scene_manager_system.gd"
 GC="*res://global_systems/global_constants/global_constants.gd"
-GSS="*res://global_systems/data_systems/game_state_system/game_state_system.gd"
 SLS="*res://global_systems/scene_loading_system/system/scene_loading_system.gd"
 WwiseRuntimeManager="*res://addons/Wwise/runtime/wwise_runtime_manager.gd"
 AudioSystem="*res://global_systems/audio_system/audio_system.tscn"
 AchievementAchievedBanner="*res://global_objects/achievement_achieved_banner/achievement_achieved_banner.tscn"
+GSS="*res://screens/game/game_state_system/game_state_system.gd"
 
 [display]
 

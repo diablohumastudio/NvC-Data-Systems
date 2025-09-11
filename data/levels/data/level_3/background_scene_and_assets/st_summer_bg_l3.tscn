@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://c42gtusd75k1w"]
+
+[ext_resource type="PackedScene" uid="uid://bkhds6kw3t8tq" path="res://screens/game/components/background_scene/background_scene.tscn" id="1_3ymie"]
+[ext_resource type="Texture2D" uid="uid://cadf08cxm88ol" path="res://data/levels/data/level_2/background_scene_and_assets/sprite_frames/assets/first_wave_animation/fotograma0013.webp" id="3_mkwtp"]
+[ext_resource type="Texture2D" uid="uid://do77e8fpl8c46" path="res://data/levels/data/level_2/background_scene_and_assets/sprite_frames/assets/last_wave_animation/fotograma0013.webp" id="4_6d1ek"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8x3sk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_mkwtp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mlni3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_6d1ek")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="BackgroundScene" instance=ExtResource("1_3ymie")]
+
+[node name="BackgroundObject1" parent="Background" index="2"]
+sprite_frames = SubResource("SpriteFrames_8x3sk")
+sprite_frames_path = "uid://r7q274yg0s1t"
+
+[node name="MidlegroundObject1" parent="Middleground" index="2"]
+sprite_frames = SubResource("SpriteFrames_mlni3")
+action_type = 0
+sprite_frames_path = ""
+
+[node name="ForegroundObject1" parent="Foreground" index="2"]
+action_type = 2
+sprite_frames_path = "uid://rd0x86e4icvi"
+
+[editable path="Clouds"]
