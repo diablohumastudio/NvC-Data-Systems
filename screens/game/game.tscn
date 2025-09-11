@@ -23,6 +23,21 @@
 [ext_resource type="PackedScene" uid="uid://belejvi2ji5n" path="res://screens/game/components/game_progress_line/game_progress_line.tscn" id="22_wh4ub"]
 [ext_resource type="PackedScene" uid="uid://bfpngr2c5ibha" path="res://screens/game/pop_ups/game_won_popup/game_won_popup.tscn" id="23_p21lm"]
 
+[sub_resource type="Animation" id="Animation_p21lm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HUD:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_wh4ub"]
 resource_name = "appear_HUD"
 length = 0.6
@@ -37,21 +52,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_p21lm"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("HUD:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ikmaa"]
@@ -193,9 +193,11 @@ offset_bottom = -40.0
 
 [node name="PausedGamePopup" parent="popups" instance=ExtResource("13_wh4ub")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 
 [node name="GameWonPopup" parent="popups" instance=ExtResource("23_p21lm")]
+visible = false
 layout_mode = 1
 offset_right = 1880.0
 offset_bottom = 1040.0
