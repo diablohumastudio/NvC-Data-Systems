@@ -7,10 +7,12 @@ func _ready() -> void:
 func _set_achivements_presenter():
 	var achievements: Array[AchievementData]
 	achievements = DataFilesLoader.get_achievements_from_res_files()
+	print(achievements)
 	for child in %AchievementsContainer.get_children():
 		child.queue_free()
 	for achievement in achievements:
 		var new_achievement_presenter: AchievementPresenter2 = load("uid://cyy4hbmuetvi3").instantiate()
 		new_achievement_presenter.achievement = achievement
+		new_achievement_presenter.ud_achievement = achievement.get_saved_ud_achievement()
 		%AchievementsContainer.add_child(new_achievement_presenter)
 	

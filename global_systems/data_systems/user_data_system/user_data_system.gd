@@ -13,11 +13,19 @@ enum PROPERTIES {
 	MUSIC_VOLUME,
 	SFX_VOLUME}
 
+enum CAN_CREATE_USER_ERRORS{
+	OK,
+	MAX_NUMBER_OF_USER_CREATED,
+	USER_SAME_NAME
+}
+
 const _USERS_CREDENTIALS_FILE_PATH : String = "user://users.tres"
 const _USER_FILE_BASE: String = "user://"
 
 var all_users_credentials: AllUsersCredentials
 var current_user_data: UserData 
+
+const MAX_NUMBER_OF_USERS: int = 3
 
 func _init() -> void:
 	initialize_users_data()
@@ -32,7 +40,14 @@ func initialize_users_data():
 		var new_user_credentials: UserCredentials = UserCredentials.new()
 		create_new_user(new_user_credentials)
 
+func can_create_new_user(user_credentials: UserCredentials) -> CAN_CREATE_USER_ERRORS:
+	if all_users_credentials.credentials.size() >= MAX_NUMBER_OF_USERS: return CAN_CREATE_USER_ERRORS.MAX_NUMBER_OF_USER_CREATED
+	if user_exists(user_credentials.user_name): return CAN_CREATE_USER_ERRORS.USER_SAME_NAME
+	else: return CAN_CREATE_USER_ERRORS.OK
+
 func create_new_user(user_credentials: UserCredentials, set_to_current: bool = true) -> UserData:
+	if all_users_credentials.credentials.size() >= MAX_NUMBER_OF_USERS: return null
+
 	all_users_credentials.credentials.append(user_credentials)
 
 	var new_user_data: UserData = UserData.new()
