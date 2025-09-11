@@ -1,0 +1,421 @@
+[gd_scene load_steps=22 format=3 uid="uid://dr75bqddrjto7"]
+
+[ext_resource type="Script" uid="uid://bvodsx6fmyvm7" path="res://screens/game/pop_ups/paused_game_popup/paused_game_popup.gd" id="1_omj55"]
+[ext_resource type="Material" uid="uid://bko5g3sqiwqsh" path="res://global_assets/shaders/perspective_shader_material.tres" id="1_wioex"]
+[ext_resource type="Texture2D" uid="uid://jd0ff83xmfq7" path="res://screens/game/pop_ups/paused_game_popup/assets/pause_popup_bg.png" id="2_8fk6d"]
+[ext_resource type="Texture2D" uid="uid://ofrfb0d01nc5" path="res://screens/game/pop_ups/paused_game_popup/popup_light.png" id="2_kctm6"]
+[ext_resource type="Resource" uid="uid://c0580eyighege" path="res://data/levels/data/level_2p.tres" id="2_qigje"]
+[ext_resource type="StyleBox" uid="uid://cfmm6gy6xt1rq" path="res://screens/game/pop_ups/paused_game_popup/assets/paused_game_popup_bk_filter_syle_box_flat.tres" id="2_qohp2"]
+[ext_resource type="Texture2D" uid="uid://dnnnyc6lgax4r" path="res://screens/game/pop_ups/paused_game_popup/assets/slider_background.PNG" id="3_gbjcu"]
+[ext_resource type="PackedScene" uid="uid://bnw6e40cvuxp1" path="res://screens/game/pop_ups/paused_game_popup/volume_horizontal_slider/volume_horizontal_slider.tscn" id="4_s32kb"]
+[ext_resource type="Texture2D" uid="uid://cluee0i7vbmap" path="res://screens/game/pop_ups/paused_game_popup/assets/retry_button.png" id="5_opa6a"]
+[ext_resource type="Texture2D" uid="uid://d1ntuxd6nqqmq" path="res://screens/game/pop_ups/paused_game_popup/assets/retry_button_selected.png" id="6_3etcl"]
+[ext_resource type="Texture2D" uid="uid://imlptc6ith4b" path="res://screens/game/pop_ups/paused_game_popup/assets/main_menu_button.png" id="7_0u3vh"]
+[ext_resource type="Texture2D" uid="uid://buh7v6gv6475" path="res://screens/game/pop_ups/paused_game_popup/assets/main_menu_button_selected.png" id="8_4ooyn"]
+[ext_resource type="PackedScene" uid="uid://d3edgeqlyxuto" path="res://screens/game/pop_ups/paused_game_popup/pause_popup_btn/pause_popup_btn.tscn" id="8_5mtc3"]
+[ext_resource type="Texture2D" uid="uid://jnc55rw8hm65" path="res://screens/game/pop_ups/paused_game_popup/assets/retry_button_glow.png" id="12_t7ipy"]
+[ext_resource type="Script" uid="uid://dxu15e362h623" path="res://global_objects/node_shaker/node_shaker.gd" id="14_48btd"]
+[ext_resource type="Texture2D" uid="uid://d4euviglbbn5f" path="res://screens/game/pop_ups/paused_game_popup/assets/main_menu_button_glow.png" id="15_twny6"]
+[ext_resource type="PackedScene" uid="uid://dgtj30r4vgfhy" path="res://screens/game/pop_ups/exit_to_menu_confirm_popup/exit_to_menu_confirm_popup.tscn" id="17_0saka"]
+
+[sub_resource type="Animation" id="Animation_hr6jj"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WoodenPopUp/PopupLight:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.898039, 0.682353, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("WoodenPopUp/PopupLight:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.2, 1.2)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("WoodenPopUp:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("WoodenPopUp:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("WoodenPopUp:material:shader_parameter/x_rot")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("WoodenPopUp:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(5, -8)]
+}
+
+[sub_resource type="Animation" id="Animation_5ja7b"]
+resource_name = "appear"
+length = 0.6
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(3, 2, 2, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WoodenPopUp:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.7, 0.7), Vector2(1.15, 1.15), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("WoodenPopUp/PopupLight:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.55),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.956863, 0.796078, 0, 0), Color(0.924759, 0.418115, 0.430865, 0.619608), Color(1, 0.898039, 0.682353, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("WoodenPopUp/PopupLight:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.2, 1.2)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("WoodenPopUp:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.15, 0.2, 0.3, 0.4, 0.55),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0523599, -0.0349066, 0.0174533, 0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("WoodenPopUp/BackgroundTexture:material:shader_parameter/x_rot")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.25, 0.35, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-40.0, 8.00001, -4.99999, 2.84822, 0.0]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("NodeShaker")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"apply_shake"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_u6018"]
+resource_name = "dissapear"
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WoodenPopUp:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1), Vector2(0.5, 0.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("WoodenPopUp:material:shader_parameter/x_rot")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 8.00001, -60.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("WoodenPopUp:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.05, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(18, -112), Vector2(18, -301)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8t7vp"]
+_data = {
+&"RESET": SubResource("Animation_hr6jj"),
+&"appear": SubResource("Animation_5ja7b"),
+&"dissapear": SubResource("Animation_u6018")
+}
+
+[node name="PausedGamePopup" type="Control"]
+process_mode = 2
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_omj55")
+level = ExtResource("2_qigje")
+
+[node name="BackgroundFilterBtn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = ExtResource("2_qohp2")
+theme_override_styles/hover_pressed_mirrored = ExtResource("2_qohp2")
+theme_override_styles/hover = ExtResource("2_qohp2")
+theme_override_styles/pressed = ExtResource("2_qohp2")
+theme_override_styles/normal = ExtResource("2_qohp2")
+
+[node name="WoodenPopUp" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -8.0
+offset_right = 5.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(926, 155)
+
+[node name="BackgroundTexture" type="TextureRect" parent="WoodenPopUp"]
+material = ExtResource("1_wioex")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -546.0
+offset_right = 567.0
+offset_bottom = 391.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(548, 161)
+texture = ExtResource("2_8fk6d")
+
+[node name="Btns" type="Control" parent="WoodenPopUp"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -6.10352e-05
+offset_right = 39.9999
+offset_bottom = 40.0
+
+[node name="ResumeGameButton" parent="WoodenPopUp/Btns" instance=ExtResource("8_5mtc3")]
+layout_mode = 0
+offset_left = 584.0
+offset_top = 622.0
+offset_right = 820.0
+offset_bottom = 836.0
+
+[node name="RetryLevelButton" parent="WoodenPopUp/Btns" instance=ExtResource("8_5mtc3")]
+layout_mode = 0
+offset_left = 833.0
+offset_top = 623.0
+offset_right = 1069.0
+offset_bottom = 837.0
+texture_normal = ExtResource("5_opa6a")
+texture_pressed = ExtResource("12_t7ipy")
+texture_hover = ExtResource("6_3etcl")
+texture_focused = ExtResource("6_3etcl")
+
+[node name="GoToMainMenuButton" parent="WoodenPopUp/Btns" instance=ExtResource("8_5mtc3")]
+layout_mode = 0
+offset_left = 1081.0
+offset_top = 621.0
+offset_right = 1317.0
+offset_bottom = 835.0
+texture_normal = ExtResource("7_0u3vh")
+texture_pressed = ExtResource("15_twny6")
+texture_hover = ExtResource("8_4ooyn")
+texture_focused = ExtResource("8_4ooyn")
+
+[node name="Slliders" type="Control" parent="WoodenPopUp"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MusicSliderBackground" type="TextureRect" parent="WoodenPopUp/Slliders"]
+layout_mode = 1
+offset_left = 721.0
+offset_top = 425.0
+offset_right = 1303.0
+offset_bottom = 492.0
+pivot_offset = Vector2(123, 59)
+texture = ExtResource("3_gbjcu")
+
+[node name="MusicHorizontalSlider" parent="WoodenPopUp/Slliders/MusicSliderBackground" instance=ExtResource("4_s32kb")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(490, 26)
+layout_mode = 0
+offset_left = 49.0
+offset_top = -7.0
+offset_right = 539.0
+offset_bottom = 79.0
+max_value = 100.0
+
+[node name="SFXSliderBackground" type="TextureRect" parent="WoodenPopUp/Slliders"]
+layout_mode = 1
+offset_left = 698.0
+offset_top = 509.0
+offset_right = 1280.0
+offset_bottom = 576.0
+texture = ExtResource("3_gbjcu")
+
+[node name="SFXHorizontalSlider" parent="WoodenPopUp/Slliders/SFXSliderBackground" instance=ExtResource("4_s32kb")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(490, 26)
+layout_mode = 0
+offset_left = 46.0
+offset_top = -7.0
+offset_right = 536.0
+offset_bottom = 79.0
+max_value = 100.0
+
+[node name="PopupLight" type="Sprite2D" parent="WoodenPopUp"]
+visible = false
+modulate = Color(1, 0.898039, 0.682353, 0)
+position = Vector2(573, 440)
+rotation = -0.0260824
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("2_kctm6")
+
+[node name="ExitToMenuConfirmPopup" parent="." instance=ExtResource("17_0saka")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+process_mode = 3
+libraries = {
+&"": SubResource("AnimationLibrary_8t7vp")
+}
+
+[node name="NodeShaker" type="Node" parent="." node_paths=PackedStringArray("animate_node")]
+script = ExtResource("14_48btd")
+animate_node = NodePath("../WoodenPopUp")
+initial_strength = 20.0
+shake_fade_effect = 7.0
+metadata/_custom_type_script = "uid://dxu15e362h623"
+
+[connection signal="pressed" from="WoodenPopUp/Btns/ResumeGameButton" to="." method="_on_resume_game_button_pressed"]
+[connection signal="pressed" from="WoodenPopUp/Btns/RetryLevelButton" to="." method="_on_retry_level_button_pressed"]
+[connection signal="pressed" from="WoodenPopUp/Btns/GoToMainMenuButton" to="." method="_on_go_to_main_menu_button_pressed"]
+[connection signal="exit_confirmed" from="ExitToMenuConfirmPopup" to="." method="_on_exit_to_menu_confirm_popup_exit_confirmed"]

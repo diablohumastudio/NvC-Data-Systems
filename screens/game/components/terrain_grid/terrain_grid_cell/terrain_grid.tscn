@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=3 uid="uid://catyyevb26p6e"]
+
+[ext_resource type="Script" uid="uid://bw2ito8oxknam" path="res://screens/game/components/terrain_grid/terrain_grid_cell/terrain_grid.gd" id="1_iemgx"]
+
+[node name="TerrainGrid" type="CenterContainer"]
+script = ExtResource("1_iemgx")
+columns = 9
+rows = 5
+cell_width_px = 100
+cell_heigth_px = 100
+
+[node name="CellsContainer" type="GridContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+columns = 9
+
+[connection signal="pressed" from="CellsContainer/Cell_0_0" to="CellsContainer/Cell_0_0" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_1_0" to="CellsContainer/Cell_1_0" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_2_0" to="CellsContainer/Cell_2_0" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_3_0" to="CellsContainer/Cell_3_0" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_4_0" to="CellsContainer/Cell_4_0" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_5_0" to="CellsContainer/Cell_5_0" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_6_0" to="CellsContainer/Cell_6_0" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_7_0" to="CellsContainer/Cell_7_0" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_8_0" to="CellsContainer/Cell_8_0" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_0_1" to="CellsContainer/Cell_0_1" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_1_1" to="CellsContainer/Cell_1_1" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_2_1" to="CellsContainer/Cell_2_1" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_3_1" to="CellsContainer/Cell_3_1" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_4_1" to="CellsContainer/Cell_4_1" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_5_1" to="CellsContainer/Cell_5_1" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_6_1" to="CellsContainer/Cell_6_1" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_7_1" to="CellsContainer/Cell_7_1" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_8_1" to="CellsContainer/Cell_8_1" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_0_2" to="CellsContainer/Cell_0_2" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_1_2" to="CellsContainer/Cell_1_2" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_2_2" to="CellsContainer/Cell_2_2" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_3_2" to="CellsContainer/Cell_3_2" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_4_2" to="CellsContainer/Cell_4_2" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_5_2" to="CellsContainer/Cell_5_2" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_6_2" to="CellsContainer/Cell_6_2" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_7_2" to="CellsContainer/Cell_7_2" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_8_2" to="CellsContainer/Cell_8_2" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_0_3" to="CellsContainer/Cell_0_3" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_1_3" to="CellsContainer/Cell_1_3" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_2_3" to="CellsContainer/Cell_2_3" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_3_3" to="CellsContainer/Cell_3_3" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_4_3" to="CellsContainer/Cell_4_3" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_5_3" to="CellsContainer/Cell_5_3" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_6_3" to="CellsContainer/Cell_6_3" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_7_3" to="CellsContainer/Cell_7_3" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_8_3" to="CellsContainer/Cell_8_3" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_0_4" to="CellsContainer/Cell_0_4" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_1_4" to="CellsContainer/Cell_1_4" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_2_4" to="CellsContainer/Cell_2_4" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_3_4" to="CellsContainer/Cell_3_4" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_4_4" to="CellsContainer/Cell_4_4" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_5_4" to="CellsContainer/Cell_5_4" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_6_4" to="CellsContainer/Cell_6_4" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_7_4" to="CellsContainer/Cell_7_4" method="_on_pressed"]
+[connection signal="pressed" from="CellsContainer/Cell_8_4" to="CellsContainer/Cell_8_4" method="_on_pressed"]

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddno47pjc4k1h"]
+
+[ext_resource type="Script" uid="uid://7xmb8nfxqopm" path="res://screens/game/components/terrain_grid/terrain_grid_cell/terrain_grid_cell.gd" id="1_672ob"]
+
+[node name="TerrainGridCell" type="Button"]
+self_modulate = Color(1, 1, 1, 0.270588)
+offset_right = 49.0
+offset_bottom = 46.0
+script = ExtResource("1_672ob")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

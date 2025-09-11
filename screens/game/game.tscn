@@ -1,14 +1,64 @@
-[gd_scene load_steps=10 format=3 uid="uid://c2b4jldseu5vs"]
+[gd_scene load_steps=26 format=3 uid="uid://c2b4jldseu5vs"]
 
 [ext_resource type="Script" uid="uid://bvalrtinik0vd" path="res://screens/game/game.gd" id="1_eyx8b"]
+[ext_resource type="Resource" uid="uid://c0580eyighege" path="res://data/levels/data/level_2p.tres" id="2_by56y"]
 [ext_resource type="PackedScene" uid="uid://b4nna6eulgfw" path="res://screens/game/components/allies_selector/allies_selector.tscn" id="2_khowf"]
-[ext_resource type="PackedScene" uid="uid://bepu7cd0ik6av" path="res://screens/game/components/level_name_presenter/level_name_presenter.tscn" id="3_kc255"]
-[ext_resource type="PackedScene" uid="uid://cch6b4h5wk2jy" path="res://screens/game/components/terrain_grid/terrain_grid.tscn" id="3_yflor"]
-[ext_resource type="PackedScene" uid="uid://dm2l1uxm8jud0" path="res://screens/game/debug_components/dbug_killed_enemies_hud/dbug_killed_enemies_hud.tscn" id="5_2v4l3"]
+[ext_resource type="PackedScene" uid="uid://bkhds6kw3t8tq" path="res://screens/game/components/background_scene/background_scene.tscn" id="2_lvnyp"]
+[ext_resource type="PackedScene" uid="uid://ca3r71n17u75p" path="res://screens/game/components/game_start_countdown/game_start_countdown.tscn" id="3_a032w"]
+[ext_resource type="PackedScene" uid="uid://catyyevb26p6e" path="res://screens/game/components/terrain_grid/terrain_grid_cell/terrain_grid.tscn" id="4_18b3j"]
 [ext_resource type="PackedScene" uid="uid://xydq20wuc0hp" path="res://screens/game/components/remove_ally_button/remove_ally_button.tscn" id="5_g1ktd"]
-[ext_resource type="PackedScene" uid="uid://bk5r5vrhhaf2x" path="res://screens/game/debug_components/dbug_canons_killed_hud/dbug_canon_hud.tscn" id="5_uain1"]
-[ext_resource type="PackedScene" uid="uid://cafe6vrkyihc5" path="res://screens/game/debug_components/dbug_win_btn/dbug_win_btn.tscn" id="6_cpxdg"]
-[ext_resource type="PackedScene" uid="uid://3p1rfa3f7you" path="res://screens/game/components/game_won_pop_up/game_won_pop_up.tscn" id="9_18b3j"]
+[ext_resource type="PackedScene" uid="uid://cjay4w6imp8r7" path="res://screens/game/components/enemies_spawn_grid/enemies_spawner_grid.tscn" id="5_kc255"]
+[ext_resource type="PackedScene" uid="uid://c8de10anym03i" path="res://screens/game/debug_components/dbug_components.tscn" id="13_n6j5y"]
+[ext_resource type="PackedScene" uid="uid://dud1ujrys61qg" path="res://screens/game/components/balance_displayer/balance_displayer.tscn" id="13_ou2j6"]
+[ext_resource type="PackedScene" uid="uid://dr75bqddrjto7" path="res://screens/game/pop_ups/paused_game_popup/paused_game_popup.tscn" id="13_wh4ub"]
+[ext_resource type="Texture2D" uid="uid://dy5tlctbsbkcg" path="res://global_assets/go_back_btn_textures/go_back_button.png" id="14_1ad28"]
+[ext_resource type="Texture2D" uid="uid://6dersyppynfl" path="res://global_assets/go_back_btn_textures/go_back_glow.png" id="15_wh4ub"]
+[ext_resource type="Texture2D" uid="uid://xollcxmkscnt" path="res://global_assets/go_back_btn_textures/go_back_button_selected.png" id="16_p21lm"]
+[ext_resource type="PackedScene" uid="uid://df03qm0on10kk" path="res://screens/game/components/last_column_enemy_detectors/last_column_enemy_detectors.tscn" id="17_y2n64"]
+[ext_resource type="PackedScene" uid="uid://wld4ag15itcu" path="res://screens/game/components/camera_manager/camera_manager.tscn" id="18_1jmhe"]
+[ext_resource type="PackedScene" uid="uid://6xhrmrplu0ha" path="res://screens/game/pop_ups/game_over_popup/game_over_popup.tscn" id="18_n6j5y"]
+[ext_resource type="PackedScene" uid="uid://c8ja2opfaohj7" path="res://screens/game/components/cannons/cannons.tscn" id="19_1jmhe"]
+[ext_resource type="Texture2D" uid="uid://c3mslriaxmk3o" path="res://screens/game/components/pause_button/assets/pause _button _unselected.png" id="20_1ad28"]
+[ext_resource type="Texture2D" uid="uid://bsjna513oyo50" path="res://screens/game/components/pause_button/assets/pause _button _selected.png" id="21_wh4ub"]
+[ext_resource type="PackedScene" uid="uid://belejvi2ji5n" path="res://screens/game/components/game_progress_line/game_progress_line.tscn" id="22_wh4ub"]
+[ext_resource type="PackedScene" uid="uid://bfpngr2c5ibha" path="res://screens/game/pop_ups/game_won_popup/game_won_popup.tscn" id="23_p21lm"]
+
+[sub_resource type="Animation" id="Animation_wh4ub"]
+resource_name = "appear_HUD"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HUD:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_p21lm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HUD:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ikmaa"]
+_data = {
+&"RESET": SubResource("Animation_p21lm"),
+&"appear_HUD": SubResource("Animation_wh4ub")
+}
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -18,78 +68,148 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_eyx8b")
+level = ExtResource("2_by56y")
 
-[node name="LevelNamePresenter" parent="." instance=ExtResource("3_kc255")]
+[node name="BackgroundScene" parent="." instance=ExtResource("2_lvnyp")]
 unique_name_in_owner = true
-layout_mode = 0
-offset_left = 1048.0
-offset_top = 41.0
-offset_right = 1147.0
-offset_bottom = 90.0
+layout_mode = 1
+offset_left = -3840.0
+offset_right = -3840.0
 
-[node name="AlliesSelector" parent="." instance=ExtResource("2_khowf")]
+[node name="GameStartCountdown" parent="." instance=ExtResource("3_a032w")]
 unique_name_in_owner = true
-layout_mode = 0
-offset_left = 28.0
-offset_top = 31.0
-offset_right = 156.0
-offset_bottom = 198.0
+visible = false
+layout_mode = 1
 
-[node name="TerrainGrid" parent="." instance=ExtResource("3_yflor")]
-unique_name_in_owner = true
+[node name="TerrainGrid" parent="." instance=ExtResource("4_18b3j")]
 layout_mode = 0
-offset_left = 212.0
-offset_top = 164.0
-offset_right = 1819.0
-offset_bottom = 1055.0
+offset_left = 256.0
+offset_top = 158.0
+offset_right = 1881.0
+offset_bottom = 1059.0
 cell_width_px = 175
 cell_heigth_px = 175
 
-[node name="DbugCanonHUD" parent="." instance=ExtResource("5_uain1")]
-layout_mode = 0
-offset_left = 1181.0
-offset_top = 11.0
-offset_right = 1410.0
-offset_bottom = 121.0
-
-[node name="DbugWinBtn" parent="." instance=ExtResource("6_cpxdg")]
+[node name="EnemiesSpawnersGrid" parent="." instance=ExtResource("5_kc255")]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 1428.0
-offset_top = 28.0
-offset_right = 1538.0
-offset_bottom = 105.0
-
-[node name="DbugKilledEnemiesHUD" parent="." instance=ExtResource("5_2v4l3")]
-layout_mode = 0
-offset_left = 1542.0
-offset_top = 15.0
-offset_right = 2017.0
-offset_bottom = 171.0
-
-[node name="GoBackBtn" type="Button" parent="."]
-layout_mode = 0
-offset_left = 17.0
-offset_top = 983.0
-offset_right = 155.0
+offset_left = 2076.0
+offset_top = 168.0
+offset_right = 2434.0
 offset_bottom = 1069.0
-theme_override_font_sizes/font_size = 50
-text = "BACK"
+columns = 2
 
-[node name="RemoveAllyButton" parent="." instance=ExtResource("5_g1ktd")]
+[node name="LastColumnEnemyDetectors" parent="." instance=ExtResource("17_y2n64")]
+position = Vector2(235, -2)
+
+[node name="Cannons" parent="." instance=ExtResource("19_1jmhe")]
+layout_mode = 0
+offset_left = 252.0
+offset_top = 283.0
+offset_right = 252.0
+offset_bottom = 283.0
+
+[node name="HUD" type="Control" parent="."]
+unique_name_in_owner = true
+process_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BalanceDisplayer" parent="HUD" instance=ExtResource("13_ou2j6")]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 23.0
+offset_right = 302.0
+offset_bottom = 150.0
+
+[node name="AlliesSelector" parent="HUD" instance=ExtResource("2_khowf")]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 255.0
+offset_left = 28.0
+offset_top = 145.0
+offset_right = 156.0
+offset_bottom = 312.0
+
+[node name="RemoveAllyButton" parent="HUD" instance=ExtResource("5_g1ktd")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 476.0
 offset_top = 21.0
-offset_right = 380.0
+offset_right = 601.0
 offset_bottom = 152.0
 
-[node name="GameWonPopUp" parent="." instance=ExtResource("9_18b3j")]
-unique_name_in_owner = true
+[node name="PauseBtn" type="TextureButton" parent="HUD"]
 layout_mode = 0
-offset_left = 452.0
-offset_top = 286.0
-offset_right = 1497.0
-offset_bottom = 872.0
+offset_left = 635.0
+offset_top = 23.0
+offset_right = 864.0
+offset_bottom = 127.0
+texture_normal = ExtResource("20_1ad28")
+texture_pressed = ExtResource("21_wh4ub")
+texture_hover = ExtResource("21_wh4ub")
+texture_focused = ExtResource("21_wh4ub")
 
-[connection signal="pressed" from="GoBackBtn" to="." method="_on_go_back_btn_pressed"]
+[node name="GameProgressLine" parent="HUD" instance=ExtResource("22_wh4ub")]
+layout_mode = 1
+offset_left = 1033.0
+offset_top = 47.0
+offset_right = 1041.72
+offset_bottom = 56.52
+
+[node name="GoBackBtn" type="TextureButton" parent="HUD"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 878.0
+offset_right = 209.0
+offset_bottom = 999.0
+texture_normal = ExtResource("14_1ad28")
+texture_pressed = ExtResource("15_wh4ub")
+texture_hover = ExtResource("16_p21lm")
+texture_focused = ExtResource("16_p21lm")
+
+[node name="GoBackToTestBtn" type="Button" parent="HUD"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 803.0
+offset_right = 225.0
+offset_bottom = 869.0
+theme_override_font_sizes/font_size = 42
+text = "BACK test"
+
+[node name="DbugComponents" parent="." instance=ExtResource("13_n6j5y")]
+layout_mode = 1
+
+[node name="popups" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GameOverPopup" parent="popups" instance=ExtResource("18_n6j5y")]
+unique_name_in_owner = true
+layout_mode = 1
+offset_right = -40.0
+offset_bottom = -40.0
+
+[node name="PausedGamePopup" parent="popups" instance=ExtResource("13_wh4ub")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="GameWonPopup" parent="popups" instance=ExtResource("23_p21lm")]
+layout_mode = 1
+offset_right = 1880.0
+offset_bottom = 1040.0
+
+[node name="CameraManager" parent="." instance=ExtResource("18_1jmhe")]
+unique_name_in_owner = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+process_mode = 3
+libraries = {
+&"": SubResource("AnimationLibrary_ikmaa")
+}
+
+[connection signal="pressed" from="HUD/PauseBtn" to="." method="_on_pause_btn_pressed"]
+[connection signal="pressed" from="HUD/GoBackBtn" to="." method="_on_go_back_btn_pressed"]
+[connection signal="pressed" from="HUD/GoBackToTestBtn" to="." method="_on_go_back_to_test_btn_pressed"]

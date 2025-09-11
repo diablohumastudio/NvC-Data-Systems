@@ -1,0 +1,90 @@
+[gd_scene load_steps=12 format=3 uid="uid://com2v2wck60wc"]
+
+[ext_resource type="PackedScene" uid="uid://bkhds6kw3t8tq" path="res://screens/game/components/background_scene/background_scene.tscn" id="1_pcvc5"]
+[ext_resource type="Texture2D" uid="uid://c7rfrcimvoqvn" path="res://data/levels/data/level_5/background_scene_and_assets/sprite_frames/assets/first_wave_animation/fotograma0019.webp" id="3_jnd4v"]
+[ext_resource type="Texture2D" uid="uid://cadf08cxm88ol" path="res://data/levels/data/level_2/background_scene_and_assets/sprite_frames/assets/first_wave_animation/fotograma0013.webp" id="4_orj7s"]
+[ext_resource type="Texture2D" uid="uid://bf4cpqhrpwdu6" path="res://data/levels/data/level_5/background_scene_and_assets/sprite_frames/assets/last_wave_animation/fotograma0013.webp" id="5_dq8i0"]
+[ext_resource type="Texture2D" uid="uid://do77e8fpl8c46" path="res://data/levels/data/level_2/background_scene_and_assets/sprite_frames/assets/last_wave_animation/fotograma0013.webp" id="6_lvyon"]
+[ext_resource type="Texture2D" uid="uid://bhttm12u4y31j" path="res://data/levels/data/level_3/background_scene_and_assets/sprite_frames/assets/last_wave_animation/foreground_house0012.webp" id="7_uyqgw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ovjla"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_jnd4v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ahs4v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_orj7s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7p3uw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_dq8i0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fxw72"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_lvyon")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0yh6s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_uyqgw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="BackgroundScene" instance=ExtResource("1_pcvc5")]
+
+[node name="BackgroundObject2" parent="Background" index="1"]
+sprite_frames = SubResource("SpriteFrames_ovjla")
+action_type = 1
+sprite_frames_path = "uid://csc3yw7jlv5sh"
+
+[node name="BackgroundObject1" parent="Background" index="2"]
+sprite_frames = SubResource("SpriteFrames_ahs4v")
+action_type = 0
+sprite_frames_path = ""
+
+[node name="MidlegroundObject2" parent="Middleground" index="1"]
+sprite_frames = SubResource("SpriteFrames_7p3uw")
+action_type = 2
+sprite_frames_path = "uid://7akfr0no5bnl"
+
+[node name="MidlegroundObject1" parent="Middleground" index="2"]
+sprite_frames = SubResource("SpriteFrames_fxw72")
+action_type = 0
+sprite_frames_path = ""
+
+[node name="ForegroundObject1" parent="Foreground" index="2"]
+sprite_frames = SubResource("SpriteFrames_0yh6s")
+
+[editable path="Clouds"]

@@ -1,0 +1,137 @@
+[gd_scene load_steps=18 format=3 uid="uid://db28u74wna61b"]
+
+[ext_resource type="PackedScene" uid="uid://bkhds6kw3t8tq" path="res://screens/game/components/background_scene/background_scene.tscn" id="1_2xtkp"]
+[ext_resource type="Texture2D" uid="uid://fyvxwf1x518h" path="res://data/levels/data/level_6/background_scene_and_assets/sprite_frames/assets/last_wave_animation/fotograma0013.webp" id="3_bjhxr"]
+[ext_resource type="Texture2D" uid="uid://bph01fn4b8661" path="res://data/levels/data/level_9/background_scene_and_assets/sprite_frames/assets/first_wave_animation/fotograma0021.webp" id="3_fuyxg"]
+[ext_resource type="Texture2D" uid="uid://do77e8fpl8c46" path="res://data/levels/data/level_2/background_scene_and_assets/sprite_frames/assets/last_wave_animation/fotograma0013.webp" id="4_1k4hu"]
+[ext_resource type="Texture2D" uid="uid://cadf08cxm88ol" path="res://data/levels/data/level_2/background_scene_and_assets/sprite_frames/assets/first_wave_animation/fotograma0013.webp" id="4_e5hr0"]
+[ext_resource type="Texture2D" uid="uid://bgr8c50500pdu" path="res://data/levels/data/level_7/background_scene_and_assets/sprite_frames/assets/first_wave_animation/fotograma0018.webp" id="4_jisds"]
+[ext_resource type="Texture2D" uid="uid://bivgyfmqkx6t7" path="res://data/levels/data/level_9/background_scene_and_assets/sprite_frames/assets/last_wave_animation/fotograma0020.webp" id="6_qo4d6"]
+[ext_resource type="Texture2D" uid="uid://3gnot68x5lhj" path="res://data/levels/data/level_7/background_scene_and_assets/sprite_frames/assets/last_wave_animation/trees_foreground_dead.webp" id="8_cfgn6"]
+[ext_resource type="Texture2D" uid="uid://bhttm12u4y31j" path="res://data/levels/data/level_3/background_scene_and_assets/sprite_frames/assets/last_wave_animation/foreground_house0012.webp" id="8_s2ifj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gx1qb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_fuyxg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5luwh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_jisds")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_opgr5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_e5hr0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_py76v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_qo4d6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wqolt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_bjhxr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s6qdj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_1k4hu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jgv2o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_cfgn6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ybbpa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_s2ifj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="BackgroundScene" instance=ExtResource("1_2xtkp")]
+
+[node name="BackgroundObject3" parent="Background" index="0"]
+sprite_frames = SubResource("SpriteFrames_gx1qb")
+action_type = 1
+sprite_frames_path = "uid://djby8ev3lvvuj"
+
+[node name="BackgroundObject2" parent="Background" index="1"]
+sprite_frames = SubResource("SpriteFrames_5luwh")
+
+[node name="BackgroundObject1" parent="Background" index="2"]
+sprite_frames = SubResource("SpriteFrames_opgr5")
+action_type = 0
+sprite_frames_path = ""
+
+[node name="MidlegroundObject3" parent="Middleground" index="0"]
+sprite_frames = SubResource("SpriteFrames_py76v")
+
+[node name="MidlegroundObject2" parent="Middleground" index="1"]
+sprite_frames = SubResource("SpriteFrames_wqolt")
+
+[node name="MidlegroundObject1" parent="Middleground" index="2"]
+sprite_frames = SubResource("SpriteFrames_s6qdj")
+action_type = 0
+sprite_frames_path = ""
+
+[node name="ForegroundObject3" parent="Foreground" index="0"]
+action_type = 2
+sprite_frames_path = "uid://dmt1ldthrihf"
+
+[node name="ForegroundObject2" parent="Foreground" index="1"]
+sprite_frames = SubResource("SpriteFrames_jgv2o")
+
+[node name="ForegroundObject1" parent="Foreground" index="2"]
+sprite_frames = SubResource("SpriteFrames_ybbpa")
+
+[editable path="Clouds"]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://df03qm0on10kk"]
+
+[ext_resource type="Script" uid="uid://dvty14qteetcq" path="res://screens/game/components/last_column_enemy_detectors/last_column_enemy_detectors.gd" id="2_no3lv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5sr2p"]
+size = Vector2(55, 1087)
+
+[node name="LastColumnEnemyDetectors" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("2_no3lv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(17.5, 533.5)
+shape = SubResource("RectangleShape2D_5sr2p")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

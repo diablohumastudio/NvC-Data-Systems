@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dud1ujrys61qg"]
+
+[ext_resource type="Texture2D" uid="uid://bammu2gfp4kkk" path="res://screens/game/components/balance_displayer/assets/ruble_balance_container.png" id="1_0wng7"]
+[ext_resource type="Theme" uid="uid://cbirsm0m4rkak" path="res://screens/game/components/balance_displayer/balance_displayer.tres" id="1_chr4d"]
+[ext_resource type="Script" uid="uid://dg3w85m0s46kg" path="res://screens/game/components/balance_displayer/balance_displayer.gd" id="2_pn5wu"]
+[ext_resource type="FontFile" uid="uid://c037te0jknb01" path="res://global_assets/fonts/Molot.otf" id="4_e4jfr"]
+
+[node name="BalanceDisplayer" type="TextureRect"]
+offset_top = 10.0
+offset_right = 280.0
+offset_bottom = 137.0
+theme = ExtResource("1_chr4d")
+texture = ExtResource("1_0wng7")
+script = ExtResource("2_pn5wu")
+
+[node name="BalanceLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 112.0
+offset_top = 30.0
+offset_right = 237.0
+offset_bottom = 110.0
+theme_override_colors/font_color = Color(0.321569, 0.12549, 0.113725, 1)
+theme_override_fonts/font = ExtResource("4_e4jfr")
+theme_override_font_sizes/font_size = 57
+horizontal_alignment = 2

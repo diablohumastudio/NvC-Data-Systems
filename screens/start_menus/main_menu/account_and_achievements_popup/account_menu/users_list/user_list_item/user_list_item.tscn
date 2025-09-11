@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://dvlb36pw703xc"]
+
+[ext_resource type="Texture2D" uid="uid://n82t1x7tnarm" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/assets/slot_button.png" id="1_3w3hw"]
+[ext_resource type="Texture2D" uid="uid://c086yrkv7bodh" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/assets/slot_button_selected.png" id="2_ig8ac"]
+[ext_resource type="Script" uid="uid://cobgkn3mmc22r" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/users_list/user_list_item/user_list_item.gd" id="3_av574"]
+[ext_resource type="Texture2D" uid="uid://bc47u08r8m6ob" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/assets/square_button_empty.png" id="4_ig8ac"]
+[ext_resource type="FontFile" uid="uid://ns85otisc51h" path="res://global_assets/fonts/Boldstone-Regular.ttf" id="5_al4vt"]
+
+[node name="UserListItem" type="TextureButton"]
+texture_normal = ExtResource("1_3w3hw")
+texture_pressed = ExtResource("2_ig8ac")
+texture_hover = ExtResource("2_ig8ac")
+texture_focused = ExtResource("2_ig8ac")
+script = ExtResource("3_av574")
+
+[node name="SelectedIconContainer" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 427.0
+offset_top = 8.0
+offset_right = 486.0
+offset_bottom = 66.0
+texture = ExtResource("4_ig8ac")
+
+[node name="SelectedIcon" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 438.0
+offset_top = 16.0
+offset_right = 478.0
+offset_bottom = 56.0
+
+[node name="SlotLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 21.0
+offset_top = 19.0
+offset_right = 213.0
+offset_bottom = 62.0
+theme_override_colors/font_color = Color(0.878431, 0.847059, 0.772549, 1)
+theme_override_fonts/font = ExtResource("5_al4vt")
+theme_override_font_sizes/font_size = 52
+text = "Empty Slot"

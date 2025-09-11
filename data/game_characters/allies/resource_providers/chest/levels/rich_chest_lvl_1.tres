@@ -1,10 +1,9 @@
-[gd_resource type="Resource" script_class="MoneyPrviderLevel" load_steps=6 format=3 uid="uid://dilrj4gue60m"]
+[gd_resource type="Resource" script_class="MoneyPrviderLevel" load_steps=5 format=3 uid="uid://dilrj4gue60m"]
 
-[ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://global_systems/data_systems/action_condition_system/condition.gd" id="1_2nh8c"]
+[ext_resource type="Script" path="res://global_systems/data_systems/action_condition_system/condition.gd" id="1_2nh8c"]
 [ext_resource type="Script" uid="uid://bacha5qb1rbr" path="res://data/game_characters/allies/resource_providers/models/money_provider_level.gd" id="1_abc123"]
 [ext_resource type="Resource" uid="uid://bgkix3yawnv2c" path="res://global_systems/data_systems/action_condition_system/conditions/data/in_game/cond_in_game_ally_lvl_buyed_chest_base.tres" id="2_raq8e"]
 [ext_resource type="Resource" uid="uid://6ex285c86auh" path="res://global_systems/data_systems/action_condition_system/conditions/data/cond_ally_lvl_buyed_chest_base.tres" id="2_tliut"]
-[ext_resource type="PackedScene" uid="uid://co3biarax0yt4" path="res://game_characters_scenes/allies/resource_provider/wooden_chest/wooden_chest.tscn" id="3_d6yw0"]
 
 [resource]
 script = ExtResource("1_abc123")
@@ -16,7 +15,6 @@ unlockd_by_default = true
 buyed_by_default = false
 unlock_conditions = Array[ExtResource("1_2nh8c")]([ExtResource("2_tliut")])
 market_price = 0
-scene = ExtResource("3_d6yw0")
+scene = "uid://co3biarax0yt4"
 in_game_price = 0
 in_game_unlock_conditions = Array[ExtResource("1_2nh8c")]([ExtResource("2_raq8e")])
-initial_HP = 100

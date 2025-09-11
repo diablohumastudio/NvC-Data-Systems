@@ -1,0 +1,133 @@
+[gd_scene load_steps=10 format=3 uid="uid://bru5xmejfsk53"]
+
+[ext_resource type="Script" uid="uid://cq1vj4vdu3p2v" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/create_new_user_popup/create_new_user_popup.gd" id="1_dfh1y"]
+[ext_resource type="Texture2D" uid="uid://b86d0yam8ffoa" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/create_new_user_popup/assets/new_account_background.png" id="1_t8f41"]
+[ext_resource type="FontFile" uid="uid://ns85otisc51h" path="res://global_assets/fonts/Boldstone-Regular.ttf" id="2_dfh1y"]
+[ext_resource type="Texture2D" uid="uid://b2ktqctlrngns" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/create_new_user_popup/assets/new_account_username_box.png" id="3_qt8qw"]
+[ext_resource type="Texture2D" uid="uid://d3ht1dr6r2d46" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/assets/empty_button.png" id="4_kxtp1"]
+[ext_resource type="Texture2D" uid="uid://sa5nwsglbrfr" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/assets/empty_button_selected.png" id="5_3limr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aftkk"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e80r1"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oysix"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="CreateNewUserPopup" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 100.0
+offset_bottom = 75.0
+script = ExtResource("1_dfh1y")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+offset_right = 1136.0
+offset_bottom = 725.0
+texture = ExtResource("1_t8f41")
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 87.0
+offset_right = 1021.0
+offset_bottom = 191.0
+theme_override_fonts/font = ExtResource("2_dfh1y")
+theme_override_font_sizes/font_size = 130
+text = "Create New User"
+
+[node name="TextEditTitleLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 381.0
+offset_top = 239.0
+offset_right = 995.0
+offset_bottom = 319.0
+theme_override_fonts/font = ExtResource("2_dfh1y")
+theme_override_font_sizes/font_size = 100
+text = "New User Name:"
+
+[node name="TextEditContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_left = 393.0
+offset_top = 341.0
+offset_right = 957.0
+offset_bottom = 436.0
+
+[node name="TextEditBg" type="TextureRect" parent="TextEditContainer"]
+layout_mode = 2
+texture = ExtResource("3_qt8qw")
+
+[node name="NewNameTextEdit" type="TextEdit" parent="TextEditContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(540, 70)
+layout_mode = 2
+theme_override_colors/background_color = Color(0.729412, 0, 0, 0)
+theme_override_colors/caret_background_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("2_dfh1y")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_aftkk")
+theme_override_styles/focus = SubResource("StyleBoxFlat_e80r1")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_oysix")
+text = "New UserName"
+caret_blink = true
+
+[node name="WarningLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 89.0
+offset_top = 496.0
+offset_right = 1057.0
+offset_bottom = 552.0
+theme_override_colors/font_color = Color(0.631373, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_dfh1y")
+theme_override_font_sizes/font_size = 70
+text = "MAXIMUN number of users created"
+horizontal_alignment = 1
+
+[node name="AcceptBtn" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 231.753
+offset_top = 574.876
+offset_right = 537.753
+offset_bottom = 641.876
+texture_normal = ExtResource("4_kxtp1")
+texture_pressed = ExtResource("5_3limr")
+texture_hover = ExtResource("5_3limr")
+texture_focused = ExtResource("5_3limr")
+
+[node name="Label" type="Label" parent="AcceptBtn"]
+layout_mode = 0
+offset_left = 86.6667
+offset_top = 16.0
+offset_right = 221.667
+offset_bottom = 56.0
+theme_override_fonts/font = ExtResource("2_dfh1y")
+theme_override_font_sizes/font_size = 45
+text = "Accept"
+
+[node name="CancelBtn" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 615.843
+offset_top = 574.876
+offset_right = 921.843
+offset_bottom = 641.876
+texture_normal = ExtResource("4_kxtp1")
+texture_pressed = ExtResource("5_3limr")
+texture_hover = ExtResource("5_3limr")
+texture_focused = ExtResource("5_3limr")
+
+[node name="Label" type="Label" parent="CancelBtn"]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 14.0
+offset_right = 211.0
+offset_bottom = 54.0
+theme_override_fonts/font = ExtResource("2_dfh1y")
+theme_override_font_sizes/font_size = 45
+text = "Cancel"
+
+[connection signal="pressed" from="AcceptBtn" to="." method="_on_accept_btn_pressed"]
+[connection signal="pressed" from="CancelBtn" to="." method="_on_cancel_btn_pressed"]

@@ -4,9 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://touq8b40dlj2" path="res://screens/start_menus/about_menu/background_presenter/background_presenter.tscn" id="2_3nk6m"]
 [ext_resource type="PackedScene" uid="uid://b1qaewqhhtlyv" path="res://screens/start_menus/about_menu/submenu_selector/submenu_selector.tscn" id="3_aeiub"]
 [ext_resource type="PackedScene" uid="uid://ohx2441ipvbn" path="res://screens/start_menus/about_menu/popup_presenter/popup_presenter.tscn" id="3_c5shs"]
-[ext_resource type="Texture2D" uid="uid://dy5tlctbsbkcg" path="res://global_assets/go_back_button.png" id="4_crga3"]
-[ext_resource type="Texture2D" uid="uid://xollcxmkscnt" path="res://global_assets/go_back_button_selected.png" id="5_c5shs"]
-[ext_resource type="Texture2D" uid="uid://6dersyppynfl" path="res://global_assets/go_back_glow.png" id="7_7r87m"]
+[ext_resource type="Texture2D" uid="uid://dy5tlctbsbkcg" path="res://global_assets/go_back_btn_textures/go_back_button.png" id="4_crga3"]
+[ext_resource type="Texture2D" uid="uid://xollcxmkscnt" path="res://global_assets/go_back_btn_textures/go_back_button_selected.png" id="5_c5shs"]
+[ext_resource type="Texture2D" uid="uid://6dersyppynfl" path="res://global_assets/go_back_btn_textures/go_back_glow.png" id="7_7r87m"]
 [ext_resource type="Script" uid="uid://cc5cx846obsu8" path="res://global_systems/scene_loading_system/sls_scenes_bank/sls_scenes_bank.gd" id="8_t5rgc"]
 
 [sub_resource type="Animation" id="Animation_ex2wu"]

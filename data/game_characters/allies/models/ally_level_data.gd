@@ -15,7 +15,7 @@ signal in_game_just_buyed
 
 @export_category("In-Game Config")
 @export var ally_selector_thumbnail: Texture2D
-@export var scene: PackedScene
+@export_file var scene: String = "res://game_characters_scenes/"
 @export var in_game_price: int
 @export var in_game_unlock_conditions: Array[Condition] 
 var in_game_unlocked: bool = false

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://blm0md6ls2atm"]
+
+[ext_resource type="Script" uid="uid://da2psk6vhxha6" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/users_list/users_list.gd" id="1_k6f3v"]
+[ext_resource type="PackedScene" uid="uid://dvlb36pw703xc" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/users_list/user_list_item/user_list_item.tscn" id="2_7txe4"]
+
+[node name="UsersList" type="VBoxContainer"]
+offset_right = 502.0
+offset_bottom = 245.0
+theme_override_constants/separation = 30
+script = ExtResource("1_k6f3v")
+
+[node name="UserListItem" parent="." instance=ExtResource("2_7txe4")]
+layout_mode = 2
+
+[node name="UserListItem2" parent="." instance=ExtResource("2_7txe4")]
+layout_mode = 2
+
+[node name="UserListItem3" parent="." instance=ExtResource("2_7txe4")]
+layout_mode = 2
