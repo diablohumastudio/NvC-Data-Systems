@@ -8,10 +8,20 @@ func _set_level(new_value: LevelData) -> void:
 	GSS.reset_values()
 
 func _ready() -> void:
+	connect_animation_triggers()
 	%HUD.modulate = Color.TRANSPARENT
 	_initialize_background()
 	_show_preview_process()
-	GSS.enemy_reached_last_column.connect(on_enemy_reach_last_column)
+
+func connect_animation_triggers():
+	var animation_triggers = get_tree().get_nodes_in_group("animation_trigger")
+	for anim_trigger: AnimationTrigger in animation_triggers:
+		anim_trigger.animation_triggered.connect(_on_animation_trigger_animation_triggered)
+
+func _on_animation_trigger_animation_triggered(anim_type: AnimationTrigger.ANIMATION_TYPES):
+	var animatable_elements  = get_tree().get_nodes_in_group("animatable_elements")
+	for ani_element: AnimatableElement in animatable_elements:
+		ani_element.play_animation(anim_type)
 
 func _initialize_background():
 	SMS.change_scene(load(level.background_path), {}, $BackgroundScene, true)
@@ -31,8 +41,20 @@ func _show_preview_process():
 	await %GameStartCountdown.start_countdown_finished
 	get_tree().paused = false
 
-func on_enemy_reach_last_column():
-	%GameOverPopup.show()
+func _on_last_column_enemy_detectors_enemy_reached_last_column() -> void:
+	game_lost()
+	
+func _on_dbug_win_btn_game_lost_btn_pressed() -> void:
+	game_lost()
+
+func game_lost():
+	%GameOverPopup._show()
+	
+func _on_dbug_win_btn_game_win_btn_pressed() -> void:
+	game_won()
+
+func game_won():
+	%GameWonPopup._show()
 
 func _on_go_back_btn_pressed() -> void:
 	SMS.change_scene(load(GC.SCREENS_UIDS.MAIN_MENU))

@@ -32,11 +32,11 @@ func spawn_preview_wave():
 func spawn_wave(wave: WaveData):
 	var total_enemies_number: int = get_total_enemies_number_in_wave(wave)
 	var spawn_wait_times: Array[float] = wave.timing_strategy.get_spawning_wait_times(total_enemies_number)
-	var spawn_grid_positions: Array[Vector2] = wave.position_strategy.get_spawning_positions(total_enemies_number, self)
+	var spawn_grid_positions: Array[Vector2i] = wave.position_strategy.get_spawning_positions(total_enemies_number, self)
 	var enemies: Array[EnemyScene] = get_enemies_from_wave(wave)
 	for ii in total_enemies_number:
-		var position: Vector2 = spawn_grid_positions[ii]
-		var enemies_spawner: EnemiesSpawnerCell = get_cell_by_col_and_row(position.x, position.y)
+		var grid_position: Vector2i = spawn_grid_positions[ii]
+		var enemies_spawner: EnemiesSpawnerCell = get_cell_by_col_and_row(grid_position.x, grid_position.y)
 		enemies_spawner.spawn_enemy(enemies[ii])
 		if ii < spawn_wait_times.size(): 
 			await get_tree().create_timer(spawn_wait_times[ii]).timeout

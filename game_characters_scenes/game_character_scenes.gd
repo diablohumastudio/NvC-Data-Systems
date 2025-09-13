@@ -12,7 +12,7 @@ var current_hp : float
 func _ready() -> void:
 	current_hp = hp
 
-func receive_damage(damage_points:float, damage_type:GameCharacter.DAMAGE_TYPES) -> void:
+func receive_damage(_damage_points:float, _damage_type:GameCharacter.DAMAGE_TYPES) -> void:
 	pass
 
 func check_dying_conditions() -> void:

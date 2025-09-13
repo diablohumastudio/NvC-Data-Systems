@@ -1,7 +1,6 @@
 class_name PausedGamePopup extends Control
 
 @export var level : LevelData
-var _saved_settings = UDS.current_user_data.settings
 
 var is_shown: bool
 
