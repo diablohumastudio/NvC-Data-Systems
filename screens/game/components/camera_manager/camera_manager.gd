@@ -12,7 +12,6 @@ func show_enemies_preview():
 	%AnimationPlayer.play("show_enemies_preview")
 	await %AnimationPlayer.animation_finished
 	enemies_preview_animation_ended.emit()
-	GSS.enemies_preview_animation_ended.emit()
 	await get_tree().process_frame
 	reparent_attached_nodes_to_previous_parents()
 

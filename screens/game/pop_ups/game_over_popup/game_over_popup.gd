@@ -4,10 +4,6 @@ class_name GameOverPopup extends Control
 
 func _ready() -> void:
 	if GSS.level: level = GSS.level
-	GSS.enemy_reached_last_column.connect(on_gss_enemy_reached_last_column)
-
-func on_gss_enemy_reached_last_column():
-	_show()
 
 func _show():
 	get_tree().paused = true

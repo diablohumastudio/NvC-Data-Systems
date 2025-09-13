@@ -1,6 +1,7 @@
 class_name Bullet extends CharacterBody2D
 
 var bullet_sender : GameCharacter 
+@warning_ignore("unused_private_class_variable")
 var _inflicted_damage_points : int
 var _is_moving_right : bool = true
 

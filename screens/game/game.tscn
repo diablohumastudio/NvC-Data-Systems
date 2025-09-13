@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://c2b4jldseu5vs"]
+[gd_scene load_steps=32 format=3 uid="uid://c2b4jldseu5vs"]
 
 [ext_resource type="Script" uid="uid://bvalrtinik0vd" path="res://screens/game/game.gd" id="1_eyx8b"]
 [ext_resource type="Resource" uid="uid://c0580eyighege" path="res://data/levels/data/level_2p.tres" id="2_by56y"]
@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://catyyevb26p6e" path="res://screens/game/components/terrain_grid/terrain_grid_cell/terrain_grid.tscn" id="4_18b3j"]
 [ext_resource type="PackedScene" uid="uid://xydq20wuc0hp" path="res://screens/game/components/remove_ally_button/remove_ally_button.tscn" id="5_g1ktd"]
 [ext_resource type="PackedScene" uid="uid://cjay4w6imp8r7" path="res://screens/game/components/enemies_spawn_grid/enemies_spawner_grid.tscn" id="5_kc255"]
-[ext_resource type="PackedScene" uid="uid://c8de10anym03i" path="res://screens/game/debug_components/dbug_components.tscn" id="13_n6j5y"]
 [ext_resource type="PackedScene" uid="uid://dud1ujrys61qg" path="res://screens/game/components/balance_displayer/balance_displayer.tscn" id="13_ou2j6"]
 [ext_resource type="PackedScene" uid="uid://dr75bqddrjto7" path="res://screens/game/pop_ups/paused_game_popup/paused_game_popup.tscn" id="13_wh4ub"]
 [ext_resource type="Texture2D" uid="uid://dy5tlctbsbkcg" path="res://global_assets/go_back_btn_textures/go_back_button.png" id="14_1ad28"]
@@ -17,11 +16,18 @@
 [ext_resource type="PackedScene" uid="uid://df03qm0on10kk" path="res://screens/game/components/last_column_enemy_detectors/last_column_enemy_detectors.tscn" id="17_y2n64"]
 [ext_resource type="PackedScene" uid="uid://wld4ag15itcu" path="res://screens/game/components/camera_manager/camera_manager.tscn" id="18_1jmhe"]
 [ext_resource type="PackedScene" uid="uid://6xhrmrplu0ha" path="res://screens/game/pop_ups/game_over_popup/game_over_popup.tscn" id="18_n6j5y"]
+[ext_resource type="Script" uid="uid://dnunv25rb2wnb" path="res://screens/game/debug_components/dbug_components.gd" id="18_r3ga2"]
 [ext_resource type="PackedScene" uid="uid://c8ja2opfaohj7" path="res://screens/game/components/cannons/cannons.tscn" id="19_1jmhe"]
+[ext_resource type="PackedScene" uid="uid://bk5r5vrhhaf2x" path="res://screens/game/debug_components/dbug_canons_killed_hud/dbug_canon_hud.tscn" id="19_tk3wi"]
 [ext_resource type="Texture2D" uid="uid://c3mslriaxmk3o" path="res://screens/game/components/pause_button/assets/pause _button _unselected.png" id="20_1ad28"]
+[ext_resource type="PackedScene" uid="uid://cafe6vrkyihc5" path="res://screens/game/debug_components/dbug_win_loose_btns/dbug_win_loose_btns.tscn" id="20_h13k3"]
+[ext_resource type="PackedScene" uid="uid://dm2l1uxm8jud0" path="res://screens/game/debug_components/dbug_killed_enemies_hud/dbug_killed_enemies_hud.tscn" id="21_u1hm0"]
 [ext_resource type="Texture2D" uid="uid://bsjna513oyo50" path="res://screens/game/components/pause_button/assets/pause _button _selected.png" id="21_wh4ub"]
+[ext_resource type="PackedScene" uid="uid://bj0wscnker5f" path="res://screens/game/debug_components/dbug_trigger_animation_hud/dbug_trigger_animation_hud.tscn" id="22_blwhk"]
 [ext_resource type="PackedScene" uid="uid://belejvi2ji5n" path="res://screens/game/components/game_progress_line/game_progress_line.tscn" id="22_wh4ub"]
+[ext_resource type="PackedScene" uid="uid://doqxafbxr50re" path="res://screens/game/debug_components/dbug_balance_change_hud/dbug_balance_change_hud.tscn" id="23_mcaa2"]
 [ext_resource type="PackedScene" uid="uid://bfpngr2c5ibha" path="res://screens/game/pop_ups/game_won_popup/game_won_popup.tscn" id="23_p21lm"]
+[ext_resource type="PackedScene" uid="uid://bepu7cd0ik6av" path="res://screens/game/debug_components/dbug_level_name_presenter/dbug_level_name_presenter.tscn" id="24_58y5y"]
 
 [sub_resource type="Animation" id="Animation_p21lm"]
 length = 0.001
@@ -177,8 +183,75 @@ offset_bottom = 869.0
 theme_override_font_sizes/font_size = 42
 text = "BACK test"
 
-[node name="DbugComponents" parent="." instance=ExtResource("13_n6j5y")]
+[node name="DbugComponents" type="Control" parent="."]
+process_mode = 3
 layout_mode = 1
+anchors_preset = 0
+offset_right = 9.0
+offset_bottom = 10.0
+mouse_filter = 2
+script = ExtResource("18_r3ga2")
+
+[node name="ShowComponentsBtn" type="Button" parent="DbugComponents"]
+layout_mode = 0
+offset_left = 318.0
+offset_top = 29.0
+offset_right = 420.0
+offset_bottom = 79.0
+theme_override_font_sizes/font_size = 30
+toggle_mode = true
+text = "Debug"
+
+[node name="ComponentsContainer" type="Control" parent="DbugComponents"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DbugCanonHUD" parent="DbugComponents/ComponentsContainer" instance=ExtResource("19_tk3wi")]
+layout_mode = 0
+offset_left = 308.0
+offset_top = 257.0
+offset_right = 465.0
+offset_bottom = 367.0
+
+[node name="DbugWinBtn" parent="DbugComponents/ComponentsContainer" instance=ExtResource("20_h13k3")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 521.0
+offset_top = 305.0
+offset_right = 631.0
+offset_bottom = 361.0
+
+[node name="DbugKilledEnemiesHUD" parent="DbugComponents/ComponentsContainer" instance=ExtResource("21_u1hm0")]
+layout_mode = 0
+offset_left = 301.0
+offset_top = 388.0
+offset_right = 776.0
+offset_bottom = 544.0
+
+[node name="DbugTriggerAnimationBtn" parent="DbugComponents/ComponentsContainer" instance=ExtResource("22_blwhk")]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 115.0
+offset_right = 527.0
+offset_bottom = 178.0
+theme_override_font_sizes/font_size = 40
+
+[node name="DbugBalanceChangeHud" parent="DbugComponents/ComponentsContainer" instance=ExtResource("23_mcaa2")]
+layout_mode = 0
+offset_left = 542.0
+offset_top = 110.0
+offset_right = 636.0
+offset_bottom = 268.0
+
+[node name="LevelNamePresenter" parent="DbugComponents/ComponentsContainer" instance=ExtResource("24_58y5y")]
+layout_mode = 0
+offset_left = 468.0
+offset_top = 20.0
+offset_right = 567.0
+offset_bottom = 69.0
 
 [node name="popups" type="Control" parent="."]
 anchors_preset = 0
@@ -197,6 +270,7 @@ visible = false
 layout_mode = 1
 
 [node name="GameWonPopup" parent="popups" instance=ExtResource("23_p21lm")]
+unique_name_in_owner = true
 visible = false
 layout_mode = 1
 offset_right = 1880.0
@@ -212,6 +286,10 @@ libraries = {
 &"": SubResource("AnimationLibrary_ikmaa")
 }
 
+[connection signal="enemy_reached_last_column" from="LastColumnEnemyDetectors" to="." method="_on_last_column_enemy_detectors_enemy_reached_last_column"]
 [connection signal="pressed" from="HUD/PauseBtn" to="." method="_on_pause_btn_pressed"]
 [connection signal="pressed" from="HUD/GoBackBtn" to="." method="_on_go_back_btn_pressed"]
 [connection signal="pressed" from="HUD/GoBackToTestBtn" to="." method="_on_go_back_to_test_btn_pressed"]
+[connection signal="toggled" from="DbugComponents/ShowComponentsBtn" to="DbugComponents" method="_on_show_components_btn_toggled"]
+[connection signal="game_lost_btn_pressed" from="DbugComponents/ComponentsContainer/DbugWinBtn" to="." method="_on_dbug_win_btn_game_lost_btn_pressed"]
+[connection signal="game_win_btn_pressed" from="DbugComponents/ComponentsContainer/DbugWinBtn" to="." method="_on_dbug_win_btn_game_win_btn_pressed"]

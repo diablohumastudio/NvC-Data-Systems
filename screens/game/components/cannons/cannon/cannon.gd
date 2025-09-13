@@ -5,7 +5,7 @@ var _is_already_shooting : bool
 
 @export var cannon_number : int
 
-func _on_physical_contact_area_2d_body_entered(body: Node2D) -> void:
+func _on_physical_contact_area_2d_body_entered(_body: Node2D) -> void:
 	shoot()
 	
 func shoot():
@@ -18,7 +18,6 @@ func shoot():
 		
 		AudioSystem.post_event(AK.EVENTS.PLAY_CANNON_SHOOTING)
 		_create_and_send_bullet()
-		GSS.cannon_shooted.emit(self)
 
 func _create_and_send_bullet():
 	var bullet : CannonBullet = load("uid://oq6aen6b7qdb").instantiate()

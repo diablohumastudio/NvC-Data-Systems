@@ -1,8 +1,7 @@
 class_name AnimatableElement extends AnimatedSprite2D
 
-@export var action_type : GSS.ANIMATION_TYPES
+@export var action_type : AnimationTrigger.ANIMATION_TYPES
 @export var sprite_frames_path: String
-
 
 func _ready():
 	set_process(false)
@@ -17,6 +16,6 @@ func _process(_delta):
 		var assigned_sprite_frames : SpriteFrames = ResourceLoader.load_threaded_get(sprite_frames_path) as SpriteFrames
 		self.sprite_frames = assigned_sprite_frames
 
-func play_animation(_action_type:GSS.ANIMATION_TYPES):
+func play_animation(_action_type:AnimationTrigger.ANIMATION_TYPES):
 	if action_type == _action_type:
 		self.play(self.animation)
