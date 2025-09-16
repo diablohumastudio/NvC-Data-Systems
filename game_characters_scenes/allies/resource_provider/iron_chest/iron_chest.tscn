@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://o5ujsaqb3w58" path="res://game_characters_scenes/allies/resource_provider/models/sc_ally_resource_provider/sc_ally_resource_provider.tscn" id="1_ixete"]
 [ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/shared_assets/circle_shadow.png" id="2_04huq"]
-[ext_resource type="Script" uid="uid://cje5f8n6lqhkh" path="res://game_characters_scenes/allies/resource_provider/iron_chest/iron_chest.gd" id="2_cpt3o"]
+[ext_resource type="Script" uid="uid://cahnto1ciaw8b" path="res://game_characters_scenes/allies/resource_provider/iron_chest/iron_chest.gd" id="2_cpt3o"]
 [ext_resource type="SpriteFrames" uid="uid://c7vvj1caoxoy5" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/iron_chest_sprite_frames_base.tres" id="4_04huq"]
 [ext_resource type="Texture2D" uid="uid://jio37lntveew" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/top_light.png" id="5_l8i4b"]
 [ext_resource type="Texture2D" uid="uid://dupy7tutwy7ke" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/top.png" id="6_ld0yx"]
@@ -628,8 +628,6 @@ _data = {
 [node name="IronChest" instance=ExtResource("1_ixete")]
 position = Vector2(96, 115)
 script = ExtResource("2_cpt3o")
-resource_value = 50
-seconds_per_coin = 3.0
 
 [node name="SelectAllyBtn" type="TextureButton" parent="." index="0"]
 unique_name_in_owner = true
