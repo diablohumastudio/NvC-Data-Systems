@@ -1,7 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://o5ujsaqb3w58"]
-
-[ext_resource type="Script" uid="uid://bjr8cje55bb54" path="res://game_characters_scenes/allies/resource_provider/models/sc_ally_resource_provider/sc_ally_resource_provider.gd" id="1_weltl"]
-[ext_resource type="Script" uid="uid://bpfbritys5raj" path="res://game_characters_scenes/allies/resource_provider/models/state_machine_resource_provider/state_machine_resource_provider.gd" id="2_x0884"]
+[gd_scene load_steps=4 format=3 uid="uid://o5ujsaqb3w58"]
 
 [sub_resource type="Animation" id="Animation_weltl"]
 resource_name = "giving_coin"
@@ -16,13 +13,6 @@ _data = {
 }
 
 [node name="ResourceProvider" type="CharacterBody2D"]
-script = ExtResource("1_weltl")
-metadata/_custom_type_script = "uid://dbcsemdveveol"
-
-[node name="ResourceProviderStateMachine" type="Node" parent="."]
-unique_name_in_owner = true
-script = ExtResource("2_x0884")
-metadata/_custom_type_script = "uid://bpfbritys5raj"
 
 [node name="CoinDropTimer" type="Timer" parent="."]
 unique_name_in_owner = true

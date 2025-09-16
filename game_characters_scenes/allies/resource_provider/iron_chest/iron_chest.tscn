@@ -1,8 +1,7 @@
-[gd_scene load_steps=31 format=3 uid="uid://vab6yicbwijn"]
+[gd_scene load_steps=30 format=3 uid="uid://vab6yicbwijn"]
 
 [ext_resource type="PackedScene" uid="uid://o5ujsaqb3w58" path="res://game_characters_scenes/allies/resource_provider/models/sc_ally_resource_provider/sc_ally_resource_provider.tscn" id="1_ixete"]
 [ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/shared_assets/circle_shadow.png" id="2_04huq"]
-[ext_resource type="Script" uid="uid://cahnto1ciaw8b" path="res://game_characters_scenes/allies/resource_provider/iron_chest/iron_chest.gd" id="2_cpt3o"]
 [ext_resource type="SpriteFrames" uid="uid://c7vvj1caoxoy5" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/iron_chest_sprite_frames_base.tres" id="4_04huq"]
 [ext_resource type="Texture2D" uid="uid://jio37lntveew" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/top_light.png" id="5_l8i4b"]
 [ext_resource type="Texture2D" uid="uid://dupy7tutwy7ke" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/top.png" id="6_ld0yx"]
@@ -12,122 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://q5ifosgjvma5" path="res://game_characters_scenes/shared_assets/gun_light.png" id="10_7dqq0"]
 [ext_resource type="Script" uid="uid://qclj8gae0u4y" path="res://game_characters_scenes/allies/models/ally_scene/ally_level_dependants_nodes/ally_level_dependent_animatedsprite2D.gd" id="11_cpt3o"]
 [ext_resource type="SpriteFrames" uid="uid://h1vou3feoeuh" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/iron_chest_sprite_frames_fast_2.tres" id="12_k6k1e"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_gg43k"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_l8i4b")
-}],
-"loop": true,
-"name": &"charge",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_ld0yx")
-}],
-"loop": true,
-"name": &"default",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_b12u6")
-}],
-"loop": true,
-"name": &"open",
-"speed": 5.0
-}]
-
-[sub_resource type="Curve" id="Curve_q5asp"]
-_limits = [0.0, 0.3, 0.0, 1.0]
-_data = [Vector2(0, 0.0406288), 0.0, 0.0, 0, 0, Vector2(0.48318, 0.3), 0.0, 0.0, 0, 0, Vector2(0.993884, 0.0901451), -0.636947, 0.0, 0, 0]
-point_count = 3
-
-[sub_resource type="Gradient" id="Gradient_j7xbj"]
-offsets = PackedFloat32Array(0, 0.204013, 0.712375, 1)
-colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 0.94902, 0.980392, 0.87451, 1, 0.853713, 0.289824, 3.17663e-05, 0)
-
-[sub_resource type="Animation" id="Animation_v0qi3"]
-resource_name = "_receive_damage_general"
-length = 0.7
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Textures/Down:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(1, 1.1), Vector2(1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Textures/Down:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(0.109804, 0.0705882, 0.0588235, 1), Color(1, 1, 1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Textures:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 39), Vector2(-10, 39), Vector2(0, 39)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Textures/Down/Top:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.0, -0.0872665, 0.0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_fcsnw"]
-_data = {
-&"_receive_damage_general": SubResource("Animation_v0qi3")
-}
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wtsvu"]
-size = Vector2(47, 213)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6pwvn"]
-size = Vector2(30, 65)
-
-[sub_resource type="Curve" id="Curve_rvmm0"]
-_data = [Vector2(0, 0.147368), 0.0, 0.0, 0, 0, Vector2(0.368132, 0.694737), 0.0, 0.0, 0, 0, Vector2(0.983517, 0.115789), 0.0, 0.0, 0, 0]
-point_count = 3
-
-[sub_resource type="Gradient" id="Gradient_6ir51"]
-offsets = PackedFloat32Array(0, 0.245033, 1)
-colors = PackedColorArray(0.351563, 0.351563, 0.351563, 1, 1, 1, 1, 1, 1, 1, 1, 0)
-
-[sub_resource type="Curve" id="Curve_msemh"]
-_limits = [0.0, 0.1, 0.0, 1.0]
-_data = [Vector2(0, 0.0175824), 0.0, 0.0, 0, 0, Vector2(0.505155, 0.1), 0.0163989, 0.0163989, 0, 0, Vector2(1, 0.00549448), -0.368232, 0.0, 0, 0]
-point_count = 3
-
-[sub_resource type="Gradient" id="Gradient_2ssfk"]
-offsets = PackedFloat32Array(0, 0.0783133, 0.379518, 0.572289, 0.76506, 1)
-colors = PackedColorArray(0.874968, 0.604514, 0.563407, 0, 1, 1, 1, 1, 0.851918, 0.618979, 0.924945, 1, 0.954472, 0.794962, 0.466424, 1, 0.73367, 0.921388, 0.913637, 1, 1, 1, 1, 0)
 
 [sub_resource type="Animation" id="Animation_hhojd"]
 resource_name = "RESET"
@@ -204,6 +87,126 @@ tracks/5/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Textures:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Shadow:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Shadow:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.23684, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("SpawnLight:energy")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("SpawnLight:texture_scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.3]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Textures:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 39)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Textures/Down/Top:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Textures/Down:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1, -28)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Textures/Down/Top:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-84, -72)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Textures:scale")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_4bqhc"]
 resource_name = "_death"
@@ -264,10 +267,10 @@ tracks/4/path = NodePath("Textures:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(1.35, 1.55, 1.75, 1.95, 2.15, 2.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1.35, 1.55, 1.75, 1.95, 2.15, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.47451), Color(1, 1, 1, 1), Color(1, 1, 1, 0.47451), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.47451), Color(1, 1, 1, 1), Color(1, 1, 1, 0.47451), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -276,54 +279,42 @@ tracks/5/path = NodePath("Shadow:modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(1.75, 2.4),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 1.75, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("DustParticles:position")
+tracks/6/path = NodePath("Textures:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0.1),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-194, 63)]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("Textures:position")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
 "times": PackedFloat32Array(0.1, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(0, 39), Vector2(-41, -15)]
 }
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("Textures/Down/Top:position")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Textures/Down/Top:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.4),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(-84, -72), Vector2(-84, -102), Vector2(-84, -72)]
 }
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("Textures:scale")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Textures:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
@@ -501,7 +492,7 @@ tracks/0/path = NodePath("Textures:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(0, 0.5125),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -513,7 +504,7 @@ tracks/1/path = NodePath("Shadow:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.05, 0.2),
+"times": PackedFloat32Array(0.05, 0.2125),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -597,7 +588,7 @@ tracks/8/path = NodePath("Textures:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.35, 0.55),
+"times": PackedFloat32Array(0, 0.25, 0.35, 0.5625),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(0, -188), Vector2(0, 39), Vector2(0, 29.722), Vector2(0, 39)]
@@ -625,9 +616,124 @@ _data = {
 &"spawn": SubResource("Animation_mdkbv")
 }
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_gg43k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_l8i4b")
+}],
+"loop": true,
+"name": &"charge",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ld0yx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_b12u6")
+}],
+"loop": true,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="Curve" id="Curve_q5asp"]
+_limits = [0.0, 0.3, 0.0, 1.0]
+_data = [Vector2(0, 0.0406288), 0.0, 0.0, 0, 0, Vector2(0.48318, 0.3), 0.0, 0.0, 0, 0, Vector2(0.993884, 0.0901451), -0.636947, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_j7xbj"]
+offsets = PackedFloat32Array(0, 0.204013, 0.712375, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 0.94902, 0.980392, 0.87451, 1, 0.853713, 0.289824, 3.17663e-05, 0)
+
+[sub_resource type="Animation" id="Animation_v0qi3"]
+resource_name = "_receive_damage_general"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Textures/Down:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1.1), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Textures/Down:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.109804, 0.0705882, 0.0588235, 1), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Textures:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 39), Vector2(-10, 39), Vector2(0, 39)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Textures/Down/Top:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.0872665, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fcsnw"]
+_data = {
+&"_receive_damage_general": SubResource("Animation_v0qi3")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wtsvu"]
+size = Vector2(47, 213)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6pwvn"]
+size = Vector2(30, 65)
+
+[sub_resource type="Curve" id="Curve_rvmm0"]
+_data = [Vector2(0, 0.147368), 0.0, 0.0, 0, 0, Vector2(0.368132, 0.694737), 0.0, 0.0, 0, 0, Vector2(0.983517, 0.115789), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_6ir51"]
+offsets = PackedFloat32Array(0, 0.245033, 1)
+colors = PackedColorArray(0.351563, 0.351563, 0.351563, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="Curve" id="Curve_msemh"]
+_limits = [0.0, 0.1, 0.0, 1.0]
+_data = [Vector2(0, 0.0175824), 0.0, 0.0, 0, 0, Vector2(0.505155, 0.1), 0.0163989, 0.0163989, 0, 0, Vector2(1, 0.00549448), -0.368232, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_2ssfk"]
+offsets = PackedFloat32Array(0, 0.0783133, 0.379518, 0.572289, 0.76506, 1)
+colors = PackedColorArray(0.874968, 0.604514, 0.563407, 0, 1, 1, 1, 1, 0.851918, 0.618979, 0.924945, 1, 0.954472, 0.794962, 0.466424, 1, 0.73367, 0.921388, 0.913637, 1, 1, 1, 1, 0)
+
 [node name="IronChest" instance=ExtResource("1_ixete")]
 position = Vector2(96, 115)
-script = ExtResource("2_cpt3o")
 
 [node name="SelectAllyBtn" type="TextureButton" parent="." index="0"]
 unique_name_in_owner = true
@@ -636,6 +742,11 @@ offset_left = -82.0
 offset_top = -114.0
 offset_right = 82.0
 offset_bottom = 54.0
+
+[node name="StateAnimationPlayer" parent="." index="2"]
+libraries = {
+&"": SubResource("AnimationLibrary_huxl0")
+}
 
 [node name="Shadow" type="Sprite2D" parent="." index="3"]
 position = Vector2(-2, 22)
@@ -693,7 +804,7 @@ position = Vector2(59, -32.5)
 shape = SubResource("RectangleShape2D_6pwvn")
 
 [node name="DustParticles" type="CPUParticles2D" parent="." index="8"]
-position = Vector2(5, 45)
+position = Vector2(-194, 63)
 emitting = false
 amount = 20
 texture = ExtResource("9_v2tol")
@@ -741,8 +852,3 @@ linear_accel_min = 31.78
 linear_accel_max = 31.78
 scale_amount_curve = SubResource("Curve_msemh")
 color_ramp = SubResource("Gradient_2ssfk")
-
-[node name="StateAnimationPlayer" parent="." index="11"]
-libraries = {
-&"": SubResource("AnimationLibrary_huxl0")
-}

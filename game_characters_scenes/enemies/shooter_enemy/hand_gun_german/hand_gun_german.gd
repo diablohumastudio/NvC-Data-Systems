@@ -1,4 +1,1 @@
-class_name HandgunGerman extends ShooterEnemy
-
-func _init() -> void:
-	type = EnemyScene.TYPES.HandGunGerman
+class_name HandgunGerman extends CharacterBody2D

@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://5xg73u1xoy12" path="res://game_characters_scenes/shared_assets/circle_particle.png" id="10_8p2kq"]
 [ext_resource type="Texture2D" uid="uid://jdulueb7gowt" path="res://game_characters_scenes/shared_assets/dust_particle.png" id="11_htkvu"]
 [ext_resource type="Texture2D" uid="uid://q5ifosgjvma5" path="res://game_characters_scenes/shared_assets/gun_light.png" id="12_2dq4a"]
-[ext_resource type="AnimationLibrary" uid="uid://bg88eo8y8056t" path="res://game_characters_scenes/allies/resource_provider/iron_chest/animations/library.res" id="12_12g3n"]
+[ext_resource type="AnimationLibrary" uid="uid://bg88eo8y8056t" path="res://tests/animation_tree_test/test_iron_chest/animations/library.res" id="12_12g3n"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gg43k"]
 animations = [{
@@ -117,7 +117,7 @@ switch_mode = 2
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_ec4fl"]
-states/End/position = Vector2(754, 119)
+states/End/position = Vector2(822, 119)
 states/Start/position = Vector2(141, 119)
 states/_death/node = SubResource("AnimationNodeAnimation_gsreo")
 states/_death/position = Vector2(511, 211)
@@ -128,16 +128,16 @@ states/_idle/position = Vector2(364, 119)
 states/spawn/node = SubResource("AnimationNodeAnimation_uhxxt")
 states/spawn/position = Vector2(262, 119)
 transitions = ["Start", "spawn", SubResource("AnimationNodeStateMachineTransition_gsreo"), "spawn", "_idle", SubResource("AnimationNodeStateMachineTransition_quud0"), "_idle", "_giving_coin", SubResource("AnimationNodeStateMachineTransition_l4el1"), "_giving_coin", "_idle", SubResource("AnimationNodeStateMachineTransition_01y3t"), "_idle", "_death", SubResource("AnimationNodeStateMachineTransition_ec4fl"), "_giving_coin", "_death", SubResource("AnimationNodeStateMachineTransition_8p2kq"), "_death", "End", SubResource("AnimationNodeStateMachineTransition_htkvu")]
-graph_offset = Vector2(22, 24)
+graph_offset = Vector2(33, -14)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_8t0c6"]
-graph_offset = Vector2(-407.37, -39.7233)
+graph_offset = Vector2(-391.725, -85.5416)
 nodes/OneShot/node = SubResource("AnimationNodeOneShot_12g3n")
 nodes/OneShot/position = Vector2(20, 60)
 nodes/ReciebeDamageAnimation/node = SubResource("AnimationNodeAnimation_12g3n")
 nodes/ReciebeDamageAnimation/position = Vector2(-420, 180)
 nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_ec4fl")
-nodes/StateMachine/position = Vector2(-280, -20)
+nodes/StateMachine/position = Vector2(-500, -20)
 nodes/output/position = Vector2(200, 60)
 node_connections = [&"OneShot", 0, &"StateMachine", &"OneShot", 1, &"ReciebeDamageAnimation", &"output", 0, &"OneShot"]
 

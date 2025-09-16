@@ -1,7 +1,6 @@
 class_name IronChest extends CharacterBody2D
 
 var dying: bool = false
-var reciving_damage: bool = false
 
 func _ready() -> void:
 	pass

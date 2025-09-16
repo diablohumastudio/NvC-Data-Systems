@@ -1,6 +1,5 @@
-[gd_scene load_steps=38 format=3 uid="uid://cnqqga8hbxxjn"]
+[gd_scene load_steps=37 format=3 uid="uid://cnqqga8hbxxjn"]
 
-[ext_resource type="Script" uid="uid://dxllcn548wf2j" path="res://game_characters_scenes/components/ruble_coin/ruble_coin.gd" id="1_b3trd"]
 [ext_resource type="Texture2D" uid="uid://bnbovx28lo8pq" path="res://game_characters_scenes/shared_assets/oval_patricle.png" id="2_cwneg"]
 [ext_resource type="Texture2D" uid="uid://dyu0e7xfddgv2" path="res://game_characters_scenes/components/ruble_coin/assets/rublo_halo.png" id="2_tdw4k"]
 [ext_resource type="Texture2D" uid="uid://b3v6xh4pladc4" path="res://game_characters_scenes/components/ruble_coin/assets/rublo1.png" id="3_g1fj8"]
@@ -380,7 +379,6 @@ offset_left = -41.0
 offset_top = -41.0
 offset_right = 41.0
 offset_bottom = 42.0
-script = ExtResource("1_b3trd")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 position = Vector2(45, 45)
