@@ -1,8 +1,36 @@
-[gd_scene load_steps=2 format=3 uid="uid://mwls1togvm3o"]
+[gd_scene load_steps=5 format=3 uid="uid://mwls1togvm3o"]
 
+[ext_resource type="Texture2D" uid="uid://iub3f7kntpn5" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/upgrade_buttons/barriers/barrier_knockback_1.png" id="1_htniq"]
 [ext_resource type="Script" uid="uid://r3x6h3jbsmn7" path="res://game_characters_scenes/allies/models/ally_upgrade_popup/upgrade_ally_to_level_btn/upgrade_ally_to_level_btn.gd" id="1_m7o0e"]
+[ext_resource type="FontFile" uid="uid://c037te0jknb01" path="res://global_assets/fonts/Molot.otf" id="2_1ajoo"]
+[ext_resource type="Texture2D" uid="uid://bwbhdcqkyvvci" path="res://game_characters_scenes/shared_assets/lock.png" id="3_w42tc"]
 
-[node name="UpgradeToLevelBtn" type="Button"]
+[node name="UpgradeToLevelBtn" type="TextureButton"]
+offset_right = 105.0
+offset_bottom = 59.0
+texture_normal = ExtResource("1_htniq")
 script = ExtResource("1_m7o0e")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 22.0
+offset_right = 153.0
+offset_bottom = 75.0
+theme_override_colors/font_outline_color = Color(0.276376, 0.0553746, 0.0815701, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("2_1ajoo")
+theme_override_font_sizes/font_size = 36
+text = "+10%"
+horizontal_alignment = 1
+
+[node name="Lock" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 77.0
+offset_top = 25.0
+offset_right = 148.0
+offset_bottom = 108.0
+texture = ExtResource("3_w42tc")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]
