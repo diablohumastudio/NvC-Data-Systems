@@ -1,4 +1,4 @@
-class_name BayonetSolider2 extends GameCharacter
+class_name BayonetSolider2 extends CharacterBody2D
 
 var long_obj_detected: bool = false
 var short_obj_detected: bool = false
@@ -26,4 +26,14 @@ func _has_short_distance_objects() -> bool:
 	return %ShortDetenctionArea2D.has_overlapping_bodies()
 
 func _on_die_button_pressed() -> void:
-	dying = true
+	die()
+
+func _on_damage_btn_pressed() -> void:
+	get_damage()
+
+func die():
+	var state_machine: AnimationNodeStateMachinePlayback = $AnimationTree.get("parameters/AnimationNodeStateMachine/playback")
+	state_machine.travel("_death")
+
+func get_damage():
+	%AnimationTree.set("parameters/OneShot/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)

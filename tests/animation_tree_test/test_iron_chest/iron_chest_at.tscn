@@ -141,7 +141,7 @@ nodes/StateMachine/position = Vector2(-500, -20)
 nodes/output/position = Vector2(200, 60)
 node_connections = [&"OneShot", 0, &"StateMachine", &"OneShot", 1, &"ReciebeDamageAnimation", &"output", 0, &"OneShot"]
 
-[node name="IronChest" type="CharacterBody2D"]
+[node name="IronChest2" type="CharacterBody2D"]
 position = Vector2(96, 115)
 script = ExtResource("2_8t0c6")
 metadata/_custom_type_script = "uid://dbcsemdveveol"
