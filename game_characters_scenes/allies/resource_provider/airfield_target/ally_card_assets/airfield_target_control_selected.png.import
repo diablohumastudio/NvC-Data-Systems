@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5fy33vqmn6dy"
-path="res://.godot/imported/airfield_target_control_selected.png-9634fc6b46c60b6b626c65869ff62329.ctex"
+path="res://.godot/imported/airfield_target_control_selected.png-a75cf438c490cd47ad32599379cd8fad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/game_characters/allies/resource_providers/airfield_target/ally_card_assets/airfield_target_control_selected.png"
-dest_files=["res://.godot/imported/airfield_target_control_selected.png-9634fc6b46c60b6b626c65869ff62329.ctex"]
+source_file="res://game_characters_scenes/allies/resource_provider/airfield_target/ally_card_assets/airfield_target_control_selected.png"
+dest_files=["res://.godot/imported/airfield_target_control_selected.png-a75cf438c490cd47ad32599379cd8fad.ctex"]
 
 [params]
 

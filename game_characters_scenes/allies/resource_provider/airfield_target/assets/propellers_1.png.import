@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drwbxsgjc87xn"
-path="res://.godot/imported/airplane_smoke_particle.png-d239584a961110aaf54da40d00dad6fa.ctex"
+uid="uid://yl3ro34hlikb"
+path="res://.godot/imported/propellers_1.png-3667c4b369d72aac58b3c53641578b2b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/game_characters/allies/resource_providers/airfield_target/assets/airplane_smoke_particle.png"
-dest_files=["res://.godot/imported/airplane_smoke_particle.png-d239584a961110aaf54da40d00dad6fa.ctex"]
+source_file="res://game_characters_scenes/allies/resource_provider/airfield_target/assets/propellers_1.png"
+dest_files=["res://.godot/imported/propellers_1.png-3667c4b369d72aac58b3c53641578b2b.ctex"]
 
 [params]
 

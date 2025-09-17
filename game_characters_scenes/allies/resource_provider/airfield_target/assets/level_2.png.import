@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chswqn5t03e2n"
-path="res://.godot/imported/airfield_target_control_focused.png-f5a1afc44475763d514c073c272ac0ac.ctex"
+uid="uid://b3cuaewhwpwje"
+path="res://.godot/imported/level_2.png-045303b0ef064a65a5c4f22375dd7883.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/game_characters/allies/resource_providers/airfield_target/ally_card_assets/airfield_target_control_focused.png"
-dest_files=["res://.godot/imported/airfield_target_control_focused.png-f5a1afc44475763d514c073c272ac0ac.ctex"]
+source_file="res://game_characters_scenes/allies/resource_provider/airfield_target/assets/level_2.png"
+dest_files=["res://.godot/imported/level_2.png-045303b0ef064a65a5c4f22375dd7883.ctex"]
 
 [params]
 

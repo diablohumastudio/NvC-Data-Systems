@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yl3ro34hlikb"
-path="res://.godot/imported/propellers_1.png-7e20aa696c090ba1947066b00b85a13a.ctex"
+uid="uid://c6jvxj1i8qys3"
+path="res://.godot/imported/airfield_target_selected.png-8443dd67796d3bf2fb9e689b979bad4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/game_characters/allies/resource_providers/airfield_target/assets/propellers_1.png"
-dest_files=["res://.godot/imported/propellers_1.png-7e20aa696c090ba1947066b00b85a13a.ctex"]
+source_file="res://game_characters_scenes/allies/resource_provider/airfield_target/ally_card_assets/airfield_target_selected.png"
+dest_files=["res://.godot/imported/airfield_target_selected.png-8443dd67796d3bf2fb9e689b979bad4b.ctex"]
 
 [params]
 

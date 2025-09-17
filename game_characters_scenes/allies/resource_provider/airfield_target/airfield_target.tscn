@@ -1,10 +1,10 @@
 [gd_scene load_steps=24 format=3 uid="uid://cv31n8f8ggh4u"]
 
-[ext_resource type="Texture2D" uid="uid://cwnicbciktxar" path="res://data/game_characters/allies/resource_providers/airfield_target/assets/level_1.png" id="1_v0lfx"]
+[ext_resource type="Texture2D" uid="uid://cwnicbciktxar" path="res://game_characters_scenes/allies/resource_provider/airfield_target/assets/level_1.png" id="1_v0lfx"]
 [ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/shared_assets/circle_shadow.png" id="5_bw0aq"]
-[ext_resource type="Texture2D" uid="uid://yl3ro34hlikb" path="res://data/game_characters/allies/resource_providers/airfield_target/assets/propellers_1.png" id="13_plj4m"]
-[ext_resource type="Texture2D" uid="uid://kvmb7bk6jycu" path="res://data/game_characters/allies/resource_providers/airfield_target/assets/propellers_2.png" id="14_p6ht0"]
-[ext_resource type="Texture2D" uid="uid://drwbxsgjc87xn" path="res://data/game_characters/allies/resource_providers/airfield_target/assets/airplane_smoke_particle.png" id="15_r7xun"]
+[ext_resource type="Texture2D" uid="uid://yl3ro34hlikb" path="res://game_characters_scenes/allies/resource_provider/airfield_target/assets/propellers_1.png" id="13_plj4m"]
+[ext_resource type="Texture2D" uid="uid://kvmb7bk6jycu" path="res://game_characters_scenes/allies/resource_provider/airfield_target/assets/propellers_2.png" id="14_p6ht0"]
+[ext_resource type="Texture2D" uid="uid://drwbxsgjc87xn" path="res://game_characters_scenes/allies/resource_provider/airfield_target/assets/airplane_smoke_particle.png" id="15_r7xun"]
 [ext_resource type="Texture2D" uid="uid://jdulueb7gowt" path="res://game_characters_scenes/shared_assets/dust_particle.png" id="17_bsgpe"]
 [ext_resource type="Texture2D" uid="uid://b5ro46i71vfn0" path="res://screens/game/pop_ups/game_won_popup/assets/star_blink.png" id="17_huw5k"]
 
