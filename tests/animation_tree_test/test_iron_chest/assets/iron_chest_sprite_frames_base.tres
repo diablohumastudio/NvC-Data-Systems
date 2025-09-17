@@ -1,0 +1,23 @@
+[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://c7vvj1caoxoy5"]
+
+[ext_resource type="Texture2D" uid="uid://b4fjl8d71lb8j" path="res://tests/animation_tree_test/test_iron_chest/assets/base_light.png" id="1_7au5x"]
+[ext_resource type="Texture2D" uid="uid://qmbpe25wm0nx" path="res://tests/animation_tree_test/test_iron_chest/assets/base.png" id="2_awq78"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7au5x")
+}],
+"loop": true,
+"name": &"charge",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_awq78")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="AllyData" load_steps=3 format=3 uid="uid://dnxrv0styygjo"]
+
+[ext_resource type="Script" uid="uid://ccntxav05c4k" path="res://data/game_characters/allies/models/ally_data.gd" id="1_3idmb"]
+[ext_resource type="Script" uid="uid://cp8n43lmapx8l" path="res://data/game_characters/allies/models/ally_level_data.gd" id="2_rf7lw"]
+
+[resource]
+script = ExtResource("1_3idmb")
+id = 1
+ally_name = "Chesst"
+description = "sfdsfd"
+levels = Array[ExtResource("2_rf7lw")]([])
+metadata/_custom_type_script = "uid://ccntxav05c4k"
