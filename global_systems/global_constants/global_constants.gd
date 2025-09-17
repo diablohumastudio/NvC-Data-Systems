@@ -29,6 +29,10 @@ const DATA_FOLDERS_PATHS: Dictionary = {
 	"STATE_CHANGERS":"res://data/acs_system/state_changers/data/",
 }
 
-const ENEMIES_TYPES_UIDS: Dictionary[EnemyScene.TYPES, String] = {
-	EnemyScene.TYPES.HandGunGerman: "uid://dq5mtgrma5krp"
+enum ENEMY_TYPES {
+	HAND_GUN_GERMAN
+}
+
+const ENEMIES_TYPES_UIDS: Dictionary[ENEMY_TYPES, String] = {
+	ENEMY_TYPES.HAND_GUN_GERMAN: "uid://dq5mtgrma5krp"
 }

@@ -1,4 +1,4 @@
-class_name AllyScene extends GameCharacter
+class_name AllyScene extends GameCharaterScene
 
 signal pressed
 

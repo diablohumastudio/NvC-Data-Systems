@@ -1,1 +1,1 @@
-class_name HandgunGerman extends CharacterBody2D
+class_name HandgunGerman extends EnemyScene

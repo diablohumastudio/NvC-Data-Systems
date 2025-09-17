@@ -4,7 +4,7 @@ class_name EnemiesSpawnersGrid extends ButtonCellGrid
 signal wave_spawned(wave:WaveData)
 
 @export var level: LevelData 
-var enemies_pkscs: Dictionary[EnemyScene.TYPES, PackedScene]
+var enemies_pkscs: Dictionary[GC.ENEMY_TYPES, PackedScene]
 
 func _ready() -> void:
 	CELL_PKSC = load("uid://cpt4e3qp1ti4")
@@ -49,13 +49,13 @@ func get_total_enemies_number_in_wave(wave: WaveData) -> int:
 	return total_enemies
 
 func load_enemies_from_wave(wave: WaveData):
-	for enemy_type: EnemyScene.TYPES in wave.enemies.keys():
+	for enemy_type: GC.ENEMY_TYPES in wave.enemies.keys():
 		var enemy_scene_path: String = GC.ENEMIES_TYPES_UIDS[enemy_type]
 		enemies_pkscs[enemy_type] = load(enemy_scene_path)
 
 func get_enemies_from_wave(wave: WaveData):
 	var enemies: Array[EnemyScene] = []
-	for enemy_type: EnemyScene.TYPES in wave.enemies:
+	for enemy_type: GC.ENEMY_TYPES in wave.enemies:
 		for enemy_quantity in wave.enemies[enemy_type]:
 			var new_enemy: EnemyScene
 			new_enemy = enemies_pkscs[enemy_type].instantiate()
