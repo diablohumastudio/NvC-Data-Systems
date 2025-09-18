@@ -1,5 +1,6 @@
-[gd_scene load_steps=24 format=3 uid="uid://cv31n8f8ggh4u"]
+[gd_scene load_steps=40 format=3 uid="uid://cv31n8f8ggh4u"]
 
+[ext_resource type="Script" uid="uid://bbpxnjwlt2ss5" path="res://game_characters_scenes/allies/resource_provider/airfield_target/airfield_target.gd" id="1_3waeb"]
 [ext_resource type="Texture2D" uid="uid://cwnicbciktxar" path="res://game_characters_scenes/allies/resource_provider/airfield_target/assets/level_1.png" id="1_v0lfx"]
 [ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/shared_assets/circle_shadow.png" id="5_bw0aq"]
 [ext_resource type="Texture2D" uid="uid://yl3ro34hlikb" path="res://game_characters_scenes/allies/resource_provider/airfield_target/assets/propellers_1.png" id="13_plj4m"]
@@ -299,7 +300,7 @@ tracks/19/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_vjrin"]
-resource_name = "_death"
+resource_name = "death"
 length = 2.4
 step = 0.05
 tracks/0/type = "value"
@@ -436,7 +437,7 @@ tracks/10/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_f8lpb"]
-resource_name = "_give_coin"
+resource_name = "give_coin"
 length = 3.2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -596,9 +597,8 @@ tracks/12/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_5tjgj"]
-resource_name = "_idle"
+resource_name = "idle"
 length = 2.4
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -745,16 +745,95 @@ tracks/3/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1tx7n"]
 _data = {
 &"RESET": SubResource("Animation_eco5f"),
-&"_death": SubResource("Animation_vjrin"),
-&"_give_coin": SubResource("Animation_f8lpb"),
-&"_idle": SubResource("Animation_5tjgj"),
+&"death": SubResource("Animation_vjrin"),
+&"give_coin": SubResource("Animation_f8lpb"),
+&"idle": SubResource("Animation_5tjgj"),
 &"receive_damage": SubResource("Animation_hc6ox"),
 &"spawn": SubResource("Animation_x664g")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3waeb"]
+animation = &"death"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_k31x7"]
+animation = &"give_coin"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_r1fmn"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xkw0o"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_exruf"]
+animation = &"spawn"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0jpdo"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jcln8"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_wumpv"]
+switch_mode = 2
+advance_mode = 2
+advance_expression = "!giving_coin"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_f4ts5"]
+switch_mode = 2
+advance_mode = 2
+advance_expression = "!giving_coin"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_a1jfr"]
+switch_mode = 2
+advance_mode = 2
+advance_expression = "giving_coin"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_y8s3t"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3waeb"]
+switch_mode = 2
+advance_mode = 2
+advance_expression = "giving_coin"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_k31x7"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_3qr25"]
+states/End/position = Vector2(915, 61)
+states/death/node = SubResource("AnimationNodeAnimation_3waeb")
+states/death/position = Vector2(779, 61)
+states/give_coin/node = SubResource("AnimationNodeAnimation_k31x7")
+states/give_coin/position = Vector2(680, 144)
+states/idle/node = SubResource("AnimationNodeAnimation_xkw0o")
+states/idle/position = Vector2(509, 97)
+"states/idle 2/node" = SubResource("AnimationNodeAnimation_r1fmn")
+"states/idle 2/position" = Vector2(509, 199)
+states/spawn/node = SubResource("AnimationNodeAnimation_exruf")
+states/spawn/position = Vector2(352, 97)
+transitions = ["Start", "spawn", SubResource("AnimationNodeStateMachineTransition_0jpdo"), "spawn", "idle", SubResource("AnimationNodeStateMachineTransition_jcln8"), "idle", "idle 2", SubResource("AnimationNodeStateMachineTransition_wumpv"), "idle 2", "idle", SubResource("AnimationNodeStateMachineTransition_f4ts5"), "idle", "give_coin", SubResource("AnimationNodeStateMachineTransition_a1jfr"), "give_coin", "idle", SubResource("AnimationNodeStateMachineTransition_y8s3t"), "idle 2", "give_coin", SubResource("AnimationNodeStateMachineTransition_3waeb"), "death", "End", SubResource("AnimationNodeStateMachineTransition_k31x7")]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_wkoe4"]
+nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_3qr25")
+nodes/StateMachine/position = Vector2(-80, 140)
+node_connections = [&"output", 0, &"StateMachine"]
+
 [node name="AirfieldTarget" type="CharacterBody2D"]
+position = Vector2(1098, 736)
 collision_layer = 0
 collision_mask = 0
+script = ExtResource("1_3waeb")
+
+[node name="TestDyingBtn" type="Button" parent="."]
+offset_left = 317.0
+offset_top = -255.0
+offset_right = 325.0
+offset_bottom = -247.0
+theme_override_font_sizes/font_size = 50
+text = "Test Death"
 
 [node name="Textures" type="Node2D" parent="."]
 
@@ -933,7 +1012,19 @@ libraries = {
 &"": SubResource("AnimationLibrary_1tx7n")
 }
 
-[node name="Timer" type="Timer" parent="."]
-one_shot = true
+[node name="AnimationTree" type="AnimationTree" parent="."]
+unique_name_in_owner = true
+root_node = NodePath("%AnimationTree/..")
+callback_mode_discrete = 0
+tree_root = SubResource("AnimationNodeBlendTree_wkoe4")
+advance_expression_base_node = NodePath("..")
+anim_player = NodePath("../AnimationPlayer")
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="GiveCoinTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[connection signal="pressed" from="TestDyingBtn" to="." method="_on_test_dying_btn_pressed"]
+[connection signal="timeout" from="GiveCoinTimer" to="." method="_on_timer_timeout"]
