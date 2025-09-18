@@ -1,5 +1,6 @@
-[gd_scene load_steps=24 format=3 uid="uid://dwu4hdrfwqbg3"]
+[gd_scene load_steps=38 format=3 uid="uid://dwu4hdrfwqbg3"]
 
+[ext_resource type="Script" uid="uid://b5ru2avwboj3s" path="res://game_characters_scenes/allies/explosive_ally/land_mine/land_mine.gd" id="1_42ujs"]
 [ext_resource type="Texture2D" uid="uid://cugegwfs5je1j" path="res://game_characters_scenes/allies/explosive_ally/land_mine/assets/landmine_explosion/landmine_explosion_1.png" id="5_7evyx"]
 [ext_resource type="Texture2D" uid="uid://db6c7mk0tklpx" path="res://game_characters_scenes/allies/explosive_ally/land_mine/assets/landmine_explosion/landmine_explosion_2.png" id="6_ridh1"]
 [ext_resource type="Texture2D" uid="uid://hyol3n8vlbn" path="res://game_characters_scenes/allies/explosive_ally/land_mine/assets/landmine_activated_level_2.png" id="6_vti6y"]
@@ -75,6 +76,9 @@ point_count = 3
 [sub_resource type="Gradient" id="Gradient_j4sn7"]
 offsets = PackedFloat32Array(0, 0.245033, 1)
 colors = PackedColorArray(0.351563, 0.351563, 0.351563, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_42ujs"]
+size = Vector2(46, 68)
 
 [sub_resource type="Animation" id="Animation_vrt62"]
 resource_name = "RESET"
@@ -301,6 +305,20 @@ tracks/6/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.519), Color(1, 1, 1, 1), Color(1, 1, 1, 0.519), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1.7),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_self_erase"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_7ujs3"]
 resource_name = "exploding"
@@ -342,11 +360,24 @@ tracks/2/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_self_erase"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_nhslj"]
 resource_name = "idle"
 length = 0.1
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -434,19 +465,73 @@ _data = {
 &"spawn": SubResource("Animation_2uyr7")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_42ujs"]
+animation = &"death"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_s78wd"]
+animation = &"exploding"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_bhwxw"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_yckvk"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_avapb"]
+animation = &"spawn"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bvtts"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jum8v"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ur6d1"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fq1kj"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_71hju"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_woy0d"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_42ujs"]
+states/death/node = SubResource("AnimationNodeAnimation_42ujs")
+states/death/position = Vector2(645, 154)
+states/exploding/node = SubResource("AnimationNodeAnimation_s78wd")
+states/exploding/position = Vector2(645, 52)
+states/idle/node = SubResource("AnimationNodeAnimation_yckvk")
+states/idle/position = Vector2(483, 52)
+"states/idle 2/node" = SubResource("AnimationNodeAnimation_bhwxw")
+"states/idle 2/position" = Vector2(483, 154)
+states/spawn/node = SubResource("AnimationNodeAnimation_avapb")
+states/spawn/position = Vector2(339, 100)
+transitions = ["Start", "spawn", SubResource("AnimationNodeStateMachineTransition_bvtts"), "spawn", "idle", SubResource("AnimationNodeStateMachineTransition_jum8v"), "idle", "idle 2", SubResource("AnimationNodeStateMachineTransition_ur6d1"), "idle 2", "idle", SubResource("AnimationNodeStateMachineTransition_fq1kj"), "death", "End", SubResource("AnimationNodeStateMachineTransition_71hju"), "exploding", "End", SubResource("AnimationNodeStateMachineTransition_woy0d")]
+
 [node name="LandMine" type="CharacterBody2D"]
+position = Vector2(929, 856)
 collision_layer = 0
 collision_mask = 0
+script = ExtResource("1_42ujs")
 
 [node name="Background" type="ColorRect" parent="."]
 modulate = Color(1, 1, 1, 0)
 top_level = true
-offset_right = 113.0
-offset_bottom = 100.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="BaseTexture" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(10, -40)
 sprite_frames = SubResource("SpriteFrames_an5t3")
 
@@ -507,10 +592,31 @@ angular_velocity_max = 277.59
 scale_amount_curve = SubResource("Curve_ceieu")
 color_ramp = SubResource("Gradient_j4sn7")
 
+[node name="ShortOpponentArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(1, -10)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShortOpponentArea"]
+position = Vector2(13, -24)
+shape = SubResource("RectangleShape2D_42ujs")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_b5pt1")
 }
 
+[node name="AnimationTree" type="AnimationTree" parent="."]
+unique_name_in_owner = true
+root_node = NodePath("%AnimationTree/..")
+callback_mode_discrete = 0
+tree_root = SubResource("AnimationNodeStateMachine_42ujs")
+advance_expression_base_node = NodePath("..")
+anim_player = NodePath("../AnimationPlayer")
+
 [node name="ActivationTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 5.0
 one_shot = true
+autostart = true
