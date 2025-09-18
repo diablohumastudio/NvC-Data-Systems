@@ -1,5 +1,6 @@
-[gd_scene load_steps=23 format=3 uid="uid://ps7ks7v7g60n"]
+[gd_scene load_steps=37 format=3 uid="uid://ps7ks7v7g60n"]
 
+[ext_resource type="Script" uid="uid://dcuf6uiclwtod" path="res://game_characters_scenes/allies/obstructer_ally/barrier/barrier.gd" id="1_60nnq"]
 [ext_resource type="Texture2D" uid="uid://5xg73u1xoy12" path="res://game_characters_scenes/shared_assets/circle_particle.png" id="5_gr23i"]
 [ext_resource type="Texture2D" uid="uid://b1kthllgnhjrw" path="res://game_characters_scenes/allies/obstructer_ally/barrier/assets/barrier_level_1_b.png" id="6_5jvf6"]
 [ext_resource type="Texture2D" uid="uid://1plp2b8e3igg" path="res://game_characters_scenes/allies/obstructer_ally/barrier/assets/barrier_level_1_c.png" id="7_8rsgi"]
@@ -163,10 +164,23 @@ tracks/3/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_self_erase"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_dclqj"]
 resource_name = "idle"
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -282,9 +296,77 @@ _data = {
 &"spawn": SubResource("Animation_dmlvp")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_60nnq"]
+animation = &"death"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lov36"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_aylhr"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nsaiq"]
+animation = &"spawn"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lov36"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_eqvbe"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ay67f"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_k2c4m"]
+advance_mode = 2
+advance_expression = "dying"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ycnd6"]
+advance_mode = 2
+advance_expression = "dying"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_y8oao"]
+switch_mode = 2
+advance_mode = 2
+advance_expression = "!dying"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vjda5"]
+switch_mode = 2
+advance_mode = 2
+advance_expression = "!dying"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_ycnd6"]
+states/death/node = SubResource("AnimationNodeAnimation_60nnq")
+states/death/position = Vector2(713, 100)
+states/idle/node = SubResource("AnimationNodeAnimation_aylhr")
+states/idle/position = Vector2(502, 100)
+"states/idle 2/node" = SubResource("AnimationNodeAnimation_lov36")
+"states/idle 2/position" = Vector2(502, 198)
+states/spawn/node = SubResource("AnimationNodeAnimation_nsaiq")
+states/spawn/position = Vector2(347, 100)
+transitions = ["Start", "spawn", SubResource("AnimationNodeStateMachineTransition_lov36"), "spawn", "idle", SubResource("AnimationNodeStateMachineTransition_eqvbe"), "death", "End", SubResource("AnimationNodeStateMachineTransition_ay67f"), "idle", "death", SubResource("AnimationNodeStateMachineTransition_k2c4m"), "idle 2", "death", SubResource("AnimationNodeStateMachineTransition_ycnd6"), "idle", "idle 2", SubResource("AnimationNodeStateMachineTransition_y8oao"), "idle 2", "idle", SubResource("AnimationNodeStateMachineTransition_vjda5")]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_aylhr"]
+graph_offset = Vector2(-294.519, 28.9945)
+nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_ycnd6")
+nodes/StateMachine/position = Vector2(-40, 140)
+node_connections = [&"output", 0, &"StateMachine"]
+
 [node name="Barrier" type="CharacterBody2D"]
+position = Vector2(531, 652)
 collision_layer = 0
 collision_mask = 0
+script = ExtResource("1_60nnq")
+
+[node name="TestDyingBtn" type="Button" parent="."]
+offset_left = 317.0
+offset_top = -255.0
+offset_right = 585.0
+offset_bottom = -178.0
+theme_override_font_sizes/font_size = 50
+text = "Test Death"
 
 [node name="Textures" type="Node2D" parent="."]
 
@@ -380,3 +462,11 @@ shape = SubResource("RectangleShape2D_mtqgl")
 libraries = {
 &"": SubResource("AnimationLibrary_cp2sb")
 }
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+callback_mode_discrete = 0
+tree_root = SubResource("AnimationNodeBlendTree_aylhr")
+advance_expression_base_node = NodePath("..")
+anim_player = NodePath("../AnimationPlayer")
+
+[connection signal="pressed" from="TestDyingBtn" to="." method="_on_test_dying_btn_pressed"]
