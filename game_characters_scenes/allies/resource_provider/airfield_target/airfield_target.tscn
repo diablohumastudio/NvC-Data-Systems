@@ -435,6 +435,20 @@ tracks/10/keys = {
 "update": 0,
 "values": [Vector2(1, 1), Vector2(1, 0.94), Vector2(1, 1)]
 }
+tracks/11/type = "method"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath(".")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(2.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_f8lpb"]
 resource_name = "give_coin"
@@ -594,6 +608,20 @@ tracks/12/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1.72699, 1.36349, 1, 1), Color(1.42085, 1.21043, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/13/type = "method"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath(".")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(3.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_on_give_coin_finished"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_5tjgj"]
@@ -817,6 +845,7 @@ states/spawn/position = Vector2(352, 97)
 transitions = ["Start", "spawn", SubResource("AnimationNodeStateMachineTransition_0jpdo"), "spawn", "idle", SubResource("AnimationNodeStateMachineTransition_jcln8"), "idle", "idle 2", SubResource("AnimationNodeStateMachineTransition_wumpv"), "idle 2", "idle", SubResource("AnimationNodeStateMachineTransition_f4ts5"), "idle", "give_coin", SubResource("AnimationNodeStateMachineTransition_a1jfr"), "give_coin", "idle", SubResource("AnimationNodeStateMachineTransition_y8s3t"), "idle 2", "give_coin", SubResource("AnimationNodeStateMachineTransition_3waeb"), "death", "End", SubResource("AnimationNodeStateMachineTransition_k31x7")]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_wkoe4"]
+graph_offset = Vector2(-58.6689, -26.2016)
 nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_3qr25")
 nodes/StateMachine/position = Vector2(-80, 140)
 node_connections = [&"output", 0, &"StateMachine"]
