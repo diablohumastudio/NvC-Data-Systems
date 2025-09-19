@@ -1,6 +1,7 @@
-[gd_scene load_steps=39 format=3 uid="uid://d8vpn2nhfnyd"]
+[gd_scene load_steps=51 format=3 uid="uid://d8vpn2nhfnyd"]
 
 [ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/shared_assets/circle_shadow.png" id="1_41s6d"]
+[ext_resource type="Script" uid="uid://bp74apjdnptn8" path="res://game_characters_scenes/allies/shoter_ally/farmer/farmer.gd" id="1_pq3a2"]
 [ext_resource type="Texture2D" uid="uid://xhah1hnlh507" path="res://game_characters_scenes/allies/shoter_ally/farmer/assets/right_leg.png" id="2_thxud"]
 [ext_resource type="Texture2D" uid="uid://cmr0mrpewx3k2" path="res://game_characters_scenes/allies/shoter_ally/farmer/assets/right_foot.png" id="3_yo826"]
 [ext_resource type="Texture2D" uid="uid://1t31v4w5c2wi" path="res://game_characters_scenes/allies/shoter_ally/farmer/assets/left_leg.png" id="4_fsqwp"]
@@ -69,9 +70,6 @@ colors = PackedColorArray(0.874968, 0.604514, 0.563407, 0, 1, 1, 1, 1, 0.851918,
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nkb2f"]
 size = Vector2(86, 308)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tkxuh"]
-size = Vector2(42, 70)
 
 [sub_resource type="Animation" id="Animation_u4glg"]
 length = 0.001
@@ -620,6 +618,20 @@ tracks/15/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
+tracks/16/type = "method"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath(".")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(2.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_hmhyg"]
 resource_name = "idle"
@@ -780,6 +792,20 @@ tracks/12/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [0.0, 0.0, -0.0726805]
+}
+tracks/13/type = "method"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath(".")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_on_idle_animation_finished"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_1jjdp"]
@@ -945,7 +971,6 @@ tracks/12/keys = {
 [sub_resource type="Animation" id="Animation_t4axm"]
 resource_name = "shoot"
 length = 0.7
-loop_mode = 1
 step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1042,6 +1067,20 @@ tracks/7/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath(".")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.7),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_on_offensive_animation_finished"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_vuybe"]
@@ -1207,7 +1246,6 @@ tracks/12/keys = {
 [sub_resource type="Animation" id="Animation_tuw42"]
 resource_name = "stab"
 length = 0.6
-loop_mode = 1
 step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1281,6 +1319,20 @@ tracks/5/keys = {
 "update": 0,
 "values": [0.0, -0.0775702, -0.0775702]
 }
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_on_offensive_animation_finished"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_anao4"]
 _data = {
@@ -1294,9 +1346,70 @@ _data = {
 &"stab": SubResource("Animation_tuw42")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pq3a2"]
+animation = &"death"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0kqjf"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jfs51"]
+animation = &"shoot"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0le7b"]
+animation = &"spawn"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2gbab"]
+animation = &"stab"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_yc84x"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_t7m2c"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_pw6fl"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_ypr42"]
+states/death/node = SubResource("AnimationNodeAnimation_pq3a2")
+states/death/position = Vector2(766.956, 95)
+states/idle/node = SubResource("AnimationNodeAnimation_0kqjf")
+states/idle/position = Vector2(521, 100)
+states/shoot/node = SubResource("AnimationNodeAnimation_jfs51")
+states/shoot/position = Vector2(635.956, 33)
+states/spawn/node = SubResource("AnimationNodeAnimation_0le7b")
+states/spawn/position = Vector2(349, 100)
+states/stab/node = SubResource("AnimationNodeAnimation_2gbab")
+states/stab/position = Vector2(631.956, 170)
+transitions = ["Start", "spawn", SubResource("AnimationNodeStateMachineTransition_yc84x"), "spawn", "idle", SubResource("AnimationNodeStateMachineTransition_t7m2c"), "death", "End", SubResource("AnimationNodeStateMachineTransition_pw6fl")]
+graph_offset = Vector2(84.956, 0)
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_pq3a2"]
+nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_ypr42")
+nodes/StateMachine/position = Vector2(-20, 60)
+node_connections = [&"output", 0, &"StateMachine"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0kqjf"]
+size = Vector2(140, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jfs51"]
+size = Vector2(394, 2)
+
 [node name="Farmer" type="CharacterBody2D"]
+position = Vector2(863, 835)
 collision_layer = 0
 collision_mask = 0
+script = ExtResource("1_pq3a2")
+
+[node name="TestDyingBtn" type="Button" parent="."]
+offset_left = 491.0
+offset_top = -604.0
+offset_right = 759.0
+offset_bottom = -527.0
+theme_override_font_sizes/font_size = 50
+text = "Test Death"
 
 [node name="Shadow" type="Sprite2D" parent="."]
 position = Vector2(-2, 44.798)
@@ -1455,20 +1568,51 @@ target_position = Vector2(550, 0)
 collision_mask = 0
 
 [node name="BodyCollShape" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(-28, -95)
 shape = SubResource("RectangleShape2D_nkb2f")
-
-[node name="PhysicalContactCollShape" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(97, -5)
-shape = SubResource("RectangleShape2D_tkxuh")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_anao4")
 }
 
-[node name="ShootingTimer" type="Timer" parent="."]
-one_shot = true
-autostart = true
+[node name="AnimationTree" type="AnimationTree" parent="."]
+unique_name_in_owner = true
+root_node = NodePath("%AnimationTree/..")
+callback_mode_discrete = 0
+tree_root = SubResource("AnimationNodeBlendTree_pq3a2")
+advance_expression_base_node = NodePath("..")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="ShortOpponentsArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(84, -124)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShortOpponentsArea"]
+shape = SubResource("RectangleShape2D_0kqjf")
+
+[node name="ColorRect" type="ColorRect" parent="ShortOpponentsArea"]
+offset_left = -70.0
+offset_top = -6.0
+offset_right = 70.0
+offset_bottom = 7.0
+
+[node name="LongOpponentsArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(350, -124)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LongOpponentsArea"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_jfs51")
+
+[node name="ColorRect" type="ColorRect" parent="LongOpponentsArea"]
+offset_left = -196.0
+offset_top = 2.0
+offset_right = 198.0
+offset_bottom = 7.0
+
+[connection signal="pressed" from="TestDyingBtn" to="." method="_on_test_dying_btn_pressed"]
