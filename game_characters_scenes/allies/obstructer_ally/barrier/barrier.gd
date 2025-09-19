@@ -12,7 +12,6 @@ func _on_test_dying_btn_pressed() -> void:
 func _ready() -> void:
 	hp = initial_hp
 	
-
 func receive_damage(damage_points:float) -> void:
 	hp -= damage_points
 	
@@ -31,8 +30,6 @@ func _update_base_texture() -> void:
 	elif hp <= initial_hp * 0.75:
 		print("result: ", initial_hp * 0.75)
 		%Base.play("damaged_1")
-	#else:
-		#%Base.play("default")
 
 func _on_anim_tree_animation_finished(animation_name:String) -> void:
 	if animation_name == "receive_damage":
