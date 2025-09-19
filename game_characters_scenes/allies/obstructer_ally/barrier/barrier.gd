@@ -1,6 +1,6 @@
 class_name Barrier extends CharacterBody2D
 
-## This character has method calls in this animation of AnimationPlayer: "death" (Node.queue_free())
+## This character has a method call in this animation of AnimationPlayer: "death" (Node.queue_free())
 
 @export var initial_hp : float
 var hp : float

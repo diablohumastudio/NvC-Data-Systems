@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://ps7ks7v7g60n"]
+[gd_scene load_steps=35 format=3 uid="uid://ps7ks7v7g60n"]
 
 [ext_resource type="Script" uid="uid://dcuf6uiclwtod" path="res://game_characters_scenes/allies/obstructer_ally/barrier/barrier.gd" id="1_60nnq"]
 [ext_resource type="Texture2D" uid="uid://5xg73u1xoy12" path="res://game_characters_scenes/shared_assets/circle_particle.png" id="5_gr23i"]
@@ -181,6 +181,7 @@ tracks/4/keys = {
 
 [sub_resource type="Animation" id="Animation_dclqj"]
 resource_name = "idle"
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -304,9 +305,6 @@ animation = &"receive_damage"
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_60nnq"]
 animation = &"death"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lov36"]
-animation = &"idle"
-
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_aylhr"]
 animation = &"idle"
 
@@ -328,30 +326,14 @@ advance_mode = 2
 advance_mode = 2
 advance_expression = "dying"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ycnd6"]
-advance_mode = 2
-advance_expression = "dying"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_y8oao"]
-switch_mode = 2
-advance_mode = 2
-advance_expression = "!dying"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vjda5"]
-switch_mode = 2
-advance_mode = 2
-advance_expression = "!dying"
-
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_ycnd6"]
 states/death/node = SubResource("AnimationNodeAnimation_60nnq")
 states/death/position = Vector2(713, 100)
 states/idle/node = SubResource("AnimationNodeAnimation_aylhr")
-states/idle/position = Vector2(502, 100)
-"states/idle 2/node" = SubResource("AnimationNodeAnimation_lov36")
-"states/idle 2/position" = Vector2(502, 198)
+states/idle/position = Vector2(522, 100)
 states/spawn/node = SubResource("AnimationNodeAnimation_nsaiq")
 states/spawn/position = Vector2(347, 100)
-transitions = ["Start", "spawn", SubResource("AnimationNodeStateMachineTransition_lov36"), "spawn", "idle", SubResource("AnimationNodeStateMachineTransition_eqvbe"), "death", "End", SubResource("AnimationNodeStateMachineTransition_ay67f"), "idle", "death", SubResource("AnimationNodeStateMachineTransition_k2c4m"), "idle 2", "death", SubResource("AnimationNodeStateMachineTransition_ycnd6"), "idle", "idle 2", SubResource("AnimationNodeStateMachineTransition_y8oao"), "idle 2", "idle", SubResource("AnimationNodeStateMachineTransition_vjda5")]
+transitions = ["Start", "spawn", SubResource("AnimationNodeStateMachineTransition_lov36"), "spawn", "idle", SubResource("AnimationNodeStateMachineTransition_eqvbe"), "death", "End", SubResource("AnimationNodeStateMachineTransition_ay67f"), "idle", "death", SubResource("AnimationNodeStateMachineTransition_k2c4m")]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_aylhr"]
 graph_offset = Vector2(-379.452, 5.88092)
@@ -484,6 +466,7 @@ libraries = {
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 unique_name_in_owner = true
+root_node = NodePath("%AnimationTree/..")
 callback_mode_discrete = 0
 tree_root = SubResource("AnimationNodeBlendTree_aylhr")
 advance_expression_base_node = NodePath("..")
