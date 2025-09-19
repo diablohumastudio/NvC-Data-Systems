@@ -1,4 +1,4 @@
-class_name IronChest extends CharacterBody2D
+class_name IronChestAT extends CharacterBody2D
 
 var dying: bool = false
 

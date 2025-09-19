@@ -1,6 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://dwmd00t3h1w4g"]
+[gd_scene load_steps=35 format=3 uid="uid://dwmd00t3h1w4g"]
 
 [ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/shared_assets/circle_shadow.png" id="1_h2rfk"]
+[ext_resource type="Script" uid="uid://b884x2b461qs" path="res://game_characters_scenes/allies/resource_provider/iron_chest/iron_chest.gd" id="1_o76r3"]
 [ext_resource type="Texture2D" uid="uid://cyx4oahsseux8" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/level_2.png" id="8_kfidy"]
 [ext_resource type="Texture2D" uid="uid://5xg73u1xoy12" path="res://game_characters_scenes/shared_assets/circle_particle.png" id="13_10r13"]
 [ext_resource type="Texture2D" uid="uid://jdulueb7gowt" path="res://game_characters_scenes/shared_assets/dust_particle.png" id="17_rxg2f"]
@@ -628,7 +629,77 @@ _data = {
 &"spawn": SubResource("Animation_mdkbv")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_o76r3"]
+animation = &"death"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5hob4"]
+animation = &"give_coin"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_owl7y"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vr4p0"]
+animation = &"spawn"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_84r2v"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_d22fj"]
+advance_mode = 2
+advance_expression = "dying"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_smibv"]
+advance_mode = 2
+advance_expression = "dying"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_eqnbg"]
+switch_mode = 2
+advance_mode = 2
+advance_expression = "giving_coin"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6g2lq"]
+switch_mode = 2
+advance_mode = 2
+advance_expression = "!giving_coin"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_41get"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_puwn0"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_t81yf"]
+states/End/position = Vector2(718, 100)
+states/death/node = SubResource("AnimationNodeAnimation_o76r3")
+states/death/position = Vector2(608, 102)
+states/give_coin/node = SubResource("AnimationNodeAnimation_5hob4")
+states/give_coin/position = Vector2(468, -11.0344)
+states/idle/node = SubResource("AnimationNodeAnimation_owl7y")
+states/idle/position = Vector2(468, 102)
+states/spawn/node = SubResource("AnimationNodeAnimation_vr4p0")
+states/spawn/position = Vector2(328, 100)
+transitions = ["Start", "spawn", SubResource("AnimationNodeStateMachineTransition_84r2v"), "idle", "death", SubResource("AnimationNodeStateMachineTransition_d22fj"), "give_coin", "death", SubResource("AnimationNodeStateMachineTransition_smibv"), "idle", "give_coin", SubResource("AnimationNodeStateMachineTransition_eqnbg"), "give_coin", "idle", SubResource("AnimationNodeStateMachineTransition_6g2lq"), "spawn", "idle", SubResource("AnimationNodeStateMachineTransition_41get"), "death", "End", SubResource("AnimationNodeStateMachineTransition_puwn0")]
+graph_offset = Vector2(0, -74.0344)
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_i3kex"]
+graph_offset = Vector2(-333.191, 0)
+nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_t81yf")
+nodes/StateMachine/position = Vector2(-40, 100)
+node_connections = [&"output", 0, &"StateMachine"]
+
 [node name="IronChest" type="CharacterBody2D"]
+position = Vector2(759, 797)
+script = ExtResource("1_o76r3")
+
+[node name="TestDyingBtn" type="Button" parent="."]
+offset_left = 317.0
+offset_top = -255.0
+offset_right = 585.0
+offset_bottom = -178.0
+theme_override_font_sizes/font_size = 50
+text = "Test Death"
 
 [node name="Shadow" type="Sprite2D" parent="."]
 position = Vector2(-2, 22)
@@ -722,12 +793,24 @@ position = Vector2(59, -32.5)
 shape = SubResource("RectangleShape2D_jvhpv")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
 libraries = {
 &"": SubResource("AnimationLibrary_x0qkg")
 }
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 18.0
-one_shot = true
+[node name="AnimationTree" type="AnimationTree" parent="."]
+unique_name_in_owner = true
+root_node = NodePath("%AnimationTree/..")
+callback_mode_discrete = 0
+tree_root = SubResource("AnimationNodeBlendTree_i3kex")
+advance_expression_base_node = NodePath("..")
+anim_player = NodePath("../AnimationPlayer")
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="GiveCoinTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[connection signal="pressed" from="TestDyingBtn" to="." method="_on_test_dying_btn_pressed"]
+[connection signal="timeout" from="GiveCoinTimer" to="." method="_on_timer_timeout"]
