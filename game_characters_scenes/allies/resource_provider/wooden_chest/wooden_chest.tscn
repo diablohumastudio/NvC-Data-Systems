@@ -1,7 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://co3biarax0yt4"]
+[gd_scene load_steps=31 format=3 uid="uid://co3biarax0yt4"]
 
+[ext_resource type="Script" uid="uid://cmbqwdp8s06f7" path="res://game_characters_scenes/allies/resource_provider/wooden_chest/wooden_chest.gd" id="1_3apc5"]
 [ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/shared_assets/circle_shadow.png" id="1_h2rfk"]
-[ext_resource type="Texture2D" uid="uid://dwuy74edkst0h" path="res://game_characters_scenes/allies/resource_provider/wooden_chest/assets/level_3.png" id="8_o0wg1"]
+[ext_resource type="Texture2D" uid="uid://dwuy74edkst0h" path="res://tests/animation_tree_test/test_iron_chest/wood_assets/level_3.png" id="8_o0wg1"]
 [ext_resource type="Texture2D" uid="uid://5xg73u1xoy12" path="res://game_characters_scenes/shared_assets/circle_particle.png" id="12_lenyl"]
 [ext_resource type="Texture2D" uid="uid://jdulueb7gowt" path="res://game_characters_scenes/shared_assets/dust_particle.png" id="17_asqfv"]
 [ext_resource type="Texture2D" uid="uid://b5ro46i71vfn0" path="res://screens/game/pop_ups/game_won_popup/assets/star_blink.png" id="21_u0n2h"]
@@ -356,6 +357,20 @@ tracks/9/keys = {
 "update": 0,
 "values": [Vector2(1, 1), Vector2(1, 1.2), Vector2(1, 1)]
 }
+tracks/10/type = "method"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath(".")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(2.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_5023s"]
 resource_name = "give_coin"
@@ -445,6 +460,20 @@ tracks/6/keys = {
 "update": 1,
 "values": [Rect2(4.22964, 34.0001, 168.704, 147.491), Rect2(4.22964, 34.0001, 168.704, 147.491), Rect2(4.23, 203, 168.704, 147.491), Rect2(4.23, 203, 168.704, 147.491), Rect2(4.22964, 34.0001, 168.704, 147.491)]
 }
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_on_give_coin_finished"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_dv1e4"]
 resource_name = "idle"
@@ -485,6 +514,20 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(-82, -77.6513), Vector2(-82, -79.651), Vector2(-82, -77.6513), Vector2(-82, -79.651)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_on_idle_animation_finished"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_6asfx"]
@@ -662,7 +705,56 @@ _data = {
 &"spawn": SubResource("Animation_njg11")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3apc5"]
+animation = &"death"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ah1ba"]
+animation = &"give_coin"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_p5bas"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pspge"]
+animation = &"spawn"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fq48q"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_b4i84"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hl5cj"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_3apc5"]
+states/death/node = SubResource("AnimationNodeAnimation_3apc5")
+states/death/position = Vector2(693, 150)
+states/give_coin/node = SubResource("AnimationNodeAnimation_ah1ba")
+states/give_coin/position = Vector2(491, 201)
+states/idle/node = SubResource("AnimationNodeAnimation_p5bas")
+states/idle/position = Vector2(491, 102)
+states/spawn/node = SubResource("AnimationNodeAnimation_pspge")
+states/spawn/position = Vector2(349, 100)
+transitions = ["Start", "spawn", SubResource("AnimationNodeStateMachineTransition_fq48q"), "spawn", "idle", SubResource("AnimationNodeStateMachineTransition_b4i84"), "death", "End", SubResource("AnimationNodeStateMachineTransition_hl5cj")]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_ah1ba"]
+nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_3apc5")
+nodes/StateMachine/position = Vector2(0, 60)
+node_connections = [&"output", 0, &"StateMachine"]
+
 [node name="WoodenChest" type="CharacterBody2D"]
+position = Vector2(678, 884)
+script = ExtResource("1_3apc5")
+
+[node name="TestDyingBtn" type="Button" parent="."]
+offset_left = 491.0
+offset_top = -604.0
+offset_right = 759.0
+offset_bottom = -527.0
+theme_override_font_sizes/font_size = 50
+text = "Test Death"
 
 [node name="Shadow" type="Sprite2D" parent="."]
 position = Vector2(-2, 29)
@@ -756,11 +848,24 @@ position = Vector2(66, -29.5)
 shape = SubResource("RectangleShape2D_4i6t7")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
 libraries = {
 &"": SubResource("AnimationLibrary_k03oj")
 }
 
-[node name="Timer" type="Timer" parent="."]
-one_shot = true
+[node name="AnimationTree" type="AnimationTree" parent="."]
+unique_name_in_owner = true
+root_node = NodePath("%AnimationTree/..")
+callback_mode_discrete = 0
+tree_root = SubResource("AnimationNodeBlendTree_ah1ba")
+advance_expression_base_node = NodePath("..")
+anim_player = NodePath("../AnimationPlayer")
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="GiveCoinTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[connection signal="pressed" from="TestDyingBtn" to="." method="_on_test_dying_btn_pressed"]
+[connection signal="timeout" from="GiveCoinTimer" to="." method="_on_give_coin_timer_timeout"]
