@@ -1,11 +1,13 @@
 class_name Farmer extends CharacterBody2D
 
-## This character has method calls in these animations of AnimationPlayer: 
-## "idle" (_on_idle_animation_finished()) "shoot" and "stab" (_on_offensive_animation_finished()) and "death" (Node.queue_free())
+## This character has a method call in this animation of AnimationPlayer: 
+## "death" (Node.queue_free())
 
-var cooldown_idle_cycles_counter : int = 0
-var short_opponent_detected : bool
-var long_opponent_detected : bool
+const MAX_IDLE_CYCLES : int = 2
+
+var idle_cycles_counter : int = 0
+var transition_to_stab : bool = false
+var transition_to_shoot : bool = false
 
 @onready var state_machine_playback : AnimationNodeStateMachinePlayback = %AnimationTree.get("parameters/StateMachine/playback")
 
@@ -21,25 +23,25 @@ func _unhandled_input(event: InputEvent) -> void:
 		new_test_body.global_position = event.position
 #endregion
 
-func _transition_to_offensive_state() -> void:
-	if short_opponent_detected:
-		state_machine_playback.travel("stab")
-	elif long_opponent_detected and !short_opponent_detected:
-		state_machine_playback.travel("shoot")
-
-func _on_idle_animation_finished() -> void:
-	short_opponent_detected = %ShortOpponentsArea.has_overlapping_bodies()
-	long_opponent_detected = %LongOpponentsArea.has_overlapping_bodies()
+## This function is called from animation: "check_transitions"
+func _check_transitions() -> void:
+	var short_opponent_detected = %ShortOpponentsArea.has_overlapping_bodies()
+	var long_opponent_detected = %LongOpponentsArea.has_overlapping_bodies()
+	var is_idle_cycle_finished : bool = idle_cycles_counter == MAX_IDLE_CYCLES
+	transition_to_stab = short_opponent_detected and is_idle_cycle_finished
+	transition_to_shoot = long_opponent_detected and !short_opponent_detected and is_idle_cycle_finished
 	
-	if short_opponent_detected or long_opponent_detected:
-		if cooldown_idle_cycles_counter < 2:
-			cooldown_idle_cycles_counter += 1
-		else: 
-			cooldown_idle_cycles_counter = 0
-			_transition_to_offensive_state()
+	if !(short_opponent_detected or long_opponent_detected):
+		return # No enemies so no need to use idle_cycle_counter
+	_update_idle_cycle_counter()
 
-func _on_offensive_animation_finished() -> void:
-	state_machine_playback.travel("idle")
+func _update_idle_cycle_counter() -> void:
+	if idle_cycles_counter == MAX_IDLE_CYCLES:
+		idle_cycles_counter = 0 # If idle cycles finished, reset idle_cycles_counter and return
+		return
+		
+	if idle_cycles_counter < MAX_IDLE_CYCLES:
+		idle_cycles_counter += 1
 
 func _on_test_dying_btn_pressed() -> void:
 	_die()

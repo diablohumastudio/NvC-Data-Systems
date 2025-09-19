@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://d8vpn2nhfnyd"]
+[gd_scene load_steps=59 format=3 uid="uid://d8vpn2nhfnyd"]
 
 [ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/shared_assets/circle_shadow.png" id="1_41s6d"]
 [ext_resource type="Script" uid="uid://bp74apjdnptn8" path="res://game_characters_scenes/allies/shoter_ally/farmer/farmer.gd" id="1_pq3a2"]
@@ -70,6 +70,12 @@ colors = PackedColorArray(0.874968, 0.604514, 0.563407, 0, 1, 1, 1, 1, 0.851918,
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nkb2f"]
 size = Vector2(86, 308)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0kqjf"]
+size = Vector2(140, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jfs51"]
+size = Vector2(394, 2)
 
 [sub_resource type="Animation" id="Animation_u4glg"]
 length = 0.001
@@ -644,7 +650,7 @@ tracks/0/path = NodePath("Textures/Body:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.7),
+"times": PackedFloat32Array(-0.00833333, 0.7),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 0.0349066]
@@ -656,7 +662,7 @@ tracks/1/path = NodePath("Textures/Body/Head:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.7, 1.1),
+"times": PackedFloat32Array(-0.00833333, 0.3, 0.7, 1.1),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [0.0523599, 0.0448799, 0.0, -0.0174533]
@@ -668,7 +674,7 @@ tracks/2/path = NodePath("Textures/Body:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.7, 1.5),
+"times": PackedFloat32Array(0.691667, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(0, 39), Vector2(0, 41)]
@@ -680,7 +686,7 @@ tracks/3/path = NodePath("Textures/RightLeg/RightFoot:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.7),
+"times": PackedFloat32Array(-0.00833333, 0.7),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0523599, 0.174533]
@@ -692,7 +698,7 @@ tracks/4/path = NodePath("Textures/RightLeg:rotation")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.7),
+"times": PackedFloat32Array(-0.00833333, 0.7),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.191986, 0.10472]
@@ -704,7 +710,7 @@ tracks/5/path = NodePath("Textures/LeftLeg:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.7),
+"times": PackedFloat32Array(-0.00833333, 0.7),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [-0.0349066, 0.0]
@@ -716,7 +722,7 @@ tracks/6/path = NodePath("Textures/LeftLeg/LeftFoot:rotation")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0, 0.7),
+"times": PackedFloat32Array(-0.00833333, 0.7),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, -0.0349066]
@@ -792,20 +798,6 @@ tracks/12/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [0.0, 0.0, -0.0726805]
-}
-tracks/13/type = "method"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath(".")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"times": PackedFloat32Array(1.5),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"_on_idle_animation_finished"
-}]
 }
 
 [sub_resource type="Animation" id="Animation_1jjdp"]
@@ -1068,20 +1060,6 @@ tracks/7/keys = {
 "update": 1,
 "values": [true]
 }
-tracks/8/type = "method"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath(".")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0.7),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"_on_offensive_animation_finished"
-}]
-}
 
 [sub_resource type="Animation" id="Animation_vuybe"]
 resource_name = "spawn"
@@ -1319,24 +1297,162 @@ tracks/5/keys = {
 "update": 0,
 "values": [0.0, -0.0775702, -0.0775702]
 }
-tracks/6/type = "method"
+
+[sub_resource type="Animation" id="Animation_pq3a2"]
+resource_name = "check_transitions"
+length = 0.01
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Textures/Body:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.00833333),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Textures/Body/Head:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(-0.00833333),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0523599]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Textures/RightLeg/RightFoot:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(-0.00833333),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0523599]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Textures/RightLeg:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(-0.00833333),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.191986]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Textures/LeftLeg:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(-0.00833333),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.0349066]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Textures/LeftLeg/LeftFoot:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(-0.00833333),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath(".")
+tracks/6/path = NodePath("Textures/Body/RightArm/RightElbow:rotation")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0.6),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.974758]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Textures/Body/RightArm:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.374574]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Textures/Body/LeftArm:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Textures/Body/LeftArm:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-37, -76)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Textures/Body/LeftArm/LeftElbow:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/11/type = "method"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath(".")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
-"method": &"_on_offensive_animation_finished"
+"method": &"_check_transitions"
 }]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_anao4"]
 _data = {
 &"RESET": SubResource("Animation_u4glg"),
+&"check_transitions": SubResource("Animation_pq3a2"),
 &"death": SubResource("Animation_2f24l"),
 &"death_stabbed": ExtResource("25_0pha4"),
 &"idle": SubResource("Animation_hmhyg"),
@@ -1345,6 +1461,9 @@ _data = {
 &"spawn": SubResource("Animation_vuybe"),
 &"stab": SubResource("Animation_tuw42")
 }
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_yc84x"]
+animation = &"check_transitions"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pq3a2"]
 animation = &"death"
@@ -1372,30 +1491,56 @@ advance_mode = 2
 switch_mode = 2
 advance_mode = 2
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ypr42"]
+switch_mode = 2
+advance_mode = 2
+advance_expression = "transition_to_shoot"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hu7ef"]
+switch_mode = 2
+advance_mode = 2
+advance_expression = "transition_to_stab"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gwiw0"]
+switch_mode = 2
+advance_mode = 2
+advance_expression = "!transition_to_stab and !transition_to_shoot"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ghu0m"]
+break_loop_at_end = true
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fw6sx"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_y4hgc"]
+switch_mode = 2
+advance_mode = 2
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_ypr42"]
+states/End/position = Vector2(991, 99)
+states/check_transitions/node = SubResource("AnimationNodeAnimation_yc84x")
+states/check_transitions/position = Vector2(635.956, 100)
 states/death/node = SubResource("AnimationNodeAnimation_pq3a2")
-states/death/position = Vector2(766.956, 95)
+states/death/position = Vector2(826.956, 99)
 states/idle/node = SubResource("AnimationNodeAnimation_0kqjf")
-states/idle/position = Vector2(521, 100)
+states/idle/position = Vector2(469, 100)
 states/shoot/node = SubResource("AnimationNodeAnimation_jfs51")
-states/shoot/position = Vector2(635.956, 33)
+states/shoot/position = Vector2(629.956, -26)
 states/spawn/node = SubResource("AnimationNodeAnimation_0le7b")
 states/spawn/position = Vector2(349, 100)
 states/stab/node = SubResource("AnimationNodeAnimation_2gbab")
-states/stab/position = Vector2(631.956, 170)
-transitions = ["Start", "spawn", SubResource("AnimationNodeStateMachineTransition_yc84x"), "spawn", "idle", SubResource("AnimationNodeStateMachineTransition_t7m2c"), "death", "End", SubResource("AnimationNodeStateMachineTransition_pw6fl")]
-graph_offset = Vector2(84.956, 0)
+states/stab/position = Vector2(635.956, 220)
+transitions = ["Start", "spawn", SubResource("AnimationNodeStateMachineTransition_yc84x"), "spawn", "idle", SubResource("AnimationNodeStateMachineTransition_t7m2c"), "death", "End", SubResource("AnimationNodeStateMachineTransition_pw6fl"), "check_transitions", "shoot", SubResource("AnimationNodeStateMachineTransition_ypr42"), "check_transitions", "stab", SubResource("AnimationNodeStateMachineTransition_hu7ef"), "check_transitions", "idle", SubResource("AnimationNodeStateMachineTransition_gwiw0"), "idle", "check_transitions", SubResource("AnimationNodeStateMachineTransition_ghu0m"), "stab", "check_transitions", SubResource("AnimationNodeStateMachineTransition_fw6sx"), "shoot", "check_transitions", SubResource("AnimationNodeStateMachineTransition_y4hgc")]
+graph_offset = Vector2(84.956, -23.4887)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_pq3a2"]
+graph_offset = Vector2(-398.567, 0)
 nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_ypr42")
 nodes/StateMachine/position = Vector2(-20, 60)
 node_connections = [&"output", 0, &"StateMachine"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0kqjf"]
-size = Vector2(140, 2)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jfs51"]
-size = Vector2(394, 2)
 
 [node name="Farmer" type="CharacterBody2D"]
 position = Vector2(863, 835)
@@ -1562,27 +1707,9 @@ linear_accel_max = 31.78
 scale_amount_curve = SubResource("Curve_hcy6k")
 color_ramp = SubResource("Gradient_dvxbr")
 
-[node name="ShootingRange" type="RayCast2D" parent="."]
-position = Vector2(0, -120)
-target_position = Vector2(550, 0)
-collision_mask = 0
-
 [node name="BodyCollShape" type="CollisionShape2D" parent="."]
 position = Vector2(-28, -95)
 shape = SubResource("RectangleShape2D_nkb2f")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_anao4")
-}
-
-[node name="AnimationTree" type="AnimationTree" parent="."]
-unique_name_in_owner = true
-root_node = NodePath("%AnimationTree/..")
-callback_mode_discrete = 0
-tree_root = SubResource("AnimationNodeBlendTree_pq3a2")
-advance_expression_base_node = NodePath("..")
-anim_player = NodePath("../AnimationPlayer")
 
 [node name="ShortOpponentsArea" type="Area2D" parent="."]
 unique_name_in_owner = true
@@ -1614,5 +1741,18 @@ offset_left = -196.0
 offset_top = 2.0
 offset_right = 198.0
 offset_bottom = 7.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_anao4")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+unique_name_in_owner = true
+root_node = NodePath("%AnimationTree/..")
+callback_mode_discrete = 0
+tree_root = SubResource("AnimationNodeBlendTree_pq3a2")
+advance_expression_base_node = NodePath("..")
+anim_player = NodePath("../AnimationPlayer")
 
 [connection signal="pressed" from="TestDyingBtn" to="." method="_on_test_dying_btn_pressed"]
