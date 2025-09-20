@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://co3biarax0yt4"]
+[gd_scene load_steps=32 format=3 uid="uid://co3biarax0yt4"]
 
 [ext_resource type="Script" uid="uid://cmbqwdp8s06f7" path="res://game_characters_scenes/allies/resource_provider/wooden_chest/wooden_chest.gd" id="1_3apc5"]
 [ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/shared_assets/circle_shadow.png" id="1_h2rfk"]
@@ -467,7 +467,7 @@ tracks/7/path = NodePath(".")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(4),
+"times": PackedFloat32Array(3.99),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -514,20 +514,6 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(-82, -77.6513), Vector2(-82, -79.651), Vector2(-82, -77.6513), Vector2(-82, -79.651)]
-}
-tracks/3/type = "method"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath(".")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(3),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"_on_idle_animation_finished"
-}]
 }
 
 [sub_resource type="Animation" id="Animation_6asfx"]
@@ -728,16 +714,20 @@ advance_mode = 2
 switch_mode = 2
 advance_mode = 2
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3apc5"]
+switch_mode = 2
+advance_mode = 2
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_3apc5"]
 states/death/node = SubResource("AnimationNodeAnimation_3apc5")
-states/death/position = Vector2(693, 150)
+states/death/position = Vector2(682, 102)
 states/give_coin/node = SubResource("AnimationNodeAnimation_ah1ba")
 states/give_coin/position = Vector2(491, 201)
 states/idle/node = SubResource("AnimationNodeAnimation_p5bas")
 states/idle/position = Vector2(491, 102)
 states/spawn/node = SubResource("AnimationNodeAnimation_pspge")
 states/spawn/position = Vector2(349, 100)
-transitions = ["Start", "spawn", SubResource("AnimationNodeStateMachineTransition_fq48q"), "spawn", "idle", SubResource("AnimationNodeStateMachineTransition_b4i84"), "death", "End", SubResource("AnimationNodeStateMachineTransition_hl5cj")]
+transitions = ["Start", "spawn", SubResource("AnimationNodeStateMachineTransition_fq48q"), "spawn", "idle", SubResource("AnimationNodeStateMachineTransition_b4i84"), "death", "End", SubResource("AnimationNodeStateMachineTransition_hl5cj"), "give_coin", "idle", SubResource("AnimationNodeStateMachineTransition_3apc5")]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_ah1ba"]
 nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_3apc5")

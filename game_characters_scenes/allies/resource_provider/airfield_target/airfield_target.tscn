@@ -822,7 +822,7 @@ states/spawn/position = Vector2(350, 104)
 transitions = ["Start", "spawn", SubResource("AnimationNodeStateMachineTransition_0jpdo"), "spawn", "idle", SubResource("AnimationNodeStateMachineTransition_jcln8"), "give_coin", "idle", SubResource("AnimationNodeStateMachineTransition_y8s3t"), "death", "End", SubResource("AnimationNodeStateMachineTransition_k31x7")]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_wkoe4"]
-graph_offset = Vector2(-492.511, -106.537)
+graph_offset = Vector2(-550.491, -37.1044)
 nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_3qr25")
 nodes/StateMachine/position = Vector2(-80, 140)
 node_connections = [&"output", 0, &"StateMachine"]
