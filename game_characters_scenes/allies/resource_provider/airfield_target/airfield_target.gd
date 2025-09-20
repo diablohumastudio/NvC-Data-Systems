@@ -1,19 +1,15 @@
 class_name AirfieldTarget extends CharacterBody2D
 
-## This character has method calls in these animations of AnimationPlayer: "give_coin" (_on_give_coin_finished) and "death" (Node.queue_free())
-
-var giving_coin : bool = false
+## This character has a method call in this animation of AnimationPlayer: 
+## "death" (Node.queue_free())
 
 @onready var state_machine_playback : AnimationNodeStateMachinePlayback = %AnimationTree.get("parameters/StateMachine/playback")
 
-func _ready() -> void:
-	%GiveCoinTimer.timeout.connect(_on_give_coin_timer_timeout)
-
 func _on_give_coin_timer_timeout() -> void:
-	giving_coin = true
+	state_machine_playback.travel("give_coin")
 
+## This function is called from animation: "give_coin"
 func _on_give_coin_finished() -> void:
-	giving_coin = false
 	%GiveCoinTimer.start()
 
 func _die() -> void:

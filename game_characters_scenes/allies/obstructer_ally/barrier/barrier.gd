@@ -1,6 +1,7 @@
 class_name Barrier extends CharacterBody2D
 
-## This character has a method call in this animation of AnimationPlayer: "death" (Node.queue_free())
+## This character has a method call in this animation of AnimationPlayer: 
+## "death" (Node.queue_free())
 
 @export var initial_hp : float
 var hp : float
@@ -28,7 +29,6 @@ func _update_base_texture() -> void:
 	elif hp <= initial_hp * 0.5:
 		%Base.play("damaged_2")
 	elif hp <= initial_hp * 0.75:
-		print("result: ", initial_hp * 0.75)
 		%Base.play("damaged_1")
 
 func _on_anim_tree_animation_finished(animation_name:String) -> void:

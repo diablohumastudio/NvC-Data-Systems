@@ -1,35 +1,17 @@
 class_name IronChest extends CharacterBody2D
 
-var giving_coin : bool = false
-var dying : bool = false
+var give_coin_timer_timeout : bool = false
+@onready var state_machine_playback : AnimationNodeStateMachinePlayback = %AnimationTree.get("parameters/StateMachine/playback")
 
-func _ready() -> void:
-	%AnimationTree.animation_finished.connect(_on_anim_tree_animation_finished)
-	%GiveCoinTimer.timeout.connect(_on_give_coin_timer_timeout)
-
-func _toggle_idle_loop_mode() -> void:
-	var idle_animation : Animation = %AnimationPlayer.get_animation("idle")
-	
-	if idle_animation.loop_mode == Animation.LOOP_LINEAR:
-		idle_animation.loop_mode = Animation.LOOP_NONE
-	elif idle_animation.loop_mode == Animation.LOOP_NONE:
-		idle_animation.loop_mode = Animation.LOOP_LINEAR
-
-func _on_anim_tree_animation_finished(animation_name:String) -> void:
-	if animation_name == "idle":
-		giving_coin = true
-	elif animation_name == "give_coin":
-		_toggle_idle_loop_mode()
-		giving_coin = false
-		%GiveCoinTimer.start()
-	elif animation_name == "death":
-		queue_free()
+func _on_give_coin_animation_finished() -> void:
+	give_coin_timer_timeout = false
+	%GiveCoinTimer.start()
 
 func _on_give_coin_timer_timeout() -> void:
-	_toggle_idle_loop_mode()
+	give_coin_timer_timeout = true
 
 func _die() -> void:
-	dying = true
+	state_machine_playback.travel("death")
 
 func _on_test_dying_btn_pressed() -> void:
 	_die()

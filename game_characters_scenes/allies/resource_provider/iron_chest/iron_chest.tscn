@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://dwmd00t3h1w4g"]
+[gd_scene load_steps=32 format=3 uid="uid://dwmd00t3h1w4g"]
 
 [ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/shared_assets/circle_shadow.png" id="1_h2rfk"]
 [ext_resource type="Script" uid="uid://b884x2b461qs" path="res://game_characters_scenes/allies/resource_provider/iron_chest/iron_chest.gd" id="1_o76r3"]
@@ -35,9 +35,6 @@ colors = PackedColorArray(0.874968, 0.604514, 0.563407, 0, 1, 1, 1, 1, 0.851918,
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rw3yi"]
 size = Vector2(47, 213)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jvhpv"]
-size = Vector2(30, 65)
 
 [sub_resource type="Animation" id="Animation_hhojd"]
 resource_name = "RESET"
@@ -347,6 +344,20 @@ tracks/9/keys = {
 "update": 0,
 "values": [Vector2(1, 1), Vector2(1, 1.2), Vector2(1, 1)]
 }
+tracks/10/type = "method"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath(".")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(2.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_y6lig"]
 resource_name = "give_coin"
@@ -423,6 +434,20 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [Rect2(0, 48.5659, 169.729, 133.355), Rect2(0, 232, 169.729, 133.355), Rect2(0, 232, 169.729, 133.355), Rect2(0, 48.5659, 169.729, 133.355)]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_on_give_coin_animation_finished"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_i34yv"]
@@ -644,23 +669,15 @@ animation = &"spawn"
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_84r2v"]
 advance_mode = 2
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_d22fj"]
-advance_mode = 2
-advance_expression = "dying"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_smibv"]
-advance_mode = 2
-advance_expression = "dying"
-
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_eqnbg"]
+break_loop_at_end = true
 switch_mode = 2
 advance_mode = 2
-advance_expression = "giving_coin"
+advance_expression = "give_coin_timer_timeout"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6g2lq"]
 switch_mode = 2
 advance_mode = 2
-advance_expression = "!giving_coin"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_41get"]
 switch_mode = 2
@@ -680,11 +697,10 @@ states/idle/node = SubResource("AnimationNodeAnimation_owl7y")
 states/idle/position = Vector2(468, 102)
 states/spawn/node = SubResource("AnimationNodeAnimation_vr4p0")
 states/spawn/position = Vector2(328, 100)
-transitions = ["Start", "spawn", SubResource("AnimationNodeStateMachineTransition_84r2v"), "idle", "death", SubResource("AnimationNodeStateMachineTransition_d22fj"), "give_coin", "death", SubResource("AnimationNodeStateMachineTransition_smibv"), "idle", "give_coin", SubResource("AnimationNodeStateMachineTransition_eqnbg"), "give_coin", "idle", SubResource("AnimationNodeStateMachineTransition_6g2lq"), "spawn", "idle", SubResource("AnimationNodeStateMachineTransition_41get"), "death", "End", SubResource("AnimationNodeStateMachineTransition_puwn0")]
+transitions = ["Start", "spawn", SubResource("AnimationNodeStateMachineTransition_84r2v"), "idle", "give_coin", SubResource("AnimationNodeStateMachineTransition_eqnbg"), "give_coin", "idle", SubResource("AnimationNodeStateMachineTransition_6g2lq"), "spawn", "idle", SubResource("AnimationNodeStateMachineTransition_41get"), "death", "End", SubResource("AnimationNodeStateMachineTransition_puwn0")]
 graph_offset = Vector2(0, -74.0344)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_i3kex"]
-graph_offset = Vector2(-333.191, 0)
 nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_t81yf")
 nodes/StateMachine/position = Vector2(-40, 100)
 node_connections = [&"output", 0, &"StateMachine"]
@@ -787,11 +803,6 @@ visible = false
 position = Vector2(-34, -71.5)
 shape = SubResource("RectangleShape2D_rw3yi")
 
-[node name="PhysicalContactCollShape" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(59, -32.5)
-shape = SubResource("RectangleShape2D_jvhpv")
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
 libraries = {
@@ -813,3 +824,4 @@ one_shot = true
 autostart = true
 
 [connection signal="pressed" from="TestDyingBtn" to="." method="_on_test_dying_btn_pressed"]
+[connection signal="timeout" from="GiveCoinTimer" to="." method="_on_give_coin_timer_timeout"]
