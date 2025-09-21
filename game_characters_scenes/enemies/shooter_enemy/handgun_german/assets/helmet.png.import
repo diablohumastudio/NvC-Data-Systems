@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://8q110o0g3k8y"
-path="res://.godot/imported/helmet.png-e57de4228aee54d8c8c2a6bcad7ca292.ctex"
+path="res://.godot/imported/helmet.png-68485f28d704c34a98644d6e78253257.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game_characters_scenes/enemies/shooter_enemy/hand_gun_german/assets/helmet.png"
-dest_files=["res://.godot/imported/helmet.png-e57de4228aee54d8c8c2a6bcad7ca292.ctex"]
+source_file="res://game_characters_scenes/enemies/shooter_enemy/handgun_german/assets/helmet.png"
+dest_files=["res://.godot/imported/helmet.png-68485f28d704c34a98644d6e78253257.ctex"]
 
 [params]
 
