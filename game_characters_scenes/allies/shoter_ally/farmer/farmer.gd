@@ -32,7 +32,7 @@ func _check_transitions() -> void:
 	transition_to_shoot = long_opponent_detected and !short_opponent_detected and is_idle_cycle_finished
 	
 	if !(short_opponent_detected or long_opponent_detected):
-		return # No enemies so no need to use idle_cycle_counter
+		return # No enemies detected so no need to use idle_cycle_counter
 	_update_idle_cycle_counter()
 
 func _update_idle_cycle_counter() -> void:
