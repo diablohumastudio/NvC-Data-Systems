@@ -2130,7 +2130,7 @@ offset = Vector2(-42.5171, 0.382668)
 
 [node name="Shadow" type="Sprite2D" parent="."]
 position = Vector2(1, 75.798)
-scale = Vector2(1.13875, 0.920789)
+scale = Vector2(1.22878, 0.99349)
 texture = ExtResource("4_iyg8o")
 
 [node name="Textures" type="Node2D" parent="."]
@@ -2266,11 +2266,6 @@ rotation = 0.0698132
 
 [node name="DustParticles" parent="Particles" instance=ExtResource("27_tj5ab")]
 
-[node name="ShootingRange" type="RayCast2D" parent="."]
-position = Vector2(0, -110)
-target_position = Vector2(-640, 0)
-collision_mask = 0
-
 [node name="BodyCollShape" type="CollisionShape2D" parent="."]
 position = Vector2(14.5077, -116.44)
 rotation = -0.00375953
@@ -2320,7 +2315,6 @@ offset_bottom = 6.0
 color = Color(0.0941176, 1, 1, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-unique_name_in_owner = true
 libraries = {
 &"": SubResource("AnimationLibrary_o7tep")
 }
