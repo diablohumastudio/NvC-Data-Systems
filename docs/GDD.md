@@ -57,8 +57,8 @@ Upgrade/Buy New Allies → Complete Level → Unlock New Content → Repeat
 - **Progression Decisions**: Unlock and upgrade allies in the market system
 
 ### 2.3 Victory/Defeat Conditions
-- **Victory**: Survive all enemy waves with at least one cannon remaining
-- **Defeat**: All cannons destroyed by enemy units reaching the end
+- **Victory**: Survive all enemy waves
+- **Defeat**: A set number of enemies reach the finish line and capture the base
 - **Performance Metrics**: Tracked via canons_alive, enemies_killed, efficiency ratings
 
 ---
@@ -67,7 +67,7 @@ Upgrade/Buy New Allies → Complete Level → Unlock New Content → Repeat
 
 ### 3.1 Ally System
 **Current Implementation:**
-- **Types**: BAYONETE_SOLDIER (combat), CHEST (resource provider)
+- **Types**: Shooter, Resource Provider, Obstructer, and Explosive
 - **Upgrade Paths**: Multi-level progression with branching options
 - **Placement**: Grid-based positioning with strategic considerations
 
@@ -95,14 +95,14 @@ Upgrade/Buy New Allies → Complete Level → Unlock New Content → Repeat
 
 ### 4.1 Level Design
 **Grid-Based Combat Areas:**
-- **TerrainGrid**: Ally placement zones
+- **TerrainGrid**: Ally placement tiles
 - **EnemiesSpawnersGrid**: Enemy spawn points and wave management
 - **Background Integration**: Historical Stalingrad environments
 
 ### 4.2 Ally Design
 **Unit Categories:**
-- **Combat Units**: Direct damage dealers (Bayonete Soldier)
-- **Support Units**: Resource providers and utility (Chest)
+- **Combat Units**: Direct damage dealers (Shooter ally and Explosive ally)
+- **Support Units**: Resource providers (Chest)
 - **Upgrade System**: Level-based stat progression with unlock requirements
 
 ### 4.3 Achievement Design
@@ -118,7 +118,7 @@ Upgrade/Buy New Allies → Complete Level → Unlock New Content → Repeat
 
 ### 5.1 UI/UX Flow
 **Main Game Interface:**
-- **AlliesSelector**: Bottom panel for unit selection
+- **AlliesSelector**: Left panel for unit selection
 - **TerrainGrid**: Main battlefield for ally placement
 - **BalanceDisplayer**: Real-time resource tracking
 - **Game State**: Win/loss feedback and progression
@@ -152,6 +152,7 @@ Upgrade/Buy New Allies → Complete Level → Unlock New Content → Repeat
 
 ### 7.1 Visual Style
 **WWII Historical Theme:**
+- Hand drawn characters, backgrounds and interface
 - Period-appropriate unit designs
 - Authentic Stalingrad environment assets
 - Clear visual hierarchy for gameplay clarity
