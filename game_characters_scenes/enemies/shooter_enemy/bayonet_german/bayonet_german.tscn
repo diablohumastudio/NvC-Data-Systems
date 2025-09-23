@@ -1,5 +1,6 @@
-[gd_scene load_steps=47 format=3 uid="uid://c3opynpwn83je"]
+[gd_scene load_steps=68 format=3 uid="uid://c3opynpwn83je"]
 
+[ext_resource type="Script" uid="uid://b3p3m1piccgnr" path="res://game_characters_scenes/enemies/shooter_enemy/bayonet_german/bayonet_german.gd" id="1_dcjb4"]
 [ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/shared_assets/circle_shadow.png" id="2_e47ol"]
 [ext_resource type="Texture2D" uid="uid://bi68wk5xbe3lj" path="res://game_characters_scenes/enemies/shooter_enemy/bayonet_german/assets/left_leg.png" id="3_mlboc"]
 [ext_resource type="Texture2D" uid="uid://d3m2ymkclsdx7" path="res://game_characters_scenes/shared_assets/hurt_light.png" id="3_oyaup"]
@@ -81,14 +82,17 @@ point_count = 3
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3bhhh"]
 size = Vector2(91, 180)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fm510"]
-size = Vector2(119, 70)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_05p82"]
 size = Vector2(43.5355, 79.1308)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_drsho"]
 size = Vector2(42.977, 83.7683)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dcjb4"]
+size = Vector2(200, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a7k32"]
+size = Vector2(1298, 2)
 
 [sub_resource type="Animation" id="Animation_jqlhh"]
 length = 0.001
@@ -477,6 +481,120 @@ tracks/31/keys = {
 "values": [Vector2(-8.39816, -103.356)]
 }
 
+[sub_resource type="Animation" id="Animation_dcjb4"]
+resource_name = "check_transitions"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Textures/Body:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.0349066]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Textures/Body/Head:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0872665]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Textures/Body:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 41)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Textures/LeftLeg:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.10472]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Textures/LeftLeg/LeftFoot:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.436332]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Textures/Body/RightArm/Bayonet:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Textures/Body/LeftArm/LeftElbow:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Textures/Body/LeftArm:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.0403853]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath(".")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_check_transitions"
+}]
+}
+
 [sub_resource type="Animation" id="Animation_8aby2"]
 resource_name = "death"
 length = 2.4
@@ -708,6 +826,20 @@ tracks/18/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [&"dead"]
+}
+tracks/19/type = "method"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath(".")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(2.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_wi4b3"]
@@ -1022,6 +1154,20 @@ tracks/7/keys = {
 "update": 0,
 "values": [-0.0403853, 0.0153041]
 }
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath(".")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_on_idle_animation_starting"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_n7qfd"]
 resource_name = "receive_damage"
@@ -1161,7 +1307,6 @@ tracks/10/keys = {
 
 [sub_resource type="Animation" id="Animation_bttft"]
 resource_name = "shoot"
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1270,11 +1415,24 @@ tracks/8/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath(".")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_on_offensive_animation_starting"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_h5p1y"]
 resource_name = "stab"
 length = 0.4
-loop_mode = 1
 step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1383,6 +1541,20 @@ tracks/8/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [-0.0456214, 0.0513712, -0.0406868]
+}
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath(".")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_on_offensive_animation_starting"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_vpqhm"]
@@ -1569,10 +1741,25 @@ tracks/14/keys = {
 "update": 0,
 "values": [-0.191096, -0.687266, 0.0301439, -0.349477, -0.687266, 0.0301439]
 }
+tracks/15/type = "method"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath(".")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_on_walking_animation_starting"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7q2cb"]
 _data = {
 &"RESET": SubResource("Animation_jqlhh"),
+&"check_transitions": SubResource("Animation_dcjb4"),
 &"death": SubResource("Animation_8aby2"),
 &"death_from_explosion": SubResource("Animation_wi4b3"),
 &"helmet_fallen": SubResource("Animation_idi57"),
@@ -1583,9 +1770,104 @@ _data = {
 &"walking": SubResource("Animation_vpqhm")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_avtdn"]
+animation = &"check_transitions"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2db48"]
+animation = &"death"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_a7k32"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_c05er"]
+animation = &"shoot"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4jogt"]
+animation = &"stab"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_f3oyo"]
+animation = &"walking"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_avtdn"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_w34rd"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_dprge"]
+break_loop_at_end = true
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3r21o"]
+break_loop_at_end = true
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_m62rt"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_45hso"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_dcjb4"]
+switch_mode = 2
+advance_mode = 2
+advance_expression = "!short_opponent_detected and long_opponent_detected and are_wait_cycles_completed"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_a7k32"]
+switch_mode = 2
+advance_mode = 2
+advance_expression = "short_opponent_detected and !are_wait_cycles_completed"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_c05er"]
+switch_mode = 2
+advance_mode = 2
+advance_expression = "short_opponent_detected and are_wait_cycles_completed"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4jogt"]
+switch_mode = 2
+advance_mode = 2
+advance_expression = "!short_opponent_detected and !are_wait_cycles_completed"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_2db48"]
+states/Start/position = Vector2(202, 106)
+states/check_transitions/node = SubResource("AnimationNodeAnimation_avtdn")
+states/check_transitions/position = Vector2(502, 106)
+states/death/node = SubResource("AnimationNodeAnimation_2db48")
+states/death/position = Vector2(784, 102.099)
+states/idle/node = SubResource("AnimationNodeAnimation_a7k32")
+states/idle/position = Vector2(654, 106)
+states/shoot/node = SubResource("AnimationNodeAnimation_c05er")
+states/shoot/position = Vector2(502, 14)
+states/stab/node = SubResource("AnimationNodeAnimation_4jogt")
+states/stab/position = Vector2(502, 197)
+states/walking/node = SubResource("AnimationNodeAnimation_f3oyo")
+states/walking/position = Vector2(340, 106)
+transitions = ["Start", "walking", SubResource("AnimationNodeStateMachineTransition_avtdn"), "death", "End", SubResource("AnimationNodeStateMachineTransition_w34rd"), "walking", "check_transitions", SubResource("AnimationNodeStateMachineTransition_dprge"), "idle", "check_transitions", SubResource("AnimationNodeStateMachineTransition_3r21o"), "shoot", "check_transitions", SubResource("AnimationNodeStateMachineTransition_m62rt"), "stab", "check_transitions", SubResource("AnimationNodeStateMachineTransition_45hso"), "check_transitions", "shoot", SubResource("AnimationNodeStateMachineTransition_dcjb4"), "check_transitions", "idle", SubResource("AnimationNodeStateMachineTransition_a7k32"), "check_transitions", "stab", SubResource("AnimationNodeStateMachineTransition_c05er"), "check_transitions", "walking", SubResource("AnimationNodeStateMachineTransition_4jogt")]
+graph_offset = Vector2(0, -12.0988)
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_w34rd"]
+nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_2db48")
+nodes/StateMachine/position = Vector2(-20, 60)
+node_connections = [&"output", 0, &"StateMachine"]
+
 [node name="BayonetGerman" type="CharacterBody2D"]
+position = Vector2(1673, 931)
 collision_layer = 0
 collision_mask = 0
+script = ExtResource("1_dcjb4")
+
+[node name="TestDyingBtn" type="Button" parent="."]
+offset_left = 491.0
+offset_top = -604.0
+offset_right = 759.0
+offset_bottom = -527.0
+theme_override_font_sizes/font_size = 50
+text = "Test Death"
 
 [node name="Shadow" type="Sprite2D" parent="."]
 position = Vector2(1, 75.798)
@@ -1765,20 +2047,9 @@ scale_amount_curve = SubResource("Curve_dfgaq")
 [node name="BloodParticles" parent="Particles" instance=ExtResource("27_jqsxs")]
 position = Vector2(-352, -216)
 
-[node name="ShootingRange" type="RayCast2D" parent="."]
-position = Vector2(0, -110)
-target_position = Vector2(-1530, 0)
-collision_mask = 0
-
 [node name="BodyCollShape" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(20.5, -137)
 shape = SubResource("RectangleShape2D_3bhhh")
-
-[node name="PhysicalContactCollShape" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(-115, -39)
-shape = SubResource("RectangleShape2D_fm510")
 
 [node name="CollisionLeftLeg" type="CollisionShape2D" parent="."]
 visible = false
@@ -1788,11 +2059,50 @@ shape = SubResource("RectangleShape2D_05p82")
 visible = false
 shape = SubResource("RectangleShape2D_drsho")
 
+[node name="ShortOpponentsArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-130, -110)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShortOpponentsArea"]
+shape = SubResource("RectangleShape2D_dcjb4")
+
+[node name="ColorRect" type="ColorRect" parent="ShortOpponentsArea"]
+offset_left = -99.0
+offset_top = -6.0
+offset_right = 99.0
+offset_bottom = 7.0
+color = Color(1, 0.03, 0.03, 1)
+
+[node name="LongOpponentsArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-880, -110)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LongOpponentsArea"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_a7k32")
+
+[node name="ColorRect" type="ColorRect" parent="LongOpponentsArea"]
+offset_left = -649.0
+offset_top = -1.0
+offset_right = 646.0
+offset_bottom = 4.0
+color = Color(0.0392157, 1, 1, 1)
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_7q2cb")
 }
 
-[node name="ShootingTimer" type="Timer" parent="."]
-one_shot = true
-autostart = true
+[node name="AnimationTree" type="AnimationTree" parent="."]
+unique_name_in_owner = true
+root_node = NodePath("%AnimationTree/..")
+callback_mode_discrete = 0
+tree_root = SubResource("AnimationNodeBlendTree_w34rd")
+advance_expression_base_node = NodePath("..")
+anim_player = NodePath("../AnimationPlayer")
+
+[connection signal="pressed" from="TestDyingBtn" to="." method="_on_test_dying_btn_pressed"]
