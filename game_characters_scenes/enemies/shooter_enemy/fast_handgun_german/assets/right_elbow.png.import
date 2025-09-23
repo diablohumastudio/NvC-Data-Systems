@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dla4dg8bumeha"
-path="res://.godot/imported/body.png-6493f76a34aa5f993db68797c8b2d653.ctex"
+uid="uid://cs3gikf0oxkrj"
+path="res://.godot/imported/right_elbow.png-82e7c49f0e0587dd3e58593659cfffa1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game_characters_scenes/enemies/shooter_enemy/fast_hand_gun_german/assets/body.png"
-dest_files=["res://.godot/imported/body.png-6493f76a34aa5f993db68797c8b2d653.ctex"]
+source_file="res://game_characters_scenes/enemies/shooter_enemy/fast_handgun_german/assets/right_elbow.png"
+dest_files=["res://.godot/imported/right_elbow.png-82e7c49f0e0587dd3e58593659cfffa1.ctex"]
 
 [params]
 

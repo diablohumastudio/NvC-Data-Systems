@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cposirsk1wipg"
-path="res://.godot/imported/head.png-9c91d6919e12160e323fc36279ceb004.ctex"
+uid="uid://c0xnwusdfeily"
+path="res://.godot/imported/head_dead.png-a9774c10c374d7c4c69ef902626383be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game_characters_scenes/enemies/shooter_enemy/fast_hand_gun_german/assets/head.png"
-dest_files=["res://.godot/imported/head.png-9c91d6919e12160e323fc36279ceb004.ctex"]
+source_file="res://game_characters_scenes/enemies/shooter_enemy/fast_handgun_german/assets/head_dead.png"
+dest_files=["res://.godot/imported/head_dead.png-a9774c10c374d7c4c69ef902626383be.ctex"]
 
 [params]
 

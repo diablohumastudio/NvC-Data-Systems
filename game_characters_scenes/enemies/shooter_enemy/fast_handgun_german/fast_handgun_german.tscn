@@ -1,23 +1,24 @@
-[gd_scene load_steps=46 format=3 uid="uid://b2iyox0ku5ae4"]
+[gd_scene load_steps=66 format=3 uid="uid://b2iyox0ku5ae4"]
 
 [ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/shared_assets/circle_shadow.png" id="1_5jx5s"]
+[ext_resource type="Script" uid="uid://cke0bh80wcipy" path="res://game_characters_scenes/enemies/shooter_enemy/fast_handgun_german/fast_handgun_german.gd" id="1_vew06"]
 [ext_resource type="Texture2D" uid="uid://d3m2ymkclsdx7" path="res://game_characters_scenes/shared_assets/hurt_light.png" id="2_2yeh0"]
-[ext_resource type="Texture2D" uid="uid://nhvd0qgvt4fn" path="res://game_characters_scenes/enemies/shooter_enemy/fast_hand_gun_german/assets/left_leg.png" id="3_3xkt1"]
+[ext_resource type="Texture2D" uid="uid://nhvd0qgvt4fn" path="res://game_characters_scenes/enemies/shooter_enemy/fast_handgun_german/assets/left_leg.png" id="3_3xkt1"]
 [ext_resource type="Texture2D" uid="uid://c162hd5obdmcu" path="res://game_characters_scenes/shared_assets/hurt_shape_1.png" id="3_4rnmr"]
-[ext_resource type="Texture2D" uid="uid://ccxepc6goyjdq" path="res://game_characters_scenes/enemies/shooter_enemy/fast_hand_gun_german/assets/left_foot.png" id="4_mr5cp"]
-[ext_resource type="Texture2D" uid="uid://b5kh2qmrnxwcq" path="res://game_characters_scenes/enemies/shooter_enemy/fast_hand_gun_german/assets/right_leg.png" id="5_6ofnq"]
-[ext_resource type="Texture2D" uid="uid://bk1bxovkoy0sp" path="res://game_characters_scenes/enemies/shooter_enemy/fast_hand_gun_german/assets/right_foot.png" id="6_mqb3o"]
-[ext_resource type="Texture2D" uid="uid://dla4dg8bumeha" path="res://game_characters_scenes/enemies/shooter_enemy/fast_hand_gun_german/assets/body.png" id="7_ffl84"]
-[ext_resource type="Texture2D" uid="uid://cx4tnx5pw7gcm" path="res://game_characters_scenes/enemies/shooter_enemy/fast_hand_gun_german/assets/left_arm.png" id="8_qke6q"]
-[ext_resource type="Texture2D" uid="uid://0vyrs6fi0lho" path="res://game_characters_scenes/enemies/shooter_enemy/fast_hand_gun_german/assets/left_elbow.png" id="9_7yrt2"]
+[ext_resource type="Texture2D" uid="uid://ccxepc6goyjdq" path="res://game_characters_scenes/enemies/shooter_enemy/fast_handgun_german/assets/left_foot.png" id="4_mr5cp"]
+[ext_resource type="Texture2D" uid="uid://b5kh2qmrnxwcq" path="res://game_characters_scenes/enemies/shooter_enemy/fast_handgun_german/assets/right_leg.png" id="5_6ofnq"]
+[ext_resource type="Texture2D" uid="uid://bk1bxovkoy0sp" path="res://game_characters_scenes/enemies/shooter_enemy/fast_handgun_german/assets/right_foot.png" id="6_mqb3o"]
+[ext_resource type="Texture2D" uid="uid://dla4dg8bumeha" path="res://game_characters_scenes/enemies/shooter_enemy/fast_handgun_german/assets/body.png" id="7_ffl84"]
+[ext_resource type="Texture2D" uid="uid://cx4tnx5pw7gcm" path="res://game_characters_scenes/enemies/shooter_enemy/fast_handgun_german/assets/left_arm.png" id="8_qke6q"]
+[ext_resource type="Texture2D" uid="uid://0vyrs6fi0lho" path="res://game_characters_scenes/enemies/shooter_enemy/fast_handgun_german/assets/left_elbow.png" id="9_7yrt2"]
 [ext_resource type="Texture2D" uid="uid://5xg73u1xoy12" path="res://game_characters_scenes/shared_assets/circle_particle.png" id="10_tvdst"]
-[ext_resource type="Texture2D" uid="uid://cit3e60pfqqi1" path="res://game_characters_scenes/enemies/shooter_enemy/fast_hand_gun_german/assets/hand.png" id="10_v44xj"]
-[ext_resource type="Texture2D" uid="uid://cposirsk1wipg" path="res://game_characters_scenes/enemies/shooter_enemy/fast_hand_gun_german/assets/head.png" id="12_03e0n"]
-[ext_resource type="Texture2D" uid="uid://c0xnwusdfeily" path="res://game_characters_scenes/enemies/shooter_enemy/fast_hand_gun_german/assets/head_dead.png" id="12_rd58j"]
-[ext_resource type="Texture2D" uid="uid://c6soyd8pn2cqi" path="res://game_characters_scenes/enemies/shooter_enemy/fast_hand_gun_german/assets/helmet.png" id="13_fqny3"]
-[ext_resource type="Texture2D" uid="uid://27h3m81ntukq" path="res://game_characters_scenes/enemies/shooter_enemy/fast_hand_gun_german/assets/right_arm.png" id="14_nfl5x"]
-[ext_resource type="Texture2D" uid="uid://cs3gikf0oxkrj" path="res://game_characters_scenes/enemies/shooter_enemy/fast_hand_gun_german/assets/right_elbow.png" id="15_qswdf"]
-[ext_resource type="Texture2D" uid="uid://dmjxpg1phofxd" path="res://game_characters_scenes/enemies/shooter_enemy/fast_hand_gun_german/assets/knife.png" id="16_da6xf"]
+[ext_resource type="Texture2D" uid="uid://cit3e60pfqqi1" path="res://game_characters_scenes/enemies/shooter_enemy/fast_handgun_german/assets/hand.png" id="10_v44xj"]
+[ext_resource type="Texture2D" uid="uid://cposirsk1wipg" path="res://game_characters_scenes/enemies/shooter_enemy/fast_handgun_german/assets/head.png" id="12_03e0n"]
+[ext_resource type="Texture2D" uid="uid://c0xnwusdfeily" path="res://game_characters_scenes/enemies/shooter_enemy/fast_handgun_german/assets/head_dead.png" id="12_rd58j"]
+[ext_resource type="Texture2D" uid="uid://c6soyd8pn2cqi" path="res://game_characters_scenes/enemies/shooter_enemy/fast_handgun_german/assets/helmet.png" id="13_fqny3"]
+[ext_resource type="Texture2D" uid="uid://27h3m81ntukq" path="res://game_characters_scenes/enemies/shooter_enemy/fast_handgun_german/assets/right_arm.png" id="14_nfl5x"]
+[ext_resource type="Texture2D" uid="uid://cs3gikf0oxkrj" path="res://game_characters_scenes/enemies/shooter_enemy/fast_handgun_german/assets/right_elbow.png" id="15_qswdf"]
+[ext_resource type="Texture2D" uid="uid://dmjxpg1phofxd" path="res://game_characters_scenes/enemies/shooter_enemy/fast_handgun_german/assets/knife.png" id="16_da6xf"]
 [ext_resource type="Shader" uid="uid://b122lu6biodh1" path="res://game_characters_scenes/shared_assets/alpha_shader/alpha_shader.gdshader" id="16_npl1f"]
 [ext_resource type="Texture2D" uid="uid://ddkq5e615l10l" path="res://game_characters_scenes/shared_assets/alpha_shader/alpha_shader_mask.png" id="17_pyhep"]
 [ext_resource type="Texture2D" uid="uid://wqs1h3ys34ex" path="res://game_characters_scenes/shared_assets/burnt_standard_german.png" id="18_thoui"]
@@ -77,14 +78,17 @@ colors = PackedColorArray(0.351563, 0.351563, 0.351563, 1, 1, 1, 1, 1, 1, 1, 1, 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qyc3c"]
 size = Vector2(121, 188)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1a55r"]
-size = Vector2(119, 70)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ohpsj"]
 size = Vector2(43.5355, 79.1308)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bt04b"]
 size = Vector2(42.977, 83.7683)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vew06"]
+size = Vector2(140, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ov6gc"]
+size = Vector2(458, 2)
 
 [sub_resource type="Animation" id="Animation_q0trc"]
 length = 0.001
@@ -669,6 +673,20 @@ tracks/16/keys = {
 "update": 0,
 "values": [0.0814748, 0.43317]
 }
+tracks/17/type = "method"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath(".")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(2.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_xq7d5"]
 resource_name = "death_from_explosion"
@@ -894,6 +912,121 @@ tracks/6/keys = {
 "values": [true, false]
 }
 
+[sub_resource type="Animation" id="Animation_ba2jp"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Textures/Body:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.0349066, 0.0523599]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Textures/Body/Head:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0872665, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Textures/Body:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 39), Vector2(0, 41)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Textures/LeftLeg:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.10472, 0.191986]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Textures/LeftLeg/LeftFoot:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.436332, -0.558505]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Textures/Body/LeftArm/LeftElbow:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0476503]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Textures/Body/LeftArm:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0549017, 0.0153041]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Textures/Body/RightArm:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.203687]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath(".")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_on_idle_animation_starting"
+}]
+}
+
 [sub_resource type="Animation" id="Animation_b0suu"]
 resource_name = "receive_damage"
 length = 0.5
@@ -1033,7 +1166,6 @@ tracks/10/keys = {
 [sub_resource type="Animation" id="Animation_kx3tp"]
 resource_name = "shoot"
 length = 0.3
-loop_mode = 1
 step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1095,11 +1227,24 @@ tracks/4/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_on_offensive_animation_starting"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_1opr8"]
 resource_name = "stab"
 length = 0.78
-loop_mode = 1
 step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1269,6 +1414,20 @@ tracks/13/keys = {
 "update": 0,
 "values": [0.0, 0.616584, 0.0]
 }
+tracks/14/type = "method"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath(".")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_on_offensive_animation_starting"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_oxegv"]
 resource_name = "walking"
@@ -1418,106 +1577,19 @@ tracks/11/keys = {
 "update": 0,
 "values": [-0.191096, -0.687266, 0.0301439, -0.349477, -0.687266, 0.0301439]
 }
-
-[sub_resource type="Animation" id="Animation_ba2jp"]
-resource_name = "idle"
-length = 2.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Textures/Body:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [-0.0349066, 0.0523599]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Textures/Body/Head:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0872665, 0.0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Textures/Body:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(1, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 39), Vector2(0, 41)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Textures/LeftLeg:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.10472, 0.191986]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Textures/LeftLeg/LeftFoot:rotation")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [-0.436332, -0.558505]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Textures/Body/LeftArm/LeftElbow:rotation")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 0.0476503]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Textures/Body/LeftArm:rotation")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0549017, 0.0153041]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("Textures/Body/RightArm:rotation")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 0.203687]
+tracks/12/type = "method"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath(".")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_on_walking_animation_starting"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o7tep"]
@@ -1533,9 +1605,109 @@ _data = {
 &"walking": SubResource("Animation_oxegv")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_j15xe"]
+animation = &"death"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nrpg8"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5wfeg"]
+animation = &"shoot"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_guf2x"]
+animation = &"stab"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_k6qvh"]
+animation = &"walking"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_d4qbm"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_djk10"]
+break_loop_at_end = true
+switch_mode = 2
+advance_mode = 2
+advance_expression = "!short_opponent_detected and long_opponent_detected and are_wait_cycles_completed"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ntpxr"]
+switch_mode = 2
+advance_mode = 2
+advance_expression = "!are_wait_cycles_completed"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nyxpt"]
+break_loop_at_end = true
+switch_mode = 2
+advance_mode = 2
+advance_expression = "short_opponent_detected"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nwavt"]
+switch_mode = 2
+advance_mode = 2
+advance_expression = "!short_opponent_detected"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_koymm"]
+switch_mode = 2
+advance_mode = 2
+advance_expression = "!are_wait_cycles_completed"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4dwed"]
+break_loop_at_end = true
+switch_mode = 2
+advance_mode = 2
+advance_expression = "short_opponent_detected and are_wait_cycles_completed"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_sbtmm"]
+break_loop_at_end = true
+switch_mode = 2
+advance_mode = 2
+advance_expression = "!short_opponent_detected and !long_opponent_detected"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6mopc"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vew06"]
+break_loop_at_end = true
+switch_mode = 2
+advance_mode = 2
+advance_expression = "!short_opponent_detected and long_opponent_detected and are_wait_cycles_completed"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ov6gc"]
+switch_mode = 2
+advance_mode = 2
+advance_expression = "short_opponent_detected"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_vew06"]
+states/death/node = SubResource("AnimationNodeAnimation_j15xe")
+states/death/position = Vector2(753, 100)
+states/idle/node = SubResource("AnimationNodeAnimation_nrpg8")
+states/idle/position = Vector2(583, 105)
+states/shoot/node = SubResource("AnimationNodeAnimation_5wfeg")
+states/shoot/position = Vector2(468, 36)
+states/stab/node = SubResource("AnimationNodeAnimation_guf2x")
+states/stab/position = Vector2(457, 202)
+states/walking/node = SubResource("AnimationNodeAnimation_k6qvh")
+states/walking/position = Vector2(338, 100)
+transitions = ["death", "End", SubResource("AnimationNodeStateMachineTransition_d4qbm"), "walking", "shoot", SubResource("AnimationNodeStateMachineTransition_djk10"), "shoot", "walking", SubResource("AnimationNodeStateMachineTransition_ntpxr"), "walking", "stab", SubResource("AnimationNodeStateMachineTransition_nyxpt"), "stab", "walking", SubResource("AnimationNodeStateMachineTransition_nwavt"), "stab", "idle", SubResource("AnimationNodeStateMachineTransition_koymm"), "idle", "stab", SubResource("AnimationNodeStateMachineTransition_4dwed"), "idle", "walking", SubResource("AnimationNodeStateMachineTransition_sbtmm"), "Start", "walking", SubResource("AnimationNodeStateMachineTransition_6mopc"), "idle", "shoot", SubResource("AnimationNodeStateMachineTransition_vew06"), "shoot", "idle", SubResource("AnimationNodeStateMachineTransition_ov6gc")]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_ov6gc"]
+nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_vew06")
+nodes/StateMachine/position = Vector2(-20, 100)
+node_connections = [&"output", 0, &"StateMachine"]
+
 [node name="FastHandgunGerman" type="CharacterBody2D"]
+position = Vector2(1481, 885)
 collision_layer = 0
 collision_mask = 0
+script = ExtResource("1_vew06")
+
+[node name="TestDyingBtn" type="Button" parent="."]
+offset_left = 491.0
+offset_top = -604.0
+offset_right = 759.0
+offset_bottom = -527.0
+theme_override_font_sizes/font_size = 50
+text = "Test Death"
 
 [node name="HurtLight" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -1625,8 +1797,9 @@ sprite_frames = SubResource("SpriteFrames_2w3cq")
 offset = Vector2(0, -30)
 
 [node name="Helmet" type="Sprite2D" parent="Textures/Body/Head"]
+visible = false
+modulate = Color(0, 0, 0, 1)
 position = Vector2(1.22148, -34.9787)
-rotation = -0.0349066
 scale = Vector2(1.01934, 1.01934)
 texture = ExtResource("13_fqny3")
 offset = Vector2(8, 5)
@@ -1705,11 +1878,6 @@ visible = false
 position = Vector2(5.5, -133)
 shape = SubResource("RectangleShape2D_qyc3c")
 
-[node name="PhysicalContactCollShape" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(-115, -41)
-shape = SubResource("RectangleShape2D_1a55r")
-
 [node name="CollisionLeftLeg" type="CollisionShape2D" parent="."]
 visible = false
 position = Vector2(-26.1108, 36.5737)
@@ -1722,11 +1890,50 @@ position = Vector2(37, 36)
 rotation = -0.191096
 shape = SubResource("RectangleShape2D_bt04b")
 
+[node name="ShortOpponentsArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-112, -110)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShortOpponentsArea"]
+shape = SubResource("RectangleShape2D_vew06")
+
+[node name="ColorRect" type="ColorRect" parent="ShortOpponentsArea"]
+offset_left = -70.0
+offset_top = -1.0
+offset_right = 70.0
+offset_bottom = 6.0
+color = Color(1, 0.07, 0.07, 1)
+
+[node name="LongOpponentsArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-412, -110)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LongOpponentsArea"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_ov6gc")
+
+[node name="ColorRect" type="ColorRect" parent="LongOpponentsArea"]
+offset_left = -228.0
+offset_top = 1.0
+offset_right = 230.0
+offset_bottom = 6.0
+color = Color(0.0941176, 1, 1, 1)
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_o7tep")
 }
 
-[node name="ShootingTimer" type="Timer" parent="."]
-one_shot = true
-autostart = true
+[node name="AnimationTree" type="AnimationTree" parent="."]
+unique_name_in_owner = true
+root_node = NodePath("%AnimationTree/..")
+callback_mode_discrete = 0
+tree_root = SubResource("AnimationNodeBlendTree_ov6gc")
+advance_expression_base_node = NodePath("..")
+anim_player = NodePath("../AnimationPlayer")
+
+[connection signal="pressed" from="TestDyingBtn" to="." method="_on_test_dying_btn_pressed"]

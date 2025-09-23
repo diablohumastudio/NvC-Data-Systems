@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmjxpg1phofxd"
-path="res://.godot/imported/knife.png-46090a7ecf60246c6aefce104640d5e0.ctex"
+uid="uid://27h3m81ntukq"
+path="res://.godot/imported/right_arm.png-9dc6130072e61913588db01f455f642a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game_characters_scenes/enemies/shooter_enemy/fast_hand_gun_german/assets/knife.png"
-dest_files=["res://.godot/imported/knife.png-46090a7ecf60246c6aefce104640d5e0.ctex"]
+source_file="res://game_characters_scenes/enemies/shooter_enemy/fast_handgun_german/assets/right_arm.png"
+dest_files=["res://.godot/imported/right_arm.png-9dc6130072e61913588db01f455f642a.ctex"]
 
 [params]
 
