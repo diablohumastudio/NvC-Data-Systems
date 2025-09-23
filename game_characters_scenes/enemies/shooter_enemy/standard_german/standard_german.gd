@@ -1,4 +1,4 @@
-class_name BayonetGerman extends CharacterBody2D
+class_name StandardGerman extends CharacterBody2D
 
 ## This character has a method call in this animation of AnimationPlayer: 
 ## "death" (Node.queue_free())
