@@ -29,8 +29,6 @@ func _check_transitions() -> void:
 	short_opponent_detected = %ShortOpponentsArea.has_overlapping_bodies()
 	long_opponent_detected = %LongOpponentsArea.has_overlapping_bodies()
 	are_wait_cycles_finished = wait_cycles_counter == MAX_WAIT_CYCLES
-	#var transition_to_stab = short_opponent_detected and are_wait_cycles_finished
-	#var transition_to_shoot = long_opponent_detected and !short_opponent_detected and are_wait_cycles_finished
 
 	if !(short_opponent_detected or long_opponent_detected):
 		return # No enemies detected so no need to use idle_cycle_counter
@@ -40,7 +38,7 @@ func _update_wait_cycle_counter() -> void:
 	if wait_cycles_counter == MAX_WAIT_CYCLES:
 		wait_cycles_counter = 0 # If idle cycles finished, reset idle_cycles_counter and return
 		return
-		wait_cycles_counter += 1
+	wait_cycles_counter += 1
 
 func _on_test_dying_btn_pressed() -> void:
 	_die()

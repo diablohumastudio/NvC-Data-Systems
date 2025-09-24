@@ -1,9 +1,48 @@
 [gd_scene load_steps=12 format=3 uid="uid://dbae2g2g0wh6y"]
 
+[ext_resource type="Script" uid="uid://d0n4dhohjcx1o" path="res://game_characters_scenes/allies/shoter_ally/shield_soldier/shield/soviet_shield/soviet_shield.gd" id="1_4mnd3"]
 [ext_resource type="Texture2D" uid="uid://dkt3apyqdq6oi" path="res://game_characters_scenes/allies/shoter_ally/shield_soldier/assets/shield_1/slab3.png" id="2_tntvg"]
 [ext_resource type="Texture2D" uid="uid://cxvm4gthbqe1j" path="res://game_characters_scenes/allies/shoter_ally/shield_soldier/assets/shield_1/shield.png" id="3_oudoi"]
 [ext_resource type="Texture2D" uid="uid://cuu1mgnlb153a" path="res://game_characters_scenes/allies/shoter_ally/shield_soldier/assets/shield_1/slab1.png" id="4_b1mug"]
 [ext_resource type="Texture2D" uid="uid://bqsva7qvi8o31" path="res://game_characters_scenes/allies/shoter_ally/shield_soldier/assets/shield_1/slab2.png" id="5_die4o"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bi4lh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_tntvg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_oudoi")
+}],
+"loop": true,
+"name": &"no_slabs",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_b1mug")
+}],
+"loop": true,
+"name": &"one_slab",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_die4o")
+}],
+"loop": true,
+"name": &"two_slabs",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rp7ji"]
+size = Vector2(67, 245.931)
 
 [sub_resource type="Animation" id="Animation_8586j"]
 length = 0.001
@@ -85,68 +124,26 @@ _data = {
 &"spawn": SubResource("Animation_tknbn")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rp7ji"]
-size = Vector2(67, 245.931)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_28067"]
-size = Vector2(56.5, 42.5497)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_bi4lh"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_tntvg")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_oudoi")
-}],
-"loop": true,
-"name": &"no_slabs",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_b1mug")
-}],
-"loop": true,
-"name": &"one_slab",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_die4o")
-}],
-"loop": true,
-"name": &"two_slabs",
-"speed": 5.0
-}]
-
 [node name="SovietShield" type="CharacterBody2D"]
 scale = Vector2(1, 0.829502)
 collision_layer = 0
 collision_mask = 0
+script = ExtResource("1_4mnd3")
+initial_hp = 10.0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_njov3")
-}
+[node name="ShieldState" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-7, 108.499)
+scale = Vector2(0.905556, 1)
+sprite_frames = SubResource("SpriteFrames_bi4lh")
+offset = Vector2(-1.65644, -108.499)
 
 [node name="BodyCollShape" type="CollisionShape2D" parent="."]
 position = Vector2(-40.5, -3.61663)
 shape = SubResource("RectangleShape2D_rp7ji")
 
-[node name="PhysicalContactCollShape" type="CollisionShape2D" parent="."]
-position = Vector2(68.75, 0.261)
-shape = SubResource("RectangleShape2D_28067")
-
-[node name="ShieldState" type="AnimatedSprite2D" parent="."]
-position = Vector2(-7, 108.499)
-scale = Vector2(0.905556, 1)
-sprite_frames = SubResource("SpriteFrames_bi4lh")
-animation = &"no_slabs"
-offset = Vector2(-1.65644, -108.499)
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_njov3")
+}
