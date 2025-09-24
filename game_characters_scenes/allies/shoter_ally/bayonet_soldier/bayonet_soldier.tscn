@@ -3940,6 +3940,7 @@ offset_left = -99.0
 offset_top = -6.0
 offset_right = 99.0
 offset_bottom = 7.0
+color = Color(1, 0.02, 0.02, 1)
 
 [node name="LongOpponentsArea" type="Area2D" parent="."]
 unique_name_in_owner = true
@@ -3956,6 +3957,7 @@ offset_left = -649.0
 offset_top = -1.0
 offset_right = 646.0
 offset_bottom = 4.0
+color = Color(0.027451, 1, 1, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
