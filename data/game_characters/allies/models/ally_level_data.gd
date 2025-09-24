@@ -4,7 +4,7 @@ signal in_game_just_unlocked
 signal in_game_just_buyed
 
 @export_category("ID")
-@export var level_id: String
+@export var level_id: String #TODO change name to ally_level_id
 @export var ally_id: AllyData.IDs
 
 @export_category("Market Config")
@@ -14,8 +14,8 @@ signal in_game_just_buyed
 @export var market_price: int
 
 @export_category("In-Game Config")
-@export var ally_selector_thumbnail: Texture2D
-@export_file var scene: String = "res://game_characters_scenes/"
+@export var ally_selector_thumbnail: Texture2D #TODO move to AllyData
+@export_file var scene: String = "res://game_characters_scenes/" #TODO change name to scene_path
 @export var in_game_price: int
 @export var in_game_unlock_conditions: Array[Condition] 
 var in_game_unlocked: bool = false
