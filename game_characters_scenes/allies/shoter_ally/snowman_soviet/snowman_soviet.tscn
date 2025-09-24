@@ -1,6 +1,7 @@
-[gd_scene load_steps=38 format=3 uid="uid://dt3guvmgc72a7"]
+[gd_scene load_steps=55 format=3 uid="uid://dt3guvmgc72a7"]
 
 [ext_resource type="Texture2D" uid="uid://dg0oe0ipa6huh" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/snowman_body.png" id="1_10amd"]
+[ext_resource type="Script" uid="uid://c4yhoestvmvrp" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/snowman_soviet.gd" id="1_yrfbn"]
 [ext_resource type="Texture2D" uid="uid://d068ux72sdn13" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/snowman_death_1.png" id="2_llgjv"]
 [ext_resource type="Texture2D" uid="uid://dm4wn07rm6gmv" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/snowman_death_2.png" id="3_dxwe8"]
 [ext_resource type="Texture2D" uid="uid://bacm1ahnf3ehi" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/snowman_death_3.png" id="4_3r8w7"]
@@ -108,6 +109,9 @@ size = Vector2(94.5, 278)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wmynn"]
 size = Vector2(62.5, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2jh6i"]
+size = Vector2(1298, 2)
 
 [sub_resource type="Animation" id="Animation_dhlfl"]
 length = 0.001
@@ -280,6 +284,60 @@ tracks/13/keys = {
 "values": [Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_oa2tf"]
+resource_name = "check_transitions"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Textures/Body:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Textures/Body:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Textures/Body/Arm:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_check_transitions"
+}]
+}
+
 [sub_resource type="Animation" id="Animation_odq6y"]
 resource_name = "death"
 length = 2.4
@@ -343,6 +401,20 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0.666667), Color(1, 1, 1, 0), Color(1, 1, 1, 0.666667), Color(1, 1, 1, 0), Color(1, 1, 1, 0.666667), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_cglgy"]
@@ -566,7 +638,6 @@ tracks/8/keys = {
 [sub_resource type="Animation" id="Animation_5sgci"]
 resource_name = "shoot"
 length = 0.7
-loop_mode = 1
 step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -685,6 +756,7 @@ tracks/4/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t66bb"]
 _data = {
 &"RESET": SubResource("Animation_dhlfl"),
+&"check_transitions": SubResource("Animation_oa2tf"),
 &"death": SubResource("Animation_odq6y"),
 &"death_stabbed": SubResource("Animation_cglgy"),
 &"idle": SubResource("Animation_fxcpi"),
@@ -693,9 +765,83 @@ _data = {
 &"spawn": SubResource("Animation_annxb")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_yrfbn"]
+animation = &"check_transitions"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_q7c8i"]
+animation = &"death"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pdg8b"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fvqir"]
+animation = &"shoot"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_u8mxi"]
+animation = &"spawn"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_dk17j"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jubmm"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_e2a7a"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2jh6i"]
+break_loop_at_end = true
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_oa2tf"]
+switch_mode = 2
+advance_mode = 2
+advance_expression = "are_wait_cycles_finished and long_opponent_detected"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_q7c8i"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_pdg8b"]
+switch_mode = 2
+advance_mode = 2
+advance_expression = "!are_wait_cycles_finished"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_d5k42"]
+states/End/position = Vector2(1072, 100)
+states/check_transitions/node = SubResource("AnimationNodeAnimation_yrfbn")
+states/check_transitions/position = Vector2(592, 100)
+states/death/node = SubResource("AnimationNodeAnimation_q7c8i")
+states/death/position = Vector2(914, 100)
+states/idle/node = SubResource("AnimationNodeAnimation_pdg8b")
+states/idle/position = Vector2(435, 103)
+states/shoot/node = SubResource("AnimationNodeAnimation_fvqir")
+states/shoot/position = Vector2(766, 101)
+states/spawn/node = SubResource("AnimationNodeAnimation_u8mxi")
+states/spawn/position = Vector2(306, 105)
+transitions = ["death", "End", SubResource("AnimationNodeStateMachineTransition_dk17j"), "spawn", "idle", SubResource("AnimationNodeStateMachineTransition_jubmm"), "Start", "spawn", SubResource("AnimationNodeStateMachineTransition_e2a7a"), "idle", "check_transitions", SubResource("AnimationNodeStateMachineTransition_2jh6i"), "check_transitions", "shoot", SubResource("AnimationNodeStateMachineTransition_oa2tf"), "shoot", "check_transitions", SubResource("AnimationNodeStateMachineTransition_q7c8i"), "check_transitions", "idle", SubResource("AnimationNodeStateMachineTransition_pdg8b")]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_ndoom"]
+nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_d5k42")
+nodes/StateMachine/position = Vector2(-40, 60)
+node_connections = [&"output", 0, &"StateMachine"]
+
 [node name="SnowmanSoviet" type="CharacterBody2D"]
+position = Vector2(194, 972)
 collision_layer = 0
 collision_mask = 0
+script = ExtResource("1_yrfbn")
+
+[node name="TestDyingBtn" type="Button" parent="."]
+offset_left = 491.0
+offset_top = -604.0
+offset_right = 759.0
+offset_bottom = -527.0
+theme_override_font_sizes/font_size = 50
+text = "Test Death"
 
 [node name="HurtLight" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -829,11 +975,34 @@ visible = false
 position = Vector2(94.75, 2)
 shape = SubResource("RectangleShape2D_wmynn")
 
+[node name="LongOpponentsArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(803, -124)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LongOpponentsArea"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_2jh6i")
+
+[node name="ColorRect" type="ColorRect" parent="LongOpponentsArea"]
+offset_left = -649.0
+offset_top = -1.0
+offset_right = 646.0
+offset_bottom = 4.0
+color = Color(0.027451, 1, 1, 1)
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_t66bb")
 }
 
-[node name="ShootingTimer" type="Timer" parent="."]
-one_shot = true
-autostart = true
+[node name="AnimationTree" type="AnimationTree" parent="."]
+unique_name_in_owner = true
+root_node = NodePath("%AnimationTree/..")
+callback_mode_discrete = 0
+tree_root = SubResource("AnimationNodeBlendTree_ndoom")
+advance_expression_base_node = NodePath("..")
+anim_player = NodePath("../AnimationPlayer")
+
+[connection signal="pressed" from="TestDyingBtn" to="." method="_on_test_dying_btn_pressed"]
