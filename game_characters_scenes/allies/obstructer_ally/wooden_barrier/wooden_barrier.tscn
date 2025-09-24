@@ -1,6 +1,6 @@
-[gd_scene load_steps=24 format=3 uid="uid://dxy03obv86ulg"]
+[gd_scene load_steps=34 format=3 uid="uid://dxy03obv86ulg"]
 
-[ext_resource type="Texture2D" uid="uid://0hbn8kwgbsfq" path="res://game_characters_scenes/allies/obstructer_ally/wooden_barrier/assets/wooden_barrier_4.png" id="3_mslhn"]
+[ext_resource type="Script" uid="uid://ciyle86agvkbo" path="res://game_characters_scenes/allies/obstructer_ally/wooden_barrier/wooden_barrier.gd" id="1_07tll"]
 [ext_resource type="Texture2D" uid="uid://5xg73u1xoy12" path="res://game_characters_scenes/shared_assets/circle_particle.png" id="5_gr23i"]
 [ext_resource type="Texture2D" uid="uid://dhgs1rk8donhf" path="res://game_characters_scenes/allies/obstructer_ally/wooden_barrier/assets/w_barrier_level_1_b.png" id="6_gt6fc"]
 [ext_resource type="Texture2D" uid="uid://cidh5l67h8gsk" path="res://game_characters_scenes/allies/obstructer_ally/wooden_barrier/assets/detroyed_particle.png" id="6_up2h6"]
@@ -29,9 +29,6 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_mslhn")
-}, {
 "duration": 1.0,
 "texture": ExtResource("8_rcheb")
 }],
@@ -75,7 +72,7 @@ offsets = PackedFloat32Array(0, 0.0783133, 0.379518, 0.572289, 0.76506, 1)
 colors = PackedColorArray(0.874968, 0.604514, 0.563407, 0, 1, 1, 1, 1, 0.851918, 0.618979, 0.924945, 1, 0.954472, 0.794962, 0.466424, 1, 0.73367, 0.921388, 0.913637, 1, 1, 1, 1, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mtqgl"]
-size = Vector2(123, 171)
+size = Vector2(112, 171)
 
 [sub_resource type="Animation" id="Animation_5ehlj"]
 resource_name = "RESET"
@@ -167,6 +164,20 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_dclqj"]
@@ -286,11 +297,76 @@ _data = {
 &"spawn": SubResource("Animation_8enub")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_70gif"]
+animation = &"receive_damage"
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_ljcg0"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_07tll"]
+animation = &"death"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_m6a0h"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1xlw6"]
+animation = &"spawn"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_70gif"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ljcg0"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_yqd0k"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_43hcq"]
+states/death/node = SubResource("AnimationNodeAnimation_07tll")
+states/death/position = Vector2(733, 100)
+states/idle/node = SubResource("AnimationNodeAnimation_m6a0h")
+states/idle/position = Vector2(475, 100)
+states/spawn/node = SubResource("AnimationNodeAnimation_1xlw6")
+states/spawn/position = Vector2(315, 100)
+transitions = ["death", "End", SubResource("AnimationNodeStateMachineTransition_70gif"), "spawn", "idle", SubResource("AnimationNodeStateMachineTransition_ljcg0"), "Start", "spawn", SubResource("AnimationNodeStateMachineTransition_yqd0k")]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_apw8h"]
+graph_offset = Vector2(-73.8595, -69.1345)
+nodes/Animation/node = SubResource("AnimationNodeAnimation_70gif")
+nodes/Animation/position = Vector2(0, 240)
+nodes/OneShot/node = SubResource("AnimationNodeOneShot_ljcg0")
+nodes/OneShot/position = Vector2(320, 40)
+nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_43hcq")
+nodes/StateMachine/position = Vector2(0, 40)
+nodes/output/position = Vector2(580, 100)
+node_connections = [&"OneShot", 0, &"StateMachine", &"OneShot", 1, &"Animation", &"output", 0, &"OneShot"]
+
 [node name="WoodenBarrier" type="CharacterBody2D"]
+position = Vector2(372, 915)
 collision_layer = 0
 collision_mask = 0
+script = ExtResource("1_07tll")
+initial_hp = 10.0
+
+[node name="TestDyingBtn" type="Button" parent="."]
+offset_left = 317.0
+offset_top = -255.0
+offset_right = 585.0
+offset_bottom = -178.0
+theme_override_font_sizes/font_size = 50
+text = "Test Death"
+
+[node name="TestDamageButton" type="Button" parent="."]
+offset_left = 309.0
+offset_top = -373.0
+offset_right = 630.0
+offset_bottom = -296.0
+theme_override_font_sizes/font_size = 50
+text = "Test Damage"
 
 [node name="BarrierTexture" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(-4, 81)
 sprite_frames = SubResource("SpriteFrames_rf0sk")
 offset = Vector2(4, -81)
@@ -372,11 +448,24 @@ scale_amount_curve = SubResource("Curve_slnvn")
 color_ramp = SubResource("Gradient_dgc5m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(-3.5, 9.5)
+position = Vector2(-9, 9.5)
 shape = SubResource("RectangleShape2D_mtqgl")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_cp2sb")
 }
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+unique_name_in_owner = true
+root_node = NodePath("%AnimationTree/..")
+callback_mode_discrete = 0
+tree_root = SubResource("AnimationNodeBlendTree_apw8h")
+advance_expression_base_node = NodePath("..")
+anim_player = NodePath("../AnimationPlayer")
+parameters/OneShot/active = false
+parameters/OneShot/internal_active = false
+parameters/OneShot/request = 0
+
+[connection signal="pressed" from="TestDyingBtn" to="." method="_on_test_dying_btn_pressed"]
+[connection signal="pressed" from="TestDamageButton" to="." method="_on_test_damage_button_pressed"]
