@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AllyData" load_steps=4 format=3 uid="uid://boso5gok2mbeg"]
+
+[ext_resource type="Script" uid="uid://cp8n43lmapx8l" path="res://data/game_characters/allies/models/ally_level_data.gd" id="1_4pugs"]
+[ext_resource type="Texture2D" uid="uid://d0tq5v3l7gtgs" path="res://game_characters_scenes/allies/shoter_ally/fast_bayonet_soldier/ally_card_assets/fast_bayonet_soldier.png" id="1_cr7oq"]
+[ext_resource type="Script" uid="uid://ccntxav05c4k" path="res://data/game_characters/allies/models/ally_data.gd" id="2_cr7oq"]
+
+[resource]
+script = ExtResource("2_cr7oq")
+id = 102
+ally_name = "Fast Bayonet Soldier"
+description = "A skilled soldier that can react and shoot faster, but has less health."
+ally_selector_thumbnail = ExtResource("1_cr7oq")
+levels = Array[ExtResource("1_4pugs")]([null, null, null, null, null, null, null, null, null, null, null, null])
+metadata/_custom_type_script = "uid://ccntxav05c4k"

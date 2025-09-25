@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="AllyData" load_steps=17 format=3 uid="uid://bxaddilaeyy62"]
+
+[ext_resource type="Script" uid="uid://ccntxav05c4k" path="res://data/game_characters/allies/models/ally_data.gd" id="1_i87kw"]
+[ext_resource type="Texture2D" uid="uid://dmr321vm16x6h" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/assets/bayonet_soldier.png" id="1_w8eor"]
+[ext_resource type="Resource" uid="uid://biy602j58v62h" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/base_lvl.tres" id="2_vmxb2"]
+[ext_resource type="Script" uid="uid://cp8n43lmapx8l" path="res://data/game_characters/allies/models/ally_level_data.gd" id="2_y5ttf"]
+[ext_resource type="Resource" uid="uid://1km0gtdvwxfa" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/power_lvl_1.tres" id="4_usgyk"]
+[ext_resource type="Resource" uid="uid://bhujfj5cpw65g" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/power_lvl_2.tres" id="5_vmxb2"]
+[ext_resource type="Resource" uid="uid://chy6mh66nr66" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/power_lvl_3.tres" id="6_8hac1"]
+[ext_resource type="Resource" uid="uid://0q2vsbw6tguk" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/speed_lvl_1.tres" id="7_u7072"]
+[ext_resource type="Resource" uid="uid://xim6qt318sft" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/speed_lvl_2.tres" id="8_xrr1n"]
+[ext_resource type="Resource" uid="uid://5yx7ggk1nwe7" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/speed_lvl_3.tres" id="9_50td1"]
+[ext_resource type="Resource" uid="uid://c1xrkfr7b3uj0" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/range_lvl_1.tres" id="10_ualew"]
+[ext_resource type="Resource" uid="uid://bywm6o71tcxfm" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/range_lvl_2.tres" id="11_u3rdg"]
+[ext_resource type="Resource" uid="uid://byvmxxol6yg7l" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/range_lvl_3.tres" id="12_elt7g"]
+[ext_resource type="Resource" uid="uid://cser3ctjbkyeu" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/health_lvl_1.tres" id="13_jeacp"]
+[ext_resource type="Resource" uid="uid://b6n1wjf47rvu0" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/health_lvl_2.tres" id="14_7bbm3"]
+[ext_resource type="Resource" uid="uid://qrnbvtmcl2xx" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/health_lvl_3.tres" id="15_viuip"]
+
+[resource]
+script = ExtResource("1_i87kw")
+id = 101
+ally_name = "Bayonet Soldier"
+description = "The reliable base unit, balanced in every skill. Will shoot at any enemy that approaches him."
+ally_selector_thumbnail = ExtResource("1_w8eor")
+levels = Array[ExtResource("2_y5ttf")]([ExtResource("4_usgyk"), ExtResource("5_vmxb2"), ExtResource("6_8hac1"), ExtResource("7_u7072"), ExtResource("8_xrr1n"), ExtResource("9_50td1"), ExtResource("10_ualew"), ExtResource("11_u3rdg"), ExtResource("12_elt7g"), ExtResource("13_jeacp"), ExtResource("14_7bbm3"), ExtResource("15_viuip")])
+base_level = ExtResource("2_vmxb2")
+metadata/_custom_type_script = "uid://ccntxav05c4k"
