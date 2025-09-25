@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://dm0t1b4mj7sbb"]
+[gd_scene load_steps=65 format=3 uid="uid://dm0t1b4mj7sbb"]
 
 [ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/shared_assets/circle_shadow.png" id="1_bpkpo"]
 [ext_resource type="Script" uid="uid://crt8fnkxdt5mn" path="res://game_characters_scenes/allies/shoter_ally/shield_soldier/shield_soldier.gd" id="1_chgs4"]
@@ -1500,6 +1500,20 @@ tracks/10/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 0.607843, 0.541176, 0)]
 }
+tracks/11/type = "method"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath(".")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_on_receive_damage_anim_finished"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_4m8bn"]
 resource_name = "shoot"
@@ -2056,6 +2070,11 @@ _data = {
 &"stab": SubResource("Animation_xybj7")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_i5jvs"]
+animation = &"receive_damage"
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_c2c0s"]
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_chgs4"]
 animation = &"check_transitions"
 
@@ -2075,10 +2094,6 @@ animation = &"spawn"
 animation = &"stab"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_k3biq"]
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_5nsvs"]
-switch_mode = 2
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ngp8j"]
@@ -2127,19 +2142,26 @@ states/spawn/node = SubResource("AnimationNodeAnimation_mp1h6")
 states/spawn/position = Vector2(324, 100)
 states/stab/node = SubResource("AnimationNodeAnimation_63hl7")
 states/stab/position = Vector2(626, 234)
-transitions = ["Start", "spawn", SubResource("AnimationNodeStateMachineTransition_k3biq"), "death", "End", SubResource("AnimationNodeStateMachineTransition_5nsvs"), "spawn", "idle", SubResource("AnimationNodeStateMachineTransition_ngp8j"), "idle", "check_transitions", SubResource("AnimationNodeStateMachineTransition_i5jvs"), "check_transitions", "idle", SubResource("AnimationNodeStateMachineTransition_c2c0s"), "check_transitions", "shoot", SubResource("AnimationNodeStateMachineTransition_ltp4j"), "shoot", "check_transitions", SubResource("AnimationNodeStateMachineTransition_s2tg5"), "check_transitions", "stab", SubResource("AnimationNodeStateMachineTransition_gjsov"), "stab", "check_transitions", SubResource("AnimationNodeStateMachineTransition_mp1h6")]
-graph_offset = Vector2(0, -44.3)
+transitions = ["Start", "spawn", SubResource("AnimationNodeStateMachineTransition_k3biq"), "spawn", "idle", SubResource("AnimationNodeStateMachineTransition_ngp8j"), "idle", "check_transitions", SubResource("AnimationNodeStateMachineTransition_i5jvs"), "check_transitions", "idle", SubResource("AnimationNodeStateMachineTransition_c2c0s"), "check_transitions", "shoot", SubResource("AnimationNodeStateMachineTransition_ltp4j"), "shoot", "check_transitions", SubResource("AnimationNodeStateMachineTransition_s2tg5"), "check_transitions", "stab", SubResource("AnimationNodeStateMachineTransition_gjsov"), "stab", "check_transitions", SubResource("AnimationNodeStateMachineTransition_mp1h6")]
+graph_offset = Vector2(0, 8.70412)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_u4keb"]
+graph_offset = Vector2(-272.056, -32.93)
+nodes/Animation/node = SubResource("AnimationNodeAnimation_i5jvs")
+nodes/Animation/position = Vector2(0, 240)
+nodes/OneShot/node = SubResource("AnimationNodeOneShot_c2c0s")
+nodes/OneShot/position = Vector2(340, 60)
 nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_dbikv")
 nodes/StateMachine/position = Vector2(-20, 40)
-node_connections = [&"output", 0, &"StateMachine"]
+nodes/output/position = Vector2(640, 100)
+node_connections = [&"OneShot", 0, &"StateMachine", &"OneShot", 1, &"Animation", &"output", 0, &"OneShot"]
 
 [node name="ShieldSoldier" type="CharacterBody2D"]
 position = Vector2(428, 917)
 collision_layer = 0
 collision_mask = 0
 script = ExtResource("1_chgs4")
+initial_hp = 10.0
 
 [node name="TestDyingBtn" type="Button" parent="."]
 offset_left = 491.0
@@ -2148,6 +2170,14 @@ offset_right = 759.0
 offset_bottom = -527.0
 theme_override_font_sizes/font_size = 50
 text = "Test Death"
+
+[node name="TestDamageButton" type="Button" parent="."]
+offset_left = 466.0
+offset_top = -484.0
+offset_right = 787.0
+offset_bottom = -407.0
+theme_override_font_sizes/font_size = 50
+text = "Test Damage"
 
 [node name="Shadow" type="Sprite2D" parent="."]
 position = Vector2(-2, 44.798)
@@ -2309,6 +2339,7 @@ color_ramp = SubResource("Gradient_ua66v")
 position = Vector2(17, -104)
 
 [node name="Shield" parent="." instance=ExtResource("20_i14ti")]
+unique_name_in_owner = true
 position = Vector2(154, -46)
 
 [node name="BodyCollShape" type="CollisionShape2D" parent="."]
@@ -2360,5 +2391,9 @@ callback_mode_discrete = 0
 tree_root = SubResource("AnimationNodeBlendTree_u4keb")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
+parameters/OneShot/active = false
+parameters/OneShot/internal_active = false
+parameters/OneShot/request = 0
 
 [connection signal="pressed" from="TestDyingBtn" to="." method="_on_test_dying_btn_pressed"]
+[connection signal="pressed" from="TestDamageButton" to="." method="_on_test_damage_button_pressed"]
