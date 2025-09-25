@@ -12,12 +12,11 @@ func _on_test_dying_btn_pressed() -> void:
 
 func _ready() -> void:
 	hp = initial_hp
+	%AnimationTree.animation_finished.connect(_on_anim_tree_animation_finished)
 	
 func receive_damage(damage_points:float) -> void:
 	hp -= damage_points
-	
-	_check_dying_conditions()
-	_update_base_texture()
+	%AnimationTree.set("parameters/OneShot/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 	
 func _check_dying_conditions() -> void:
 	if hp <= 0:
@@ -33,12 +32,12 @@ func _update_base_texture() -> void:
 
 func _on_anim_tree_animation_finished(animation_name:String) -> void:
 	if animation_name == "receive_damage":
-		print("receive_damage animation finished")
+		_check_dying_conditions()
+		_update_base_texture()
 
 func _die() -> void:
 	dying = true
 
 func _on_test_damage_button_pressed() -> void:
 	receive_damage(2.0)
-	%AnimationTree.set("parameters/OneShot/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 	print("hp: ", hp)

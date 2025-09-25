@@ -1,4 +1,4 @@
-[gd_scene load_steps=104 format=3 uid="uid://oyoty7ffa6gl"]
+[gd_scene load_steps=106 format=3 uid="uid://oyoty7ffa6gl"]
 
 [ext_resource type="Material" uid="uid://1e3tt2sswtl0" path="res://global_assets/shaders/burn_material.tres" id="1_6citr"]
 [ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/shared_assets/circle_shadow.png" id="1_htuxv"]
@@ -3810,6 +3810,11 @@ _data = {
 &"stab": SubResource("Animation_tuw42")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hli2b"]
+animation = &"receive_damage"
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_xv13u"]
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_efr0r"]
 animation = &"check_transitions"
 
@@ -3900,9 +3905,14 @@ graph_offset = Vector2(0, 25.2634)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_hli2b"]
 graph_offset = Vector2(-220.987, -12.8617)
+nodes/Animation/node = SubResource("AnimationNodeAnimation_hli2b")
+nodes/Animation/position = Vector2(-40, 220)
+nodes/OneShot/node = SubResource("AnimationNodeOneShot_xv13u")
+nodes/OneShot/position = Vector2(220.963, 102.671)
 nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_efr0r")
-nodes/StateMachine/position = Vector2(-40, 80)
-node_connections = [&"output", 0, &"StateMachine"]
+nodes/StateMachine/position = Vector2(-80, 20)
+nodes/output/position = Vector2(500, 120)
+node_connections = [&"OneShot", 0, &"StateMachine", &"OneShot", 1, &"Animation", &"output", 0, &"OneShot"]
 
 [node name="BayonetSoldier" type="CharacterBody2D"]
 material = ExtResource("1_6citr")
@@ -3910,6 +3920,7 @@ position = Vector2(518, 891)
 collision_layer = 0
 collision_mask = 0
 script = ExtResource("2_xjgfn")
+initial_hp = 10.0
 
 [node name="TestDyingBtn" type="Button" parent="."]
 offset_left = 491.0
@@ -3918,6 +3929,14 @@ offset_right = 759.0
 offset_bottom = -527.0
 theme_override_font_sizes/font_size = 50
 text = "Test Death"
+
+[node name="TestDamageButton" type="Button" parent="."]
+offset_left = 455.0
+offset_top = -484.0
+offset_right = 776.0
+offset_bottom = -407.0
+theme_override_font_sizes/font_size = 50
+text = "Test Damage"
 
 [node name="Shadow" type="Sprite2D" parent="."]
 position = Vector2(-2, 44.798)
@@ -4151,5 +4170,9 @@ callback_mode_discrete = 0
 tree_root = SubResource("AnimationNodeBlendTree_hli2b")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
+parameters/OneShot/active = false
+parameters/OneShot/internal_active = false
+parameters/OneShot/request = 0
 
 [connection signal="pressed" from="TestDyingBtn" to="." method="_on_test_dying_btn_pressed"]
+[connection signal="pressed" from="TestDamageButton" to="." method="_on_test_damage_button_pressed"]
