@@ -13,6 +13,12 @@ var long_opponent_detected : bool
 var short_opponent_detected : bool
 var needs_reload : bool
 
+## AllyLevel Variables
+@export var shooting_power : float
+@export var shooting_speed : float
+@export var shooting_range : int
+var hp_increment : float
+
 @onready var state_machine_playback : AnimationNodeStateMachinePlayback = %AnimationTree.get("parameters/StateMachine/playback")
 
 #region For testing Only. Just creates an object where mouse click
@@ -30,7 +36,15 @@ func _unhandled_input(event: InputEvent) -> void:
 func _ready() -> void:
 	hp = initial_hp
 	%AnimationTree.animation_finished.connect(_on_anim_tree_animation_finished)
-	
+	#%AnimationPlayer.speed_scale = 5.0 # Initial Level Setting
+
+func upgrade_ally_level(new_level:TestAllyLevelUpgrade) -> void:
+	shooting_power += new_level.shooting_power_increment
+	shooting_speed += new_level.shooting_speed_increment
+	shooting_range += new_level.shooting_range_increment
+	if new_level.hp_increment != 0.0:
+		hp += new_level.hp_increment * (hp/initial_hp)
+
 func receive_damage(damage_points:float) -> void:
 	hp -= damage_points
 	%AnimationTree.set("parameters/OneShot/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
@@ -51,7 +65,12 @@ func _check_transitions() -> void:
 	needs_reload = false
 
 	if !(short_opponent_detected or long_opponent_detected):
+		#%AnimationPlayer.speed_scale = 1.00 # Initial Level Setting
 		return # No enemies detected so no need to use idle_cycle_counter
+	
+	if long_opponent_detected and !short_opponent_detected:
+		%AnimationPlayer.speed_scale = shooting_speed
+		print(shooting_speed, %AnimationPlayer.speed_scale)
 	_update_wait_cycle_counter()
 
 func _update_wait_cycle_counter() -> void:
@@ -70,7 +89,15 @@ func _on_test_dying_btn_pressed() -> void:
 func _die() -> void:
 	state_machine_playback.travel("death")
 
-
 func _on_test_damage_button_pressed() -> void:
 	receive_damage(2.0)
 	print("hp: ", hp)
+
+func _on_test_level_upgrade_btn_pressed() -> void:
+	var new_level : TestAllyLevelUpgrade = TestAllyLevelUpgrade.new()
+	new_level.shooting_power_increment = 0.0
+	new_level.shooting_speed_increment = 0.5
+	new_level.shooting_range_increment = 0
+	new_level.hp_increment = 2.0
+	
+	upgrade_ally_level(new_level)
