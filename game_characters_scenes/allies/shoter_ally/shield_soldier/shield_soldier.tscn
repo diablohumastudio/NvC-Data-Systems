@@ -2082,6 +2082,7 @@ switch_mode = 2
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ngp8j"]
+xfade_time = 0.15
 switch_mode = 2
 advance_mode = 2
 
@@ -2308,7 +2309,7 @@ color_ramp = SubResource("Gradient_ua66v")
 position = Vector2(17, -104)
 
 [node name="Shield" parent="." instance=ExtResource("20_i14ti")]
-position = Vector2(154, -53)
+position = Vector2(154, -46)
 
 [node name="BodyCollShape" type="CollisionShape2D" parent="."]
 position = Vector2(-20, -96)

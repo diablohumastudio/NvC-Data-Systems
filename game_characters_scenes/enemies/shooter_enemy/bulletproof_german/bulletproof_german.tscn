@@ -122,12 +122,12 @@ tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/path = NodePath("Textures/Body/Head:rotation")
 tracks/2/interp = 1
-tracks/2/loop_wrap = true
+tracks/2/loop_wrap = false
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0872665]
+"values": [0.0]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -170,7 +170,7 @@ tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/path = NodePath("Textures/Body:rotation")
 tracks/6/interp = 1
-tracks/6/loop_wrap = true
+tracks/6/loop_wrap = false
 tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
@@ -302,7 +302,7 @@ tracks/17/imported = false
 tracks/17/enabled = true
 tracks/17/path = NodePath("Textures:modulate")
 tracks/17/interp = 1
-tracks/17/loop_wrap = true
+tracks/17/loop_wrap = false
 tracks/17/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
@@ -422,12 +422,12 @@ tracks/27/imported = false
 tracks/27/enabled = true
 tracks/27/path = NodePath("Textures/Body/Head/Helmet:position")
 tracks/27/interp = 1
-tracks/27/loop_wrap = true
+tracks/27/loop_wrap = false
 tracks/27/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1.22148, -34.9787)]
+"values": [Vector2(-0.777183, -35.0486)]
 }
 tracks/28/type = "value"
 tracks/28/imported = false
@@ -464,6 +464,78 @@ tracks/30/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Textures/Body/Vest:position")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-3.78667, -34.8326)]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Textures/Body/Vest:rotation")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("Textures/Body/Vest:modulate")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("Textures/Body/Head/Helmet:modulate")
+tracks/34/interp = 1
+tracks/34/loop_wrap = false
+tracks/34/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("Textures/Body/Head/Helmet:visible")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("Textures/Body/Head/Helmet:rotation")
+tracks/36/interp = 1
+tracks/36/loop_wrap = false
+tracks/36/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.0349066]
 }
 
 [sub_resource type="Animation" id="Animation_oi5i7"]
@@ -1748,6 +1820,7 @@ _data = {
 
 [node name="BulletproofGerman" type="CharacterBody2D"]
 process_mode = 1
+position = Vector2(896, 480)
 collision_layer = 0
 collision_mask = 0
 
@@ -1840,12 +1913,11 @@ texture = ExtResource("12_v1psn")
 
 [node name="Head" type="AnimatedSprite2D" parent="Textures/Body"]
 position = Vector2(-9.43245, -102.391)
-rotation = 0.0872665
 sprite_frames = SubResource("SpriteFrames_u8yl5")
 offset = Vector2(0, -30)
 
 [node name="Helmet" type="Sprite2D" parent="Textures/Body/Head"]
-position = Vector2(1.22148, -34.9787)
+position = Vector2(-0.777183, -35.0486)
 rotation = -0.0349066
 texture = ExtResource("14_p4m3j")
 
@@ -1952,14 +2024,10 @@ shape = SubResource("RectangleShape2D_1a55r")
 
 [node name="CollisionLeftLeg" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2(-7.81917, 35.5139)
-rotation = -0.195165
 shape = SubResource("RectangleShape2D_ohpsj")
 
 [node name="CollisionRightLeg" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2(40.963, 35.222)
-rotation = -0.674766
 shape = SubResource("RectangleShape2D_bt04b")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
