@@ -3,7 +3,7 @@ extends Control
 func _ready() -> void:
 	var ally: AllyData = load("uid://dnxrv0styygjo")
 	for level in ally.levels as Array[AllyLevelData]:
-		printt("from ready in test",level, level.level_id, level.in_game_unlock_conditions)
+		printt("from ready in test",level, level.id, level.in_game_unlock_conditions)
 	%AllyUpgradePopUp.ally = ally
 	%AllyUpgradePopUp._set_level_buttons()
 	%AllyUpgradePopUp2.ally = ally
@@ -13,8 +13,8 @@ func _on_print_levels_pressed() -> void:
 	print("--------------------------------popup1")
 	for levelbtn in %AllyUpgradePopUp.get_node("%UpgradeToLevelBtnsContainer").get_children() as Array[UpgradeToLevelButton]:
 		var level = levelbtn.level
-		printt("from test scene levele in pop1:", level, level.in_game_unlocked, level.in_game_buyed, level.level_id )
+		printt("from test scene levele in pop1:", level, level.in_game_unlocked, level.in_game_buyed, level.id )
 	print("--------------------------------popup2")
 	for levelbtn in %AllyUpgradePopUp2.get_node("%UpgradeToLevelBtnsContainer").get_children() as Array[UpgradeToLevelButton]:
 		var level = levelbtn.level
-		printt("from test scene levele in pop2:", level, level.in_game_unlocked, level.in_game_buyed, level.level_id )
+		printt("from test scene levele in pop2:", level, level.in_game_unlocked, level.in_game_buyed, level.id )

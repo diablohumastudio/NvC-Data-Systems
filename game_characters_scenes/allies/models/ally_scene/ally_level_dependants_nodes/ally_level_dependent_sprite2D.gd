@@ -13,5 +13,5 @@ func set_levels(_levels: Array[AllyLevelData]):
 
 func update_visuals():
 	for buyed_level in buyed_levels:
-		if levels_modifiers_textures.has(buyed_level.level_id):
-			texture = levels_modifiers_textures[buyed_level.level_id]
+		if levels_modifiers_textures.has(buyed_level.id):
+			texture = levels_modifiers_textures[buyed_level.id]

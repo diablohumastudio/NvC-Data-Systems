@@ -8,7 +8,7 @@ var in_game_buyed_levels: Array[AllyLevelData]
 func _ready() -> void:
 	acs = ActionConditionSystem.new("res://global_systems/data_systems/action_condition_system/conditions/data/in_game/", "res://global_systems/data_systems/action_condition_system/state_changers/data/in_game/")
 	in_game_buyed_levels.append(ally.base_level)
-	change_sc_ally(load(ally.base_level.scene).instantiate())
+	change_sc_ally(load(ally.base_level.scene_path).instantiate())
 	%AllyUpgradePopUp.ally = ally
 	%AllyUpgradePopUp.acs = acs
 	%AllyUpgradePopUp.level_changed.connect(on_ally_upgrade_menu_level_changed)
@@ -29,8 +29,8 @@ func fix_hud_position_and_z():
 	%AllyUpgradePopUp.global_position = popup_position
 
 func on_ally_upgrade_menu_level_changed(level: AllyLevelData):
-	if ResourceLoader.exists(level.scene):
-		change_sc_ally(load(level.scene).instantiate()) # TODO: load at ready of game_screen
+	if ResourceLoader.exists(level.scene_path):
+		change_sc_ally(load(level.scene_path).instantiate()) # TODO: load at ready of game_screen
 	in_game_buyed_levels.append(level)
 	get_tree().call_group(str(current_ally_scene), "set_levels", in_game_buyed_levels)
 
