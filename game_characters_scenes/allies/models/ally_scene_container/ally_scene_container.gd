@@ -1,5 +1,6 @@
 class_name AllySceneContainer extends Control
 
+var terrain_gri_cell_width: int
 var ally: AllyData
 var current_ally_scene: AllyScene
 var acs: ActionConditionSystem
@@ -18,6 +19,7 @@ func change_sc_ally(new_ally_scene: AllyScene):
 		current_ally_scene.name = "OldScAlly"
 		current_ally_scene.queue_free()
 	new_ally_scene.name = "AllyScene"
+	new_ally_scene.terrain_grid_cell_width = terrain_gri_cell_width
 	new_ally_scene.pressed.connect(on_select_ally_btn_pressed)
 	add_child(new_ally_scene)
 	fix_hud_position_and_z()
