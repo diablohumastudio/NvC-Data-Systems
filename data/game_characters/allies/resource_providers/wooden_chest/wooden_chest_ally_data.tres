@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="AllyData" load_steps=13 format=3 uid="uid://bn5fasrughv14"]
+
+[ext_resource type="Script" uid="uid://cp8n43lmapx8l" path="res://data/game_characters/allies/models/ally_level_data.gd" id="1_061w5"]
+[ext_resource type="Texture2D" uid="uid://chq8570x6w1p8" path="res://data/game_characters/allies/resource_providers/wooden_chest/assets/wooden_chest.png" id="1_lqr71"]
+[ext_resource type="Resource" uid="uid://bym1nqvsxyk0q" path="res://data/game_characters/allies/resource_providers/wooden_chest/levels/wdc_b.tres" id="2_h36y5"]
+[ext_resource type="Script" uid="uid://ccntxav05c4k" path="res://data/game_characters/allies/models/ally_data.gd" id="2_lqr71"]
+[ext_resource type="Resource" uid="uid://dys41t72pbdlv" path="res://data/game_characters/allies/resource_providers/wooden_chest/levels/wdc_v1.tres" id="4_o5bbe"]
+[ext_resource type="Resource" uid="uid://b2ov5ntu7an0n" path="res://data/game_characters/allies/resource_providers/wooden_chest/levels/wdc_s2.tres" id="5_562mn"]
+[ext_resource type="Resource" uid="uid://6a6dmusb03k0" path="res://data/game_characters/allies/resource_providers/wooden_chest/levels/wdc_v2.tres" id="5_av733"]
+[ext_resource type="Resource" uid="uid://7c4kclcvpcnu" path="res://data/game_characters/allies/resource_providers/wooden_chest/levels/wdc_v3.tres" id="6_hv53w"]
+[ext_resource type="Resource" uid="uid://c3e0jagx0667p" path="res://data/game_characters/allies/resource_providers/wooden_chest/levels/wdc_s3.tres" id="6_o5bbe"]
+[ext_resource type="Resource" uid="uid://b8f3f5svra3ij" path="res://data/game_characters/allies/resource_providers/wooden_chest/levels/wdc_h1.tres" id="7_av733"]
+[ext_resource type="Resource" uid="uid://bj5db7syw4mer" path="res://data/game_characters/allies/resource_providers/wooden_chest/levels/wdc_h2.tres" id="10_ugv11"]
+[ext_resource type="Resource" uid="uid://cnekq4w4ekq6b" path="res://data/game_characters/allies/resource_providers/wooden_chest/levels/wdc_h3.tres" id="11_2hvi0"]
+
+[resource]
+script = ExtResource("2_lqr71")
+id = 202
+ally_name = "Wooden Chest"
+description = "A weaker version of the chest, but will give more valuable coins."
+ally_selector_thumbnail = ExtResource("1_lqr71")
+levels = Array[ExtResource("1_061w5")]([ExtResource("4_o5bbe"), ExtResource("5_av733"), ExtResource("6_hv53w"), ExtResource("7_av733"), ExtResource("5_562mn"), ExtResource("6_o5bbe"), ExtResource("7_av733"), ExtResource("10_ugv11"), ExtResource("11_2hvi0")])
+base_level = ExtResource("2_h36y5")
+metadata/_custom_type_script = "uid://ccntxav05c4k"

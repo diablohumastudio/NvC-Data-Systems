@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="MoneyPrviderLevel" load_steps=4 format=3 uid="uid://db4qg7pjk2gpe"]
+
+[ext_resource type="Texture2D" uid="uid://dvcfwoki37m8a" path="res://data/game_characters/allies/assets/upgrade_buttons/resource_providers/generator_speed_3.png" id="1_bhhf2"]
+[ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://global_systems/data_systems/action_condition_system/condition.gd" id="2_w7uyf"]
+[ext_resource type="Script" uid="uid://bacha5qb1rbr" path="res://data/game_characters/allies/resource_providers/models/money_provider_level.gd" id="3_apah7"]
+
+[resource]
+script = ExtResource("3_apah7")
+providing_speed = 0.07
+coin_value = 0
+health_points = 0
+id = "IRC_S3"
+ally_id = 201
+unlockd_by_default = false
+buyed_by_default = false
+unlock_conditions = Array[ExtResource("2_w7uyf")]([])
+market_price = 1000
+ally_level_thumbnail = ExtResource("1_bhhf2")
+scene_path = "res://game_characters_scenes/"
+in_game_price = 100
+in_game_unlock_conditions = Array[ExtResource("2_w7uyf")]([])
+metadata/_custom_type_script = "uid://bacha5qb1rbr"

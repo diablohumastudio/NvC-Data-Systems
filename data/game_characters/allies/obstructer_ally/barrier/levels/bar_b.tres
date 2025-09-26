@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ObstructerAllyLevelData" load_steps=3 format=3 uid="uid://kpo8lplfd8te"]
+
+[ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://global_systems/data_systems/action_condition_system/condition.gd" id="1_12f7i"]
+[ext_resource type="Script" uid="uid://p6yfwagbfnes" path="res://data/game_characters/allies/obstructer_ally/models/obstructer_ally_level.gd" id="2_7ye81"]
+
+[resource]
+script = ExtResource("2_7ye81")
+close_range_power = 5
+health_points = 170
+id = "BAR_B"
+ally_id = 301
+unlockd_by_default = false
+buyed_by_default = false
+unlock_conditions = Array[ExtResource("1_12f7i")]([])
+market_price = 700
+scene_path = "uid://ps7ks7v7g60n"
+in_game_price = 50
+in_game_unlock_conditions = Array[ExtResource("1_12f7i")]([])
+metadata/_custom_type_script = "uid://p6yfwagbfnes"

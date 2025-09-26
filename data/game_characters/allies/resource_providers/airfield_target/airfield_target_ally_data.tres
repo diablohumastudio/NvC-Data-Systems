@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="AllyData" load_steps=14 format=3 uid="uid://bjx0mkrftyccy"]
+
+[ext_resource type="Script" uid="uid://cp8n43lmapx8l" path="res://data/game_characters/allies/models/ally_level_data.gd" id="1_8t47w"]
+[ext_resource type="Texture2D" uid="uid://dda8bu3rxg5li" path="res://data/game_characters/allies/resource_providers/airfield_target/assets/airfield_target.png" id="1_fxeoy"]
+[ext_resource type="Script" uid="uid://ccntxav05c4k" path="res://data/game_characters/allies/models/ally_data.gd" id="2_fxeoy"]
+[ext_resource type="Resource" uid="uid://di0t6hm5rupvc" path="res://data/game_characters/allies/resource_providers/airfield_target/levels/aft_b.tres" id="2_qejb4"]
+[ext_resource type="Resource" uid="uid://bhcb4ib405l6d" path="res://data/game_characters/allies/resource_providers/airfield_target/levels/aft_v1.tres" id="4_yyehq"]
+[ext_resource type="Resource" uid="uid://d3pxi6ww4oqwv" path="res://data/game_characters/allies/resource_providers/airfield_target/levels/aft_v2.tres" id="5_ny4ue"]
+[ext_resource type="Resource" uid="uid://dtanp5mva7ss4" path="res://data/game_characters/allies/resource_providers/airfield_target/levels/aft_v3.tres" id="6_uo0n3"]
+[ext_resource type="Resource" uid="uid://c82rwvcrafgip" path="res://data/game_characters/allies/resource_providers/airfield_target/levels/aft_s1.tres" id="7_ruc1m"]
+[ext_resource type="Resource" uid="uid://bgqphj6113hdb" path="res://data/game_characters/allies/resource_providers/airfield_target/levels/aft_s2.tres" id="8_l4cje"]
+[ext_resource type="Resource" uid="uid://bj2cbnra3tt1o" path="res://data/game_characters/allies/resource_providers/airfield_target/levels/aft_s3.tres" id="9_ui6kx"]
+[ext_resource type="Resource" uid="uid://c64xg5ied4d1p" path="res://data/game_characters/allies/resource_providers/airfield_target/levels/aft_h1.tres" id="10_ui6kx"]
+[ext_resource type="Resource" uid="uid://bpcyw0nmxiung" path="res://data/game_characters/allies/resource_providers/airfield_target/levels/aft_h2.tres" id="11_chvf8"]
+[ext_resource type="Resource" uid="uid://caessvaa1g3sm" path="res://data/game_characters/allies/resource_providers/airfield_target/levels/aft_h3.tres" id="12_730k8"]
+
+[resource]
+script = ExtResource("2_fxeoy")
+id = 203
+ally_name = "Airfield Target"
+description = "A strong and really valuable resource provider, but will take a while before the plane drops a box."
+ally_selector_thumbnail = ExtResource("1_fxeoy")
+levels = Array[ExtResource("1_8t47w")]([ExtResource("4_yyehq"), ExtResource("5_ny4ue"), ExtResource("6_uo0n3"), ExtResource("7_ruc1m"), ExtResource("8_l4cje"), ExtResource("9_ui6kx"), ExtResource("10_ui6kx"), ExtResource("11_chvf8"), ExtResource("12_730k8")])
+base_level = ExtResource("2_qejb4")
+metadata/_custom_type_script = "uid://ccntxav05c4k"

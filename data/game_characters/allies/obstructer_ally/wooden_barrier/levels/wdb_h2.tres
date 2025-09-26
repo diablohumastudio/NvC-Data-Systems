@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ObstructerAllyLevel" load_steps=4 format=3 uid="uid://bey6o1so65huo"]
+
+[ext_resource type="Texture2D" uid="uid://cc0o80vya8ejv" path="res://data/game_characters/allies/assets/upgrade_buttons/shared/health_points_2.png" id="1_1r5ce"]
+[ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://global_systems/data_systems/action_condition_system/condition.gd" id="2_v3vyo"]
+[ext_resource type="Script" uid="uid://p6yfwagbfnes" path="res://data/game_characters/allies/obstructer_ally/models/obstructer_ally_level.gd" id="3_bfg3j"]
+
+[resource]
+script = ExtResource("3_bfg3j")
+close_range_power = 0
+health_points = 90
+id = "WDB_H2"
+ally_id = 302
+unlockd_by_default = false
+buyed_by_default = false
+unlock_conditions = Array[ExtResource("2_v3vyo")]([])
+market_price = 1500
+ally_level_thumbnail = ExtResource("1_1r5ce")
+scene_path = "uid://dxy03obv86ulg"
+in_game_price = 150
+in_game_unlock_conditions = Array[ExtResource("2_v3vyo")]([])
+metadata/_custom_type_script = "uid://p6yfwagbfnes"

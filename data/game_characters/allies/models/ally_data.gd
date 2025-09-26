@@ -1,19 +1,19 @@
 class_name AllyData extends GameCharacterData
 
-enum IDs { BAYONET_SOLDIER = 101, 
-			FAST_BAYONET_SOLDIER = 102, 
-			LIGHT_MACHINE_GUNNER = 103,
-			SHIELD_SOLDIER = 104,
-			FARMER = 105,
-			SNOWMAN = 106,
-			IRON_CHEST = 201,
-			WOODEN_CHEST = 202,
-			AIRFIELD_TARGET = 203,
-			BARRIER = 301,
-			WOODEN_BARRIER = 302,
-			LANDMINE = 401,
-			GRENADE = 402,
-			MOLOTOV_COCTAIL = 403
+enum IDs { BYS = 101, 
+			FBS = 102, 
+			LMG = 103,
+			SHS = 104,
+			FAR = 105,
+			SNM = 106,
+			IRC = 201,
+			WDC = 202,
+			AFT = 203,
+			BAR = 301,
+			WDB = 302,
+			LDM = 401,
+			GRN = 402,
+			MOL = 403
 			}
 
 @export var id: IDs

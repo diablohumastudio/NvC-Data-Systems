@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="MoneyPrviderLevel" load_steps=4 format=3 uid="uid://6a6dmusb03k0"]
+
+[ext_resource type="Texture2D" uid="uid://cqxescagxkpi6" path="res://data/game_characters/allies/assets/upgrade_buttons/resource_providers/coin_value_2.png" id="1_ooa7g"]
+[ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://global_systems/data_systems/action_condition_system/condition.gd" id="2_lln47"]
+[ext_resource type="Script" uid="uid://bacha5qb1rbr" path="res://data/game_characters/allies/resource_providers/models/money_provider_level.gd" id="3_1ejyl"]
+
+[resource]
+script = ExtResource("3_1ejyl")
+providing_speed = 0.0
+coin_value = 25
+health_points = 0
+id = "WDC_V2"
+ally_id = 202
+unlockd_by_default = false
+buyed_by_default = false
+unlock_conditions = Array[ExtResource("2_lln47")]([])
+market_price = 1000
+ally_level_thumbnail = ExtResource("1_ooa7g")
+scene_path = "uid://co3biarax0yt4"
+in_game_price = 100
+in_game_unlock_conditions = Array[ExtResource("2_lln47")]([])
+metadata/_custom_type_script = "uid://bacha5qb1rbr"

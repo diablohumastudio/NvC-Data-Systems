@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="ShooterAllyLevel" load_steps=4 format=3 uid="uid://dprcy6b85w0mj"]
+
+[ext_resource type="Texture2D" uid="uid://b67s5sx3mxe61" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_speed_3.png" id="1_kt40w"]
+[ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://global_systems/data_systems/action_condition_system/condition.gd" id="2_2kg3w"]
+[ext_resource type="Script" uid="uid://bxsxos5gjpl6h" path="res://data/game_characters/allies/shooter_ally/models/shooter_ally_level.gd" id="3_e4tao"]
+
+[resource]
+script = ExtResource("3_e4tao")
+shooting_power = 0
+shooting_speed = 1.23
+shooting_range = 0.0
+health_points = 0
+id = "SNM_S3"
+ally_id = 106
+unlockd_by_default = false
+buyed_by_default = false
+unlock_conditions = Array[ExtResource("2_2kg3w")]([])
+market_price = 1750
+ally_level_thumbnail = ExtResource("1_kt40w")
+scene_path = "uid://dt3guvmgc72a7"
+in_game_price = 175
+in_game_unlock_conditions = Array[ExtResource("2_2kg3w")]([])
+metadata/_custom_type_script = "uid://bxsxos5gjpl6h"

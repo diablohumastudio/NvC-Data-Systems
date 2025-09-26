@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ExplosiveAllyLevel" load_steps=4 format=3 uid="uid://cjdfrjwgleatd"]
+
+[ext_resource type="Texture2D" uid="uid://8rj451pab6cg" path="res://data/game_characters/allies/assets/upgrade_buttons/explosives/explosion_strength_1.png" id="1_t1b3k"]
+[ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://global_systems/data_systems/action_condition_system/condition.gd" id="2_jaqch"]
+[ext_resource type="Script" uid="uid://bkaq06sghogbp" path="res://data/game_characters/allies/explosive_ally/models/explosive_ally_level.gd" id="3_gq3ng"]
+
+[resource]
+script = ExtResource("3_gq3ng")
+explosion_power = 40
+explosion_area = Vector2(0, 0)
+id = "GRN_P1"
+ally_id = 402
+unlockd_by_default = false
+buyed_by_default = false
+unlock_conditions = Array[ExtResource("2_jaqch")]([])
+market_price = 700
+ally_level_thumbnail = ExtResource("1_t1b3k")
+scene_path = "uid://bs6a1e6fgv7y3"
+in_game_price = 70
+in_game_unlock_conditions = Array[ExtResource("2_jaqch")]([])
+metadata/_custom_type_script = "uid://bkaq06sghogbp"

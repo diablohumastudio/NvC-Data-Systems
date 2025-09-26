@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ExplosiveAllyLevel" load_steps=4 format=3 uid="uid://c5tc2mbam5spu"]
+
+[ext_resource type="Texture2D" uid="uid://g63ggqdxs1uq" path="res://data/game_characters/allies/assets/upgrade_buttons/explosives/explosion_area_2.png" id="1_c6q7l"]
+[ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://global_systems/data_systems/action_condition_system/condition.gd" id="2_5ga1d"]
+[ext_resource type="Script" uid="uid://bkaq06sghogbp" path="res://data/game_characters/allies/explosive_ally/models/explosive_ally_level.gd" id="3_tmlfa"]
+
+[resource]
+script = ExtResource("3_tmlfa")
+explosion_power = 0
+explosion_area = Vector2(2, 2)
+id = "LDM_A2"
+ally_id = 401
+unlockd_by_default = false
+buyed_by_default = false
+unlock_conditions = Array[ExtResource("2_5ga1d")]([])
+market_price = 3000
+ally_level_thumbnail = ExtResource("1_c6q7l")
+scene_path = "uid://dwu4hdrfwqbg3"
+in_game_price = 300
+in_game_unlock_conditions = Array[ExtResource("2_5ga1d")]([])
+metadata/_custom_type_script = "uid://bkaq06sghogbp"

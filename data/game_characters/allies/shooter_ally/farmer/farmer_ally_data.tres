@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="AllyData" load_steps=17 format=3 uid="uid://bjbi720jmxnbk"]
+
+[ext_resource type="Script" uid="uid://cp8n43lmapx8l" path="res://data/game_characters/allies/models/ally_level_data.gd" id="1_3sxjd"]
+[ext_resource type="Texture2D" uid="uid://btlrg4882t0qe" path="res://data/game_characters/allies/shooter_ally/farmer/assets/farmer.png" id="1_oi2uf"]
+[ext_resource type="Script" uid="uid://ccntxav05c4k" path="res://data/game_characters/allies/models/ally_data.gd" id="2_oi2uf"]
+[ext_resource type="Resource" uid="uid://nctlsqum2eg5" path="res://data/game_characters/allies/shooter_ally/farmer/levels/far_b.tres" id="2_uoj3f"]
+[ext_resource type="Resource" uid="uid://dtarblt6s6i6x" path="res://data/game_characters/allies/shooter_ally/farmer/levels/far_p1.tres" id="4_u462q"]
+[ext_resource type="Resource" uid="uid://ddocyheqgx2ug" path="res://data/game_characters/allies/shooter_ally/farmer/levels/far_p2.tres" id="5_gmhqw"]
+[ext_resource type="Resource" uid="uid://bqahh6uc37ocj" path="res://data/game_characters/allies/shooter_ally/farmer/levels/far_p3.tres" id="6_qn0gy"]
+[ext_resource type="Resource" uid="uid://b8qa5fprs4boj" path="res://data/game_characters/allies/shooter_ally/farmer/levels/far_s1.tres" id="7_0xsf7"]
+[ext_resource type="Resource" uid="uid://gxvnwpfkwrog" path="res://data/game_characters/allies/shooter_ally/farmer/levels/far_s2.tres" id="8_vobqs"]
+[ext_resource type="Resource" uid="uid://ddbxub1onqgsy" path="res://data/game_characters/allies/shooter_ally/farmer/levels/far_s3.tres" id="9_cykje"]
+[ext_resource type="Resource" uid="uid://cmqjwcuoyn40o" path="res://data/game_characters/allies/shooter_ally/farmer/levels/far_r1.tres" id="10_cykje"]
+[ext_resource type="Resource" uid="uid://c2nc3ohu020wd" path="res://data/game_characters/allies/shooter_ally/farmer/levels/far_r2.tres" id="11_8205c"]
+[ext_resource type="Resource" uid="uid://cjbuabbd12kvr" path="res://data/game_characters/allies/shooter_ally/farmer/levels/far_r3.tres" id="12_dce46"]
+[ext_resource type="Resource" uid="uid://dri14dln1eebq" path="res://data/game_characters/allies/shooter_ally/farmer/levels/far_h1.tres" id="13_dce46"]
+[ext_resource type="Resource" uid="uid://dv1wsyk5k6xo1" path="res://data/game_characters/allies/shooter_ally/farmer/levels/far_h2.tres" id="14_notjq"]
+[ext_resource type="Resource" uid="uid://4lnc1idd50ay" path="res://data/game_characters/allies/shooter_ally/farmer/levels/far_h3.tres" id="15_vd2b1"]
+
+[resource]
+script = ExtResource("2_oi2uf")
+id = 105
+ally_name = "Farmer"
+description = "The cheapest soldier of them all, you'll save some coins hiring him, but his range is not the greatest."
+ally_selector_thumbnail = ExtResource("1_oi2uf")
+levels = Array[ExtResource("1_3sxjd")]([ExtResource("4_u462q"), ExtResource("5_gmhqw"), ExtResource("6_qn0gy"), ExtResource("7_0xsf7"), ExtResource("8_vobqs"), ExtResource("9_cykje"), ExtResource("10_cykje"), ExtResource("11_8205c"), ExtResource("12_dce46"), ExtResource("13_dce46"), ExtResource("14_notjq"), ExtResource("15_vd2b1")])
+base_level = ExtResource("2_uoj3f")
+metadata/_custom_type_script = "uid://ccntxav05c4k"
