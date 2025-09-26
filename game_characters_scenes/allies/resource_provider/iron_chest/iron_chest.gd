@@ -1,4 +1,4 @@
-class_name IronChest extends CharacterBody2D
+class_name IronChest extends ResourceProviderScene
 
 var give_coin_timer_timeout : bool = false
 @onready var state_machine_playback : AnimationNodeStateMachinePlayback = %AnimationTree.get("parameters/StateMachine/playback")

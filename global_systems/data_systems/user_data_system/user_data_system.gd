@@ -72,6 +72,7 @@ func _create_new_ud_allies() -> Array[UDAlly]:
 		var new_ud_ally: UDAlly = UDAlly.new()
 		new_ud_ally.id = ally.id
 		for ally_level in ally.levels as Array[AllyLevelData]:
+			if !ally_level: continue
 			var new_ud_ally_level: UDAllyLevel = UDAllyLevel.new()
 			new_ud_ally_level.id = ally_level.id
 			new_ud_ally_level.ally_id = ally_level.ally_id

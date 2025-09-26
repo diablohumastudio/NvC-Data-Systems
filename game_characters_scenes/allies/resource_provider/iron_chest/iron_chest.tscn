@@ -1,7 +1,9 @@
-[gd_scene load_steps=32 format=3 uid="uid://dwmd00t3h1w4g"]
+[gd_scene load_steps=34 format=3 uid="uid://dwmd00t3h1w4g"]
 
 [ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/shared_assets/circle_shadow.png" id="1_h2rfk"]
 [ext_resource type="Script" uid="uid://b884x2b461qs" path="res://game_characters_scenes/allies/resource_provider/iron_chest/iron_chest.gd" id="1_o76r3"]
+[ext_resource type="Script" uid="uid://c3skicx1p4687" path="res://game_characters_scenes/allies/models/ally_scene/ally_level_dependants_nodes/ally_level_dependent_sprite2D.gd" id="4_u00hx"]
+[ext_resource type="Texture2D" uid="uid://dglhyp43egvd6" path="res://icon.svg" id="5_l0g8a"]
 [ext_resource type="Texture2D" uid="uid://cyx4oahsseux8" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/level_2.png" id="8_kfidy"]
 [ext_resource type="Texture2D" uid="uid://5xg73u1xoy12" path="res://game_characters_scenes/shared_assets/circle_particle.png" id="13_10r13"]
 [ext_resource type="Texture2D" uid="uid://jdulueb7gowt" path="res://game_characters_scenes/shared_assets/dust_particle.png" id="17_rxg2f"]
@@ -706,8 +708,15 @@ nodes/StateMachine/position = Vector2(-40, 100)
 node_connections = [&"output", 0, &"StateMachine"]
 
 [node name="IronChest" type="CharacterBody2D"]
-position = Vector2(759, 797)
+position = Vector2(93, 135)
 script = ExtResource("1_o76r3")
+
+[node name="SelectAllyBtn" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = -88.0
+offset_top = -133.0
+offset_right = 70.0
+offset_bottom = 54.0
 
 [node name="TestDyingBtn" type="Button" parent="."]
 offset_left = 317.0
@@ -731,6 +740,11 @@ texture = ExtResource("8_kfidy")
 offset = Vector2(-1, -23)
 region_enabled = true
 region_rect = Rect2(0, 48.5659, 169.729, 133.355)
+script = ExtResource("4_u00hx")
+levels_modifiers_textures = Dictionary[String, Texture2D]({
+"IRCS1": ExtResource("5_l0g8a")
+})
+metadata/_custom_type_script = "uid://c3skicx1p4687"
 
 [node name="Top" type="Sprite2D" parent="Textures/Down"]
 position = Vector2(-97, -100)
