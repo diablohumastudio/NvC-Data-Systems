@@ -35,6 +35,7 @@ func on_ally_upgrade_menu_level_changed(level: AllyLevelData):
 		change_sc_ally(load(level.scene_path).instantiate()) # TODO: load at ready of game_screen
 	in_game_buyed_levels.append(level)
 	get_tree().call_group(str(current_ally_scene), "set_levels", in_game_buyed_levels)
+	#TODO set variables of ally based on in_game_buyed_levels
 
 func on_select_ally_btn_pressed():
 	if GSS.removing_ally_state:

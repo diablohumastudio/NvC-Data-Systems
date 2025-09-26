@@ -69,8 +69,7 @@ func _check_transitions() -> void:
 		return # No enemies detected so no need to use idle_cycle_counter
 	
 	if long_opponent_detected and !short_opponent_detected:
-		%AnimationPlayer.speed_scale = shooting_speed
-		print(shooting_speed, %AnimationPlayer.speed_scale)
+		%AnimationTree.set("parameters/TimeScale/scale", 5.0)
 	_update_wait_cycle_counter()
 
 func _update_wait_cycle_counter() -> void:

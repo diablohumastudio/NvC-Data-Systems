@@ -1,4 +1,4 @@
-[gd_scene load_steps=105 format=3 uid="uid://oyoty7ffa6gl"]
+[gd_scene load_steps=106 format=3 uid="uid://oyoty7ffa6gl"]
 
 [ext_resource type="Material" uid="uid://1e3tt2sswtl0" path="res://global_assets/shaders/burn_material.tres" id="1_6citr"]
 [ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/shared_assets/circle_shadow.png" id="1_htuxv"]
@@ -3899,16 +3899,20 @@ states/stab/position = Vector2(647, 209.44)
 transitions = ["Start", "spawn", SubResource("AnimationNodeStateMachineTransition_u10ri"), "spawn", "idle", SubResource("AnimationNodeStateMachineTransition_55rtu"), "idle", "check_transitions", SubResource("AnimationNodeStateMachineTransition_hli2b"), "check_transitions", "idle", SubResource("AnimationNodeStateMachineTransition_xv13u"), "check_transitions", "shoot", SubResource("AnimationNodeStateMachineTransition_4lk1l"), "shoot", "check_transitions", SubResource("AnimationNodeStateMachineTransition_br3xr"), "check_transitions", "reload", SubResource("AnimationNodeStateMachineTransition_ugh7e"), "reload", "check_transitions", SubResource("AnimationNodeStateMachineTransition_as3as"), "check_transitions", "stab", SubResource("AnimationNodeStateMachineTransition_0nwkq"), "stab", "check_transitions", SubResource("AnimationNodeStateMachineTransition_t5w3q")]
 graph_offset = Vector2(0, 25.2634)
 
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_xjgfn"]
+
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_hli2b"]
-graph_offset = Vector2(-220.987, -12.8617)
+graph_offset = Vector2(-260.764, -29.817)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_hli2b")
 nodes/Animation/position = Vector2(-40, 220)
 nodes/OneShot/node = SubResource("AnimationNodeOneShot_xv13u")
 nodes/OneShot/position = Vector2(220.963, 102.671)
 nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_efr0r")
 nodes/StateMachine/position = Vector2(-80, 20)
-nodes/output/position = Vector2(500, 120)
-node_connections = [&"OneShot", 0, &"StateMachine", &"OneShot", 1, &"Animation", &"output", 0, &"OneShot"]
+nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_xjgfn")
+nodes/TimeScale/position = Vector2(440, 80)
+nodes/output/position = Vector2(660, 120)
+node_connections = [&"OneShot", 0, &"StateMachine", &"OneShot", 1, &"Animation", &"TimeScale", 0, &"OneShot", &"output", 0, &"TimeScale"]
 
 [node name="BayonetSoldier" type="CharacterBody2D"]
 material = ExtResource("1_6citr")
@@ -4181,6 +4185,7 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/OneShot/active = false
 parameters/OneShot/internal_active = false
 parameters/OneShot/request = 0
+parameters/TimeScale/scale = 1.0
 
 [connection signal="pressed" from="TestDyingBtn" to="." method="_on_test_dying_btn_pressed"]
 [connection signal="pressed" from="TestDamageButton" to="." method="_on_test_damage_button_pressed"]
