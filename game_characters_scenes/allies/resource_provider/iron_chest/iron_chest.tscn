@@ -1,10 +1,16 @@
-[gd_scene load_steps=34 format=3 uid="uid://dwmd00t3h1w4g"]
+[gd_scene load_steps=40 format=3 uid="uid://dwmd00t3h1w4g"]
 
 [ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/shared_assets/circle_shadow.png" id="1_h2rfk"]
 [ext_resource type="Script" uid="uid://b884x2b461qs" path="res://game_characters_scenes/allies/resource_provider/iron_chest/iron_chest.gd" id="1_o76r3"]
+[ext_resource type="Texture2D" uid="uid://ddvbp4c5dldiq" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/health/structure_3.png" id="3_bhh23"]
+[ext_resource type="Texture2D" uid="uid://bvotih53nrnk2" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/health/structure_1.png" id="3_xcb8a"]
 [ext_resource type="Script" uid="uid://c3skicx1p4687" path="res://game_characters_scenes/allies/models/ally_scene/ally_level_dependants_nodes/ally_level_dependent_sprite2D.gd" id="4_u00hx"]
-[ext_resource type="Texture2D" uid="uid://dglhyp43egvd6" path="res://icon.svg" id="5_l0g8a"]
-[ext_resource type="Texture2D" uid="uid://cyx4oahsseux8" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/level_2.png" id="8_kfidy"]
+[ext_resource type="Texture2D" uid="uid://jcj1mt1rwwiw" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/health/structure_base.png" id="5_ev2mq"]
+[ext_resource type="Texture2D" uid="uid://ccajdtgt8g3y3" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/speed/level_1.png" id="6_d46ik"]
+[ext_resource type="Texture2D" uid="uid://d4bm2tgmjliby" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/health/structure_2.png" id="7_ao53d"]
+[ext_resource type="Texture2D" uid="uid://cubfba0j7hqnd" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/speed/level_base.png" id="7_bny8o"]
+[ext_resource type="Texture2D" uid="uid://bb18od5q34k1f" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/speed/level_2.png" id="8_bhh23"]
+[ext_resource type="Texture2D" uid="uid://krk0npdxxc2x" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/speed/level_3.png" id="9_ev2mq"]
 [ext_resource type="Texture2D" uid="uid://5xg73u1xoy12" path="res://game_characters_scenes/shared_assets/circle_particle.png" id="13_10r13"]
 [ext_resource type="Texture2D" uid="uid://jdulueb7gowt" path="res://game_characters_scenes/shared_assets/dust_particle.png" id="17_rxg2f"]
 [ext_resource type="Texture2D" uid="uid://b5ro46i71vfn0" path="res://screens/game/pop_ups/game_won_popup/assets/star_blink.png" id="21_ncvss"]
@@ -727,31 +733,54 @@ theme_override_font_sizes/font_size = 50
 text = "Test Death"
 
 [node name="Shadow" type="Sprite2D" parent="."]
-position = Vector2(-2, 22)
+position = Vector2(-1, 28)
 scale = Vector2(1.23684, 1)
 texture = ExtResource("1_h2rfk")
 
 [node name="Textures" type="Node2D" parent="."]
 position = Vector2(0, 39)
 
+[node name="Base" type="Sprite2D" parent="Textures"]
+position = Vector2(1, -9.75099)
+texture = ExtResource("5_ev2mq")
+script = ExtResource("4_u00hx")
+levels_modifiers_textures = Dictionary[String, Texture2D]({
+"IRC_B": ExtResource("5_ev2mq"),
+"IRC_H1": ExtResource("3_xcb8a"),
+"IRC_H2": ExtResource("7_ao53d"),
+"IRC_H3": ExtResource("3_bhh23")
+})
+metadata/_custom_type_script = "uid://c3skicx1p4687"
+
 [node name="Down" type="Sprite2D" parent="Textures"]
 position = Vector2(-1, -28)
-texture = ExtResource("8_kfidy")
+texture = ExtResource("7_bny8o")
 offset = Vector2(-1, -23)
 region_enabled = true
 region_rect = Rect2(0, 48.5659, 169.729, 133.355)
 script = ExtResource("4_u00hx")
 levels_modifiers_textures = Dictionary[String, Texture2D]({
-"IRCS1": ExtResource("5_l0g8a")
+"IRC_B": ExtResource("7_bny8o"),
+"IRC_S1": ExtResource("6_d46ik"),
+"IRC_S2": ExtResource("8_bhh23"),
+"IRC_S3": ExtResource("9_ev2mq")
 })
 metadata/_custom_type_script = "uid://c3skicx1p4687"
 
 [node name="Top" type="Sprite2D" parent="Textures/Down"]
 position = Vector2(-97, -100)
-texture = ExtResource("8_kfidy")
+texture = ExtResource("6_d46ik")
 offset = Vector2(83, 4)
 region_enabled = true
 region_rect = Rect2(189.742, 13.3571, 189.099, 166.682)
+script = ExtResource("4_u00hx")
+levels_modifiers_textures = Dictionary[String, Texture2D]({
+"IRC_B": ExtResource("7_bny8o"),
+"IRC_S1": ExtResource("6_d46ik"),
+"IRC_S2": ExtResource("8_bhh23"),
+"IRC_S3": ExtResource("9_ev2mq")
+})
+metadata/_custom_type_script = "uid://c3skicx1p4687"
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="Textures/Down"]
 visible = false
