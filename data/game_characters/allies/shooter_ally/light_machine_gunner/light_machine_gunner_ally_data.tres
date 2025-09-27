@@ -21,6 +21,7 @@
 resource_name = "light_machine_gunner"
 script = ExtResource("2_yrfqg")
 id = 103
+type = 0
 ally_name = "Light Machine Gunner"
 description = "A soldier with a powerful and fast weapon, but with a shorter range than the Bayonet Soldier. Has also a great moustache."
 ally_selector_thumbnail = ExtResource("1_yrfqg")

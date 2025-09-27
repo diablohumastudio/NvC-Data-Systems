@@ -21,6 +21,7 @@
 resource_name = "fast_bayonet_soldier"
 script = ExtResource("2_cr7oq")
 id = 102
+type = 0
 ally_name = "Fast Bayonet Soldier"
 description = "A skilled soldier that can react and shoot faster, but has less health."
 ally_selector_thumbnail = ExtResource("1_cr7oq")

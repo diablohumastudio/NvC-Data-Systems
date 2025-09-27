@@ -21,6 +21,7 @@
 resource_name = "farmer"
 script = ExtResource("2_oi2uf")
 id = 105
+type = 0
 ally_name = "Farmer"
 description = "The cheapest soldier of them all, you'll save some coins hiring him, but his range is not the greatest."
 ally_selector_thumbnail = ExtResource("1_oi2uf")

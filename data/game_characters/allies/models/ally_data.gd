@@ -16,7 +16,10 @@ enum IDs { BYS = 101,
 			MOL = 403
 			}
 
+enum TYPES {SHOOTER_ALLY, RESOURCE_PROVIDER, EXPLOSIVE, OBSTRUCTER}
+
 @export var id: IDs
+@export var type : TYPES
 
 @export var ally_name: String
 @export var description: String

@@ -21,6 +21,7 @@
 resource_name = "bayonet_soldier"
 script = ExtResource("1_i87kw")
 id = 101
+type = 0
 ally_name = "Bayonet Soldier"
 description = "The reliable base unit, balanced in every skill. Will shoot at any enemy that approaches him."
 ally_selector_thumbnail = ExtResource("1_w8eor")

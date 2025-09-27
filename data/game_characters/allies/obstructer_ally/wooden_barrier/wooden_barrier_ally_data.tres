@@ -15,6 +15,7 @@
 resource_name = "wooden_barrier"
 script = ExtResource("2_j1cmd")
 id = 302
+type = 3
 ally_name = "Wooden Barrier"
 description = "A wooden version of the barrier, has less health but its barbed wire its sharper."
 ally_selector_thumbnail = ExtResource("1_j1cmd")

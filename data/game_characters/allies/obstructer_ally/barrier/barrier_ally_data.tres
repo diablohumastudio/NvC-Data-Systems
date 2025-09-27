@@ -15,6 +15,7 @@
 resource_name = "barrier"
 script = ExtResource("2_ydnyl")
 id = 301
+type = 3
 ally_name = "Barrier"
 description = "A metallic structure great for slowing down enemies and blocking incoming attacks."
 ally_selector_thumbnail = ExtResource("1_ydnyl")

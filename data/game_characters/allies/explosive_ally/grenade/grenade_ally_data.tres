@@ -15,6 +15,7 @@
 resource_name = "grenade"
 script = ExtResource("2_p7fgs")
 id = 402
+type = 2
 ally_name = "Grenade"
 description = "A throwable explosive that will land exactly on the tile you are aiming, and will deal area damage."
 ally_selector_thumbnail = ExtResource("1_p7fgs")

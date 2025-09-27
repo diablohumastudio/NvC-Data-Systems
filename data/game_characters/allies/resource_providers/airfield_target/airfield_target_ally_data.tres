@@ -18,6 +18,7 @@
 resource_name = "airfield_target"
 script = ExtResource("2_fxeoy")
 id = 203
+type = 1
 ally_name = "Airfield Target"
 description = "A strong and really valuable resource provider, but will take a while before the plane drops a box."
 ally_selector_thumbnail = ExtResource("1_fxeoy")

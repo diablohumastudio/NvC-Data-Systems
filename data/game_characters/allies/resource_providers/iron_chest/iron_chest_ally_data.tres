@@ -18,6 +18,7 @@
 resource_name = "iron_chest"
 script = ExtResource("1_3idmb")
 id = 201
+type = 1
 ally_name = "Iron Chest"
 description = "A stable source of income in the war economy. Will spawn a coin every now and then"
 ally_selector_thumbnail = ExtResource("1_8br03")

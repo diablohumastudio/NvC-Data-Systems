@@ -15,6 +15,7 @@
 resource_name = "landmine"
 script = ExtResource("2_noulu")
 id = 401
+type = 2
 ally_name = "Landmine"
 description = "A powerful explosive that can be placed in the frontline to deal area damage. But you will have to wait for it to charge before it activates."
 ally_selector_thumbnail = ExtResource("1_noulu")

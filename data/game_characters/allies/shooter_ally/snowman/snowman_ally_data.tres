@@ -21,6 +21,7 @@
 resource_name = "snowman"
 script = ExtResource("5_ny2fr")
 id = 106
+type = 0
 ally_name = "Snowman"
 description = "The personification of the soviet winter, will slow down the enemies with his ice blast."
 ally_selector_thumbnail = ExtResource("1_2bj7x")

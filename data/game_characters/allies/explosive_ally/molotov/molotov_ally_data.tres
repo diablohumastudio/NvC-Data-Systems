@@ -15,6 +15,7 @@
 resource_name = "molotov"
 script = ExtResource("2_shwwi")
 id = 403
+type = 2
 ally_name = "Molotov"
 description = "A less powerful and cheaper throwable explosive, but with a burn effect that will hurt enemies for a while."
 ally_selector_thumbnail = ExtResource("1_shwwi")

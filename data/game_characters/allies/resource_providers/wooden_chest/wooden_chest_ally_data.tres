@@ -17,6 +17,7 @@
 resource_name = "wooden_chest"
 script = ExtResource("2_lqr71")
 id = 202
+type = 1
 ally_name = "Wooden Chest"
 description = "A weaker version of the chest, but will give more valuable coins."
 ally_selector_thumbnail = ExtResource("1_lqr71")
