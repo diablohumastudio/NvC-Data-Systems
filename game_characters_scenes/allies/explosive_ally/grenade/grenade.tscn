@@ -1,16 +1,20 @@
-[gd_scene load_steps=26 format=3 uid="uid://bs6a1e6fgv7y3"]
+[gd_scene load_steps=30 format=3 uid="uid://bs6a1e6fgv7y3"]
 
 [ext_resource type="Script" uid="uid://dv5p6bnxebwd5" path="res://game_characters_scenes/allies/explosive_ally/grenade/grenade.gd" id="1_yl2wb"]
 [ext_resource type="Texture2D" uid="uid://saxbm5r1rdmd" path="res://game_characters_scenes/allies/explosive_ally/grenade/assets/grenade_explosion/grenade_explosion_1.png" id="3_1ytgc"]
 [ext_resource type="Texture2D" uid="uid://ucccjshbwmer" path="res://game_characters_scenes/allies/explosive_ally/grenade/assets/grenade_explosion/grenade_explosion_2.png" id="4_q40b0"]
 [ext_resource type="Texture2D" uid="uid://b1ounqnho5d4h" path="res://game_characters_scenes/allies/explosive_ally/grenade/assets/grenade_explosion/grenade_explosion_3.png" id="5_dlsit"]
-[ext_resource type="Texture2D" uid="uid://xvvq0q16je5t" path="res://game_characters_scenes/allies/explosive_ally/grenade/assets/level_1.png" id="6_8nh68"]
 [ext_resource type="Texture2D" uid="uid://tluu85vwuab8" path="res://game_characters_scenes/allies/explosive_ally/grenade/assets/grenade_explosion/grenade_explosion_4.png" id="6_uy6mf"]
 [ext_resource type="Texture2D" uid="uid://wbpi3u57fjue" path="res://game_characters_scenes/allies/explosive_ally/grenade/assets/grenade_explosion/grenade_explosion_5.png" id="7_wwly4"]
 [ext_resource type="Texture2D" uid="uid://binscrs3tixvf" path="res://game_characters_scenes/allies/explosive_ally/grenade/assets/grenade_explosion/grenade_explosion_6.png" id="8_r6g3u"]
 [ext_resource type="Texture2D" uid="uid://bkin0utw8r0io" path="res://game_characters_scenes/allies/explosive_ally/grenade/assets/grenade_explosion/grenade_explosion_7.png" id="9_ea1fd"]
 [ext_resource type="Texture2D" uid="uid://csnkh8n5u6lm7" path="res://game_characters_scenes/allies/explosive_ally/grenade/assets/grenade_explosion/grenade_explosion_8.png" id="10_eoggu"]
+[ext_resource type="Texture2D" uid="uid://bx4wk8lcqucxx" path="res://game_characters_scenes/allies/explosive_ally/grenade/assets/area/level_3.png" id="11_4oa1g"]
 [ext_resource type="Texture2D" uid="uid://bwfmslpeaj1c4" path="res://game_characters_scenes/allies/explosive_ally/grenade/assets/grenade_explosion/grenade_explosion_9.png" id="11_jyock"]
+[ext_resource type="Texture2D" uid="uid://dojaba0kht1wh" path="res://game_characters_scenes/allies/explosive_ally/grenade/assets/area/base.png" id="11_ugldh"]
+[ext_resource type="Script" uid="uid://c3skicx1p4687" path="res://game_characters_scenes/allies/models/ally_scene/ally_level_dependants_nodes/ally_level_dependent_sprite2D.gd" id="12_n8qkt"]
+[ext_resource type="Texture2D" uid="uid://b3abgmiwm57ry" path="res://game_characters_scenes/allies/explosive_ally/grenade/assets/area/level_1.png" id="13_ujcxx"]
+[ext_resource type="Texture2D" uid="uid://hxwn8dmpkem3" path="res://game_characters_scenes/allies/explosive_ally/grenade/assets/area/level_2.png" id="14_a2hxh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_51dni"]
 animations = [{
@@ -287,7 +291,15 @@ sprite_frames = SubResource("SpriteFrames_51dni")
 [node name="GrenadeTexture" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(-8, -2)
-texture = ExtResource("6_8nh68")
+texture = ExtResource("11_ugldh")
+script = ExtResource("12_n8qkt")
+levels_modifiers_textures = Dictionary[String, Texture2D]({
+"GRN_A1": ExtResource("13_ujcxx"),
+"GRN_A2": ExtResource("14_a2hxh"),
+"GRN_A3": ExtResource("11_4oa1g"),
+"GRN_B": ExtResource("11_ugldh")
+})
+metadata/_custom_type_script = "uid://c3skicx1p4687"
 
 [node name="ExplosionBlastArea" type="Area2D" parent="."]
 unique_name_in_owner = true
