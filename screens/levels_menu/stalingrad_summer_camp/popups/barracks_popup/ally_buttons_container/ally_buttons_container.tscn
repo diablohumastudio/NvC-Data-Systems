@@ -1,0 +1,110 @@
+[gd_scene load_steps=22 format=3 uid="uid://d4e3dyntx3bfb"]
+
+[ext_resource type="Script" uid="uid://cs0ymtqqxkks4" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/ally_buttons_container/ally_buttons_container.gd" id="1_8ym3q"]
+[ext_resource type="Texture2D" uid="uid://dfl4w3q55v533" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/ally_buttons_container/assets/top_panel.png" id="1_xooia"]
+[ext_resource type="PackedScene" uid="uid://cj1lvhqy5v3dr" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/ally_buttons_container/ally_btn/ally_btn.tscn" id="2_1d5hc"]
+[ext_resource type="Texture2D" uid="uid://b77ol8anufvvx" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/ally_buttons_container/assets/left_title_arrow.png" id="2_jkj5p"]
+[ext_resource type="FontFile" uid="uid://c037te0jknb01" path="res://global_assets/fonts/Molot.otf" id="3_1277g"]
+[ext_resource type="Texture2D" uid="uid://cch5p88gdea3i" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/ally_buttons_container/assets/right_title_arrow.png" id="4_5p0je"]
+[ext_resource type="Texture2D" uid="uid://bboany3lbt752" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/farmer.png" id="4_xooia"]
+[ext_resource type="Texture2D" uid="uid://clkvagfug1f6f" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/farmer_selected.png" id="5_jkj5p"]
+[ext_resource type="Texture2D" uid="uid://b33g6nrkpc522" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/farmer_hover.png" id="6_1277g"]
+[ext_resource type="Texture2D" uid="uid://52w6dv3fbas8" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/snowman.png" id="7_5p0je"]
+[ext_resource type="Texture2D" uid="uid://cugw36ow1iv4v" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/snowman_selected.png" id="8_1vlxs"]
+[ext_resource type="Texture2D" uid="uid://c7uhaero7ql6o" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/snowman_hover.png" id="9_epjfa"]
+[ext_resource type="Texture2D" uid="uid://j1kdipsh0c6i" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/light_machine_gunner.png" id="10_uqogr"]
+[ext_resource type="Texture2D" uid="uid://dxv78r7xotwae" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/light_machine_gunner_selected.png" id="11_4sry7"]
+[ext_resource type="Texture2D" uid="uid://dyropd1rlp84f" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/light_machine_gunner_hover.png" id="12_fbqjr"]
+[ext_resource type="Texture2D" uid="uid://rsiuoeq3agcs" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/shield_soldier.png" id="13_5nwln"]
+[ext_resource type="Texture2D" uid="uid://cntk1jwavtv50" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/shield_soldier_selected.png" id="14_l5bs8"]
+[ext_resource type="Texture2D" uid="uid://lg3b3xpam1jw" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/shield_soldier_hover.png" id="15_m5g2l"]
+[ext_resource type="Texture2D" uid="uid://xb233wddk0ng" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/fast_bayonet_soldier.png" id="16_48e6u"]
+[ext_resource type="Texture2D" uid="uid://c3xm7uuyr4svx" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/fast_bayonet_soldier_selected.png" id="17_rj7ge"]
+[ext_resource type="Texture2D" uid="uid://l3cve0ata15l" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/fast_bayonet_soldier_hover.png" id="18_tai4d"]
+
+[node name="AllyButtonsContainer" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_bottom = 140.0
+script = ExtResource("1_8ym3q")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_xooia")
+
+[node name="TitleContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 379.0
+offset_top = 33.0
+offset_right = 718.0
+offset_bottom = 96.0
+
+[node name="DecorationLeft" type="TextureRect" parent="TitleContainer"]
+layout_mode = 2
+texture = ExtResource("2_jkj5p")
+
+[node name="SpaceLeft" type="Control" parent="TitleContainer"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="Title" type="Label" parent="TitleContainer"]
+unique_name_in_owner = true
+modulate = Color(0.929412, 0.921569, 0.854902, 1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_1277g")
+theme_override_font_sizes/font_size = 55
+text = "soldiers"
+
+[node name="SpaceRight" type="Control" parent="TitleContainer"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="DecorationRight" type="TextureRect" parent="TitleContainer"]
+layout_mode = 2
+texture = ExtResource("4_5p0je")
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+clip_children = 2
+layout_mode = 0
+offset_left = 108.0
+offset_top = 97.0
+offset_right = 1038.0
+offset_bottom = 237.0
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="BayonetSoldier" parent="ButtonsContainer" instance=ExtResource("2_1d5hc")]
+layout_mode = 2
+
+[node name="Farmer" type="TextureButton" parent="ButtonsContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_xooia")
+texture_hover = ExtResource("5_jkj5p")
+texture_focused = ExtResource("6_1277g")
+
+[node name="Snowman" type="TextureButton" parent="ButtonsContainer"]
+layout_mode = 2
+texture_normal = ExtResource("7_5p0je")
+texture_hover = ExtResource("8_1vlxs")
+texture_focused = ExtResource("9_epjfa")
+
+[node name="LightMachineGunner" type="TextureButton" parent="ButtonsContainer"]
+layout_mode = 2
+texture_normal = ExtResource("10_uqogr")
+texture_hover = ExtResource("11_4sry7")
+texture_focused = ExtResource("12_fbqjr")
+
+[node name="ShieldSoldier" type="TextureButton" parent="ButtonsContainer"]
+layout_mode = 2
+texture_normal = ExtResource("13_5nwln")
+texture_hover = ExtResource("14_l5bs8")
+texture_focused = ExtResource("15_m5g2l")
+
+[node name="FastBayonetSoldier" type="TextureButton" parent="ButtonsContainer"]
+layout_mode = 2
+texture_normal = ExtResource("16_48e6u")
+texture_hover = ExtResource("17_rj7ge")
+texture_focused = ExtResource("18_tai4d")

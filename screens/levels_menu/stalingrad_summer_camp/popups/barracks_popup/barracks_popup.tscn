@@ -1,31 +1,29 @@
-[gd_scene load_steps=66 format=3 uid="uid://drind8lvt12co"]
+[gd_scene load_steps=98 format=3 uid="uid://drind8lvt12co"]
 
 [ext_resource type="Script" uid="uid://ct6w08st6cih0" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/barracks_popup.gd" id="1_j814t"]
+[ext_resource type="Script" uid="uid://ccntxav05c4k" path="res://data/game_characters/allies/models/ally_data.gd" id="2_8ek6v"]
 [ext_resource type="Shader" uid="uid://boa325ynfrjd4" path="res://global_assets/shaders/perspective_shader.gdshader" id="2_iddoq"]
-[ext_resource type="Texture2D" uid="uid://daynq5rif7g55" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/bayonet_soldier.png" id="3_4n38t"]
-[ext_resource type="Texture2D" uid="uid://ctx8uxdib6p6k" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/bayonet_soldier_hover.png" id="4_te2oh"]
-[ext_resource type="Texture2D" uid="uid://djnwkqeoru44w" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/bayonet_soldier_selected.png" id="5_1uq2w"]
-[ext_resource type="Texture2D" uid="uid://52w6dv3fbas8" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/snowman.png" id="6_pnsym"]
-[ext_resource type="Texture2D" uid="uid://c7uhaero7ql6o" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/snowman_hover.png" id="7_r3kby"]
+[ext_resource type="Resource" uid="uid://ck4vhcsqfny01" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/bayonete_soldier_ally_data.tres" id="3_vhrl5"]
+[ext_resource type="Resource" uid="uid://bjbi720jmxnbk" path="res://data/game_characters/allies/shooter_ally/farmer/farmer_ally_data.tres" id="4_tt6bk"]
+[ext_resource type="PackedScene" uid="uid://d4e3dyntx3bfb" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/ally_buttons_container/ally_buttons_container.tscn" id="5_77ety"]
+[ext_resource type="Resource" uid="uid://d3nqpt85o3ucx" path="res://data/game_characters/allies/shooter_ally/snowman/snowman_ally_data.tres" id="5_hydif"]
+[ext_resource type="Resource" uid="uid://bvkc1rbpkb46v" path="res://data/game_characters/allies/shooter_ally/light_machine_gunner/light_machine_gunner_ally_data.tres" id="6_mobow"]
+[ext_resource type="Resource" uid="uid://dfb1cftgkh5bn" path="res://data/game_characters/allies/shooter_ally/shield_soldier/shield_soldier_ally_data.tres" id="7_05ggo"]
 [ext_resource type="Texture2D" uid="uid://b2riku1i075r" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/ally_creator_popup_bg.png" id="8_1yf5a"]
-[ext_resource type="Texture2D" uid="uid://bboany3lbt752" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/farmer.png" id="8_lb3hp"]
-[ext_resource type="Texture2D" uid="uid://cugw36ow1iv4v" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/snowman_selected.png" id="8_te2oh"]
-[ext_resource type="Texture2D" uid="uid://b33g6nrkpc522" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/farmer_hover.png" id="9_24n6e"]
-[ext_resource type="Texture2D" uid="uid://clkvagfug1f6f" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/farmer_selected.png" id="10_55d65"]
+[ext_resource type="Resource" uid="uid://boso5gok2mbeg" path="res://data/game_characters/allies/shooter_ally/fast_bayonet_soldier/fast_bayonet_soldier_ally_data.tres" id="8_djl3y"]
+[ext_resource type="Resource" uid="uid://bnju7x23kr56h" path="res://data/game_characters/allies/resource_providers/iron_chest/iron_chest_ally_data.tres" id="9_yncvy"]
+[ext_resource type="Resource" uid="uid://bn5fasrughv14" path="res://data/game_characters/allies/resource_providers/wooden_chest/wooden_chest_ally_data.tres" id="10_4u2ip"]
 [ext_resource type="Texture2D" uid="uid://dvx6mgvc211h5" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/shooting_speed_icon.png" id="10_a5467"]
-[ext_resource type="Texture2D" uid="uid://rsiuoeq3agcs" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/shield_soldier.png" id="11_7ds5v"]
+[ext_resource type="Resource" uid="uid://bjx0mkrftyccy" path="res://data/game_characters/allies/resource_providers/airfield_target/airfield_target_ally_data.tres" id="11_08ay3"]
 [ext_resource type="Texture2D" uid="uid://u3a2van16e4b" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/shooting_range_icon.png" id="11_enwfo"]
 [ext_resource type="Texture2D" uid="uid://dygffkjdtcnh7" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/hp_icon.png" id="12_3ec4m"]
-[ext_resource type="Texture2D" uid="uid://lg3b3xpam1jw" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/shield_soldier_hover.png" id="12_6osgi"]
-[ext_resource type="Texture2D" uid="uid://cntk1jwavtv50" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/shield_soldier_selected.png" id="13_vdnd7"]
-[ext_resource type="Texture2D" uid="uid://j1kdipsh0c6i" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/light_machine_gunner.png" id="14_035xv"]
-[ext_resource type="Texture2D" uid="uid://dyropd1rlp84f" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/light_machine_gunner_hover.png" id="15_lp7s5"]
-[ext_resource type="Texture2D" uid="uid://dxv78r7xotwae" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/light_machine_gunner_selected.png" id="16_55m3b"]
-[ext_resource type="Texture2D" uid="uid://xb233wddk0ng" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/fast_bayonet_soldier.png" id="17_oq0cm"]
-[ext_resource type="Texture2D" uid="uid://l3cve0ata15l" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/fast_bayonet_soldier_hover.png" id="18_fuubl"]
+[ext_resource type="Resource" uid="uid://bf66obdacv4aq" path="res://data/game_characters/allies/obstructer_ally/barrier/barrier_ally_data.tres" id="12_d6lh5"]
+[ext_resource type="Resource" uid="uid://kxmwtrxnx53x" path="res://data/game_characters/allies/obstructer_ally/wooden_barrier/wooden_barrier_ally_data.tres" id="13_dwrsf"]
+[ext_resource type="Resource" uid="uid://b3bf4idd7gtw3" path="res://data/game_characters/allies/explosive_ally/landmine/landmine_ally_data.tres" id="14_3vpol"]
+[ext_resource type="Resource" uid="uid://dtlv5sjqgtxwl" path="res://data/game_characters/allies/explosive_ally/grenade/grenade_ally_data.tres" id="15_4rr2q"]
+[ext_resource type="Resource" uid="uid://bq0n6notxexwn" path="res://data/game_characters/allies/explosive_ally/molotov/molotov_ally_data.tres" id="16_j18th"]
 [ext_resource type="Shader" uid="uid://o7qa0qagwx4" path="res://global_assets/shaders/burn_shader.gdshader" id="18_xp4uy"]
 [ext_resource type="Texture2D" uid="uid://w2v0kkxxyyj5" path="res://game_characters_scenes/shared_assets/level_up_alpha_mask.png" id="19_s5mxn"]
-[ext_resource type="Texture2D" uid="uid://c3xm7uuyr4svx" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/soldier_cards/fast_bayonet_soldier_selected.png" id="19_uilco"]
 [ext_resource type="Texture2D" uid="uid://rk63j4mpok" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/stat_line.png" id="20_s5mxn"]
 [ext_resource type="Texture2D" uid="uid://ceub2tve28qsb" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/knockback_icon.png" id="21_3foa8"]
 [ext_resource type="Texture2D" uid="uid://4xam5xcuh2xr" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_strength_1.png" id="22_i4wjm"]
@@ -75,6 +73,410 @@ point_count = 3
 resource_local_to_scene = true
 shader = ExtResource("18_xp4uy")
 shader_parameter/noise = ExtResource("19_s5mxn")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_77ety"]
+resource_local_to_scene = true
+shader = ExtResource("18_xp4uy")
+shader_parameter/noise = ExtResource("19_s5mxn")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_77ety"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b5f6u"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hrgj2"]
+resource_local_to_scene = true
+shader = SubResource("Shader_77ety")
+shader_parameter/noise = SubResource("CompressedTexture2D_b5f6u")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_smjlu"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2l7nf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_osgfc"]
+resource_local_to_scene = true
+shader = SubResource("Shader_smjlu")
+shader_parameter/noise = SubResource("CompressedTexture2D_2l7nf")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_q3rc3"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v04dj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d4lmm"]
+resource_local_to_scene = true
+shader = SubResource("Shader_q3rc3")
+shader_parameter/noise = SubResource("CompressedTexture2D_v04dj")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_y2qiv"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mkm0j"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jgh88"]
+resource_local_to_scene = true
+shader = SubResource("Shader_y2qiv")
+shader_parameter/noise = SubResource("CompressedTexture2D_mkm0j")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_ms0dt"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yiic4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y1o88"]
+resource_local_to_scene = true
+shader = SubResource("Shader_ms0dt")
+shader_parameter/noise = SubResource("CompressedTexture2D_yiic4")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_0e0bp"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gtqhv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xduv7"]
+resource_local_to_scene = true
+shader = SubResource("Shader_0e0bp")
+shader_parameter/noise = SubResource("CompressedTexture2D_gtqhv")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_ksp4g"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xtm2a"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mhl63"]
+resource_local_to_scene = true
+shader = SubResource("Shader_ksp4g")
+shader_parameter/noise = SubResource("CompressedTexture2D_xtm2a")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_ya5rr"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b2817"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8ek6v"]
+resource_local_to_scene = true
+shader = SubResource("Shader_ya5rr")
+shader_parameter/noise = SubResource("CompressedTexture2D_b2817")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_vhrl5"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iku32"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tt6bk"]
+resource_local_to_scene = true
+shader = SubResource("Shader_vhrl5")
+shader_parameter/noise = SubResource("CompressedTexture2D_iku32")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_hydif"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fj4hd"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mobow"]
+resource_local_to_scene = true
+shader = SubResource("Shader_hydif")
+shader_parameter/noise = SubResource("CompressedTexture2D_fj4hd")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_05ggo"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rc416"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_djl3y"]
+resource_local_to_scene = true
+shader = SubResource("Shader_05ggo")
+shader_parameter/noise = SubResource("CompressedTexture2D_rc416")
 shader_parameter/dissolve_state = -0.1
 shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
 shader_parameter/object_modulate = Color(1, 1, 1, 1)
@@ -475,6 +877,7 @@ layout_mode = 3
 anchors_preset = 0
 pivot_offset = Vector2(980, 616)
 script = ExtResource("1_j814t")
+allies = Array[ExtResource("2_8ek6v")]([ExtResource("3_vhrl5"), ExtResource("4_tt6bk"), ExtResource("5_hydif"), ExtResource("6_mobow"), ExtResource("7_05ggo"), ExtResource("8_djl3y"), ExtResource("9_yncvy"), ExtResource("10_4u2ip"), ExtResource("11_08ay3"), ExtResource("12_d6lh5"), ExtResource("13_dwrsf"), ExtResource("14_3vpol"), ExtResource("15_4rr2q"), ExtResource("16_j18th")])
 
 [node name="BlackRectangle" type="ColorRect" parent="."]
 layout_mode = 0
@@ -500,51 +903,13 @@ theme_override_font_sizes/font_size = 55
 text = "soldiers"
 horizontal_alignment = 1
 
-[node name="AllyButtonsContainer" type="HBoxContainer" parent="."]
-clip_children = 2
+[node name="AllyButtonsContainer" parent="." instance=ExtResource("5_77ety")]
+unique_name_in_owner = true
 layout_mode = 0
-offset_left = 515.0
-offset_top = 263.0
-offset_right = 1449.0
-offset_bottom = 403.0
-theme_override_constants/separation = 0
-alignment = 1
-
-[node name="BayonetSoldier" type="TextureButton" parent="AllyButtonsContainer"]
-layout_mode = 2
-texture_normal = ExtResource("3_4n38t")
-texture_hover = ExtResource("5_1uq2w")
-texture_focused = ExtResource("4_te2oh")
-
-[node name="Farmer" type="TextureButton" parent="AllyButtonsContainer"]
-layout_mode = 2
-texture_normal = ExtResource("8_lb3hp")
-texture_hover = ExtResource("10_55d65")
-texture_focused = ExtResource("9_24n6e")
-
-[node name="Snowman" type="TextureButton" parent="AllyButtonsContainer"]
-layout_mode = 2
-texture_normal = ExtResource("6_pnsym")
-texture_hover = ExtResource("8_te2oh")
-texture_focused = ExtResource("7_r3kby")
-
-[node name="LightMachineGunner" type="TextureButton" parent="AllyButtonsContainer"]
-layout_mode = 2
-texture_normal = ExtResource("14_035xv")
-texture_hover = ExtResource("16_55m3b")
-texture_focused = ExtResource("15_lp7s5")
-
-[node name="ShieldSoldier" type="TextureButton" parent="AllyButtonsContainer"]
-layout_mode = 2
-texture_normal = ExtResource("11_7ds5v")
-texture_hover = ExtResource("13_vdnd7")
-texture_focused = ExtResource("12_6osgi")
-
-[node name="FastBayonetSoldier" type="TextureButton" parent="AllyButtonsContainer"]
-layout_mode = 2
-texture_normal = ExtResource("17_oq0cm")
-texture_hover = ExtResource("19_uilco")
-texture_focused = ExtResource("18_fuubl")
+offset_left = 408.0
+offset_top = 161.0
+offset_right = 1342.0
+offset_bottom = 301.0
 
 [node name="LeftArrowButton" type="TextureButton" parent="."]
 layout_mode = 0
@@ -612,6 +977,54 @@ scale_amount_curve = SubResource("Curve_4crc3")
 [node name="BayonetSoldier" parent="AllyPreview" instance=ExtResource("25_7ds5v")]
 material = SubResource("ShaderMaterial_3foa8")
 position = Vector2(619, 755)
+
+[node name="TestDyingBtn" parent="AllyPreview/BayonetSoldier" index="0"]
+visible = false
+
+[node name="TestDamageButton" parent="AllyPreview/BayonetSoldier" index="1"]
+visible = false
+
+[node name="TestLevelUpgradeBtn" parent="AllyPreview/BayonetSoldier" index="2"]
+visible = false
+
+[node name="Textures" parent="AllyPreview/BayonetSoldier" index="6"]
+material = SubResource("ShaderMaterial_77ety")
+
+[node name="RightLeg" parent="AllyPreview/BayonetSoldier/Textures" index="0"]
+material = SubResource("ShaderMaterial_hrgj2")
+
+[node name="RightFoot" parent="AllyPreview/BayonetSoldier/Textures/RightLeg" index="0"]
+material = SubResource("ShaderMaterial_osgfc")
+
+[node name="LeftLeg" parent="AllyPreview/BayonetSoldier/Textures" index="1"]
+material = SubResource("ShaderMaterial_d4lmm")
+
+[node name="LeftFoot" parent="AllyPreview/BayonetSoldier/Textures/LeftLeg" index="0"]
+material = SubResource("ShaderMaterial_jgh88")
+
+[node name="Body" parent="AllyPreview/BayonetSoldier/Textures" index="2"]
+material = SubResource("ShaderMaterial_y1o88")
+
+[node name="RightArm" parent="AllyPreview/BayonetSoldier/Textures/Body" index="0"]
+material = SubResource("ShaderMaterial_77ety")
+
+[node name="RightElbow" parent="AllyPreview/BayonetSoldier/Textures/Body/RightArm" index="0"]
+material = SubResource("ShaderMaterial_xduv7")
+
+[node name="Hand" parent="AllyPreview/BayonetSoldier/Textures/Body/RightArm/RightElbow" index="0"]
+material = SubResource("ShaderMaterial_mhl63")
+
+[node name="Head" parent="AllyPreview/BayonetSoldier/Textures/Body" index="1"]
+material = SubResource("ShaderMaterial_8ek6v")
+
+[node name="LeftArm" parent="AllyPreview/BayonetSoldier/Textures/Body" index="2"]
+material = SubResource("ShaderMaterial_tt6bk")
+
+[node name="Bayonet" parent="AllyPreview/BayonetSoldier/Textures/Body/LeftArm" index="0"]
+material = SubResource("ShaderMaterial_mobow")
+
+[node name="LeftElbow" parent="AllyPreview/BayonetSoldier/Textures/Body/LeftArm" index="2"]
+material = SubResource("ShaderMaterial_djl3y")
 
 [node name="SkillLevelDisplay" type="Sprite2D" parent="AllyPreview"]
 position = Vector2(627, 809)
@@ -834,6 +1247,7 @@ libraries = {
 }
 
 [node name="SkillDescriptionBox" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1021, 583)
 texture = ExtResource("58_ovgwh")
 
@@ -847,3 +1261,5 @@ theme_override_fonts/font = ExtResource("24_55d65")
 theme_override_font_sizes/font_size = 22
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor "
 autowrap_mode = 2
+
+[editable path="AllyPreview/BayonetSoldier"]
