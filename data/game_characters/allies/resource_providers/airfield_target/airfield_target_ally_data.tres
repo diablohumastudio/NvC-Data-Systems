@@ -15,6 +15,7 @@
 [ext_resource type="Resource" uid="uid://caessvaa1g3sm" path="res://data/game_characters/allies/resource_providers/airfield_target/levels/aft_h3.tres" id="12_730k8"]
 
 [resource]
+resource_name = "airfield_target"
 script = ExtResource("2_fxeoy")
 id = 203
 ally_name = "Airfield Target"

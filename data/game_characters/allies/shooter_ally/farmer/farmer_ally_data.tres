@@ -18,6 +18,7 @@
 [ext_resource type="Resource" uid="uid://4lnc1idd50ay" path="res://data/game_characters/allies/shooter_ally/farmer/levels/far_h3.tres" id="15_vd2b1"]
 
 [resource]
+resource_name = "farmer"
 script = ExtResource("2_oi2uf")
 id = 105
 ally_name = "Farmer"

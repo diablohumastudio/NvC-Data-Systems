@@ -1,23 +1,24 @@
-[gd_resource type="Resource" script_class="AllyData" load_steps=17 format=3 uid="uid://bxaddilaeyy62"]
+[gd_resource type="Resource" script_class="AllyData" load_steps=17 format=3 uid="uid://ck4vhcsqfny01"]
 
 [ext_resource type="Script" uid="uid://ccntxav05c4k" path="res://data/game_characters/allies/models/ally_data.gd" id="1_i87kw"]
 [ext_resource type="Texture2D" uid="uid://dmr321vm16x6h" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/assets/bayonet_soldier.png" id="1_w8eor"]
-[ext_resource type="Resource" uid="uid://biy602j58v62h" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_b.tres" id="2_vmxb2"]
+[ext_resource type="Resource" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_b.tres" id="2_vmxb2"]
 [ext_resource type="Script" uid="uid://cp8n43lmapx8l" path="res://data/game_characters/allies/models/ally_level_data.gd" id="2_y5ttf"]
-[ext_resource type="Resource" uid="uid://1km0gtdvwxfa" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_p1.tres" id="4_usgyk"]
-[ext_resource type="Resource" uid="uid://bhujfj5cpw65g" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_p2.tres" id="5_vmxb2"]
-[ext_resource type="Resource" uid="uid://chy6mh66nr66" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_p3.tres" id="6_8hac1"]
-[ext_resource type="Resource" uid="uid://0q2vsbw6tguk" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_s1.tres" id="7_o4lwk"]
-[ext_resource type="Resource" uid="uid://xim6qt318sft" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_s2.tres" id="8_rfxjh"]
-[ext_resource type="Resource" uid="uid://5yx7ggk1nwe7" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_s3.tres" id="9_w635t"]
-[ext_resource type="Resource" uid="uid://c1xrkfr7b3uj0" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_r1.tres" id="10_ualew"]
-[ext_resource type="Resource" uid="uid://bywm6o71tcxfm" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_r2.tres" id="11_u3rdg"]
-[ext_resource type="Resource" uid="uid://byvmxxol6yg7l" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_r3.tres" id="12_elt7g"]
-[ext_resource type="Resource" uid="uid://cser3ctjbkyeu" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_h1.tres" id="13_jeacp"]
-[ext_resource type="Resource" uid="uid://b6n1wjf47rvu0" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_h2.tres" id="14_7bbm3"]
-[ext_resource type="Resource" uid="uid://qrnbvtmcl2xx" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_h3.tres" id="15_viuip"]
+[ext_resource type="Resource" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_p1.tres" id="4_usgyk"]
+[ext_resource type="Resource" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_p2.tres" id="5_vmxb2"]
+[ext_resource type="Resource" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_p3.tres" id="6_8hac1"]
+[ext_resource type="Resource" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_s1.tres" id="7_o4lwk"]
+[ext_resource type="Resource" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_s2.tres" id="8_rfxjh"]
+[ext_resource type="Resource" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_s3.tres" id="9_w635t"]
+[ext_resource type="Resource" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_r1.tres" id="10_ualew"]
+[ext_resource type="Resource" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_r2.tres" id="11_u3rdg"]
+[ext_resource type="Resource" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_r3.tres" id="12_elt7g"]
+[ext_resource type="Resource" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_h1.tres" id="13_jeacp"]
+[ext_resource type="Resource" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_h2.tres" id="14_7bbm3"]
+[ext_resource type="Resource" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_h3.tres" id="15_viuip"]
 
 [resource]
+resource_name = "bayonet_soldier"
 script = ExtResource("1_i87kw")
 id = 101
 ally_name = "Bayonet Soldier"

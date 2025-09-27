@@ -18,6 +18,7 @@
 [ext_resource type="Resource" uid="uid://8wldrdhx1puf" path="res://data/game_characters/allies/shooter_ally/fast_bayonet_soldier/levels/fbs_h3.tres" id="15_fg7sv"]
 
 [resource]
+resource_name = "fast_bayonet_soldier"
 script = ExtResource("2_cr7oq")
 id = 102
 ally_name = "Fast Bayonet Soldier"

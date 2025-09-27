@@ -18,6 +18,7 @@
 [ext_resource type="Resource" uid="uid://bda7rl32spxmt" path="res://data/game_characters/allies/shooter_ally/light_machine_gunner/levels/lmg_h3.tres" id="15_3oyrj"]
 
 [resource]
+resource_name = "light_machine_gunner"
 script = ExtResource("2_yrfqg")
 id = 103
 ally_name = "Light Machine Gunner"

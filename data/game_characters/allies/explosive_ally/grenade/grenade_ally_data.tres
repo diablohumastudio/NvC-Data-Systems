@@ -12,6 +12,7 @@
 [ext_resource type="Resource" uid="uid://dov3uqpi8v1um" path="res://data/game_characters/allies/explosive_ally/grenade/levels/grn_a3.tres" id="9_lpkvj"]
 
 [resource]
+resource_name = "grenade"
 script = ExtResource("2_p7fgs")
 id = 402
 ally_name = "Grenade"

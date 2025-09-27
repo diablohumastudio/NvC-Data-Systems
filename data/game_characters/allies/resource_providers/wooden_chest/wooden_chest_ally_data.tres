@@ -14,6 +14,7 @@
 [ext_resource type="Resource" uid="uid://cnekq4w4ekq6b" path="res://data/game_characters/allies/resource_providers/wooden_chest/levels/wdc_h3.tres" id="11_2hvi0"]
 
 [resource]
+resource_name = "wooden_chest"
 script = ExtResource("2_lqr71")
 id = 202
 ally_name = "Wooden Chest"

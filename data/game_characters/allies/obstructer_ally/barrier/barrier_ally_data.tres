@@ -12,6 +12,7 @@
 [ext_resource type="Resource" uid="uid://bto6au6kvppyd" path="res://data/game_characters/allies/obstructer_ally/barrier/levels/bar_h3.tres" id="9_y5sli"]
 
 [resource]
+resource_name = "barrier"
 script = ExtResource("2_ydnyl")
 id = 301
 ally_name = "Barrier"

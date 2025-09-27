@@ -12,6 +12,7 @@
 [ext_resource type="Resource" uid="uid://cr4tgnrj3skpc" path="res://data/game_characters/allies/explosive_ally/landmine/levels/ldm_a3.tres" id="9_slag1"]
 
 [resource]
+resource_name = "landmine"
 script = ExtResource("2_noulu")
 id = 401
 ally_name = "Landmine"

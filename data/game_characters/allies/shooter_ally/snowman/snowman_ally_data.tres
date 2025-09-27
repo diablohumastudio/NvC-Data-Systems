@@ -18,6 +18,7 @@
 [ext_resource type="Resource" uid="uid://dxmc3a8bpn1hj" path="res://data/game_characters/allies/shooter_ally/snowman/levels/snm_h3.tres" id="15_xtqbr"]
 
 [resource]
+resource_name = "snowman"
 script = ExtResource("5_ny2fr")
 id = 106
 ally_name = "Snowman"

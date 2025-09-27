@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="AllyData" load_steps=14 format=3 uid="uid://dnxrv0styygjo"]
+[gd_resource type="Resource" script_class="AllyData" load_steps=14 format=3 uid="uid://bnju7x23kr56h"]
 
 [ext_resource type="Script" uid="uid://ccntxav05c4k" path="res://data/game_characters/allies/models/ally_data.gd" id="1_3idmb"]
-[ext_resource type="Texture2D" uid="uid://c3crxjcbn6df3" path="res://data/game_characters/allies/obstructer_ally/wooden_barrier/assets/iron_chest.png" id="1_8br03"]
+[ext_resource type="Texture2D" uid="uid://c3crxjcbn6df3" path="res://data/game_characters/allies/resource_providers/iron_chest/assets/iron_chest.png" id="1_8br03"]
 [ext_resource type="Resource" uid="uid://ejj30pdsles2" path="res://data/game_characters/allies/resource_providers/iron_chest/levels/irc_b.tres" id="2_8br03"]
 [ext_resource type="Script" uid="uid://cp8n43lmapx8l" path="res://data/game_characters/allies/models/ally_level_data.gd" id="2_rf7lw"]
 [ext_resource type="Resource" uid="uid://bycko0it2wxoq" path="res://data/game_characters/allies/resource_providers/iron_chest/levels/irc_v1.tres" id="5_dt8yc"]
@@ -15,6 +15,7 @@
 [ext_resource type="Resource" uid="uid://dq5lptetep8nw" path="res://data/game_characters/allies/resource_providers/iron_chest/levels/irc_h3.tres" id="12_kltii"]
 
 [resource]
+resource_name = "iron_chest"
 script = ExtResource("1_3idmb")
 id = 201
 ally_name = "Iron Chest"

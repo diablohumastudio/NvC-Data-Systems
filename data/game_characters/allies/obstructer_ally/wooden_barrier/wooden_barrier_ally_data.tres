@@ -12,6 +12,7 @@
 [ext_resource type="Resource" uid="uid://doknxvqmv0ces" path="res://data/game_characters/allies/obstructer_ally/wooden_barrier/levels/wdb_h3.tres" id="9_jvera"]
 
 [resource]
+resource_name = "wooden_barrier"
 script = ExtResource("2_j1cmd")
 id = 302
 ally_name = "Wooden Barrier"
