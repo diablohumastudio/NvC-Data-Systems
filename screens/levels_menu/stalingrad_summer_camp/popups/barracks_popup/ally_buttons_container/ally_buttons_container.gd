@@ -10,8 +10,7 @@ func populate_container(allies:Array[AllyData]) -> void:
 
 	for ally in allies:
 		var new_ally_btn : AllyBtn = load(_ALLY_BTN_SCENE_UID).instantiate()
-		print(ally.resource_name)
-		new_ally_btn.ally_name = ally.resource_name
+		new_ally_btn.ally = ally
 		%ButtonsContainer.add_child(new_ally_btn)
 		new_ally_btn.pressed.connect(_on_ally_btn_pressed.bind(new_ally_btn))
 

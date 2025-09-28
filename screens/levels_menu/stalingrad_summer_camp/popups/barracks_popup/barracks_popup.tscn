@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=3 uid="uid://drind8lvt12co"]
+[gd_scene load_steps=90 format=3 uid="uid://drind8lvt12co"]
 
 [ext_resource type="Script" uid="uid://ct6w08st6cih0" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/barracks_popup.gd" id="1_j814t"]
 [ext_resource type="Script" uid="uid://ccntxav05c4k" path="res://data/game_characters/allies/models/ally_data.gd" id="2_8ek6v"]
@@ -11,17 +11,9 @@
 [ext_resource type="Resource" uid="uid://dfb1cftgkh5bn" path="res://data/game_characters/allies/shooter_ally/shield_soldier/shield_soldier_ally_data.tres" id="7_05ggo"]
 [ext_resource type="Texture2D" uid="uid://b2riku1i075r" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/ally_creator_popup_bg.png" id="8_1yf5a"]
 [ext_resource type="Resource" uid="uid://boso5gok2mbeg" path="res://data/game_characters/allies/shooter_ally/fast_bayonet_soldier/fast_bayonet_soldier_ally_data.tres" id="8_djl3y"]
-[ext_resource type="Resource" uid="uid://bnju7x23kr56h" path="res://data/game_characters/allies/resource_providers/iron_chest/iron_chest_ally_data.tres" id="9_yncvy"]
-[ext_resource type="Resource" uid="uid://bn5fasrughv14" path="res://data/game_characters/allies/resource_providers/wooden_chest/wooden_chest_ally_data.tres" id="10_4u2ip"]
 [ext_resource type="Texture2D" uid="uid://dvx6mgvc211h5" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/shooting_speed_icon.png" id="10_a5467"]
-[ext_resource type="Resource" uid="uid://bjx0mkrftyccy" path="res://data/game_characters/allies/resource_providers/airfield_target/airfield_target_ally_data.tres" id="11_08ay3"]
 [ext_resource type="Texture2D" uid="uid://u3a2van16e4b" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/shooting_range_icon.png" id="11_enwfo"]
 [ext_resource type="Texture2D" uid="uid://dygffkjdtcnh7" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/hp_icon.png" id="12_3ec4m"]
-[ext_resource type="Resource" uid="uid://bf66obdacv4aq" path="res://data/game_characters/allies/obstructer_ally/barrier/barrier_ally_data.tres" id="12_d6lh5"]
-[ext_resource type="Resource" uid="uid://kxmwtrxnx53x" path="res://data/game_characters/allies/obstructer_ally/wooden_barrier/wooden_barrier_ally_data.tres" id="13_dwrsf"]
-[ext_resource type="Resource" uid="uid://b3bf4idd7gtw3" path="res://data/game_characters/allies/explosive_ally/landmine/landmine_ally_data.tres" id="14_3vpol"]
-[ext_resource type="Resource" uid="uid://dtlv5sjqgtxwl" path="res://data/game_characters/allies/explosive_ally/grenade/grenade_ally_data.tres" id="15_4rr2q"]
-[ext_resource type="Resource" uid="uid://bq0n6notxexwn" path="res://data/game_characters/allies/explosive_ally/molotov/molotov_ally_data.tres" id="16_j18th"]
 [ext_resource type="Shader" uid="uid://o7qa0qagwx4" path="res://global_assets/shaders/burn_shader.gdshader" id="18_xp4uy"]
 [ext_resource type="Texture2D" uid="uid://w2v0kkxxyyj5" path="res://game_characters_scenes/shared_assets/level_up_alpha_mask.png" id="19_s5mxn"]
 [ext_resource type="Texture2D" uid="uid://rk63j4mpok" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/stat_line.png" id="20_s5mxn"]
@@ -409,7 +401,7 @@ shader_parameter/dissolve_state = -0.1
 shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
 shader_parameter/object_modulate = Color(1, 1, 1, 1)
 
-[sub_resource type="Shader" id="Shader_hydif"]
+[sub_resource type="Shader" id="Shader_8ek6v"]
 resource_local_to_scene = true
 code = "shader_type canvas_item;
 
@@ -437,9 +429,9 @@ void fragment() {
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fj4hd"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_mobow"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vhrl5"]
 resource_local_to_scene = true
-shader = SubResource("Shader_hydif")
+shader = SubResource("Shader_8ek6v")
 shader_parameter/noise = SubResource("CompressedTexture2D_fj4hd")
 shader_parameter/dissolve_state = -0.1
 shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
@@ -877,7 +869,7 @@ layout_mode = 3
 anchors_preset = 0
 pivot_offset = Vector2(980, 616)
 script = ExtResource("1_j814t")
-allies = Array[ExtResource("2_8ek6v")]([ExtResource("3_vhrl5"), ExtResource("4_tt6bk"), ExtResource("5_hydif"), ExtResource("6_mobow"), ExtResource("7_05ggo"), ExtResource("8_djl3y"), ExtResource("9_yncvy"), ExtResource("10_4u2ip"), ExtResource("11_08ay3"), ExtResource("12_d6lh5"), ExtResource("13_dwrsf"), ExtResource("14_3vpol"), ExtResource("15_4rr2q"), ExtResource("16_j18th")])
+allies = Array[ExtResource("2_8ek6v")]([ExtResource("3_vhrl5"), ExtResource("4_tt6bk"), ExtResource("5_hydif"), ExtResource("6_mobow"), ExtResource("7_05ggo"), ExtResource("8_djl3y")])
 
 [node name="BlackRectangle" type="ColorRect" parent="."]
 layout_mode = 0
@@ -1005,7 +997,7 @@ material = SubResource("ShaderMaterial_jgh88")
 [node name="Body" parent="AllyPreview/BayonetSoldier/Textures" index="2"]
 material = SubResource("ShaderMaterial_y1o88")
 
-[node name="RightArm" parent="AllyPreview/BayonetSoldier/Textures/Body" index="0"]
+[node name="RightArm" parent="AllyPreview/BayonetSoldier/Textures/Body" index="1"]
 material = SubResource("ShaderMaterial_77ety")
 
 [node name="RightElbow" parent="AllyPreview/BayonetSoldier/Textures/Body/RightArm" index="0"]
@@ -1014,14 +1006,14 @@ material = SubResource("ShaderMaterial_xduv7")
 [node name="Hand" parent="AllyPreview/BayonetSoldier/Textures/Body/RightArm/RightElbow" index="0"]
 material = SubResource("ShaderMaterial_mhl63")
 
-[node name="Head" parent="AllyPreview/BayonetSoldier/Textures/Body" index="1"]
+[node name="Head" parent="AllyPreview/BayonetSoldier/Textures/Body" index="2"]
 material = SubResource("ShaderMaterial_8ek6v")
 
-[node name="LeftArm" parent="AllyPreview/BayonetSoldier/Textures/Body" index="2"]
+[node name="LeftArm" parent="AllyPreview/BayonetSoldier/Textures/Body" index="3"]
 material = SubResource("ShaderMaterial_tt6bk")
 
-[node name="Bayonet" parent="AllyPreview/BayonetSoldier/Textures/Body/LeftArm" index="0"]
-material = SubResource("ShaderMaterial_mobow")
+[node name="Mosin" parent="AllyPreview/BayonetSoldier/Textures/Body/LeftArm" index="0"]
+material = SubResource("ShaderMaterial_vhrl5")
 
 [node name="LeftElbow" parent="AllyPreview/BayonetSoldier/Textures/Body/LeftArm" index="2"]
 material = SubResource("ShaderMaterial_djl3y")
