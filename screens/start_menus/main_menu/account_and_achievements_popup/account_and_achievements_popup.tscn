@@ -15,8 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://djps5bmv1lggd" path="res://screens/start_menus/main_menu/account_and_achievements_popup/assets/achievements_button_hover.png" id="9_4pnot"]
 [ext_resource type="PackedScene" uid="uid://bru5xmejfsk53" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/create_new_user_popup/create_new_user_popup.tscn" id="16_wwx61"]
 [ext_resource type="PackedScene" uid="uid://ddp8ihfe7dk8f" path="res://screens/start_menus/main_menu/account_and_achievements_popup/account_menu/delete_user_popup/delete_user_popup.tscn" id="17_2gcee"]
-[ext_resource type="Texture2D" uid="uid://dsx4ykwqjx1x0" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/x_button.png" id="30_xfnua"]
-[ext_resource type="Texture2D" uid="uid://th5h8fc336js" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/x_button_selected.png" id="31_kxbyf"]
+[ext_resource type="Texture2D" uid="uid://dsx4ykwqjx1x0" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/x_button.png" id="30_xfnua"]
+[ext_resource type="Texture2D" uid="uid://th5h8fc336js" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/x_button_selected.png" id="31_kxbyf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r2ocr"]
 shader = ExtResource("2_efii4")

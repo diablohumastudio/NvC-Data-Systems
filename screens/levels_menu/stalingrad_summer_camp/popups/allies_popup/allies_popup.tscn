@@ -1,0 +1,786 @@
+[gd_scene load_steps=63 format=3 uid="uid://drind8lvt12co"]
+
+[ext_resource type="Script" uid="uid://ct6w08st6cih0" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/allies_popup.gd" id="1_ovuc1"]
+[ext_resource type="Script" uid="uid://ccntxav05c4k" path="res://data/game_characters/allies/models/ally_data.gd" id="2_d65bp"]
+[ext_resource type="Resource" uid="uid://ck4vhcsqfny01" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/bayonete_soldier_ally_data.tres" id="3_8gftn"]
+[ext_resource type="Resource" uid="uid://bjbi720jmxnbk" path="res://data/game_characters/allies/shooter_ally/farmer/farmer_ally_data.tres" id="4_o6qi6"]
+[ext_resource type="Resource" uid="uid://d3nqpt85o3ucx" path="res://data/game_characters/allies/shooter_ally/snowman/snowman_ally_data.tres" id="5_k0dq6"]
+[ext_resource type="Resource" uid="uid://bvkc1rbpkb46v" path="res://data/game_characters/allies/shooter_ally/light_machine_gunner/light_machine_gunner_ally_data.tres" id="6_8k1nd"]
+[ext_resource type="Resource" uid="uid://dfb1cftgkh5bn" path="res://data/game_characters/allies/shooter_ally/shield_soldier/shield_soldier_ally_data.tres" id="7_0x8st"]
+[ext_resource type="Resource" uid="uid://boso5gok2mbeg" path="res://data/game_characters/allies/shooter_ally/fast_bayonet_soldier/fast_bayonet_soldier_ally_data.tres" id="8_rxdmc"]
+[ext_resource type="Shader" uid="uid://boa325ynfrjd4" path="res://global_assets/shaders/perspective_shader.gdshader" id="9_xrkyj"]
+[ext_resource type="Texture2D" uid="uid://b2riku1i075r" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/ally_creator_popup_bg.png" id="10_om2v1"]
+[ext_resource type="FontFile" uid="uid://c037te0jknb01" path="res://global_assets/fonts/Molot.otf" id="11_h0n0m"]
+[ext_resource type="PackedScene" uid="uid://d4e3dyntx3bfb" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/ally_buttons_container/ally_buttons_container.tscn" id="12_7xhdm"]
+[ext_resource type="PackedScene" uid="uid://cj1lvhqy5v3dr" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/ally_buttons_container/ally_btn/ally_btn.tscn" id="13_uy1ow"]
+[ext_resource type="Texture2D" uid="uid://bboany3lbt752" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/soldier_cards/farmer.png" id="14_hb5gf"]
+[ext_resource type="Texture2D" uid="uid://clkvagfug1f6f" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/soldier_cards/farmer_selected.png" id="15_befxl"]
+[ext_resource type="Texture2D" uid="uid://b33g6nrkpc522" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/soldier_cards/farmer_hover.png" id="16_5pf7c"]
+[ext_resource type="Texture2D" uid="uid://52w6dv3fbas8" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/soldier_cards/snowman.png" id="17_0r808"]
+[ext_resource type="Texture2D" uid="uid://cugw36ow1iv4v" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/soldier_cards/snowman_selected.png" id="18_fppek"]
+[ext_resource type="Texture2D" uid="uid://c7uhaero7ql6o" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/soldier_cards/snowman_hover.png" id="19_0fhea"]
+[ext_resource type="Texture2D" uid="uid://j1kdipsh0c6i" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/soldier_cards/light_machine_gunner.png" id="20_nnceg"]
+[ext_resource type="Texture2D" uid="uid://dxv78r7xotwae" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/soldier_cards/light_machine_gunner_selected.png" id="21_easum"]
+[ext_resource type="Texture2D" uid="uid://dyropd1rlp84f" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/soldier_cards/light_machine_gunner_hover.png" id="22_svi45"]
+[ext_resource type="Texture2D" uid="uid://rsiuoeq3agcs" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/soldier_cards/shield_soldier.png" id="23_53v76"]
+[ext_resource type="Texture2D" uid="uid://cntk1jwavtv50" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/soldier_cards/shield_soldier_selected.png" id="24_mm34v"]
+[ext_resource type="Texture2D" uid="uid://lg3b3xpam1jw" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/soldier_cards/shield_soldier_hover.png" id="25_hf1v6"]
+[ext_resource type="Texture2D" uid="uid://xb233wddk0ng" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/soldier_cards/fast_bayonet_soldier.png" id="26_gk6i0"]
+[ext_resource type="Texture2D" uid="uid://c3xm7uuyr4svx" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/soldier_cards/fast_bayonet_soldier_selected.png" id="27_tu6er"]
+[ext_resource type="Texture2D" uid="uid://l3cve0ata15l" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/soldier_cards/fast_bayonet_soldier_hover.png" id="28_onhuu"]
+[ext_resource type="Texture2D" uid="uid://b251v33jc2h11" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/left_arrow.png" id="29_cj0j7"]
+[ext_resource type="Texture2D" uid="uid://g7allymvx1vu" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/left_arrow_selected.png" id="30_tup0h"]
+[ext_resource type="Texture2D" uid="uid://mas33fggkb33" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/right_arrow.png" id="31_7a701"]
+[ext_resource type="Texture2D" uid="uid://c3rhx8erytd1w" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/right_arrow_selected.png" id="32_rtt8r"]
+[ext_resource type="PackedScene" uid="uid://dtup7cw3baog" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/ally_preview/ally_preview.tscn" id="33_om1el"]
+[ext_resource type="Texture2D" uid="uid://rk63j4mpok" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/stat_line.png" id="34_5yu5e"]
+[ext_resource type="Texture2D" uid="uid://ceub2tve28qsb" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/knockback_icon.png" id="35_du427"]
+[ext_resource type="Texture2D" uid="uid://4xam5xcuh2xr" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_strength_1.png" id="36_w577s"]
+[ext_resource type="Texture2D" uid="uid://c51b32r4f8dbp" path="res://data/game_characters/allies/assets/upgrade_buttons/shared/locked_button.png" id="37_rd785"]
+[ext_resource type="Texture2D" uid="uid://cx0y06il1low1" path="res://data/game_characters/allies/assets/upgrade_buttons/shared/focused_border.png" id="38_0obwh"]
+[ext_resource type="Texture2D" uid="uid://docxu0c1c5ssk" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_strength_2.png" id="39_7rxb2"]
+[ext_resource type="Texture2D" uid="uid://bbnbifp4uh4pk" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_strength_3.png" id="40_rmykf"]
+[ext_resource type="Texture2D" uid="uid://dvx6mgvc211h5" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/shooting_speed_icon.png" id="41_ye0mp"]
+[ext_resource type="Texture2D" uid="uid://cwiknrgh5e8se" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_speed_1.png" id="42_33aso"]
+[ext_resource type="Texture2D" uid="uid://dhite5cf1who2" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_speed_2.png" id="43_ueyne"]
+[ext_resource type="Texture2D" uid="uid://b67s5sx3mxe61" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_speed_3.png" id="44_kuuj6"]
+[ext_resource type="Texture2D" uid="uid://u3a2van16e4b" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/shooting_range_icon.png" id="45_bppht"]
+[ext_resource type="Texture2D" uid="uid://cbnn1tcnvdwef" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_range_1.png" id="46_rs21e"]
+[ext_resource type="Texture2D" uid="uid://dha5y68lrtagc" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_range_2.png" id="47_2xya1"]
+[ext_resource type="Texture2D" uid="uid://bqh2xrmkws5n7" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_range_3.png" id="48_o5h5c"]
+[ext_resource type="Texture2D" uid="uid://dygffkjdtcnh7" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/hp_icon.png" id="49_1h4yk"]
+[ext_resource type="Texture2D" uid="uid://b5jb6in3o885j" path="res://data/game_characters/allies/assets/upgrade_buttons/shared/health_points_1.png" id="50_cfrdt"]
+[ext_resource type="Texture2D" uid="uid://cc0o80vya8ejv" path="res://data/game_characters/allies/assets/upgrade_buttons/shared/health_points_2.png" id="51_x3xhd"]
+[ext_resource type="Texture2D" uid="uid://b66y4pfhlmnry" path="res://data/game_characters/allies/assets/upgrade_buttons/shared/health_points_3.png" id="52_8xv0x"]
+[ext_resource type="Texture2D" uid="uid://dkru850uk8jpc" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/level_previews/bayonet_soldier_level_1.png" id="53_uvlty"]
+[ext_resource type="FontFile" uid="uid://b4nmgmlb4xi24" path="res://screens/initial_screens/splash_screen_2/assets/EdgeDisplay-Regular.otf" id="54_jxmkp"]
+[ext_resource type="Texture2D" uid="uid://dsx4ykwqjx1x0" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/x_button.png" id="55_0fovw"]
+[ext_resource type="Texture2D" uid="uid://th5h8fc336js" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/x_button_selected.png" id="56_rr6ce"]
+[ext_resource type="Texture2D" uid="uid://cto237bcjp3x8" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/skill_description_box.png" id="57_j6r7s"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0ay6g"]
+shader = ExtResource("9_xrkyj")
+shader_parameter/fov = 90.0
+shader_parameter/cull_back = true
+shader_parameter/y_rot = 0.0
+shader_parameter/x_rot = 0.0
+shader_parameter/inset = 0.0
+
+[sub_resource type="Animation" id="Animation_dmtqp"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AllySkills/AllyNameLabel:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Background:material:shader_parameter/x_rot")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Background:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AllyPreview/SkillLevelDisplay/SkillLevelLabel:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BlackRectangle:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("BlackRectangle:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("BlackRectangle:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AllyPreview:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("AllySkills:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_lk4fi"]
+resource_name = "hide_popup"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlackRectangle:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2), Vector2(0.4, 0.4)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BlackRectangle:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(2.29984, 2.29984)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BlackRectangle:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-794.472, -458.288)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Background:material:shader_parameter/x_rot")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -60.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Background:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.5, 0.5)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AllyPreview:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AllySkills:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_yxoij"]
+resource_name = "show_popup"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.45),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1.5, 1.2, 1.2, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlackRectangle:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.7, 0.7), Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BlackRectangle:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.5, 1.5), Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BlackRectangle:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-794.472, -458.288), Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AllySkills/AllyNameLabel:visible_ratio")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Background:material:shader_parameter/x_rot")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.35, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-40.0, 20.0, 0.0, 4.8805, 0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Background:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.5, 0.5), Vector2(1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AllyPreview/SkillLevelDisplay/SkillLevelLabel:visible_ratio")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.2, 0.45),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AllyPreview:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("AllySkills:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.3, 0.55),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yxoij"]
+_data = {
+&"RESET": SubResource("Animation_dmtqp"),
+&"hide_popup": SubResource("Animation_lk4fi"),
+&"show_popup": SubResource("Animation_yxoij")
+}
+
+[node name="AlliesPopup" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+pivot_offset = Vector2(980, 616)
+script = ExtResource("1_ovuc1")
+allies = Array[ExtResource("2_d65bp")]([ExtResource("3_8gftn"), ExtResource("4_o6qi6"), ExtResource("5_k0dq6"), ExtResource("6_8k1nd"), ExtResource("7_0x8st"), ExtResource("8_rxdmc")])
+
+[node name="BlackRectangle" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 0.47451)
+
+[node name="Background" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_0ay6g")
+position = Vector2(974.814, 199.398)
+texture = ExtResource("10_om2v1")
+offset = Vector2(9.18597, 407.602)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 843.0
+offset_top = 195.0
+offset_right = 1116.0
+offset_bottom = 258.0
+theme_override_colors/font_color = Color(0.93, 0.92008, 0.8556, 1)
+theme_override_fonts/font = ExtResource("11_h0n0m")
+theme_override_font_sizes/font_size = 55
+text = "soldiers"
+horizontal_alignment = 1
+
+[node name="AllyButtonsContainer" parent="." instance=ExtResource("12_7xhdm")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 408.0
+offset_top = 161.0
+offset_right = 1342.0
+offset_bottom = 301.0
+
+[node name="BayonetSoldier" parent="AllyButtonsContainer/ButtonsContainer" index="0" instance=ExtResource("13_uy1ow")]
+layout_mode = 2
+
+[node name="Farmer" parent="AllyButtonsContainer/ButtonsContainer" index="1" instance=ExtResource("13_uy1ow")]
+layout_mode = 2
+texture_normal = ExtResource("14_hb5gf")
+texture_pressed = ExtResource("15_befxl")
+texture_hover = ExtResource("16_5pf7c")
+texture_focused = ExtResource("15_befxl")
+
+[node name="Snowman" parent="AllyButtonsContainer/ButtonsContainer" index="2" instance=ExtResource("13_uy1ow")]
+layout_mode = 2
+texture_normal = ExtResource("17_0r808")
+texture_pressed = ExtResource("18_fppek")
+texture_hover = ExtResource("19_0fhea")
+texture_focused = ExtResource("18_fppek")
+
+[node name="LightMachineGunner" parent="AllyButtonsContainer/ButtonsContainer" index="3" instance=ExtResource("13_uy1ow")]
+layout_mode = 2
+texture_normal = ExtResource("20_nnceg")
+texture_pressed = ExtResource("21_easum")
+texture_hover = ExtResource("22_svi45")
+texture_focused = ExtResource("21_easum")
+
+[node name="ShieldSoldier" parent="AllyButtonsContainer/ButtonsContainer" index="4" instance=ExtResource("13_uy1ow")]
+layout_mode = 2
+texture_normal = ExtResource("23_53v76")
+texture_pressed = ExtResource("24_mm34v")
+texture_hover = ExtResource("25_hf1v6")
+texture_focused = ExtResource("24_mm34v")
+
+[node name="FastBayonetSoldier6" parent="AllyButtonsContainer/ButtonsContainer" index="5" instance=ExtResource("13_uy1ow")]
+layout_mode = 2
+texture_normal = ExtResource("26_gk6i0")
+texture_pressed = ExtResource("27_tu6er")
+texture_hover = ExtResource("28_onhuu")
+texture_focused = ExtResource("27_tu6er")
+
+[node name="LeftArrowButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 457.0
+offset_top = 286.0
+offset_right = 514.0
+offset_bottom = 378.0
+texture_normal = ExtResource("29_cj0j7")
+texture_pressed = ExtResource("30_tup0h")
+texture_hover = ExtResource("30_tup0h")
+texture_focused = ExtResource("30_tup0h")
+
+[node name="RightArrowButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1454.0
+offset_top = 286.0
+offset_right = 1511.0
+offset_bottom = 378.0
+texture_normal = ExtResource("31_7a701")
+texture_pressed = ExtResource("32_rtt8r")
+texture_hover = ExtResource("32_rtt8r")
+texture_focused = ExtResource("32_rtt8r")
+
+[node name="AllyPreview" parent="." instance=ExtResource("33_om1el")]
+unique_name_in_owner = true
+offset_left = 413.0
+offset_top = 430.0
+offset_right = 413.0
+offset_bottom = 430.0
+
+[node name="AllySkills" type="Control" parent="."]
+anchors_preset = 0
+
+[node name="Skills" type="VBoxContainer" parent="AllySkills"]
+layout_mode = 0
+offset_left = 1031.0
+offset_top = 655.0
+offset_right = 1511.0
+offset_bottom = 940.0
+theme_override_constants/separation = 20
+
+[node name="Power" type="Control" parent="AllySkills/Skills"]
+custom_minimum_size = Vector2(480, 60)
+layout_mode = 2
+
+[node name="BranchLine" type="Sprite2D" parent="AllySkills/Skills/Power"]
+position = Vector2(228, 30.5)
+texture = ExtResource("34_5yu5e")
+
+[node name="Icon" type="Sprite2D" parent="AllySkills/Skills/Power"]
+position = Vector2(46, 30)
+texture = ExtResource("35_du427")
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="AllySkills/Skills/Power"]
+layout_mode = 0
+offset_left = 99.0
+offset_right = 454.0
+offset_bottom = 59.0
+theme_override_constants/separation = 20
+
+[node name="Level1" type="TextureButton" parent="AllySkills/Skills/Power/ButtonsContainer"]
+layout_mode = 2
+texture_normal = ExtResource("36_w577s")
+texture_disabled = ExtResource("37_rd785")
+texture_focused = ExtResource("38_0obwh")
+
+[node name="Level2" type="TextureButton" parent="AllySkills/Skills/Power/ButtonsContainer"]
+layout_mode = 2
+texture_normal = ExtResource("39_7rxb2")
+texture_disabled = ExtResource("37_rd785")
+texture_focused = ExtResource("38_0obwh")
+
+[node name="Level3" type="TextureButton" parent="AllySkills/Skills/Power/ButtonsContainer"]
+layout_mode = 2
+texture_normal = ExtResource("40_rmykf")
+texture_disabled = ExtResource("37_rd785")
+texture_focused = ExtResource("38_0obwh")
+
+[node name="Speed" type="Control" parent="AllySkills/Skills"]
+custom_minimum_size = Vector2(480, 60)
+layout_mode = 2
+
+[node name="BranchLine" type="Sprite2D" parent="AllySkills/Skills/Speed"]
+position = Vector2(228, 30.5)
+texture = ExtResource("34_5yu5e")
+
+[node name="Icon" type="Sprite2D" parent="AllySkills/Skills/Speed"]
+position = Vector2(46, 30)
+texture = ExtResource("41_ye0mp")
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="AllySkills/Skills/Speed"]
+layout_mode = 0
+offset_left = 99.0
+offset_right = 454.0
+offset_bottom = 59.0
+theme_override_constants/separation = 20
+
+[node name="Level1" type="TextureButton" parent="AllySkills/Skills/Speed/ButtonsContainer"]
+layout_mode = 2
+texture_normal = ExtResource("42_33aso")
+texture_disabled = ExtResource("37_rd785")
+texture_focused = ExtResource("38_0obwh")
+
+[node name="Level2" type="TextureButton" parent="AllySkills/Skills/Speed/ButtonsContainer"]
+layout_mode = 2
+texture_normal = ExtResource("43_ueyne")
+texture_disabled = ExtResource("37_rd785")
+texture_focused = ExtResource("38_0obwh")
+
+[node name="Level3" type="TextureButton" parent="AllySkills/Skills/Speed/ButtonsContainer"]
+layout_mode = 2
+texture_normal = ExtResource("44_kuuj6")
+texture_disabled = ExtResource("37_rd785")
+texture_focused = ExtResource("38_0obwh")
+
+[node name="Range" type="Control" parent="AllySkills/Skills"]
+custom_minimum_size = Vector2(480, 60)
+layout_mode = 2
+
+[node name="BranchLine" type="Sprite2D" parent="AllySkills/Skills/Range"]
+position = Vector2(228, 30.5)
+texture = ExtResource("34_5yu5e")
+
+[node name="Icon" type="Sprite2D" parent="AllySkills/Skills/Range"]
+position = Vector2(46, 30)
+texture = ExtResource("45_bppht")
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="AllySkills/Skills/Range"]
+layout_mode = 0
+offset_left = 99.0
+offset_right = 454.0
+offset_bottom = 59.0
+theme_override_constants/separation = 20
+
+[node name="Level1" type="TextureButton" parent="AllySkills/Skills/Range/ButtonsContainer"]
+layout_mode = 2
+texture_normal = ExtResource("46_rs21e")
+texture_disabled = ExtResource("37_rd785")
+texture_focused = ExtResource("38_0obwh")
+
+[node name="Level2" type="TextureButton" parent="AllySkills/Skills/Range/ButtonsContainer"]
+layout_mode = 2
+texture_normal = ExtResource("47_2xya1")
+texture_disabled = ExtResource("37_rd785")
+texture_focused = ExtResource("38_0obwh")
+
+[node name="Level3" type="TextureButton" parent="AllySkills/Skills/Range/ButtonsContainer"]
+layout_mode = 2
+texture_normal = ExtResource("48_o5h5c")
+texture_disabled = ExtResource("37_rd785")
+texture_focused = ExtResource("38_0obwh")
+
+[node name="HP" type="Control" parent="AllySkills/Skills"]
+custom_minimum_size = Vector2(480, 60)
+layout_mode = 2
+
+[node name="BranchLine" type="Sprite2D" parent="AllySkills/Skills/HP"]
+position = Vector2(228, 30.5)
+texture = ExtResource("34_5yu5e")
+
+[node name="Icon" type="Sprite2D" parent="AllySkills/Skills/HP"]
+position = Vector2(46, 30)
+texture = ExtResource("49_1h4yk")
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="AllySkills/Skills/HP"]
+layout_mode = 0
+offset_left = 99.0
+offset_right = 454.0
+offset_bottom = 59.0
+theme_override_constants/separation = 20
+
+[node name="HP1" type="TextureButton" parent="AllySkills/Skills/HP/ButtonsContainer"]
+layout_mode = 2
+texture_normal = ExtResource("50_cfrdt")
+texture_disabled = ExtResource("37_rd785")
+texture_focused = ExtResource("38_0obwh")
+
+[node name="HP2" type="TextureButton" parent="AllySkills/Skills/HP/ButtonsContainer"]
+layout_mode = 2
+texture_normal = ExtResource("51_x3xhd")
+texture_disabled = ExtResource("37_rd785")
+texture_focused = ExtResource("38_0obwh")
+
+[node name="HP3" type="TextureButton" parent="AllySkills/Skills/HP/ButtonsContainer"]
+layout_mode = 2
+texture_normal = ExtResource("52_8xv0x")
+texture_disabled = ExtResource("37_rd785")
+texture_focused = ExtResource("38_0obwh")
+
+[node name="NextLevelIcon" type="Sprite2D" parent="AllySkills"]
+position = Vector2(987, 791)
+scale = Vector2(0.614504, 0.614504)
+texture = ExtResource("53_uvlty")
+
+[node name="AllyDescriptionLabel" type="Label" parent="AllySkills"]
+layout_mode = 0
+offset_left = 988.0
+offset_top = 544.0
+offset_right = 1450.0
+offset_bottom = 675.0
+theme_override_colors/font_color = Color(0.729703, 0.639205, 0.520092, 1)
+theme_override_fonts/font = ExtResource("11_h0n0m")
+theme_override_font_sizes/font_size = 25
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="AllyNameLabel" type="Label" parent="AllySkills"]
+layout_mode = 0
+offset_left = 913.0
+offset_top = 484.0
+offset_right = 1502.0
+offset_bottom = 536.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("54_jxmkp")
+theme_override_font_sizes/font_size = 45
+text = "SOLDIER NAME"
+horizontal_alignment = 1
+
+[node name="XButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1479.0
+offset_top = 146.0
+offset_right = 1576.0
+offset_bottom = 242.0
+texture_normal = ExtResource("55_0fovw")
+texture_hover = ExtResource("56_rr6ce")
+texture_focused = ExtResource("56_rr6ce")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_yxoij")
+}
+
+[node name="SkillDescriptionBox" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1021, 583)
+texture = ExtResource("57_j6r7s")
+
+[node name="SkillDescriptionLabel" type="Label" parent="SkillDescriptionBox"]
+offset_left = -187.0
+offset_top = -51.0
+offset_right = 170.0
+offset_bottom = 38.0
+theme_override_colors/font_color = Color(1, 0.860737, 0.761136, 1)
+theme_override_fonts/font = ExtResource("11_h0n0m")
+theme_override_font_sizes/font_size = 22
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor "
+autowrap_mode = 2
+
+[editable path="AllyButtonsContainer"]
