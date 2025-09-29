@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://dcuf6uiclwtod" path="res://game_characters_scenes/allies/obstructer_ally/barrier/barrier.gd" id="1_60nnq"]
 [ext_resource type="Texture2D" uid="uid://5xg73u1xoy12" path="res://game_characters_scenes/shared_assets/circle_particle.png" id="5_gr23i"]
 [ext_resource type="Texture2D" uid="uid://b1kthllgnhjrw" path="res://game_characters_scenes/allies/obstructer_ally/barrier/assets/barrier_level_1_b.png" id="6_5jvf6"]
+[ext_resource type="Texture2D" uid="uid://bhtxl1oaqfohp" path="res://game_characters_scenes/allies/obstructer_ally/barrier/assets/detroyed_particle.png" id="6_60nnq"]
 [ext_resource type="Texture2D" uid="uid://1plp2b8e3igg" path="res://game_characters_scenes/allies/obstructer_ally/barrier/assets/barrier_level_1_c.png" id="7_8rsgi"]
-[ext_resource type="Texture2D" uid="uid://cidh5l67h8gsk" path="res://game_characters_scenes/allies/obstructer_ally/wooden_barrier/assets/detroyed_particle.png" id="8_rxlhl"]
 [ext_resource type="Texture2D" uid="uid://b8ihj3jcphgqj" path="res://game_characters_scenes/allies/obstructer_ally/barrier/assets/barrier_level_1_d.png" id="8_sfyhg"]
 [ext_resource type="Texture2D" uid="uid://c8j8exbnt8j6c" path="res://game_characters_scenes/allies/obstructer_ally/barrier/assets/barrier_level_1_a.png" id="9_i0dao"]
 [ext_resource type="Texture2D" uid="uid://jdulueb7gowt" path="res://game_characters_scenes/shared_assets/dust_particle.png" id="13_u07vj"]
@@ -381,7 +381,7 @@ offset = Vector2(4, -81)
 position = Vector2(-4, 81)
 rotation = -2.34256
 emitting = false
-texture = ExtResource("8_rxlhl")
+texture = ExtResource("6_60nnq")
 lifetime = 0.4
 one_shot = true
 explosiveness = 0.2

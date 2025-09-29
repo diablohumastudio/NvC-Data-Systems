@@ -24,8 +24,8 @@ func test_ally_level_extends_game_character_level():
 func test_ally_level_has_ally_id_property():
 	# Test the ally_id property
 	var ally_level = AllyLevelData.new()
-	ally_level.ally_id = AllyData.IDs.CHEST
-	assert_eq(ally_level.ally_id, AllyData.IDs.CHEST, "AllyLevelData ally_id should be settable and gettable")
+	ally_level.ally_id = AllyData.IDs.IRC
+	assert_eq(ally_level.ally_id, AllyData.IDs.IRC, "AllyLevelData ally_id should be settable and gettable")
 
 func test_ally_level_has_level_id_property():
 	# Test the level_id property
@@ -70,12 +70,12 @@ func test_ally_level_full_setup():
 	# Test setting up a complete AllyLevelData
 	var ally_level = AllyLevelData.new()
 	
-	ally_level.ally_id = AllyData.IDs.BAYONETE_SOLDIER
+	ally_level.ally_id = AllyData.IDs.BYS
 	ally_level.level_id = "fast_shot_lvl_1"
 	ally_level.price = 150
 	ally_level.initial_HP = 75
 	
-	assert_eq(ally_level.ally_id, AllyData.IDs.BAYONETE_SOLDIER, "AllyData ID should be set correctly")
+	assert_eq(ally_level.ally_id, AllyData.IDs.BYS, "AllyData ID should be set correctly")
 	assert_eq(ally_level.level_id, "fast_shot_lvl_1", "LevelData ID should be set correctly")
 	assert_eq(ally_level.price, 150, "Price should be set correctly")
 	assert_eq(ally_level.initial_HP, 75, "Initial HP should be set correctly")
