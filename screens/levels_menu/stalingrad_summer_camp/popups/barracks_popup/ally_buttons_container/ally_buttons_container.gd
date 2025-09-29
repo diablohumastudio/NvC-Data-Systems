@@ -8,7 +8,7 @@ var selected_ally_btn : AllyBtn
 
 func populate_container(allies:Array[AllyData]) -> void:
 	for child in %ButtonsContainer.get_children():
-		child.queue_free()
+		child.free()
 
 	for ally in allies:
 		var new_ally_btn : AllyBtn = load(_ALLY_BTN_SCENE_UID).instantiate()
