@@ -1,35 +1,24 @@
-[gd_scene load_steps=38 format=3 uid="uid://dwu4hdrfwqbg3"]
+[gd_scene load_steps=45 format=3 uid="uid://dwu4hdrfwqbg3"]
 
 [ext_resource type="Script" uid="uid://b5ru2avwboj3s" path="res://game_characters_scenes/allies/explosive_ally/land_mine/land_mine.gd" id="1_42ujs"]
+[ext_resource type="SpriteFrames" uid="uid://dy12freh5yd5t" path="res://game_characters_scenes/allies/explosive_ally/land_mine/assets/area/ldm_b_sprite_frames.tres" id="2_42ujs"]
+[ext_resource type="Script" uid="uid://qclj8gae0u4y" path="res://game_characters_scenes/allies/models/ally_scene/ally_level_dependants_nodes/ally_level_dependent_animatedsprite2D.gd" id="4_s78wd"]
+[ext_resource type="SpriteFrames" uid="uid://cqwuj28jnohlp" path="res://game_characters_scenes/allies/explosive_ally/land_mine/assets/area/ldm_a1_sprite_frames.tres" id="4_yckvk"]
 [ext_resource type="Texture2D" uid="uid://cugegwfs5je1j" path="res://game_characters_scenes/allies/explosive_ally/land_mine/assets/landmine_explosion/landmine_explosion_1.png" id="5_7evyx"]
+[ext_resource type="SpriteFrames" uid="uid://c0ihluseqvbkq" path="res://game_characters_scenes/allies/explosive_ally/land_mine/assets/area/ldm_a2_sprite_frames.tres" id="5_avapb"]
+[ext_resource type="SpriteFrames" uid="uid://bsgepinialhw" path="res://game_characters_scenes/allies/explosive_ally/land_mine/assets/area/ldm_a3_sprite_frames.tres" id="6_bvtts"]
 [ext_resource type="Texture2D" uid="uid://db6c7mk0tklpx" path="res://game_characters_scenes/allies/explosive_ally/land_mine/assets/landmine_explosion/landmine_explosion_2.png" id="6_ridh1"]
-[ext_resource type="Texture2D" uid="uid://hyol3n8vlbn" path="res://game_characters_scenes/allies/explosive_ally/land_mine/assets/landmine_activated_level_2.png" id="6_vti6y"]
 [ext_resource type="Texture2D" uid="uid://cvo5bdafngp3m" path="res://game_characters_scenes/allies/explosive_ally/land_mine/assets/landmine_explosion/landmine_explosion_3.png" id="7_6jv1u"]
-[ext_resource type="Texture2D" uid="uid://vgt2m3a137sd" path="res://game_characters_scenes/allies/explosive_ally/land_mine/assets/landmine_level_2.png" id="7_pp314"]
+[ext_resource type="Script" uid="uid://c3skicx1p4687" path="res://game_characters_scenes/allies/models/ally_scene/ally_level_dependants_nodes/ally_level_dependent_sprite2D.gd" id="7_avapb"]
+[ext_resource type="Texture2D" uid="uid://du82r2hsn4lpu" path="res://game_characters_scenes/allies/explosive_ally/land_mine/assets/explosion_power/light_base.png" id="7_fq1kj"]
 [ext_resource type="Texture2D" uid="uid://jp873vjak6q7" path="res://game_characters_scenes/allies/explosive_ally/land_mine/assets/landmine_explosion/landmine_explosion_4.png" id="8_30d73"]
+[ext_resource type="Texture2D" uid="uid://e6kic360n4l5" path="res://game_characters_scenes/allies/explosive_ally/land_mine/assets/explosion_power/light_1.png" id="9_fq1kj"]
 [ext_resource type="Texture2D" uid="uid://bpniua258ln6m" path="res://game_characters_scenes/allies/explosive_ally/land_mine/assets/landmine_explosion/landmine_explosion_5.png" id="9_o5wq8"]
+[ext_resource type="Texture2D" uid="uid://b8y3xuf4sx3o6" path="res://game_characters_scenes/allies/explosive_ally/land_mine/assets/explosion_power/light_2.png" id="10_71hju"]
 [ext_resource type="Texture2D" uid="uid://cqlnkkst30rhb" path="res://game_characters_scenes/allies/explosive_ally/land_mine/assets/landmine_explosion/landmine_explosion_6.png" id="10_c4lq7"]
+[ext_resource type="Texture2D" uid="uid://b18d34xymqacw" path="res://game_characters_scenes/allies/explosive_ally/land_mine/assets/explosion_power/light_3.png" id="11_woy0d"]
 [ext_resource type="Texture2D" uid="uid://b5ro46i71vfn0" path="res://screens/game/pop_ups/game_won_popup/assets/star_blink.png" id="18_wptcl"]
 [ext_resource type="Texture2D" uid="uid://jdulueb7gowt" path="res://game_characters_scenes/shared_assets/dust_particle.png" id="19_lfkjo"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_an5t3"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_vti6y")
-}],
-"loop": true,
-"name": &"activated",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_pp314")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tr8kv"]
 animations = [{
@@ -533,7 +522,29 @@ color = Color(0, 0, 0, 1)
 [node name="BaseTexture" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(10, -40)
-sprite_frames = SubResource("SpriteFrames_an5t3")
+sprite_frames = ExtResource("2_42ujs")
+script = ExtResource("4_s78wd")
+levels_modifiers_textures = Dictionary[String, SpriteFrames]({
+"LDM_A1": ExtResource("4_yckvk"),
+"LDM_A2": ExtResource("5_avapb"),
+"LDM_A3": ExtResource("6_bvtts"),
+"LDM_B": ExtResource("2_42ujs")
+})
+metadata/_custom_type_script = "uid://qclj8gae0u4y"
+
+[node name="Light" type="Sprite2D" parent="BaseTexture"]
+position = Vector2(-12, -10)
+texture = ExtResource("7_fq1kj")
+region_enabled = true
+region_rect = Rect2(0, 0, 117, 86)
+script = ExtResource("7_avapb")
+levels_modifiers_textures = Dictionary[String, Texture2D]({
+"LDM_B": ExtResource("7_fq1kj"),
+"LDM_P1": ExtResource("9_fq1kj"),
+"LDM_P2": ExtResource("10_71hju"),
+"LDM_P3": ExtResource("11_woy0d")
+})
+metadata/_custom_type_script = "uid://c3skicx1p4687"
 
 [node name="Explosion" type="AnimatedSprite2D" parent="."]
 visible = false
