@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ccntxav05c4k" path="res://data/game_characters/allies/models/ally_data.gd" id="1_i87kw"]
 [ext_resource type="Texture2D" uid="uid://dmr321vm16x6h" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/assets/bayonet_soldier.png" id="1_w8eor"]
-[ext_resource type="Resource" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_b.tres" id="2_vmxb2"]
+[ext_resource type="Resource" uid="uid://d3jwfnbdjysbe" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_b.tres" id="2_vmxb2"]
 [ext_resource type="Script" uid="uid://cp8n43lmapx8l" path="res://data/game_characters/allies/models/ally_level_data.gd" id="2_y5ttf"]
 [ext_resource type="Resource" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_p1.tres" id="4_usgyk"]
 [ext_resource type="Resource" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_p2.tres" id="5_vmxb2"]

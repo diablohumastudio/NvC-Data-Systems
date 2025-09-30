@@ -1,0 +1,563 @@
+[gd_scene load_steps=49 format=3 uid="uid://dtup7cw3baog"]
+
+[ext_resource type="Script" uid="uid://bmweci6rnrm56" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/ally_preview/ally_preview.gd" id="1_42l16"]
+[ext_resource type="Texture2D" uid="uid://bvasembubd1c8" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/upgrade_button.png" id="1_lj7ln"]
+[ext_resource type="Texture2D" uid="uid://vrbhw70rr6ij" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/ally_preview/assets/left_panel.png" id="1_s6viw"]
+[ext_resource type="Texture2D" uid="uid://5as132nhwyev" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/upgrade_button_selected.png" id="2_s6viw"]
+[ext_resource type="FontFile" uid="uid://c037te0jknb01" path="res://global_assets/fonts/Molot.otf" id="3_42l16"]
+[ext_resource type="Texture2D" uid="uid://bs7oivtut4v6a" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/ally_window.png" id="4_thilg"]
+[ext_resource type="Texture2D" uid="uid://5xg73u1xoy12" path="res://game_characters_scenes/shared_assets/circle_particle.png" id="5_r4p0e"]
+[ext_resource type="PackedScene" uid="uid://oyoty7ffa6gl" path="res://game_characters_scenes/allies/shoter_ally/bayonet_soldier/bayonet_soldier.tscn" id="6_mwdd6"]
+[ext_resource type="Shader" uid="uid://o7qa0qagwx4" path="res://global_assets/shaders/burn_shader.gdshader" id="7_m4ml1"]
+[ext_resource type="Texture2D" uid="uid://w2v0kkxxyyj5" path="res://game_characters_scenes/shared_assets/level_up_alpha_mask.png" id="8_c42u7"]
+[ext_resource type="Texture2D" uid="uid://ds4d1leb44we1" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/level_display.png" id="9_wkfs5"]
+[ext_resource type="FontFile" uid="uid://b4nmgmlb4xi24" path="res://screens/initial_screens/splash_screen_2/assets/EdgeDisplay-Regular.otf" id="10_rk4ay"]
+
+[sub_resource type="Curve" id="Curve_4crc3"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.319328, 0.325843), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3foa8"]
+resource_local_to_scene = true
+shader = ExtResource("7_m4ml1")
+shader_parameter/noise = ExtResource("8_c42u7")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_77ety"]
+resource_local_to_scene = true
+shader = ExtResource("7_m4ml1")
+shader_parameter/noise = ExtResource("8_c42u7")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_77ety"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b5f6u"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hrgj2"]
+resource_local_to_scene = true
+shader = SubResource("Shader_77ety")
+shader_parameter/noise = SubResource("CompressedTexture2D_b5f6u")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_smjlu"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2l7nf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_osgfc"]
+resource_local_to_scene = true
+shader = SubResource("Shader_smjlu")
+shader_parameter/noise = SubResource("CompressedTexture2D_2l7nf")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_q3rc3"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v04dj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d4lmm"]
+resource_local_to_scene = true
+shader = SubResource("Shader_q3rc3")
+shader_parameter/noise = SubResource("CompressedTexture2D_v04dj")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_y2qiv"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mkm0j"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jgh88"]
+resource_local_to_scene = true
+shader = SubResource("Shader_y2qiv")
+shader_parameter/noise = SubResource("CompressedTexture2D_mkm0j")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_ms0dt"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yiic4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y1o88"]
+resource_local_to_scene = true
+shader = SubResource("Shader_ms0dt")
+shader_parameter/noise = SubResource("CompressedTexture2D_yiic4")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_0e0bp"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gtqhv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xduv7"]
+resource_local_to_scene = true
+shader = SubResource("Shader_0e0bp")
+shader_parameter/noise = SubResource("CompressedTexture2D_gtqhv")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_ksp4g"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xtm2a"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mhl63"]
+resource_local_to_scene = true
+shader = SubResource("Shader_ksp4g")
+shader_parameter/noise = SubResource("CompressedTexture2D_xtm2a")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_ya5rr"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b2817"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8ek6v"]
+resource_local_to_scene = true
+shader = SubResource("Shader_ya5rr")
+shader_parameter/noise = SubResource("CompressedTexture2D_b2817")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_vhrl5"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iku32"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tt6bk"]
+resource_local_to_scene = true
+shader = SubResource("Shader_vhrl5")
+shader_parameter/noise = SubResource("CompressedTexture2D_iku32")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_8ek6v"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fj4hd"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vhrl5"]
+resource_local_to_scene = true
+shader = SubResource("Shader_8ek6v")
+shader_parameter/noise = SubResource("CompressedTexture2D_fj4hd")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_05ggo"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rc416"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_djl3y"]
+resource_local_to_scene = true
+shader = SubResource("Shader_05ggo")
+shader_parameter/noise = SubResource("CompressedTexture2D_rc416")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[node name="AllyPreview" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_42l16")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_s6viw")
+
+[node name="UpgradeButton" type="TextureButton" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 101.999
+offset_top = 427.0
+offset_right = 324.999
+offset_bottom = 543.0
+texture_normal = ExtResource("1_lj7ln")
+texture_hover = ExtResource("2_s6viw")
+texture_focused = ExtResource("2_s6viw")
+
+[node name="UpgradePriceLabel" type="Label" parent="UpgradeButton"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 64.0
+offset_top = 51.0
+offset_right = 179.0
+offset_bottom = 97.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_42l16")
+theme_override_font_sizes/font_size = 40
+text = "1200"
+horizontal_alignment = 2
+
+[node name="AllyWindow" type="Sprite2D" parent="."]
+clip_children = 2
+position = Vector2(216.999, 227)
+texture = ExtResource("4_thilg")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="AllyWindow"]
+position = Vector2(2, 4)
+amount = 35
+texture = ExtResource("5_r4p0e")
+lifetime = 2.0
+preprocess = 1.0
+emission_shape = 3
+emission_rect_extents = Vector2(120, 160)
+gravity = Vector2(0, -10)
+scale_amount_curve = SubResource("Curve_4crc3")
+
+[node name="AllyContainer" type="Control" parent="."]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BayonetSoldier" parent="AllyContainer" instance=ExtResource("6_mwdd6")]
+material = SubResource("ShaderMaterial_3foa8")
+position = Vector2(208.999, 321)
+
+[node name="TestDyingBtn" parent="AllyContainer/BayonetSoldier" index="0"]
+visible = false
+
+[node name="TestDamageButton" parent="AllyContainer/BayonetSoldier" index="1"]
+visible = false
+
+[node name="TestLevelUpgradeBtn" parent="AllyContainer/BayonetSoldier" index="2"]
+visible = false
+
+[node name="Textures" parent="AllyContainer/BayonetSoldier" index="6"]
+material = SubResource("ShaderMaterial_77ety")
+
+[node name="RightLeg" parent="AllyContainer/BayonetSoldier/Textures" index="0"]
+material = SubResource("ShaderMaterial_hrgj2")
+
+[node name="RightFoot" parent="AllyContainer/BayonetSoldier/Textures/RightLeg" index="0"]
+material = SubResource("ShaderMaterial_osgfc")
+
+[node name="LeftLeg" parent="AllyContainer/BayonetSoldier/Textures" index="1"]
+material = SubResource("ShaderMaterial_d4lmm")
+
+[node name="LeftFoot" parent="AllyContainer/BayonetSoldier/Textures/LeftLeg" index="0"]
+material = SubResource("ShaderMaterial_jgh88")
+
+[node name="Body" parent="AllyContainer/BayonetSoldier/Textures" index="2"]
+material = SubResource("ShaderMaterial_y1o88")
+
+[node name="RightArm" parent="AllyContainer/BayonetSoldier/Textures/Body" index="1"]
+material = SubResource("ShaderMaterial_77ety")
+
+[node name="RightElbow" parent="AllyContainer/BayonetSoldier/Textures/Body/RightArm" index="0"]
+material = SubResource("ShaderMaterial_xduv7")
+
+[node name="Hand" parent="AllyContainer/BayonetSoldier/Textures/Body/RightArm/RightElbow" index="0"]
+material = SubResource("ShaderMaterial_mhl63")
+
+[node name="Head" parent="AllyContainer/BayonetSoldier/Textures/Body" index="2"]
+material = SubResource("ShaderMaterial_8ek6v")
+
+[node name="LeftArm" parent="AllyContainer/BayonetSoldier/Textures/Body" index="3"]
+material = SubResource("ShaderMaterial_tt6bk")
+
+[node name="Mosin" parent="AllyContainer/BayonetSoldier/Textures/Body/LeftArm" index="0"]
+material = SubResource("ShaderMaterial_vhrl5")
+
+[node name="LeftElbow" parent="AllyContainer/BayonetSoldier/Textures/Body/LeftArm" index="2"]
+material = SubResource("ShaderMaterial_djl3y")
+
+[node name="SkillLevelDisplay" type="Sprite2D" parent="."]
+position = Vector2(216.999, 375)
+scale = Vector2(1.08333, 1.08333)
+texture = ExtResource("9_wkfs5")
+
+[node name="SkillLevelLabel" type="Label" parent="SkillLevelDisplay"]
+offset_left = -110.0
+offset_top = -12.0
+offset_right = 112.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.15, 0.087475, 0.0585, 1)
+theme_override_fonts/font = ExtResource("10_rk4ay")
+theme_override_font_sizes/font_size = 26
+text = "Shooting Speed: 2"
+horizontal_alignment = 1
+
+[node name="ScenePosition" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(209, 321)
+
+[connection signal="pressed" from="UpgradeButton" to="." method="_on_upgrade_button_pressed"]
+
+[editable path="AllyContainer/BayonetSoldier"]
