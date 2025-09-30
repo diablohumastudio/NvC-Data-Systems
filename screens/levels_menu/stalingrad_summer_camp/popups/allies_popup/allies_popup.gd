@@ -3,24 +3,18 @@ class_name AlliesPopup extends Control
 @export var allies : Array[AllyData]
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 var current_ally : AllyData : set = set_current_ally
-var current_ally_lvl_btn : AllyLvlBtn : set = _set_current_ally_lvl_btn
 
 
 func _ready() -> void:
 	%AllyButtonsContainer.ally_btn_pressed.connect(_on_ally_buttons_container_ally_btn_pressed)
+	%AllyLevelSelector.level_btn_pressed.connect(_on_ally_level_selector_level_btn_pressed)
 	%AllyButtonsContainer.populate_container(allies)
 
 	%AllyButtonsContainer.selected_ally_btn.button_pressed = true
 	current_ally = %AllyButtonsContainer.selected_ally_btn.ally
-	
-	%AllyLevelSelector.level_btn_pressed.connect(_on_ally_level_selector_level_btn_pressed)
-	
-func _set_current_ally_lvl_btn(new_value:AllyLvlBtn) -> void:
-	current_ally_lvl_btn = new_value
-	_set_upgrade_button_price_label()
 
-func _set_upgrade_button_price_label() -> void:
-	%AllyPreview.set_upgrade_price_label(current_ally_lvl_btn.ally_level.market_price)
+func _set_upgrade_button_price_label(ally_lvl_btn:AllyLvlBtn) -> void:
+	%AllyPreview.set_upgrade_price_label(ally_lvl_btn.ally_level.market_price)
 
 func set_current_ally(new_value:AllyData) -> void:
 	current_ally = new_value
@@ -40,7 +34,7 @@ func hide_popup():
 
 func _on_ally_level_selector_level_btn_pressed(ally_lvl_btn : AllyLvlBtn) -> void:
 	if ally_lvl_btn:
-		current_ally_lvl_btn = ally_lvl_btn
+		_set_upgrade_button_price_label(ally_lvl_btn)
 
 func _on_ally_buttons_container_ally_btn_pressed(ally_btn:AllyBtn):
 	if ally_btn:
