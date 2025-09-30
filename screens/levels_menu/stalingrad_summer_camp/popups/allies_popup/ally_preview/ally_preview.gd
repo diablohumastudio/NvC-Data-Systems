@@ -13,7 +13,7 @@ func display_ally_scene(ally_scene:PackedScene) -> void:
 		push_error("ally packed scene to display is null")
 
 func set_upgrade_price_label(upgrade_price : int) -> void:
-	%UpgradePriceLabel.text = upgrade_price
+	%UpgradePriceLabel.text = str(upgrade_price)
 
 func _on_upgrade_button_pressed() -> void:
 	pass # Replace with function body.
