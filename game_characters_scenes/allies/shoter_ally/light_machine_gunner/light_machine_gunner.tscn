@@ -1,7 +1,8 @@
-[gd_scene load_steps=58 format=3 uid="uid://b6qp0gp8opqf"]
+[gd_scene load_steps=59 format=3 uid="uid://b6qp0gp8opqf"]
 
 [ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/shared_assets/circle_shadow.png" id="1_jnouo"]
 [ext_resource type="Script" uid="uid://bvgcwkqi3e7qr" path="res://game_characters_scenes/allies/shoter_ally/light_machine_gunner/light_machine_gunner.gd" id="1_qhl6q"]
+[ext_resource type="BitMap" uid="uid://baw0a5loiwysh" path="res://game_characters_scenes/allies/shoter_ally/light_machine_gunner/assets/select_ally_btn.png" id="3_lueas"]
 [ext_resource type="Texture2D" uid="uid://d3m2ymkclsdx7" path="res://game_characters_scenes/shared_assets/hurt_light.png" id="8_6q4s5"]
 [ext_resource type="Texture2D" uid="uid://dfr58q4s50ay7" path="res://game_characters_scenes/allies/shoter_ally/light_machine_gunner/assets/health_levels/torso_base.png" id="9_5x4g0"]
 [ext_resource type="Texture2D" uid="uid://c73v5xy4v6gea" path="res://game_characters_scenes/shared_assets/hurt_shape.png" id="9_pecef"]
@@ -1806,6 +1807,13 @@ position = Vector2(400, 951)
 collision_layer = 0
 collision_mask = 0
 script = ExtResource("1_qhl6q")
+
+[node name="SelectAllyBtn" type="TextureButton" parent="."]
+offset_left = -99.0
+offset_top = -260.0
+offset_right = 175.0
+offset_bottom = 67.0
+texture_click_mask = ExtResource("3_lueas")
 
 [node name="TestDyingBtn" type="Button" parent="."]
 offset_left = 491.0

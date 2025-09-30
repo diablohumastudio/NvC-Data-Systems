@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://lcy1w5q1i7uh"
+path="res://.godot/imported/select_ally_btn.png-9b4558b0fcb54e2d8468d40e0dd25d41.res"
+
+[deps]
+
+source_file="res://game_characters_scenes/allies/shoter_ally/farmer/assets/select_ally_btn.png"
+dest_files=["res://.godot/imported/select_ally_btn.png-9b4558b0fcb54e2d8468d40e0dd25d41.res"]
+
+[params]
+
+create_from=1
+threshold=0.5

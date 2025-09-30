@@ -1,49 +1,17 @@
-[gd_scene load_steps=35 format=3 uid="uid://ps7ks7v7g60n"]
+[gd_scene load_steps=37 format=3 uid="uid://ps7ks7v7g60n"]
 
 [ext_resource type="Script" uid="uid://dcuf6uiclwtod" path="res://game_characters_scenes/allies/obstructer_ally/barrier/barrier.gd" id="1_60nnq"]
+[ext_resource type="BitMap" uid="uid://k2vwv80shyc0" path="res://game_characters_scenes/allies/obstructer_ally/barrier/assets/select_ally_btn.png" id="2_lov36"]
+[ext_resource type="SpriteFrames" uid="uid://djrgr6ryoair5" path="res://game_characters_scenes/allies/obstructer_ally/barrier/assets/health/bar_b_sprite_frames.tres" id="2_nsaiq"]
 [ext_resource type="Texture2D" uid="uid://5xg73u1xoy12" path="res://game_characters_scenes/shared_assets/circle_particle.png" id="5_gr23i"]
-[ext_resource type="Texture2D" uid="uid://b1kthllgnhjrw" path="res://game_characters_scenes/allies/obstructer_ally/barrier/assets/barrier_level_1_b.png" id="6_5jvf6"]
 [ext_resource type="Texture2D" uid="uid://bhtxl1oaqfohp" path="res://game_characters_scenes/allies/obstructer_ally/barrier/assets/detroyed_particle.png" id="6_60nnq"]
-[ext_resource type="Texture2D" uid="uid://1plp2b8e3igg" path="res://game_characters_scenes/allies/obstructer_ally/barrier/assets/barrier_level_1_c.png" id="7_8rsgi"]
-[ext_resource type="Texture2D" uid="uid://b8ihj3jcphgqj" path="res://game_characters_scenes/allies/obstructer_ally/barrier/assets/barrier_level_1_d.png" id="8_sfyhg"]
-[ext_resource type="Texture2D" uid="uid://c8j8exbnt8j6c" path="res://game_characters_scenes/allies/obstructer_ally/barrier/assets/barrier_level_1_a.png" id="9_i0dao"]
+[ext_resource type="Script" uid="uid://c3skicx1p4687" path="res://game_characters_scenes/allies/models/ally_scene/ally_level_dependants_nodes/ally_level_dependent_sprite2D.gd" id="6_aylhr"]
+[ext_resource type="Texture2D" uid="uid://bfceycpxb3lwv" path="res://game_characters_scenes/allies/obstructer_ally/barrier/assets/power/wires_base.png" id="6_nsaiq"]
+[ext_resource type="Texture2D" uid="uid://dxlgn4t7p8sp8" path="res://game_characters_scenes/allies/obstructer_ally/barrier/assets/power/wires_1.png" id="8_ay67f"]
+[ext_resource type="Texture2D" uid="uid://b6kh1y7adjsga" path="res://game_characters_scenes/allies/obstructer_ally/barrier/assets/power/wires_2.png" id="9_k2c4m"]
+[ext_resource type="Texture2D" uid="uid://bwvx07by64ugb" path="res://game_characters_scenes/allies/obstructer_ally/barrier/assets/power/wires_3.png" id="10_ycnd6"]
 [ext_resource type="Texture2D" uid="uid://jdulueb7gowt" path="res://game_characters_scenes/shared_assets/dust_particle.png" id="13_u07vj"]
 [ext_resource type="Texture2D" uid="uid://b5ro46i71vfn0" path="res://screens/game/pop_ups/game_won_popup/assets/star_blink.png" id="17_8i142"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_rf0sk"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_5jvf6")
-}],
-"loop": false,
-"name": &"damaged_1",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_8rsgi")
-}],
-"loop": false,
-"name": &"damaged_2",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("8_sfyhg")
-}],
-"loop": false,
-"name": &"damaged_3",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("9_i0dao")
-}],
-"loop": false,
-"name": &"default",
-"speed": 5.0
-}]
 
 [sub_resource type="Curve" id="Curve_cnql5"]
 _data = [Vector2(0, 0.147368), 0.0, 0.0, 0, 0, Vector2(0.317949, 0.894737), 0.0, 0.0, 0, 0, Vector2(0.871795, 0.578947), -2.49886, 0.0, 0, 0]
@@ -336,7 +304,6 @@ states/spawn/position = Vector2(347, 100)
 transitions = ["Start", "spawn", SubResource("AnimationNodeStateMachineTransition_lov36"), "spawn", "idle", SubResource("AnimationNodeStateMachineTransition_eqvbe"), "death", "End", SubResource("AnimationNodeStateMachineTransition_ay67f"), "idle", "death", SubResource("AnimationNodeStateMachineTransition_k2c4m")]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_aylhr"]
-graph_offset = Vector2(-379.452, 5.88092)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_eqvbe")
 nodes/Animation/position = Vector2(0, 260)
 nodes/OneShot/node = SubResource("AnimationNodeOneShot_60nnq")
@@ -352,6 +319,13 @@ collision_layer = 0
 collision_mask = 0
 script = ExtResource("1_60nnq")
 initial_hp = 10.0
+
+[node name="SelectAllyBtn" type="TextureButton" parent="."]
+offset_left = -104.0
+offset_top = -96.0
+offset_right = 94.0
+offset_bottom = 109.0
+texture_click_mask = ExtResource("2_lov36")
 
 [node name="TestDyingBtn" type="Button" parent="."]
 offset_left = 317.0
@@ -374,8 +348,21 @@ text = "Test Damage"
 [node name="Base" type="AnimatedSprite2D" parent="Textures"]
 unique_name_in_owner = true
 position = Vector2(-4, 81)
-sprite_frames = SubResource("SpriteFrames_rf0sk")
+sprite_frames = ExtResource("2_nsaiq")
 offset = Vector2(4, -81)
+
+[node name="ALDSprite2D" type="Sprite2D" parent="Textures/Base"]
+show_behind_parent = true
+position = Vector2(4, -81)
+texture = ExtResource("6_nsaiq")
+script = ExtResource("6_aylhr")
+levels_modifiers_textures = Dictionary[String, Texture2D]({
+"BAR_B": ExtResource("6_nsaiq"),
+"BAR_P1": ExtResource("8_ay67f"),
+"BAR_P2": ExtResource("9_k2c4m"),
+"BAR_P3": ExtResource("10_ycnd6")
+})
+metadata/_custom_type_script = "uid://c3skicx1p4687"
 
 [node name="CrumbleParticles" type="CPUParticles2D" parent="Textures"]
 position = Vector2(-4, 81)
