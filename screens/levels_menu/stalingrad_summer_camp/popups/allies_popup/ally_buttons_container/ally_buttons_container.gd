@@ -16,6 +16,8 @@ func populate_container(allies:Array[AllyData]) -> void:
 		new_ally_btn.ally = ally
 		%ButtonsContainer.add_child(new_ally_btn)
 		new_ally_btn.pressed.connect(_on_ally_btn_pressed.bind(ally))
+	
+	%ButtonsContainer.get_child(0).button_pressed = true
 
 func _on_ally_btn_pressed(ally_btn:AllyBtn) -> void:
 	ally_btn_pressed.emit(ally_btn)

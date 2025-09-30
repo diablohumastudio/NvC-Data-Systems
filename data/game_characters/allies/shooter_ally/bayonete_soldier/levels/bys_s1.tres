@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ShooterAllyLevel" load_steps=4 format=3 uid="uid://0q2vsbw6tguk"]
+[gd_resource type="Resource" script_class="ShooterAllyLevel" load_steps=4 format=3 uid="uid://cg0ox0jlkt35w"]
 
 [ext_resource type="Texture2D" uid="uid://cwiknrgh5e8se" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_speed_1.png" id="1_lp1mh"]
 [ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://global_systems/data_systems/action_condition_system/condition.gd" id="2_7tktu"]
@@ -12,7 +12,7 @@ shooting_range = 0.0
 health_points = 0
 id = "BYS_S1"
 ally_id = 101
-unlockd_by_default = false
+unlockd_by_default = true
 buyed_by_default = false
 unlock_conditions = Array[ExtResource("2_7tktu")]([])
 market_price = 1400

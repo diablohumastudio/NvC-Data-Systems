@@ -15,10 +15,13 @@ func upload_buyed_levels():
 		if ally_lvl_btn.ally_level.get_saved_ud_ally_level().buyed:
 			buyed_levels.append(ally_lvl_btn.ally_level)
 
+func append_new_level_in_buyed_levels(ally_level : AllyLevelData) -> void:
+	buyed_levels.append(ally_level)
+
 func _on_ally_lvl_btn_pressed(ally_level_btn:AllyLvlBtn) -> void:
 	_set_labels_values(ally_level_btn.ally_level)
 	selected_level_changed.emit(ally_level_btn.ally_level)
 
 func _set_labels_values(ally_level: AllyLevelData) -> void:
-	%LevelName.text = ally_level.ally_level.id
-	%LevelDescription.text = ally_level.ally_level.id
+	%LevelName.text = ally_level.id
+	%LevelDescription.text = ally_level.id

@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://drind8lvt12co"]
+[gd_scene load_steps=65 format=3 uid="uid://drind8lvt12co"]
 
 [ext_resource type="Script" uid="uid://ct6w08st6cih0" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/allies_popup.gd" id="1_ovuc1"]
 [ext_resource type="Script" uid="uid://ccntxav05c4k" path="res://data/game_characters/allies/models/ally_data.gd" id="2_d65bp"]
@@ -57,17 +57,8 @@
 [ext_resource type="Texture2D" uid="uid://dsx4ykwqjx1x0" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/x_button.png" id="55_0fovw"]
 [ext_resource type="PackedScene" uid="uid://ckaboqsa6o5du" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/ally_level_selector/ally_level_selector.tscn" id="55_d65bp"]
 [ext_resource type="Resource" uid="uid://ejj30pdsles2" path="res://data/game_characters/allies/resource_providers/iron_chest/levels/irc_b.tres" id="56_7xhdm"]
-[ext_resource type="Resource" uid="uid://0q2vsbw6tguk" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_s1.tres" id="56_h0n0m"]
 [ext_resource type="Texture2D" uid="uid://th5h8fc336js" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/x_button_selected.png" id="56_rr6ce"]
-[ext_resource type="Resource" uid="uid://xim6qt318sft" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_s2.tres" id="57_7xhdm"]
 [ext_resource type="Texture2D" uid="uid://cto237bcjp3x8" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/skill_description_box.png" id="57_j6r7s"]
-[ext_resource type="Resource" uid="uid://5yx7ggk1nwe7" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_s3.tres" id="58_uy1ow"]
-[ext_resource type="Resource" uid="uid://c1xrkfr7b3uj0" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_r1.tres" id="59_hb5gf"]
-[ext_resource type="Resource" uid="uid://bywm6o71tcxfm" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_r2.tres" id="60_befxl"]
-[ext_resource type="Resource" uid="uid://byvmxxol6yg7l" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_r3.tres" id="61_5pf7c"]
-[ext_resource type="Resource" uid="uid://cavnh0f52nccw" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_h1.tres" id="62_0r808"]
-[ext_resource type="Resource" uid="uid://b6n1wjf47rvu0" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_h2.tres" id="63_fppek"]
-[ext_resource type="Resource" uid="uid://qrnbvtmcl2xx" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_h3.tres" id="64_0fhea"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0ay6g"]
 shader = ExtResource("9_xrkyj")
@@ -774,33 +765,6 @@ offset_bottom = 431.0
 [node name="AllyLvlBtn" parent="AllyLevelSelector/LevelBtnsContainer" index="0"]
 button_pressed = true
 ally_level = ExtResource("56_7xhdm")
-
-[node name="AllyLvlBtn4" parent="AllyLevelSelector/LevelBtnsContainer" index="3"]
-ally_level = ExtResource("56_h0n0m")
-
-[node name="AllyLvlBtn5" parent="AllyLevelSelector/LevelBtnsContainer" index="4"]
-ally_level = ExtResource("57_7xhdm")
-
-[node name="AllyLvlBtn6" parent="AllyLevelSelector/LevelBtnsContainer" index="5"]
-ally_level = ExtResource("58_uy1ow")
-
-[node name="AllyLvlBtn7" parent="AllyLevelSelector/LevelBtnsContainer" index="6"]
-ally_level = ExtResource("59_hb5gf")
-
-[node name="AllyLvlBtn8" parent="AllyLevelSelector/LevelBtnsContainer" index="7"]
-ally_level = ExtResource("60_befxl")
-
-[node name="AllyLvlBtn9" parent="AllyLevelSelector/LevelBtnsContainer" index="8"]
-ally_level = ExtResource("61_5pf7c")
-
-[node name="AllyLvlBtn10" parent="AllyLevelSelector/LevelBtnsContainer" index="9"]
-ally_level = ExtResource("62_0r808")
-
-[node name="AllyLvlBtn11" parent="AllyLevelSelector/LevelBtnsContainer" index="10"]
-ally_level = ExtResource("63_fppek")
-
-[node name="AllyLvlBtn12" parent="AllyLevelSelector/LevelBtnsContainer" index="11"]
-ally_level = ExtResource("64_0fhea")
 
 [node name="XButton" type="TextureButton" parent="."]
 layout_mode = 0

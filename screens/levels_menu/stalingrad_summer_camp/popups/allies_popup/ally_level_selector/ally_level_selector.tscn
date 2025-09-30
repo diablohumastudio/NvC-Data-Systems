@@ -1,11 +1,23 @@
-[gd_scene load_steps=8 format=3 uid="uid://ckaboqsa6o5du"]
+[gd_scene load_steps=20 format=3 uid="uid://ckaboqsa6o5du"]
 
 [ext_resource type="Script" uid="uid://ba71vxiilg51n" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/ally_level_selector/ally_level_selector.gd" id="1_0voy8"]
 [ext_resource type="Texture2D" uid="uid://bcr53sx666gwj" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/ally_level_selector/assets/right_panel.png" id="2_uhguq"]
 [ext_resource type="PackedScene" uid="uid://bt745ggmh0k62" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/ally_level_selector/ally_lvl_btn/ally_lvl_btn.tscn" id="3_1psa4"]
-[ext_resource type="Resource" uid="uid://1km0gtdvwxfa" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_p1.tres" id="4_2a4fv"]
-[ext_resource type="Resource" uid="uid://bhujfj5cpw65g" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_p2.tres" id="5_c150j"]
-[ext_resource type="Resource" uid="uid://chy6mh66nr66" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_p3.tres" id="6_h0mk1"]
+[ext_resource type="Resource" uid="uid://2dx5gbyaejnw" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_p1.tres" id="4_2a4fv"]
+[ext_resource type="Texture2D" uid="uid://byav2niyuhaon" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_range_1_unlocked.png" id="4_but3r"]
+[ext_resource type="Resource" uid="uid://cc6vyuiej7od" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_p2.tres" id="5_c150j"]
+[ext_resource type="Texture2D" uid="uid://cbnn1tcnvdwef" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_range_1.png" id="5_ce4ye"]
+[ext_resource type="Texture2D" uid="uid://cw3cst6gx0cmb" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_speed_1_selected.png" id="6_2404q"]
+[ext_resource type="Resource" uid="uid://b5ia518w4mlfg" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_p3.tres" id="6_h0mk1"]
+[ext_resource type="Resource" uid="uid://cg0ox0jlkt35w" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_s1.tres" id="10_vu068"]
+[ext_resource type="Resource" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_s2.tres" id="11_qs0xo"]
+[ext_resource type="Resource" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_s3.tres" id="12_orlrf"]
+[ext_resource type="Resource" uid="uid://bt6a3lcoiwdu7" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_r1.tres" id="13_djjh4"]
+[ext_resource type="Resource" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_r2.tres" id="14_gjf8l"]
+[ext_resource type="Resource" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_r3.tres" id="15_sxvni"]
+[ext_resource type="Resource" uid="uid://cavnh0f52nccw" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_h1.tres" id="16_gitti"]
+[ext_resource type="Resource" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_h2.tres" id="17_7qepg"]
+[ext_resource type="Resource" path="res://data/game_characters/allies/shooter_ally/bayonete_soldier/levels/bys_h3.tres" id="18_0ajh5"]
 
 [sub_resource type="GDScript" id="GDScript_uhguq"]
 script/source = "class_name LevelBtnsContainer extends GridContainer
@@ -61,39 +73,84 @@ script = SubResource("GDScript_uhguq")
 
 [node name="AllyLvlBtn" parent="LevelBtnsContainer" instance=ExtResource("3_1psa4")]
 layout_mode = 2
+texture_normal = ExtResource("4_but3r")
+texture_disabled = ExtResource("5_ce4ye")
+buyed_texture = ExtResource("6_2404q")
 ally_level = ExtResource("4_2a4fv")
 
 [node name="AllyLvlBtn2" parent="LevelBtnsContainer" instance=ExtResource("3_1psa4")]
 layout_mode = 2
+texture_normal = ExtResource("4_but3r")
+texture_disabled = ExtResource("5_ce4ye")
+buyed_texture = ExtResource("6_2404q")
 ally_level = ExtResource("5_c150j")
 
 [node name="AllyLvlBtn3" parent="LevelBtnsContainer" instance=ExtResource("3_1psa4")]
 layout_mode = 2
+texture_normal = ExtResource("4_but3r")
+texture_disabled = ExtResource("5_ce4ye")
+buyed_texture = ExtResource("6_2404q")
 ally_level = ExtResource("6_h0mk1")
 
 [node name="AllyLvlBtn4" parent="LevelBtnsContainer" instance=ExtResource("3_1psa4")]
 layout_mode = 2
+texture_normal = ExtResource("4_but3r")
+texture_disabled = ExtResource("5_ce4ye")
+buyed_texture = ExtResource("6_2404q")
+ally_level = ExtResource("10_vu068")
 
 [node name="AllyLvlBtn5" parent="LevelBtnsContainer" instance=ExtResource("3_1psa4")]
 layout_mode = 2
+texture_normal = ExtResource("4_but3r")
+texture_disabled = ExtResource("5_ce4ye")
+buyed_texture = ExtResource("6_2404q")
+ally_level = ExtResource("11_qs0xo")
 
 [node name="AllyLvlBtn6" parent="LevelBtnsContainer" instance=ExtResource("3_1psa4")]
 layout_mode = 2
+texture_normal = ExtResource("4_but3r")
+texture_disabled = ExtResource("5_ce4ye")
+buyed_texture = ExtResource("6_2404q")
+ally_level = ExtResource("12_orlrf")
 
 [node name="AllyLvlBtn7" parent="LevelBtnsContainer" instance=ExtResource("3_1psa4")]
 layout_mode = 2
+texture_normal = ExtResource("4_but3r")
+texture_disabled = ExtResource("5_ce4ye")
+buyed_texture = ExtResource("6_2404q")
+ally_level = ExtResource("13_djjh4")
 
 [node name="AllyLvlBtn8" parent="LevelBtnsContainer" instance=ExtResource("3_1psa4")]
 layout_mode = 2
+texture_normal = ExtResource("4_but3r")
+texture_disabled = ExtResource("5_ce4ye")
+buyed_texture = ExtResource("6_2404q")
+ally_level = ExtResource("14_gjf8l")
 
 [node name="AllyLvlBtn9" parent="LevelBtnsContainer" instance=ExtResource("3_1psa4")]
 layout_mode = 2
+texture_normal = ExtResource("4_but3r")
+texture_disabled = ExtResource("5_ce4ye")
+buyed_texture = ExtResource("6_2404q")
+ally_level = ExtResource("15_sxvni")
 
 [node name="AllyLvlBtn10" parent="LevelBtnsContainer" instance=ExtResource("3_1psa4")]
 layout_mode = 2
+texture_normal = ExtResource("4_but3r")
+texture_disabled = ExtResource("5_ce4ye")
+buyed_texture = ExtResource("6_2404q")
+ally_level = ExtResource("16_gitti")
 
 [node name="AllyLvlBtn11" parent="LevelBtnsContainer" instance=ExtResource("3_1psa4")]
 layout_mode = 2
+texture_normal = ExtResource("4_but3r")
+texture_disabled = ExtResource("5_ce4ye")
+buyed_texture = ExtResource("6_2404q")
+ally_level = ExtResource("17_7qepg")
 
 [node name="AllyLvlBtn12" parent="LevelBtnsContainer" instance=ExtResource("3_1psa4")]
 layout_mode = 2
+texture_normal = ExtResource("4_but3r")
+texture_disabled = ExtResource("5_ce4ye")
+buyed_texture = ExtResource("6_2404q")
+ally_level = ExtResource("18_0ajh5")

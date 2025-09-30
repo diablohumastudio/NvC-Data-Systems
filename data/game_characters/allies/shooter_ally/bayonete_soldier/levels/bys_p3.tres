@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ShooterAllyLevel" load_steps=4 format=3 uid="uid://chy6mh66nr66"]
+[gd_resource type="Resource" script_class="ShooterAllyLevel" load_steps=4 format=3 uid="uid://b5ia518w4mlfg"]
 
 [ext_resource type="Texture2D" uid="uid://bbnbifp4uh4pk" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_strength_3.png" id="1_m70ys"]
 [ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://global_systems/data_systems/action_condition_system/condition.gd" id="2_rhbmp"]

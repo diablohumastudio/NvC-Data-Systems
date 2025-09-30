@@ -1,5 +1,6 @@
 class_name AllyPreview extends Control
 
+signal upgrade_btn_pressed
 
 func display_ally_scene(ally_scene:PackedScene) -> void:
 	if ally_scene:
@@ -16,4 +17,5 @@ func set_upgrade_price_label(upgrade_price : int) -> void:
 	%UpgradePriceLabel.text = str(upgrade_price)
 
 func _on_upgrade_button_pressed() -> void:
-	pass # Replace with function body.
+	%UpgradePriceLabel.text = "Buyed!"
+	upgrade_btn_pressed.emit()
