@@ -8,7 +8,8 @@ func _ready() -> void:
 	_set_texture_and_availabily()
 
 func _set_texture_and_availabily() -> void:
-	unlocked = ally_level.unlockd_by_default
+	if !ally_level or !ally_level.get_saved_ud_ally_level(): return
+	unlocked = ally_level.get_saved_ud_ally_level().unlocked
 	if !unlocked:
 		disabled = true
 	else:

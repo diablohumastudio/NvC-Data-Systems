@@ -67,11 +67,13 @@ func create_new_user(user_credentials: UserCredentials, set_to_current: bool = t
 func _create_new_ud_allies() -> Array[UDAlly]:
 	var ud_allies: Array[UDAlly] = []
 	var allies: Array[AllyData] = DataFilesLoader.get_allies_from_res_files()
-	
+
 	for ally in allies: 
 		var new_ud_ally: UDAlly = UDAlly.new()
 		new_ud_ally.id = ally.id
-		for ally_level in ally.levels as Array[AllyLevelData]:
+		var all_ally_levels = ally.levels.duplicate()
+		all_ally_levels.append(ally.base_level)
+		for ally_level in all_ally_levels as Array[AllyLevelData]:
 			if !ally_level: continue
 			var new_ud_ally_level: UDAllyLevel = UDAllyLevel.new()
 			new_ud_ally_level.id = ally_level.id
