@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://baw0a5loiwysh"
+path="res://.godot/imported/select_ally_btn.png-c66f8be7246eb52ae401a8e36343ae27.res"
+
+[deps]
+
+source_file="res://game_characters_scenes/allies/shoter_ally/light_machine_gunner/assets/select_ally_btn.png"
+dest_files=["res://.godot/imported/select_ally_btn.png-c66f8be7246eb52ae401a8e36343ae27.res"]
+
+[params]
+
+create_from=1
+threshold=0.5

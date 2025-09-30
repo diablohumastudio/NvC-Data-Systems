@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://by4jeh2enkchy"
+path="res://.godot/imported/select_ally_btn.png-0fdd657f9826e35a2e660da2db2b1a8e.res"
+
+[deps]
+
+source_file="res://data/game_characters/allies/resource_providers/iron_chest/assets/select_ally_btn.png"
+dest_files=["res://.godot/imported/select_ally_btn.png-0fdd657f9826e35a2e660da2db2b1a8e.res"]
+
+[params]
+
+create_from=1
+threshold=0.5

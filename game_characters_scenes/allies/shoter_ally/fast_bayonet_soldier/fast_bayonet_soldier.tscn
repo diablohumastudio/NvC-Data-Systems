@@ -1,6 +1,7 @@
-[gd_scene load_steps=87 format=3 uid="uid://csd3tcowd2h4x"]
+[gd_scene load_steps=88 format=3 uid="uid://csd3tcowd2h4x"]
 
 [ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/shared_assets/circle_shadow.png" id="1_r7v6n"]
+[ext_resource type="BitMap" uid="uid://v45tapaeto15" path="res://game_characters_scenes/allies/shoter_ally/fast_bayonet_soldier/assets/select_ally_btn.png" id="2_i16r7"]
 [ext_resource type="Material" uid="uid://1e3tt2sswtl0" path="res://global_assets/shaders/burn_material.tres" id="4_xemki"]
 [ext_resource type="Texture2D" uid="uid://bmxq2nmbt5r3e" path="res://game_characters_scenes/allies/shoter_ally/bayonet_soldier/assets/base_parts.png" id="5_bu6y2"]
 [ext_resource type="Texture2D" uid="uid://hon6u2c0atsn" path="res://game_characters_scenes/allies/shoter_ally/fast_bayonet_soldier/assets/health_levels/torso_base.png" id="6_4jt73"]
@@ -2622,6 +2623,13 @@ _data = {
 [node name="FastBayonetSoldier" type="CharacterBody2D"]
 collision_layer = 0
 collision_mask = 0
+
+[node name="SelectAllyBtn" type="TextureButton" parent="."]
+offset_left = -85.0
+offset_top = -247.0
+offset_right = 226.0
+offset_bottom = 73.0
+texture_click_mask = ExtResource("2_i16r7")
 
 [node name="Shadow" type="Sprite2D" parent="."]
 position = Vector2(-2, 44.798)

@@ -1,7 +1,8 @@
-[gd_scene load_steps=40 format=3 uid="uid://dwmd00t3h1w4g"]
+[gd_scene load_steps=41 format=3 uid="uid://dwmd00t3h1w4g"]
 
 [ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/shared_assets/circle_shadow.png" id="1_h2rfk"]
 [ext_resource type="Script" uid="uid://b884x2b461qs" path="res://game_characters_scenes/allies/resource_provider/iron_chest/iron_chest.gd" id="1_o76r3"]
+[ext_resource type="BitMap" uid="uid://by4jeh2enkchy" path="res://data/game_characters/allies/resource_providers/iron_chest/assets/select_ally_btn.png" id="2_ev2mq"]
 [ext_resource type="Texture2D" uid="uid://ddvbp4c5dldiq" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/health/structure_3.png" id="3_bhh23"]
 [ext_resource type="Texture2D" uid="uid://bvotih53nrnk2" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/health/structure_1.png" id="3_xcb8a"]
 [ext_resource type="Script" uid="uid://c3skicx1p4687" path="res://game_characters_scenes/allies/models/ally_scene/ally_level_dependants_nodes/ally_level_dependent_sprite2D.gd" id="4_u00hx"]
@@ -717,12 +718,13 @@ node_connections = [&"output", 0, &"StateMachine"]
 position = Vector2(93, 135)
 script = ExtResource("1_o76r3")
 
-[node name="SelectAllyBtn" type="Button" parent="."]
+[node name="SelectAllyBtn" type="TextureButton" parent="."]
 unique_name_in_owner = true
-offset_left = -88.0
-offset_top = -133.0
-offset_right = 70.0
-offset_bottom = 54.0
+offset_left = -82.0
+offset_top = -135.0
+offset_right = 88.0
+offset_bottom = 59.0
+texture_click_mask = ExtResource("2_ev2mq")
 
 [node name="TestDyingBtn" type="Button" parent="."]
 offset_left = 317.0

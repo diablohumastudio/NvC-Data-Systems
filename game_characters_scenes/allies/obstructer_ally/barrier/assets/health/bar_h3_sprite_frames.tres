@@ -1,0 +1,54 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://6yxfccb0yp4n"]
+
+[ext_resource type="Texture2D" uid="uid://upam8vhtbvjs" path="res://game_characters_scenes/allies/obstructer_ally/barrier/assets/health/structure_3.png" id="1_hkumn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0k4x4"]
+atlas = ExtResource("1_hkumn")
+region = Rect2(198, 0, 198, 205)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_40lvv"]
+atlas = ExtResource("1_hkumn")
+region = Rect2(396, 0, 198, 205)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_etcyo"]
+atlas = ExtResource("1_hkumn")
+region = Rect2(594, 0, 198, 205)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yfucn"]
+atlas = ExtResource("1_hkumn")
+region = Rect2(0, 0, 198, 205)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0k4x4")
+}],
+"loop": false,
+"name": &"damaged_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_40lvv")
+}],
+"loop": false,
+"name": &"damaged_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_etcyo")
+}],
+"loop": false,
+"name": &"damaged_3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yfucn")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
