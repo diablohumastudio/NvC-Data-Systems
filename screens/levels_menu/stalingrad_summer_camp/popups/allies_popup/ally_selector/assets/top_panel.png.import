@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dfl4w3q55v533"
-path="res://.godot/imported/top_panel.png-2adda259caf3feb5513c0abf277cf693.ctex"
+path="res://.godot/imported/top_panel.png-fe8d9e8bdae80b9750a88599f2ba5d99.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/ally_buttons_container/assets/top_panel.png"
-dest_files=["res://.godot/imported/top_panel.png-2adda259caf3feb5513c0abf277cf693.ctex"]
+source_file="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/ally_selector/assets/top_panel.png"
+dest_files=["res://.godot/imported/top_panel.png-fe8d9e8bdae80b9750a88599f2ba5d99.ctex"]
 
 [params]
 

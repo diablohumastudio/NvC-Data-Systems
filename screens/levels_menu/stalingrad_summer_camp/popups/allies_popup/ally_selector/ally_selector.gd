@@ -1,4 +1,4 @@
-class_name AllyButtonsContainer extends Control
+class_name AllySelector extends Control
 
 signal ally_btn_pressed(ally_btn:AllyBtn)
 

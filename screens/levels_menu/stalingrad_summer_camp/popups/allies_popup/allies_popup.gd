@@ -11,7 +11,7 @@ var applied_levels: Array[AllyLevelData] # Is the array of levels that are going
 func _ready() -> void:
 	ally_btn_button_group.pressed.connect(_on_ally_btn_button_group_pressed)
 	%AllyPreview.upgrade_btn_pressed.connect(_on_ally_preview_upgrade_btn_pressed)
-	%AllyButtonsContainer.populate_container(allies)
+	%AllySelector.populate_container(allies)
 	
 	current_ally = ally_btn_button_group.get_pressed_button().ally
 
@@ -47,3 +47,6 @@ func _on_ally_level_selector_selected_level_changed(ally_level : AllyLevelData) 
 
 func _on_ally_btn_button_group_pressed(ally_btn:AllyBtn):
 	current_ally = ally_btn.ally
+
+func _on_exit_button_pressed() -> void:
+	hide_popup()
