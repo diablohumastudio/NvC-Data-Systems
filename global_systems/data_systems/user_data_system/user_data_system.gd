@@ -219,6 +219,14 @@ func get_ud_ally_level_by_id_in_ally(id: String, ally_id: AllyData.IDs) -> UDAll
 			return ud_ally_level
 	return null
 
+func get_ally_level_by_id_in_market_btn_group(id: String, ally_id: AllyData.IDs) -> AllyLevelData:
+	#var ally_level: UDAlly 
+	var ally_lvl_btns_group : ButtonGroup = load("uid://ktw76hems2h8")
+	for ally_lvl_btn in ally_lvl_btns_group.get_buttons() as Array[AllyLevelData]:
+		if ally_lvl_btn.ally_level.id == id:
+			return ally_lvl_btn.ally_level
+	return null
+
 func listen_property(property: PROPERTIES, callback: Callable):
 		match property:
 			PROPERTIES.ENEMIES_KILLED:

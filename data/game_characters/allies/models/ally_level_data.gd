@@ -2,6 +2,8 @@ class_name AllyLevelData extends GameCharacterLevelData
 
 signal in_game_just_unlocked
 signal in_game_just_buyed
+signal just_unlocked
+signal just_buyed
 
 @export_category("ID")
 @export var id: String 
@@ -12,6 +14,9 @@ signal in_game_just_buyed
 @export var buyed_by_default: bool = false
 @export var unlock_conditions: Array[Condition]
 @export var market_price: int
+var unlocked: bool = false
+var buyed: bool = false: set = _set_buyed
+var fullfilled_conditions : Array[String] = []
 
 @export_category("In-Game Config")
 @export var ally_level_thumbnail: Texture2D
@@ -22,6 +27,10 @@ var in_game_unlocked: bool = false
 var in_game_buyed: bool = false: set = _set_in_game_buyed
 var in_game_fullfilled_conditions : Array[String] = []
 
+func _set_buyed(new_value: bool):
+	buyed = new_value
+	just_buyed.emit()
+
 func _set_in_game_buyed(new_value: bool):
 	in_game_buyed = new_value
 	in_game_just_buyed.emit()
@@ -29,6 +38,26 @@ func _set_in_game_buyed(new_value: bool):
 func get_saved_ud_ally_level() -> UDAllyLevel:
 	if UDS == null: return null
 	return UDS.get_ud_ally_level_by_id_in_ally(id, ally_id)
+
+func set_unlock_conditions_by_acs_instance(acs: ActionConditionSystem):
+	#disconect from previous setted value
+	if unlock_conditions:
+		for condition in unlock_conditions as Array[Condition]:
+			if condition.fullfilled.is_connected(_on_unlock_condition_fullfilled):
+				condition.fullfilled.disconnect(_on_unlock_condition_fullfilled)
+	
+	var new_conditions_array: Array[Condition]
+
+	for condition in unlock_conditions:
+		var new_condition: Condition = acs.get_condition_by_id(condition.id)
+		new_conditions_array.append(new_condition)
+	unlock_conditions = new_conditions_array
+
+	if !unlock_conditions: return
+
+	for condition in unlock_conditions as Array[Condition]:
+		if !condition.fullfilled.is_connected(_on_unlock_condition_fullfilled):
+			condition.fullfilled.connect(_on_unlock_condition_fullfilled)
 
 func set_in_game_unlock_conditions_by_acs_instance(acs: ActionConditionSystem):
 	#disconect from previous setted value
@@ -50,11 +79,23 @@ func set_in_game_unlock_conditions_by_acs_instance(acs: ActionConditionSystem):
 		if !condition.fullfilled.is_connected(_on_in_game_unlock_condition_fullfilled):
 			condition.fullfilled.connect(_on_in_game_unlock_condition_fullfilled)
 
-func _on_in_game_unlock_condition_fullfilled(_condition: Condition):
-	in_game_fullfilled_conditions.append(_condition.id)
+func _on_unlock_condition_fullfilled(_condition: Condition):
+	fullfilled_conditions.append(_condition.id)
 	_check_is_unlocked()
 
+func _on_in_game_unlock_condition_fullfilled(_condition: Condition):
+	in_game_fullfilled_conditions.append(_condition.id)
+	_in_game_check_is_unlocked()
+
 func _check_is_unlocked():
+	for condition in unlock_conditions:
+		if !fullfilled_conditions.has(condition.id):
+			return
+	if !unlocked:
+		unlocked = true
+		just_unlocked.emit()
+
+func _in_game_check_is_unlocked():
 	for condition in in_game_unlock_conditions:
 		if !in_game_fullfilled_conditions.has(condition.id):
 			return

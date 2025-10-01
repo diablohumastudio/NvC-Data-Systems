@@ -12,10 +12,15 @@ func populate_container(allies:Array[AllyData]) -> void:
 		child.free()
 
 	for ally in allies:
+		print("populating container", ally.base_level.buyed_by_default, ally.base_level.get_saved_ud_ally_level().buyed)
+		#if ally.base_level.buyed_by_default and !ally.base_level.get_saved_ud_ally_level().buyed:
+			#ACS.set_action(Action.new(Action.TYPES.BUYED_ALLY_LEVEL, PayBuyedAllyLevel.new(ally.base_level.id, ally.base_level.ally_id)))
+	
 		var new_ally_btn : AllyBtn = ally_btn_pksc.instantiate()
 		new_ally_btn.ally = ally
 		%ButtonsContainer.add_child(new_ally_btn)
 		new_ally_btn.pressed.connect(_on_ally_btn_pressed.bind(ally))
+		
 	
 	%ButtonsContainer.get_child(0).button_pressed = true
 

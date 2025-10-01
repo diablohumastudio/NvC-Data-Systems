@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="ShooterAllyLevel" load_steps=4 format=3 uid="uid://xim6qt318sft"]
+[gd_resource type="Resource" script_class="ShooterAllyLevel" load_steps=5 format=3 uid="uid://xow8td25tct5"]
 
 [ext_resource type="Texture2D" uid="uid://dhite5cf1who2" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_speed_2.png" id="1_1imv4"]
 [ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://global_systems/data_systems/action_condition_system/condition.gd" id="2_kbykd"]
 [ext_resource type="Script" uid="uid://bxsxos5gjpl6h" path="res://data/game_characters/allies/shooter_ally/models/shooter_ally_level.gd" id="3_r4ias"]
+[ext_resource type="Resource" uid="uid://bb85jn3xm2v88" path="res://global_systems/data_systems/action_condition_system/conditions/data/cond_ally_lvl_buyed_bys_s1.tres" id="4_bmmfu"]
 
 [resource]
 script = ExtResource("3_r4ias")
@@ -14,7 +15,7 @@ id = "BYS_S2"
 ally_id = 101
 unlockd_by_default = false
 buyed_by_default = false
-unlock_conditions = Array[ExtResource("2_kbykd")]([])
+unlock_conditions = Array[ExtResource("2_kbykd")]([ExtResource("4_bmmfu")])
 market_price = 1600
 ally_level_thumbnail = ExtResource("1_1imv4")
 scene_path = "res://game_characters_scenes/"

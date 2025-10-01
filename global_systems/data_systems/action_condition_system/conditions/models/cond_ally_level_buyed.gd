@@ -7,5 +7,6 @@ func _init() -> void:
 
 func evaluate(action: Action):
 	var payload: PayBuyedAllyLevel = action.payload
+	print("evaluating: ", ally_level_id, payload.ally_level_id)
 	if ally_level_id == payload.ally_level_id:
 		fullfilled.emit(self)

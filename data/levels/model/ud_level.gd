@@ -32,6 +32,7 @@ func _on_condition_fullfilled(_condition: Condition):
 
 func _check_is_unlocked():
 	for condition in conditions:
+		print("fulfilled conditions has:", fullfilled_conditions.has(condition.id))
 		if !fullfilled_conditions.has(condition.id):
 			return
 	if locked:

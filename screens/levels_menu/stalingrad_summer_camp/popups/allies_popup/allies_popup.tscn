@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://drind8lvt12co"]
+[gd_scene load_steps=86 format=3 uid="uid://drind8lvt12co"]
 
 [ext_resource type="Script" uid="uid://ct6w08st6cih0" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/allies_popup.gd" id="1_ovuc1"]
 [ext_resource type="Script" uid="uid://ccntxav05c4k" path="res://data/game_characters/allies/models/ally_data.gd" id="2_d65bp"]
@@ -56,9 +56,30 @@
 [ext_resource type="FontFile" uid="uid://b4nmgmlb4xi24" path="res://screens/initial_screens/splash_screen_2/assets/EdgeDisplay-Regular.otf" id="54_jxmkp"]
 [ext_resource type="Texture2D" uid="uid://dsx4ykwqjx1x0" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/x_button.png" id="55_0fovw"]
 [ext_resource type="PackedScene" uid="uid://ckaboqsa6o5du" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/ally_level_selector/ally_level_selector.tscn" id="55_d65bp"]
-[ext_resource type="Resource" uid="uid://ejj30pdsles2" path="res://data/game_characters/allies/resource_providers/iron_chest/levels/irc_b.tres" id="56_7xhdm"]
+[ext_resource type="Texture2D" uid="uid://cfyx87v3k0qtd" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_strength_1_unlocked.png" id="56_mm34v"]
 [ext_resource type="Texture2D" uid="uid://th5h8fc336js" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/x_button_selected.png" id="56_rr6ce"]
+[ext_resource type="Texture2D" uid="uid://nwg2go862njr" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_strength_1_selected.png" id="57_hf1v6"]
 [ext_resource type="Texture2D" uid="uid://cto237bcjp3x8" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/assets/skill_description_box.png" id="57_j6r7s"]
+[ext_resource type="Texture2D" uid="uid://c0517mywe0cgi" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_strength_2_unlocked.png" id="58_gk6i0"]
+[ext_resource type="Texture2D" uid="uid://dtman1tmlyqj8" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_strength_2_selected.png" id="59_tu6er"]
+[ext_resource type="Texture2D" uid="uid://bm0jue6lujfwu" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_strength_3_unlocked.png" id="60_onhuu"]
+[ext_resource type="Texture2D" uid="uid://dvr07x41hsrwv" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_strength_3_selected.png" id="61_cj0j7"]
+[ext_resource type="Texture2D" uid="uid://nbdfxwyobjcu" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_speed_1_unlocked.png" id="62_tup0h"]
+[ext_resource type="Texture2D" uid="uid://cw3cst6gx0cmb" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_speed_1_selected.png" id="63_7a701"]
+[ext_resource type="Texture2D" uid="uid://bb2p6um7hmdmn" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_speed_2_unlocked.png" id="64_rtt8r"]
+[ext_resource type="Texture2D" uid="uid://b7dt2tjspw8at" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_speed_2_selected.png" id="65_om1el"]
+[ext_resource type="Texture2D" uid="uid://c2t6tmoonbxjj" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_speed_3_unlocked.png" id="66_5yu5e"]
+[ext_resource type="Texture2D" uid="uid://dkrjtji3eeid4" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_speed_3_selected.png" id="67_du427"]
+[ext_resource type="Texture2D" uid="uid://dewkc7r4eev0h" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_range_2_unlocked.png" id="68_w577s"]
+[ext_resource type="Texture2D" uid="uid://binfn84f75n3h" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_range_2_selected.png" id="69_rd785"]
+[ext_resource type="Texture2D" uid="uid://dwnkbix4tg1ut" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_range_3_unlocked.png" id="70_0obwh"]
+[ext_resource type="Texture2D" uid="uid://cf51d8xauik8c" path="res://data/game_characters/allies/assets/upgrade_buttons/shooters/shooting_range_3_selected.png" id="71_7rxb2"]
+[ext_resource type="Texture2D" uid="uid://6m7epvn4dqwt" path="res://data/game_characters/allies/assets/upgrade_buttons/shared/health_points_1_unlocked.png" id="72_rmykf"]
+[ext_resource type="Texture2D" uid="uid://cu15mhruw4ejv" path="res://data/game_characters/allies/assets/upgrade_buttons/shared/health_points_1_selected.png" id="73_ye0mp"]
+[ext_resource type="Texture2D" uid="uid://djg55niqp2lrg" path="res://data/game_characters/allies/assets/upgrade_buttons/shared/health_points_2_unlocked.png" id="74_33aso"]
+[ext_resource type="Texture2D" uid="uid://bigdt6knxvfet" path="res://data/game_characters/allies/assets/upgrade_buttons/shared/health_points_2_selected.png" id="75_ueyne"]
+[ext_resource type="Texture2D" uid="uid://8iovh1frgi0y" path="res://data/game_characters/allies/assets/upgrade_buttons/shared/health_points_3_unlocked.png" id="76_kuuj6"]
+[ext_resource type="Texture2D" uid="uid://cfawowrwwfly1" path="res://data/game_characters/allies/assets/upgrade_buttons/shared/health_points_3_selected.png" id="77_bppht"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0ay6g"]
 shader = ExtResource("9_xrkyj")
@@ -763,8 +784,87 @@ offset_right = 857.0
 offset_bottom = 431.0
 
 [node name="AllyLvlBtn" parent="AllyLevelSelector/LevelBtnsContainer" index="0"]
-button_pressed = true
-ally_level = ExtResource("56_7xhdm")
+texture_normal = ExtResource("56_mm34v")
+texture_pressed = ExtResource("57_hf1v6")
+texture_hover = ExtResource("57_hf1v6")
+texture_disabled = ExtResource("36_w577s")
+texture_focused = ExtResource("57_hf1v6")
+buyed_texture = ExtResource("37_rd785")
+
+[node name="AllyLvlBtn2" parent="AllyLevelSelector/LevelBtnsContainer" index="1"]
+texture_normal = ExtResource("58_gk6i0")
+texture_pressed = ExtResource("59_tu6er")
+texture_hover = ExtResource("59_tu6er")
+texture_disabled = ExtResource("39_7rxb2")
+texture_focused = ExtResource("59_tu6er")
+
+[node name="AllyLvlBtn3" parent="AllyLevelSelector/LevelBtnsContainer" index="2"]
+texture_normal = ExtResource("60_onhuu")
+texture_pressed = ExtResource("61_cj0j7")
+texture_hover = ExtResource("61_cj0j7")
+texture_disabled = ExtResource("40_rmykf")
+texture_focused = ExtResource("61_cj0j7")
+
+[node name="AllyLvlBtn4" parent="AllyLevelSelector/LevelBtnsContainer" index="3"]
+texture_normal = ExtResource("62_tup0h")
+texture_pressed = ExtResource("63_7a701")
+texture_hover = ExtResource("63_7a701")
+texture_disabled = ExtResource("42_33aso")
+texture_focused = ExtResource("63_7a701")
+buyed_texture = ExtResource("37_rd785")
+
+[node name="AllyLvlBtn5" parent="AllyLevelSelector/LevelBtnsContainer" index="4"]
+texture_normal = ExtResource("64_rtt8r")
+texture_pressed = ExtResource("65_om1el")
+texture_hover = ExtResource("65_om1el")
+texture_disabled = ExtResource("43_ueyne")
+texture_focused = ExtResource("65_om1el")
+
+[node name="AllyLvlBtn6" parent="AllyLevelSelector/LevelBtnsContainer" index="5"]
+texture_normal = ExtResource("66_5yu5e")
+texture_pressed = ExtResource("67_du427")
+texture_hover = ExtResource("67_du427")
+texture_disabled = ExtResource("44_kuuj6")
+texture_focused = ExtResource("67_du427")
+
+[node name="AllyLvlBtn7" parent="AllyLevelSelector/LevelBtnsContainer" index="6"]
+buyed_texture = ExtResource("37_rd785")
+
+[node name="AllyLvlBtn8" parent="AllyLevelSelector/LevelBtnsContainer" index="7"]
+texture_normal = ExtResource("68_w577s")
+texture_pressed = ExtResource("69_rd785")
+texture_hover = ExtResource("69_rd785")
+texture_disabled = ExtResource("47_2xya1")
+texture_focused = ExtResource("69_rd785")
+
+[node name="AllyLvlBtn9" parent="AllyLevelSelector/LevelBtnsContainer" index="8"]
+texture_normal = ExtResource("70_0obwh")
+texture_pressed = ExtResource("71_7rxb2")
+texture_hover = ExtResource("71_7rxb2")
+texture_disabled = ExtResource("48_o5h5c")
+texture_focused = ExtResource("71_7rxb2")
+
+[node name="AllyLvlBtn10" parent="AllyLevelSelector/LevelBtnsContainer" index="9"]
+texture_normal = ExtResource("72_rmykf")
+texture_pressed = ExtResource("73_ye0mp")
+texture_hover = ExtResource("73_ye0mp")
+texture_disabled = ExtResource("50_cfrdt")
+texture_focused = ExtResource("73_ye0mp")
+buyed_texture = ExtResource("37_rd785")
+
+[node name="AllyLvlBtn11" parent="AllyLevelSelector/LevelBtnsContainer" index="10"]
+texture_normal = ExtResource("74_33aso")
+texture_pressed = ExtResource("75_ueyne")
+texture_hover = ExtResource("75_ueyne")
+texture_disabled = ExtResource("51_x3xhd")
+texture_focused = ExtResource("75_ueyne")
+
+[node name="AllyLvlBtn12" parent="AllyLevelSelector/LevelBtnsContainer" index="11"]
+texture_normal = ExtResource("76_kuuj6")
+texture_pressed = ExtResource("77_bppht")
+texture_hover = ExtResource("77_bppht")
+texture_disabled = ExtResource("52_8xv0x")
+texture_focused = ExtResource("77_bppht")
 
 [node name="XButton" type="TextureButton" parent="."]
 layout_mode = 0

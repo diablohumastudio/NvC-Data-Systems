@@ -7,7 +7,7 @@
 script = ExtResource("2_noq7l")
 shooting_power = 12
 shooting_speed = 0.2
-shooting_range = 3
+shooting_range = 0.0
 health_points = 100
 id = "BYS_B"
 ally_id = 101
