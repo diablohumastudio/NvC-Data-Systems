@@ -1,0 +1,329 @@
+[gd_scene load_steps=27 format=3 uid="uid://dm2dhyntbsti0"]
+
+[ext_resource type="Script" uid="uid://b70011isdddhr" path="res://game_characters_scenes/allies/models/ally_upgrade_popup/ally_upgrade_popup.gd" id="1_sqylo"]
+[ext_resource type="Texture2D" uid="uid://diy6h4gfdc48o" path="res://game_characters_scenes/shared_assets/background.png" id="2_4ae6k"]
+[ext_resource type="Texture2D" uid="uid://rk63j4mpok" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/stat_line.png" id="3_k3r3w"]
+[ext_resource type="PackedScene" uid="uid://mwls1togvm3o" path="res://game_characters_scenes/allies/models/ally_upgrade_popup/upgrade_ally_to_level_btn/upgrade_ally_to_level_btn.tscn" id="4_4ae6k"]
+[ext_resource type="FontFile" uid="uid://lxkiqybp8wf7" path="res://global_assets/fonts/EdgeDisplay-Regular.otf" id="4_4yjnd"]
+[ext_resource type="Texture2D" uid="uid://dyetkp4wc8rff" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/upgrade_buttons/barriers/barrier_knockback_1_selected.png" id="5_hy1qg"]
+[ext_resource type="Texture2D" uid="uid://dvx6mgvc211h5" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/shooting_speed_icon.png" id="6_etrvm"]
+[ext_resource type="Texture2D" uid="uid://cx0y06il1low1" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/upgrade_buttons/shared/focused_border.png" id="6_xeg6s"]
+[ext_resource type="Texture2D" uid="uid://1g5fcvaxpchc" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/upgrade_buttons/barriers/barrier_knockback_2.png" id="7_13msn"]
+[ext_resource type="Texture2D" uid="uid://u3a2van16e4b" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/shooting_range_icon.png" id="7_p8p16"]
+[ext_resource type="Texture2D" uid="uid://b7n3n4vdqwooj" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/upgrade_buttons/barriers/barrier_knockback_2_selected.png" id="8_g7hwk"]
+[ext_resource type="Texture2D" uid="uid://dygffkjdtcnh7" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/hp_icon.png" id="8_hy1qg"]
+[ext_resource type="FontFile" uid="uid://c037te0jknb01" path="res://global_assets/fonts/Molot.otf" id="9_xeg6s"]
+[ext_resource type="Texture2D" uid="uid://cl52bynarb1js" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/upgrade_buttons/barriers/barrier_knockback_3.png" id="9_xkk51"]
+[ext_resource type="Texture2D" uid="uid://docmdb8g3y40s" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/upgrade_buttons/barriers/barrier_knockback_3_selected.png" id="10_dni4x"]
+[ext_resource type="Texture2D" uid="uid://b5jb6in3o885j" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/upgrade_buttons/shared/health_points_1.png" id="11_h5r5e"]
+[ext_resource type="Texture2D" uid="uid://ceub2tve28qsb" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/knockback_icon.png" id="12_40ut4"]
+[ext_resource type="Texture2D" uid="uid://cu15mhruw4ejv" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/upgrade_buttons/shared/health_points_1_selected.png" id="12_jv7q5"]
+[ext_resource type="Texture2D" uid="uid://cc0o80vya8ejv" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/upgrade_buttons/shared/health_points_2.png" id="13_xpnu8"]
+[ext_resource type="Texture2D" uid="uid://bigdt6knxvfet" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/upgrade_buttons/shared/health_points_2_selected.png" id="14_80u8m"]
+[ext_resource type="Texture2D" uid="uid://djg55niqp2lrg" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/upgrade_buttons/shared/health_points_2_unlocked.png" id="15_q70ox"]
+[ext_resource type="Texture2D" uid="uid://b66y4pfhlmnry" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/upgrade_buttons/shared/health_points_3.png" id="16_7pjmx"]
+[ext_resource type="Texture2D" uid="uid://dfxjw23bsvqp4" path="res://game_characters_scenes/shared_assets/upgrade_skill_button.png" id="17_13msn"]
+[ext_resource type="Texture2D" uid="uid://cfawowrwwfly1" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/upgrade_buttons/shared/health_points_3_selected.png" id="17_b6g4x"]
+[ext_resource type="Texture2D" uid="uid://bramwgq0sm7qv" path="res://game_characters_scenes/shared_assets/upgrade_skill_button_selected.png" id="18_g7hwk"]
+[ext_resource type="FontFile" uid="uid://ns85otisc51h" path="res://global_assets/fonts/Boldstone-Regular.ttf" id="19_g7hwk"]
+
+[node name="IronChestUpgradePopUp" type="Control"]
+layout_mode = 3
+anchor_right = 0.145
+anchor_bottom = 0.219
+offset_right = 653.6
+offset_bottom = 489.48
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sqylo")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 278.0
+offset_bottom = 238.0
+texture = ExtResource("2_4ae6k")
+
+[node name="StatLines" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="StatLine" type="TextureRect" parent="StatLines"]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 161.0
+offset_right = 712.0
+offset_bottom = 177.0
+texture = ExtResource("3_k3r3w")
+
+[node name="StatLine2" type="TextureRect" parent="StatLines"]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 257.0
+offset_right = 712.0
+offset_bottom = 273.0
+texture = ExtResource("3_k3r3w")
+
+[node name="StatLine3" type="TextureRect" parent="StatLines"]
+visible = false
+layout_mode = 0
+offset_left = 279.0
+offset_top = 354.0
+offset_right = 712.0
+offset_bottom = 370.0
+texture = ExtResource("3_k3r3w")
+
+[node name="StatLine4" type="TextureRect" parent="StatLines"]
+visible = false
+layout_mode = 0
+offset_left = 279.0
+offset_top = 456.0
+offset_right = 712.0
+offset_bottom = 472.0
+texture = ExtResource("3_k3r3w")
+
+[node name="UpgradeToLevelBtnsContainer" type="Control" parent="."]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 343.0
+offset_top = 131.0
+offset_right = 343.0
+offset_bottom = 131.0
+
+[node name="UpgradeToLevelBtn" parent="UpgradeToLevelBtnsContainer" instance=ExtResource("4_4ae6k")]
+layout_mode = 0
+offset_left = -25.0
+offset_top = 6.0
+offset_right = 80.0
+offset_bottom = 65.0
+scale = Vector2(1.1, 1.1)
+texture_pressed = ExtResource("5_hy1qg")
+texture_hover = ExtResource("5_hy1qg")
+texture_focused = ExtResource("6_xeg6s")
+
+[node name="UpgradeToLevelBtn2" parent="UpgradeToLevelBtnsContainer" instance=ExtResource("4_4ae6k")]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 6.0
+offset_right = 245.0
+offset_bottom = 65.0
+scale = Vector2(1.1, 1.1)
+texture_normal = ExtResource("7_13msn")
+texture_pressed = ExtResource("8_g7hwk")
+texture_hover = ExtResource("8_g7hwk")
+texture_focused = ExtResource("6_xeg6s")
+
+[node name="UpgradeToLevelBtn3" parent="UpgradeToLevelBtnsContainer" instance=ExtResource("4_4ae6k")]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 6.0
+offset_right = 405.0
+offset_bottom = 65.0
+scale = Vector2(1.1, 1.1)
+texture_normal = ExtResource("9_xkk51")
+texture_pressed = ExtResource("10_dni4x")
+texture_hover = ExtResource("10_dni4x")
+texture_focused = ExtResource("6_xeg6s")
+
+[node name="UpgradeToLevelBtn4" parent="UpgradeToLevelBtnsContainer" instance=ExtResource("4_4ae6k")]
+layout_mode = 0
+offset_left = -25.0
+offset_top = 100.0
+offset_right = 80.0
+offset_bottom = 159.0
+scale = Vector2(1.1, 1.1)
+texture_normal = ExtResource("11_h5r5e")
+texture_pressed = ExtResource("12_jv7q5")
+texture_hover = ExtResource("12_jv7q5")
+texture_focused = ExtResource("6_xeg6s")
+
+[node name="UpgradeToLevelBtn5" parent="UpgradeToLevelBtnsContainer" instance=ExtResource("4_4ae6k")]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 100.0
+offset_right = 245.0
+offset_bottom = 159.0
+scale = Vector2(1.1, 1.1)
+texture_normal = ExtResource("13_xpnu8")
+texture_pressed = ExtResource("14_80u8m")
+texture_hover = ExtResource("15_q70ox")
+texture_focused = ExtResource("6_xeg6s")
+
+[node name="UpgradeToLevelBtn6" parent="UpgradeToLevelBtnsContainer" instance=ExtResource("4_4ae6k")]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 100.0
+offset_right = 405.0
+offset_bottom = 159.0
+scale = Vector2(1.1, 1.1)
+texture_normal = ExtResource("16_7pjmx")
+texture_pressed = ExtResource("17_b6g4x")
+texture_hover = ExtResource("17_b6g4x")
+texture_focused = ExtResource("6_xeg6s")
+
+[node name="NameLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 206.0
+offset_top = 45.0
+offset_right = 721.0
+offset_bottom = 104.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_4yjnd")
+theme_override_font_sizes/font_size = 56
+text = "IRON CHEST"
+horizontal_alignment = 1
+
+[node name="SkillIcons" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 136.0
+offset_right = 286.0
+offset_bottom = 428.0
+theme_override_constants/separation = 27
+
+[node name="Icon1" type="TextureRect" parent="SkillIcons"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("12_40ut4")
+
+[node name="Icon2" type="TextureRect" parent="SkillIcons"]
+visible = false
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("6_etrvm")
+
+[node name="Icon3" type="TextureRect" parent="SkillIcons"]
+visible = false
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("7_p8p16")
+
+[node name="Icon4" type="TextureRect" parent="SkillIcons"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("8_hy1qg")
+
+[node name="SkillValues" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 136.0
+offset_right = 214.0
+offset_bottom = 428.0
+theme_override_constants/separation = 40
+
+[node name="SkillValueLabel1" type="Label" parent="SkillValues"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_xeg6s")
+theme_override_font_sizes/font_size = 42
+text = "110%"
+horizontal_alignment = 1
+
+[node name="SkillValueLabel2" type="Label" parent="SkillValues"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_xeg6s")
+theme_override_font_sizes/font_size = 42
+text = "110%"
+horizontal_alignment = 1
+
+[node name="SkillValueLabel3" type="Label" parent="SkillValues"]
+visible = false
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_xeg6s")
+theme_override_font_sizes/font_size = 42
+text = "110%"
+horizontal_alignment = 1
+
+[node name="SkillValueLabel4" type="Label" parent="SkillValues"]
+visible = false
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_xeg6s")
+theme_override_font_sizes/font_size = 42
+text = "110%"
+horizontal_alignment = 1
+
+[node name="SkillDescription" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 53.0
+offset_top = 542.0
+offset_right = 93.0
+offset_bottom = 582.0
+
+[node name="SkillDescriptionLabel" type="Label" parent="SkillDescription"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 7.0
+offset_right = 381.0
+offset_bottom = 79.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_4yjnd")
+theme_override_font_sizes/font_size = 31
+text = "Skill description loren ipsum dolor sit amet"
+autowrap_mode = 2
+
+[node name="ToLabel" type="Label" parent="SkillDescription"]
+layout_mode = 0
+offset_left = 145.0
+offset_top = 85.0
+offset_right = 180.0
+offset_bottom = 116.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_4yjnd")
+theme_override_font_sizes/font_size = 31
+text = "to:"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="OldSkillValueLabel" type="Label" parent="SkillDescription"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = 73.0
+offset_right = 132.0
+offset_bottom = 122.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_xeg6s")
+theme_override_font_sizes/font_size = 42
+text = "3/sec"
+horizontal_alignment = 2
+autowrap_mode = 2
+
+[node name="NewSkillValueLabel" type="Label" parent="SkillDescription"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 73.0
+offset_right = 356.0
+offset_bottom = 122.0
+theme_override_colors/font_color = Color(0.998383, 0.720706, 0.565301, 1)
+theme_override_fonts/font = ExtResource("9_xeg6s")
+theme_override_font_sizes/font_size = 42
+text = "5/sec"
+autowrap_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 547.0
+offset_right = 773.0
+offset_bottom = 663.0
+scale = Vector2(1.1, 1.1)
+texture_normal = ExtResource("17_13msn")
+texture_pressed = ExtResource("18_g7hwk")
+texture_hover = ExtResource("18_g7hwk")
+
+[node name="UpgradePrice" type="Label" parent="TextureButton"]
+layout_mode = 0
+offset_left = 77.2728
+offset_top = 57.2727
+offset_right = 183.273
+offset_bottom = 97.2727
+theme_override_fonts/font = ExtResource("19_g7hwk")
+theme_override_font_sizes/font_size = 45
+text = "1000"
+horizontal_alignment = 2

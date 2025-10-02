@@ -1,25 +1,237 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0gkj1gflhpbp"]
+[gd_scene load_steps=13 format=3 uid="uid://c0gkj1gflhpbp"]
 
 [ext_resource type="Script" uid="uid://b70011isdddhr" path="res://game_characters_scenes/allies/models/ally_upgrade_popup/ally_upgrade_popup.gd" id="1_2ks2f"]
+[ext_resource type="Texture2D" uid="uid://diy6h4gfdc48o" path="res://game_characters_scenes/shared_assets/background.png" id="2_624cs"]
+[ext_resource type="FontFile" uid="uid://lxkiqybp8wf7" path="res://global_assets/fonts/EdgeDisplay-Regular.otf" id="4_o2n66"]
+[ext_resource type="Texture2D" uid="uid://dbv64sb6u54i" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/shooting_strenght_icon.png" id="5_r5iuy"]
+[ext_resource type="Texture2D" uid="uid://dvx6mgvc211h5" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/shooting_speed_icon.png" id="6_8adhf"]
+[ext_resource type="Texture2D" uid="uid://u3a2van16e4b" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/shooting_range_icon.png" id="7_5sj5a"]
+[ext_resource type="Texture2D" uid="uid://dygffkjdtcnh7" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/hp_icon.png" id="8_f032r"]
+[ext_resource type="FontFile" uid="uid://c037te0jknb01" path="res://global_assets/fonts/Molot.otf" id="9_8adhf"]
+[ext_resource type="Texture2D" uid="uid://dfxjw23bsvqp4" path="res://game_characters_scenes/shared_assets/upgrade_skill_button.png" id="10_4nb08"]
+[ext_resource type="Texture2D" uid="uid://rk63j4mpok" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/assets/stat_line.png" id="10_5sj5a"]
+[ext_resource type="Texture2D" uid="uid://bramwgq0sm7qv" path="res://game_characters_scenes/shared_assets/upgrade_skill_button_selected.png" id="11_tlhdg"]
+[ext_resource type="FontFile" uid="uid://ns85otisc51h" path="res://global_assets/fonts/Boldstone-Regular.ttf" id="12_v6bj1"]
 
 [node name="AllyUpgradePopUp" type="Control"]
 layout_mode = 3
 anchor_right = 0.145
 anchor_bottom = 0.219
-offset_right = 0.599976
-offset_bottom = 0.47998
+offset_right = 653.6
+offset_bottom = 489.48
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_2ks2f")
 
-[node name="TextureRect" type="ColorRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 278.0
 offset_bottom = 238.0
-color = Color(0.184314, 0.592157, 0.25098, 0.298039)
+texture = ExtResource("2_624cs")
 
-[node name="UpgradeToLevelBtnsContainer" type="VBoxContainer" parent="."]
-unique_name_in_owner = true
-layout_mode = 0
+[node name="StatLines" type="Control" parent="."]
+anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="StatLine" type="TextureRect" parent="StatLines"]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 161.0
+offset_right = 712.0
+offset_bottom = 177.0
+texture = ExtResource("10_5sj5a")
+
+[node name="StatLine2" type="TextureRect" parent="StatLines"]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 257.0
+offset_right = 712.0
+offset_bottom = 273.0
+texture = ExtResource("10_5sj5a")
+
+[node name="StatLine3" type="TextureRect" parent="StatLines"]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 354.0
+offset_right = 712.0
+offset_bottom = 370.0
+texture = ExtResource("10_5sj5a")
+
+[node name="StatLine4" type="TextureRect" parent="StatLines"]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 456.0
+offset_right = 712.0
+offset_bottom = 472.0
+texture = ExtResource("10_5sj5a")
+
+[node name="UpgradeToLevelBtnsContainer" type="Control" parent="."]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 343.0
+offset_top = 131.0
+offset_right = 343.0
+offset_bottom = 131.0
+
+[node name="NameLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 206.0
+offset_top = 45.0
+offset_right = 721.0
+offset_bottom = 104.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_o2n66")
+theme_override_font_sizes/font_size = 56
+text = "ALLY NAME"
+horizontal_alignment = 1
+
+[node name="SkillIcons" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 136.0
+offset_right = 286.0
+offset_bottom = 428.0
+theme_override_constants/separation = 27
+
+[node name="Icon1" type="TextureRect" parent="SkillIcons"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("5_r5iuy")
+
+[node name="Icon2" type="TextureRect" parent="SkillIcons"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("6_8adhf")
+
+[node name="Icon3" type="TextureRect" parent="SkillIcons"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("7_5sj5a")
+
+[node name="Icon4" type="TextureRect" parent="SkillIcons"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("8_f032r")
+
+[node name="SkillValues" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 136.0
+offset_right = 214.0
+offset_bottom = 428.0
+theme_override_constants/separation = 40
+
+[node name="SkillValueLabel1" type="Label" parent="SkillValues"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_8adhf")
+theme_override_font_sizes/font_size = 42
+text = "110%"
+horizontal_alignment = 1
+
+[node name="SkillValueLabel2" type="Label" parent="SkillValues"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_8adhf")
+theme_override_font_sizes/font_size = 42
+text = "110%"
+horizontal_alignment = 1
+
+[node name="SkillValueLabel3" type="Label" parent="SkillValues"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_8adhf")
+theme_override_font_sizes/font_size = 42
+text = "110%"
+horizontal_alignment = 1
+
+[node name="SkillValueLabel4" type="Label" parent="SkillValues"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_8adhf")
+theme_override_font_sizes/font_size = 42
+text = "110%"
+horizontal_alignment = 1
+
+[node name="SkillDescription" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 53.0
+offset_top = 542.0
+offset_right = 93.0
+offset_bottom = 582.0
+
+[node name="SkillDescriptionLabel" type="Label" parent="SkillDescription"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 7.0
+offset_right = 381.0
+offset_bottom = 79.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_o2n66")
+theme_override_font_sizes/font_size = 31
+text = "Skill description loren ipsum dolor sit amet"
+autowrap_mode = 2
+
+[node name="ToLabel" type="Label" parent="SkillDescription"]
+layout_mode = 0
+offset_left = 145.0
+offset_top = 85.0
+offset_right = 180.0
+offset_bottom = 116.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_o2n66")
+theme_override_font_sizes/font_size = 31
+text = "to:"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="OldSkillValueLabel" type="Label" parent="SkillDescription"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = 73.0
+offset_right = 132.0
+offset_bottom = 122.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_8adhf")
+theme_override_font_sizes/font_size = 42
+text = "3/sec"
+horizontal_alignment = 2
+autowrap_mode = 2
+
+[node name="NewSkillValueLabel" type="Label" parent="SkillDescription"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 73.0
+offset_right = 356.0
+offset_bottom = 122.0
+theme_override_colors/font_color = Color(0.998383, 0.720706, 0.565301, 1)
+theme_override_fonts/font = ExtResource("9_8adhf")
+theme_override_font_sizes/font_size = 42
+text = "5/sec"
+autowrap_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 550.0
+offset_top = 547.0
+offset_right = 773.0
+offset_bottom = 663.0
+scale = Vector2(1.1, 1.1)
+texture_normal = ExtResource("10_4nb08")
+texture_pressed = ExtResource("11_tlhdg")
+texture_hover = ExtResource("11_tlhdg")
+
+[node name="UpgradePrice" type="Label" parent="TextureButton"]
+layout_mode = 0
+offset_left = 77.2728
+offset_top = 57.2727
+offset_right = 183.273
+offset_bottom = 97.2727
+theme_override_fonts/font = ExtResource("12_v6bj1")
+theme_override_font_sizes/font_size = 45
+text = "1000"
+horizontal_alignment = 2

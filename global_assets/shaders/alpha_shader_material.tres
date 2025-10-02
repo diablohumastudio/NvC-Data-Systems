@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://crbl1s8vvdwsd"]
+
+[ext_resource type="Shader" uid="uid://b122lu6biodh1" path="res://game_characters_scenes/shared_assets/alpha_shader/alpha_shader.gdshader" id="1_78ujo"]
+[ext_resource type="Texture2D" uid="uid://c1b8cqgtxcox3" path="res://screens/game/pop_ups/game_over_popup/assets/alpha_mask.png" id="2_ydh5d"]
+
+[resource]
+shader = ExtResource("1_78ujo")
+shader_parameter/cutoff_one = 0.045
+shader_parameter/cutoff_two = 0.0
+shader_parameter/smooth_size = 0.0
+shader_parameter/invert_mask = false
+shader_parameter/masking_color = Color(0.67451, 0.207843, 0.184314, 1)
+shader_parameter/mask = ExtResource("2_ydh5d")

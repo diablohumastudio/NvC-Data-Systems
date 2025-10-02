@@ -18,11 +18,15 @@ func _set_acs(new_value: ActionConditionSystem):
 
 func _set_level_buttons():
 	if !ally: return
-	for level in ally.levels:
-		var new_upgrade_to_level_btn: UpgradeToLevelButton = UPGRADE_TO_LEVEL_BTN_PKSC.instantiate()
-		new_upgrade_to_level_btn.level = level
-		new_upgrade_to_level_btn.upgraded_to_level.connect(_on_upgrade_to_level_button_upgraded_to_level)
-		%UpgradeToLevelBtnsContainer.add_child(new_upgrade_to_level_btn)
+	
+	for button : UpgradeToLevelButton in %UpgradeToLevelBtnsContainer.get_children():
+		button.upgraded_to_level.connect(_on_upgrade_to_level_button_upgraded_to_level) 
+	
+	#for level in ally.levels:
+		#var new_upgrade_to_level_btn: UpgradeToLevelButton = UPGRADE_TO_LEVEL_BTN_PKSC.instantiate()
+		#new_upgrade_to_level_btn.level = level
+		#new_upgrade_to_level_btn.upgraded_to_level.connect(_on_upgrade_to_level_button_upgraded_to_level)
+		#%UpgradeToLevelBtnsContainer.add_child(new_upgrade_to_level_btn)
 
 func _on_upgrade_to_level_button_upgraded_to_level(level: AllyLevelData):
 	level_changed.emit(level)

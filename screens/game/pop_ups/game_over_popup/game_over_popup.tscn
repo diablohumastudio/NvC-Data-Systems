@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://6xhrmrplu0ha"]
+[gd_scene load_steps=32 format=3 uid="uid://6xhrmrplu0ha"]
 
 [ext_resource type="Script" uid="uid://dmpfbpry8k674" path="res://screens/game/pop_ups/game_over_popup/game_over_popup.gd" id="1_pivp5"]
 [ext_resource type="Resource" uid="uid://c0580eyighege" path="res://data/levels/data/level_2p.tres" id="2_65xoa"]
@@ -9,11 +9,16 @@
 [ext_resource type="Texture2D" uid="uid://d3fj387i24na8" path="res://screens/game/pop_ups/game_over_popup/assets/main_menu_button_selected.png" id="4_sextl"]
 [ext_resource type="Texture2D" uid="uid://cel3bmflabrwu" path="res://screens/game/pop_ups/game_over_popup/assets/try again_button.png" id="5_cxig5"]
 [ext_resource type="Texture2D" uid="uid://lr87lymbty40" path="res://screens/game/pop_ups/game_over_popup/assets/try again_button_selected.png" id="6_dpi26"]
+[ext_resource type="Texture2D" uid="uid://bnttng61gbo3n" path="res://screens/game/pop_ups/game_over_popup/assets/game_over_popup_borders.png" id="8_yl511"]
+[ext_resource type="Texture2D" uid="uid://bvmwvjpqc32o0" path="res://screens/game/pop_ups/game_over_popup/assets/dripping_blood.png" id="10_5g55e"]
 [ext_resource type="Script" uid="uid://dxu15e362h623" path="res://global_objects/node_shaker/node_shaker.gd" id="10_72iwg"]
 [ext_resource type="Texture2D" uid="uid://cuvl47v2bj40c" path="res://global_assets/particles/blood_particles_textures/blood_particle_1.png" id="10_so0ke"]
+[ext_resource type="Material" uid="uid://crbl1s8vvdwsd" path="res://global_assets/shaders/alpha_shader_material.tres" id="11_bdhf1"]
 [ext_resource type="Texture2D" uid="uid://mh6gn6wchrg6" path="res://global_assets/particles/blood_particles_textures/blood_particle_2.png" id="11_yh3yj"]
 [ext_resource type="Texture2D" uid="uid://b3g35fgmhmf86" path="res://global_assets/particles/blood_particles_textures/blood_particle_3.png" id="12_vx1u7"]
 [ext_resource type="Texture2D" uid="uid://dd6op5jmyue5o" path="res://global_assets/particles/blood_particles_textures/blood_particle_4.png" id="13_1gd05"]
+[ext_resource type="Texture2D" uid="uid://c6wclrf4tu7tp" path="res://screens/game/pop_ups/game_over_popup/assets/try again_button_focused.png" id="14_rm36q"]
+[ext_resource type="Texture2D" uid="uid://dr7k318illgjb" path="res://screens/game/pop_ups/game_over_popup/assets/main_menu_button_focused.png" id="17_r1pvd"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_so0ke"]
 frames = 4
@@ -42,6 +47,101 @@ shader_parameter/cull_back = true
 shader_parameter/y_rot = 0.0
 shader_parameter/x_rot = 0.0
 shader_parameter/inset = 0.0
+
+[sub_resource type="Animation" id="Animation_r1pvd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_rm36q"]
+resource_name = "pressed"
+length = 0.5
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.4),
+"transitions": PackedFloat32Array(1, 0.574349, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(3, 2, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.4),
+"transitions": PackedFloat32Array(1, 0.482968, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 0.8), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h02tk"]
+_data = {
+&"RESET": SubResource("Animation_r1pvd"),
+&"pressed": SubResource("Animation_rm36q")
+}
+
+[sub_resource type="Animation" id="Animation_h02tk"]
+resource_name = "pressed"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../GoToMainMenuButton:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.4),
+"transitions": PackedFloat32Array(1, 0.574349, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(3, 2, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../GoToMainMenuButton:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.4),
+"transitions": PackedFloat32Array(1, 0.482968, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 0.8), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n3486"]
+_data = {
+&"pressed": SubResource("Animation_h02tk")
+}
 
 [sub_resource type="Animation" id="Animation_cnruo"]
 length = 0.001
@@ -117,10 +217,34 @@ tracks/5/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("WoodenPopUp/DrippingBlood:material:shader_parameter/cutoff_one")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.045]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("WoodenPopUp/PopupBorders:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.309804)]
+}
 
 [sub_resource type="Animation" id="Animation_we2fo"]
 resource_name = "_appear"
-length = 0.4
+length = 1.8
 step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -208,6 +332,30 @@ tracks/6/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("WoodenPopUp/DrippingBlood:material:shader_parameter/cutoff_one")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.15, 1.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.045, 0.87]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("WoodenPopUp/PopupBorders:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.15, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(0.356863, 0.0705882, 0.0588235, 0.34902)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nhvt5"]
 _data = {
@@ -240,13 +388,13 @@ theme_override_styles/normal = ExtResource("2_lrgj1")
 
 [node name="BloodParticles" type="CPUParticles2D" parent="."]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(516, 757)
+position = Vector2(994, 935)
 amount = 70
 texture = SubResource("AnimatedTexture_so0ke")
 lifetime = 9.0
 preprocess = 11.0
 emission_shape = 3
-emission_rect_extents = Vector2(1200, 200)
+emission_rect_extents = Vector2(1100, 200)
 direction = Vector2(0, -1)
 gravity = Vector2(0, -20)
 initial_velocity_min = 29.7
@@ -262,6 +410,15 @@ offset_top = 208.0
 offset_right = 411.0
 offset_bottom = 208.0
 
+[node name="PopupBorders" type="TextureRect" parent="WoodenPopUp"]
+modulate = Color(1, 1, 1, 0.309804)
+layout_mode = 0
+offset_left = -285.0
+offset_top = -190.0
+offset_right = 1314.0
+offset_bottom = 948.0
+texture = ExtResource("8_yl511")
+
 [node name="BackgroundTexture" type="TextureRect" parent="WoodenPopUp"]
 process_mode = 3
 material = SubResource("ShaderMaterial_nw8sk")
@@ -271,6 +428,15 @@ offset_bottom = 805.0
 pivot_offset = Vector2(519, 27)
 texture = ExtResource("2_pcg4e")
 
+[node name="DrippingBlood" type="TextureRect" parent="WoodenPopUp"]
+material = ExtResource("11_bdhf1")
+layout_mode = 0
+offset_left = 15.0
+offset_top = -1.0
+offset_right = 1036.0
+offset_bottom = 237.0
+texture = ExtResource("10_5g55e")
+
 [node name="PlayAgainButton" type="TextureButton" parent="WoodenPopUp"]
 unique_name_in_owner = true
 layout_mode = 0
@@ -278,11 +444,17 @@ offset_left = 100.0
 offset_top = 433.0
 offset_right = 453.0
 offset_bottom = 548.0
+pivot_offset = Vector2(180, 59)
 action_mode = 0
 texture_normal = ExtResource("5_cxig5")
-texture_pressed = ExtResource("6_dpi26")
+texture_pressed = ExtResource("14_rm36q")
 texture_hover = ExtResource("6_dpi26")
 texture_focused = ExtResource("6_dpi26")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="WoodenPopUp/PlayAgainButton"]
+libraries = {
+&"": SubResource("AnimationLibrary_h02tk")
+}
 
 [node name="GoToMainMenuButton" type="TextureButton" parent="WoodenPopUp"]
 unique_name_in_owner = true
@@ -291,11 +463,17 @@ offset_left = 590.0
 offset_top = 439.0
 offset_right = 943.0
 offset_bottom = 554.0
+pivot_offset = Vector2(176, 58)
 action_mode = 0
 texture_normal = ExtResource("3_qlh0f")
-texture_pressed = ExtResource("4_sextl")
+texture_pressed = ExtResource("17_r1pvd")
 texture_hover = ExtResource("4_sextl")
 texture_focused = ExtResource("4_sextl")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="WoodenPopUp/GoToMainMenuButton"]
+libraries = {
+&"": SubResource("AnimationLibrary_n3486")
+}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true

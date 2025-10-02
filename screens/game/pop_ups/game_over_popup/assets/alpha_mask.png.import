@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcluntkfnobbj"
-path="res://.godot/imported/game_over_popup_b.png-b9803de7755bce50d116ad2a3c10e6ba.ctex"
+uid="uid://c1b8cqgtxcox3"
+path="res://.godot/imported/alpha_mask.png-a6e5c0f45e9aff87bcfcb1e476c4cdee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://screens/game/pop_ups/game_over_popup/assets/game_over_popup_b.png"
-dest_files=["res://.godot/imported/game_over_popup_b.png-b9803de7755bce50d116ad2a3c10e6ba.ctex"]
+source_file="res://screens/game/pop_ups/game_over_popup/assets/alpha_mask.png"
+dest_files=["res://.godot/imported/alpha_mask.png-a6e5c0f45e9aff87bcfcb1e476c4cdee.ctex"]
 
 [params]
 
