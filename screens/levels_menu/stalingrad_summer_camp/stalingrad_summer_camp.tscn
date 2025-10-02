@@ -331,13 +331,6 @@ texture_hover = ExtResource("6_wqfrk")
 [node name="BarracksPopup" parent="." instance=ExtResource("10_4afd1")]
 visible = false
 
-[node name="TextureButton2" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 1446.0
-offset_top = 143.0
-offset_right = 1563.0
-offset_bottom = 231.0
-
 [node name="ResourcesUI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -372,4 +365,3 @@ metadata/_custom_type_script = "uid://cc5cx846obsu8"
 
 [connection signal="pressed" from="Barracks" to="." method="_on_barracks_pressed"]
 [connection signal="pressed" from="GoBackButton" to="." method="_on_go_back_button_pressed"]
-[connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]
