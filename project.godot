@@ -46,9 +46,11 @@ enabled=PackedStringArray("res://addons/gut/plugin.cfg")
 
 folder_colors={
 "res://data/achievements/models/": "gray",
+"res://data/game_characters/allies/explosives/models/": "gray",
 "res://data/game_characters/allies/models/": "gray",
+"res://data/game_characters/allies/obstructers/models/": "gray",
 "res://data/game_characters/allies/resource_providers/models/": "gray",
-"res://data/game_characters/allies/shooter_ally/models/": "gray",
+"res://data/game_characters/allies/shooters/models/": "gray",
 "res://data/game_characters/models/": "gray",
 "res://data/levels/model/": "gray",
 "res://game_characters_scenes/allies/models/": "gray",

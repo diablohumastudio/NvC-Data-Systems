@@ -1,0 +1,107 @@
+[gd_scene load_steps=3 format=3 uid="uid://bchoaf3qcy5iq"]
+
+[ext_resource type="Script" uid="uid://b8heuoees0rfu" path="res://tests/game_characters_test/game_characters_test.gd" id="1_isc83"]
+[ext_resource type="Script" uid="uid://trb3tj3bsuvf" path="res://tests/game_characters_test/add_game_character_btn/add_game_character_btn.gd" id="2_tobs7"]
+
+[node name="GameCharactersTest" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_isc83")
+
+[node name="AddAlliesBtns" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 23.0
+offset_right = 267.0
+offset_bottom = 181.0
+
+[node name="AddChestBtn" type="Button" parent="AddAlliesBtns"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "add chest"
+script = ExtResource("2_tobs7")
+metadata/_custom_type_script = "uid://trb3tj3bsuvf"
+
+[node name="AddBayonneteBtn" type="Button" parent="AddAlliesBtns"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "add bayonete"
+script = ExtResource("2_tobs7")
+metadata/_custom_type_script = "uid://trb3tj3bsuvf"
+
+[node name="AddEnemiesBtns" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 1615.0
+offset_top = 20.0
+offset_right = 1891.0
+offset_bottom = 97.0
+
+[node name="AddEnemyBtn" type="Button" parent="AddEnemiesBtns"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "add enemy"
+script = ExtResource("2_tobs7")
+metadata/_custom_type_script = "uid://trb3tj3bsuvf"
+
+[node name="AlliesGrid" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 401.0
+offset_top = 192.0
+offset_right = 576.0
+offset_bottom = 1083.0
+
+[node name="Button" type="Button" parent="AlliesGrid"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="AlliesGrid"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="AlliesGrid"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+
+[node name="Button4" type="Button" parent="AlliesGrid"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+
+[node name="Button5" type="Button" parent="AlliesGrid"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+
+[node name="EnemiesGrid" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1358.0
+offset_top = 184.0
+offset_right = 1533.0
+offset_bottom = 1075.0
+
+[node name="Button" type="Button" parent="EnemiesGrid"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="EnemiesGrid"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="EnemiesGrid"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+
+[node name="Button4" type="Button" parent="EnemiesGrid"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+
+[node name="Button5" type="Button" parent="EnemiesGrid"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2

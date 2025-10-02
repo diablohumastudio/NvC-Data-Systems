@@ -1,0 +1,90 @@
+[gd_resource type="SpriteFrames" load_steps=13 format=3 uid="uid://duym1snydi3ab"]
+
+[ext_resource type="Texture2D" uid="uid://ddaa2v36b420f" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/death_spritesheet.png" id="1_w4d7h"]
+[ext_resource type="Texture2D" uid="uid://2x6jatis7g0v" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/health_levels/body_base.png" id="2_ymt3f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w4d7h"]
+atlas = ExtResource("1_w4d7h")
+region = Rect2(0, 0, 152, 301)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ymt3f"]
+atlas = ExtResource("1_w4d7h")
+region = Rect2(152, 0, 152, 301)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u18lc"]
+atlas = ExtResource("1_w4d7h")
+region = Rect2(304, 0, 152, 301)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6af8w"]
+atlas = ExtResource("1_w4d7h")
+region = Rect2(456, 0, 152, 301)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbkoj"]
+atlas = ExtResource("1_w4d7h")
+region = Rect2(0, 301, 152, 301)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8qki"]
+atlas = ExtResource("1_w4d7h")
+region = Rect2(152, 301, 152, 301)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idulv"]
+atlas = ExtResource("1_w4d7h")
+region = Rect2(304, 301, 152, 301)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ac5w0"]
+atlas = ExtResource("1_w4d7h")
+region = Rect2(456, 301, 152, 301)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4oiel"]
+atlas = ExtResource("1_w4d7h")
+region = Rect2(0, 602, 152, 301)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_brbij"]
+atlas = ExtResource("1_w4d7h")
+region = Rect2(152, 602, 152, 301)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w4d7h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ymt3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u18lc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6af8w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbkoj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b8qki")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idulv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ac5w0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4oiel")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_brbij")
+}],
+"loop": false,
+"name": &"death",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ymt3f")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 12.0
+}]

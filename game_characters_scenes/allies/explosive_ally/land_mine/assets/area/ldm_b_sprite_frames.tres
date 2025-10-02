@@ -1,0 +1,30 @@
+[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://dy12freh5yd5t"]
+
+[ext_resource type="Texture2D" uid="uid://x7k827lhy82c" path="res://game_characters_scenes/allies/explosive_ally/land_mine/assets/area/mine_base.png" id="1_mlvo8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tpm1a"]
+atlas = ExtResource("1_mlvo8")
+region = Rect2(176, 0, 176, 117)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhamg"]
+atlas = ExtResource("1_mlvo8")
+region = Rect2(0, 0, 176, 117)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tpm1a")
+}],
+"loop": true,
+"name": &"activated",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhamg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="ShooterAllyLevel" load_steps=4 format=3 uid="uid://2bwkdeuhid4r"]
+
+[ext_resource type="Texture2D" uid="uid://4xam5xcuh2xr" path="res://data/game_characters/allies/shooters/ally_thumbnails/shooting_strength_1.png" id="1_0wdv5"]
+[ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://global_systems/data_systems/action_condition_system/condition.gd" id="1_n2uis"]
+[ext_resource type="Script" uid="uid://bxsxos5gjpl6h" path="res://data/game_characters/allies/shooters/models/shooter_ally_level.gd" id="2_0wdv5"]
+
+[resource]
+script = ExtResource("2_0wdv5")
+shooting_power = 5
+shooting_speed = 0.0
+shooting_range = 0.0
+health_points = 0
+id = "FBS_P1"
+ally_id = 102
+unlockd_by_default = false
+buyed_by_default = false
+unlock_conditions = Array[ExtResource("1_n2uis")]([])
+market_price = 1500
+ally_level_thumbnail = ExtResource("1_0wdv5")
+scene_path = "uid://csd3tcowd2h4x"
+in_game_price = 150
+in_game_unlock_conditions = Array[ExtResource("1_n2uis")]([])
+metadata/_custom_type_script = "uid://bxsxos5gjpl6h"

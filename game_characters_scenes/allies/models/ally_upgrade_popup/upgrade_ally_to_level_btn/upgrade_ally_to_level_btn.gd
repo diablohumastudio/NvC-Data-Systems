@@ -13,8 +13,10 @@ func _set_level(new_value: AllyLevelData):
 	level = new_value.duplicate()
 
 func _ready():
+
 	#text = "Upgrade to level: " + level.level_id
 	#set("theme_override_font_sizes/font_size", 35)
+
 	_update_state_visuals()
 	level.in_game_just_unlocked.connect(_update_state_visuals)
 	level.in_game_just_buyed.connect(_update_state_visuals)

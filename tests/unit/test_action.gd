@@ -62,12 +62,12 @@ func test_pay_lvl_compl_all_canons_payload():
 func test_pay_buyed_ally_level_payload():
 	# Test PayBuyedAllyLevel payload
 	var ally_level_id = "fast_chest_lvl_1"
-	var payload = PayBuyedAllyLevel.new(ally_level_id, AllyData.IDs.CHEST)
+	var payload = PayBuyedAllyLevel.new(ally_level_id, AllyData.IDs.IRC)
 	
 	assert_not_null(payload, "PayBuyedAllyLevel payload should be created")
 	assert_true(payload is ActionPayload, "Should inherit from Payload")
 	assert_eq(payload.ally_level_id, ally_level_id, "AllyData level ID should be set correctly")
-	assert_eq(payload.ally_id, AllyData.IDs.CHEST, "AllyData ID should be set correctly")
+	assert_eq(payload.ally_id, AllyData.IDs.IRC, "AllyData ID should be set correctly")
 
 # Integration Tests
 func test_action_with_level_completion_payload():

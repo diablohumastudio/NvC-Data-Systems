@@ -7,7 +7,7 @@ func _ready() -> void:
 		push_error("AllySelectorCard MUST have setted an ally before enter tree")
 		return
 	%AllyName.text = ally.ally_name
-	%AllySelCardBtn.texture_normal = ally.base_level.ally_selector_thumbnail
+	%AllySelCardBtn.texture_normal = ally.ally_selector_thumbnail
 	GSS.ally_just_placed.connect(_on_GSS__ally_just_placed)
 
 #region TimeBlocking for when ally has just been placed

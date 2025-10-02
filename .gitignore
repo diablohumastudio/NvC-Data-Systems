@@ -7,3 +7,4 @@
 /android/
 .DS_Store
 addons/Wwise/native/lib/win64/editor/profile/~libwwise.windows.editor.profile.dll
+Wwise/resources/WwiseProjectData.tres

@@ -1,5 +1,5 @@
 class_name PayInGameBuyedAllyLevel extends ActionPayload
-var level: AllyLevelData
+var ally_level: AllyLevelData
 
 func _init(_level: AllyLevelData):
-	level = _level
+	ally_level = _level

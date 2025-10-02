@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://v45tapaeto15"
+path="res://.godot/imported/select_ally_btn.png-3618f988c9a4c5e9db3cb05594ab704f.res"
+
+[deps]
+
+source_file="res://game_characters_scenes/allies/shoter_ally/fast_bayonet_soldier/assets/select_ally_btn.png"
+dest_files=["res://.godot/imported/select_ally_btn.png-3618f988c9a4c5e9db3cb05594ab704f.res"]
+
+[params]
+
+create_from=1
+threshold=0.5

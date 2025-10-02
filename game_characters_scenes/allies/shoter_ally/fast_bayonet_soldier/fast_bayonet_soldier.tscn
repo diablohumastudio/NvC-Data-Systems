@@ -1,0 +1,2910 @@
+[gd_scene load_steps=88 format=3 uid="uid://csd3tcowd2h4x"]
+
+[ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/shared_assets/circle_shadow.png" id="1_r7v6n"]
+[ext_resource type="BitMap" uid="uid://v45tapaeto15" path="res://game_characters_scenes/allies/shoter_ally/fast_bayonet_soldier/assets/select_ally_btn.png" id="2_i16r7"]
+[ext_resource type="Material" uid="uid://1e3tt2sswtl0" path="res://global_assets/shaders/burn_material.tres" id="4_xemki"]
+[ext_resource type="Texture2D" uid="uid://bmxq2nmbt5r3e" path="res://game_characters_scenes/allies/shoter_ally/bayonet_soldier/assets/base_parts.png" id="5_bu6y2"]
+[ext_resource type="Texture2D" uid="uid://hon6u2c0atsn" path="res://game_characters_scenes/allies/shoter_ally/fast_bayonet_soldier/assets/health_levels/torso_base.png" id="6_4jt73"]
+[ext_resource type="Script" uid="uid://c3skicx1p4687" path="res://game_characters_scenes/allies/models/ally_scene/ally_level_dependants_nodes/ally_level_dependent_sprite2D.gd" id="7_ytwct"]
+[ext_resource type="Texture2D" uid="uid://boxqsoojtxmyd" path="res://game_characters_scenes/allies/shoter_ally/fast_bayonet_soldier/assets/health_levels/torso_1.png" id="8_ytwct"]
+[ext_resource type="Texture2D" uid="uid://pvn4h0sy8stq" path="res://game_characters_scenes/allies/shoter_ally/fast_bayonet_soldier/assets/health_levels/torso_2.png" id="9_4jt73"]
+[ext_resource type="Texture2D" uid="uid://d3m2ymkclsdx7" path="res://game_characters_scenes/shared_assets/hurt_light.png" id="9_e6t8m"]
+[ext_resource type="Texture2D" uid="uid://c73v5xy4v6gea" path="res://game_characters_scenes/shared_assets/hurt_shape.png" id="10_7i0ld"]
+[ext_resource type="Texture2D" uid="uid://dipm6aoxkral" path="res://game_characters_scenes/allies/shoter_ally/fast_bayonet_soldier/assets/health_levels/torso_3.png" id="10_k3h1m"]
+[ext_resource type="Texture2D" uid="uid://buygfd12jxdqp" path="res://game_characters_scenes/allies/shoter_ally/fast_bayonet_soldier/assets/speed_levels/belt_base.png" id="11_4jt73"]
+[ext_resource type="Texture2D" uid="uid://da57urwc6sog5" path="res://game_characters_scenes/allies/shoter_ally/fast_bayonet_soldier/assets/speed_levels/belt_1.png" id="12_ytwct"]
+[ext_resource type="Texture2D" uid="uid://cvdwbj118sm1w" path="res://game_characters_scenes/allies/shoter_ally/fast_bayonet_soldier/assets/speed_levels/belt_2.png" id="13_4jt73"]
+[ext_resource type="Texture2D" uid="uid://b5gwm2dumfb4s" path="res://game_characters_scenes/allies/shoter_ally/fast_bayonet_soldier/assets/speed_levels/belt_3.png" id="14_k3h1m"]
+[ext_resource type="Texture2D" uid="uid://mu637pat7l8u" path="res://game_characters_scenes/allies/shoter_ally/fast_bayonet_soldier/assets/base_parts.png" id="15_ytwct"]
+[ext_resource type="Texture2D" uid="uid://8sb4vy2m04i7" path="res://game_characters_scenes/allies/shoter_ally/fast_bayonet_soldier/assets/health_levels/helmet_base.png" id="16_4jt73"]
+[ext_resource type="Texture2D" uid="uid://blpjiu7n1qdky" path="res://game_characters_scenes/allies/shoter_ally/fast_bayonet_soldier/assets/health_levels/helmet_1.png" id="17_qiv2f"]
+[ext_resource type="Texture2D" uid="uid://b1dpvkn8g86e5" path="res://game_characters_scenes/shared_assets/bayonet_ammo.png" id="18_wfbps"]
+[ext_resource type="Texture2D" uid="uid://bro3r216e38d" path="res://game_characters_scenes/allies/shoter_ally/fast_bayonet_soldier/assets/health_levels/helmet_2.png" id="18_ytwct"]
+[ext_resource type="Texture2D" uid="uid://dlscrr4gn4fq" path="res://game_characters_scenes/allies/shoter_ally/fast_bayonet_soldier/assets/health_levels/helmet_3.png" id="19_ytwct"]
+[ext_resource type="Texture2D" uid="uid://bamnfskmo3m50" path="res://game_characters_scenes/allies/shoter_ally/fast_bayonet_soldier/assets/range_levels/mosin_base.PNG" id="20_4jt73"]
+[ext_resource type="Texture2D" uid="uid://ddqepa8i20dlr" path="res://game_characters_scenes/allies/shoter_ally/fast_bayonet_soldier/assets/range_levels/mosin_range_1.PNG" id="21_4jt73"]
+[ext_resource type="Texture2D" uid="uid://jdulueb7gowt" path="res://game_characters_scenes/shared_assets/dust_particle.png" id="22_e3xd1"]
+[ext_resource type="Texture2D" uid="uid://ca2fdwn0b24p" path="res://game_characters_scenes/allies/shoter_ally/fast_bayonet_soldier/assets/range_levels/mosin_range_2.PNG" id="22_k3h1m"]
+[ext_resource type="Texture2D" uid="uid://c53ljpjmkqs68" path="res://game_characters_scenes/allies/shoter_ally/fast_bayonet_soldier/assets/range_levels/mosin_range_3.PNG" id="23_i16r7"]
+[ext_resource type="Texture2D" uid="uid://bxd1vb13tghq" path="res://game_characters_scenes/allies/shoter_ally/fast_bayonet_soldier/assets/power_levels/bayonet_base.png" id="24_k3h1m"]
+[ext_resource type="Texture2D" uid="uid://b1oedlr61pvfb" path="res://game_characters_scenes/allies/shoter_ally/fast_bayonet_soldier/assets/power_levels/bayonet_power_1.png" id="25_4jt73"]
+[ext_resource type="Animation" uid="uid://b3knd8cfttroi" path="res://game_characters_scenes/shared_assets/animations/_death_stabbed_bayonet.res" id="25_tv8mf"]
+[ext_resource type="PackedScene" uid="uid://bdr08hlqbnt41" path="res://global_assets/particles/shoot_particles/shoot_particles.tscn" id="26_jw7ag"]
+[ext_resource type="Texture2D" uid="uid://djitbwfxqkmb" path="res://game_characters_scenes/allies/shoter_ally/fast_bayonet_soldier/assets/power_levels/bayonet_power_2.png" id="26_k3h1m"]
+[ext_resource type="Texture2D" uid="uid://c6rqx7rro5wok" path="res://game_characters_scenes/allies/shoter_ally/fast_bayonet_soldier/assets/power_levels/bayonet_power_3.png" id="27_i16r7"]
+[ext_resource type="Texture2D" uid="uid://l8brplu1kc76" path="res://game_characters_scenes/shared_assets/shoot_anim_spritesheet.png" id="28_y8ix8"]
+[ext_resource type="Texture2D" uid="uid://b5ro46i71vfn0" path="res://screens/game/pop_ups/game_won_popup/assets/star_blink.png" id="31_2j7em"]
+[ext_resource type="Texture2D" uid="uid://c08h7xaadbc38" path="res://screens/initial_screens/loading_screen/animated_background/assets/gun_particle.png" id="32_qiv2f"]
+[ext_resource type="PackedScene" uid="uid://d2torbk0fy8a5" path="res://game_characters_scenes/shared_assets/blood_particles.tscn" id="32_r0dqm"]
+[ext_resource type="Texture2D" uid="uid://w2v0kkxxyyj5" path="res://game_characters_scenes/shared_assets/level_up_alpha_mask.png" id="33_ytwct"]
+
+[sub_resource type="Shader" id="Shader_6citr"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b5f6u"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8ixim"]
+resource_local_to_scene = true
+shader = SubResource("Shader_6citr")
+shader_parameter/noise = SubResource("CompressedTexture2D_b5f6u")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_s6whi"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2l7nf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_di8rd"]
+resource_local_to_scene = true
+shader = SubResource("Shader_s6whi")
+shader_parameter/noise = SubResource("CompressedTexture2D_2l7nf")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_1upg6"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v04dj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bgfk6"]
+resource_local_to_scene = true
+shader = SubResource("Shader_1upg6")
+shader_parameter/noise = SubResource("CompressedTexture2D_v04dj")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_7gwe4"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mkm0j"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w1pls"]
+resource_local_to_scene = true
+shader = SubResource("Shader_7gwe4")
+shader_parameter/noise = SubResource("CompressedTexture2D_mkm0j")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_vtr4l"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yiic4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7awjl"]
+resource_local_to_scene = true
+shader = SubResource("Shader_vtr4l")
+shader_parameter/noise = SubResource("CompressedTexture2D_yiic4")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_p5c1c"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gtqhv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bjbp4"]
+resource_local_to_scene = true
+shader = SubResource("Shader_p5c1c")
+shader_parameter/noise = SubResource("CompressedTexture2D_gtqhv")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_3jx6a"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xtm2a"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oyb36"]
+resource_local_to_scene = true
+shader = SubResource("Shader_3jx6a")
+shader_parameter/noise = SubResource("CompressedTexture2D_xtm2a")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_ko624"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b2817"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b1n2q"]
+resource_local_to_scene = true
+shader = SubResource("Shader_ko624")
+shader_parameter/noise = SubResource("CompressedTexture2D_b2817")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_fx8ln"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iku32"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_joxp5"]
+resource_local_to_scene = true
+shader = SubResource("Shader_fx8ln")
+shader_parameter/noise = SubResource("CompressedTexture2D_iku32")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_1x7jd"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fj4hd"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_o485d"]
+resource_local_to_scene = true
+shader = SubResource("Shader_1x7jd")
+shader_parameter/noise = SubResource("CompressedTexture2D_fj4hd")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_ls5in"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform sampler2D noise;
+uniform float dissolve_state : hint_range(-0.1, 1.1);
+uniform vec4 border_color;
+uniform vec4 object_modulate : source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	float brightness = (color.r + color.g + color.b) / 3.0;
+	COLOR = vec4(mix(color.rgb, vec3(brightness), 0.0), color.a);
+
+	float noise_val = texture(noise, UV).r;
+
+	if (noise_val < dissolve_state) {
+		COLOR.a = 0.0;
+	} else if (noise_val - 0.06 < dissolve_state) {
+		COLOR.rgb = border_color.rgb;
+	}
+
+	COLOR *= object_modulate;
+}
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rc416"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dn4ov"]
+resource_local_to_scene = true
+shader = SubResource("Shader_ls5in")
+shader_parameter/noise = SubResource("CompressedTexture2D_rc416")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="Curve" id="Curve_ib7sr"]
+_data = [Vector2(0, 0.147368), 0.0, 0.0, 0, 0, Vector2(0.467033, 0.515789), 0.0, 0.0, 0, 0, Vector2(0.983517, 0.115789), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_bchcm"]
+offsets = PackedFloat32Array(0, 0.324503, 1)
+colors = PackedColorArray(0.351563, 0.351563, 0.351563, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="Curve" id="Curve_n373g"]
+_limits = [0.0, 0.1, 0.0, 1.0]
+_data = [Vector2(0, 0.0175824), 0.0, 0.0, 0, 0, Vector2(0.505155, 0.1), 0.0163989, 0.0163989, 0, 0, Vector2(1, 0.00549448), -0.368232, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_ixgew"]
+offsets = PackedFloat32Array(0, 0.0783133, 0.379518, 0.572289, 0.76506, 1)
+colors = PackedColorArray(0.874968, 0.604514, 0.563407, 0, 1, 1, 1, 1, 0.851918, 0.618979, 0.924945, 1, 0.954472, 0.794962, 0.466424, 1, 0.73367, 0.921388, 0.913637, 1, 1, 1, 1, 0)
+
+[sub_resource type="Curve" id="Curve_4jt73"]
+_limits = [0.0, 2.0, 0.0, 1.0]
+_data = [Vector2(0, 1.05618), 0.0, 0.0, 0, 0, Vector2(0.26601, 1.34831), -5.05056, -5.05056, 0, 0, Vector2(1, 0.314607), -2.14673, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_k3h1m"]
+offsets = PackedFloat32Array(0, 0.288136, 0.485876, 0.728814, 1)
+colors = PackedColorArray(0.981813, 0.286453, 0.264181, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0.995457, 0.751618, 0.482557, 1, 0.282642, 0.0849936, 0.0342596, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nkb2f"]
+size = Vector2(77, 308)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tkxuh"]
+size = Vector2(100, 70)
+
+[sub_resource type="Animation" id="Animation_u4glg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Textures/Body/LeftArm/Mosin:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Textures/Body/RightArm/RightElbow:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Textures/Body/LeftArm:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Textures/Body/LeftArm/LeftElbow:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Textures/Body/LeftArm:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-36.8432, -73.0042)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Textures/Body/RightArm:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Textures/LeftLeg:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.0349066]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Textures/RightLeg:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.191986]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Textures:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -114)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Textures/LeftLeg/LeftFoot:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Textures/RightLeg/RightFoot:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0523599]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Textures:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Textures/Body:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0523599]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Textures/Body/Head:material:shader_parameter/dissolve_state")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.1]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Textures/LeftLeg/LeftFoot:material:shader_parameter/dissolve_state")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.1]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Textures/RightLeg/RightFoot:material:shader_parameter/dissolve_state")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.1]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Textures/LeftLeg:material:shader_parameter/dissolve_state")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.1]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Textures/RightLeg:material:shader_parameter/dissolve_state")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.1]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Textures/Body:material:shader_parameter/dissolve_state")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.1]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Textures/Body/LeftArm/LeftElbow:material:shader_parameter/dissolve_state")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.1]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Textures/Body/RightArm/RightElbow:material:shader_parameter/dissolve_state")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.1]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Textures/Body/RightArm/RightElbow/Hand:material:shader_parameter/dissolve_state")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.1]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Textures/Body/LeftArm/Mosin:material:shader_parameter/dissolve_state")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.1]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Textures/Body/LeftArm:material:shader_parameter/dissolve_state")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.1]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Textures/Body/RightArm:material:shader_parameter/dissolve_state")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.1]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Particles/LevelUpParticles:modulate")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Particles/LevelUpParticles:position")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2, 58)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Particles/LevelUpParticles:emission_rect_extents")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(60, 1)]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("Textures/Body/LeftArm/Mosin:material:shader_parameter/object_modulate")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("Textures/RightLeg/RightFoot:material:shader_parameter/object_modulate")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("Textures/LeftLeg/LeftFoot:material:shader_parameter/object_modulate")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Textures/LeftLeg:material:shader_parameter/object_modulate")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Textures/RightLeg:material:shader_parameter/object_modulate")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("Textures/Body/LeftArm:material:shader_parameter/object_modulate")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("Textures/Body/LeftArm/LeftElbow:material:shader_parameter/object_modulate")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("Textures/Body/RightArm/RightElbow:material:shader_parameter/object_modulate")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("Textures/Body/RightArm:material:shader_parameter/object_modulate")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("Textures/Body/RightArm/RightElbow/Hand:material:shader_parameter/object_modulate")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/38/type = "value"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("Textures/Body/Head:material:shader_parameter/noise")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("CompressedTexture2D_b2817")]
+}
+tracks/39/type = "value"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("Textures/LeftLeg/LeftFoot:material:shader_parameter/noise")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("CompressedTexture2D_mkm0j")]
+}
+tracks/40/type = "value"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("Textures/RightLeg/RightFoot:material:shader_parameter/noise")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("CompressedTexture2D_2l7nf")]
+}
+tracks/41/type = "value"
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/path = NodePath("Textures/LeftLeg:material:shader_parameter/noise")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("CompressedTexture2D_v04dj")]
+}
+tracks/42/type = "value"
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/path = NodePath("Textures/RightLeg:material:shader_parameter/noise")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("CompressedTexture2D_b5f6u")]
+}
+tracks/43/type = "value"
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/path = NodePath("Textures/Body:material:shader_parameter/noise")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("CompressedTexture2D_yiic4")]
+}
+tracks/44/type = "value"
+tracks/44/imported = false
+tracks/44/enabled = true
+tracks/44/path = NodePath("Textures/Body/LeftArm/LeftElbow:material:shader_parameter/noise")
+tracks/44/interp = 1
+tracks/44/loop_wrap = true
+tracks/44/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("CompressedTexture2D_rc416")]
+}
+tracks/45/type = "value"
+tracks/45/imported = false
+tracks/45/enabled = true
+tracks/45/path = NodePath("Textures/Body/RightArm/RightElbow:material:shader_parameter/noise")
+tracks/45/interp = 1
+tracks/45/loop_wrap = true
+tracks/45/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("CompressedTexture2D_gtqhv")]
+}
+tracks/46/type = "value"
+tracks/46/imported = false
+tracks/46/enabled = true
+tracks/46/path = NodePath("Textures/Body/RightArm/RightElbow/Hand:material:shader_parameter/noise")
+tracks/46/interp = 1
+tracks/46/loop_wrap = true
+tracks/46/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("CompressedTexture2D_xtm2a")]
+}
+tracks/47/type = "value"
+tracks/47/imported = false
+tracks/47/enabled = true
+tracks/47/path = NodePath("Textures/Body/LeftArm/Mosin:material:shader_parameter/noise")
+tracks/47/interp = 1
+tracks/47/loop_wrap = true
+tracks/47/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("CompressedTexture2D_fj4hd")]
+}
+tracks/48/type = "value"
+tracks/48/imported = false
+tracks/48/enabled = true
+tracks/48/path = NodePath("Textures/Body/LeftArm:material:shader_parameter/noise")
+tracks/48/interp = 1
+tracks/48/loop_wrap = true
+tracks/48/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("CompressedTexture2D_iku32")]
+}
+tracks/49/type = "value"
+tracks/49/imported = false
+tracks/49/enabled = true
+tracks/49/path = NodePath("Textures/Body/RightArm:material:shader_parameter/noise")
+tracks/49/interp = 1
+tracks/49/loop_wrap = true
+tracks/49/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("33_ytwct")]
+}
+tracks/50/type = "value"
+tracks/50/imported = false
+tracks/50/enabled = true
+tracks/50/path = NodePath("HurtShape:modulate")
+tracks/50/interp = 1
+tracks/50/loop_wrap = true
+tracks/50/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.607843, 0.541176, 0)]
+}
+tracks/51/type = "value"
+tracks/51/imported = false
+tracks/51/enabled = true
+tracks/51/path = NodePath("HurtLight:modulate")
+tracks/51/interp = 1
+tracks/51/loop_wrap = true
+tracks/51/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/52/type = "value"
+tracks/52/imported = false
+tracks/52/enabled = true
+tracks/52/path = NodePath("Textures/Shootlight:visible")
+tracks/52/interp = 1
+tracks/52/loop_wrap = true
+tracks/52/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/53/type = "value"
+tracks/53/imported = false
+tracks/53/enabled = true
+tracks/53/path = NodePath("Textures/Shootlight:frame")
+tracks/53/interp = 1
+tracks/53/loop_wrap = true
+tracks/53/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0]
+}
+tracks/54/type = "value"
+tracks/54/imported = false
+tracks/54/enabled = true
+tracks/54/path = NodePath("Textures/LeftLeg/LeftFoot:modulate")
+tracks/54/interp = 1
+tracks/54/loop_wrap = true
+tracks/54/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/55/type = "value"
+tracks/55/imported = false
+tracks/55/enabled = true
+tracks/55/path = NodePath("Textures/Body/Head:rotation")
+tracks/55/interp = 1
+tracks/55/loop_wrap = true
+tracks/55/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/56/type = "value"
+tracks/56/imported = false
+tracks/56/enabled = true
+tracks/56/path = NodePath("Textures/Body/LeftArm/Mosin:position")
+tracks/56/interp = 1
+tracks/56/loop_wrap = true
+tracks/56/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(30.4407, 14.6433)]
+}
+tracks/57/type = "value"
+tracks/57/imported = false
+tracks/57/enabled = true
+tracks/57/path = NodePath("Textures:rotation")
+tracks/57/interp = 1
+tracks/57/loop_wrap = true
+tracks/57/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/58/type = "value"
+tracks/58/imported = false
+tracks/58/enabled = true
+tracks/58/path = NodePath("Particles/DustParticles:position")
+tracks/58/interp = 1
+tracks/58/loop_wrap = true
+tracks/58/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-346, 75)]
+}
+tracks/59/type = "value"
+tracks/59/imported = false
+tracks/59/enabled = true
+tracks/59/path = NodePath("Shadow:modulate")
+tracks/59/interp = 1
+tracks/59/loop_wrap = true
+tracks/59/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/60/type = "value"
+tracks/60/imported = false
+tracks/60/enabled = true
+tracks/60/path = NodePath("HurtLight:scale")
+tracks/60/interp = 1
+tracks/60/loop_wrap = true
+tracks/60/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 1)]
+}
+tracks/61/type = "value"
+tracks/61/imported = false
+tracks/61/enabled = true
+tracks/61/path = NodePath("HurtLight:position")
+tracks/61/interp = 1
+tracks/61/loop_wrap = true
+tracks/61/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(7.5, -73)]
+}
+tracks/62/type = "value"
+tracks/62/imported = false
+tracks/62/enabled = true
+tracks/62/path = NodePath("HurtShape:scale")
+tracks/62/interp = 1
+tracks/62/loop_wrap = true
+tracks/62/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/63/type = "value"
+tracks/63/imported = false
+tracks/63/enabled = true
+tracks/63/path = NodePath("Textures/Body/Head/Headwear:rotation")
+tracks/63/interp = 1
+tracks/63/loop_wrap = true
+tracks/63/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/64/type = "value"
+tracks/64/imported = false
+tracks/64/enabled = true
+tracks/64/path = NodePath("Textures/Body/Head:region_rect")
+tracks/64/interp = 1
+tracks/64/loop_wrap = true
+tracks/64/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(164.016, 198.859, 73.2851, 83.1626)]
+}
+
+[sub_resource type="Animation" id="Animation_2f24l"]
+resource_name = "death"
+length = 2.4
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Textures:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.55, 0.65, 0.75, 1.15),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -114), Vector2(-152, -138), Vector2(-334, 19), Vector2(-356.5, 11), Vector2(-379, 19), Vector2(-385, 19)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Textures:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.55),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -1.68614]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Textures/Body:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.55),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0523599, 0.383972, 0.0523599]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Shadow:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-2, 44.798), Vector2(-320.222, 44.798)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Textures/Body/LeftArm:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.55),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.518918, -0.677734]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Textures/Body/LeftArm/Mosin:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.78573]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Particles/DustParticles:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-346, 75)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Particles/DustParticles:emitting")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.45),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Textures/Body/RightArm:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.35, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.617456]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Textures/RightLeg:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.191986, 0.077559, 0.736162]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Textures/LeftLeg/LeftFoot:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.2, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.547619]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Textures/LeftLeg:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.2, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.0349066, -0.348384]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Textures/Body/RightArm/RightElbow:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.2, 0.65),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -2.42729]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Textures/Body/Head:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.2, 1.15),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.139626, 0.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Textures:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(1.45, 1.55, 1.7, 1.85, 2, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.380392), Color(1, 1, 1, 1), Color(1, 1, 1, 0.380392), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Shadow:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(2, 2.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("HurtLight:scale")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.5, 1), Vector2(0.1, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("HurtLight:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(0.847059, 0.407843, 0.333333, 1), Color(1, 1, 1, 0)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("HurtLight:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(7.5, -73), Vector2(7.5, -303)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("HurtShape:scale")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 0.406126),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("HurtShape:modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 0.607843, 0.541176, 0), Color(1, 1, 1, 1), Color(1, 0.607843, 0.541176, 0)]
+}
+tracks/21/type = "method"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath(".")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(2.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Textures/Body/Head:region_rect")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Rect2(164.016, 198.859, 73.2851, 83.1626), Rect2(164.016, 112.859, 73.285, 83.163)]
+}
+
+[sub_resource type="Animation" id="Animation_hmhyg"]
+resource_name = "idle"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Textures/Body:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 1.06667, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0523599, 0.0343847, -0.0122354, 0.0523599]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Textures/Body/Head:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0349066, 4.16119e-09]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Textures/Body:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4, 1.06667, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 46), Vector2(0, 46), Vector2(0, 39), Vector2(0, 46)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Textures/RightLeg:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.191986, 0.279253, 0.191986]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Textures/LeftLeg:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.0349066, -0.174533, -0.0349066]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Textures/LeftLeg/LeftFoot:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.20944, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Textures/Body/LeftArm/Mosin:material:shader_parameter/object_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Textures/Body/LeftArm/Mosin:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.433333, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.10472, -0.0349066, 0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Textures/Body/RightArm/RightElbow:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.433333, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.228638, -0.122173, 0.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Textures/Body/LeftArm/LeftElbow:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.433333, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.0600081, -0.036962, 0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Textures/RightLeg/RightFoot:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0523599, -0.0872665, 0.0523599]
+}
+
+[sub_resource type="Animation" id="Animation_1j8vi"]
+resource_name = "receive_damage"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Particles/BloodParticles:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Textures:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.12549, 0, 0.00784314, 1), Color(0.12549, 0, 0.00784314, 1), Color(3, 2, 2, 1), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HurtLight:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.5, 1), Vector2(0.1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HurtLight:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.847059, 0.407843, 0.333333, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HurtLight:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(7.5, -73), Vector2(7.5, -303)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HurtShape:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 0.406126),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("HurtShape:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0.607843, 0.541176, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Textures:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -114), Vector2(-15, -114), Vector2(0, -114)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Textures/Body:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0523599, 0.122173, 0.0523599]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Textures/Body/Head:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.10472, 0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Textures/RightLeg:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.191986, 0.139626, 0.191986]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Textures/Body/Head:material:shader_parameter/object_modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(2, 1.6, 1.3, 1), Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Textures/Body:material:shader_parameter/object_modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(2, 1.6, 1.3, 1), Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Textures/LeftLeg/LeftFoot:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(2, 1.6, 1.3, 1), Color(1, 1, 1, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Textures/Body/Head/Headwear:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.233333, 0.366667, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.122173, 0.0872665, 0.0280498, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_y3lcw"]
+resource_name = "reload"
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Textures/Body/LeftArm/Mosin:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.25, 0.65, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.139626, 0.0747998, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Textures/Body/LeftArm/Mosin:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.25, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(30.7024, 19.6363), Vector2(34, 46), Vector2(26, 52), Vector2(26, 52), Vector2(30.7024, 19.6363)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Textures/Body/RightArm:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.10472, 0.10472, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Textures/Body/RightArm/RightElbow:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.25, 0.55, 0.65, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.523599, -0.453786, -0.523599, -0.523599, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Textures/Body/LeftArm/LeftElbow:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.65, 0.85),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.610865, -0.174533, -0.174533, 0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Textures/Body/LeftArm/Ammo:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.85),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Textures/Body/LeftArm:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.65, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.436332, -0.436332, 0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Textures/Body/LeftArm:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.65, 0.95),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-37, -76), Vector2(-32, -76), Vector2(-32, -76), Vector2(-37, -76)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Textures/Body/LeftArm/Ammo:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.25, 0.5, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(33.1622, 77.8597), Vector2(47.335, 22.336), Vector2(65.2368, 21.7606)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Textures/Body/RightArm/RightElbow/Hand:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.55, 0.95),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, -0.139626, 0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Textures/Body/Head:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.1, 0.45, 0.85),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0436332, 0.10472, 0.0436332]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Textures/Body/LeftArm/Mosin:material:shader_parameter/object_modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Textures/Shootlight:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Textures/Body:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.25, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0523599, 0.10472, 0.0523599]
+}
+
+[sub_resource type="Animation" id="Animation_t4axm"]
+resource_name = "shoot"
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Textures/Body:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0523599, -0.10472, 0.0523599]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Textures/Body/Head:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.25),
+"transitions": PackedFloat32Array(1, 1, 2.37842),
+"update": 0,
+"values": [0.0, 0.0872665, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Textures/Body/LeftArm/Mosin:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.25, 0.35, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(30.4407, 14.6433), Vector2(24, 21.691), Vector2(30.7024, 19.6363), Vector2(30.7024, 19.6363), Vector2(18.8596, 25.8751), Vector2(18.8596, 25.8751), Vector2(30.4407, 14.6433)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Textures/Body/LeftArm/Mosin:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.35, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.10472, 0.0, 0.383972, 0.383972, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Textures/Body/LeftArm/Mosin:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.35, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.383972, 0.383972, 0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Textures/Body/LeftArm:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.35, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, -0.314159, -0.314159, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Textures/Body/LeftArm/LeftElbow:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.35, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, -0.122173, -0.0698132, 0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Textures/Body/LeftArm:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-37, -76), Vector2(-37, -76), Vector2(-32, -76), Vector2(-32, -76), Vector2(-37, -76)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Textures/Body/RightArm/RightElbow:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.35, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.217379, 0.0, 0.122173, 0.122173, 0.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Textures/Body/LeftArm/Mosin/ShootParticles:emitting")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.05, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Textures/Body/RightArm:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.35, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.516071, 0.516071, 0.0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Textures/Body/LeftArm/Mosin:material:shader_parameter/object_modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(3, 2.5, 2, 1), Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Textures/RightLeg:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.35),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.191986, 0.0349066, 0.191986]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Textures/RightLeg/RightFoot:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.35),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0523599, 0.244346, 0.0523599]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Textures:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.35),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -114), Vector2(-16, -114), Vector2(0, -114)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Textures/LeftLeg:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0.00228081, 0.1, 0.35),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.0349066, 0.0, -0.0349066]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Textures/LeftLeg/LeftFoot:rotation")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.35),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.10472, 0.0]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Textures/Shootlight:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 0.02, 0.51),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Textures/Shootlight:frame")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 0.42),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 8]
+}
+tracks/19/type = "method"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath(".")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_on_shoot_animation_finishing"
+}]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Textures/Body/Head/Headwear:rotation")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0, 0.14, 0.4, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.122173, 0.0872665, 0.0280498, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_rvf2x"]
+resource_name = "spawn"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Textures:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.4, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(2, 2, 2, 0), Color(3, 3, 2, 1), Color(2.5, 2.5, 2, 0.5), Color(3, 3, 2, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Textures:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -368), Vector2(0, -114), Vector2(0, -111), Vector2(0, -114)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Textures/RightLeg:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.3, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.191986, -0.141575, 0.191986]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Textures/RightLeg/RightFoot:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0523599, 0.43573, 0.0523599]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Textures/LeftLeg:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.3, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.0349066, -0.327903, -0.0349066]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Textures/LeftLeg/LeftFoot:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.3, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.320087, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Textures/Body:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.3, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0523599, 0.147298, 0.0523599]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Shadow:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.15, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Shadow:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.15, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.23684, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Particles/SpawnParticles:emitting")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Textures/Body/LeftArm/Mosin:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.3, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.235216, 0.0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Textures/Body/RightArm/RightElbow:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.3, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.499785, 0.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Particles/DustParticles:emitting")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.25),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Particles/DustParticles:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0.15),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(10, 75)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Textures/Body/Head:material:shader_parameter/object_modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.4, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(2, 2, 2, 0), Color(3, 3, 2, 1), Color(2.5, 2.5, 2, 0.5), Color(3, 3, 2, 1), Color(1, 1, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Textures/Body:material:shader_parameter/object_modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.4, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(2, 2, 2, 0), Color(3, 3, 2, 1), Color(2.5, 2.5, 2, 0.5), Color(3, 3, 2, 1), Color(1, 1, 1, 1)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Textures/Body/LeftArm/Mosin:material:shader_parameter/object_modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(-2.98023e-08, 0.2, 0.3, 0.4, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(2, 2, 2, 0), Color(3, 3, 2, 1), Color(2.5, 2.5, 2, 0.5), Color(3, 3, 2, 1), Color(1, 1, 1, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Textures/RightLeg/RightFoot:material:shader_parameter/object_modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(1.49012e-08, 0.2, 0.3, 0.4, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(2, 2, 2, 0), Color(3, 3, 2, 1), Color(2.5, 2.5, 2, 0.5), Color(3, 3, 2, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tuw42"]
+resource_name = "stab"
+length = 0.6
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Textures/Body/LeftArm:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.15, 0.35, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.558505, 0.558505, -0.523599, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Textures/Body/LeftArm/Mosin:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.15, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.610865, -0.610865, 0.529071, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Textures/Body/RightArm/RightElbow:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.15, 0.4, 0.45),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.650068, -0.650068, -0.0833171, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Textures/Body/RightArm:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.15, 0.45),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.453786, 0.453786, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Textures/Body/LeftArm/LeftElbow:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.15, 0.45),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.4567, -0.4567, 0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Textures/Body:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.15, 0.45),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0523599, -0.10472, -0.10472, 0.0523599]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Textures/Body/Head:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.15, 0.45),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.10472, 0.10472, 0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Textures/Body/LeftArm/Mosin:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.15, 0.4, 0.45),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(30.4407, 14.6433), Vector2(10, 25), Vector2(10, 25), Vector2(39.4873, 13.8806), Vector2(30.4407, 14.6433)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_anao4"]
+_data = {
+&"RESET": SubResource("Animation_u4glg"),
+&"death": SubResource("Animation_2f24l"),
+&"death_stabbed": ExtResource("25_tv8mf"),
+&"idle": SubResource("Animation_hmhyg"),
+&"receive_damage": SubResource("Animation_1j8vi"),
+&"reload": SubResource("Animation_y3lcw"),
+&"shoot": SubResource("Animation_t4axm"),
+&"spawn": SubResource("Animation_rvf2x"),
+&"stab": SubResource("Animation_tuw42")
+}
+
+[node name="FastBayonetSoldier" type="CharacterBody2D"]
+collision_layer = 0
+collision_mask = 0
+
+[node name="SelectAllyBtn" type="TextureButton" parent="."]
+offset_left = -85.0
+offset_top = -247.0
+offset_right = 226.0
+offset_bottom = 73.0
+texture_click_mask = ExtResource("2_i16r7")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+position = Vector2(-2, 44.798)
+scale = Vector2(1.23684, 1)
+texture = ExtResource("1_r7v6n")
+
+[node name="HurtLight" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(7.5, -73)
+scale = Vector2(0.5, 1)
+texture = ExtResource("9_e6t8m")
+
+[node name="HurtShape" type="Sprite2D" parent="."]
+modulate = Color(1, 0.607843, 0.541176, 0)
+position = Vector2(-10, -101)
+texture = ExtResource("10_7i0ld")
+offset = Vector2(18, 0)
+
+[node name="Textures" type="Node2D" parent="."]
+material = ExtResource("4_xemki")
+position = Vector2(0, -114)
+
+[node name="RightLeg" type="Sprite2D" parent="Textures"]
+material = SubResource("ShaderMaterial_8ixim")
+position = Vector2(14, 50)
+rotation = 0.191986
+texture = ExtResource("15_ytwct")
+offset = Vector2(12, 22)
+region_enabled = true
+region_rect = Rect2(76.5211, 134.304, 57.6723, 69.1431)
+
+[node name="RightFoot" type="Sprite2D" parent="Textures/RightLeg"]
+material = SubResource("ShaderMaterial_di8rd")
+position = Vector2(18.2617, 34.2241)
+rotation = 0.0523599
+texture = ExtResource("15_ytwct")
+offset = Vector2(22, 31)
+region_enabled = true
+region_rect = Rect2(82.2762, 209.938, 85.712, 112.477)
+
+[node name="LeftLeg" type="Sprite2D" parent="Textures"]
+material = SubResource("ShaderMaterial_bgfk6")
+position = Vector2(-16.8132, 51.55)
+rotation = -0.0349066
+texture = ExtResource("15_ytwct")
+offset = Vector2(-3.15054, 16.573)
+region_enabled = true
+region_rect = Rect2(5.76747, 128.249, 70.6782, 76.7611)
+
+[node name="LeftFoot" type="Sprite2D" parent="Textures/LeftLeg"]
+material = SubResource("ShaderMaterial_w1pls")
+position = Vector2(-16.279, 39.3076)
+texture = ExtResource("15_ytwct")
+offset = Vector2(-1.31769, 36.2069)
+region_enabled = true
+region_rect = Rect2(5.89951, 220.224, 63.4366, 99.0489)
+
+[node name="Body" type="Sprite2D" parent="Textures"]
+material = SubResource("ShaderMaterial_7awjl")
+position = Vector2(0, 46)
+rotation = 0.0523599
+texture = ExtResource("6_4jt73")
+offset = Vector2(0, -39)
+script = ExtResource("7_ytwct")
+levels_modifiers_textures = Dictionary[String, Texture2D]({
+"FBS_B": ExtResource("6_4jt73"),
+"FBS_H1": ExtResource("8_ytwct"),
+"FBS_H2": ExtResource("9_4jt73"),
+"FBS_H3": ExtResource("10_k3h1m")
+})
+metadata/_custom_type_script = "uid://c3skicx1p4687"
+
+[node name="Belt" type="Sprite2D" parent="Textures/Body"]
+position = Vector2(-3.7328, 5.20246)
+texture = ExtResource("11_4jt73")
+script = ExtResource("7_ytwct")
+levels_modifiers_textures = Dictionary[String, Texture2D]({
+"FBS_B": ExtResource("11_4jt73"),
+"FBS_S1": ExtResource("12_ytwct"),
+"FBS_S2": ExtResource("13_4jt73"),
+"FBS_S3": ExtResource("14_k3h1m")
+})
+metadata/_custom_type_script = "uid://c3skicx1p4687"
+
+[node name="RightArm" type="Sprite2D" parent="Textures/Body"]
+material = ExtResource("4_xemki")
+position = Vector2(32.5529, -70.4358)
+texture = ExtResource("15_ytwct")
+offset = Vector2(17.7649, 14.8188)
+region_enabled = true
+region_rect = Rect2(80.4284, 5.66031, 57.3805, 63.4451)
+
+[node name="RightElbow" type="Sprite2D" parent="Textures/Body/RightArm"]
+material = SubResource("ShaderMaterial_bjbp4")
+position = Vector2(32.2619, 26.9841)
+texture = ExtResource("15_ytwct")
+offset = Vector2(24, 0)
+region_enabled = true
+region_rect = Rect2(128.198, 74.3781, 63.0889, 37.1524)
+
+[node name="Hand" type="Sprite2D" parent="Textures/Body/RightArm/RightElbow"]
+material = SubResource("ShaderMaterial_oyb36")
+position = Vector2(50.7731, -5.66504)
+texture = ExtResource("5_bu6y2")
+offset = Vector2(11, -1)
+region_enabled = true
+region_rect = Rect2(195.484, 75.0546, 37.2798, 22.7276)
+
+[node name="Head" type="Sprite2D" parent="Textures/Body"]
+material = SubResource("ShaderMaterial_b1n2q")
+position = Vector2(9.00888, -95.6025)
+texture = ExtResource("15_ytwct")
+offset = Vector2(0, -30)
+region_enabled = true
+region_rect = Rect2(164.016, 198.859, 73.2851, 83.1626)
+
+[node name="Headwear" type="Sprite2D" parent="Textures/Body/Head"]
+position = Vector2(2.6375, -15.9731)
+texture = ExtResource("16_4jt73")
+offset = Vector2(-5.30957, -16.8785)
+script = ExtResource("7_ytwct")
+levels_modifiers_textures = Dictionary[String, Texture2D]({
+"FBS_B": ExtResource("16_4jt73"),
+"FBS_H1": ExtResource("17_qiv2f"),
+"FBS_H2": ExtResource("18_ytwct"),
+"FBS_H3": ExtResource("19_ytwct")
+})
+metadata/_custom_type_script = "uid://c3skicx1p4687"
+
+[node name="LeftArm" type="Sprite2D" parent="Textures/Body"]
+material = SubResource("ShaderMaterial_joxp5")
+position = Vector2(-36.8432, -73.0042)
+texture = ExtResource("15_ytwct")
+offset = Vector2(-21.6628, 14.7065)
+region_enabled = true
+region_rect = Rect2(0, 4.0725, 64.9403, 71.7111)
+
+[node name="Mosin" type="Sprite2D" parent="Textures/Body/LeftArm"]
+material = SubResource("ShaderMaterial_o485d")
+position = Vector2(30.4407, 14.6433)
+texture = ExtResource("20_4jt73")
+offset = Vector2(79, -1)
+script = ExtResource("7_ytwct")
+levels_modifiers_textures = Dictionary[String, Texture2D]({
+"FBS_B": ExtResource("20_4jt73"),
+"FBS_R1": ExtResource("21_4jt73"),
+"FBS_R2": ExtResource("22_k3h1m"),
+"FBS_R3": ExtResource("23_i16r7")
+})
+metadata/_custom_type_script = "uid://c3skicx1p4687"
+
+[node name="Bayonet" type="Sprite2D" parent="Textures/Body/LeftArm/Mosin"]
+position = Vector2(213.284, 12.4707)
+texture = ExtResource("24_k3h1m")
+script = ExtResource("7_ytwct")
+levels_modifiers_textures = Dictionary[String, Texture2D]({
+"FBS_B": ExtResource("24_k3h1m"),
+"FBS_P1": ExtResource("25_4jt73"),
+"FBS_P2": ExtResource("26_k3h1m"),
+"FBS_P3": ExtResource("27_i16r7")
+})
+metadata/_custom_type_script = "uid://c3skicx1p4687"
+
+[node name="ShootParticles" parent="Textures/Body/LeftArm/Mosin" instance=ExtResource("26_jw7ag")]
+position = Vector2(199.15, -8.81878)
+
+[node name="Ammo" type="Sprite2D" parent="Textures/Body/LeftArm"]
+visible = false
+position = Vector2(50.9814, 46.6935)
+texture = ExtResource("18_wfbps")
+
+[node name="LeftElbow" type="Sprite2D" parent="Textures/Body/LeftArm"]
+material = SubResource("ShaderMaterial_dn4ov")
+position = Vector2(-35.767, 37.4337)
+texture = ExtResource("15_ytwct")
+offset = Vector2(37.7643, -0.53833)
+region_enabled = true
+region_rect = Rect2(8.02966, 75.4001, 107.889, 38.6595)
+
+[node name="Shootlight" type="Sprite2D" parent="Textures"]
+visible = false
+position = Vector2(213.033, -35)
+scale = Vector2(0.43459, 0.751534)
+texture = ExtResource("28_y8ix8")
+hframes = 3
+vframes = 3
+
+[node name="Particles" type="Node2D" parent="."]
+
+[node name="DustParticles" type="CPUParticles2D" parent="Particles"]
+position = Vector2(-346, 75)
+emitting = false
+amount = 20
+texture = ExtResource("22_e3xd1")
+lifetime = 0.4
+one_shot = true
+speed_scale = 1.2
+explosiveness = 0.5
+emission_shape = 3
+emission_rect_extents = Vector2(60, 1)
+direction = Vector2(0, -1)
+spread = 55.84
+gravity = Vector2(0, -60)
+initial_velocity_min = 313.25
+initial_velocity_max = 313.25
+angular_velocity_min = 277.59
+angular_velocity_max = 277.59
+scale_amount_curve = SubResource("Curve_ib7sr")
+color_ramp = SubResource("Gradient_bchcm")
+
+[node name="SpawnParticles" type="CPUParticles2D" parent="Particles"]
+position = Vector2(4, 71)
+emitting = false
+amount = 20
+texture = ExtResource("31_2j7em")
+lifetime = 0.8
+one_shot = true
+explosiveness = 0.9
+emission_shape = 3
+emission_rect_extents = Vector2(70, 1)
+direction = Vector2(0, -1)
+spread = 75.99
+gravity = Vector2(0, -100)
+initial_velocity_min = 357.2
+initial_velocity_max = 357.2
+angular_velocity_min = 269.16
+angular_velocity_max = 269.16
+linear_accel_min = 31.78
+linear_accel_max = 31.78
+scale_amount_curve = SubResource("Curve_n373g")
+color_ramp = SubResource("Gradient_ixgew")
+
+[node name="BloodParticles" parent="Particles" instance=ExtResource("32_r0dqm")]
+position = Vector2(20, -135)
+
+[node name="LevelUpParticles" type="CPUParticles2D" parent="Particles"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(2, 58)
+amount = 50
+texture = ExtResource("32_qiv2f")
+preprocess = 5.0
+speed_scale = 4.0
+emission_shape = 3
+emission_rect_extents = Vector2(60, 1)
+direction = Vector2(0, 1)
+gravity = Vector2(0, 90)
+initial_velocity_min = 20.0
+initial_velocity_max = 20.0
+angular_velocity_min = 411.43
+angular_velocity_max = 411.43
+linear_accel_min = 47.62
+linear_accel_max = 47.62
+radial_accel_min = -15.0
+scale_amount_curve = SubResource("Curve_4jt73")
+color_ramp = SubResource("Gradient_k3h1m")
+
+[node name="ShootingRange" type="RayCast2D" parent="."]
+position = Vector2(0, -120)
+target_position = Vector2(1530, 0)
+collision_mask = 0
+
+[node name="BodyCollShape" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-32.5, -95)
+shape = SubResource("RectangleShape2D_nkb2f")
+
+[node name="PhysicalContactCollShape" type="CollisionShape2D" parent="."]
+position = Vector2(127, -21)
+shape = SubResource("RectangleShape2D_tkxuh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_anao4")
+}
+
+[node name="ShootingTimer" type="Timer" parent="."]
+one_shot = true
+autostart = true

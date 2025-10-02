@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="AllyData" load_steps=17 format=3 uid="uid://bvkc1rbpkb46v"]
+
+[ext_resource type="Texture2D" uid="uid://mlct3dlrjm6t" path="res://data/game_characters/allies/shooters/light_machine_gunner/assets/light_machine_gunner.png" id="1_yrfqg"]
+[ext_resource type="Script" uid="uid://cp8n43lmapx8l" path="res://data/game_characters/allies/models/ally_level_data.gd" id="1_ytec3"]
+[ext_resource type="Resource" uid="uid://bfrko5m63h2k1" path="res://data/game_characters/allies/shooters/light_machine_gunner/levels/lmg_b.tres" id="2_oo676"]
+[ext_resource type="Script" uid="uid://ccntxav05c4k" path="res://data/game_characters/allies/models/ally_data.gd" id="2_yrfqg"]
+[ext_resource type="Resource" uid="uid://sf872b614vrq" path="res://data/game_characters/allies/shooters/light_machine_gunner/levels/lmg_p1.tres" id="4_e8c5b"]
+[ext_resource type="Resource" uid="uid://bec4y3kyu2xxi" path="res://data/game_characters/allies/shooters/light_machine_gunner/levels/lmg_p2.tres" id="5_4pqlq"]
+[ext_resource type="Resource" uid="uid://b38p2u6hmdxj6" path="res://data/game_characters/allies/shooters/light_machine_gunner/levels/lmg_p3.tres" id="6_ld24o"]
+[ext_resource type="Resource" uid="uid://bvpdj3n3ole4j" path="res://data/game_characters/allies/shooters/light_machine_gunner/levels/lmg_s1.tres" id="7_k2dt2"]
+[ext_resource type="Resource" uid="uid://sxgtk5uflsda" path="res://data/game_characters/allies/shooters/light_machine_gunner/levels/lmg_s2.tres" id="8_58ubx"]
+[ext_resource type="Resource" uid="uid://dnplqsd4xg1pj" path="res://data/game_characters/allies/shooters/light_machine_gunner/levels/lmg_s3.tres" id="9_esi1y"]
+[ext_resource type="Resource" uid="uid://bwp1kpqmldy40" path="res://data/game_characters/allies/shooters/light_machine_gunner/levels/lmg_r1.tres" id="10_dmhve"]
+[ext_resource type="Resource" uid="uid://bop2t41yeeekc" path="res://data/game_characters/allies/shooters/light_machine_gunner/levels/lmg_r2.tres" id="11_druao"]
+[ext_resource type="Resource" uid="uid://s7lqg0y4p4xl" path="res://data/game_characters/allies/shooters/light_machine_gunner/levels/lmg_r3.tres" id="12_d224q"]
+[ext_resource type="Resource" uid="uid://d2y7iljghmynl" path="res://data/game_characters/allies/shooters/light_machine_gunner/levels/lmg_h1.tres" id="13_d224q"]
+[ext_resource type="Resource" uid="uid://fleqo1sb0thj" path="res://data/game_characters/allies/shooters/light_machine_gunner/levels/lmg_h2.tres" id="14_fj83d"]
+[ext_resource type="Resource" uid="uid://bda7rl32spxmt" path="res://data/game_characters/allies/shooters/light_machine_gunner/levels/lmg_h3.tres" id="15_3oyrj"]
+
+[resource]
+resource_name = "light_machine_gunner"
+script = ExtResource("2_yrfqg")
+id = 103
+type = 0
+ally_name = "Light Machine Gunner"
+description = "A soldier with a powerful and fast weapon, but with a shorter range than the Bayonet Soldier. Has also a great moustache."
+ally_selector_thumbnail = ExtResource("1_yrfqg")
+levels = Array[ExtResource("1_ytec3")]([ExtResource("4_e8c5b"), ExtResource("5_4pqlq"), ExtResource("6_ld24o"), ExtResource("7_k2dt2"), ExtResource("8_58ubx"), ExtResource("9_esi1y"), ExtResource("10_dmhve"), ExtResource("11_druao"), ExtResource("12_d224q"), ExtResource("13_d224q"), ExtResource("14_fj83d"), ExtResource("15_3oyrj")])
+base_level = ExtResource("2_oo676")
+metadata/_custom_type_script = "uid://ccntxav05c4k"

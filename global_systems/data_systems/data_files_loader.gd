@@ -33,9 +33,11 @@ static func get_allies_from_res_files() -> Array[AllyData]:
 	assert(dir != null, "Could not open folder")
 	dir.list_dir_begin()
 	for ally_type_folder : String in dir.get_directories():
+		if ally_type_folder == "assets": continue
 		if ally_type_folder == "models": continue
 		dir.change_dir(GC.DATA_FOLDERS_PATHS.RES_ALLIES +ally_type_folder)
 		for ally_folder : String in dir.get_directories():
+			if ally_folder == "ally_thumbnails": continue
 			if ally_folder == "models": continue
 			dir.change_dir(GC.DATA_FOLDERS_PATHS.RES_ALLIES + ally_type_folder + "/" + ally_folder)
 			for file: String in dir.get_files():

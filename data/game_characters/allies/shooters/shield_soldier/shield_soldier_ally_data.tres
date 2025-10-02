@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="AllyData" load_steps=17 format=3 uid="uid://dfb1cftgkh5bn"]
+
+[ext_resource type="Texture2D" uid="uid://car5h3dlcy1xh" path="res://data/game_characters/allies/shooters/shield_soldier/assets/shield_soldier.png" id="1_tde6j"]
+[ext_resource type="Resource" uid="uid://3ao28gkhl712" path="res://data/game_characters/allies/shooters/shield_soldier/levels/shs_b.tres" id="2_1fjwb"]
+[ext_resource type="Script" uid="uid://cp8n43lmapx8l" path="res://data/game_characters/allies/models/ally_level_data.gd" id="3_dvy4q"]
+[ext_resource type="Resource" uid="uid://d2j05b7vse3p0" path="res://data/game_characters/allies/shooters/shield_soldier/levels/shs_p1.tres" id="4_6y7pu"]
+[ext_resource type="Resource" uid="uid://cdyajojyff2ak" path="res://data/game_characters/allies/shooters/shield_soldier/levels/shs_p2.tres" id="5_id6fe"]
+[ext_resource type="Resource" uid="uid://c1x4m2ii8fldu" path="res://data/game_characters/allies/shooters/shield_soldier/levels/shs_p3.tres" id="6_4qnk4"]
+[ext_resource type="Resource" uid="uid://beqcw8unh6c61" path="res://data/game_characters/allies/shooters/shield_soldier/levels/shs_s1.tres" id="7_842p3"]
+[ext_resource type="Resource" uid="uid://ddvxrlkrrxq7c" path="res://data/game_characters/allies/shooters/shield_soldier/levels/shs_s2.tres" id="8_50tx4"]
+[ext_resource type="Resource" uid="uid://dq0rlwigkfw7h" path="res://data/game_characters/allies/shooters/shield_soldier/levels/shs_s3.tres" id="9_1fjwb"]
+[ext_resource type="Script" uid="uid://ccntxav05c4k" path="res://data/game_characters/allies/models/ally_data.gd" id="9_ncpdm"]
+[ext_resource type="Resource" uid="uid://bpey3uoojqxyd" path="res://data/game_characters/allies/shooters/shield_soldier/levels/shs_r1.tres" id="10_dvy4q"]
+[ext_resource type="Resource" uid="uid://dfp6i8dxdjte4" path="res://data/game_characters/allies/shooters/shield_soldier/levels/shs_r2.tres" id="11_id6fe"]
+[ext_resource type="Resource" uid="uid://dddehfron7ejj" path="res://data/game_characters/allies/shooters/shield_soldier/levels/shs_r3.tres" id="12_4qnk4"]
+[ext_resource type="Resource" uid="uid://jto3twud2uus" path="res://data/game_characters/allies/shooters/shield_soldier/levels/shs_h1.tres" id="13_4qnk4"]
+[ext_resource type="Resource" uid="uid://blyad2ttni1uu" path="res://data/game_characters/allies/shooters/shield_soldier/levels/shs_h2.tres" id="14_50tx4"]
+[ext_resource type="Resource" uid="uid://uk8hyomde78l" path="res://data/game_characters/allies/shooters/shield_soldier/levels/shs_h3.tres" id="15_ncpdm"]
+
+[resource]
+resource_name = "shield_soldier"
+script = ExtResource("9_ncpdm")
+id = 104
+type = 0
+ally_name = "Shield Soldier"
+description = "A tank unit that will take all the damage with his great shield first."
+ally_selector_thumbnail = ExtResource("1_tde6j")
+levels = Array[ExtResource("3_dvy4q")]([ExtResource("4_6y7pu"), ExtResource("5_id6fe"), ExtResource("6_4qnk4"), ExtResource("7_842p3"), ExtResource("8_50tx4"), ExtResource("9_1fjwb"), ExtResource("10_dvy4q"), ExtResource("11_id6fe"), ExtResource("12_4qnk4"), ExtResource("13_4qnk4"), ExtResource("14_50tx4"), ExtResource("15_ncpdm")])
+base_level = ExtResource("2_1fjwb")
+metadata/_custom_type_script = "uid://ccntxav05c4k"

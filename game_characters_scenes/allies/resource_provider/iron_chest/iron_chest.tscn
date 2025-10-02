@@ -1,133 +1,49 @@
-[gd_scene load_steps=31 format=3 uid="uid://vab6yicbwijn"]
+[gd_scene load_steps=41 format=3 uid="uid://dwmd00t3h1w4g"]
 
-[ext_resource type="PackedScene" uid="uid://o5ujsaqb3w58" path="res://game_characters_scenes/allies/resource_provider/models/sc_ally_resource_provider/sc_ally_resource_provider.tscn" id="1_ixete"]
-[ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/shared_assets/circle_shadow.png" id="2_04huq"]
-[ext_resource type="Script" uid="uid://cje5f8n6lqhkh" path="res://game_characters_scenes/allies/resource_provider/iron_chest/iron_chest.gd" id="2_cpt3o"]
-[ext_resource type="SpriteFrames" uid="uid://c7vvj1caoxoy5" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/iron_chest_sprite_frames_base.tres" id="4_04huq"]
-[ext_resource type="Texture2D" uid="uid://jio37lntveew" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/top_light.png" id="5_l8i4b"]
-[ext_resource type="Texture2D" uid="uid://dupy7tutwy7ke" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/top.png" id="6_ld0yx"]
-[ext_resource type="Texture2D" uid="uid://b3b25otlmw0a0" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/top_open.png" id="7_b12u6"]
-[ext_resource type="Texture2D" uid="uid://5xg73u1xoy12" path="res://game_characters_scenes/shared_assets/circle_particle.png" id="8_jupqk"]
-[ext_resource type="Texture2D" uid="uid://jdulueb7gowt" path="res://game_characters_scenes/shared_assets/dust_particle.png" id="9_v2tol"]
-[ext_resource type="Texture2D" uid="uid://q5ifosgjvma5" path="res://game_characters_scenes/shared_assets/gun_light.png" id="10_7dqq0"]
-[ext_resource type="Script" uid="uid://qclj8gae0u4y" path="res://game_characters_scenes/allies/models/ally_scene/ally_level_dependants_nodes/ally_level_dependent_animatedsprite2D.gd" id="11_cpt3o"]
-[ext_resource type="SpriteFrames" uid="uid://h1vou3feoeuh" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/iron_chest_sprite_frames_fast_2.tres" id="12_k6k1e"]
+[ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/shared_assets/circle_shadow.png" id="1_h2rfk"]
+[ext_resource type="Script" uid="uid://b884x2b461qs" path="res://game_characters_scenes/allies/resource_provider/iron_chest/iron_chest.gd" id="1_o76r3"]
+[ext_resource type="BitMap" uid="uid://by4jeh2enkchy" path="res://data/game_characters/allies/resource_providers/iron_chest/assets/select_ally_btn.png" id="2_ev2mq"]
+[ext_resource type="Texture2D" uid="uid://ddvbp4c5dldiq" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/health/structure_3.png" id="3_bhh23"]
+[ext_resource type="Texture2D" uid="uid://bvotih53nrnk2" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/health/structure_1.png" id="3_xcb8a"]
+[ext_resource type="Script" uid="uid://c3skicx1p4687" path="res://game_characters_scenes/allies/models/ally_scene/ally_level_dependants_nodes/ally_level_dependent_sprite2D.gd" id="4_u00hx"]
+[ext_resource type="Texture2D" uid="uid://jcj1mt1rwwiw" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/health/structure_base.png" id="5_ev2mq"]
+[ext_resource type="Texture2D" uid="uid://ccajdtgt8g3y3" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/speed/level_1.png" id="6_d46ik"]
+[ext_resource type="Texture2D" uid="uid://d4bm2tgmjliby" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/health/structure_2.png" id="7_ao53d"]
+[ext_resource type="Texture2D" uid="uid://cubfba0j7hqnd" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/speed/level_base.png" id="7_bny8o"]
+[ext_resource type="Texture2D" uid="uid://bb18od5q34k1f" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/speed/level_2.png" id="8_bhh23"]
+[ext_resource type="Texture2D" uid="uid://krk0npdxxc2x" path="res://game_characters_scenes/allies/resource_provider/iron_chest/assets/speed/level_3.png" id="9_ev2mq"]
+[ext_resource type="Texture2D" uid="uid://5xg73u1xoy12" path="res://game_characters_scenes/shared_assets/circle_particle.png" id="13_10r13"]
+[ext_resource type="Texture2D" uid="uid://jdulueb7gowt" path="res://game_characters_scenes/shared_assets/dust_particle.png" id="17_rxg2f"]
+[ext_resource type="Texture2D" uid="uid://b5ro46i71vfn0" path="res://screens/game/pop_ups/game_won_popup/assets/star_blink.png" id="21_ncvss"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_gg43k"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_l8i4b")
-}],
-"loop": true,
-"name": &"charge",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_ld0yx")
-}],
-"loop": true,
-"name": &"default",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_b12u6")
-}],
-"loop": true,
-"name": &"open",
-"speed": 5.0
-}]
-
-[sub_resource type="Curve" id="Curve_q5asp"]
+[sub_resource type="Curve" id="Curve_sdch0"]
 _limits = [0.0, 0.3, 0.0, 1.0]
 _data = [Vector2(0, 0.0406288), 0.0, 0.0, 0, 0, Vector2(0.48318, 0.3), 0.0, 0.0, 0, 0, Vector2(0.993884, 0.0901451), -0.636947, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_j7xbj"]
+[sub_resource type="Gradient" id="Gradient_6j5j6"]
 offsets = PackedFloat32Array(0, 0.204013, 0.712375, 1)
 colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 0.94902, 0.980392, 0.87451, 1, 0.853713, 0.289824, 3.17663e-05, 0)
 
-[sub_resource type="Animation" id="Animation_v0qi3"]
-resource_name = "_receive_damage_general"
-length = 0.7
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Textures/Down:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(1, 1.1), Vector2(1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Textures/Down:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(0.109804, 0.0705882, 0.0588235, 1), Color(1, 1, 1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Textures:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 39), Vector2(-10, 39), Vector2(0, 39)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Textures/Down/Top:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.0, -0.0872665, 0.0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_fcsnw"]
-_data = {
-&"_receive_damage_general": SubResource("Animation_v0qi3")
-}
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wtsvu"]
-size = Vector2(47, 213)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6pwvn"]
-size = Vector2(30, 65)
-
-[sub_resource type="Curve" id="Curve_rvmm0"]
+[sub_resource type="Curve" id="Curve_gkfla"]
 _data = [Vector2(0, 0.147368), 0.0, 0.0, 0, 0, Vector2(0.368132, 0.694737), 0.0, 0.0, 0, 0, Vector2(0.983517, 0.115789), 0.0, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_6ir51"]
+[sub_resource type="Gradient" id="Gradient_x3xx0"]
 offsets = PackedFloat32Array(0, 0.245033, 1)
 colors = PackedColorArray(0.351563, 0.351563, 0.351563, 1, 1, 1, 1, 1, 1, 1, 1, 0)
 
-[sub_resource type="Curve" id="Curve_msemh"]
+[sub_resource type="Curve" id="Curve_k8stc"]
 _limits = [0.0, 0.1, 0.0, 1.0]
 _data = [Vector2(0, 0.0175824), 0.0, 0.0, 0, 0, Vector2(0.505155, 0.1), 0.0163989, 0.0163989, 0, 0, Vector2(1, 0.00549448), -0.368232, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_2ssfk"]
+[sub_resource type="Gradient" id="Gradient_hrp3g"]
 offsets = PackedFloat32Array(0, 0.0783133, 0.379518, 0.572289, 0.76506, 1)
 colors = PackedColorArray(0.874968, 0.604514, 0.563407, 0, 1, 1, 1, 1, 0.851918, 0.618979, 0.924945, 1, 0.954472, 0.794962, 0.466424, 1, 0.73367, 0.921388, 0.913637, 1, 1, 1, 1, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rw3yi"]
+size = Vector2(47, 213)
 
 [sub_resource type="Animation" id="Animation_hhojd"]
 resource_name = "RESET"
@@ -159,54 +75,162 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Textures/Down/Top:animation")
+tracks/2/path = NodePath("Textures/Down/CPUParticles2D:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"default"]
+"values": [false]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Textures/Down/CPUParticles2D:visible")
+tracks/3/path = NodePath("Textures/Down/Top:region_rect")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [false]
+"values": [Rect2(189.742, 13.3571, 189.099, 166.682)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath(".:position")
+tracks/4/path = NodePath("Textures/Down/Top:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(96, 115)]
+"values": [Vector2(-97, -100)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath(".:modulate")
+tracks/5/path = NodePath("Textures/Down:region_rect")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Rect2(0, 48.5659, 169.729, 133.355)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Textures/Down:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Textures:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Shadow:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Shadow:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.23684, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("DustParticles:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-194, 63)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Textures:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 39)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Textures/Down/Top:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Textures:scale")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Textures/Down:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1, -28)]
+}
 
 [sub_resource type="Animation" id="Animation_4bqhc"]
-resource_name = "_death"
+resource_name = "death"
 length = 2.4
 step = 0.05
 tracks/0/type = "value"
@@ -240,10 +264,10 @@ tracks/2/path = NodePath("Textures/Down/Top:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.1, 0.65, 0.85, 1.15),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0.1, 0.5, 0.7, 0.85, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0, -0.763582, -1.34216, -1.31887]
+"values": [0.0, -0.763582, -1.34216, -1.23918, -1.34216]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -315,7 +339,7 @@ tracks/8/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.4),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(-84, -72), Vector2(-84, -102), Vector2(-84, -72)]
+"values": [Vector2(-97, -100), Vector2(-108.905, -112.935), Vector2(-84, -72)]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
@@ -329,10 +353,24 @@ tracks/9/keys = {
 "update": 0,
 "values": [Vector2(1, 1), Vector2(1, 1.2), Vector2(1, 1)]
 }
+tracks/10/type = "method"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath(".")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(2.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_y6lig"]
-resource_name = "_giving_coin"
-length = 3.5
+resource_name = "give_coin"
+length = 4.0
 step = 0.01
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -341,7 +379,7 @@ tracks/0/path = NodePath("Textures/Down:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.1, 0.4, 0.8, 1.1, 3.02, 3.16, 3.49),
+"times": PackedFloat32Array(0.1, 0.4, 0.8, 1.1, 3.02, 3.16, 4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(1, 1), Vector2(1, 0.9), Vector2(1, 1.05), Vector2(1, 1), Vector2(1, 1), Vector2(1, 0.9), Vector2(1, 1)]
@@ -349,38 +387,38 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Textures/Down:animation")
+tracks/1/path = NodePath("Textures/Down/Top:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.55, 3.2, 3.31),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [&"default", &"charge", &"charge", &"default"]
+"times": PackedFloat32Array(0.4, 0.55, 0.56, 0.92, 1.31, 1.71, 2.14, 2.5, 2.86, 3.02, 3.2, 3.31, 3.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.349066, 0.0, -0.0349066, 0.0, -0.0349066, 0.0, -0.0349066, 0.0, -0.349066, 0.0, -0.20496, 0.0]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Textures/Down/Top:animation")
+tracks/2/path = NodePath("Textures/Down/CPUParticles2D:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.55, 0.56, 3.26, 3.31),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0.48, 0.57, 3.38),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [&"default", &"charge", &"open", &"charge", &"default"]
+"values": [false, true, false]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Textures/Down/Top:rotation")
+tracks/3/path = NodePath("Textures/Down/Top:region_rect")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.4, 0.55, 0.56, 0.92, 1.31, 1.71, 2.14, 2.5, 2.86, 3.02, 3.2, 3.31, 3.43),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.0, -0.349066, 0.0, -0.0349066, 0.0, -0.0349066, 0.0, -0.0349066, 0.0, -0.349066, 0.0, -0.20496, 0.0]
+"times": PackedFloat32Array(0, 0.55, 3.25, 3.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Rect2(189.742, 13.3571, 189.099, 166.682), Rect2(189.742, 182.287, 189.099, 166.682), Rect2(189.742, 182.287, 189.099, 166.682), Rect2(189.742, 13.3571, 189.099, 166.682)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -389,22 +427,22 @@ tracks/4/path = NodePath("Textures/Down/Top:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0.4, 0.55, 0.56, 3.25, 3.27, 3.53),
+"times": PackedFloat32Array(0, 0.4, 0.55, 0.56, 3.25, 3.45),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(-84, -72), Vector2(-94, -82), Vector2(-112, -117.12), Vector2(-112, -117.12), Vector2(-89, -78.5443), Vector2(-84, -72)]
+"values": [Vector2(-97, -100), Vector2(-97, -100), Vector2(-113, -99.1006), Vector2(-100, -113.444), Vector2(-100, -113.444), Vector2(-97, -100)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Textures/Down/CPUParticles2D:visible")
+tracks/5/path = NodePath("Textures/Down:region_rect")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0.48, 0.57, 3.38),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.41, 3.22, 3.33),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [false, true, false]
+"values": [Rect2(0, 48.5659, 169.729, 133.355), Rect2(0, 232, 169.729, 133.355), Rect2(0, 232, 169.729, 133.355), Rect2(0, 48.5659, 169.729, 133.355)]
 }
 tracks/6/type = "method"
 tracks/6/imported = false
@@ -413,16 +451,16 @@ tracks/6/path = NodePath(".")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0.93),
+"times": PackedFloat32Array(4),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
-"method": &"_spawn_coin"
+"method": &"_on_give_coin_animation_finished"
 }]
 }
 
 [sub_resource type="Animation" id="Animation_i34yv"]
-resource_name = "_idle"
+resource_name = "idle"
 length = 3.0
 loop_mode = 1
 tracks/0/type = "value"
@@ -432,10 +470,10 @@ tracks/0/path = NodePath("Textures:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.7, 1.5, 2.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.7, 1.5, 2.3, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(1, 1), Vector2(1, 1.05), Vector2(1, 1), Vector2(1, 1.05)]
+"values": [Vector2(1, 1), Vector2(1, 1.05), Vector2(1, 1), Vector2(1, 1.05), Vector2(1, 1)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -444,10 +482,10 @@ tracks/1/path = NodePath("Textures/Down/Top:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.7, 1.5, 2.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.7, 1.5, 2.3, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0, -0.0349066, 0.0, -0.0349066]
+"values": [0.0, -0.0349066, 0.0, -0.0349066, 0.0]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -456,38 +494,62 @@ tracks/2/path = NodePath("Textures/Down/Top:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.7, 1.5, 2.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.7, 1.5, 2.3, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(-84, -72), Vector2(-84, -74), Vector2(-84, -72), Vector2(-84, -74)]
+"values": [Vector2(-97, -100), Vector2(-97, -102), Vector2(-97, -100), Vector2(-97, -102), Vector2(-97, -100)]
 }
 
-[sub_resource type="Animation" id="Animation_ixete"]
-resource_name = "go_out"
-length = 1.1
+[sub_resource type="Animation" id="Animation_4j3d6"]
+resource_name = "receive_damage"
+length = 0.7
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath("Textures/Down:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.99),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.0666667, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(96, 115), Vector2(96, 5)]
+"values": [Vector2(1, 1), Vector2(1, 1.1), Vector2(1, 1)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath(".:modulate")
+tracks/1/path = NodePath("Textures/Down:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.99),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.0666667, 0.2, 0.566667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.207843)]
+"values": [Color(1, 1, 1, 1), Color(0.109804, 0.0705882, 0.0588235, 1), Color(2, 1.5, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Textures:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 39), Vector2(-10, 39), Vector2(0, 39)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Textures/Down/Top:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.0872665, 0.0]
 }
 
 [sub_resource type="Animation" id="Animation_mdkbv"]
@@ -533,141 +595,200 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("SpawnLight:energy")
+tracks/3/path = NodePath("SpawnParticles:emitting")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.25, 0.3, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.0, 4.0, 0.0]
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("SpawnLight:texture_scale")
+tracks/4/path = NodePath("DustParticles:emitting")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0.25, 0.7),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.5, 1.3]
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("SpawnParticles:emitting")
+tracks/5/path = NodePath("DustParticles:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0.2),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("DustParticles:emitting")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0.2),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("DustParticles:position")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
 "times": PackedFloat32Array(0.25),
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(5, 45)]
 }
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("Textures:position")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Textures:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
 "times": PackedFloat32Array(0, 0.25, 0.35, 0.55),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(0, -188), Vector2(0, 39), Vector2(0, 29.722), Vector2(0, 39)]
 }
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("Textures/Down/Top:rotation")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Textures/Down/Top:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.35, 0.55),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [-0.349066, 0.0, -0.10472, 0.0]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_huxl0"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x0qkg"]
 _data = {
 &"RESET": SubResource("Animation_hhojd"),
-&"_death": SubResource("Animation_4bqhc"),
-&"_giving_coin": SubResource("Animation_y6lig"),
-&"_idle": SubResource("Animation_i34yv"),
-&"go_out": SubResource("Animation_ixete"),
+&"death": SubResource("Animation_4bqhc"),
+&"give_coin": SubResource("Animation_y6lig"),
+&"idle": SubResource("Animation_i34yv"),
+&"receive_damage": SubResource("Animation_4j3d6"),
 &"spawn": SubResource("Animation_mdkbv")
 }
 
-[node name="IronChest" instance=ExtResource("1_ixete")]
-position = Vector2(96, 115)
-script = ExtResource("2_cpt3o")
-resource_value = 50
-seconds_per_coin = 3.0
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_o76r3"]
+animation = &"death"
 
-[node name="SelectAllyBtn" type="TextureButton" parent="." index="0"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5hob4"]
+animation = &"give_coin"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_owl7y"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vr4p0"]
+animation = &"spawn"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_84r2v"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_eqnbg"]
+break_loop_at_end = true
+switch_mode = 2
+advance_mode = 2
+advance_expression = "give_coin_timer_timeout"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6g2lq"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_41get"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_puwn0"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_t81yf"]
+states/End/position = Vector2(718, 100)
+states/death/node = SubResource("AnimationNodeAnimation_o76r3")
+states/death/position = Vector2(608, 102)
+states/give_coin/node = SubResource("AnimationNodeAnimation_5hob4")
+states/give_coin/position = Vector2(468, -11.0344)
+states/idle/node = SubResource("AnimationNodeAnimation_owl7y")
+states/idle/position = Vector2(468, 102)
+states/spawn/node = SubResource("AnimationNodeAnimation_vr4p0")
+states/spawn/position = Vector2(328, 100)
+transitions = ["Start", "spawn", SubResource("AnimationNodeStateMachineTransition_84r2v"), "idle", "give_coin", SubResource("AnimationNodeStateMachineTransition_eqnbg"), "give_coin", "idle", SubResource("AnimationNodeStateMachineTransition_6g2lq"), "spawn", "idle", SubResource("AnimationNodeStateMachineTransition_41get"), "death", "End", SubResource("AnimationNodeStateMachineTransition_puwn0")]
+graph_offset = Vector2(0, -74.0344)
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_i3kex"]
+nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_t81yf")
+nodes/StateMachine/position = Vector2(-40, 100)
+node_connections = [&"output", 0, &"StateMachine"]
+
+[node name="IronChest" type="CharacterBody2D"]
+position = Vector2(93, 135)
+script = ExtResource("1_o76r3")
+
+[node name="SelectAllyBtn" type="TextureButton" parent="."]
 unique_name_in_owner = true
-modulate = Color(1, 1, 1, 0.211765)
 offset_left = -82.0
-offset_top = -114.0
-offset_right = 82.0
-offset_bottom = 54.0
+offset_top = -135.0
+offset_right = 88.0
+offset_bottom = 59.0
+texture_click_mask = ExtResource("2_ev2mq")
 
-[node name="Shadow" type="Sprite2D" parent="." index="3"]
-position = Vector2(-2, 22)
+[node name="TestDyingBtn" type="Button" parent="."]
+offset_left = 317.0
+offset_top = -255.0
+offset_right = 585.0
+offset_bottom = -178.0
+theme_override_font_sizes/font_size = 50
+text = "Test Death"
+
+[node name="Shadow" type="Sprite2D" parent="."]
+position = Vector2(-1, 28)
 scale = Vector2(1.23684, 1)
-texture = ExtResource("2_04huq")
+texture = ExtResource("1_h2rfk")
 
-[node name="Textures" type="Node2D" parent="." index="4"]
+[node name="Textures" type="Node2D" parent="."]
 position = Vector2(0, 39)
 
-[node name="Down" type="AnimatedSprite2D" parent="Textures" index="0"]
-position = Vector2(-1, -28)
-sprite_frames = ExtResource("4_04huq")
-offset = Vector2(-1, -23)
-script = ExtResource("11_cpt3o")
-levels_modifiers_textures = Dictionary[String, SpriteFrames]({
-"fast 2": ExtResource("12_k6k1e")
+[node name="Base" type="Sprite2D" parent="Textures"]
+position = Vector2(1, -9.75099)
+texture = ExtResource("5_ev2mq")
+script = ExtResource("4_u00hx")
+levels_modifiers_textures = Dictionary[String, Texture2D]({
+"IRC_B": ExtResource("5_ev2mq"),
+"IRC_H1": ExtResource("3_xcb8a"),
+"IRC_H2": ExtResource("7_ao53d"),
+"IRC_H3": ExtResource("3_bhh23")
 })
-metadata/_custom_type_script = "uid://qclj8gae0u4y"
+metadata/_custom_type_script = "uid://c3skicx1p4687"
 
-[node name="Top" type="AnimatedSprite2D" parent="Textures/Down" index="0"]
-position = Vector2(-84, -72)
-sprite_frames = SubResource("SpriteFrames_gg43k")
-autoplay = "default"
+[node name="Down" type="Sprite2D" parent="Textures"]
+position = Vector2(-1, -28)
+texture = ExtResource("7_bny8o")
+offset = Vector2(-1, -23)
+region_enabled = true
+region_rect = Rect2(0, 48.5659, 169.729, 133.355)
+script = ExtResource("4_u00hx")
+levels_modifiers_textures = Dictionary[String, Texture2D]({
+"IRC_B": ExtResource("7_bny8o"),
+"IRC_S1": ExtResource("6_d46ik"),
+"IRC_S2": ExtResource("8_bhh23"),
+"IRC_S3": ExtResource("9_ev2mq")
+})
+metadata/_custom_type_script = "uid://c3skicx1p4687"
+
+[node name="Top" type="Sprite2D" parent="Textures/Down"]
+position = Vector2(-97, -100)
+texture = ExtResource("6_d46ik")
 offset = Vector2(83, 4)
+region_enabled = true
+region_rect = Rect2(189.742, 13.3571, 189.099, 166.682)
+script = ExtResource("4_u00hx")
+levels_modifiers_textures = Dictionary[String, Texture2D]({
+"IRC_B": ExtResource("7_bny8o"),
+"IRC_S1": ExtResource("6_d46ik"),
+"IRC_S2": ExtResource("8_bhh23"),
+"IRC_S3": ExtResource("9_ev2mq")
+})
+metadata/_custom_type_script = "uid://c3skicx1p4687"
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="Textures/Down" index="1"]
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Textures/Down"]
 visible = false
 position = Vector2(4, -41)
 amount = 40
-texture = ExtResource("8_jupqk")
+texture = ExtResource("13_10r13")
 emission_shape = 3
 emission_rect_extents = Vector2(40, 1)
 direction = Vector2(0, -1)
@@ -676,29 +797,14 @@ initial_velocity_min = 115.6
 initial_velocity_max = 115.6
 linear_accel_min = -80.52
 linear_accel_max = -80.52
-scale_amount_curve = SubResource("Curve_q5asp")
-color_ramp = SubResource("Gradient_j7xbj")
+scale_amount_curve = SubResource("Curve_sdch0")
+color_ramp = SubResource("Gradient_6j5j6")
 
-[node name="ReceiveDamage" type="AnimationPlayer" parent="." index="5"]
-libraries = {
-&"": SubResource("AnimationLibrary_fcsnw")
-}
-
-[node name="BodyCollShape" type="CollisionShape2D" parent="." index="6"]
-visible = false
-position = Vector2(-34, -71.5)
-shape = SubResource("RectangleShape2D_wtsvu")
-
-[node name="PhysicalContactCollShape" type="CollisionShape2D" parent="." index="7"]
-visible = false
-position = Vector2(59, -32.5)
-shape = SubResource("RectangleShape2D_6pwvn")
-
-[node name="DustParticles" type="CPUParticles2D" parent="." index="8"]
-position = Vector2(5, 45)
+[node name="DustParticles" type="CPUParticles2D" parent="."]
+position = Vector2(-194, 63)
 emitting = false
 amount = 20
-texture = ExtResource("9_v2tol")
+texture = ExtResource("17_rxg2f")
 lifetime = 0.8
 one_shot = true
 speed_scale = 1.2
@@ -712,21 +818,14 @@ initial_velocity_min = 433.73
 initial_velocity_max = 433.73
 angular_velocity_min = 277.59
 angular_velocity_max = 277.59
-scale_amount_curve = SubResource("Curve_rvmm0")
-color_ramp = SubResource("Gradient_6ir51")
+scale_amount_curve = SubResource("Curve_gkfla")
+color_ramp = SubResource("Gradient_x3xx0")
 
-[node name="SpawnLight" type="PointLight2D" parent="." index="9"]
-visible = false
-position = Vector2(0, 27.25)
-color = Color(0.392157, 0.627451, 0.4, 1)
-energy = 0.0
-texture = ExtResource("10_7dqq0")
-texture_scale = 1.3
-
-[node name="SpawnParticles" type="CPUParticles2D" parent="." index="10"]
+[node name="SpawnParticles" type="CPUParticles2D" parent="."]
 position = Vector2(4, 44.25)
 emitting = false
 amount = 20
+texture = ExtResource("21_ncvss")
 lifetime = 0.8
 one_shot = true
 explosiveness = 0.9
@@ -741,10 +840,33 @@ angular_velocity_min = 269.16
 angular_velocity_max = 269.16
 linear_accel_min = 31.78
 linear_accel_max = 31.78
-scale_amount_curve = SubResource("Curve_msemh")
-color_ramp = SubResource("Gradient_2ssfk")
+scale_amount_curve = SubResource("Curve_k8stc")
+color_ramp = SubResource("Gradient_hrp3g")
 
-[node name="StateAnimationPlayer" parent="." index="11"]
+[node name="BodyCollShape" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-34, -71.5)
+shape = SubResource("RectangleShape2D_rw3yi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
 libraries = {
-&"": SubResource("AnimationLibrary_huxl0")
+&"": SubResource("AnimationLibrary_x0qkg")
 }
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+unique_name_in_owner = true
+root_node = NodePath("%AnimationTree/..")
+callback_mode_discrete = 0
+tree_root = SubResource("AnimationNodeBlendTree_i3kex")
+advance_expression_base_node = NodePath("..")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="GiveCoinTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[connection signal="pressed" from="TestDyingBtn" to="." method="_on_test_dying_btn_pressed"]
+[connection signal="timeout" from="GiveCoinTimer" to="." method="_on_give_coin_timer_timeout"]
