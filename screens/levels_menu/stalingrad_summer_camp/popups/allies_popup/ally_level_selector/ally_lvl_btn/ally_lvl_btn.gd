@@ -28,10 +28,8 @@ func _set_texture_and_availabily() -> void:
 	if buyed:
 		texture_disabled = buyed_texture
 		modulate = Color(1,1,1,0.5)
-		print("got here")
 	
 	if !unlocked or buyed:
-		print("disabling: ", ally_level.id)
 		disabled = true
 	else:
 		pass
