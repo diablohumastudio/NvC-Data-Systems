@@ -1,0 +1,336 @@
+[gd_scene load_steps=30 format=3 uid="uid://bs6a1e6fgv7y3"]
+
+[ext_resource type="Script" uid="uid://dv5p6bnxebwd5" path="res://game_characters_scenes/allies/explosive_ally/grenade/grenade.gd" id="1_yl2wb"]
+[ext_resource type="Texture2D" uid="uid://saxbm5r1rdmd" path="res://game_characters_scenes/allies/explosive_ally/grenade/assets/grenade_explosion/grenade_explosion_1.png" id="3_1ytgc"]
+[ext_resource type="Texture2D" uid="uid://ucccjshbwmer" path="res://game_characters_scenes/allies/explosive_ally/grenade/assets/grenade_explosion/grenade_explosion_2.png" id="4_q40b0"]
+[ext_resource type="Texture2D" uid="uid://b1ounqnho5d4h" path="res://game_characters_scenes/allies/explosive_ally/grenade/assets/grenade_explosion/grenade_explosion_3.png" id="5_dlsit"]
+[ext_resource type="Texture2D" uid="uid://tluu85vwuab8" path="res://game_characters_scenes/allies/explosive_ally/grenade/assets/grenade_explosion/grenade_explosion_4.png" id="6_uy6mf"]
+[ext_resource type="Texture2D" uid="uid://wbpi3u57fjue" path="res://game_characters_scenes/allies/explosive_ally/grenade/assets/grenade_explosion/grenade_explosion_5.png" id="7_wwly4"]
+[ext_resource type="Texture2D" uid="uid://binscrs3tixvf" path="res://game_characters_scenes/allies/explosive_ally/grenade/assets/grenade_explosion/grenade_explosion_6.png" id="8_r6g3u"]
+[ext_resource type="Texture2D" uid="uid://bkin0utw8r0io" path="res://game_characters_scenes/allies/explosive_ally/grenade/assets/grenade_explosion/grenade_explosion_7.png" id="9_ea1fd"]
+[ext_resource type="Texture2D" uid="uid://csnkh8n5u6lm7" path="res://game_characters_scenes/allies/explosive_ally/grenade/assets/grenade_explosion/grenade_explosion_8.png" id="10_eoggu"]
+[ext_resource type="Texture2D" uid="uid://bx4wk8lcqucxx" path="res://game_characters_scenes/allies/explosive_ally/grenade/assets/area/level_3.png" id="11_4oa1g"]
+[ext_resource type="Texture2D" uid="uid://bwfmslpeaj1c4" path="res://game_characters_scenes/allies/explosive_ally/grenade/assets/grenade_explosion/grenade_explosion_9.png" id="11_jyock"]
+[ext_resource type="Texture2D" uid="uid://dojaba0kht1wh" path="res://game_characters_scenes/allies/explosive_ally/grenade/assets/area/base.png" id="11_ugldh"]
+[ext_resource type="Script" uid="uid://c3skicx1p4687" path="res://game_characters_scenes/allies/models/ally_scene/ally_level_dependants_nodes/ally_level_dependent_sprite2D.gd" id="12_n8qkt"]
+[ext_resource type="Texture2D" uid="uid://b3abgmiwm57ry" path="res://game_characters_scenes/allies/explosive_ally/grenade/assets/area/level_1.png" id="13_ujcxx"]
+[ext_resource type="Texture2D" uid="uid://hxwn8dmpkem3" path="res://game_characters_scenes/allies/explosive_ally/grenade/assets/area/level_2.png" id="14_a2hxh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_51dni"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1ytgc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1ytgc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_q40b0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dlsit")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_uy6mf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wwly4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_r6g3u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ea1fd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_eoggu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_jyock")
+}],
+"loop": false,
+"name": &"explosion",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6yk2g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b02q3"]
+size = Vector2(0, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4oa1g"]
+
+[sub_resource type="Animation" id="Animation_8nh68"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../GrenadeTexture:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"default"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Background:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_7ujs3"]
+resource_name = "exploding"
+length = 0.65
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.65),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [&"default", &"explosion", &"explosion"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Background:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.05, 0.1, 0.3, 0.65),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.745098), Color(1, 1, 1, 0.745098), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../GrenadeTexture:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("..")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.65),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Background:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_nhslj"]
+resource_name = "idle"
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"default", &"default"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../GrenadeTexture:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b5pt1"]
+_data = {
+&"RESET": SubResource("Animation_8nh68"),
+&"exploding": SubResource("Animation_7ujs3"),
+&"idle": SubResource("Animation_nhslj")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_yl2wb"]
+animation = &"exploding"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4oa1g"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_n8qkt"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ugldh"]
+advance_mode = 2
+advance_expression = "exploding"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ujcxx"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_yl2wb"]
+states/exploding/node = SubResource("AnimationNodeAnimation_yl2wb")
+states/exploding/position = Vector2(670, 100)
+states/idle/node = SubResource("AnimationNodeAnimation_4oa1g")
+states/idle/position = Vector2(461, 100)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_n8qkt"), "idle", "exploding", SubResource("AnimationNodeStateMachineTransition_ugldh"), "exploding", "End", SubResource("AnimationNodeStateMachineTransition_ujcxx")]
+
+[node name="Grenade" type="CharacterBody2D"]
+position = Vector2(902, 618)
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_yl2wb")
+
+[node name="Background" type="ColorRect" parent="."]
+visible = false
+modulate = Color(0, 0, 0, 1)
+top_level = true
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Explosion" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(-3, 1)
+sprite_frames = SubResource("SpriteFrames_51dni")
+
+[node name="GrenadeTexture" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-8, -2)
+texture = ExtResource("11_ugldh")
+script = ExtResource("12_n8qkt")
+levels_modifiers_textures = Dictionary[String, Texture2D]({
+"GRN_A1": ExtResource("13_ujcxx"),
+"GRN_A2": ExtResource("14_a2hxh"),
+"GRN_A3": ExtResource("11_4oa1g"),
+"GRN_B": ExtResource("11_ugldh")
+})
+metadata/_custom_type_script = "uid://c3skicx1p4687"
+
+[node name="ExplosionBlastArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+
+[node name="BlastCollShape" type="CollisionShape2D" parent="ExplosionBlastArea"]
+unique_name_in_owner = true
+shape = SubResource("RectangleShape2D_6yk2g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_b02q3")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(-10, -7)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(66, 41)
+shape = SubResource("RectangleShape2D_4oa1g")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Explosion")
+libraries = {
+&"": SubResource("AnimationLibrary_b5pt1")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+unique_name_in_owner = true
+root_node = NodePath("%AnimationTree/../Explosion")
+tree_root = SubResource("AnimationNodeStateMachine_yl2wb")
+advance_expression_base_node = NodePath("..")
+anim_player = NodePath("../AnimationPlayer")

@@ -1,4 +1,4 @@
-class_name Cannon extends GameCharacter
+class_name Cannon extends GameCharaterScene
 
 var damage_per_hit : int = 100
 var _is_already_shooting : bool
@@ -20,7 +20,7 @@ func shoot():
 		_create_and_send_bullet()
 
 func _create_and_send_bullet():
-	var bullet : CannonBullet = load("uid://oq6aen6b7qdb").instantiate()
+	var bullet = load("uid://oq6aen6b7qdb").instantiate()
 	bullet.position = %BulletPosition.position
 	bullet.bullet_sender = self
 	self.add_child(bullet)

@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://1e3tt2sswtl0"]
+
+[ext_resource type="Shader" uid="uid://o7qa0qagwx4" path="res://global_assets/shaders/burn_shader.gdshader" id="1_ftsun"]
+[ext_resource type="Texture2D" uid="uid://w2v0kkxxyyj5" path="res://game_characters_scenes/shared_assets/level_up_alpha_mask.png" id="2_ftsun"]
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource("1_ftsun")
+shader_parameter/noise = ExtResource("2_ftsun")
+shader_parameter/dissolve_state = -0.1
+shader_parameter/border_color = Vector4(1.085, 0.49, 0, 0)
+shader_parameter/object_modulate = Color(1, 1, 1, 1)

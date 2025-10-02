@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ExplosiveAllyLevel" load_steps=3 format=3 uid="uid://dfwfoy5hh5qov"]
+
+[ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://global_systems/data_systems/action_condition_system/condition.gd" id="1_gjhi5"]
+[ext_resource type="Script" uid="uid://bkaq06sghogbp" path="res://data/game_characters/allies/explosives/models/explosive_ally_level.gd" id="2_iko6s"]
+
+[resource]
+script = ExtResource("2_iko6s")
+explosion_power = 100
+explosion_area = Vector2(2, 2)
+id = "GRN_B"
+ally_id = 402
+unlockd_by_default = false
+buyed_by_default = false
+unlock_conditions = Array[ExtResource("1_gjhi5")]([])
+market_price = 3800
+scene_path = "uid://bs6a1e6fgv7y3"
+in_game_price = 200
+in_game_unlock_conditions = Array[ExtResource("1_gjhi5")]([])
+metadata/_custom_type_script = "uid://bkaq06sghogbp"

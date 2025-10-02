@@ -1,8 +1,9 @@
-[gd_scene load_steps=48 format=3 uid="uid://ctww27adn5p47"]
+[gd_scene load_steps=56 format=3 uid="uid://ctww27adn5p47"]
 
 [ext_resource type="Script" uid="uid://yfic84p21c46" path="res://screens/levels_menu/stalingrad_summer_camp/stalingrad_summer_camp.gd" id="1_rthgh"]
 [ext_resource type="Texture2D" uid="uid://ksq8w6bk8tpj" path="res://screens/levels_menu/stalingrad_summer_camp/assets/base_bg.png" id="1_t7s7p"]
 [ext_resource type="Texture2D" uid="uid://bs87sdawwfub4" path="res://screens/levels_menu/stalingrad_summer_camp/assets/resources_ui.png" id="3_2djdf"]
+[ext_resource type="Script" uid="uid://meefvpiruaka" path="res://screens/levels_menu/stalingrad_summer_camp/go_to_allies_popup_btn.gd" id="4_ma5bn"]
 [ext_resource type="Texture2D" uid="uid://dy5tlctbsbkcg" path="res://global_assets/go_back_btn_textures/go_back_button.png" id="5_sux0p"]
 [ext_resource type="Texture2D" uid="uid://bnpfefy1svqrb" path="res://screens/levels_menu/stalingrad_summer_camp/assets/barracks.png" id="6_3ky6c"]
 [ext_resource type="Texture2D" uid="uid://xollcxmkscnt" path="res://global_assets/go_back_btn_textures/go_back_button_selected.png" id="6_wqfrk"]
@@ -11,14 +12,21 @@
 [ext_resource type="Texture2D" uid="uid://cbgwqwx1wd313" path="res://screens/levels_menu/stalingrad_summer_camp/assets/barriers_factory.png" id="7_yqd11"]
 [ext_resource type="Texture2D" uid="uid://mc3p0syregwk" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0001.png" id="8_esw8b"]
 [ext_resource type="Texture2D" uid="uid://byjdct5ikv3pm" path="res://screens/levels_menu/stalingrad_summer_camp/assets/explosives_factory.png" id="8_ujumv"]
+[ext_resource type="Script" uid="uid://ccntxav05c4k" path="res://data/game_characters/allies/models/ally_data.gd" id="8_ybk0m"]
 [ext_resource type="Texture2D" uid="uid://d38b5h1gf7p63" path="res://screens/levels_menu/stalingrad_summer_camp/assets/resource_generator_factory.png" id="9_4afd1"]
 [ext_resource type="Texture2D" uid="uid://cvqganhkwx8q7" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0002.png" id="9_fgkxi"]
+[ext_resource type="Resource" uid="uid://ck4vhcsqfny01" path="res://data/game_characters/allies/shooters/bayonete_soldier/bayonete_soldier_ally_data.tres" id="9_fhbub"]
 [ext_resource type="Texture2D" uid="uid://cewoxn6t03ges" path="res://screens/levels_menu/stalingrad_summer_camp/assets/top_trees.png" id="10_3ky6c"]
-[ext_resource type="PackedScene" uid="uid://drind8lvt12co" path="res://screens/levels_menu/stalingrad_summer_camp/popups/barracks_popup/barracks_popup.tscn" id="10_4afd1"]
+[ext_resource type="Resource" uid="uid://bjbi720jmxnbk" path="res://data/game_characters/allies/shooters/farmer/farmer_ally_data.tres" id="10_3uaic"]
+[ext_resource type="PackedScene" uid="uid://drind8lvt12co" path="res://screens/levels_menu/stalingrad_summer_camp/allies_popup/allies_popup.tscn" id="10_4afd1"]
 [ext_resource type="Texture2D" uid="uid://bv3s8c214ggih" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0003.png" id="10_xaas3"]
 [ext_resource type="Texture2D" uid="uid://dajp5qpmcs65i" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0004.png" id="11_5p7am"]
+[ext_resource type="Resource" uid="uid://d3nqpt85o3ucx" path="res://data/game_characters/allies/shooters/snowman/snowman_ally_data.tres" id="11_rd0ec"]
+[ext_resource type="Resource" uid="uid://bvkc1rbpkb46v" path="res://data/game_characters/allies/shooters/light_machine_gunner/light_machine_gunner_ally_data.tres" id="12_44n54"]
 [ext_resource type="Texture2D" uid="uid://d3issrwm4ww7a" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0005.png" id="12_r1lmi"]
+[ext_resource type="Resource" uid="uid://dfb1cftgkh5bn" path="res://data/game_characters/allies/shooters/shield_soldier/shield_soldier_ally_data.tres" id="13_3qq8m"]
 [ext_resource type="Texture2D" uid="uid://cgb3nar0poup0" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0006.png" id="13_q4aui"]
+[ext_resource type="Resource" uid="uid://boso5gok2mbeg" path="res://data/game_characters/allies/shooters/fast_bayonet_soldier/fast_bayonet_soldier_ally_data.tres" id="14_4otkw"]
 [ext_resource type="Texture2D" uid="uid://njqh1q48q8jq" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0007.png" id="14_nsln8"]
 [ext_resource type="Texture2D" uid="uid://c1qrsk44dwj1o" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0008.png" id="15_ypfkd"]
 [ext_resource type="Texture2D" uid="uid://bw6s2k7yetp1o" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0009.png" id="16_6rupn"]
@@ -202,39 +210,42 @@ script = ExtResource("1_rthgh")
 position = Vector2(960, 540)
 texture = ExtResource("1_t7s7p")
 
-[node name="BarriersFactory" type="TextureButton" parent="."]
+[node name="GoToBarriersFactoryBtn" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 1145.0
-offset_top = 295.0
-offset_right = 1627.0
-offset_bottom = 626.0
+offset_right = 482.0
+offset_bottom = 331.0
 texture_normal = ExtResource("7_yqd11")
+script = ExtResource("4_ma5bn")
 
-[node name="ExplosivesFactory" type="TextureButton" parent="."]
+[node name="GoToExplosivesFactoryBtn" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = 327.0
 offset_top = 291.0
 offset_right = 886.0
 offset_bottom = 679.0
 texture_normal = ExtResource("8_ujumv")
+script = ExtResource("4_ma5bn")
 
-[node name="ResourceGeneratorFactory" type="TextureButton" parent="."]
+[node name="GoToResourceGeneratorFactoryBtn" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = 873.0
 offset_top = 470.0
 offset_right = 1252.0
 offset_bottom = 818.0
 texture_normal = ExtResource("9_4afd1")
+script = ExtResource("4_ma5bn")
 
-[node name="Barracks" type="TextureButton" parent="."]
+[node name="GoToBarracksBtn" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = 282.0
 offset_top = 597.0
 offset_right = 949.0
 offset_bottom = 1016.0
 texture_normal = ExtResource("6_3ky6c")
+script = ExtResource("4_ma5bn")
+allies = Array[ExtResource("8_ybk0m")]([ExtResource("9_fhbub"), ExtResource("10_3uaic"), ExtResource("11_rd0ec"), ExtResource("12_44n54"), ExtResource("13_3qq8m"), ExtResource("14_4otkw")])
 
-[node name="Flag" type="AnimatedSprite2D" parent="Barracks"]
+[node name="Flag" type="AnimatedSprite2D" parent="GoToBarracksBtn"]
 position = Vector2(331, 79)
 sprite_frames = SubResource("SpriteFrames_c81wj")
 autoplay = "default"
@@ -331,13 +342,6 @@ texture_hover = ExtResource("6_wqfrk")
 [node name="BarracksPopup" parent="." instance=ExtResource("10_4afd1")]
 visible = false
 
-[node name="TextureButton2" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 1446.0
-offset_top = 143.0
-offset_right = 1563.0
-offset_bottom = 231.0
-
 [node name="ResourcesUI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -370,6 +374,5 @@ script = ExtResource("38_rj5k8")
 scenes_paths = Array[String](["res://screens/levels_menu/stalingrad_summer_level_menu/stalingrad_summer_levels_menu.tscn", "res://screens/levels_menu/worlds_map_menu/worlds_map_menu.tscn", "res://screens/levels_menu/stalingrad_winter_level_menu/stalingrad_winter_levels_menu.tscn", "res://screens/start_menus/main_menu/main_menu.tscn"])
 metadata/_custom_type_script = "uid://cc5cx846obsu8"
 
-[connection signal="pressed" from="Barracks" to="." method="_on_barracks_pressed"]
+[connection signal="pressed" from="GoToBarracksBtn" to="." method="_on_go_to_barracks_btn_pressed"]
 [connection signal="pressed" from="GoBackButton" to="." method="_on_go_back_button_pressed"]
-[connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]

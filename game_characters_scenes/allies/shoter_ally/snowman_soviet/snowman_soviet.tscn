@@ -1,0 +1,1059 @@
+[gd_scene load_steps=61 format=3 uid="uid://dt3guvmgc72a7"]
+
+[ext_resource type="Script" uid="uid://c4yhoestvmvrp" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/snowman_soviet.gd" id="1_yrfbn"]
+[ext_resource type="BitMap" uid="uid://b7uvqmbp7d564" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/select_ally_btn.png" id="3_d5k42"]
+[ext_resource type="SpriteFrames" uid="uid://duym1snydi3ab" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/health_levels/snm_b_sprite_frames.tres" id="4_lr6rl"]
+[ext_resource type="SpriteFrames" uid="uid://cvjiar15b8134" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/health_levels/snm_h2_sprite_frames.tres" id="4_oa2tf"]
+[ext_resource type="Texture2D" uid="uid://dlcer4oss0jxv" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/health_levels/helmet_base.png" id="5_03swb"]
+[ext_resource type="Script" uid="uid://qclj8gae0u4y" path="res://game_characters_scenes/allies/models/ally_scene/ally_level_dependants_nodes/ally_level_dependent_animatedsprite2D.gd" id="5_yrfbn"]
+[ext_resource type="SpriteFrames" uid="uid://dv6ho6i5drk0w" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/health_levels/snm_h1_sprite_frames.tres" id="6_2jh6i"]
+[ext_resource type="Script" uid="uid://c3skicx1p4687" path="res://game_characters_scenes/allies/models/ally_scene/ally_level_dependants_nodes/ally_level_dependent_sprite2D.gd" id="6_sph1m"]
+[ext_resource type="Texture2D" uid="uid://b38c435o8hd33" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/health_levels/helmet_1.png" id="7_tx57x"]
+[ext_resource type="Texture2D" uid="uid://d3m2ymkclsdx7" path="res://game_characters_scenes/shared_assets/hurt_light.png" id="7_v1l3n"]
+[ext_resource type="Texture2D" uid="uid://bnhh5memg52k7" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/health_levels/helmet_2.png" id="8_7pubk"]
+[ext_resource type="Texture2D" uid="uid://c73v5xy4v6gea" path="res://game_characters_scenes/shared_assets/hurt_shape.png" id="8_8v31p"]
+[ext_resource type="SpriteFrames" uid="uid://ba4185yujoab1" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/health_levels/snm_h3_sprite_frames.tres" id="8_q7c8i"]
+[ext_resource type="Texture2D" uid="uid://bi8uspxwi8qs6" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/snowflake_snowman.png" id="9_2jk1h"]
+[ext_resource type="Texture2D" uid="uid://dlsoryk5ep1j3" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/health_levels/helmet_3.png" id="9_d525d"]
+[ext_resource type="Texture2D" uid="uid://bak1v78am2j67" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/speed_levels/belt_2.png" id="9_fvqir"]
+[ext_resource type="Texture2D" uid="uid://bj408g00wrr3k" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/range_levels/gun_base.png" id="11_a4hdx"]
+[ext_resource type="Texture2D" uid="uid://diks3lshsgcfv" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/speed_levels/belt_1.png" id="11_dk17j"]
+[ext_resource type="Texture2D" uid="uid://cj0urrmt13wu3" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/range_levels/gun_1.png" id="11_tx57x"]
+[ext_resource type="Texture2D" uid="uid://kj14tl3qwxes" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/speed_levels/belt_base.png" id="11_u8mxi"]
+[ext_resource type="Texture2D" uid="uid://c7qg1dskkxu3o" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/speed_levels/belt_3.png" id="13_jubmm"]
+[ext_resource type="Texture2D" uid="uid://cas40utpid1n7" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/range_levels/gun_2.png" id="13_yrfbn"]
+[ext_resource type="Texture2D" uid="uid://dhhbxvx8ih5d6" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/range_levels/gun_3.png" id="14_2jh6i"]
+[ext_resource type="Texture2D" uid="uid://jdulueb7gowt" path="res://game_characters_scenes/shared_assets/dust_particle.png" id="14_w2uoi"]
+[ext_resource type="Texture2D" uid="uid://bhnummcditq3x" path="res://screens/start_menus/about_menu/submenu_selector/assets/world_icon_particle.png" id="19_dpu6g"]
+[ext_resource type="Texture2D" uid="uid://b5ro46i71vfn0" path="res://screens/game/pop_ups/game_won_popup/assets/star_blink.png" id="25_llmn1"]
+
+[sub_resource type="Curve" id="Curve_wwd87"]
+_limits = [0.0, 360.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 360), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_bugaw"]
+_limits = [0.0, 0.8, 0.0, 1.0]
+_data = [Vector2(0.0523731, 0.141903), 0.0, 0.0, 0, 0, Vector2(0.264775, 0.47005), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_qv2rt"]
+offsets = PackedFloat32Array(0, 0.25, 0.70202, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.72805, 0.951826, 1, 1, 0.854902, 0.972549, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="Curve" id="Curve_66goo"]
+_data = [Vector2(0, 0.0801069), 0.0, 0.0, 0, 0, Vector2(0.495017, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.0887851), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_08ajn"]
+_data = [Vector2(0, 0.147368), 0.0, 0.0, 0, 0, Vector2(0.467033, 0.515789), 0.0, 0.0, 0, 0, Vector2(0.983517, 0.115789), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_x8q88"]
+offsets = PackedFloat32Array(0, 0.324503, 1)
+colors = PackedColorArray(0.351563, 0.351563, 0.351563, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="Curve" id="Curve_uftkj"]
+_limits = [0.0, 0.1, 0.0, 1.0]
+_data = [Vector2(0, 0.0175824), 0.0, 0.0, 0, 0, Vector2(0.505155, 0.1), 0.0163989, 0.0163989, 0, 0, Vector2(1, 0.00549448), -0.368232, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_p0pn1"]
+offsets = PackedFloat32Array(0, 0.0783133, 0.379518, 0.572289, 0.76506, 1)
+colors = PackedColorArray(0.874968, 0.604514, 0.563407, 0, 1, 1, 1, 1, 0.851918, 0.618979, 0.924945, 1, 0.954472, 0.794962, 0.466424, 1, 0.73367, 0.921388, 0.913637, 1, 1, 1, 1, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s17rc"]
+size = Vector2(94.5, 278)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wmynn"]
+size = Vector2(62.5, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2jh6i"]
+size = Vector2(1298, 2)
+
+[sub_resource type="Animation" id="Animation_dhlfl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Textures/Body/Arm:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Textures/Body/Arm:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(81.0663, -138.132)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Textures:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Textures:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -14)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Textures/Body:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0349066]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Textures:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("HurtLight:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("HurtLight:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(7.5, -303)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("HurtShape:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.2, 1.2)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("HurtShape:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.607843, 0.541176, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Textures/Body:scale")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Textures/Body:animation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("HurtLight:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Textures/Body/Headwear:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(29.6359, -240.181)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Textures/Body/Headwear:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_oa2tf"]
+resource_name = "check_transitions"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Textures/Body:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Textures/Body:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Textures/Body/Arm:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_check_transitions"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_odq6y"]
+resource_name = "death"
+length = 2.4
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Textures/Body:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"idle", &"death"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Textures/Body/Arm:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(81.0663, -138.132), Vector2(136.783, -180.165), Vector2(136.996, -3.1649)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Textures/Body/Arm:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 2.35619, 4.71239]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DustParticles:emitting")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Textures:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.05, 1.2, 1.35, 1.5, 1.65, 1.8, 1.95, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0.666667), Color(1, 1, 1, 0), Color(1, 1, 1, 0.666667), Color(1, 1, 1, 0), Color(1, 1, 1, 0.666667), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Textures/Body/Headwear:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 0.535887, 1, 1),
+"update": 0,
+"values": [Vector2(29.6359, -240.181), Vector2(22.636, -240.181), Vector2(22.8878, -31.0276), Vector2(22.8777, -39.3937), Vector2(22.8878, -31.0276)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Textures/Body/Headwear:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -3.49066]
+}
+
+[sub_resource type="Animation" id="Animation_cglgy"]
+resource_name = "death_stabbed"
+length = 2.4
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Textures/Body:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"idle", &"death"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Textures/Body/Arm:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(81.0663, -138.132), Vector2(136.783, -180.165), Vector2(136.996, -3.1649)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Textures/Body/Arm:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 2.35619, 4.71239]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DustParticles:emitting")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Textures:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.05, 1.2, 1.35, 1.5, 1.65, 1.8, 1.95, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0.666667), Color(1, 1, 1, 0), Color(1, 1, 1, 0.666667), Color(1, 1, 1, 0), Color(1, 1, 1, 0.666667), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_fxcpi"]
+resource_name = "idle"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Textures/Body:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.4, 3, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.021, 0.97), Vector2(1, 1), Vector2(1.021, 0.97)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Textures/Body:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.4, 4.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0349066, -0.0349066]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Textures/Body/Arm:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.8, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.248202, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_pimyx"]
+resource_name = "receive_damage"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Textures:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -14), Vector2(-10, -14), Vector2(0, -14)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Textures:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.0698132, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Textures:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.12549, 0, 0.00784314, 1), Color(0.12549, 0, 0.00784314, 1), Color(3, 2, 2, 1), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HurtLight:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.5, 1), Vector2(0.1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HurtLight:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.847059, 0.407843, 0.333333, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HurtLight:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(7.5, -73), Vector2(7.5, -303)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("HurtShape:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 0.406126),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("HurtShape:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0.607843, 0.541176, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Textures/Body/Snow Particles:emitting")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_5sgci"]
+resource_name = "shoot"
+length = 0.7
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Textures/Body:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.00120367, 0.0523599, 0.00120367]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Textures/Body/CPUParticles2D:emitting")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.05),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Textures/Body/Arm:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(81.0663, -138.132), Vector2(75.6643, -139.624), Vector2(75.6643, -139.624), Vector2(81.0663, -138.132)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Textures/Body/Arm:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.256273, -0.256273, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_annxb"]
+resource_name = "spawn"
+length = 0.7
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Textures:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Textures:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.4, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -268), Vector2(0, -14), Vector2(0, -11), Vector2(0, -14)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SpawnParticles:emitting")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Textures/Body/Arm:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3, 0.4, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.174533, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("DustParticles:emitting")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.25),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t66bb"]
+_data = {
+&"RESET": SubResource("Animation_dhlfl"),
+&"check_transitions": SubResource("Animation_oa2tf"),
+&"death": SubResource("Animation_odq6y"),
+&"death_stabbed": SubResource("Animation_cglgy"),
+&"idle": SubResource("Animation_fxcpi"),
+&"receive_damage": SubResource("Animation_pimyx"),
+&"shoot": SubResource("Animation_5sgci"),
+&"spawn": SubResource("Animation_annxb")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_yrfbn"]
+animation = &"check_transitions"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_q7c8i"]
+animation = &"death"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pdg8b"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fvqir"]
+animation = &"shoot"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_u8mxi"]
+animation = &"spawn"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_dk17j"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jubmm"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_e2a7a"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2jh6i"]
+break_loop_at_end = true
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_oa2tf"]
+switch_mode = 2
+advance_mode = 2
+advance_expression = "are_wait_cycles_finished and long_opponent_detected"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_q7c8i"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_pdg8b"]
+switch_mode = 2
+advance_mode = 2
+advance_expression = "!are_wait_cycles_finished"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_d5k42"]
+states/End/position = Vector2(1072, 100)
+states/check_transitions/node = SubResource("AnimationNodeAnimation_yrfbn")
+states/check_transitions/position = Vector2(592, 100)
+states/death/node = SubResource("AnimationNodeAnimation_q7c8i")
+states/death/position = Vector2(914, 100)
+states/idle/node = SubResource("AnimationNodeAnimation_pdg8b")
+states/idle/position = Vector2(435, 103)
+states/shoot/node = SubResource("AnimationNodeAnimation_fvqir")
+states/shoot/position = Vector2(766, 101)
+states/spawn/node = SubResource("AnimationNodeAnimation_u8mxi")
+states/spawn/position = Vector2(306, 105)
+transitions = ["death", "End", SubResource("AnimationNodeStateMachineTransition_dk17j"), "spawn", "idle", SubResource("AnimationNodeStateMachineTransition_jubmm"), "Start", "spawn", SubResource("AnimationNodeStateMachineTransition_e2a7a"), "idle", "check_transitions", SubResource("AnimationNodeStateMachineTransition_2jh6i"), "check_transitions", "shoot", SubResource("AnimationNodeStateMachineTransition_oa2tf"), "shoot", "check_transitions", SubResource("AnimationNodeStateMachineTransition_q7c8i"), "check_transitions", "idle", SubResource("AnimationNodeStateMachineTransition_pdg8b")]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_ndoom"]
+nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_d5k42")
+nodes/StateMachine/position = Vector2(-40, 60)
+node_connections = [&"output", 0, &"StateMachine"]
+
+[node name="SnowmanSoviet" type="CharacterBody2D"]
+position = Vector2(194, 972)
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_yrfbn")
+
+[node name="SelectAllyBtn" type="TextureButton" parent="."]
+offset_left = -82.0
+offset_top = -249.0
+offset_right = 173.0
+offset_bottom = 52.0
+texture_click_mask = ExtResource("3_d5k42")
+
+[node name="TestDyingBtn" type="Button" parent="."]
+offset_left = 491.0
+offset_top = -604.0
+offset_right = 759.0
+offset_bottom = -527.0
+theme_override_font_sizes/font_size = 50
+text = "Test Death"
+
+[node name="HurtLight" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(7.5, -303)
+scale = Vector2(0.1, 1)
+texture = ExtResource("7_v1l3n")
+
+[node name="HurtShape" type="Sprite2D" parent="."]
+modulate = Color(1, 0.607843, 0.541176, 0)
+position = Vector2(-10, -101)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("8_8v31p")
+offset = Vector2(18, 0)
+
+[node name="Textures" type="Node2D" parent="."]
+position = Vector2(0, -14)
+
+[node name="Body" type="AnimatedSprite2D" parent="Textures"]
+position = Vector2(-37, 47)
+rotation = 0.0349066
+sprite_frames = ExtResource("4_lr6rl")
+animation = &"idle"
+offset = Vector2(22, -132.162)
+script = ExtResource("5_yrfbn")
+levels_modifiers_textures = Dictionary[String, SpriteFrames]({
+"SNM_B": ExtResource("4_lr6rl"),
+"SNM_H1": ExtResource("6_2jh6i"),
+"SNM_H2": ExtResource("4_oa2tf"),
+"SNM_H3": ExtResource("8_q7c8i")
+})
+metadata/_custom_type_script = "uid://qclj8gae0u4y"
+
+[node name="Belt" type="Sprite2D" parent="Textures/Body"]
+position = Vector2(32.8627, -114.04)
+texture = ExtResource("11_u8mxi")
+script = ExtResource("6_sph1m")
+levels_modifiers_textures = Dictionary[String, Texture2D]({
+"SNM_2": ExtResource("9_fvqir"),
+"SNM_3": ExtResource("13_jubmm"),
+"SNM_B": ExtResource("11_u8mxi"),
+"SNM_S1": ExtResource("11_dk17j")
+})
+metadata/_custom_type_script = "uid://c3skicx1p4687"
+
+[node name="Headwear" type="Sprite2D" parent="Textures/Body"]
+position = Vector2(29.6359, -240.181)
+texture = ExtResource("5_03swb")
+script = ExtResource("6_sph1m")
+levels_modifiers_textures = Dictionary[String, Texture2D]({
+"SNM_B": ExtResource("5_03swb"),
+"SNM_H1": ExtResource("7_tx57x"),
+"SNM_H2": ExtResource("8_7pubk"),
+"SNM_H3": ExtResource("9_d525d")
+})
+metadata/_custom_type_script = "uid://c3skicx1p4687"
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Textures/Body"]
+position = Vector2(169.75, -208.204)
+emitting = false
+amount = 40
+texture = ExtResource("9_2jk1h")
+lifetime = 1.2
+one_shot = true
+explosiveness = 0.7
+lifetime_randomness = 0.51
+local_coords = true
+spread = 5.0
+gravity = Vector2(500, 0)
+initial_velocity_min = 768.92
+initial_velocity_max = 768.92
+angular_velocity_min = -437.29
+angular_velocity_max = -437.29
+linear_accel_min = 26.01
+linear_accel_max = 26.01
+angle_curve = SubResource("Curve_wwd87")
+scale_amount_curve = SubResource("Curve_bugaw")
+color_ramp = SubResource("Gradient_qv2rt")
+
+[node name="Arm" type="Sprite2D" parent="Textures/Body"]
+position = Vector2(81.0663, -138.132)
+texture = ExtResource("11_a4hdx")
+offset = Vector2(56.6979, -29.1513)
+region_rect = Rect2(123.061, 0, 109.939, 114.037)
+script = ExtResource("6_sph1m")
+levels_modifiers_textures = Dictionary[String, Texture2D]({
+"SNM_B": ExtResource("11_a4hdx"),
+"SNM_R1": ExtResource("11_tx57x"),
+"SNM_R2": ExtResource("13_yrfbn"),
+"SNM_R3": ExtResource("14_2jh6i")
+})
+metadata/_custom_type_script = "uid://c3skicx1p4687"
+
+[node name="Snow Particles" type="CPUParticles2D" parent="Textures/Body"]
+position = Vector2(45, -156)
+rotation = 0.0349066
+emitting = false
+amount = 30
+texture = ExtResource("19_dpu6g")
+lifetime = 0.5
+one_shot = true
+explosiveness = 0.44
+emission_shape = 1
+emission_sphere_radius = 3.0
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 350)
+initial_velocity_min = 86.95
+initial_velocity_max = 86.95
+radial_accel_min = 34.78
+radial_accel_max = 34.78
+scale_amount_curve = SubResource("Curve_66goo")
+hue_variation_min = -1.0
+
+[node name="DustParticles" type="CPUParticles2D" parent="."]
+position = Vector2(2, 57)
+emitting = false
+amount = 20
+texture = ExtResource("14_w2uoi")
+lifetime = 0.4
+one_shot = true
+speed_scale = 1.2
+explosiveness = 0.5
+emission_shape = 3
+emission_rect_extents = Vector2(60, 1)
+direction = Vector2(0, -1)
+spread = 55.84
+gravity = Vector2(0, -60)
+initial_velocity_min = 313.25
+initial_velocity_max = 313.25
+angular_velocity_min = 277.59
+angular_velocity_max = 277.59
+scale_amount_curve = SubResource("Curve_08ajn")
+color_ramp = SubResource("Gradient_x8q88")
+
+[node name="SpawnParticles" type="CPUParticles2D" parent="."]
+position = Vector2(4, 71)
+emitting = false
+amount = 20
+texture = ExtResource("25_llmn1")
+lifetime = 0.8
+one_shot = true
+explosiveness = 0.9
+emission_shape = 3
+emission_rect_extents = Vector2(70, 1)
+direction = Vector2(0, -1)
+spread = 75.99
+gravity = Vector2(0, -100)
+initial_velocity_min = 357.2
+initial_velocity_max = 357.2
+angular_velocity_min = 269.16
+angular_velocity_max = 269.16
+linear_accel_min = 31.78
+linear_accel_max = 31.78
+scale_amount_curve = SubResource("Curve_uftkj")
+color_ramp = SubResource("Gradient_p0pn1")
+
+[node name="ShootingRange" type="RayCast2D" parent="."]
+position = Vector2(0, -120)
+target_position = Vector2(1530, 0)
+collision_mask = 0
+
+[node name="BodyCollShape" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-36.25, -97)
+shape = SubResource("RectangleShape2D_s17rc")
+
+[node name="PhysicalContactCollShape" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(94.75, 2)
+shape = SubResource("RectangleShape2D_wmynn")
+
+[node name="LongOpponentsArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(803, -124)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LongOpponentsArea"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_2jh6i")
+
+[node name="ColorRect" type="ColorRect" parent="LongOpponentsArea"]
+offset_left = -649.0
+offset_top = -1.0
+offset_right = 646.0
+offset_bottom = 4.0
+color = Color(0.027451, 1, 1, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_t66bb")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+unique_name_in_owner = true
+root_node = NodePath("%AnimationTree/..")
+callback_mode_discrete = 0
+tree_root = SubResource("AnimationNodeBlendTree_ndoom")
+advance_expression_base_node = NodePath("..")
+anim_player = NodePath("../AnimationPlayer")
+
+[connection signal="pressed" from="TestDyingBtn" to="." method="_on_test_dying_btn_pressed"]

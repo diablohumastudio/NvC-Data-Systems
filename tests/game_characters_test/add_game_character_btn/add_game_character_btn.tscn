@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cieguwb6ueaa2"]
+
+[ext_resource type="Script" uid="uid://trb3tj3bsuvf" path="res://tests/game_characters_test/add_game_character_btn/add_game_character_btn.gd" id="1_8s8xm"]
+
+[node name="AddGameCharacter" type="Button"]
+theme_override_font_sizes/font_size = 50
+text = "add chest"
+script = ExtResource("1_8s8xm")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

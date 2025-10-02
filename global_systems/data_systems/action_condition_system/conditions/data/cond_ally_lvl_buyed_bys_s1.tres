@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CondAllyLevelBuyed" load_steps=2 format=3 uid="uid://bb85jn3xm2v88"]
+
+[ext_resource type="Script" uid="uid://gnfstv4puuoh" path="res://global_systems/data_systems/action_condition_system/conditions/models/cond_ally_level_buyed.gd" id="1_usiga"]
+
+[resource]
+script = ExtResource("1_usiga")
+ally_level_id = "BYS_S1"
+id = "cond_ally_lvl_buyed_bys_s1"
+metadata/_custom_type_script = "uid://gnfstv4puuoh"
