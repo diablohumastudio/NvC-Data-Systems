@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://d38b5h1gf7p63" path="res://screens/levels_menu/stalingrad_summer_camp/assets/resource_generator_factory.png" id="9_4afd1"]
 [ext_resource type="Texture2D" uid="uid://cvqganhkwx8q7" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0002.png" id="9_fgkxi"]
 [ext_resource type="Texture2D" uid="uid://cewoxn6t03ges" path="res://screens/levels_menu/stalingrad_summer_camp/assets/top_trees.png" id="10_3ky6c"]
-[ext_resource type="PackedScene" uid="uid://drind8lvt12co" path="res://screens/levels_menu/stalingrad_summer_camp/popups/allies_popup/allies_popup.tscn" id="10_4afd1"]
+[ext_resource type="PackedScene" uid="uid://drind8lvt12co" path="res://screens/levels_menu/stalingrad_summer_camp/allies_popup/allies_popup.tscn" id="10_4afd1"]
 [ext_resource type="Texture2D" uid="uid://bv3s8c214ggih" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0003.png" id="10_xaas3"]
 [ext_resource type="Texture2D" uid="uid://dajp5qpmcs65i" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0004.png" id="11_5p7am"]
 [ext_resource type="Texture2D" uid="uid://d3issrwm4ww7a" path="res://screens/levels_menu/stalingrad_summer_camp/assets/flag_animation/mini_flag0005.png" id="12_r1lmi"]

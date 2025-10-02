@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="MoneyPrviderLevel" load_steps=4 format=3 uid="uid://c8xq6wjvjrrmw"]
 
-[ext_resource type="Texture2D" uid="uid://bvrvjxx40rxsn" path="res://data/game_characters/allies/assets/upgrade_buttons/resource_providers/generator_speed_2.png" id="1_csssv"]
-[ext_resource type="Script" path="res://global_systems/data_systems/action_condition_system/condition.gd" id="2_s202n"]
+[ext_resource type="Texture2D" uid="uid://bvrvjxx40rxsn" path="res://data/game_characters/allies/resource_providers/ally_thumbnails/generator_speed_2.png" id="1_csssv"]
+[ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://global_systems/data_systems/action_condition_system/condition.gd" id="2_s202n"]
 [ext_resource type="Script" uid="uid://bacha5qb1rbr" path="res://data/game_characters/allies/resource_providers/models/money_provider_level.gd" id="3_pvq1r"]
 
 [resource]
