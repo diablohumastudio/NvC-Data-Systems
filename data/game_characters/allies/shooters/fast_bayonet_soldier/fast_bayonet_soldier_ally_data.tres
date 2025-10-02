@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="AllyData" load_steps=17 format=3 uid="uid://boso5gok2mbeg"]
+
+[ext_resource type="Script" uid="uid://cp8n43lmapx8l" path="res://data/game_characters/allies/models/ally_level_data.gd" id="1_4pugs"]
+[ext_resource type="Texture2D" uid="uid://d0tq5v3l7gtgs" path="res://data/game_characters/allies/shooters/fast_bayonet_soldier/assets/fast_bayonet_soldier.png" id="1_cr7oq"]
+[ext_resource type="Script" uid="uid://ccntxav05c4k" path="res://data/game_characters/allies/models/ally_data.gd" id="2_cr7oq"]
+[ext_resource type="Resource" uid="uid://bbugaojm1smbo" path="res://data/game_characters/allies/shooters/fast_bayonet_soldier/levels/fbs_b.tres" id="2_ocn44"]
+[ext_resource type="Resource" uid="uid://2bwkdeuhid4r" path="res://data/game_characters/allies/shooters/fast_bayonet_soldier/levels/fbs_p1.tres" id="4_cmvkn"]
+[ext_resource type="Resource" uid="uid://bvmxb0khexvfk" path="res://data/game_characters/allies/shooters/fast_bayonet_soldier/levels/fbs_p2.tres" id="5_e4rfq"]
+[ext_resource type="Resource" uid="uid://dmsrqbpx7115n" path="res://data/game_characters/allies/shooters/fast_bayonet_soldier/levels/fbs_p3.tres" id="6_865li"]
+[ext_resource type="Resource" uid="uid://cacuvd6b3nsal" path="res://data/game_characters/allies/shooters/fast_bayonet_soldier/levels/fbs_s1.tres" id="7_whw10"]
+[ext_resource type="Resource" uid="uid://ba77newym3wp" path="res://data/game_characters/allies/shooters/fast_bayonet_soldier/levels/fbs_s2.tres" id="8_akktr"]
+[ext_resource type="Resource" uid="uid://l42qcqmsx6sp" path="res://data/game_characters/allies/shooters/fast_bayonet_soldier/levels/fbs_s3.tres" id="9_hbsv6"]
+[ext_resource type="Resource" uid="uid://d3rsonofcwluo" path="res://data/game_characters/allies/shooters/fast_bayonet_soldier/levels/fbs_r1.tres" id="10_ex1uk"]
+[ext_resource type="Resource" uid="uid://w5rv5jrbb0hp" path="res://data/game_characters/allies/shooters/fast_bayonet_soldier/levels/fbs_r2.tres" id="11_5xgny"]
+[ext_resource type="Resource" uid="uid://cxa2yr7jer2uw" path="res://data/game_characters/allies/shooters/fast_bayonet_soldier/levels/fbs_r3.tres" id="12_faq0v"]
+[ext_resource type="Resource" uid="uid://cnrk6u7d7p3ko" path="res://data/game_characters/allies/shooters/fast_bayonet_soldier/levels/fbs_h1.tres" id="13_i2wsg"]
+[ext_resource type="Resource" uid="uid://c0mhg3qiqsi0l" path="res://data/game_characters/allies/shooters/fast_bayonet_soldier/levels/fbs_h2.tres" id="14_er2iw"]
+[ext_resource type="Resource" uid="uid://8wldrdhx1puf" path="res://data/game_characters/allies/shooters/fast_bayonet_soldier/levels/fbs_h3.tres" id="15_fg7sv"]
+
+[resource]
+resource_name = "fast_bayonet_soldier"
+script = ExtResource("2_cr7oq")
+id = 102
+type = 0
+ally_name = "Fast Bayonet Soldier"
+description = "A skilled soldier that can react and shoot faster, but has less health."
+ally_selector_thumbnail = ExtResource("1_cr7oq")
+levels = Array[ExtResource("1_4pugs")]([ExtResource("4_cmvkn"), ExtResource("5_e4rfq"), ExtResource("6_865li"), ExtResource("7_whw10"), ExtResource("8_akktr"), ExtResource("9_hbsv6"), ExtResource("10_ex1uk"), ExtResource("11_5xgny"), ExtResource("12_faq0v"), ExtResource("13_i2wsg"), ExtResource("14_er2iw"), ExtResource("15_fg7sv")])
+base_level = ExtResource("2_ocn44")
+metadata/_custom_type_script = "uid://ccntxav05c4k"

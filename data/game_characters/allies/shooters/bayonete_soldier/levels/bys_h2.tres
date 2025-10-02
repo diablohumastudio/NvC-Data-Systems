@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="ShooterAllyLevel" load_steps=5 format=3 uid="uid://dccqhqsktq5sn"]
+
+[ext_resource type="Texture2D" uid="uid://cc0o80vya8ejv" path="res://data/game_characters/allies/assets/ally_thumbnails/health_points_2.png" id="1_rbyq0"]
+[ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://global_systems/data_systems/action_condition_system/condition.gd" id="2_hx7yv"]
+[ext_resource type="Script" uid="uid://bxsxos5gjpl6h" path="res://data/game_characters/allies/shooters/models/shooter_ally_level.gd" id="3_j4s7q"]
+[ext_resource type="Resource" uid="uid://dyb4thg1r01ml" path="res://global_systems/data_systems/action_condition_system/conditions/data/cond_ally_lvl_buyed_bys_h1.tres" id="4_tc43x"]
+
+[resource]
+script = ExtResource("3_j4s7q")
+shooting_power = 0
+shooting_speed = 0.0
+shooting_range = 0.0
+health_points = 40
+id = "BYS_H2"
+ally_id = 101
+unlockd_by_default = false
+buyed_by_default = false
+unlock_conditions = Array[ExtResource("2_hx7yv")]([ExtResource("4_tc43x")])
+market_price = 1450
+ally_level_thumbnail = ExtResource("1_rbyq0")
+scene_path = "res://game_characters_scenes/"
+in_game_price = 145
+in_game_unlock_conditions = Array[ExtResource("2_hx7yv")]([])
+metadata/_custom_type_script = "uid://bxsxos5gjpl6h"

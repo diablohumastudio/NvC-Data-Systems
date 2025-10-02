@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ShooterAllyLevel" load_steps=3 format=3 uid="uid://d3jwfnbdjysbe"]
+
+[ext_resource type="Script" uid="uid://d3wt36dxybuoe" path="res://global_systems/data_systems/action_condition_system/condition.gd" id="1_gqubv"]
+[ext_resource type="Script" uid="uid://bxsxos5gjpl6h" path="res://data/game_characters/allies/shooters/models/shooter_ally_level.gd" id="2_noq7l"]
+
+[resource]
+script = ExtResource("2_noq7l")
+shooting_power = 12
+shooting_speed = 0.2
+shooting_range = 0.0
+health_points = 100
+id = "BYS_B"
+ally_id = 101
+unlockd_by_default = true
+buyed_by_default = true
+unlock_conditions = Array[ExtResource("1_gqubv")]([])
+market_price = 0
+scene_path = "uid://oyoty7ffa6gl"
+in_game_price = 100
+in_game_unlock_conditions = Array[ExtResource("1_gqubv")]([])
+metadata/_custom_type_script = "uid://bxsxos5gjpl6h"

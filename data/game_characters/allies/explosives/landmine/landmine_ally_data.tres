@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="AllyData" load_steps=11 format=3 uid="uid://b3bf4idd7gtw3"]
+
+[ext_resource type="Texture2D" uid="uid://dt83a4bj0vi5b" path="res://data/game_characters/allies/explosives/landmine/assets/landmine.png" id="1_noulu"]
+[ext_resource type="Script" uid="uid://cp8n43lmapx8l" path="res://data/game_characters/allies/models/ally_level_data.gd" id="1_ofxoo"]
+[ext_resource type="Resource" uid="uid://bj7v6nxcviey5" path="res://data/game_characters/allies/explosives/landmine/levels/ldm_b.tres" id="2_5odad"]
+[ext_resource type="Script" uid="uid://ccntxav05c4k" path="res://data/game_characters/allies/models/ally_data.gd" id="2_noulu"]
+[ext_resource type="Resource" uid="uid://3iihjjwdu2a2" path="res://data/game_characters/allies/explosives/landmine/levels/ldm_p1.tres" id="4_8po8o"]
+[ext_resource type="Resource" uid="uid://d3nnvf3elte0j" path="res://data/game_characters/allies/explosives/landmine/levels/ldm_p2.tres" id="5_xxb01"]
+[ext_resource type="Resource" uid="uid://bf6na6cxj4p3i" path="res://data/game_characters/allies/explosives/landmine/levels/ldm_p3.tres" id="6_abb5o"]
+[ext_resource type="Resource" uid="uid://cdfycsbl56c1p" path="res://data/game_characters/allies/explosives/landmine/levels/ldm_a1.tres" id="7_abb5o"]
+[ext_resource type="Resource" uid="uid://c5tc2mbam5spu" path="res://data/game_characters/allies/explosives/landmine/levels/ldm_a2.tres" id="8_6fqd7"]
+[ext_resource type="Resource" uid="uid://cr4tgnrj3skpc" path="res://data/game_characters/allies/explosives/landmine/levels/ldm_a3.tres" id="9_slag1"]
+
+[resource]
+resource_name = "landmine"
+script = ExtResource("2_noulu")
+id = 401
+type = 2
+ally_name = "Landmine"
+description = "A powerful explosive that can be placed in the frontline to deal area damage. But you will have to wait for it to charge before it activates."
+ally_selector_thumbnail = ExtResource("1_noulu")
+levels = Array[ExtResource("1_ofxoo")]([ExtResource("4_8po8o"), ExtResource("5_xxb01"), ExtResource("6_abb5o"), ExtResource("7_abb5o"), ExtResource("8_6fqd7"), ExtResource("9_slag1")])
+base_level = ExtResource("2_5odad")
+metadata/_custom_type_script = "uid://ccntxav05c4k"

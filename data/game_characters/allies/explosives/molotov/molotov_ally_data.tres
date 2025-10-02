@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="AllyData" load_steps=11 format=3 uid="uid://bq0n6notxexwn"]
+
+[ext_resource type="Script" uid="uid://cp8n43lmapx8l" path="res://data/game_characters/allies/models/ally_level_data.gd" id="1_r5nk8"]
+[ext_resource type="Texture2D" uid="uid://dgnyafupj317h" path="res://data/game_characters/allies/explosives/molotov/assets/molotov.png" id="1_shwwi"]
+[ext_resource type="Resource" uid="uid://d6n488dloows" path="res://data/game_characters/allies/explosives/molotov/levels/mol_b.tres" id="2_ht0oi"]
+[ext_resource type="Script" uid="uid://ccntxav05c4k" path="res://data/game_characters/allies/models/ally_data.gd" id="2_shwwi"]
+[ext_resource type="Resource" uid="uid://6v34wef1otxm" path="res://data/game_characters/allies/explosives/molotov/levels/mol_p1.tres" id="4_hqq34"]
+[ext_resource type="Resource" uid="uid://n62v4ss2xsre" path="res://data/game_characters/allies/explosives/molotov/levels/mol_p2.tres" id="5_e6upx"]
+[ext_resource type="Resource" uid="uid://b01bgt7yyytdd" path="res://data/game_characters/allies/explosives/molotov/levels/mol_p3.tres" id="6_7yrvo"]
+[ext_resource type="Resource" uid="uid://cwgicwrsyrtme" path="res://data/game_characters/allies/explosives/molotov/levels/mol_a1.tres" id="7_7yrvo"]
+[ext_resource type="Resource" uid="uid://bi2yu8uripano" path="res://data/game_characters/allies/explosives/molotov/levels/mol_a2.tres" id="8_jo8sj"]
+[ext_resource type="Resource" uid="uid://cxl4xmh2rjui4" path="res://data/game_characters/allies/explosives/molotov/levels/mol_a3.tres" id="9_dg1lb"]
+
+[resource]
+resource_name = "molotov"
+script = ExtResource("2_shwwi")
+id = 403
+type = 2
+ally_name = "Molotov"
+description = "A less powerful and cheaper throwable explosive, but with a burn effect that will hurt enemies for a while."
+ally_selector_thumbnail = ExtResource("1_shwwi")
+levels = Array[ExtResource("1_r5nk8")]([ExtResource("4_hqq34"), ExtResource("5_e6upx"), ExtResource("6_7yrvo"), ExtResource("7_7yrvo"), ExtResource("8_jo8sj"), ExtResource("9_dg1lb")])
+base_level = ExtResource("2_ht0oi")
+metadata/_custom_type_script = "uid://ccntxav05c4k"
