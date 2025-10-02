@@ -1,73 +1,31 @@
-[gd_scene load_steps=55 format=3 uid="uid://dt3guvmgc72a7"]
+[gd_scene load_steps=61 format=3 uid="uid://dt3guvmgc72a7"]
 
-[ext_resource type="Texture2D" uid="uid://dg0oe0ipa6huh" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/snowman_body.png" id="1_10amd"]
 [ext_resource type="Script" uid="uid://c4yhoestvmvrp" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/snowman_soviet.gd" id="1_yrfbn"]
-[ext_resource type="Texture2D" uid="uid://d068ux72sdn13" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/snowman_death_1.png" id="2_llgjv"]
-[ext_resource type="Texture2D" uid="uid://dm4wn07rm6gmv" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/snowman_death_2.png" id="3_dxwe8"]
-[ext_resource type="Texture2D" uid="uid://bacm1ahnf3ehi" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/snowman_death_3.png" id="4_3r8w7"]
-[ext_resource type="Texture2D" uid="uid://c3iicnnd1bhcw" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/snowman_death_4.png" id="5_o3680"]
-[ext_resource type="Texture2D" uid="uid://spa00a008eo3" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/snowman_death_5.png" id="6_loglh"]
-[ext_resource type="Texture2D" uid="uid://d1v5lwsn0afeu" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/snowman_death_6.png" id="7_ucle7"]
+[ext_resource type="BitMap" uid="uid://b7uvqmbp7d564" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/select_ally_btn.png" id="3_d5k42"]
+[ext_resource type="SpriteFrames" uid="uid://duym1snydi3ab" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/health_levels/snm_b_sprite_frames.tres" id="4_lr6rl"]
+[ext_resource type="SpriteFrames" uid="uid://cvjiar15b8134" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/health_levels/snm_h2_sprite_frames.tres" id="4_oa2tf"]
+[ext_resource type="Texture2D" uid="uid://dlcer4oss0jxv" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/health_levels/helmet_base.png" id="5_03swb"]
+[ext_resource type="Script" uid="uid://qclj8gae0u4y" path="res://game_characters_scenes/allies/models/ally_scene/ally_level_dependants_nodes/ally_level_dependent_animatedsprite2D.gd" id="5_yrfbn"]
+[ext_resource type="SpriteFrames" uid="uid://dv6ho6i5drk0w" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/health_levels/snm_h1_sprite_frames.tres" id="6_2jh6i"]
+[ext_resource type="Script" uid="uid://c3skicx1p4687" path="res://game_characters_scenes/allies/models/ally_scene/ally_level_dependants_nodes/ally_level_dependent_sprite2D.gd" id="6_sph1m"]
+[ext_resource type="Texture2D" uid="uid://b38c435o8hd33" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/health_levels/helmet_1.png" id="7_tx57x"]
 [ext_resource type="Texture2D" uid="uid://d3m2ymkclsdx7" path="res://game_characters_scenes/shared_assets/hurt_light.png" id="7_v1l3n"]
+[ext_resource type="Texture2D" uid="uid://bnhh5memg52k7" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/health_levels/helmet_2.png" id="8_7pubk"]
 [ext_resource type="Texture2D" uid="uid://c73v5xy4v6gea" path="res://game_characters_scenes/shared_assets/hurt_shape.png" id="8_8v31p"]
+[ext_resource type="SpriteFrames" uid="uid://ba4185yujoab1" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/health_levels/snm_h3_sprite_frames.tres" id="8_q7c8i"]
 [ext_resource type="Texture2D" uid="uid://bi8uspxwi8qs6" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/snowflake_snowman.png" id="9_2jk1h"]
-[ext_resource type="Texture2D" uid="uid://dcprrft0ugem1" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/snowman_death_7.png" id="14_aih7m"]
+[ext_resource type="Texture2D" uid="uid://dlsoryk5ep1j3" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/health_levels/helmet_3.png" id="9_d525d"]
+[ext_resource type="Texture2D" uid="uid://bak1v78am2j67" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/speed_levels/belt_2.png" id="9_fvqir"]
+[ext_resource type="Texture2D" uid="uid://bj408g00wrr3k" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/range_levels/gun_base.png" id="11_a4hdx"]
+[ext_resource type="Texture2D" uid="uid://diks3lshsgcfv" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/speed_levels/belt_1.png" id="11_dk17j"]
+[ext_resource type="Texture2D" uid="uid://cj0urrmt13wu3" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/range_levels/gun_1.png" id="11_tx57x"]
+[ext_resource type="Texture2D" uid="uid://kj14tl3qwxes" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/speed_levels/belt_base.png" id="11_u8mxi"]
+[ext_resource type="Texture2D" uid="uid://c7qg1dskkxu3o" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/speed_levels/belt_3.png" id="13_jubmm"]
+[ext_resource type="Texture2D" uid="uid://cas40utpid1n7" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/range_levels/gun_2.png" id="13_yrfbn"]
+[ext_resource type="Texture2D" uid="uid://dhhbxvx8ih5d6" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/range_levels/gun_3.png" id="14_2jh6i"]
 [ext_resource type="Texture2D" uid="uid://jdulueb7gowt" path="res://game_characters_scenes/shared_assets/dust_particle.png" id="14_w2uoi"]
-[ext_resource type="Texture2D" uid="uid://cu4ey4uifjhhs" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/snowman_death_8.png" id="15_pxfcd"]
-[ext_resource type="Texture2D" uid="uid://bawws5l8jdv8y" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/snowman_soviet_9.png" id="16_v2rwr"]
 [ext_resource type="Texture2D" uid="uid://bhnummcditq3x" path="res://screens/start_menus/about_menu/submenu_selector/assets/world_icon_particle.png" id="19_dpu6g"]
-[ext_resource type="Texture2D" uid="uid://y1wwys68e10d" path="res://game_characters_scenes/allies/shoter_ally/snowman_soviet/assets/level_1.png" id="19_wf5or"]
 [ext_resource type="Texture2D" uid="uid://b5ro46i71vfn0" path="res://screens/game/pop_ups/game_won_popup/assets/star_blink.png" id="25_llmn1"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ss27i"]
-atlas = ExtResource("19_wf5or")
-region = Rect2(0, 0, 135, 301)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_i18n6"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_10amd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_llgjv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_dxwe8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_3r8w7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_o3680")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_loglh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_ucle7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_aih7m")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_pxfcd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_v2rwr")
-}],
-"loop": false,
-"name": &"death",
-"speed": 12.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ss27i")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 12.0
-}]
 
 [sub_resource type="Curve" id="Curve_wwd87"]
 _limits = [0.0, 360.0, 0.0, 1.0]
@@ -283,6 +241,30 @@ tracks/13/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Textures/Body/Headwear:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(29.6359, -240.181)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Textures/Body/Headwear:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_oa2tf"]
 resource_name = "check_transitions"
@@ -397,10 +379,10 @@ tracks/4/path = NodePath("Textures:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(1.05, 1.2, 1.35, 1.5, 1.65, 1.8, 1.95, 2.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1.05, 1.2, 1.35, 1.5, 1.65, 1.8, 1.95, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0.666667), Color(1, 1, 1, 0), Color(1, 1, 1, 0.666667), Color(1, 1, 1, 0), Color(1, 1, 1, 0.666667), Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0.666667), Color(1, 1, 1, 0), Color(1, 1, 1, 0.666667), Color(1, 1, 1, 0), Color(1, 1, 1, 0.666667), Color(1, 1, 1, 0)]
 }
 tracks/5/type = "method"
 tracks/5/imported = false
@@ -415,6 +397,30 @@ tracks/5/keys = {
 "args": [],
 "method": &"queue_free"
 }]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Textures/Body/Headwear:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 0.535887, 1, 1),
+"update": 0,
+"values": [Vector2(29.6359, -240.181), Vector2(22.636, -240.181), Vector2(22.8878, -31.0276), Vector2(22.8777, -39.3937), Vector2(22.8878, -31.0276)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Textures/Body/Headwear:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -3.49066]
 }
 
 [sub_resource type="Animation" id="Animation_cglgy"]
@@ -835,6 +841,13 @@ collision_layer = 0
 collision_mask = 0
 script = ExtResource("1_yrfbn")
 
+[node name="SelectAllyBtn" type="TextureButton" parent="."]
+offset_left = -82.0
+offset_top = -249.0
+offset_right = 173.0
+offset_bottom = 52.0
+texture_click_mask = ExtResource("3_d5k42")
+
 [node name="TestDyingBtn" type="Button" parent="."]
 offset_left = 491.0
 offset_top = -604.0
@@ -862,10 +875,41 @@ position = Vector2(0, -14)
 [node name="Body" type="AnimatedSprite2D" parent="Textures"]
 position = Vector2(-37, 47)
 rotation = 0.0349066
-sprite_frames = SubResource("SpriteFrames_i18n6")
+sprite_frames = ExtResource("4_lr6rl")
 animation = &"idle"
-autoplay = "idle"
 offset = Vector2(22, -132.162)
+script = ExtResource("5_yrfbn")
+levels_modifiers_textures = Dictionary[String, SpriteFrames]({
+"SNM_B": ExtResource("4_lr6rl"),
+"SNM_H1": ExtResource("6_2jh6i"),
+"SNM_H2": ExtResource("4_oa2tf"),
+"SNM_H3": ExtResource("8_q7c8i")
+})
+metadata/_custom_type_script = "uid://qclj8gae0u4y"
+
+[node name="Belt" type="Sprite2D" parent="Textures/Body"]
+position = Vector2(32.8627, -114.04)
+texture = ExtResource("11_u8mxi")
+script = ExtResource("6_sph1m")
+levels_modifiers_textures = Dictionary[String, Texture2D]({
+"SNM_2": ExtResource("9_fvqir"),
+"SNM_3": ExtResource("13_jubmm"),
+"SNM_B": ExtResource("11_u8mxi"),
+"SNM_S1": ExtResource("11_dk17j")
+})
+metadata/_custom_type_script = "uid://c3skicx1p4687"
+
+[node name="Headwear" type="Sprite2D" parent="Textures/Body"]
+position = Vector2(29.6359, -240.181)
+texture = ExtResource("5_03swb")
+script = ExtResource("6_sph1m")
+levels_modifiers_textures = Dictionary[String, Texture2D]({
+"SNM_B": ExtResource("5_03swb"),
+"SNM_H1": ExtResource("7_tx57x"),
+"SNM_H2": ExtResource("8_7pubk"),
+"SNM_H3": ExtResource("9_d525d")
+})
+metadata/_custom_type_script = "uid://c3skicx1p4687"
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="Textures/Body"]
 position = Vector2(169.75, -208.204)
@@ -891,10 +935,17 @@ color_ramp = SubResource("Gradient_qv2rt")
 
 [node name="Arm" type="Sprite2D" parent="Textures/Body"]
 position = Vector2(81.0663, -138.132)
-texture = ExtResource("19_wf5or")
-offset = Vector2(36.741, -22.0096)
-region_enabled = true
+texture = ExtResource("11_a4hdx")
+offset = Vector2(56.6979, -29.1513)
 region_rect = Rect2(123.061, 0, 109.939, 114.037)
+script = ExtResource("6_sph1m")
+levels_modifiers_textures = Dictionary[String, Texture2D]({
+"SNM_B": ExtResource("11_a4hdx"),
+"SNM_R1": ExtResource("11_tx57x"),
+"SNM_R2": ExtResource("13_yrfbn"),
+"SNM_R3": ExtResource("14_2jh6i")
+})
+metadata/_custom_type_script = "uid://c3skicx1p4687"
 
 [node name="Snow Particles" type="CPUParticles2D" parent="Textures/Body"]
 position = Vector2(45, -156)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://dm0t1b4mj7sbb"]
+[gd_scene load_steps=73 format=3 uid="uid://dm0t1b4mj7sbb"]
 
 [ext_resource type="Texture2D" uid="uid://cto61eke7joyb" path="res://game_characters_scenes/shared_assets/circle_shadow.png" id="1_bpkpo"]
 [ext_resource type="Script" uid="uid://crt8fnkxdt5mn" path="res://game_characters_scenes/allies/shoter_ally/shield_soldier/shield_soldier.gd" id="1_chgs4"]
@@ -13,15 +13,23 @@
 [ext_resource type="Texture2D" uid="uid://63uc3gd8ws3g" path="res://game_characters_scenes/allies/shoter_ally/shield_soldier/assets/lowertorso1.png" id="9_jws4e"]
 [ext_resource type="Texture2D" uid="uid://c73v5xy4v6gea" path="res://game_characters_scenes/shared_assets/hurt_shape.png" id="10_15n12"]
 [ext_resource type="Texture2D" uid="uid://dfuu4r3voj2wn" path="res://game_characters_scenes/allies/shoter_ally/shield_soldier/assets/lowertorso2.png" id="10_esexu"]
-[ext_resource type="Texture2D" uid="uid://bg1bvu74ltkgs" path="res://game_characters_scenes/allies/shoter_ally/shield_soldier/assets/torso.png" id="11_c2bmt"]
 [ext_resource type="Texture2D" uid="uid://lckbqr578rg4" path="res://game_characters_scenes/allies/shoter_ally/shield_soldier/assets/head.png" id="12_gqra2"]
 [ext_resource type="Texture2D" uid="uid://pbiut87cvx6e" path="res://game_characters_scenes/allies/shoter_ally/shield_soldier/assets/arm2.png" id="13_4lksw"]
 [ext_resource type="Texture2D" uid="uid://bngmwt736ejqi" path="res://game_characters_scenes/allies/shoter_ally/shield_soldier/assets/gas_mask_shield_soldier.png" id="13_66qof"]
+[ext_resource type="Texture2D" uid="uid://drhx8ic4mygp7" path="res://game_characters_scenes/allies/shoter_ally/shield_soldier/assets/health_levels/torso_base.png" id="14_i5jvs"]
+[ext_resource type="Script" uid="uid://c3skicx1p4687" path="res://game_characters_scenes/allies/models/ally_scene/ally_level_dependants_nodes/ally_level_dependent_sprite2D.gd" id="15_c2c0s"]
 [ext_resource type="Texture2D" uid="uid://5xg73u1xoy12" path="res://game_characters_scenes/shared_assets/circle_particle.png" id="16_dnqg1"]
+[ext_resource type="Texture2D" uid="uid://bpg8hyn2hcfs" path="res://game_characters_scenes/allies/shoter_ally/shield_soldier/assets/health_levels/torso_1.png" id="16_s2tg5"]
+[ext_resource type="Texture2D" uid="uid://wsku4ek8j2lj" path="res://game_characters_scenes/allies/shoter_ally/shield_soldier/assets/health_levels/torso_2.png" id="17_gjsov"]
+[ext_resource type="Texture2D" uid="uid://bfsgr5jsijs2y" path="res://game_characters_scenes/allies/shoter_ally/shield_soldier/assets/health_levels/torso_3.png" id="18_mp1h6"]
 [ext_resource type="Texture2D" uid="uid://g1uxlj05gjwl" path="res://game_characters_scenes/allies/shoter_ally/shield_soldier/assets/head_dead_level_1.png" id="20_gm00c"]
 [ext_resource type="PackedScene" uid="uid://dbae2g2g0wh6y" path="res://game_characters_scenes/allies/shoter_ally/shield_soldier/shield/soviet_shield/soviet_shield.tscn" id="20_i14ti"]
 [ext_resource type="Texture2D" uid="uid://jdulueb7gowt" path="res://game_characters_scenes/shared_assets/dust_particle.png" id="22_7djos"]
 [ext_resource type="Texture2D" uid="uid://bqx7gvnyiy8yr" path="res://game_characters_scenes/allies/shoter_ally/shield_soldier/assets/left_forearm_level_1.png" id="24_gm00c"]
+[ext_resource type="Texture2D" uid="uid://ci24hwi04fm6s" path="res://game_characters_scenes/allies/shoter_ally/shield_soldier/assets/speed_levels/belt_base.png" id="25_gjsov"]
+[ext_resource type="Texture2D" uid="uid://bhfe3kcomp0dd" path="res://game_characters_scenes/allies/shoter_ally/shield_soldier/assets/speed_levels/belt_1.png" id="26_k3biq"]
+[ext_resource type="Texture2D" uid="uid://b3dv8agr8vlbw" path="res://game_characters_scenes/allies/shoter_ally/shield_soldier/assets/speed_levels/belt_2.png" id="27_5nsvs"]
+[ext_resource type="Texture2D" uid="uid://cksgm3qa4lvg" path="res://game_characters_scenes/allies/shoter_ally/shield_soldier/assets/speed_levels/belt_3.png" id="28_ngp8j"]
 [ext_resource type="Texture2D" uid="uid://b5ro46i71vfn0" path="res://screens/game/pop_ups/game_won_popup/assets/star_blink.png" id="31_yusmt"]
 [ext_resource type="PackedScene" uid="uid://d2torbk0fy8a5" path="res://game_characters_scenes/shared_assets/blood_particles.tscn" id="33_ih5to"]
 
@@ -2249,8 +2257,16 @@ offset = Vector2(-1, 32)
 [node name="Body" type="Sprite2D" parent="Textures"]
 position = Vector2(1, 29)
 rotation = 0.0523599
-texture = ExtResource("11_c2bmt")
-offset = Vector2(0, -39)
+texture = ExtResource("14_i5jvs")
+offset = Vector2(-4, -42)
+script = ExtResource("15_c2c0s")
+levels_modifiers_textures = Dictionary[String, Texture2D]({
+"SHS_B": ExtResource("14_i5jvs"),
+"SHS_H1": ExtResource("16_s2tg5"),
+"SHS_H2": ExtResource("17_gjsov"),
+"SHS_H3": ExtResource("18_mp1h6")
+})
+metadata/_custom_type_script = "uid://c3skicx1p4687"
 
 [node name="Head" type="AnimatedSprite2D" parent="Textures/Body"]
 position = Vector2(8.43979, -81.6383)
@@ -2289,6 +2305,42 @@ initial_velocity_min = 616.76
 initial_velocity_max = 616.76
 scale_amount_curve = SubResource("Curve_ry58u")
 color_ramp = SubResource("Gradient_wtxpb")
+
+[node name="Belt" type="Sprite2D" parent="Textures/Body"]
+position = Vector2(-5, -7)
+texture = ExtResource("25_gjsov")
+script = ExtResource("15_c2c0s")
+levels_modifiers_textures = Dictionary[String, Texture2D]({
+"SHS_B": ExtResource("25_gjsov"),
+"SHS_S1": ExtResource("26_k3biq"),
+"SHS_S2": ExtResource("27_5nsvs"),
+"SHS_S3": ExtResource("28_ngp8j")
+})
+metadata/_custom_type_script = "uid://c3skicx1p4687"
+
+[node name="Belt2" type="Sprite2D" parent="Textures/Body"]
+position = Vector2(-5, -7)
+texture = ExtResource("25_gjsov")
+script = ExtResource("15_c2c0s")
+levels_modifiers_textures = Dictionary[String, Texture2D]({
+"SHS_B": ExtResource("25_gjsov"),
+"SHS_S1": ExtResource("26_k3biq"),
+"SHS_S2": ExtResource("27_5nsvs"),
+"SHS_S3": ExtResource("28_ngp8j")
+})
+metadata/_custom_type_script = "uid://c3skicx1p4687"
+
+[node name="Belt3" type="Sprite2D" parent="Textures/Body"]
+position = Vector2(-5, -7)
+texture = ExtResource("25_gjsov")
+script = ExtResource("15_c2c0s")
+levels_modifiers_textures = Dictionary[String, Texture2D]({
+"SHS_B": ExtResource("25_gjsov"),
+"SHS_S1": ExtResource("26_k3biq"),
+"SHS_S2": ExtResource("27_5nsvs"),
+"SHS_S3": ExtResource("28_ngp8j")
+})
+metadata/_custom_type_script = "uid://c3skicx1p4687"
 
 [node name="Particles" type="Node2D" parent="."]
 
@@ -2343,6 +2395,7 @@ unique_name_in_owner = true
 position = Vector2(154, -46)
 
 [node name="BodyCollShape" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(-20, -96)
 shape = SubResource("RectangleShape2D_4qo0g")
 
