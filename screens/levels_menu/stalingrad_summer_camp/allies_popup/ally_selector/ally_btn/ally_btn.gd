@@ -1,12 +1,12 @@
 class_name AllyBtn extends TextureButton
 
-const _SHOOTER_ALLIES_FOLDER_PATH : String = "res://data/game_characters/allies/shooters/ally_thumbnails/"
-const _RESOURCE_PROVIDERS_FOLDER_PATH : String = "res://data/game_characters/allies/resource_providers/ally_thumbnails/"
-const _OBSTRUCTERS_FOLDER_PATH : String = "res://data/game_characters/allies/obstructers/ally_thumbnails/"
-const _EXPLOSIVES_FOLDER_PATH : String = "res://data/game_characters/allies/explosives/ally_thumbnails/"
+const _SHOOTER_ALLIES_FOLDER_PATH : String = "res://screens/levels_menu/stalingrad_summer_camp/allies_popup/assets/soldier_cards/"
+const _RESOURCE_PROVIDERS_FOLDER_PATH : String = "res://screens/levels_menu/stalingrad_summer_camp/allies_popup/assets/resource_providers_cards/"
+const _OBSTRUCTERS_FOLDER_PATH : String = "res://screens/levels_menu/stalingrad_summer_camp/allies_popup/assets/obstructers_cards/"
+const _EXPLOSIVES_FOLDER_PATH : String = "res://screens/levels_menu/stalingrad_summer_camp/allies_popup/assets/soldier_cards/"
 
 var ally : AllyData : set = _set_ally
-var ally_name : String #: set = _set_ally_name
+var ally_name : String 
 var _normal_texture : Texture
 var _hover_texture : Texture
 var _pressed_texture : Texture
@@ -48,11 +48,9 @@ func _set_textures() -> void:
 	texture_hover = _hover_texture
 	texture_focused = _focused_texture
 	
-	
 func get_textures_from_files() -> Array[Texture]:
 	var textures : Array[Texture]
 	var ally_type_folder_path : String = _get_ally_type_folder_path()
-	
 	var dir := DirAccess.open(ally_type_folder_path)
 	assert(dir != null, "Could not open folder")
 	dir.list_dir_begin()

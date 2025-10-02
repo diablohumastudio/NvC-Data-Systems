@@ -1,8 +1,9 @@
-[gd_scene load_steps=48 format=3 uid="uid://ctww27adn5p47"]
+[gd_scene load_steps=49 format=3 uid="uid://ctww27adn5p47"]
 
 [ext_resource type="Script" uid="uid://yfic84p21c46" path="res://screens/levels_menu/stalingrad_summer_camp/stalingrad_summer_camp.gd" id="1_rthgh"]
 [ext_resource type="Texture2D" uid="uid://ksq8w6bk8tpj" path="res://screens/levels_menu/stalingrad_summer_camp/assets/base_bg.png" id="1_t7s7p"]
 [ext_resource type="Texture2D" uid="uid://bs87sdawwfub4" path="res://screens/levels_menu/stalingrad_summer_camp/assets/resources_ui.png" id="3_2djdf"]
+[ext_resource type="Script" uid="uid://meefvpiruaka" path="res://screens/levels_menu/stalingrad_summer_camp/go_to_allies_popup_btn.gd" id="4_ma5bn"]
 [ext_resource type="Texture2D" uid="uid://dy5tlctbsbkcg" path="res://global_assets/go_back_btn_textures/go_back_button.png" id="5_sux0p"]
 [ext_resource type="Texture2D" uid="uid://bnpfefy1svqrb" path="res://screens/levels_menu/stalingrad_summer_camp/assets/barracks.png" id="6_3ky6c"]
 [ext_resource type="Texture2D" uid="uid://xollcxmkscnt" path="res://global_assets/go_back_btn_textures/go_back_button_selected.png" id="6_wqfrk"]
@@ -202,39 +203,41 @@ script = ExtResource("1_rthgh")
 position = Vector2(960, 540)
 texture = ExtResource("1_t7s7p")
 
-[node name="BarriersFactory" type="TextureButton" parent="."]
+[node name="GoToBarriersFactoryBtn" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 1145.0
-offset_top = 295.0
-offset_right = 1627.0
-offset_bottom = 626.0
+offset_right = 482.0
+offset_bottom = 331.0
 texture_normal = ExtResource("7_yqd11")
+script = ExtResource("4_ma5bn")
 
-[node name="ExplosivesFactory" type="TextureButton" parent="."]
+[node name="GoToExplosivesFactoryBtn" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = 327.0
 offset_top = 291.0
 offset_right = 886.0
 offset_bottom = 679.0
 texture_normal = ExtResource("8_ujumv")
+script = ExtResource("4_ma5bn")
 
-[node name="ResourceGeneratorFactory" type="TextureButton" parent="."]
+[node name="GoToResourceGeneratorFactoryBtn" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = 873.0
 offset_top = 470.0
 offset_right = 1252.0
 offset_bottom = 818.0
 texture_normal = ExtResource("9_4afd1")
+script = ExtResource("4_ma5bn")
 
-[node name="Barracks" type="TextureButton" parent="."]
+[node name="GoToBarracksBtn" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = 282.0
 offset_top = 597.0
 offset_right = 949.0
 offset_bottom = 1016.0
 texture_normal = ExtResource("6_3ky6c")
+script = ExtResource("4_ma5bn")
 
-[node name="Flag" type="AnimatedSprite2D" parent="Barracks"]
+[node name="Flag" type="AnimatedSprite2D" parent="GoToBarracksBtn"]
 position = Vector2(331, 79)
 sprite_frames = SubResource("SpriteFrames_c81wj")
 autoplay = "default"
@@ -363,5 +366,5 @@ script = ExtResource("38_rj5k8")
 scenes_paths = Array[String](["res://screens/levels_menu/stalingrad_summer_level_menu/stalingrad_summer_levels_menu.tscn", "res://screens/levels_menu/worlds_map_menu/worlds_map_menu.tscn", "res://screens/levels_menu/stalingrad_winter_level_menu/stalingrad_winter_levels_menu.tscn", "res://screens/start_menus/main_menu/main_menu.tscn"])
 metadata/_custom_type_script = "uid://cc5cx846obsu8"
 
-[connection signal="pressed" from="Barracks" to="." method="_on_barracks_pressed"]
+[connection signal="pressed" from="GoToBarracksBtn" to="." method="_on_go_to_barracks_btn_pressed"]
 [connection signal="pressed" from="GoBackButton" to="." method="_on_go_back_button_pressed"]

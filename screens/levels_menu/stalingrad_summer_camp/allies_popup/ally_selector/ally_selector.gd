@@ -11,7 +11,7 @@ var selected_ally_btn : AllyBtn
 func populate_container(allies:Array[AllyData]) -> void:
 	for child in %ButtonsContainer.get_children():
 		child.free()
-
+	
 	for ally in allies:
 		var new_ally_btn : AllyBtn = ally_btn_pksc.instantiate()
 		new_ally_btn.ally = ally

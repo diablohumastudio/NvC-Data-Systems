@@ -2,7 +2,8 @@ class_name StalingradSummerCamp extends Control
 
 @onready var barracks_popup: Control = $BarracksPopup
 
-func _on_barracks_pressed() -> void:
+
+func _on_go_to_barracks_btn_pressed() -> void:
 	barracks_popup.show_popup()
 
 func _on_go_back_button_pressed() -> void:
