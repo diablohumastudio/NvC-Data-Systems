@@ -10,7 +10,3 @@ func change_state(action: Action):
 
 	var ud_ally_level: UDAllyLevel = UDS.get_ud_ally_level_by_id_in_ally(ally_level_id,ally_id)
 	ud_ally_level.buyed = true
-	
-	# Update in Market ally_lvl_btns
-	var ally_level : AllyLevelData = UDS.get_ally_level_by_id_in_market_btn_group(ally_level_id,ally_id)
-	ally_level.buyed = true
